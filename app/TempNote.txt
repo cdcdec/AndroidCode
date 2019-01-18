@@ -1,2 +1,28 @@
 https://github.com/gyf-dev/ImmersionBar
 
+隐藏标题栏
+<style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+在Activity的onCreate方法里面执行:
+ //supportActionBar!!.hide()
+ setContentView(layoutId())
+
+ 标题栏被隐藏了，但是还占据着标题栏的位置;
+
+
+
+直接使用NoActionBar主题可以隐藏标题栏
+<style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+

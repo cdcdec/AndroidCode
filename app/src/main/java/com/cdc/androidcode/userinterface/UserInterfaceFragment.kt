@@ -1,7 +1,10 @@
 package com.cdc.androidcode.userinterface
 
+import android.support.v7.widget.LinearLayoutManager
 import com.cdc.androidcode.BaseFragment
 import com.cdc.androidcode.R
+import com.cdc.androidcode.application.RecycleViewDivider
+import kotlinx.android.synthetic.main.fragment_userinterface.*
 
 /**
  * ProjectName：AndroidCode
@@ -21,7 +24,8 @@ class UserInterfaceFragment:BaseFragment() {
     }
 
     override fun initView() {
-
+        recyclerView.layoutManager = LinearLayoutManager(activity)
+        recyclerView.addItemDecoration(RecycleViewDivider(activity, LinearLayoutManager.VERTICAL, R.drawable.shape_recycleview_divider))
     }
 
     override fun initData() {

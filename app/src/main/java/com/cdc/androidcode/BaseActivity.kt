@@ -19,8 +19,6 @@ abstract class BaseActivity: AppCompatActivity() {
         super.onCreate(savedInstanceState)
         //无法隐藏标题栏
         //this.requestWindowFeature(Window.FEATURE_NO_TITLE)
-        //supportActionBar!!.hide()  配合item name="android:windowNoTitle可以去掉标题栏
-        supportActionBar!!.hide()
         setContentView(layoutId())
         //初始化沉浸式
         if (isImmersionBarEnabled()) {

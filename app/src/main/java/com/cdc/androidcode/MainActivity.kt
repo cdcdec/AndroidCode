@@ -7,6 +7,7 @@ import com.cdc.androidcode.programmer.ProgrammerFragment
 import com.cdc.androidcode.userinterface.UserInterfaceFragment
 import com.flyco.tablayout.listener.CustomTabEntity
 import com.flyco.tablayout.listener.OnTabSelectListener
+import com.gyf.barlibrary.BarHide
 import com.gyf.barlibrary.ImmersionBar
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -33,11 +34,20 @@ class MainActivity : BaseActivity(), OnTabSelectListener {
     override fun onTabSelect(position: Int) {
         mainTabLayout.currentTab = position
         when(position){
-            0,1,2,3,4->{
+            0,2,3,4->{
                 ImmersionBar.with(this)
                     .reset()
                     //设置状态栏颜色
                     .statusBarColor(R.color.colorPrimary)
+                    .keyboardEnable(false)
+                    .init()
+            }
+            1->{
+                ImmersionBar.with(this)
+                    .reset()
+                    //设置状态栏颜色
+                    .statusBarColor(R.color.colorPrimary)
+                    .hideBar(BarHide.FLAG_HIDE_NAVIGATION_BAR)
                     .keyboardEnable(false)
                     .init()
             }

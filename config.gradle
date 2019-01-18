@@ -20,14 +20,15 @@ ext{
             orhanobutLogger:'2.2.0',
             retrofit:'2.4.0',
             FlycoTabLayoutLib:'2.1.2@aar',
-            BaseRecyclerViewAdapterHelper:'2.9.38',
+            BaseRecyclerViewAdapterHelper:'2.9.46',
             rudeness:'0.1.4@aar',
             wechatSdk:'wechat-sdk-android-with-mta:+',
             SuperTextView:'2.1.8',
             glide:'4.8.0',
             picasso:'2.71828',
             rvadapter:"3.0.3",
-            immersionbar:"2.3.3-beta15"
+            immersionbar:"2.3.3-beta15",
+            SmartRefreshLayout:"1.0.5.1"
     ]
 
     dependencies=[
@@ -46,7 +47,10 @@ ext{
             glideAnnotationProcessor:"com.github.bumptech.glide:compiler:${depsVersion.glide}",
             picasso:"com.squareup.picasso:picasso:${depsVersion.picasso}",
             rvadapter:"com.zhy:base-rvadapter:${depsVersion.rvadapter}",
-            immersionbar:"com.gyf.immersionbar:immersionbar:${depsVersion.immersionbar}"
+            immersionbar:"com.gyf.immersionbar:immersionbar:${depsVersion.immersionbar}",
+            SmartRefreshLayout:"com.scwang.smartrefresh:SmartRefreshLayout:${depsVersion.SmartRefreshLayout}",
+            SmartRefreshLayoutHeader:"com.scwang.smartrefresh:SmartRefreshHeader:${depsVersion.SmartRefreshLayout}",
+            BaseRecyclerViewAdapterHelper:"com.github.CymChad:BaseRecyclerViewAdapterHelper:${depsVersion.BaseRecyclerViewAdapterHelper}"
 
     ]
 }

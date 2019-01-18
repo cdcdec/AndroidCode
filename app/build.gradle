@@ -69,4 +69,6 @@ dependencies {
     implementation rootProject.ext.dependencies.rvadapter
     implementation rootProject.ext.dependencies.design
     implementation rootProject.ext.dependencies.immersionbar
+    implementation rootProject.ext.dependencies.SmartRefreshLayout
+    implementation rootProject.ext.dependencies.BaseRecyclerViewAdapterHelper
 }
