@@ -1,0 +1,72 @@
+apply plugin: 'com.android.application'
+
+apply plugin: 'kotlin-android'
+
+apply plugin: 'kotlin-android-extensions'
+
+android {
+    compileSdkVersion rootProject.ext.android.compileSdkVersion
+    defaultConfig {
+        applicationId "com.cdc.androidcode"
+        minSdkVersion rootProject.ext.android.minSdkVersion
+        targetSdkVersion rootProject.ext.android.targetSdkVersion
+        versionCode rootProject.ext.android.versionCode
+        versionName rootProject.ext.android.versionName
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+
+            res.srcDirs = [
+                    'src/main/res/layout/component',
+                    'src/main/res/layout/document',
+                    'src/main/res/layout/libraries',
+                    'src/main/res/layout/programmer',
+                    'src/main/res/layout/userinterface',
+                    'src/main/res/layout',
+                    'src/main/res'
+            ]
+        }
+    }
+}
+
+configurations.all {
+    resolutionStrategy.eachDependency {details ->
+        def requested = details.requested
+        if (requested.group == 'com.android.support') {
+            if (!requested.name.startsWith("multidex")) {
+                details.useVersion rootProject.ext.depsVersion.support
+            }
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation"org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    //内存泄漏检测
+    debugImplementation rootProject.ext.dependencies.leakcanaryAndroid
+    releaseImplementation rootProject.ext.dependencies.leakcanaryAndroidNoOp
+    // Optional, if you use support library fragments:
+    debugImplementation rootProject.ext.dependencies.leakcanarySupportFragment
+    //内存泄漏检测
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation rootProject.ext.dependencies.appcompatV7
+    implementation rootProject.ext.dependencies.constraintLayout
+    implementation rootProject.ext.dependencies.FlycoTabLayoutLib
+    implementation rootProject.ext.dependencies.orhanobutLogger
+    implementation rootProject.ext.dependencies.SuperTextView
+    implementation rootProject.ext.dependencies.glide
+    annotationProcessor rootProject.ext.dependencies.glideAnnotationProcessor
+    implementation rootProject.ext.dependencies.picasso
+    implementation rootProject.ext.dependencies.rvadapter
+    implementation rootProject.ext.dependencies.design
+    implementation rootProject.ext.dependencies.immersionbar
+}
