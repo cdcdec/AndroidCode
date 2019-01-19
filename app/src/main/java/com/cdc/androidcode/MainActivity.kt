@@ -4,10 +4,9 @@ import com.cdc.androidcode.component.ComponentFragment
 import com.cdc.androidcode.document.DocumentFragment
 import com.cdc.androidcode.libraries.LibrariesFragment
 import com.cdc.androidcode.programmer.ProgrammerFragment
-import com.cdc.androidcode.userinterface.UserInterfaceFragment
+import com.cdc.androidcode.ui.UserInterfaceFragment
 import com.flyco.tablayout.listener.CustomTabEntity
 import com.flyco.tablayout.listener.OnTabSelectListener
-import com.gyf.barlibrary.BarHide
 import com.gyf.barlibrary.ImmersionBar
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -47,7 +46,7 @@ class MainActivity : BaseActivity(), OnTabSelectListener {
                     .reset()
                     //设置状态栏颜色
                     .statusBarColor(R.color.colorPrimary)
-                    .hideBar(BarHide.FLAG_HIDE_NAVIGATION_BAR)
+                    //.hideBar(BarHide.FLAG_HIDE_NAVIGATION_BAR)
                     .keyboardEnable(false)
                     .init()
             }

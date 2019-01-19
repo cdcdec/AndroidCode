@@ -25,6 +25,6 @@ class ProgrammerFragment:BaseFragment() {
     }
 
     override fun layoutId(): Int {
-        return R.layout.fragment_programmer
+        return R.layout.programmer_fragment
     }
 }

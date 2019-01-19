@@ -17,7 +17,7 @@ class LibrariesFragment:BaseFragment() {
     }
 
     override fun layoutId(): Int {
-        return R.layout.fragment_libraries
+        return R.layout.libraries_fragment
     }
 
     override fun initView() {

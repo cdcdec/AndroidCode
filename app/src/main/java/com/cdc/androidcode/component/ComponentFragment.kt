@@ -28,7 +28,7 @@ class ComponentFragment: BaseFragment() {
     }
 
     override fun layoutId(): Int {
-    return R.layout.fragment_component
+    return R.layout.component_fragment
     }
 
     override fun initView() {

@@ -17,7 +17,7 @@ class DocumentFragment:BaseFragment() {
     }
 
     override fun layoutId(): Int {
-       return  R.layout.fragment_document
+       return  R.layout.document_fragment
     }
 
     override fun initView() {
