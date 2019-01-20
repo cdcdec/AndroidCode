@@ -1,9 +1,7 @@
 package com.cdc.androidcode.ui
-
 import android.content.Intent
 import android.support.v7.widget.LinearLayoutManager
 import com.cdc.androidcode.BaseFragment
-import com.cdc.androidcode.MainActivity
 import com.cdc.androidcode.R
 import com.cdc.androidcode.application.RecycleViewDivider
 import com.cdc.androidcode.ui.supertextview.UiStvMainActivity
@@ -36,7 +34,7 @@ private lateinit var uiAdapter:UIItemAdapter
 
     override fun initData() {
         var list:MutableList<UIItemBean> =ArrayList()
-        list.add(UIItemBean("SuperTextView","SuperTextView,CommonTextView继承RelativeLayout,SuperButton继承Button"))
+        list.add(UIItemBean("SuperTextView","SuperTextView,CommonTextView继承RelativeLayout,SuperButton继承Button\n https://github.com/lygttpod/SuperTextView"))
         uiAdapter= UIItemAdapter(R.layout.ui_item,list)
         recyclerView.adapter=uiAdapter
         uiAdapter.setOnItemClickListener { adapter, view, position ->
