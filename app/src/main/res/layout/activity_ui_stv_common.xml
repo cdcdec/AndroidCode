@@ -1,10 +1,178 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
+<android.support.v4.widget.NestedScrollView
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:ctv="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="10dp"
         tools:context=".ui.supertextview.UiStvCommonActivity">
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-</android.support.constraint.ConstraintLayout>
+        <com.allen.library.CommonTextView
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                ctv:cLeftBottomTextColor="@color/colorAccent"
+                ctv:cLeftBottomTextSize="13sp"
+                ctv:cLeftBottomTextString="188******88"
+                ctv:cLeftImageViewDrawableRes="@mipmap/head_default"
+                ctv:cLeftTopTextColor="@color/colorPrimary"
+                ctv:cLeftTopTextSize="15sp"
+                ctv:cLeftTopTextString="张三"
+                ctv:cRightIconResForDrawableRight="@mipmap/arrow_right_red"
+                ctv:cRightTextColor="@color/colorAccent"
+                ctv:cRightTextString="已实名"
+                ctv:cUseRipple="true"/>
+
+
+        <com.allen.library.CommonTextView
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                ctv:cCenterTextString="年龄\n250"
+                ctv:cCenterTextViewLineSpacingExtra="8dp"
+                ctv:cLeftTextString="姓名\n欧阳峰鸟"
+                ctv:cLeftTextViewLineSpacingExtra="8dp"
+                ctv:cRightTextString="学籍\n北京科技大学"
+                ctv:cRightTextViewLineSpacingExtra="8dp"
+                ctv:cSetSingleLine="false"
+                ctv:cShowDividerLineType="bottom"/>
+
+        <com.allen.library.CommonTextView
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                ctv:cCenterTextViewLineSpacingExtra="8dp"
+                ctv:cLeftIconResForDrawableLeft="@mipmap/head_default"
+                ctv:cLeftTextString="姓名\n欧阳峰"
+                ctv:cLeftTextViewGravity="left_center"
+                ctv:cLeftTextViewLineSpacingExtra="8dp"
+                ctv:cRightIconResForDrawableRight="@mipmap/arrow_right_red"
+                ctv:cRightTextColor="@color/colorAccent"
+                ctv:cRightTextString="已实名"
+                ctv:cRightTextViewLineSpacingExtra="8dp"
+                ctv:cSetSingleLine="false"
+                ctv:cShowDividerLineType="bottom"/>
+
+
+        <com.allen.library.CommonTextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                ctv:cLeftIconResForDrawableLeft="@mipmap/scatter_time"
+                ctv:cLeftTextString="起息时间"
+                ctv:cRightIconResForDrawableRight="@mipmap/arrow_right_red"
+                ctv:cRightTextString="T+1日"/>
+
+        <com.allen.library.CommonTextView
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                ctv:cCenterIconResForDrawableTop="@mipmap/scatter_use"
+                ctv:cCenterTextString="还款方式"
+                ctv:cLeftIconResForDrawableTop="@mipmap/scatter_time"
+                ctv:cLeftTextString="起息时间"
+                ctv:cRightIconResForDrawableTop="@mipmap/scatter_type"
+                ctv:cRightTextString="截至日期"/>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+            <com.allen.library.CommonTextView
+                    android:layout_width="0dp"
+                    android:layout_height="80dp"
+                    android:layout_weight="1"
+                    ctv:cCenterIconResForDrawableTop="@mipmap/ic_launcher"
+                    ctv:cCenterTextString="文字"
+                    ctv:cUseRipple="true"/>
+
+            <com.allen.library.CommonTextView
+                    android:layout_width="0dp"
+                    android:layout_height="80dp"
+                    android:layout_weight="1"
+                    ctv:cCenterIconResForDrawableTop="@mipmap/ic_launcher"
+                    ctv:cCenterTextString="文字"
+                    ctv:cUseRipple="true"/>
+
+            <com.allen.library.CommonTextView
+                    android:layout_width="0dp"
+                    android:layout_height="80dp"
+                    android:layout_weight="1"
+                    ctv:cCenterIconResForDrawableTop="@mipmap/ic_launcher"
+                    ctv:cCenterTextString="文字"
+                    ctv:cUseRipple="true"/>
+        </LinearLayout>
+
+        <com.allen.library.CommonTextView
+                android:id="@+id/common_tv"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                ctv:cCenterTextString="张三\n188******88"
+                ctv:cCenterTextViewGravity="center"
+                ctv:cLeftIconResForDrawableLeft="@mipmap/ic_launcher"
+                ctv:cLeftTextString="张三\n188******88"
+                ctv:cLeftTextViewGravity="left_center"
+                ctv:cLeftViewIsClickable="true"
+                ctv:cRightIconResForDrawableRight="@mipmap/ic_launcher"
+                ctv:cRightTextString="张三\n188******88"
+                ctv:cRightTextViewGravity="right_center"
+                ctv:cSetSingleLine="false"
+                ctv:cShowDividerLineType="both"
+                ctv:cUseRipple="true"/>
+
+        <com.allen.library.CommonTextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                ctv:cCenterTextColor="@android:color/darker_gray"
+                ctv:cCenterTextString="请选择客户性别:"
+                ctv:cCenterTextViewGravity="left_center"
+                ctv:cLeftTextString="客户性别"
+                ctv:cLeftViewPaddingLeft="20dp"
+                ctv:cRightIconResForDrawableRight="@mipmap/arrow_right_red"
+                ctv:cRightTextString=""
+                ctv:cUseRipple="true"/>
+
+        <com.allen.library.CommonTextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                ctv:cBackgroundDrawableRes="@drawable/selector_red"
+                ctv:cCenterTextColor="@android:color/darker_gray"
+                ctv:cLeftTextString="自定义背景点击效果"
+                ctv:cRightIconResForDrawableRight="@mipmap/arrow_right_red"/>
+
+        <com.allen.library.CommonTextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                ctv:cCenterTextString="张姐专业广场舞"
+                ctv:cCenterViewMarginLeft="200dp"
+                ctv:cIsCenterAlignLeft="true"
+                ctv:cLeftTextString="领队"/>
+
+        <com.allen.library.CommonTextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                ctv:cCenterTextString="九眼龙天天广场A座"
+                ctv:cCenterViewMarginLeft="200dp"
+                ctv:cIsCenterAlignLeft="true"
+                ctv:cLeftTextString="活动地点"/>
+
+        <com.allen.library.CommonTextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                ctv:cCenterTextString="唐古拉风暴"
+                ctv:cCenterViewMarginLeft="200dp"
+                ctv:cIsCenterAlignLeft="true"
+                ctv:cLeftTextString="舞动歌单"/>
+
+        <com.allen.library.CommonTextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                ctv:cSetMaxEms="16"
+                ctv:cCenterTextString="唐古拉风暴唐古拉风暴唐古拉风暴唐古拉风暴唐古拉风暴"
+                ctv:cCenterViewMarginLeft="100dp"
+                ctv:cIsCenterAlignLeft="true"
+                ctv:cLeftTextString="舞动歌单"/>
+    </LinearLayout>
+</android.support.v4.widget.NestedScrollView>

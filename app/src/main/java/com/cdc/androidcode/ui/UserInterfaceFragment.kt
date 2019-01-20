@@ -3,8 +3,10 @@ package com.cdc.androidcode.ui
 import android.content.Intent
 import android.support.v7.widget.LinearLayoutManager
 import com.cdc.androidcode.BaseFragment
+import com.cdc.androidcode.MainActivity
 import com.cdc.androidcode.R
 import com.cdc.androidcode.application.RecycleViewDivider
+import com.cdc.androidcode.ui.supertextview.UiStvMainActivity
 import kotlinx.android.synthetic.main.ui_fragment.*
 
 /**
@@ -30,13 +32,15 @@ private lateinit var uiAdapter:UIItemAdapter
         recyclerView.addItemDecoration(RecycleViewDivider(activity, LinearLayoutManager.VERTICAL, R.drawable.shape_recycleview_divider))
     }
 
+
+
     override fun initData() {
         var list:MutableList<UIItemBean> =ArrayList()
-        list.add(UIItemBean("SuperTextView","SuperTextView Content"))
+        list.add(UIItemBean("SuperTextView","SuperTextView,CommonTextView继承RelativeLayout,SuperButton继承Button"))
         uiAdapter= UIItemAdapter(R.layout.ui_item,list)
         recyclerView.adapter=uiAdapter
         uiAdapter.setOnItemClickListener { adapter, view, position ->
-            var intent= Intent(view.context,UiSputerTextViewActivity::class.java)
+            var intent= Intent(view.context, UiStvMainActivity::class.java)
             view.context.startActivity(intent)
         }
 

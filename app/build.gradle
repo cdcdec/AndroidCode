@@ -3,6 +3,7 @@ apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 
 apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
 
 android {
     compileSdkVersion rootProject.ext.android.compileSdkVersion
@@ -60,7 +61,8 @@ dependencies {
     implementation rootProject.ext.dependencies.orhanobutLogger
     implementation rootProject.ext.dependencies.SuperTextView
     implementation rootProject.ext.dependencies.glide
-    annotationProcessor rootProject.ext.dependencies.glideAnnotationProcessor
+    kapt rootProject.ext.dependencies.glideAnnotationProcessor
+    //annotationProcessor rootProject.ext.dependencies.glideAnnotationProcessor
     implementation rootProject.ext.dependencies.picasso
     implementation rootProject.ext.dependencies.rvadapter
     implementation rootProject.ext.dependencies.design

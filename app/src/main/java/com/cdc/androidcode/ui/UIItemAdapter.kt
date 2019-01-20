@@ -11,3 +11,6 @@ class UIItemAdapter(layoutResId: Int, data: List<UIItemBean>?) : BaseQuickAdapte
         helper.setText(R.id.tvUIContent, item.uiContent)
     }
 }
+
+
+data class UIItemBean(var uiTitle:String,var uiContent:String)

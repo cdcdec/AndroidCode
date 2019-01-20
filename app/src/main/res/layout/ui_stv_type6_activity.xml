@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:stv="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:clipToPadding="true"
+        android:fitsSystemWindows="true"
+        tools:context=".ui.supertextview.UiStvTypeActivity">
+
+    <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbarType6"
+            android:layout_width="match_parent"
+            android:layout_height="100pt"
+            android:elevation="4dp"
+            stv:navigationIcon="@mipmap/icon_back_left_arrow"
+            android:background="@color/colorPrimary"
+    >
+        <!--自定义控件-->
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:singleLine="true"
+                android:text="Super TextView"/>
+    </android.support.v7.widget.Toolbar>
+    <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+    >
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingTop="20dp">
+        <com.allen.library.SuperTextView
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                stv:sCenterBottomTextColor="@color/colorAccent"
+                stv:sCenterBottomTextString="中下"
+                stv:sCenterTextColor="@color/colorAccent"
+                stv:sCenterTextString="中"
+                stv:sCenterTopTextColor="@color/colorAccent"
+                stv:sCenterTopTextString="中上"
+                stv:sLeftBottomTextColor="@color/colorAccent"
+                stv:sLeftBottomTextString="左下"
+                stv:sLeftTextColor="@color/colorAccent"
+                stv:sLeftTextString="左中文字"
+                stv:sLeftTopTextColor="@color/colorAccent"
+                stv:sLeftTopTextString="左上"
+                stv:sRightBottomTextColor="@color/colorAccent"
+                stv:sRightBottomTextString="右"
+                stv:sRightTextColor="@color/colorAccent"
+                stv:sRightTextString="右中"
+                stv:sRightTopTextColor="@color/colorAccent"
+                stv:sRightTopTextString="右" />
+
+
+        <com.allen.library.SuperTextView
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                stv:sCenterBottomTextString="测试文字"
+                stv:sCenterTopTextString="测试文字"
+                stv:sCenterViewGravity="center"
+                stv:sLeftBottomTextString="18888888888"
+                stv:sLeftTopTextString="张三"
+                stv:sLeftViewGravity="left_center"
+                stv:sRightBottomTextString="15555555555"
+                stv:sRightTopTextString="李四"
+                stv:sRightViewGravity="right_center" />
+
+
+        <com.allen.library.SuperTextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                stv:sCenterTextString="张姐专业广场舞"
+                stv:sCenterViewGravity="left_center"
+                stv:sLeftTextString="领队"
+                stv:sLeftViewGravity="left_center"
+                stv:sLeftViewWidth="80dp" />
+
+        <com.allen.library.SuperTextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                stv:sCenterTextString="九眼龙天天广场A座"
+                stv:sCenterViewGravity="left_center"
+                stv:sLeftTextString="活动地点"
+                stv:sLeftViewGravity="left_center"
+                stv:sLeftViewWidth="80dp" />
+
+        <com.allen.library.SuperTextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                stv:sCenterTextString="最炫民族风"
+                stv:sCenterViewGravity="left_center"
+                stv:sLeftTextString="舞动歌单"
+                stv:sLeftViewGravity="left_center"
+                stv:sLeftViewWidth="80dp" />
+
+        <com.allen.library.SuperTextView
+                android:id="@+id/super_tv4"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:visibility="visible"
+                stv:sCenterTextString="代码设置对齐效果代码设置对齐效果代码设置对齐效果"
+                stv:sCenterViewGravity="left_center"
+                stv:sLeftTextString="换行对齐"
+                stv:sLeftViewGravity="left_center"
+                stv:sLeftViewWidth="80dp" />
+
+
+    </LinearLayout>
+</android.support.v4.widget.NestedScrollView>
+</LinearLayout>
