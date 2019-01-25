@@ -1,9 +1,13 @@
 package com.cdc.androidcode
+import android.content.Intent
 import android.content.res.Configuration
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
+import android.view.View
+import android.view.View.OnClickListener
 import com.cdc.androidcode.application.RudenessScreenHelper
 import com.gyf.barlibrary.ImmersionBar
+import kotlinx.android.synthetic.main.toolbar_common.*
 
 /**
  * ProjectName：AndroidCode
@@ -13,7 +17,13 @@ import com.gyf.barlibrary.ImmersionBar
  * updateTime:(修改时间)15:27
  * updateDesc:(修改内容)
  */
-abstract class BaseActivity: AppCompatActivity() {
+abstract class BaseActivity: AppCompatActivity(), OnClickListener{
+
+    override fun onClick(v: View?) {
+
+    }
+
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -35,7 +45,7 @@ abstract class BaseActivity: AppCompatActivity() {
 
     protected open fun initImmersionBar() {
         //在BaseActivity里初始化
-        ImmersionBar.with(this).init()
+        ImmersionBar.with(this).statusBarColor(R.color.colorPrimary).init()
     }
 
     override fun onConfigurationChanged(newConfig: Configuration) {
@@ -66,6 +76,18 @@ abstract class BaseActivity: AppCompatActivity() {
     protected open fun isImmersionBarEnabled():Boolean {
         return true
     }
+
+     fun setStatusBar(){
+        setSupportActionBar(toolbar)
+        supportActionBar!!.setDisplayShowTitleEnabled(false)
+        toolbar.setNavigationOnClickListener{
+            finish()
+        }
+    }
+
+
+
+
 
 
 }
