@@ -1,16 +1,13 @@
 package com.cdc.androidcode.libraries
-
-import android.content.ComponentName
-import android.content.Context
 import android.content.Intent
 import android.support.v7.widget.LinearLayoutManager
 import com.cdc.androidcode.BaseFragment
 import com.cdc.androidcode.R
 import com.cdc.androidcode.application.RecycleViewDivider
 import com.cdc.androidcode.libraries.glide.GlideMainActivity
+import com.cdc.androidcode.libraries.jpush.JpushActivity
 import com.cdc.androidcode.ui.UIItemAdapter
 import com.cdc.androidcode.ui.UIItemBean
-import com.cdc.androidcode.ui.supertextview.UiStvMainActivity
 import kotlinx.android.synthetic.main.fresh_scroll_recy_common.*
 
 /**
@@ -39,6 +36,7 @@ class LibrariesFragment:BaseFragment() {
     override fun initData() {
         var list:MutableList<UIItemBean> =ArrayList()
         list.add(UIItemBean("Glide","Glide1",GlideMainActivity::class.java))
+        list.add(UIItemBean("Jpush","Jpush", JpushActivity::class.java))
         uiAdapter= UIItemAdapter(R.layout.ui_item,list)
         recyclerView.adapter=uiAdapter
         uiAdapter.setOnItemClickListener { adapter, view, position ->

@@ -1,16 +1,14 @@
 package com.cdc.androidcode.libraries.jpush
 import com.cdc.androidcode.BaseActivity
-import com.cdc.androidcode.R
 import kotlinx.android.synthetic.main.activity_jpush.*
-import android.R
 import com.cdc.androidcode.ExampleUtil
 import android.content.Intent
 import android.content.BroadcastReceiver
-import android.R
 import android.content.Context
-import android.R
-
-
+import android.view.View
+import cn.jpush.android.api.JPushInterface
+import com.cdc.androidcode.R
+import kotlinx.android.synthetic.main.toolbar_common.*
 
 
 class JpushActivity : BaseActivity(){
@@ -44,24 +42,26 @@ class JpushActivity : BaseActivity(){
 
     private fun setCostomMsg(msg:String) {
         if (null != msg_rec) {
-            msg_rec.text=msg
+            //msg_rec.text=
             msg_rec.visibility=android.view.View.VISIBLE
         }
     }
     override fun initView() {
+        toolBarTitle.text="Jpush"
+        setStatusBar()
         init.setOnClickListener(this)
         stopPush.setOnClickListener(this)
         resumePush.setOnClickListener(this)
         getRegistrationId.setOnClickListener(this)
         setting.setOnClickListener(this)
 
-        var udid=JpushUtil.getImei(applicationContext,"")
-        if(null != udid){
-            tv_imei.text="IMEI: $udid"
-        }
-        var appKey=JpushUtil.getAppKey(getApplicationContext())
+//        var udid=JpushUtil.getImei(applicationContext,"")
+//        if(null != udid){
+//            tv_imei.text="IMEI: $udid"
+//        }
+        var appKey=JpushUtil.getAppKey(applicationContext)
         if(appKey==null){
-            appKey = "AppKey异常"
+            tv_appkey.text= "AppKey异常"
         }else{
             tv_appkey.text="AppKey: $appKey"
         }
@@ -72,10 +72,8 @@ class JpushActivity : BaseActivity(){
         var versionName=JpushUtil.GetVersion(applicationContext)
 
         tv_version.text="Version: $versionName"
-
-
-
     }
+
 
     override fun initData() {
 
@@ -83,6 +81,17 @@ class JpushActivity : BaseActivity(){
 
     override fun layoutId(): Int {
         return R.layout.activity_jpush
+    }
+
+    override fun onClick(v: View?) {
+        super.onClick(v)
+        if (v != null) {
+            when(v.id){
+                R.id.init->{
+                    JPushInterface.init(application)
+                }
+            }
+        }
     }
 
 

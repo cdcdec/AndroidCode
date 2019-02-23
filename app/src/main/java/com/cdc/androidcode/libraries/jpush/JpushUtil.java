@@ -1,5 +1,6 @@
 package com.cdc.androidcode.libraries.jpush;
 
+import android.Manifest;
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.pm.ApplicationInfo;
@@ -10,6 +11,7 @@ import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.os.Looper;
+import android.support.v4.app.ActivityCompat;
 import android.telephony.TelephonyManager;
 import android.text.TextUtils;
 import android.widget.Toast;
@@ -36,16 +38,19 @@ public class JpushUtil {
             return true;
         return false;
     }
+
     /**
      * 只能以 “+” 或者 数字开头；后面的内容只能包含 “-” 和 数字。
      * */
     private final static String MOBILE_NUMBER_CHARS = "^[+0-9][-0-9]{1,}$";
+
     public static boolean isValidMobileNumber(String s) {
-        if(TextUtils.isEmpty(s)) return true;
+        if (TextUtils.isEmpty(s)) return true;
         Pattern p = Pattern.compile(MOBILE_NUMBER_CHARS);
         Matcher m = p.matcher(s);
         return m.matches();
     }
+
     // 校验Tag Alias 只能是数字,英文字母和中文
     public static boolean isValidTagAndAlias(String s) {
         Pattern p = Pattern.compile("^[\u4E00-\u9FA50-9a-zA-Z_!@#$&*+=.|]+$");
@@ -85,8 +90,7 @@ public class JpushUtil {
         }
     }
 
-    public static void showToast(final String toast, final Context context)
-    {
+    public static void showToast(final String toast, final Context context) {
         new Thread(new Runnable() {
 
             @Override
@@ -103,6 +107,7 @@ public class JpushUtil {
         NetworkInfo info = conn.getActiveNetworkInfo();
         return (info != null && info.isConnected());
     }
+
 
     @SuppressLint("MissingPermission")
     public static String getImei(Context context, String imei) {
