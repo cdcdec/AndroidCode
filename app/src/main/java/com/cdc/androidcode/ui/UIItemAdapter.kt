@@ -1,5 +1,6 @@
 package com.cdc.androidcode.ui
 
+import android.app.Activity
 import com.cdc.androidcode.R
 import com.chad.library.adapter.base.BaseQuickAdapter
 import com.chad.library.adapter.base.BaseViewHolder
@@ -13,4 +14,8 @@ class UIItemAdapter(layoutResId: Int, data: List<UIItemBean>?) : BaseQuickAdapte
 }
 
 
-data class UIItemBean(var uiTitle:String,var uiContent:String)
+data class UIItemBean(
+    var uiTitle:String,
+    var uiContent:String,
+    var clas:Class<*>
+)

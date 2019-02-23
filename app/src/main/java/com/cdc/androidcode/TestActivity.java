@@ -26,7 +26,7 @@ public class TestActivity extends Activity {
             }
             tv.setText("Title : " + title + "  " + "Content : " + content);
         }
-        addContentView(tv, new LayoutParams(LayoutParams.FILL_PARENT, LayoutParams.FILL_PARENT));
+        addContentView(tv, new LayoutParams(LayoutParams.match_parent, LayoutParams.match_parent));
     }
 
 }

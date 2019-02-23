@@ -1,5 +1,7 @@
 package com.cdc.androidcode.libraries
 
+import android.content.ComponentName
+import android.content.Context
 import android.content.Intent
 import android.support.v7.widget.LinearLayoutManager
 import com.cdc.androidcode.BaseFragment
@@ -36,12 +38,14 @@ class LibrariesFragment:BaseFragment() {
 
     override fun initData() {
         var list:MutableList<UIItemBean> =ArrayList()
-        list.add(UIItemBean("Glide","Glide1"))
+        list.add(UIItemBean("Glide","Glide1",GlideMainActivity::class.java))
         uiAdapter= UIItemAdapter(R.layout.ui_item,list)
         recyclerView.adapter=uiAdapter
         uiAdapter.setOnItemClickListener { adapter, view, position ->
-            var intent= Intent(view.context, GlideMainActivity::class.java)
+            var intent= Intent(view.context, list[position].clas)
             view.context.startActivity(intent)
         }
     }
+
+
 }

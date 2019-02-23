@@ -34,11 +34,11 @@ private lateinit var uiAdapter:UIItemAdapter
 
     override fun initData() {
         var list:MutableList<UIItemBean> =ArrayList()
-        list.add(UIItemBean("SuperTextView","SuperTextView,CommonTextView继承RelativeLayout,SuperButton继承Button\n https://github.com/lygttpod/SuperTextView"))
+        list.add(UIItemBean("SuperTextView","SuperTextView,CommonTextView继承RelativeLayout,SuperButton继承Button\n https://github.com/lygttpod/SuperTextView",UiStvMainActivity::class.java))
         uiAdapter= UIItemAdapter(R.layout.ui_item,list)
         recyclerView.adapter=uiAdapter
         uiAdapter.setOnItemClickListener { adapter, view, position ->
-            var intent= Intent(view.context, UiStvMainActivity::class.java)
+            var intent= Intent(view.context, list[position].clas)
             view.context.startActivity(intent)
         }
 
