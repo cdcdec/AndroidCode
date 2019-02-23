@@ -5,7 +5,7 @@ import com.cdc.androidcode.BaseFragment
 import com.cdc.androidcode.R
 import com.cdc.androidcode.application.RecycleViewDivider
 import com.cdc.androidcode.ui.supertextview.UiStvMainActivity
-import kotlinx.android.synthetic.main.ui_fragment.*
+import kotlinx.android.synthetic.main.fresh_scroll_recy_common.*
 
 /**
  * ProjectName：AndroidCode
@@ -22,7 +22,7 @@ private lateinit var uiAdapter:UIItemAdapter
     }
 
     override fun layoutId(): Int {
-       return  R.layout.ui_fragment
+       return  R.layout.fresh_scroll_recy_common
     }
 
     override fun initView() {

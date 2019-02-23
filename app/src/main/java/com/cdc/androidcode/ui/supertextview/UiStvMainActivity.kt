@@ -4,6 +4,7 @@ import android.view.View
 import com.cdc.androidcode.BaseActivity
 import com.cdc.androidcode.R
 import com.gyf.barlibrary.ImmersionBar
+import kotlinx.android.synthetic.main.toolbar_common.*
 import kotlinx.android.synthetic.main.ui_stv_activity_main.*
 class UiStvMainActivity : BaseActivity(), View.OnClickListener {
     override fun onClick(v: View?) {
