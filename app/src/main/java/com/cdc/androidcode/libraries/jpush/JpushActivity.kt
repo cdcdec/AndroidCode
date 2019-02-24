@@ -1,7 +1,6 @@
 package com.cdc.androidcode.libraries.jpush
 import com.cdc.androidcode.BaseActivity
 import kotlinx.android.synthetic.main.activity_jpush.*
-import com.cdc.androidcode.ExampleUtil
 import android.content.Intent
 import android.content.BroadcastReceiver
 import android.content.Context
@@ -9,6 +8,9 @@ import android.view.View
 import cn.jpush.android.api.JPushInterface
 import com.cdc.androidcode.R
 import kotlinx.android.synthetic.main.toolbar_common.*
+import android.widget.Toast
+
+
 
 
 class JpushActivity : BaseActivity(){
@@ -29,7 +31,7 @@ class JpushActivity : BaseActivity(){
                     val extras = intent.getStringExtra(KEY_EXTRAS)
                     val showMsg = StringBuilder()
                     showMsg.append("$KEY_MESSAGE : $messge\n")
-                    if (!ExampleUtil.isEmpty(extras)) {
+                    if (!JpushUtil.isEmpty(extras)) {
                         showMsg.append("$KEY_EXTRAS : $extras\n")
                     }
                     setCostomMsg(showMsg.toString())
@@ -90,6 +92,27 @@ class JpushActivity : BaseActivity(){
                 R.id.init->{
                     JPushInterface.init(application)
                 }
+                R.id.setting->{
+                    val intent = Intent(this@JpushActivity, PushingSettingActivity::class.java)
+                    startActivity(intent)
+                }
+                R.id.stopPush->{
+                    JPushInterface.stopPush(applicationContext)
+                }
+                R.id.resumePush->{
+                    JPushInterface.resumePush(applicationContext)
+                }
+               R.id.getRegistrationId->{
+                    val rid = JPushInterface.getRegistrationID(applicationContext)
+                    if (!rid.isEmpty()) {
+                        tv_regId.text="RegId:$rid"
+                    } else {
+                        Toast.makeText(this, "Get registration fail, JPush init failed!", Toast.LENGTH_SHORT).show()
+                    }
+                }
+
+
+
             }
         }
     }

@@ -1,4 +1,4 @@
-package com.cdc.androidcode;
+package com.cdc.androidcode.libraries.jpush;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -7,6 +7,7 @@ import android.content.IntentFilter;
 import android.net.Uri;
 import android.os.Handler;
 import android.os.Message;
+import com.cdc.androidcode.Logger;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -21,8 +22,8 @@ public final class LocalBroadcastManager {
     private static final boolean DEBUG = false;
     private final Context mAppContext;
     private final HashMap<BroadcastReceiver, ArrayList<IntentFilter>> mReceivers = new HashMap<BroadcastReceiver, ArrayList<IntentFilter>>();
-    private final HashMap<String, ArrayList<ReceiverRecord>> mActions = new HashMap<String, ArrayList<ReceiverRecord>> ();
-    private final ArrayList<BroadcastRecord> mPendingBroadcasts = new ArrayList<BroadcastRecord>();
+    private final HashMap<String, ArrayList<LocalBroadcastManager.ReceiverRecord>> mActions = new HashMap<String, ArrayList<LocalBroadcastManager.ReceiverRecord>> ();
+    private final ArrayList<LocalBroadcastManager.BroadcastRecord> mPendingBroadcasts = new ArrayList<LocalBroadcastManager.BroadcastRecord>();
     static final int MSG_EXEC_PENDING_BROADCASTS = 1;
     private final Handler mHandler;
     private static final Object mLock = new Object();
@@ -58,7 +59,7 @@ public final class LocalBroadcastManager {
     public void registerReceiver(BroadcastReceiver receiver, IntentFilter filter) {
         HashMap var3 = this.mReceivers;
         synchronized (this.mReceivers) {
-            ReceiverRecord entry = new ReceiverRecord(filter, receiver);
+            LocalBroadcastManager.ReceiverRecord entry = new LocalBroadcastManager.ReceiverRecord(filter, receiver);
             ArrayList filters = (ArrayList) this.mReceivers.get(receiver);
             if (filters == null) {
                 filters = new ArrayList(1);
@@ -94,7 +95,7 @@ public final class LocalBroadcastManager {
                         ArrayList receivers = (ArrayList) this.mActions.get(action);
                         if (receivers != null) {
                             for (int k = 0; k < receivers.size(); ++k) {
-                                if (((ReceiverRecord) receivers.get(k)).receiver == receiver) {
+                                if (((LocalBroadcastManager.ReceiverRecord) receivers.get(k)).receiver == receiver) {
                                     receivers.remove(k);
                                     --k;
                                 }
@@ -134,7 +135,7 @@ public final class LocalBroadcastManager {
 
                 int i;
                 for (i = 0; i < entries.size(); ++i) {
-                    ReceiverRecord receiver = (ReceiverRecord) entries.get(i);
+                    LocalBroadcastManager.ReceiverRecord receiver = (LocalBroadcastManager.ReceiverRecord) entries.get(i);
                     if (debug) {
                         Logger.v("LocalBroadcastManager", "Matching against filter " + receiver.filter);
                     }
@@ -182,10 +183,10 @@ public final class LocalBroadcastManager {
 
                 if (receivers != null) {
                     for (i = 0; i < receivers.size(); ++i) {
-                        ((ReceiverRecord) receivers.get(i)).broadcasting = false;
+                        ((LocalBroadcastManager.ReceiverRecord) receivers.get(i)).broadcasting = false;
                     }
 
-                    this.mPendingBroadcasts.add(new BroadcastRecord(intent, receivers));
+                    this.mPendingBroadcasts.add(new LocalBroadcastManager.BroadcastRecord(intent, receivers));
                     if (!this.mHandler.hasMessages(1)) {
                         this.mHandler.sendEmptyMessage(1);
                     }
@@ -207,7 +208,7 @@ public final class LocalBroadcastManager {
 
     private void executePendingBroadcasts() {
         while (true) {
-            BroadcastRecord[] brs = null;
+            LocalBroadcastManager.BroadcastRecord[] brs = null;
             HashMap i = this.mReceivers;
             synchronized (this.mReceivers) {
                 int br = this.mPendingBroadcasts.size();
@@ -215,16 +216,16 @@ public final class LocalBroadcastManager {
                     return;
                 }
 
-                brs = new BroadcastRecord[br];
+                brs = new LocalBroadcastManager.BroadcastRecord[br];
                 this.mPendingBroadcasts.toArray(brs);
                 this.mPendingBroadcasts.clear();
             }
 
             for (int var6 = 0; var6 < brs.length; ++var6) {
-                BroadcastRecord var7 = brs[var6];
+                LocalBroadcastManager.BroadcastRecord var7 = brs[var6];
 
                 for (int j = 0; j < var7.receivers.size(); ++j) {
-                    ((ReceiverRecord) var7.receivers.get(j)).receiver.onReceive(this.mAppContext, var7.intent);
+                    ((LocalBroadcastManager.ReceiverRecord) var7.receivers.get(j)).receiver.onReceive(this.mAppContext, var7.intent);
                 }
             }
         }
@@ -232,9 +233,9 @@ public final class LocalBroadcastManager {
 
     private static class BroadcastRecord {
         final Intent intent;
-        final ArrayList<ReceiverRecord> receivers;
+        final ArrayList<LocalBroadcastManager.ReceiverRecord> receivers;
 
-        BroadcastRecord(Intent _intent, ArrayList<ReceiverRecord> _receivers) {
+        BroadcastRecord(Intent _intent, ArrayList<LocalBroadcastManager.ReceiverRecord> _receivers) {
             this.intent = _intent;
             this.receivers = _receivers;
         }

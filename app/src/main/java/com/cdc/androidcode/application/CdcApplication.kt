@@ -4,6 +4,7 @@ import android.app.Application
 import com.scwang.smartrefresh.layout.SmartRefreshLayout
 
 import android.content.Context
+import cn.jpush.android.api.JPushInterface
 import com.cdc.androidcode.R
 import com.scwang.smartrefresh.layout.SmartRefreshLayout.setDefaultRefreshHeaderCreator
 import com.scwang.smartrefresh.layout.api.*
@@ -37,5 +38,7 @@ class CdcApplication:Application() {
     override fun onCreate() {
         super.onCreate()
         RudenessScreenHelper(this, 750f).activate() //初始化百分比布局
+        JPushInterface.setDebugMode(true)    // 设置开启日志,发布时请关闭日志
+        JPushInterface.init(this)            // 初始化 JPush
     }
 }

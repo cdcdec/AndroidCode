@@ -1,4 +1,4 @@
-package com.cdc.androidcode;
+package com.cdc.androidcode.libraries.jpush;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 
+import com.cdc.androidcode.Logger;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -110,7 +111,7 @@ public class MyReceiver extends BroadcastReceiver {
 //			String extras = bundle.getString(JPushInterface.EXTRA_EXTRA);
 //			Intent msgIntent = new Intent(MainActivity.MESSAGE_RECEIVED_ACTION);
 //			msgIntent.putExtra(MainActivity.KEY_MESSAGE, message);
-//			if (!ExampleUtil.isEmpty(extras)) {
+//			if (!JpushUtil.isEmpty(extras)) {
 //				try {
 //					JSONObject extraJson = new JSONObject(extras);
 //					if (extraJson.length() > 0) {

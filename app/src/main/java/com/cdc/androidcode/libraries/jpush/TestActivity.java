@@ -1,4 +1,4 @@
-package com.cdc.androidcode;
+package com.cdc.androidcode.libraries.jpush;
 
 import android.app.Activity;
 import android.content.Intent;

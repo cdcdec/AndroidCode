@@ -1,4 +1,4 @@
-package com.cdc.androidcode;
+package com.cdc.androidcode.libraries.jpush;
 
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
@@ -68,8 +68,8 @@ public class SettingActivity extends InstrumentedActivity implements OnClickList
     }
    
     private void initData(){
-	  mSettings = getSharedPreferences(ExampleUtil.PREFS_NAME, MODE_PRIVATE);
-	  String days = mSettings.getString(ExampleUtil.PREFS_DAYS, "");
+	  mSettings = getSharedPreferences(JpushUtil.PREFS_NAME, MODE_PRIVATE);
+	  String days = mSettings.getString(JpushUtil.PREFS_DAYS, "");
 		if (!TextUtils.isEmpty(days)) {
 			initAllWeek(false);
 			String[] sArray = days.split(",");
@@ -80,9 +80,9 @@ public class SettingActivity extends InstrumentedActivity implements OnClickList
 			initAllWeek(true);
 		}
 		
-	  int startTimeStr = mSettings.getInt(ExampleUtil.PREFS_START_TIME, 0);
+	  int startTimeStr = mSettings.getInt(JpushUtil.PREFS_START_TIME, 0);
 	  startTime.setCurrentHour(startTimeStr);
-	  int endTimeStr = mSettings.getInt(ExampleUtil.PREFS_END_TIME, 23);
+	  int endTimeStr = mSettings.getInt(JpushUtil.PREFS_END_TIME, 23);
 	  endTime.setCurrentHour(endTimeStr);
    }
 
@@ -143,9 +143,9 @@ public class SettingActivity extends InstrumentedActivity implements OnClickList
 		JPushInterface.setPushTime(getApplicationContext(), days, startime, endtime);
 		
 		mEditor = mSettings.edit();
-		mEditor.putString(ExampleUtil.PREFS_DAYS, daysSB.toString());
-		mEditor.putInt(ExampleUtil.PREFS_START_TIME, startime);
-		mEditor.putInt(ExampleUtil.PREFS_END_TIME, endtime);
+		mEditor.putString(JpushUtil.PREFS_DAYS, daysSB.toString());
+		mEditor.putInt(JpushUtil.PREFS_START_TIME, startime);
+		mEditor.putInt(JpushUtil.PREFS_END_TIME, endtime);
 		mEditor.commit();
 		Toast.makeText(SettingActivity.this, R.string.setting_su, Toast.LENGTH_SHORT).show();
 	}
