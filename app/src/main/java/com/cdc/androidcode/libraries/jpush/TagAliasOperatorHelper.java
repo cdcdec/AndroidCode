@@ -11,6 +11,7 @@ import java.util.Set;
 import cn.jpush.android.api.JPushInterface;
 import cn.jpush.android.api.JPushMessage;
 import com.cdc.androidcode.Logger;
+import com.cdc.androidcode.log.LogUtil;
 
 /**
  * 处理tagalias相关的逻辑
@@ -105,7 +106,7 @@ public class TagAliasOperatorHelper {
     };
     public void handleAction(Context context,int sequence,String mobileNumber){
         put(sequence,mobileNumber);
-        Logger.d(TAG,"sequence:"+sequence+",mobileNumber:"+mobileNumber);
+        LogUtil.INSTANCE.g("sequence:"+sequence+",mobileNumber:"+mobileNumber);
         JPushInterface.setMobileNumber(context,sequence,mobileNumber);
     }
     /**
@@ -168,7 +169,7 @@ public class TagAliasOperatorHelper {
         }
         //返回的错误码为6002 超时,6014 服务器繁忙,都建议延迟重试
         if(errorCode == 6002 || errorCode == 6014){
-            Logger.d(TAG,"need retry");
+            LogUtil.INSTANCE.g("need retry");
             if(tagAliasBean!=null){
                 Message message = new Message();
                 message.what = DELAY_SEND_ACTION;
@@ -188,7 +189,7 @@ public class TagAliasOperatorHelper {
         }
         //返回的错误码为6002 超时,6024 服务器内部错误,建议稍后重试
         if(errorCode == 6002 || errorCode == 6024){
-            Logger.d(TAG,"need retry");
+            LogUtil.INSTANCE.g("need retry");
             Message message = new Message();
             message.what = DELAY_SET_MOBILE_NUMBER_ACTION;
             message.obj = mobileNumber;

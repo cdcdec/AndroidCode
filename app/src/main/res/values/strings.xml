@@ -22,4 +22,14 @@
     <string name="hint_number_entry">Find by phone number</string>
     <string name="button_search_phone">Find</string>
     <string name="glide_contact">glide_contact_uri</string>
+
+    <!--XXPermissions-->
+    <string name="xxpermission_request">请求运行时权限</string>
+    <string name="xxpermission_ishas">权限是否已经获取</string>
+    <string name="xxpermission_settingpage">应用权限设置页面</string>
+
+
+
+
+
 </resources>

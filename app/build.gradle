@@ -1,10 +1,7 @@
 apply plugin: 'com.android.application'
-
 apply plugin: 'kotlin-android'
-
 apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'
-
 android {
     compileSdkVersion rootProject.ext.android.compileSdkVersion
     defaultConfig {
@@ -13,6 +10,16 @@ android {
         targetSdkVersion rootProject.ext.android.targetSdkVersion
         versionCode rootProject.ext.android.versionCode
         versionName rootProject.ext.android.versionName
+        ndk {
+            //设置支持的SO库架构（开发者可以根据需要，选择一个或多个平台的so）
+            abiFilters "armeabi", "armeabi-v7a", "x86", "arm64-v8a", "x86_64"
+        }
+
+        manifestPlaceholders = [
+                JPUSH_PKGNAME: applicationId,
+                JPUSH_APPKEY : "d44807982507617679d47adb", //JPush 上注册的包名对应的 Appkey.
+                JPUSH_CHANNEL: "developer-default", //暂时填写默认值即可.
+        ]
     }
     buildTypes {
         release {
@@ -61,6 +68,11 @@ dependencies {
     implementation rootProject.ext.dependencies.orhanobutLogger
     implementation rootProject.ext.dependencies.SuperTextView
     implementation rootProject.ext.dependencies.glide
+    implementation rootProject.ext.dependencies.xxpermissions
+    //极光1
+    implementation rootProject.ext.dependencies.jpush
+    //极光2
+    implementation rootProject.ext.dependencies.jpushjcore
     kapt rootProject.ext.dependencies.glideAnnotationProcessor
     //annotationProcessor rootProject.ext.dependencies.glideAnnotationProcessor
     implementation rootProject.ext.dependencies.picasso
