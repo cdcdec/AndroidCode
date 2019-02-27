@@ -20,9 +20,8 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import cn.jpush.android.api.JPushInterface;
-import com.cdc.androidcode.Logger;
 
-public class JpushUtil {
+public class ExampleUtil {
     public static final String PREFS_NAME = "JPUSH_EXAMPLE";
     public static final String PREFS_DAYS = "JPUSH_EXAMPLE_DAYS";
     public static final String PREFS_START_TIME = "PREFS_START_TIME";
@@ -108,22 +107,46 @@ public class JpushUtil {
         return (info != null && info.isConnected());
     }
 
-
-    @SuppressLint("MissingPermission")
+	@SuppressLint("MissingPermission")
     public static String getImei(Context context, String imei) {
         String ret = null;
-        try {
-            TelephonyManager telephonyManager = (TelephonyManager) context.getSystemService(Context.TELEPHONY_SERVICE);
+		try {
+			TelephonyManager telephonyManager = (TelephonyManager) context.getSystemService(Context.TELEPHONY_SERVICE);
             ret = telephonyManager.getDeviceId();
-        } catch (Exception e) {
-            Logger.e(JpushUtil.class.getSimpleName(), e.getMessage());
-        }
-        if (isReadableASCII(ret)){
+		} catch (Exception e) {
+			Logger.e(ExampleUtil.class.getSimpleName(), e.getMessage());
+		}
+		if (isReadableASCII(ret)){
             return ret;
         } else {
             return imei;
         }
-    }
+	}
+
+//    public static String getImei(Context context, String imei) {
+//        String ret = null;
+//        try {
+//            TelephonyManager telephonyManager = (TelephonyManager) context.getSystemService(Context.TELEPHONY_SERVICE);
+//            if (ActivityCompat.checkSelfPermission(context, Manifest.permission.READ_PHONE_STATE) != PackageManager.PERMISSION_GRANTED) {
+//                // TODO: Consider calling
+//                //    ActivityCompat#requestPermissions
+//                // here to request the missing permissions, and then overriding
+//                //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
+//                //                                          int[] grantResults)
+//                // to handle the case where the user grants the permission. See the documentation
+//                // for ActivityCompat#requestPermissions for more details.
+//                //return TODO;
+//            }
+//            ret = telephonyManager.getDeviceId();
+//        } catch (Exception e) {
+//            Logger.e(ExampleUtil.class.getSimpleName(), e.getMessage());
+//        }
+//        if (isReadableASCII(ret)){
+//            return ret;
+//        } else {
+//            return imei;
+//        }
+//    }
 
     private static boolean isReadableASCII(CharSequence string){
         if (TextUtils.isEmpty(string)) return false;

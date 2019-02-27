@@ -31,6 +31,7 @@ class MainActivity : BaseActivity(), OnTabSelectListener {
     }
 
     override fun onTabSelect(position: Int) {
+
         mainTabLayout.currentTab = position
         when(position){
             0,2,3,4->{

@@ -2,10 +2,12 @@ package com.cdc.androidcode.libraries.jpush;
 
 import android.app.Notification;
 import android.content.Intent;
+import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -14,33 +16,23 @@ import java.util.Set;
 
 import cn.jpush.android.api.BasicPushNotificationBuilder;
 import cn.jpush.android.api.CustomPushNotificationBuilder;
+import cn.jpush.android.api.InstrumentedActivity;
 import cn.jpush.android.api.JPushInterface;
+ import  com.cdc.androidcode.R;
 import cn.jpush.android.api.MultiActionsNotificationBuilder;
 import cn.jpush.android.api.TagAliasCallback;
-import com.cdc.androidcode.BaseActivity;
-import com.cdc.androidcode.R;
 
 import static com.cdc.androidcode.libraries.jpush.TagAliasOperatorHelper.*;
 
-public class PushingSettingActivity extends BaseActivity {
 
-    private static final String TAG="pushSetting";
-
-
+public class PushSetActivity extends InstrumentedActivity implements OnClickListener {
+    private static final String TAG = "JIGUANG-Example";
 
     @Override
-    public void initView() {
+    public void onCreate(Bundle icicle) {
+        super.onCreate(icicle);
+        setContentView(R.layout.push_set_dialog);
         initListener();
-    }
-
-    @Override
-    public void initData() {
-
-    }
-
-    @Override
-    public int layoutId() {
-        return R.layout.activity_pushing_setting;
     }
 
     private void initListener() {
@@ -88,7 +80,7 @@ public class PushingSettingActivity extends BaseActivity {
                 setStyleCustom();
                 break;
             case R.id.bu_setTime:
-                Intent intent = new Intent(PushingSettingActivity.this, SettingActivity.class);
+                Intent intent = new Intent(PushSetActivity.this, SettingActivity.class);
                 startActivity(intent);
                 break;
             default:
@@ -109,12 +101,12 @@ public class PushingSettingActivity extends BaseActivity {
      * 设置通知提示方式 - 基础属性
      */
     private void setStyleBasic() {
-        BasicPushNotificationBuilder builder = new BasicPushNotificationBuilder(PushingSettingActivity.this);
+        BasicPushNotificationBuilder builder = new BasicPushNotificationBuilder(PushSetActivity.this);
         builder.statusBarDrawable = R.mipmap.ic_launcher;
         builder.notificationFlags = Notification.FLAG_AUTO_CANCEL;  //设置为点击后自动消失
         builder.notificationDefaults = Notification.DEFAULT_SOUND;  //设置为铃声（ Notification.DEFAULT_SOUND）或者震动（ Notification.DEFAULT_VIBRATE）
         JPushInterface.setPushNotificationBuilder(1, builder);
-        Toast.makeText(PushingSettingActivity.this, "Basic Builder - 1", Toast.LENGTH_SHORT).show();
+        Toast.makeText(PushSetActivity.this, "Basic Builder - 1", Toast.LENGTH_SHORT).show();
     }
 
 
@@ -122,11 +114,11 @@ public class PushingSettingActivity extends BaseActivity {
      * 设置通知栏样式 - 定义通知栏Layout
      */
     private void setStyleCustom() {
-        CustomPushNotificationBuilder builder = new CustomPushNotificationBuilder(PushingSettingActivity.this, R.layout.customer_notitfication_layout, R.id.icon, R.id.title, R.id.text);
+        CustomPushNotificationBuilder builder = new CustomPushNotificationBuilder(PushSetActivity.this, R.layout.customer_notitfication_layout, R.id.icon, R.id.title, R.id.text);
         builder.layoutIconDrawable = R.mipmap.ic_launcher;
         builder.developerArg0 = "developerArg2";
         JPushInterface.setPushNotificationBuilder(2, builder);
-        Toast.makeText(PushingSettingActivity.this, "Custom Builder - 2", Toast.LENGTH_SHORT).show();
+        Toast.makeText(PushSetActivity.this, "Custom Builder - 2", Toast.LENGTH_SHORT).show();
     }
 
     @Override
@@ -138,13 +130,13 @@ public class PushingSettingActivity extends BaseActivity {
     }
 
     private void setAddActionsStyle() {
-        MultiActionsNotificationBuilder builder = new MultiActionsNotificationBuilder(PushingSettingActivity.this);
+        MultiActionsNotificationBuilder builder = new MultiActionsNotificationBuilder(PushSetActivity.this);
         builder.addJPushAction(R.drawable.jpush_ic_richpush_actionbar_back, "first", "my_extra1");
         builder.addJPushAction(R.drawable.jpush_ic_richpush_actionbar_back, "second", "my_extra2");
         builder.addJPushAction(R.drawable.jpush_ic_richpush_actionbar_back, "third", "my_extra3");
         JPushInterface.setPushNotificationBuilder(10, builder);
 
-        Toast.makeText(PushingSettingActivity.this, "AddActions Builder - 10", Toast.LENGTH_SHORT).show();
+        Toast.makeText(PushSetActivity.this, "AddActions Builder - 10", Toast.LENGTH_SHORT).show();
     }
 
 
@@ -226,7 +218,7 @@ public class PushingSettingActivity extends BaseActivity {
             default:
                 return;
         }
-        TagAliasOperatorHelper.TagAliasBean tagAliasBean = new TagAliasOperatorHelper.TagAliasBean();
+        TagAliasBean tagAliasBean = new TagAliasBean();
         tagAliasBean.action = action;
         sequence++;
         if(isAliasAction){
@@ -244,7 +236,7 @@ public class PushingSettingActivity extends BaseActivity {
         if (TextUtils.isEmpty(mobileNumber)) {
             Toast.makeText(getApplicationContext(), R.string.mobilenumber_empty_guide, Toast.LENGTH_SHORT).show();
         }
-        if (!JpushUtil.isValidMobileNumber(mobileNumber)) {
+        if (!ExampleUtil.isValidMobileNumber(mobileNumber)) {
             Toast.makeText(getApplicationContext(), R.string.error_tag_gs_empty, Toast.LENGTH_SHORT).show();
             return;
         }
@@ -261,7 +253,7 @@ public class PushingSettingActivity extends BaseActivity {
             Toast.makeText(getApplicationContext(), R.string.error_alias_empty, Toast.LENGTH_SHORT).show();
             return null;
         }
-        if (!JpushUtil.isValidTagAndAlias(alias)) {
+        if (!ExampleUtil.isValidTagAndAlias(alias)) {
             Toast.makeText(getApplicationContext(), R.string.error_tag_gs_empty, Toast.LENGTH_SHORT).show();
             return null;
         }
@@ -283,7 +275,7 @@ public class PushingSettingActivity extends BaseActivity {
         String[] sArray = tag.split(",");
         Set<String> tagSet = new LinkedHashSet<String>();
         for (String sTagItme : sArray) {
-            if (!JpushUtil.isValidTagAndAlias(sTagItme)) {
+            if (!ExampleUtil.isValidTagAndAlias(sTagItme)) {
                 Toast.makeText(getApplicationContext(), R.string.error_tag_gs_empty, Toast.LENGTH_SHORT).show();
                 return null;
             }

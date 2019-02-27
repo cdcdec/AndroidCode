@@ -6,6 +6,7 @@ import com.cdc.androidcode.R
 import com.cdc.androidcode.application.RecycleViewDivider
 import com.cdc.androidcode.libraries.glide.GlideMainActivity
 import com.cdc.androidcode.libraries.jpush.JpushMainActivity
+import com.cdc.androidcode.libraries.update.UpdateMainActivity
 import com.cdc.androidcode.ui.UIItemAdapter
 import com.cdc.androidcode.ui.UIItemBean
 import kotlinx.android.synthetic.main.fresh_scroll_recy_common.*
@@ -37,6 +38,7 @@ class LibrariesFragment:BaseFragment() {
         var list:MutableList<UIItemBean> =ArrayList()
         list.add(UIItemBean("Glide","Glide1",GlideMainActivity::class.java))
         list.add(UIItemBean("Jpush","Jpush", JpushMainActivity::class.java))
+        list.add(UIItemBean("Update","https://github.com/Lee465357793/AppUpdateDialog", UpdateMainActivity::class.java))
         uiAdapter= UIItemAdapter(R.layout.ui_item,list)
         recyclerView.adapter=uiAdapter
         uiAdapter.setOnItemClickListener { adapter, view, position ->

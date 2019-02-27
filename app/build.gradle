@@ -73,6 +73,7 @@ dependencies {
     implementation rootProject.ext.dependencies.jpush
     //极光2
     implementation rootProject.ext.dependencies.jpushjcore
+    implementation rootProject.ext.dependencies.AppUpdateDialog
     kapt rootProject.ext.dependencies.glideAnnotationProcessor
     //annotationProcessor rootProject.ext.dependencies.glideAnnotationProcessor
     implementation rootProject.ext.dependencies.picasso

@@ -31,6 +31,10 @@
     <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"/>
     <uses-permission android:name="android.permission.GET_TASKS"/>
 
+
+
+
+
     <application
             android:name=".application.CdcApplication"
             android:allowBackup="true"
@@ -40,14 +44,12 @@
             android:supportsRtl="true"
             android:theme="@style/AppTheme"
             tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".libraries.update.UpdateMainActivity">
+        </activity>
         <activity
                 android:name=".libraries.xxpermissions.XXPermissionsMainActivity"
                 android:label="@string/title_activity_xxpermissions_main"
                 android:theme="@style/AppTheme.NoActionBar">
-        </activity>
-        <activity android:name=".libraries.jpush.JpushMainActivity">
-        </activity>
-        <activity android:name=".libraries.jpush.PushingSettingActivity">
         </activity> <!-- 设置key -->
         <meta-data
                 android:name="com.amap.api.v2.apikey"
@@ -77,17 +79,29 @@
 
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
+        </activity>
+        <activity android:name=".libraries.jpush.JpushMainActivity"/> <!-- For test only 测试高级功能 -->
+        <activity
+                android:name=".libraries.jpush.PushSetActivity"
+                android:label="@string/app_name"/> <!-- For test only 测试设置 -->
+        <activity
+                android:name=".libraries.jpush.SettingActivity"
+                android:label="@string/app_name"/> <!-- For test only 测试状态通知栏，需要打开的Activity -->
+        <activity
+                android:name=".libraries.jpush.TestActivity"
+                android:exported="false">
+            <intent-filter>
+                <action android:name="jpush.testAction"/>
+
+                <category android:name="jpush.testCategory"/>
+            </intent-filter>
         </activity> <!-- Rich push 核心功能 since 2.0.6 -->
-        <!--
-<activity
+        <activity
                 android:name="cn.jpush.android.ui.PopWinActivity"
                 android:exported="false"
                 android:theme="@style/MyDialogStyle">
-        </activity>
-        -->
-        <!-- Required SDK核心功能 -->
-        <!--
-<activity
+        </activity> <!-- Required SDK核心功能 -->
+        <activity
                 android:name="cn.jpush.android.ui.PushActivity"
                 android:configChanges="orientation|keyboardHidden"
                 android:exported="false"
@@ -98,9 +112,7 @@
                 <category android:name="android.intent.category.DEFAULT"/>
                 <category android:name="com.cdc.androidcode"/>
             </intent-filter>
-        </activity>
-        -->
-        <!-- Required SDK 核心功能 -->
+        </activity> <!-- Required SDK 核心功能 -->
         <!-- 可配置android:process参数将PushService放在其他进程中 -->
         <service
                 android:name="cn.jpush.android.service.PushService"
@@ -113,35 +125,26 @@
                 <action android:name="cn.jpush.android.intent.PUSH_TIME"/>
             </intent-filter>
         </service> <!-- since 3.0.9 Required SDK 核心功能 -->
-        <!--
- <provider
+        <provider
                 android:name="cn.jpush.android.service.DataProvider"
                 android:authorities="com.cdc.androidcode.DataProvider"
                 android:exported="false"
-                android:process=":pushcore"/>
-        -->
-        <!-- since 1.8.0 option 可选项。用于同一设备中不同应用的JPush服务相互拉起的功能。 -->
+                android:process=":pushcore"/> <!-- since 1.8.0 option 可选项。用于同一设备中不同应用的JPush服务相互拉起的功能。 -->
         <!-- 若不启用该功能可删除该组件，将不拉起其他应用也不能被其他应用拉起 -->
-        <!--
- <service
+        <service
                 android:name="cn.jpush.android.service.DaemonService"
                 android:enabled="true"
                 android:exported="true">
             <intent-filter>
                 <action android:name="cn.jpush.android.intent.DaemonService"/>
 
-                <category android:name="com.cdc.androidcode  "/>
+                <category android:name="com.cdc.androidcode"/>
             </intent-filter>
-        </service>
-        -->
-        <!-- since 3.1.0 Required SDK 核心功能 -->
-        <!--
-<provider
+        </service> <!-- since 3.1.0 Required SDK 核心功能 -->
+        <provider
                 android:name="cn.jpush.android.service.DownloadProvider"
                 android:authorities="com.cdc.androidcode.DownloadProvider"
-                android:exported="true"/>
-        -->
-        <!-- Required SDK核心功能 -->
+                android:exported="true"/> <!-- Required SDK核心功能 -->
         <receiver
                 android:name="cn.jpush.android.service.PushReceiver"
                 android:enabled="true"
