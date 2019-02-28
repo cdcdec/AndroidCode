@@ -2,12 +2,9 @@ package com.cdc.androidcode.application
 
 import android.app.Application
 import com.scwang.smartrefresh.layout.SmartRefreshLayout
-
-import android.content.Context
 import cn.jpush.android.api.JPushInterface
 import com.cdc.androidcode.R
-import com.scwang.smartrefresh.layout.SmartRefreshLayout.setDefaultRefreshHeaderCreator
-import com.scwang.smartrefresh.layout.api.*
+import com.chad.baserecyclerviewadapterhelper.util.Utils
 import com.scwang.smartrefresh.layout.footer.ClassicsFooter
 import com.scwang.smartrefresh.layout.header.ClassicsHeader
 
@@ -21,6 +18,9 @@ import com.scwang.smartrefresh.layout.header.ClassicsHeader
  * updateDesc:(修改内容)
  */
 class CdcApplication:Application() {
+
+
+
     //static 代码段可以防止内存泄露
     init {
         //设置全局的Header构建器
@@ -33,10 +33,24 @@ class CdcApplication:Application() {
             //指定为经典Footer，默认是 BallPulseFooter
             ClassicsFooter(context).setDrawableSize(20.toFloat())
         }
+
+
     }
+
+    companion object {
+        var appContext: CdcApplication? = null
+
+        fun getInstance(): CdcApplication? {
+            return appContext
+        }
+    }
+
+
 
     override fun onCreate() {
         super.onCreate()
+        appContext = this
+        Utils.init(this)
         RudenessScreenHelper(this, 750f).activate() //初始化百分比布局
         JPushInterface.setDebugMode(true)    // 设置开启日志,发布时请关闭日志
         JPushInterface.init(this)            // 初始化 JPush

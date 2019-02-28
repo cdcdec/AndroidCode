@@ -1,6 +1,4 @@
 package com.cdc.androidcode.ui
-
-import android.app.Activity
 import com.cdc.androidcode.R
 import com.chad.library.adapter.base.BaseQuickAdapter
 import com.chad.library.adapter.base.BaseViewHolder

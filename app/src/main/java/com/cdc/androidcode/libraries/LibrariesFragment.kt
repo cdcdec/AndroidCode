@@ -1,4 +1,5 @@
 package com.cdc.androidcode.libraries
+
 import android.content.Intent
 import android.support.v7.widget.LinearLayoutManager
 import com.cdc.androidcode.BaseFragment
@@ -9,6 +10,7 @@ import com.cdc.androidcode.libraries.jpush.JpushMainActivity
 import com.cdc.androidcode.libraries.update.UpdateMainActivity
 import com.cdc.androidcode.ui.UIItemAdapter
 import com.cdc.androidcode.ui.UIItemBean
+import com.chad.baserecyclerviewadapterhelper.HomeActivity
 import kotlinx.android.synthetic.main.fresh_scroll_recy_common.*
 
 /**
@@ -19,7 +21,7 @@ import kotlinx.android.synthetic.main.fresh_scroll_recy_common.*
  * updateTime:(修改时间)11:58
  * updateDesc:(修改内容)
  */
-class LibrariesFragment:BaseFragment() {
+class LibrariesFragment : BaseFragment() {
     private lateinit var uiAdapter: UIItemAdapter
     override fun initImmersionBar() {
 
@@ -31,19 +33,41 @@ class LibrariesFragment:BaseFragment() {
 
     override fun initView() {
         recyclerView.layoutManager = LinearLayoutManager(activity)
-        recyclerView.addItemDecoration(RecycleViewDivider(activity, LinearLayoutManager.VERTICAL, R.drawable.shape_recycleview_divider))
+        recyclerView.addItemDecoration(
+            RecycleViewDivider(
+                activity,
+                LinearLayoutManager.VERTICAL,
+                R.drawable.shape_recycleview_divider
+            )
+        )
     }
 
     override fun initData() {
-        var list:MutableList<UIItemBean> =ArrayList()
-        list.add(UIItemBean("Glide","Glide1",GlideMainActivity::class.java))
-        list.add(UIItemBean("Jpush","Jpush", JpushMainActivity::class.java))
-        list.add(UIItemBean("Update","https://github.com/Lee465357793/AppUpdateDialog", UpdateMainActivity::class.java))
-        uiAdapter= UIItemAdapter(R.layout.ui_item,list)
-        recyclerView.adapter=uiAdapter
+        var list: MutableList<UIItemBean> = ArrayList()
+        list.add(UIItemBean("Glide", "Glide1", GlideMainActivity::class.java))
+        list.add(UIItemBean("Jpush", "Jpush", JpushMainActivity::class.java))
+        list.add(
+            UIItemBean(
+                "Update",
+                "https://github.com/Lee465357793/AppUpdateDialog",
+                UpdateMainActivity::class.java
+            )
+        )
+        list.add(
+            UIItemBean(
+                "baserecyclerviewadapterhelper",
+                "https://github.com/Lee465357793/AppUpdateDialog",
+                HomeActivity::class.java
+            )
+        )
+        uiAdapter = UIItemAdapter(R.layout.ui_item, list)
+        recyclerView.adapter = uiAdapter
         uiAdapter.setOnItemClickListener { adapter, view, position ->
-            var intent= Intent(view.context, list[position].clas)
-            view.context.startActivity(intent)
+            run {
+                var intent = Intent(view.context, list[position].clas)
+                view.context.startActivity(intent)
+            }
+
         }
     }
 

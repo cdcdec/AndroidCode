@@ -194,6 +194,27 @@
         <meta-data
                 android:name="JPUSH_APPKEY"
                 android:value="d44807982507617679d47adb"/>
+
+
+
+<activity android:name="com.chad.baserecyclerviewadapterhelper.BaseRecyclerViewAdapterHelperActivity"></activity>
+        <activity android:name="com.chad.baserecyclerviewadapterhelper.HomeActivity"></activity>
+
+        <activity android:name="com.chad.baserecyclerviewadapterhelper.AnimationUseActivity" />
+        <activity android:name="com.chad.baserecyclerviewadapterhelper.HeaderAndFooterUseActivity" />
+        <activity android:name="com.chad.baserecyclerviewadapterhelper.SectionUseActivity" />
+        <activity android:name="com.chad.baserecyclerviewadapterhelper.ChooseMultipleItemUseTypeActivity" />
+        <activity android:name="com.chad.baserecyclerviewadapterhelper.MultipleItemUseActivity" />
+        <activity android:name="com.chad.baserecyclerviewadapterhelper.MultipleItemRvAdapterUseActivity" />
+        <activity android:name="com.chad.baserecyclerviewadapterhelper.EmptyViewUseActivity" />
+        <activity android:name="com.chad.baserecyclerviewadapterhelper.ItemDragAndSwipeUseActivity" />
+        <activity android:name="com.chad.baserecyclerviewadapterhelper.ExpandableUseActivity" />
+        <activity android:name="com.chad.baserecyclerviewadapterhelper.DataBindingUseActivity" />
+        <activity android:name="com.chad.baserecyclerviewadapterhelper.ItemClickActivity"></activity>
+        <activity android:name="com.chad.baserecyclerviewadapterhelper.base.BaseActivity"></activity>
+
+        <activity android:name="com.chad.baserecyclerviewadapterhelper.UpFetchUseActivity"></activity>
+        <activity android:name="com.chad.baserecyclerviewadapterhelper.SectionMultipleItemUseActivity"></activity>
     </application>
 
 </manifest>
