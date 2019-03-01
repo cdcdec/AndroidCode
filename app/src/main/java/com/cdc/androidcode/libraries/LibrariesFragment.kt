@@ -10,7 +10,10 @@ import com.cdc.androidcode.libraries.jpush.JpushMainActivity
 import com.cdc.androidcode.libraries.update.UpdateMainActivity
 import com.cdc.androidcode.ui.UIItemAdapter
 import com.cdc.androidcode.ui.UIItemBean
+import com.cdc.mapsearchlocation.MapSearchLocationMainActivity
+import com.chad.baserecyclerviewadapterhelper.BaseRecyclerViewAdapterHelperActivity
 import com.chad.baserecyclerviewadapterhelper.HomeActivity
+import com.yqritc.recyclerviewflexibledivider.sample.SimpleActivity
 import kotlinx.android.synthetic.main.fresh_scroll_recy_common.*
 
 /**
@@ -56,8 +59,24 @@ class LibrariesFragment : BaseFragment() {
         list.add(
             UIItemBean(
                 "baserecyclerviewadapterhelper",
-                "https://github.com/Lee465357793/AppUpdateDialog",
-                HomeActivity::class.java
+                "https://github.com/CymChad/BaseRecyclerViewAdapterHelper",
+                BaseRecyclerViewAdapterHelperActivity::class.java
+            )
+        )
+
+        list.add(
+            UIItemBean(
+                "flexibledivider",
+                "https://github.com/yqritc/RecyclerView-FlexibleDivider",
+                SimpleActivity::class.java
+            )
+        )
+
+        list.add(
+            UIItemBean(
+                "高德地图搜索定位",
+                "https://lbs.amap.com",
+                MapSearchLocationMainActivity::class.java
             )
         )
         uiAdapter = UIItemAdapter(R.layout.ui_item, list)

@@ -1,1 +1,1 @@
-include ':app', ':baserecyclerviewadapterhelper'
+include ':app', ':baserecyclerviewadapterhelper', ':recyclerviewflexibledivide', ':mapsearchlocation'

@@ -51,7 +51,6 @@ public class HomeActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
         mRecyclerView.setAdapter(homeAdapter);
     }
 
