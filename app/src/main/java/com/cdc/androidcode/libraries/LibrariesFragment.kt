@@ -11,6 +11,7 @@ import com.cdc.androidcode.libraries.update.UpdateMainActivity
 import com.cdc.androidcode.ui.UIItemAdapter
 import com.cdc.androidcode.ui.UIItemBean
 import com.cdc.mapsearchlocation.MapSearchLocationMainActivity
+import com.cdc.toasty.ToastyMainActivity
 import com.chad.baserecyclerviewadapterhelper.BaseRecyclerViewAdapterHelperActivity
 import com.chad.baserecyclerviewadapterhelper.HomeActivity
 import com.yqritc.recyclerviewflexibledivider.sample.SimpleActivity
@@ -77,6 +78,14 @@ class LibrariesFragment : BaseFragment() {
                 "高德地图搜索定位",
                 "https://lbs.amap.com",
                 MapSearchLocationMainActivity::class.java
+            )
+        )
+
+        list.add(
+            UIItemBean(
+                "Toasty",
+                "https://github.com/GrenderG/Toasty",
+                ToastyMainActivity::class.java
             )
         )
         uiAdapter = UIItemAdapter(R.layout.ui_item, list)

@@ -242,6 +242,9 @@
 
 
         <activity android:name="com.cdc.mapsearchlocation.MapSearchLocationMainActivity"></activity>
+
+        <activity android:name="com.cdc.toasty.ToastyMainActivity"></activity>
+
     </application>
 
 </manifest>
