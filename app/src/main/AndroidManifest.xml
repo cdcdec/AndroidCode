@@ -47,7 +47,10 @@
                 android:name=".libraries.xxpermissions.XXPermissionsMainActivity"
                 android:label="@string/title_activity_xxpermissions_main"
                 android:theme="@style/AppTheme.NoActionBar">
-        </activity> <!-- 设置key -->
+        </activity>
+
+
+        <!-- 设置key -->
 
 
         <activity android:name=".libraries.glide.GlideOneActivity">
@@ -188,7 +191,7 @@
                 android:name="JPUSH_APPKEY"
                 android:value="d44807982507617679d47adb"/>
 
-<!--https://github.com/CymChad/BaseRecyclerViewAdapterHelper-->
+        <!--https://github.com/CymChad/BaseRecyclerViewAdapterHelper-->
         <activity
                 android:name="com.chad.baserecyclerviewadapterhelper.BaseRecyclerViewAdapterHelperActivity"></activity>
         <activity android:name="com.chad.baserecyclerviewadapterhelper.HomeActivity"></activity>
@@ -212,7 +215,7 @@
 
 
         <!--https://github.com/yqritc/RecyclerView-FlexibleDivider-->
-       <activity
+        <activity
                 android:name="com.yqritc.recyclerviewflexibledivider.sample.PaintActivity"
                 android:label="@string/menu_paint"
                 android:theme="@style/DarkActionBar"/>
@@ -244,7 +247,7 @@
         <activity android:name="com.cdc.mapsearchlocation.MapSearchLocationMainActivity"></activity>
 
         <activity android:name="com.cdc.toasty.ToastyMainActivity"></activity>
-
+        <activity android:name="com.cdc.toasty.ToastSyleActivity"></activity>
     </application>
 
 </manifest>

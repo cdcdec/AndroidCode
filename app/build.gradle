@@ -22,6 +22,7 @@ android {
                 JPUSH_APPKEY : "d44807982507617679d47adb", //JPush 上注册的包名对应的 Appkey.
                 JPUSH_CHANNEL: "developer-default", //暂时填写默认值即可.
         ]
+        multiDexEnabled true
     }
 
     signingConfigs {
@@ -96,6 +97,7 @@ dependencies {
     implementation rootProject.ext.dependencies.immersionbar
     implementation rootProject.ext.dependencies.SmartRefreshLayout
     implementation rootProject.ext.dependencies.BaseRecyclerViewAdapterHelper
+    implementation rootProject.ext.dependencies.multidex
     implementation project(':baserecyclerviewadapterhelper')
     implementation project(':recyclerviewflexibledivide')
     implementation project(':mapsearchlocation')

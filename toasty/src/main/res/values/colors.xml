@@ -6,4 +6,16 @@
     <color name="successColor">#388E3C</color>
     <color name="warningColor">#FFA900</color>
     <color name="normalColor">#353A3E</color>
+
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+
+
+
+
+
+    <!--styleToast-->
+    <color name="default_background_color">#555555</color>
+    <color name="default_text_color">#ffffff</color>
 </resources>

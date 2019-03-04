@@ -11,6 +11,7 @@ import com.cdc.androidcode.libraries.update.UpdateMainActivity
 import com.cdc.androidcode.ui.UIItemAdapter
 import com.cdc.androidcode.ui.UIItemBean
 import com.cdc.mapsearchlocation.MapSearchLocationMainActivity
+import com.cdc.toasty.ToastSyleActivity
 import com.cdc.toasty.ToastyMainActivity
 import com.chad.baserecyclerviewadapterhelper.BaseRecyclerViewAdapterHelperActivity
 import com.chad.baserecyclerviewadapterhelper.HomeActivity
@@ -86,6 +87,14 @@ class LibrariesFragment : BaseFragment() {
                 "Toasty",
                 "https://github.com/GrenderG/Toasty",
                 ToastyMainActivity::class.java
+            )
+        )
+
+        list.add(
+            UIItemBean(
+                "StyleableToast",
+                "https://github.com/Muddz/StyleableToast",
+                ToastSyleActivity::class.java
             )
         )
         uiAdapter = UIItemAdapter(R.layout.ui_item, list)
