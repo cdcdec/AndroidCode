@@ -1,8 +1,7 @@
 package com.cdc.androidcode
-import android.content.Intent
 import android.content.res.Configuration
 import android.os.Bundle
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import android.view.View
 import android.view.View.OnClickListener
 import com.cdc.androidcode.application.RudenessScreenHelper

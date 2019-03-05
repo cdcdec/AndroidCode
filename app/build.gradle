@@ -70,7 +70,6 @@ dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     //内存泄漏检测
     implementation fileTree(include: ['*.jar'], dir: 'libs')
-    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
     debugImplementation rootProject.ext.dependencies.leakcanaryAndroid
     releaseImplementation rootProject.ext.dependencies.leakcanaryAndroidNoOp
     // Optional, if you use support library fragments:
@@ -98,6 +97,7 @@ dependencies {
     implementation rootProject.ext.dependencies.SmartRefreshLayout
     implementation rootProject.ext.dependencies.BaseRecyclerViewAdapterHelper
     implementation rootProject.ext.dependencies.multidex
+    implementation rootProject.ext.dependencies.materialDialogs
     implementation project(':baserecyclerviewadapterhelper')
     implementation project(':recyclerviewflexibledivide')
     implementation project(':mapsearchlocation')

@@ -10,7 +10,7 @@
         android:fitsSystemWindows="true"
         tools:context=".ui.supertextview.UiStvTypeActivity">
 
-    <android.support.v7.widget.Toolbar
+    <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbarType6"
             android:layout_width="match_parent"
             android:layout_height="100pt"
@@ -25,8 +25,8 @@
                 android:layout_gravity="center"
                 android:singleLine="true"
                 android:text="Super TextView"/>
-    </android.support.v7.widget.Toolbar>
-    <android.support.v4.widget.NestedScrollView
+    </androidx.appcompat.widget.Toolbar>
+    <androidx.core.widget.NestedScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
     >
@@ -112,5 +112,5 @@
 
 
     </LinearLayout>
-</android.support.v4.widget.NestedScrollView>
+</androidx.core.widget.NestedScrollView>
 </LinearLayout>

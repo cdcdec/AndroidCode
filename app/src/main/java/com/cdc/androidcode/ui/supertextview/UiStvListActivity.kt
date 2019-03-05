@@ -1,11 +1,11 @@
 package com.cdc.androidcode.ui.supertextview
 
 import android.os.Handler
-import android.support.v4.widget.SwipeRefreshLayout
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
 import com.cdc.androidcode.BaseActivity
 import com.cdc.androidcode.R
-import android.support.v7.widget.LinearLayoutManager
-import android.support.v7.widget.Toolbar
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.appcompat.widget.Toolbar
 import com.cdc.androidcode.Logger
 import com.gyf.barlibrary.ImmersionBar
 import kotlinx.android.synthetic.main.activity_ui_stv_list.*

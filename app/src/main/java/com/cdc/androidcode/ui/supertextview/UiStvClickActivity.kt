@@ -1,5 +1,5 @@
 package com.cdc.androidcode.ui.supertextview
-import android.support.v7.widget.Toolbar
+import androidx.appcompat.widget.Toolbar
 import com.cdc.androidcode.BaseActivity
 import com.cdc.androidcode.R
 import com.gyf.barlibrary.ImmersionBar

@@ -10,7 +10,7 @@
 
     <include layout="@layout/toolbar_common"/>
 
-    <android.support.v4.widget.NestedScrollView
+    <androidx.core.widget.NestedScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent">
         <LinearLayout
@@ -98,6 +98,6 @@
                     tools:src="@android:drawable/sym_def_app_icon"/>
         </LinearLayout>
 
-    </android.support.v4.widget.NestedScrollView>
+    </androidx.core.widget.NestedScrollView>
 
 </LinearLayout>

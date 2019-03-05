@@ -6,7 +6,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent" tools:ignore="MissingDefaultResource">
     <include layout="@layout/toolbar_common"/>
-    <android.support.v4.widget.NestedScrollView
+    <androidx.core.widget.NestedScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent">
         <LinearLayout
@@ -16,5 +16,5 @@
                 android:orientation="vertical"
                 android:background="#fff">
         </LinearLayout>
-    </android.support.v4.widget.NestedScrollView>
+    </androidx.core.widget.NestedScrollView>
 </LinearLayout>

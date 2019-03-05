@@ -11,8 +11,8 @@ ext{
             leakcanaryAndroid:'1.6.2',
             leakcanaryAndroidNoOp:'1.6.2',
             leakcanarySupportFragment:'1.6.2',
-            support:'28.0.0',
-            constraintLayout:'1.1.3',
+            support: '1.0.0-beta01',
+            constraintLayout: '1.1.2',
             okhttp3:'3.8.0',
             loggingInterceptor:'3.8.0',
             converterGson:'2.4.0',
@@ -37,19 +37,20 @@ ext{
             materialSpinner:"1.3.1",
             flexibledivider:"1.4.0",
             Toasty:'1.4.0',
+            materialDialogs:'2.0.3',
             styleabletoast:'2.2.1',
-            multidex:'1.0.3'
+            multidex: '2.0.0'
     ]
 
     dependencies=[
             leakcanaryAndroid:"com.squareup.leakcanary:leakcanary-android:${depsVersion.leakcanaryAndroid}",
             leakcanaryAndroidNoOp:"com.squareup.leakcanary:leakcanary-android:${depsVersion.leakcanaryAndroidNoOp}",
             leakcanarySupportFragment:"com.squareup.leakcanary:leakcanary-android:${depsVersion.leakcanarySupportFragment}",
-            appcompatV7: "com.android.support:appcompat-v7:${depsVersion.support}",
-            cardviewV7: "com.android.support:cardview-v7:${depsVersion.support}",
-            recyclerview:"com.android.support:recyclerview-v7:${depsVersion.support}",
-            design:"com.android.support:design:${depsVersion.support}",
-            constraintLayout:"com.android.support.constraint:constraint-layout:${depsVersion.constraintLayout}",
+            appcompatV7: "androidx.appcompat:appcompat:${depsVersion.support}",
+            cardviewV7: "androidx.cardview:cardview:${depsVersion.support}",
+            recyclerview: "androidx.recyclerview:recyclerview:${depsVersion.support}",
+            design: "com.google.android.material:material:${depsVersion.support}",
+            constraintLayout: "androidx.constraintlayout:constraintlayout:${depsVersion.constraintLayout}",
             xxpermissions:"com.hjq:xxpermissions:${depsVersion.xxpermissions}",
             jpush:"cn.jiguang.sdk:jpush:${depsVersion.jpush}",
             jpushjcore:"cn.jiguang.sdk:jcore:${depsVersion.jpushjcore}",
@@ -70,7 +71,8 @@ ext{
             materialSpinner:"com.jaredrummler:material-spinner:${depsVersion.materialSpinner}",
             flexibledivider:"com.yqritc:recyclerview-flexibledivider:${depsVersion.flexibledivider}",
             ToastY:"com.github.GrenderG:Toasty:${depsVersion.Toasty}",
+            materialDialogs:"com.afollestad.material-dialogs:core:${depsVersion.materialDialogs}",
             styleabletoast:"com.muddzdev:styleabletoast:${depsVersion.styleabletoast}",
-            multidex:"com.android.support:multidex:${depsVersion.multidex}"
+            multidex: "androidx.multidex:multidex:${depsVersion.multidex}"
     ]
 }

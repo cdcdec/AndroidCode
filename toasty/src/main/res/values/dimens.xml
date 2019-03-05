@@ -1,6 +1,6 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
 
-    <dimen name="default_text_size">16sp</dimen>
+    <dimen name="default_text_size" tools:ignore="MissingDefaultResource">16sp</dimen>
     <dimen name="default_corner_radius">30dp</dimen>
 
     <!--These two are only used when an icon is applied to the StyleableToast. previous 22 -->

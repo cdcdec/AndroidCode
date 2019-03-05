@@ -2,7 +2,7 @@ package com.cdc.androidcode
 
 import android.content.res.Configuration
 import android.os.Bundle
-import android.support.v4.app.Fragment
+import androidx.fragment.app.Fragment
 import com.gyf.barlibrary.ImmersionBar
 import com.gyf.barlibrary.ImmersionOwner
 

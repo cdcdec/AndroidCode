@@ -1,7 +1,7 @@
 package com.cdc.androidcode.ui.supertextview
 
 import android.graphics.drawable.Drawable
-import android.support.v7.widget.Toolbar
+import androidx.appcompat.widget.Toolbar
 import android.view.Gravity
 import com.cdc.androidcode.BaseActivity
 import com.cdc.androidcode.R

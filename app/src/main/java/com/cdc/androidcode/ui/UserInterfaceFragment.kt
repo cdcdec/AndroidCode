@@ -1,6 +1,6 @@
 package com.cdc.androidcode.ui
 import android.content.Intent
-import android.support.v7.widget.LinearLayoutManager
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.cdc.androidcode.BaseFragment
 import com.cdc.androidcode.R
 import com.cdc.androidcode.application.RecycleViewDivider

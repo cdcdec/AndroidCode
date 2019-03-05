@@ -1,5 +1,5 @@
 package com.cdc.androidcode
-import android.support.v4.app.Fragment
+import androidx.fragment.app.Fragment
 import com.cdc.androidcode.component.ComponentFragment
 import com.cdc.androidcode.document.DocumentFragment
 import com.cdc.androidcode.libraries.LibrariesFragment

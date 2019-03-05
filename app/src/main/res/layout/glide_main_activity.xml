@@ -7,7 +7,7 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
     <include layout="@layout/toolbar_common"/>
-    <android.support.v4.widget.NestedScrollView
+    <androidx.core.widget.NestedScrollView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             >
@@ -22,5 +22,5 @@
                     android:layout_height="wrap_content"
                     android:text="@string/glide_contact"/>
         </LinearLayout>
-    </android.support.v4.widget.NestedScrollView>
+    </androidx.core.widget.NestedScrollView>
 </LinearLayout>

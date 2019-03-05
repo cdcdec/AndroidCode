@@ -1,14 +1,11 @@
 package com.yqritc.recyclerviewflexibledivider.sample;
-
 import com.yqritc.recyclerviewflexibledivider.HorizontalDividerItemDecoration;
-
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.OrientationHelper;
-import android.support.v7.widget.RecyclerView;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -36,7 +33,7 @@ public class ComplexActivity extends AppCompatActivity {
 
         ComplexAdapter adapter = new ComplexAdapter(this);
         LinearLayoutManager manager = new LinearLayoutManager(this);
-        manager.setOrientation(OrientationHelper.VERTICAL);
+        manager.setOrientation(RecyclerView.VERTICAL);
         recyclerView.setLayoutManager(manager);
         recyclerView.setAdapter(adapter);
         recyclerView.addItemDecoration(new HorizontalDividerItemDecoration.Builder(this)

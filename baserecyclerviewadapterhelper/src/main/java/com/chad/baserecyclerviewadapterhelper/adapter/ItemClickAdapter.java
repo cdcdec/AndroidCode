@@ -1,10 +1,9 @@
 package com.chad.baserecyclerviewadapterhelper.adapter;
-
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.Toast;
 
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 import com.chad.baserecyclerviewadapterhelper.R;
 import com.chad.baserecyclerviewadapterhelper.entity.ClickEntity;
 import com.chad.baserecyclerviewadapterhelper.util.Utils;
@@ -54,7 +53,7 @@ public class ItemClickAdapter extends BaseMultiItemQuickAdapter<ClickEntity, Bas
                 // u can set nestview id
                 helper.setNestView(R.id.item_click);
                 final RecyclerView recyclerView = helper.getView(R.id.nest_list);
-                recyclerView.setLayoutManager(new LinearLayoutManager(helper.itemView.getContext(), LinearLayoutManager.VERTICAL, false));
+                recyclerView.setLayoutManager(new LinearLayoutManager(helper.itemView.getContext(), RecyclerView.VERTICAL, false));
                 recyclerView.setHasFixedSize(true);
 
                 nestAdapter = new NestAdapter();

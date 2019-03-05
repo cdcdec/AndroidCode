@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v4.widget.NestedScrollView
+<androidx.core.widget.NestedScrollView
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
         xmlns:ctv="http://schemas.android.com/apk/res-auto"
@@ -175,4 +175,4 @@
                 ctv:cIsCenterAlignLeft="true"
                 ctv:cLeftTextString="舞动歌单"/>
     </LinearLayout>
-</android.support.v4.widget.NestedScrollView>
+</androidx.core.widget.NestedScrollView>
