@@ -97,9 +97,9 @@ dependencies {
     implementation rootProject.ext.dependencies.SmartRefreshLayout
     implementation rootProject.ext.dependencies.BaseRecyclerViewAdapterHelper
     implementation rootProject.ext.dependencies.multidex
-    implementation rootProject.ext.dependencies.materialDialogs
     implementation project(':baserecyclerviewadapterhelper')
     implementation project(':recyclerviewflexibledivide')
     implementation project(':mapsearchlocation')
     implementation project(':toasty')
+    implementation project(':dialog')
 }

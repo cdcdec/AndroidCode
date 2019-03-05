@@ -1,5 +1,6 @@
 package com.cdc.androidcode.libraries
 
+import afollestad.AfollestadDialogActivity
 import android.content.Intent
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.cdc.androidcode.BaseFragment
@@ -97,6 +98,15 @@ class LibrariesFragment : BaseFragment() {
                 ToastSyleActivity::class.java
             )
         )
+
+        list.add(
+            UIItemBean(
+                "afollestad Dialog",
+                "https://github.com/afollestad/material-dialogs",
+                AfollestadDialogActivity::class.java
+            )
+        )
+
         uiAdapter = UIItemAdapter(R.layout.ui_item, list)
         recyclerView.adapter = uiAdapter
         uiAdapter.setOnItemClickListener { adapter, view, position ->

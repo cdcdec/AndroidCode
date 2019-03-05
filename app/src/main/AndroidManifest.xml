@@ -248,6 +248,9 @@
 
         <activity android:name="com.cdc.toasty.ToastyMainActivity"></activity>
         <activity android:name="com.cdc.toasty.ToastSyleActivity"></activity>
+
+        <activity android:name="afollestad.AfollestadDialogActivity"
+        android:theme="@style/DarkActionBar"></activity>
     </application>
 
 </manifest>

@@ -37,9 +37,13 @@ ext{
             materialSpinner:"1.3.1",
             flexibledivider:"1.4.0",
             Toasty:'1.4.0',
-            materialDialogs:'2.0.3',
             styleabletoast:'2.2.1',
-            multidex: '2.0.0'
+            multidex: '2.0.0',
+            assent:'2.2.3',
+            materialDialogsCore:'2.0.3',
+            materialDialogsInput:'2.0.3',
+            materialDialogsFiles:'2.0.3',
+            materialDialogsColor:'2.0.3'
     ]
 
     dependencies=[
@@ -51,7 +55,9 @@ ext{
             recyclerview: "androidx.recyclerview:recyclerview:${depsVersion.support}",
             design: "com.google.android.material:material:${depsVersion.support}",
             constraintLayout: "androidx.constraintlayout:constraintlayout:${depsVersion.constraintLayout}",
+            gridlayout:"androidx.gridlayout:gridlayout:${depsVersion.support}",
             xxpermissions:"com.hjq:xxpermissions:${depsVersion.xxpermissions}",
+            assent:"com.afollestad:assent:${depsVersion.assent}",
             jpush:"cn.jiguang.sdk:jpush:${depsVersion.jpush}",
             jpushjcore:"cn.jiguang.sdk:jcore:${depsVersion.jpushjcore}",
             AppUpdateDialog:"com.github.Lee465357793:AppUpdateDialog:${depsVersion.AppUpdateDialog}",
@@ -71,7 +77,10 @@ ext{
             materialSpinner:"com.jaredrummler:material-spinner:${depsVersion.materialSpinner}",
             flexibledivider:"com.yqritc:recyclerview-flexibledivider:${depsVersion.flexibledivider}",
             ToastY:"com.github.GrenderG:Toasty:${depsVersion.Toasty}",
-            materialDialogs:"com.afollestad.material-dialogs:core:${depsVersion.materialDialogs}",
+            materialDialogsCore:"com.afollestad.material-dialogs:core:${depsVersion.materialDialogsCore}",
+            materialDialogsInput:"com.afollestad.material-dialogs:input:${depsVersion.materialDialogsInput}",
+            materialDialogsFiles:"com.afollestad.material-dialogs:files:${depsVersion.materialDialogsFiles}",
+            materialDialogsColor:"com.afollestad.material-dialogs:color:${depsVersion.materialDialogsColor}",
             styleabletoast:"com.muddzdev:styleabletoast:${depsVersion.styleabletoast}",
             multidex: "androidx.multidex:multidex:${depsVersion.multidex}"
     ]
