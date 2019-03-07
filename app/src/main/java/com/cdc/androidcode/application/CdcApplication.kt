@@ -1,6 +1,7 @@
 package com.cdc.androidcode.application
 
 import android.app.Application
+import androidx.multidex.MultiDexApplication
 import com.scwang.smartrefresh.layout.SmartRefreshLayout
 import cn.jpush.android.api.JPushInterface
 import com.cdc.androidcode.R
@@ -17,7 +18,7 @@ import com.scwang.smartrefresh.layout.header.ClassicsHeader
  * updateTime:(修改时间)13:30
  * updateDesc:(修改内容)
  */
-class CdcApplication:Application() {
+class CdcApplication: MultiDexApplication() {
 
 
 
@@ -51,8 +52,11 @@ class CdcApplication:Application() {
         super.onCreate()
         appContext = this
         Utils.init(this)
-        RudenessScreenHelper(this, 750f).activate() //初始化百分比布局
+        AutoSizeUtil().init(this)
+        //RudenessScreenHelper(this, 750f).activate() //初始化百分比布局
         JPushInterface.setDebugMode(true)    // 设置开启日志,发布时请关闭日志
         JPushInterface.init(this)            // 初始化 JPush
     }
+
+
 }

@@ -28,20 +28,24 @@ android {
 
 
 
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
 }
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation rootProject.ext.dependencies.appcompatV7
-    implementation rootProject.ext.dependencies.constraintLayout
-    implementation rootProject.ext.dependencies.recyclerview
-    implementation rootProject.ext.dependencies.cardviewV7
-    implementation rootProject.ext.dependencies.design
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation rootProject.ext.dSupport.appcompatV7
+    implementation rootProject.ext.dSupport.constraintLayout
+    implementation rootProject.ext.dSupport.recyclerview
+    implementation rootProject.ext.dSupport.cardviewV7
+    implementation rootProject.ext.dSupport.design
     implementation rootProject.ext.dependencies.BaseRecyclerViewAdapterHelper
     implementation rootProject.ext.dependencies.switchbutton
     implementation rootProject.ext.dependencies.materialSpinner
     implementation rootProject.ext.dependencies.orhanobutLogger
-//    testImplementation 'junit:junit:4.12'
-//    androidTestImplementation 'androidx.test:runner:1.1.0-alpha4'
-//    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.0-alpha4'
+    //    testImplementation 'junit:junit:4.12'
+    //    androidTestImplementation 'androidx.test:runner:1.1.0-alpha4'
+    //    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.0-alpha4'
 }

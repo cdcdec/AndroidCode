@@ -24,22 +24,24 @@ android {
         }
     }
 
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
 }
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
-
-    implementation rootProject.ext.dependencies.appcompatV7
-    implementation rootProject.ext.dependencies.recyclerview
-    implementation rootProject.ext.dependencies.design
-    implementation rootProject.ext.dependencies.gridlayout
+    implementation rootProject.ext.dSupport.appcompatV7
+    implementation rootProject.ext.dSupport.recyclerview
+    implementation rootProject.ext.dSupport.design
+    implementation rootProject.ext.dSupport.gridlayout
     implementation rootProject.ext.dependencies.materialDialogsCore
     implementation rootProject.ext.dependencies.materialDialogsInput
     implementation rootProject.ext.dependencies.materialDialogsFiles
     implementation rootProject.ext.dependencies.materialDialogsColor
     implementation rootProject.ext.dependencies.assent
-
-
-
+    implementation 'androidx.appcompat:appcompat:1.0.0-beta01'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
 }

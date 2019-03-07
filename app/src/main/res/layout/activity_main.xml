@@ -20,12 +20,12 @@
     <com.flyco.tablayout.CommonTabLayout
             android:id="@+id/mainTabLayout"
             android:layout_width="match_parent"
-            android:layout_height="108pt"
+            android:layout_height="54dp"
             android:background="@color/window_color"
-            android:paddingTop="12pt"
-            android:paddingBottom="8pt"
+            android:paddingTop="6dp"
+            android:paddingBottom="4dp"
             app:tl_indicator_height="0dp"
-            app:tl_iconMargin="3pt"
+            app:tl_iconMargin="1.5dp"
             app:tl_textSelectColor="@color/colorPrimary"
             app:tl_textUnselectColor="@color/gray_color"
     >

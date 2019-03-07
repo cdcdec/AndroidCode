@@ -31,28 +31,25 @@
     <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"/>
     <uses-permission android:name="android.permission.GET_TASKS"/>
 
-
     <application
             android:name=".application.CdcApplication"
             android:allowBackup="true"
             android:icon="@mipmap/ic_launcher"
             android:label="@string/app_name"
-            android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/AppTheme"
             tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".ui.toolbar.ToolbarMainActivity">
+        </activity>
+        <activity android:name=".ui.dialog.DialogMainActivity">
+        </activity>
         <activity android:name=".libraries.update.UpdateMainActivity">
         </activity>
         <activity
                 android:name=".libraries.xxpermissions.XXPermissionsMainActivity"
                 android:label="@string/title_activity_xxpermissions_main"
                 android:theme="@style/AppTheme.NoActionBar">
-        </activity>
-
-
-        <!-- 设置key -->
-
-
+        </activity> <!-- 设置key -->
         <activity android:name=".libraries.glide.GlideOneActivity">
         </activity>
         <activity android:name=".libraries.glide.GlideMainActivity">
@@ -189,14 +186,10 @@
                 android:value="developer-default"/>
         <meta-data
                 android:name="JPUSH_APPKEY"
-                android:value="d44807982507617679d47adb"/>
-
-        <!--https://github.com/CymChad/BaseRecyclerViewAdapterHelper-->
-        <activity
-                android:name="com.chad.baserecyclerviewadapterhelper.BaseRecyclerViewAdapterHelperActivity"></activity>
-        <activity android:name="com.chad.baserecyclerviewadapterhelper.HomeActivity"></activity>
+                android:value="d44807982507617679d47adb"/> <!-- https://github.com/CymChad/BaseRecyclerViewAdapterHelper -->
+        <activity android:name="com.chad.baserecyclerviewadapterhelper.BaseRecyclerViewAdapterHelperActivity"/>
+        <activity android:name="com.chad.baserecyclerviewadapterhelper.HomeActivity"/>
         <activity android:name="com.chad.baserecyclerviewadapterhelper.PullToRefreshUseActivity"/>
-
         <activity android:name="com.chad.baserecyclerviewadapterhelper.AnimationUseActivity"/>
         <activity android:name="com.chad.baserecyclerviewadapterhelper.HeaderAndFooterUseActivity"/>
         <activity android:name="com.chad.baserecyclerviewadapterhelper.SectionUseActivity"/>
@@ -207,14 +200,11 @@
         <activity android:name="com.chad.baserecyclerviewadapterhelper.ItemDragAndSwipeUseActivity"/>
         <activity android:name="com.chad.baserecyclerviewadapterhelper.ExpandableUseActivity"/>
         <activity android:name="com.chad.baserecyclerviewadapterhelper.DataBindingUseActivity"/>
-        <activity android:name="com.chad.baserecyclerviewadapterhelper.ItemClickActivity"></activity>
-        <activity android:name="com.chad.baserecyclerviewadapterhelper.base.BaseActivity"></activity>
-
-        <activity android:name="com.chad.baserecyclerviewadapterhelper.UpFetchUseActivity"></activity>
-        <activity android:name="com.chad.baserecyclerviewadapterhelper.SectionMultipleItemUseActivity"></activity>
-
-
-        <!--https://github.com/yqritc/RecyclerView-FlexibleDivider-->
+        <activity android:name="com.chad.baserecyclerviewadapterhelper.ItemClickActivity"/>
+        <activity android:name="com.chad.baserecyclerviewadapterhelper.base.BaseActivity"/>
+        <activity android:name="com.chad.baserecyclerviewadapterhelper.UpFetchUseActivity"/>
+        <activity
+                android:name="com.chad.baserecyclerviewadapterhelper.SectionMultipleItemUseActivity"/> <!-- https://github.com/yqritc/RecyclerView-FlexibleDivider -->
         <activity
                 android:name="com.yqritc.recyclerviewflexibledivider.sample.PaintActivity"
                 android:label="@string/menu_paint"
@@ -231,26 +221,29 @@
                 android:name="com.yqritc.recyclerviewflexibledivider.sample.SimpleGridActivity"
                 android:label="@string/menu_simple_grid"
                 android:theme="@style/DarkActionBar"/>
-
         <activity
                 android:name="com.yqritc.recyclerviewflexibledivider.sample.SimpleActivity"
-                android:theme="@style/DarkActionBar"
-                android:label="@string/menu_simple"/>
-
-        <!--高德地图-->
-
+                android:label="@string/menu_simple"
+                android:theme="@style/DarkActionBar"/> <!-- 高德地图 -->
         <meta-data
                 android:name="com.amap.api.v2.apikey"
                 android:value="f2a76217158aef36658d8f04f690fa5f"/> <!-- 定位需要的服务 -->
-
-
-        <activity android:name="com.cdc.mapsearchlocation.MapSearchLocationMainActivity"></activity>
-
-        <activity android:name="com.cdc.toasty.ToastyMainActivity"></activity>
-        <activity android:name="com.cdc.toasty.ToastSyleActivity"></activity>
-
-        <activity android:name="afollestad.AfollestadDialogActivity"
-        android:theme="@style/DarkActionBar"></activity>
+        <activity android:name="com.cdc.mapsearchlocation.MapSearchLocationMainActivity"/>
+        <activity android:name="com.cdc.toasty.ToastyMainActivity"/>
+        <activity android:name="com.cdc.toasty.ToastSyleActivity"/>
+        <activity
+                android:name="afollestad.AfollestadDialogActivity"
+                android:theme="@style/DarkActionBar"/>
+        <activity android:name="com.cdc.autosize.DefaultErrorActivity"/>
+        <activity android:name="com.cdc.okhttp3.Okhttp3MainActivity"/>
+        <activity
+                android:name="com.cdc.dialog.FragmentDialogActivity"/> <!-- 如果您项目中的所有页面都只需要以高或宽中的一个作为基准进行适配的话, 那就只需要填写高或宽中的一个设计图尺寸即可 -->
+        <meta-data
+                android:name="design_width_in_dp"
+                android:value="375"/>
+        <meta-data
+                android:name="design_height_in_dp"
+                android:value="640"/>
     </application>
 
 </manifest>

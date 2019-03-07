@@ -47,6 +47,12 @@ android {
     }
 
 
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+
 
     sourceSets {
         main {
@@ -68,16 +74,16 @@ android {
 
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
-    //内存泄漏检测
     implementation fileTree(include: ['*.jar'], dir: 'libs')
-    debugImplementation rootProject.ext.dependencies.leakcanaryAndroid
-    releaseImplementation rootProject.ext.dependencies.leakcanaryAndroidNoOp
+    //内存泄漏检测
+    //    debugImplementation rootProject.ext.dependencies.leakcanaryAndroid
+    //    releaseImplementation rootProject.ext.dependencies.leakcanaryAndroidNoOp
     // Optional, if you use support library fragments:
-    debugImplementation rootProject.ext.dependencies.leakcanarySupportFragment
+    //    debugImplementation rootProject.ext.dependencies.leakcanarySupportFragment
     //内存泄漏检测
     implementation fileTree(include: ['*.jar'], dir: 'libs')
-    implementation rootProject.ext.dependencies.appcompatV7
-    implementation rootProject.ext.dependencies.constraintLayout
+    implementation rootProject.ext.dSupport.appcompatV7
+    implementation rootProject.ext.dSupport.constraintLayout
     implementation rootProject.ext.dependencies.FlycoTabLayoutLib
     implementation rootProject.ext.dependencies.orhanobutLogger
     implementation rootProject.ext.dependencies.SuperTextView
@@ -88,11 +94,14 @@ dependencies {
     //极光2
     implementation rootProject.ext.dependencies.jpushjcore
     implementation rootProject.ext.dependencies.AppUpdateDialog
+    implementation 'androidx.appcompat:appcompat:1.0.0-beta01'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
     kapt rootProject.ext.dependencies.glideAnnotationProcessor
     //annotationProcessor rootProject.ext.dependencies.glideAnnotationProcessor
     implementation rootProject.ext.dependencies.picasso
     implementation rootProject.ext.dependencies.rvadapter
-    implementation rootProject.ext.dependencies.design
+    implementation rootProject.ext.dSupport.design
+    implementation rootProject.ext.screenAdaptation.autosize
     implementation rootProject.ext.dependencies.immersionbar
     implementation rootProject.ext.dependencies.SmartRefreshLayout
     implementation rootProject.ext.dependencies.BaseRecyclerViewAdapterHelper
@@ -102,4 +111,6 @@ dependencies {
     implementation project(':mapsearchlocation')
     implementation project(':toasty')
     implementation project(':dialog')
+    implementation project(':okhttp3')
+    implementation project(':autosize')
 }

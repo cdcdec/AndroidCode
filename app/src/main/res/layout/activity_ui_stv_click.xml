@@ -13,7 +13,7 @@
     <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbarClick"
             android:layout_width="match_parent"
-            android:layout_height="100pt"
+            android:layout_height="50dp"
             android:elevation="4dp"
             stv:navigationIcon="@mipmap/icon_back_left_arrow"
             android:background="@color/colorPrimary"

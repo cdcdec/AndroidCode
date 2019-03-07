@@ -11,7 +11,10 @@ import com.cdc.androidcode.libraries.jpush.JpushMainActivity
 import com.cdc.androidcode.libraries.update.UpdateMainActivity
 import com.cdc.androidcode.ui.UIItemAdapter
 import com.cdc.androidcode.ui.UIItemBean
+import com.cdc.autosize.DefaultErrorActivity
+import com.cdc.dialog.FragmentDialogActivity
 import com.cdc.mapsearchlocation.MapSearchLocationMainActivity
+import com.cdc.okhttp3.Okhttp3MainActivity
 import com.cdc.toasty.ToastSyleActivity
 import com.cdc.toasty.ToastyMainActivity
 import com.chad.baserecyclerviewadapterhelper.BaseRecyclerViewAdapterHelperActivity
@@ -104,6 +107,31 @@ class LibrariesFragment : BaseFragment() {
                 "afollestad Dialog",
                 "https://github.com/afollestad/material-dialogs",
                 AfollestadDialogActivity::class.java
+            )
+        )
+
+        list.add(
+            UIItemBean(
+                "AutoSize",
+                "https://github.com/JessYanCoding/AndroidAutoSize",
+                DefaultErrorActivity::class.java
+            )
+        )
+
+        list.add(
+            UIItemBean(
+                "Okhttp3",
+                "https://github.com/square/okhttp",
+                Okhttp3MainActivity::class.java
+            )
+        )
+
+
+        list.add(
+            UIItemBean(
+                "Custom  Dialog by Fragment",
+                "https://github.com/nidhinvv/BubbleAlert",
+                FragmentDialogActivity::class.java
             )
         )
 
