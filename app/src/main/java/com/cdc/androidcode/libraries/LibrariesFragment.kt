@@ -32,9 +32,7 @@ import kotlinx.android.synthetic.main.fresh_scroll_recy_common.*
  */
 class LibrariesFragment : BaseFragment() {
     private lateinit var uiAdapter: UIItemAdapter
-    override fun initImmersionBar() {
 
-    }
 
     override fun layoutId(): Int {
         return R.layout.fresh_scroll_recy_common

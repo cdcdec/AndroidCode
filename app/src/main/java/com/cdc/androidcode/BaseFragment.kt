@@ -17,12 +17,12 @@ import com.gyf.barlibrary.ImmersionOwner
  * updateTime:(修改时间)11:29
  * updateDesc:(修改内容)
  */
-abstract class BaseFragment : Fragment(), ImmersionOwner{
+abstract class BaseFragment : Fragment(){
 
     /**
      * Fragment代理类
      */
-    private val mFragmentProxy = FragmentProxy(this@BaseFragment)
+   // private val mFragmentProxy = FragmentProxy(this@BaseFragment)
     var rootView: View? = null
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
@@ -43,68 +43,68 @@ abstract class BaseFragment : Fragment(), ImmersionOwner{
 
     override fun onDestroy() {
         super.onDestroy()
-        mFragmentProxy.onDestroy()
+      //  mFragmentProxy.onDestroy()
     }
 
     override fun setUserVisibleHint(isVisibleToUser: Boolean) {
         super.setUserVisibleHint(isVisibleToUser)
-        mFragmentProxy.setUserVisibleHint(isVisibleToUser)
+       // mFragmentProxy.setUserVisibleHint(isVisibleToUser)
     }
 
     override fun onCreate(@Nullable savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        mFragmentProxy.onCreate(savedInstanceState)
+       // mFragmentProxy.onCreate(savedInstanceState)
     }
 
     override fun onActivityCreated(@Nullable savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        mFragmentProxy.onActivityCreated(savedInstanceState)
+        //mFragmentProxy.onActivityCreated(savedInstanceState)
     }
 
     override fun onResume() {
         super.onResume()
-        mFragmentProxy.onResume()
+       // mFragmentProxy.onResume()
     }
 
     override fun onPause() {
         super.onPause()
-        mFragmentProxy.onPause()
+        //mFragmentProxy.onPause()
     }
 
 
     override fun onHiddenChanged(hidden: Boolean) {
         super.onHiddenChanged(hidden)
-        mFragmentProxy.onHiddenChanged(hidden)
+        //mFragmentProxy.onHiddenChanged(hidden)
     }
 
     override fun onConfigurationChanged(newConfig: Configuration) {
         super.onConfigurationChanged(newConfig)
-        mFragmentProxy.onConfigurationChanged(newConfig)
+        //mFragmentProxy.onConfigurationChanged(newConfig)
     }
 
     /**
      * 懒加载，在view初始化完成之前执行
      * On lazy after view.
      */
-    override fun onLazyBeforeView() {}
+     fun onLazyBeforeView() {}
 
     /**
      * 懒加载，在view初始化完成之后执行
      * On lazy before view.
      */
-    override fun onLazyAfterView() {}
+     fun onLazyAfterView() {}
 
     /**
      * Fragment用户可见时候调用
      * On visible.
      */
-    override fun onVisible() {}
+     fun onVisible() {}
 
     /**
      * Fragment用户不可见时候调用
      * On invisible.
      */
-    override fun onInvisible() {}
+     fun onInvisible() {}
 
     /**
      * 是否可以实现沉浸式，当为true的时候才可以执行initImmersionBar方法
@@ -112,7 +112,7 @@ abstract class BaseFragment : Fragment(), ImmersionOwner{
      *
      * @return the boolean
      */
-    override fun immersionBarEnabled(): Boolean {
+     fun immersionBarEnabled(): Boolean {
         return true
     }
 }

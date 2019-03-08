@@ -12,9 +12,7 @@ import com.cdc.androidcode.R
  * updateDesc:(修改内容)
  */
 class ProgrammerFragment:BaseFragment() {
-    override fun initImmersionBar() {
 
-    }
 
     override fun initView() {
 

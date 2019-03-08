@@ -5,22 +5,22 @@
             android:id="@+id/action_music"
             android:icon="@mipmap/ic_hint_music"
             android:title="menu_search"
-            app:showAsAction="ifRoom" />
+            app:showAsAction="ifRoom"/>
 
     <item
             android:id="@+id/action_password"
             android:icon="@mipmap/ic_update_password"
             android:title="menu_notifications"
-            app:showAsAction="ifRoom" />
+            app:showAsAction="ifRoom"/>
 
     <item
             android:id="@+id/action_item1"
             android:title="item_01"
-            app:showAsAction="never" />
+            app:showAsAction="never"/>
 
     <item
             android:id="@+id/action_item2"
             android:title="item_02"
-            app:showAsAction="never" />
+            app:showAsAction="never"/>
 
 </menu>

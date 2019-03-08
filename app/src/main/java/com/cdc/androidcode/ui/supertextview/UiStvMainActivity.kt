@@ -1,11 +1,11 @@
 package com.cdc.androidcode.ui.supertextview
 import android.content.Intent
+import android.os.Bundle
 import android.view.View
 import com.cdc.androidcode.BaseActivity
 import com.cdc.androidcode.R
-import com.gyf.barlibrary.ImmersionBar
-import kotlinx.android.synthetic.main.toolbar_common.*
 import kotlinx.android.synthetic.main.ui_stv_activity_main.*
+
 class UiStvMainActivity : BaseActivity(), View.OnClickListener {
     override fun onClick(v: View?) {
         var intent= Intent()
@@ -73,7 +73,12 @@ class UiStvMainActivity : BaseActivity(), View.OnClickListener {
 
     }
 
-    override fun initView() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setBackBtn()
+        setTitle("Ui Stv Main")
+
+        setContentView(R.layout.ui_stv_activity_main)
         button0.setOnClickListener(this)
         button1.setOnClickListener(this)
         button2.setOnClickListener(this)
@@ -86,26 +91,16 @@ class UiStvMainActivity : BaseActivity(), View.OnClickListener {
         list_button.setOnClickListener(this)
         click_button.setOnClickListener(this)
         super_button.setOnClickListener(this)
-        setSupportActionBar(toolbar)
-        supportActionBar!!.setDisplayShowTitleEnabled(false)
-        toolbar.setNavigationOnClickListener{
-            finish()
-        }
-    }
-
-    override fun initData() {
 
     }
 
-    override fun layoutId(): Int {
-       return R.layout.ui_stv_activity_main
-    }
 
 
-    override fun initImmersionBar() {
-        super.initImmersionBar()
-        ImmersionBar.with(this).statusBarColor(R.color.colorPrimary).init()
-    }
+
+
+
+
+
 
 
 }

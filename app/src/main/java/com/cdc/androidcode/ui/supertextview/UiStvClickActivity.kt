@@ -1,38 +1,25 @@
 package com.cdc.androidcode.ui.supertextview
+import android.os.Bundle
+import android.view.View
 import androidx.appcompat.widget.Toolbar
 import com.cdc.androidcode.BaseActivity
 import com.cdc.androidcode.R
 import com.gyf.barlibrary.ImmersionBar
-import kotlinx.android.synthetic.main.activity_ui_stv_click.*
 
 class UiStvClickActivity : BaseActivity() {
-    override fun initView() {
-        leftArrow(toolbarClick)
 
-    }
-
-    override fun initData() {
-
-    }
-
-    override fun layoutId(): Int {
-
-        return R.layout.activity_ui_stv_click
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setBackBtn()
+        setTitle("UiStvClick")
+        setContentView(R.layout.activity_ui_stv_click)
     }
 
 
-    private fun leftArrow(toolBar: Toolbar){
-        setSupportActionBar(toolBar)
-        supportActionBar!!.setDisplayShowTitleEnabled(false)
-        toolBar.setNavigationOnClickListener{
-            finish()
-        }
-    }
 
-    override fun initImmersionBar() {
-        super.initImmersionBar()
-        ImmersionBar.with(this).statusBarColor(R.color.colorPrimary).init()
-    }
+
+
+
 
 
 

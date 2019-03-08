@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <item name="close" type="id" />
-    <item name="back" type="id" />
+    <item name="title_toolbar_close" type="id" />
+    <item name="title_toolbar_back" type="id" />
+    <item name="title_toolbar_subTitle" type="id" />
+    <item name="title_toolbar_title" type="id" />
+    <item name="title_toolbar_icon1" type="id"/>
+    <item name="title_toolbar_icon2" type="id"/>
 </resources>

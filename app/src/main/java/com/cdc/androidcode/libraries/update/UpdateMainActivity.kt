@@ -1,26 +1,25 @@
 package com.cdc.androidcode.libraries.update
 import android.view.View
-import com.cdc.androidcode.BaseActivity
 import com.cdc.androidcode.R
-import kotlinx.android.synthetic.main.activity_update_main.*
 import sskj.lee.appupdatelibrary.BaseVersion
 import sskj.lee.appupdatelibrary.BaseUpdateDialogFragment
 import android.os.Bundle
+import com.cdc.androidcode.BaseActivity
+import kotlinx.android.synthetic.main.activity_update_main.*
 import sskj.lee.appupdatelibrary.SimpleUpdateFragment
 class UpdateMainActivity : BaseActivity() {
-    override fun initView() {
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setBackBtn()
+        setTitle("App更新")
+        setContentView(R.layout.activity_update_main)
+
         dialog.setOnClickListener(this)
         notifycation.setOnClickListener(this)
     }
 
-    override fun initData() {
 
-    }
-
-    override fun layoutId(): Int {
-
-        return R.layout.activity_update_main
-    }
 
     override fun onClick(v: View?) {
         super.onClick(v)

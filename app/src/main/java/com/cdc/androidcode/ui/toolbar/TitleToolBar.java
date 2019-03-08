@@ -8,6 +8,7 @@ import android.util.AttributeSet;
 import android.view.Gravity;
 import android.view.View;
 import android.view.ViewParent;
+import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.annotation.Nullable;
 import androidx.appcompat.widget.LinearLayoutCompat;
@@ -35,6 +36,11 @@ public class TitleToolBar extends Toolbar implements View.OnClickListener{
     private CharSequence mBackText;
     private boolean mBackVisible;
 
+
+    private ImageView mIconImageView1;
+    private boolean mIconImageView1Visible;
+    private ImageView mIconImageView2;
+    private boolean mIconImageView2Visible;
 
     OnOptionItemClickListener mOnOptionItemClickListener;
 
@@ -87,6 +93,7 @@ public class TitleToolBar extends Toolbar implements View.OnClickListener{
         if (!isChild(mTitleTextView, mTitleLayout)) {
             mTitleTextView = new TextView(context);
             mTitleTextView.setSingleLine();
+            mTitleTextView.setId(R.id.title_toolbar_title);
             mTitleTextView.setEllipsize(TextUtils.TruncateAt.END);
             mTitleTextView.setGravity(Gravity.CENTER);
 
@@ -107,7 +114,8 @@ public class TitleToolBar extends Toolbar implements View.OnClickListener{
 
             setTitle(typedArray.getText(styleable.Toolbar_title));
             setTitleVisible(typedArray.getBoolean(R.styleable.TitleToolbar_titleVisible, true));
-
+            mTitleTextView.setClickable(true);
+            mTitleTextView.setOnClickListener(this);
             mTitleLayout.addView(mTitleTextView,
                     new LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT));
         }
@@ -115,6 +123,7 @@ public class TitleToolBar extends Toolbar implements View.OnClickListener{
         if (!isChild(mSubtitleTextView, mTitleLayout)) {
             mSubtitleTextView = new TextView(context);
             mSubtitleTextView.setSingleLine();
+            mSubtitleTextView.setId(R.id.title_toolbar_subTitle);
             mSubtitleTextView.setEllipsize(TextUtils.TruncateAt.END);
             mSubtitleTextView.setGravity(Gravity.CENTER);
 
@@ -137,14 +146,15 @@ public class TitleToolBar extends Toolbar implements View.OnClickListener{
             setSubtitle(typedArray.getText(styleable.Toolbar_subtitle));
             setSubtitleVisible(
                     typedArray.getBoolean(R.styleable.TitleToolbar_subtitleVisible, false));
-
+            mSubtitleTextView.setClickable(true);
+            mSubtitleTextView.setOnClickListener(this);
             mTitleLayout.addView(mSubtitleTextView,
                     new LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT));
         }
 
         if (!isChild(mBackTextView)) {
             mBackTextView = new TextView(context);
-            mBackTextView.setId(R.id.back);
+            mBackTextView.setId(R.id.title_toolbar_back);
             mBackTextView.setSingleLine();
             mBackTextView.setEllipsize(TextUtils.TruncateAt.END);
             mBackTextView.setGravity(Gravity.CENTER_VERTICAL);
@@ -188,7 +198,7 @@ public class TitleToolBar extends Toolbar implements View.OnClickListener{
 
         if (!isChild(mCloseTextView)) {
             mCloseTextView = new TextView(context);
-            mCloseTextView.setId(R.id.close);
+            mCloseTextView.setId(R.id.title_toolbar_close);
             mCloseTextView.setSingleLine();
             mCloseTextView.setEllipsize(TextUtils.TruncateAt.END);
             mCloseTextView.setGravity(Gravity.CENTER_VERTICAL);
@@ -222,7 +232,51 @@ public class TitleToolBar extends Toolbar implements View.OnClickListener{
                     LayoutParams.MATCH_PARENT, Gravity.LEFT | Gravity.CENTER_VERTICAL));
         }
 
+
+        if (!isChild(mIconImageView1)) {
+            mIconImageView1 = new ImageView(context);
+            mIconImageView1.setId(R.id.title_toolbar_icon1);
+            Drawable drawable = typedArray.getDrawable(R.styleable.TitleToolbar_icon1);
+            if (drawable != null) {
+                mIconImageView1.setImageDrawable(drawable);
+            }
+            setIcon1Visible(typedArray.getBoolean(R.styleable.TitleToolbar_icon1Visible, false));
+            mIconImageView1.setOnClickListener(this);
+
+            addView(mIconImageView1, new LayoutParams(LayoutParams.WRAP_CONTENT,
+                    LayoutParams.MATCH_PARENT, Gravity.RIGHT | Gravity.CENTER_VERTICAL));
+        }
+
+        if (!isChild(mIconImageView2)) {
+            mIconImageView2 = new ImageView(context);
+            mIconImageView2.setId(R.id.title_toolbar_icon2);
+            Drawable drawable = typedArray.getDrawable(R.styleable.TitleToolbar_icon2);
+            if (drawable != null) {
+                mIconImageView2.setImageDrawable(drawable);
+            }
+            setIcon2Visible(typedArray.getBoolean(R.styleable.TitleToolbar_icon2Visible, false));
+            mIconImageView2.setOnClickListener(this);
+            addView(mIconImageView2, new LayoutParams(LayoutParams.WRAP_CONTENT,
+                    LayoutParams.MATCH_PARENT, Gravity.RIGHT | Gravity.CENTER_VERTICAL));
+        }
+
+
+
         typedArray.recycle();
+    }
+
+    private void setIcon1Visible(boolean visible) {
+        mIconImageView1Visible=visible;
+
+        mIconImageView1.setVisibility(mIconImageView1Visible ? VISIBLE : GONE);
+
+    }
+
+    private void setIcon2Visible(boolean visible) {
+        mIconImageView2Visible=visible;
+
+        mIconImageView2.setVisibility(mIconImageView2Visible ? VISIBLE : GONE);
+
     }
 
     @Override

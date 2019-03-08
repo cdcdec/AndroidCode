@@ -37,5 +37,15 @@
         <attr name="backTextSize" format="dimension" />
         <attr name="backIcon" format="reference" />
         <attr name="backMarginRight" format="dimension" />
+
+        <attr name="icon1Visible" format="boolean" />
+        <attr name="icon1" format="reference" />
+        <attr name="icon1MarginRight" format="dimension" />
+
+
+        <attr name="icon2Visible" format="boolean" />
+        <attr name="icon2" format="reference" />
+        <attr name="icon2MarginRight" format="dimension" />
+
     </declare-styleable>
 </resources>

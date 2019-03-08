@@ -1,30 +1,35 @@
 package com.cdc.androidcode
+import android.os.Bundle
 import androidx.fragment.app.Fragment
 import com.cdc.androidcode.component.ComponentFragment
 import com.cdc.androidcode.document.DocumentFragment
 import com.cdc.androidcode.libraries.LibrariesFragment
+import com.cdc.androidcode.log.LogUtil
 import com.cdc.androidcode.programmer.ProgrammerFragment
 import com.cdc.androidcode.ui.UserInterfaceFragment
+import com.cdc.androidcode.utils.SystemUtil
 import com.flyco.tablayout.listener.CustomTabEntity
 import com.flyco.tablayout.listener.OnTabSelectListener
 import com.gyf.barlibrary.ImmersionBar
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : BaseActivity(), OnTabSelectListener {
-    override fun initView() {
+
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.hasToolBar=false
+        LogUtil.g("hasToolBar22=${SystemUtil.getSystemVersion()},${SystemUtil.getSystemLevel()}")
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
         initTab()
         mainTabLayout.setTabData(mTabEntities.toList() as java.util.ArrayList<CustomTabEntity>, this, R.id.tab_content, mTabFragments.toList() as java.util.ArrayList<Fragment>)
         mainTabLayout.setOnTabSelectListener(this)
         mainTabLayout.currentTab=0
-    }
-
-    override fun initData() {
 
     }
 
-    override fun layoutId(): Int {
-        return R.layout.activity_main
-    }
+
+
 
     override fun onTabReselect(position: Int) {
 
@@ -35,21 +40,21 @@ class MainActivity : BaseActivity(), OnTabSelectListener {
         mainTabLayout.currentTab = position
         when(position){
             0,2,3,4->{
-                ImmersionBar.with(this)
-                    .reset()
-                    //设置状态栏颜色
-                    .statusBarColor(R.color.colorPrimary)
-                    .keyboardEnable(false)
-                    .init()
+//                ImmersionBar.with(this)
+//                    .reset()
+//                    //设置状态栏颜色
+//                    .statusBarColor(R.color.colorPrimary)
+//                    .keyboardEnable(false)
+//                    .init()
             }
             1->{
-                ImmersionBar.with(this)
-                    .reset()
-                    //设置状态栏颜色
-                    .statusBarColor(R.color.colorPrimary)
-                    //.hideBar(BarHide.FLAG_HIDE_NAVIGATION_BAR)
-                    .keyboardEnable(false)
-                    .init()
+//                ImmersionBar.with(this)
+//                    .reset()
+//                    //设置状态栏颜色
+//                    .statusBarColor(R.color.colorPrimary)
+//                    //.hideBar(BarHide.FLAG_HIDE_NAVIGATION_BAR)
+//                    .keyboardEnable(false)
+//                    .init()
             }
         }
     }
@@ -77,11 +82,5 @@ class MainActivity : BaseActivity(), OnTabSelectListener {
         mTabFragments.add(DocumentFragment())
         mTabFragments.add(LibrariesFragment())
         mTabFragments.add(ProgrammerFragment())
-    }
-
-
-    //必须先在宿主Activity初始化
-    override fun isImmersionBarEnabled(): Boolean {
-        return true
     }
 }

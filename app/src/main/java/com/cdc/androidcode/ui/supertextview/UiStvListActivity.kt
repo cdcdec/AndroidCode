@@ -1,15 +1,15 @@
 package com.cdc.androidcode.ui.supertextview
 
+import android.os.Bundle
 import android.os.Handler
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
-import com.cdc.androidcode.BaseActivity
 import com.cdc.androidcode.R
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.appcompat.widget.Toolbar
+import androidx.recyclerview.widget.RecyclerView
+import com.cdc.androidcode.BaseActivity
 import com.cdc.androidcode.Logger
-import com.gyf.barlibrary.ImmersionBar
 import kotlinx.android.synthetic.main.activity_ui_stv_list.*
-
 
 
 class UiStvListActivity : BaseActivity(), SwipeRefreshLayout.OnRefreshListener {
@@ -53,19 +53,7 @@ class UiStvListActivity : BaseActivity(), SwipeRefreshLayout.OnRefreshListener {
         return newsBeanList
     }
 
-    override fun initView() {
-        leftArrow(toolbarList)
-    }
 
-    override fun initData() {
-        val layoutManager = LinearLayoutManager(this)
-        layoutManager.orientation = LinearLayoutManager.VERTICAL
-        recycler_view.layoutManager = layoutManager
-        adapter = UiListAdapter(recycler_view)
-        recycler_view.adapter = adapter
-        adapter!!.setData(getData())
-        swipe_refresh_layout.setOnRefreshListener(this)
-    }
 
     private fun getRefreshData(): List<NewsBean> {
         newsBeanList.clear()
@@ -76,9 +64,21 @@ class UiStvListActivity : BaseActivity(), SwipeRefreshLayout.OnRefreshListener {
         return newsBeanList
     }
 
-    override fun layoutId(): Int {
-        return R.layout.activity_ui_stv_list
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setBackBtn()
+        setTitle("ui_stv_list")
+        setContentView(R.layout.activity_ui_stv_list)
+
+        val layoutManager = LinearLayoutManager(this)
+        layoutManager.orientation = RecyclerView.VERTICAL
+        recycler_view.layoutManager = layoutManager
+        adapter = UiListAdapter(recycler_view)
+        recycler_view.adapter = adapter
+        adapter!!.setData(getData())
+        swipe_refresh_layout.setOnRefreshListener(this)
     }
+
 
     private fun leftArrow(toolBar: Toolbar){
         setSupportActionBar(toolBar)
@@ -88,10 +88,7 @@ class UiStvListActivity : BaseActivity(), SwipeRefreshLayout.OnRefreshListener {
         }
     }
 
-    override fun initImmersionBar() {
-        super.initImmersionBar()
-        ImmersionBar.with(this).statusBarColor(R.color.colorPrimary).init()
-    }
+
 
 
 }

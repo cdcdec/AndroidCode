@@ -1,12 +1,9 @@
 package com.cdc.androidcode.libraries.glide
 import android.view.View
-import com.cdc.androidcode.BaseActivity
 import com.cdc.androidcode.R
-import kotlinx.android.synthetic.main.glide_contact_uri_activity.*
 import android.content.Intent
 import android.database.Cursor
 import android.provider.ContactsContract.Contacts
-import kotlinx.android.synthetic.main.toolbar_common.*
 import com.bumptech.glide.util.Preconditions
 import android.content.ContentUris
 import android.content.pm.PackageManager
@@ -16,34 +13,37 @@ import androidx.core.content.ContextCompat
 import com.bumptech.glide.request.RequestOptions
 import com.bumptech.glide.request.target.Target
 import android.Manifest
+import android.os.Bundle
 import android.provider.ContactsContract
+import com.cdc.androidcode.BaseActivity
 import com.cdc.androidcode.common.GlideApp
+import kotlinx.android.synthetic.main.glide_contact_uri_activity.*
 
 
 class GlideOneActivity : BaseActivity() {
     private val REQUEST_CONTACT = 1
     private val READ_CONTACTS = 0
-    override fun initView() {
-        toolBarTitle.text="glide读取联系人头像"
-        setStatusBar()
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.glide_contact_uri_activity)
+        setBackBtn()
+        setTitle("glide读取联系人头像")
         button_pick_contact.setOnClickListener(this)
         button_find.setOnClickListener(this)
-    }
 
-    override fun initData() {
-// Make sure that user gives application required permissions
         if (ContextCompat.checkSelfPermission(
                 application,
                 Manifest.permission.READ_CONTACTS) != PackageManager.PERMISSION_GRANTED) {
             // No explanation needed, we can request the permission.
             ActivityCompat.requestPermissions(this,arrayOf(Manifest.permission.READ_CONTACTS),READ_CONTACTS)
         }
+
     }
 
-    override fun layoutId(): Int {
 
-        return R.layout.glide_contact_uri_activity
-    }
+
+
 
     override fun onClick(v: View?) {
         super.onClick(v)

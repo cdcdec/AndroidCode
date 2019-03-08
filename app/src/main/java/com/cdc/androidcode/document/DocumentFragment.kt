@@ -12,9 +12,6 @@ import com.cdc.androidcode.R
  * updateDesc:(修改内容)
  */
 class DocumentFragment:BaseFragment() {
-    override fun initImmersionBar() {
-
-    }
 
     override fun layoutId(): Int {
        return  R.layout.document_fragment

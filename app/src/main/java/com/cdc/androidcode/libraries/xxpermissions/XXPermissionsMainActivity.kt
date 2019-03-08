@@ -1,4 +1,5 @@
 package com.cdc.androidcode.libraries.xxpermissions
+import android.os.Bundle
 import android.view.View
 import android.widget.Toast
 import com.cdc.androidcode.BaseActivity
@@ -7,16 +8,20 @@ import com.hjq.permissions.OnPermission
 import com.hjq.permissions.Permission
 import com.hjq.permissions.XXPermissions
 import kotlinx.android.synthetic.main.activity_xxpermissions_main.*
-import kotlinx.android.synthetic.main.toolbar_common.*
 
 class XXPermissionsMainActivity : BaseActivity() {
-    override fun initView() {
-        toolBarTitle.text="XXPermissions"
-        setStatusBar()
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setTitle("XXPermissions")
+        setBackBtn()
+        setContentView(R.layout.activity_xxpermissions_main)
         btnRequestPer.setOnClickListener(this)
         btnIsHasPermission.setOnClickListener(this)
         btnPermissionSettings.setOnClickListener(this)
+
     }
+
 
     override fun onClick(v: View?) {
         when(v!!.id){
@@ -70,14 +75,7 @@ class XXPermissionsMainActivity : BaseActivity() {
         XXPermissions.gotoPermissionSettings(this@XXPermissionsMainActivity)
     }
 
-    override fun initData() {
 
-    }
-
-    override fun layoutId(): Int {
-
-        return R.layout.activity_xxpermissions_main
-    }
 
 
 
