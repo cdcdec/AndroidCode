@@ -9,23 +9,6 @@
         android:clipToPadding="true"
         android:fitsSystemWindows="true"
         tools:context=".ui.supertextview.UiStvSuperButtonActivity">
-
-    <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbarSuButton"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:elevation="4dp"
-            stv:navigationIcon="@mipmap/icon_back_left_arrow"
-            android:background="@color/colorPrimary"
-    >
-        <!--自定义控件-->
-        <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:singleLine="true"
-                android:text="Super TextView"/>
-    </androidx.appcompat.widget.Toolbar>
     <androidx.core.widget.NestedScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent"

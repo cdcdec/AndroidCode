@@ -26,7 +26,6 @@ class UiStvTypeActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setBackBtn()
-        setTitle("===a===a==a=")
         setContentView(layoutId())
         initView()
 
@@ -108,9 +107,11 @@ class UiStvTypeActivity : BaseActivity() {
         type = intent.getIntExtra("type", 0)
         when (type) {
             0 -> {
+                setTitle("所有类型")
                 return R.layout.ui_stv_type0_activity
             }
             1 -> {
+                setTitle("所有类型1")
                 return R.layout.ui_stv_type1_activity
             }
             2 -> {

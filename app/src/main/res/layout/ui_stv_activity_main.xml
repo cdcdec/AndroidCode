@@ -9,8 +9,6 @@
         android:clipToPadding="true"
         android:fitsSystemWindows="true"
         tools:context=".ui.supertextview.UiStvMainActivity">
-
-   <include layout="@layout/toolbar_common"/>
     <androidx.core.widget.NestedScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent">
