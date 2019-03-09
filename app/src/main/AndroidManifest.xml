@@ -31,6 +31,13 @@
     <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"/>
     <uses-permission android:name="android.permission.GET_TASKS"/>
 
+    <!--摄像机-->
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-feature android:name="android.hardware.camera"/>
+    <uses-feature android:name="android.hardware.camera.autofocus"/>
+    <!-- 闪光灯 -->
+    <uses-permission android:name="android.permission.FLASHLIGHT"/>
+
     <application
             android:name=".application.CdcApplication"
             android:allowBackup="true"
@@ -39,6 +46,10 @@
             android:supportsRtl="true"
             android:theme="@style/CodeAppTheme"
             tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".libraries.camera.Camera1Activity">
+        </activity>
+        <activity android:name=".libraries.camera.CameraMainActivity">
+        </activity>
         <activity android:name=".ui.deawable.DrawerArrowActivity">
         </activity>
         <activity android:name=".ui.toolbar.CustomToolBar1Activity">

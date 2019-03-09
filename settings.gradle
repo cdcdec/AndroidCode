@@ -1,1 +1,1 @@
-include ':app', ':baserecyclerviewadapterhelper', ':recyclerviewflexibledivide', ':mapsearchlocation', ':toasty', ':dialog', ':okhttp3', ':autosize'
+include ':app', ':baserecyclerviewadapterhelper', ':recyclerviewflexibledivide', ':mapsearchlocation', ':toasty', ':dialog', ':okhttp3', ':autosize', ':camera_orc'

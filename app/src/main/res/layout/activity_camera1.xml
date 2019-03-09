@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".libraries.camera.Camera1Activity">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:orientation="horizontal"
+    >
+        <ImageView
+                android:id="@+id/image_a"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"/>
+        <ImageView
+                android:id="@+id/image_b"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"/>
+        <ImageView
+                android:id="@+id/image_c"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"/>
+        <ImageView
+                android:id="@+id/image_d"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"/>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_general"
+            style="@style/btnstyle1"
+            android:text="General"
+    />
+    <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_card_front"
+            style="@style/btnstyle1"
+            android:text="CardFront"
+    />
+    <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_card_back"
+            style="@style/btnstyle1"
+            android:text="CardBack"
+    />
+    <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_bank_card"
+            style="@style/btnstyle1"
+            android:text="CardBack"
+    />
+</androidx.appcompat.widget.LinearLayoutCompat>

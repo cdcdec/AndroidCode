@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: com.afollestad:assent:2.2.3@aar">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/assent-2.2.3.aar/48e73fec2d3931d1f360809ac4c4152d/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/assent-2.2.3.aar/48e73fec2d3931d1f360809ac4c4152d/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.afollestad/assent/2.2.3/38fc035365bcd7eb571707ac1808eb6d51420029/assent-2.2.3-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.cdc.androidcode.BaseFragment
 import com.cdc.androidcode.R
 import com.cdc.androidcode.application.RecycleViewDivider
+import com.cdc.androidcode.libraries.camera.CameraMainActivity
 import com.cdc.androidcode.libraries.glide.GlideMainActivity
 import com.cdc.androidcode.libraries.jpush.JpushMainActivity
 import com.cdc.androidcode.libraries.update.UpdateMainActivity
@@ -132,6 +133,17 @@ class LibrariesFragment : BaseFragment() {
                 FragmentDialogActivity::class.java
             )
         )
+
+
+        list.add(
+            UIItemBean(
+                "Camera",
+                "多个Camera Library",
+                CameraMainActivity::class.java
+            )
+        )
+
+
 
         uiAdapter = UIItemAdapter(R.layout.ui_item, list)
         recyclerView.adapter = uiAdapter

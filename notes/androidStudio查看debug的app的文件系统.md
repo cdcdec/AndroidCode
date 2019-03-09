@@ -1,0 +1,4 @@
+# androidStudio查看debug的app的文件系统
+
+打开AS，找到窗口右下角的Device File Explorer
+可以看到debug安装在手机APP的内部文件目录，非debug安装的看不到内部的文件目录
