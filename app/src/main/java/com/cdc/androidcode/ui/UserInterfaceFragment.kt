@@ -5,6 +5,7 @@ import com.cdc.androidcode.BaseFragment
 import com.cdc.androidcode.R
 import com.cdc.androidcode.application.RecycleViewDivider
 import com.cdc.androidcode.ui.deawable.DrawerArrowActivity
+import com.cdc.androidcode.ui.shape.ShapeMainActivity
 import com.cdc.androidcode.ui.supertextview.UiStvMainActivity
 import com.cdc.androidcode.ui.toolbar.CustomToolBar1Activity
 import com.cdc.androidcode.ui.toolbar.ToolBar1Activity
@@ -36,6 +37,10 @@ private lateinit var uiAdapter:UIItemAdapter
 
     override fun initData() {
         var list:MutableList<UIItemBean> =ArrayList()
+
+        list.add(UIItemBean("Shape Demo","Shape xml文件",
+            ShapeMainActivity::class.java))
+
         list.add(UIItemBean("SuperTextView","SuperTextView,CommonTextView继承RelativeLayout,SuperButton继承Button\n https://github.com/lygttpod/SuperTextView",UiStvMainActivity::class.java))
         list.add(UIItemBean("Toolbar1","androidx.appcompat.widget.Toolbar",
             ToolBar1Activity::class.java))

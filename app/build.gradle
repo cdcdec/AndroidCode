@@ -58,10 +58,15 @@ android {
         main {
             jniLibs.srcDirs = ['libs']
 
-//            res.srcDirs = [
-//                    'src/main/res/layout',
-//                    'src/main/res'
-//            ]
+            res.srcDirs = [
+                    'src/main/res/drawable/drawable_shapedemo',
+                    'src/main/drawable',
+                    'src/main/res/layout/shape',
+                    'src/main/layout',
+                    'src/main/res/values/shape',
+                    'src/main/res/values',
+                    'src/main/res'
+            ]
         }
     }
 
@@ -106,6 +111,7 @@ dependencies {
     implementation rootProject.ext.dependencies.SmartRefreshLayout
     implementation rootProject.ext.dependencies.BaseRecyclerViewAdapterHelper
     implementation rootProject.ext.dependencies.multidex
+    implementation rootProject.ext.customview.citypicker
     implementation project(':baserecyclerviewadapterhelper')
     implementation project(':recyclerviewflexibledivide')
     implementation project(':mapsearchlocation')

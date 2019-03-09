@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="MyList">
+        <item>Bitmap State Inset Transtion</item>
+        <item>Level List</item>
+        <item>Nine-Patch File</item>
+        <item>Layer List</item>
+        <item>Clip Drawable</item>
+        <item>Scale Drawable</item>
+        <item>Shape Drawable</item>
+    </array>
+</resources>

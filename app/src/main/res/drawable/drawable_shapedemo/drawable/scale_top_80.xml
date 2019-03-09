@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<scale xmlns:android="http://schemas.android.com/apk/res/android"
+       android:drawable="@drawable/shape_oval"
+       android:scaleGravity="top"
+       android:scaleHeight="80%"
+       android:scaleWidth="80%">
+
+    <!-- scaleGravity:类似缩放原点 -->
+    <!-- scaleHeight:高度缩小比例：50%表示缩小为原大小的50% -->
+    <!-- scaleWidth:宽度缩小比例：0%表示保持原大小不变 -->
+
+</scale>

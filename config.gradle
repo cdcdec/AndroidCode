@@ -44,7 +44,8 @@ ext{
             materialDialogsInput:'2.0.3',
             materialDialogsFiles:'2.0.3',
             materialDialogsColor:'2.0.3',
-            autosize:'1.1.2'
+            autosize:'1.1.2',
+            citypicker:'2.0.3'
     ]
 
     dSupport=[
@@ -54,6 +55,10 @@ ext{
             design: "com.google.android.material:material:${depsVersion.support}",
             constraintLayout: "androidx.constraintlayout:constraintlayout:${depsVersion.constraintLayout}",
             gridlayout:"androidx.gridlayout:gridlayout:${depsVersion.support}"
+    ]
+
+    customview=[
+            citypicker:"com.zaaach:citypicker:${depsVersion.citypicker}",
     ]
 
 

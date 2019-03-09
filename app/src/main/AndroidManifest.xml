@@ -29,13 +29,11 @@
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
     <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS"/>
     <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"/>
-    <uses-permission android:name="android.permission.GET_TASKS"/>
-
-    <!--摄像机-->
+    <uses-permission android:name="android.permission.GET_TASKS"/> <!-- 摄像机 -->
     <uses-permission android:name="android.permission.CAMERA"/>
+
     <uses-feature android:name="android.hardware.camera"/>
-    <uses-feature android:name="android.hardware.camera.autofocus"/>
-    <!-- 闪光灯 -->
+    <uses-feature android:name="android.hardware.camera.autofocus"/> <!-- 闪光灯 -->
     <uses-permission android:name="android.permission.FLASHLIGHT"/>
 
     <application
@@ -46,6 +44,24 @@
             android:supportsRtl="true"
             android:theme="@style/CodeAppTheme"
             tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".ui.shape.ShapeActivity">
+        </activity>
+        <activity android:name=".ui.shape.ScaleActivity">
+        </activity>
+        <activity android:name=".ui.shape.ClipActivity">
+        </activity>
+        <activity android:name=".ui.shape.LayerActivity">
+        </activity>
+        <activity android:name=".ui.shape.NinePatchActivity">
+        </activity>
+        <activity android:name=".ui.shape.LevelActivity">
+        </activity>
+        <activity android:name=".ui.shape.ShapeBitmapActivity">
+        </activity>
+        <activity android:name=".ui.shape.ShapeMainActivity">
+        </activity>
+        <activity android:name=".libraries.citypicker.CityPickerMainActivity">
+        </activity>
         <activity android:name=".libraries.camera.Camera1Activity">
         </activity>
         <activity android:name=".libraries.camera.CameraMainActivity">
