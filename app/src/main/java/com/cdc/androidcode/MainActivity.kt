@@ -4,13 +4,10 @@ import androidx.fragment.app.Fragment
 import com.cdc.androidcode.component.ComponentFragment
 import com.cdc.androidcode.document.DocumentFragment
 import com.cdc.androidcode.libraries.LibrariesFragment
-import com.cdc.androidcode.log.LogUtil
-import com.cdc.androidcode.programmer.ProgrammerFragment
+import com.cdc.androidcode.mine.MineFragment
 import com.cdc.androidcode.ui.UserInterfaceFragment
-import com.cdc.androidcode.utils.SystemUtil
 import com.flyco.tablayout.listener.CustomTabEntity
 import com.flyco.tablayout.listener.OnTabSelectListener
-import com.gyf.barlibrary.ImmersionBar
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : BaseActivity(), OnTabSelectListener {
@@ -18,7 +15,6 @@ class MainActivity : BaseActivity(), OnTabSelectListener {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.hasToolBar=false
-        LogUtil.g("hasToolBar22=${SystemUtil.getSystemVersion()},${SystemUtil.getSystemLevel()}")
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         initTab()
@@ -36,27 +32,7 @@ class MainActivity : BaseActivity(), OnTabSelectListener {
     }
 
     override fun onTabSelect(position: Int) {
-
         mainTabLayout.currentTab = position
-        when(position){
-            0,2,3,4->{
-//                ImmersionBar.with(this)
-//                    .reset()
-//                    //设置状态栏颜色
-//                    .statusBarColor(R.color.colorPrimary)
-//                    .keyboardEnable(false)
-//                    .init()
-            }
-            1->{
-//                ImmersionBar.with(this)
-//                    .reset()
-//                    //设置状态栏颜色
-//                    .statusBarColor(R.color.colorPrimary)
-//                    //.hideBar(BarHide.FLAG_HIDE_NAVIGATION_BAR)
-//                    .keyboardEnable(false)
-//                    .init()
-            }
-        }
     }
 
     private lateinit var mTabEntities:MutableList<TabEntity>
@@ -69,18 +45,18 @@ class MainActivity : BaseActivity(), OnTabSelectListener {
         val tabUserInterface = TabEntity("视图", R.mipmap.icon_user_interface_check, R.mipmap.icon_user_interface)
         val tabDocument= TabEntity("文档", R.mipmap.icon_document_check, R.mipmap.icon_document)
         val tabLibraries = TabEntity("库", R.mipmap.icon_libraries_check, R.mipmap.icon_libraries)
-        val tabProgrammer=TabEntity("我的",R.mipmap.icon_programmer_check,R.mipmap.icon_programmer)
+        val tabMine=TabEntity("我的",R.mipmap.icon_programmer_check,R.mipmap.icon_programmer)
 
-        mTabEntities.add(tabComponent)
-        mTabEntities.add(tabUserInterface)
-        mTabEntities.add(tabDocument)
-        mTabEntities.add(tabLibraries)
-        mTabEntities.add(tabProgrammer)
+        mTabEntities.add(0,tabComponent)
+        mTabEntities.add(1,tabUserInterface)
+        mTabEntities.add(2,tabDocument)
+        mTabEntities.add(3,tabLibraries)
+        mTabEntities.add(4,tabMine)
 
-        mTabFragments.add(ComponentFragment())
-        mTabFragments.add(UserInterfaceFragment())
-        mTabFragments.add(DocumentFragment())
-        mTabFragments.add(LibrariesFragment())
-        mTabFragments.add(ProgrammerFragment())
+        mTabFragments.add(0,ComponentFragment())
+        mTabFragments.add(1,UserInterfaceFragment())
+        mTabFragments.add(2,DocumentFragment())
+        mTabFragments.add(3,LibrariesFragment())
+        mTabFragments.add(4,MineFragment())
     }
 }

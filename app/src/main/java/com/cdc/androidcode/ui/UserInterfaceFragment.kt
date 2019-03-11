@@ -25,7 +25,7 @@ private lateinit var uiAdapter:UIItemAdapter
 
 
     override fun layoutId(): Int {
-       return  R.layout.fresh_scroll_recy_common
+       return  R.layout.ui_fragment
     }
 
     override fun initView() {

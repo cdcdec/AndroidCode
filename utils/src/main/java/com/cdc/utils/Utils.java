@@ -1,4 +1,5 @@
-package com.cdc.androidcode.utils;
+package com.cdc.utils;
+
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.ActivityManager;
@@ -19,6 +20,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+
 public final class Utils {
 
     private static final String PERMISSION_ACTIVITY_CLASS_NAME =
@@ -360,4 +362,3 @@ public final class Utils {
         void onActivityDestroyed(Activity activity);
     }
 }
-

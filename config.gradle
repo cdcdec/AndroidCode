@@ -45,7 +45,7 @@ ext{
             materialDialogsFiles:'2.0.3',
             materialDialogsColor:'2.0.3',
             autosize:'1.1.2',
-            citypicker:'2.0.3'
+            citypicker:'2.0.3',
     ]
 
     dSupport=[
@@ -101,6 +101,6 @@ ext{
             materialDialogsFiles:"com.afollestad.material-dialogs:files:${depsVersion.materialDialogsFiles}",
             materialDialogsColor:"com.afollestad.material-dialogs:color:${depsVersion.materialDialogsColor}",
             styleabletoast:"com.muddzdev:styleabletoast:${depsVersion.styleabletoast}",
-            multidex: "androidx.multidex:multidex:${depsVersion.multidex}"
+            multidex:"androidx.multidex:multidex:${depsVersion.multidex}",
     ]
 }

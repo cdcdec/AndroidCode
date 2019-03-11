@@ -44,6 +44,10 @@
             android:supportsRtl="true"
             android:theme="@style/CodeAppTheme"
             tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".mine.DeviceActivity">
+        </activity>
+        <activity android:name=".libraries.utils.UtilsMainActivity">
+        </activity>
         <activity android:name=".ui.shape.ShapeActivity">
         </activity>
         <activity android:name=".ui.shape.ScaleActivity">

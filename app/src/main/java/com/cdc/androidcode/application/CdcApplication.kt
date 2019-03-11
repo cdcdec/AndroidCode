@@ -52,6 +52,7 @@ class CdcApplication: MultiDexApplication() {
         super.onCreate()
         appContext = this
         Utils.init(this)
+        com.cdc.utils.Utils.init(this)
         AutoSizeUtil().init(this)
         //RudenessScreenHelper(this, 750f).activate() //初始化百分比布局
         JPushInterface.setDebugMode(true)    // 设置开启日志,发布时请关闭日志

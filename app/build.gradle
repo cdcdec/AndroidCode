@@ -61,6 +61,8 @@ android {
             res.srcDirs = [
                     'src/main/res/drawable/drawable_shapedemo',
                     'src/main/drawable',
+                    'src/main/res/layout/ui',
+                    'src/main/res/layout/mine',
                     'src/main/res/layout/shape',
                     'src/main/layout',
                     'src/main/res/values/shape',
@@ -120,4 +122,5 @@ dependencies {
     implementation project(':okhttp3')
     implementation project(':autosize')
     implementation project(':camera_orc')
+    implementation project(':utils')
 }
