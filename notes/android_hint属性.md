@@ -1,0 +1,6 @@
+android_hint属性
+
+android TextView的hint属性的应用:
+
+TextView显示时是一个值，还需要从TextView中获取其值，将其值传递给后台，在显示时使用TextView的text属性，传递给后台的值通过TextView的hint属性获取。
+

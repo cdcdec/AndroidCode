@@ -44,6 +44,8 @@
             android:supportsRtl="true"
             android:theme="@style/CodeAppTheme"
             tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".mine.AppActivity">
+        </activity>
         <activity android:name=".mine.DeviceActivity">
         </activity>
         <activity android:name=".libraries.utils.UtilsMainActivity">

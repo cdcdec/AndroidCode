@@ -46,6 +46,7 @@ ext{
             materialDialogsColor:'2.0.3',
             autosize:'1.1.2',
             citypicker:'2.0.3',
+            utilcodex:'1.23.7'
     ]
 
     dSupport=[
@@ -102,5 +103,6 @@ ext{
             materialDialogsColor:"com.afollestad.material-dialogs:color:${depsVersion.materialDialogsColor}",
             styleabletoast:"com.muddzdev:styleabletoast:${depsVersion.styleabletoast}",
             multidex:"androidx.multidex:multidex:${depsVersion.multidex}",
+            utilcodex:"com.blankj:utilcodex:${depsVersion.utilcodex}"
     ]
 }

@@ -1,5 +1,4 @@
 package com.cdc.androidcode.libraries
-
 import afollestad.AfollestadDialogActivity
 import android.content.Intent
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -20,9 +19,8 @@ import com.cdc.okhttp3.Okhttp3MainActivity
 import com.cdc.toasty.ToastSyleActivity
 import com.cdc.toasty.ToastyMainActivity
 import com.chad.baserecyclerviewadapterhelper.BaseRecyclerViewAdapterHelperActivity
-import com.chad.baserecyclerviewadapterhelper.HomeActivity
 import com.yqritc.recyclerviewflexibledivider.sample.SimpleActivity
-import kotlinx.android.synthetic.main.fresh_scroll_recy_common.*
+import kotlinx.android.synthetic.main.fragment_library.*
 
 /**
  * ProjectName：AndroidCode
@@ -37,7 +35,7 @@ class LibrariesFragment : BaseFragment() {
 
 
     override fun layoutId(): Int {
-        return R.layout.fresh_scroll_recy_common
+        return R.layout.fragment_library
     }
 
     override fun initView() {

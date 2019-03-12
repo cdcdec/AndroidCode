@@ -62,6 +62,7 @@ android {
                     'src/main/res/drawable/drawable_shapedemo',
                     'src/main/drawable',
                     'src/main/res/layout/ui',
+                    'src/main/res/layout/library',
                     'src/main/res/layout/mine',
                     'src/main/res/layout/shape',
                     'src/main/layout',
@@ -114,6 +115,7 @@ dependencies {
     implementation rootProject.ext.dependencies.BaseRecyclerViewAdapterHelper
     implementation rootProject.ext.dependencies.multidex
     implementation rootProject.ext.customview.citypicker
+    implementation rootProject.ext.dependencies.utilcodex
     implementation project(':baserecyclerviewadapterhelper')
     implementation project(':recyclerviewflexibledivide')
     implementation project(':mapsearchlocation')
@@ -122,5 +124,4 @@ dependencies {
     implementation project(':okhttp3')
     implementation project(':autosize')
     implementation project(':camera_orc')
-    implementation project(':utils')
 }

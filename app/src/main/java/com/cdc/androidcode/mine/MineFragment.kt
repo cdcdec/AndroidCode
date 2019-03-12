@@ -18,14 +18,14 @@ class MineFragment:BaseFragment() {
     private lateinit var viewAdapter: MinReAdapter
     private lateinit var viewManager: RecyclerView.LayoutManager
 
-    private var activityList= arrayOf(DeviceActivity::class.java)
+    private var activityList= arrayOf(DeviceActivity::class.java,AppActivity::class.java)
 
     override fun initView() {
         //设置布局管理器
         viewManager= LinearLayoutManager(this.context)
         //设置为垂直布局，这也是默认的
         (viewManager as LinearLayoutManager).orientation=RecyclerView.VERTICAL
-        var strs= arrayOf("我的设备")
+        var strs= arrayOf("我的设备","我的app")
         viewAdapter=MinReAdapter(strs)
         //这里的R.id.recyclerView_mine  名称要唯一  否则这样写可能加载不到对应的布局文件  显示错乱 ？？
         recyclerView= this.activity!!.findViewById<RecyclerView>(R.id.recyclerView_mine).apply{

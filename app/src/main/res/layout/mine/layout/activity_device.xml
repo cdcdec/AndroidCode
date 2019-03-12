@@ -7,22 +7,43 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         app:divider="@drawable/shape_line1"
-        app:showDividers="middle"
+        app:showDividers="middle|end"
+        app:dividerPadding="10dp"
         tools:context=".mine.DeviceActivity">
-
     <TextView
             android:id="@+id/tvVersion"
             style="@style/tvstyle1"
-            android:text="Android版本"
-
+            android:text="@string/sdk_version_name"
     />
-
     <TextView
             android:id="@+id/tvVersionSdk"
             style="@style/tvstyle1"
-            android:text="sdk版本"
-
+            android:text="@string/sdk_version_code"
+    />
+    <TextView
+            android:id="@+id/tvAndroidId"
+            style="@style/tvstyle1"
+            android:text="@string/android_id"
+    />
+    <TextView
+            android:id="@+id/tvMacAds"
+            style="@style/tvstyle1"
+            android:text="@string/mac_address"
     />
 
-
+    <TextView
+            android:id="@+id/tvManufacturer"
+            style="@style/tvstyle1"
+            android:text="@string/manufacturer"
+    />
+    <TextView
+            android:id="@+id/tvModel"
+            style="@style/tvstyle1"
+            android:text="@string/model"
+    />
+    <TextView
+            android:id="@+id/tvRoot"
+            style="@style/tvstyle1"
+            android:text="@string/isRoot"
+    />
 </androidx.appcompat.widget.LinearLayoutCompat>
