@@ -9,7 +9,7 @@
         app:divider="@drawable/shape_line1"
         app:dividerPadding="1dp"
         app:showDividers="middle|beginning|end"
-        tools:context=".libraries.citypicker.CityPickerMainActivity">
+        tools:context=".libraries.cityPicker.CityPickerMainActivity">
     <TextView
             android:id="@+id/tv_current"
             android:layout_width="match_parent"

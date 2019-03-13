@@ -38,22 +38,22 @@
 
     <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btn_general"
-            style="@style/btnstyle1"
+            style="@style/comBtnStyle1"
             android:text="General"
     />
     <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btn_card_front"
-            style="@style/btnstyle1"
+            style="@style/comBtnStyle1"
             android:text="CardFront"
     />
     <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btn_card_back"
-            style="@style/btnstyle1"
+            style="@style/comBtnStyle1"
             android:text="CardBack"
     />
     <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btn_bank_card"
-            style="@style/btnstyle1"
+            style="@style/comBtnStyle1"
             android:text="CardBack"
     />
 </androidx.appcompat.widget.LinearLayoutCompat>

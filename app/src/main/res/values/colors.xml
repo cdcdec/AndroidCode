@@ -19,4 +19,12 @@
     <color name="darker_gray">#1f2226</color>
 
 
+    <color name="infoColor">#3F51B5</color>
+    <color name="successColor">#388E3C</color>
+    <color name="warningColor">#FFA900</color>
+    <color name="normalColor">#353A3E</color>
+    <color name="default_background_color">#555555</color>
+    <color name="default_text_color">#ffffff</color>
+
+
 </resources>

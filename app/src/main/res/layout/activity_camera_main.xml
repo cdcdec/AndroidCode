@@ -15,13 +15,13 @@
             android:orientation="vertical">
         <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/camera1"
-                style="@style/btnstyle1"
+                style="@style/comBtnStyle1"
                 android:text="camera1\n\https://github.com/Lee465357793/CameraORC"
         />
 
         <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/camera2"
-                style="@style/btnstyle1"
+                style="@style/comBtnStyle1"
                 android:text="camera2"
         />
 

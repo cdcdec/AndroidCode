@@ -35,11 +35,9 @@ public abstract class BaseActivity extends AppCompatActivity implements View.OnC
 //        }
         // 这句很关键，注意是调用父类的方法
         super.setContentView(R.layout.activity_base);
-        LogUtil.INSTANCE.g("hasToolBar11="+hasToolBar);
         if(hasToolBar){
             initToolbar().setVisibility(View.VISIBLE);
         }
-
         //setStatusBarColor(this,R.color.colorStatusBar);
 
 

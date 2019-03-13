@@ -1,6 +1,7 @@
 package com.cdc.androidcode.application
 import androidx.multidex.MultiDexApplication
 import cn.jpush.android.api.JPushInterface
+import com.blankj.utilcode.util.LogUtils
 import com.chad.baserecyclerviewadapterhelper.util.Utils
 /**
  * ProjectName：AndroidCode
@@ -31,6 +32,7 @@ class CdcApplication: MultiDexApplication() {
         appContext = this
         Utils.init(this)
         com.blankj.utilcode.util.Utils.init(this)
+        LogUtils.getConfig().globalTag="code"
         AutoSizeUtil().init(this)
         //RudenessScreenHelper(this, 750f).activate() //初始化百分比布局
         JPushInterface.setDebugMode(true)    // 设置开启日志,发布时请关闭日志

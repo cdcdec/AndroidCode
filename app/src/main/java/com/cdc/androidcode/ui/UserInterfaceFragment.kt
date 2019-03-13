@@ -7,10 +7,11 @@ import com.cdc.androidcode.application.RecycleViewDivider
 import com.cdc.androidcode.ui.deawable.DrawerArrowActivity
 import com.cdc.androidcode.ui.shape.ShapeMainActivity
 import com.cdc.androidcode.ui.supertextview.UiStvMainActivity
+import com.cdc.androidcode.ui.toast.StyleableToastActivity
 import com.cdc.androidcode.ui.toolbar.CustomToolBar1Activity
 import com.cdc.androidcode.ui.toolbar.ToolBar1Activity
 import com.cdc.androidcode.ui.toolbar.Toolbar2Activity
-import kotlinx.android.synthetic.main.fresh_scroll_recy_common.*
+import kotlinx.android.synthetic.main.ui_fragment.*
 
 /**
  * ProjectName：AndroidCode
@@ -29,8 +30,8 @@ private lateinit var uiAdapter:UIItemAdapter
     }
 
     override fun initView() {
-        recyclerView.layoutManager = LinearLayoutManager(activity)
-        recyclerView.addItemDecoration(RecycleViewDivider(activity, LinearLayoutManager.VERTICAL, R.drawable.shape_recycleview_divider))
+        recyclerViewUi.layoutManager = LinearLayoutManager(activity)
+        recyclerViewUi.addItemDecoration(RecycleViewDivider(activity, LinearLayoutManager.VERTICAL, R.drawable.shape_recycleview_divider))
     }
 
 
@@ -51,8 +52,11 @@ private lateinit var uiAdapter:UIItemAdapter
         list.add(UIItemBean("DrawerArrow","继承Drawable实现",
             DrawerArrowActivity::class.java))
 
+        list.add(UIItemBean("StyleableToast","继承LinearLayout实现",
+            StyleableToastActivity::class.java))
+
         uiAdapter= UIItemAdapter(R.layout.ui_item,list)
-        recyclerView.adapter=uiAdapter
+        recyclerViewUi.adapter=uiAdapter
         uiAdapter.setOnItemClickListener { adapter, view, position ->
             var intent= Intent(view.context, list[position].clas)
             view.context.startActivity(intent)

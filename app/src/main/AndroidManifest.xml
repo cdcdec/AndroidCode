@@ -42,8 +42,20 @@
             android:icon="@mipmap/ic_launcher"
             android:label="@string/app_name"
             android:supportsRtl="true"
-            android:theme="@style/CodeAppTheme"
+            android:theme="@style/DayAppTheme"
             tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".ui.toast.StyleableToastActivity">
+        </activity>
+        <activity android:name=".libraries.recy_divider.SimpleGridDividerActivity">
+        </activity>
+        <activity android:name=".libraries.recy_divider.ComplexDivderActivity">
+        </activity>
+        <activity android:name=".libraries.recy_divider.DrawableDividerActivity">
+        </activity>
+        <activity android:name=".libraries.recy_divider.PaintDividerActivity">
+        </activity>
+        <activity android:name=".libraries.recy_divider.RecyDividerMainActivity">
+        </activity>
         <activity android:name=".mine.AppActivity">
         </activity>
         <activity android:name=".mine.DeviceActivity">
@@ -66,8 +78,9 @@
         </activity>
         <activity android:name=".ui.shape.ShapeMainActivity">
         </activity>
-        <activity android:name=".libraries.citypicker.CityPickerMainActivity">
-        </activity>
+        <activity
+                android:name=".libraries.cityPicker.CityPickerMainActivity"
+                android:theme="@style/DefaultCityPickerTheme"/>
         <activity android:name=".libraries.camera.Camera1Activity">
         </activity>
         <activity android:name=".libraries.camera.CameraMainActivity">

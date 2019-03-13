@@ -10,8 +10,6 @@
       <module fileurl="file://$PROJECT_DIR$/dialog/dialog.iml" filepath="$PROJECT_DIR$/dialog/dialog.iml" />
       <module fileurl="file://$PROJECT_DIR$/mapsearchlocation/mapsearchlocation.iml" filepath="$PROJECT_DIR$/mapsearchlocation/mapsearchlocation.iml" />
       <module fileurl="file://$PROJECT_DIR$/okhttp3/okhttp3.iml" filepath="$PROJECT_DIR$/okhttp3/okhttp3.iml" />
-      <module fileurl="file://$PROJECT_DIR$/recyclerviewflexibledivide/recyclerviewflexibledivide.iml" filepath="$PROJECT_DIR$/recyclerviewflexibledivide/recyclerviewflexibledivide.iml" />
-      <module fileurl="file://$PROJECT_DIR$/toasty/toasty.iml" filepath="$PROJECT_DIR$/toasty/toasty.iml" />
       <module fileurl="file://$PROJECT_DIR$/utils/utils.iml" filepath="$PROJECT_DIR$/utils/utils.iml" />
     </modules>
   </component>

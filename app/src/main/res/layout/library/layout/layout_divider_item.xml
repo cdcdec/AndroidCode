@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:orientation="vertical"
+>
+    <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="0pt"
+            android:layout_height="wrap_content"
+            android:minWidth="217dp"
+            android:minHeight="50dp"
+            android:gravity="left"
+            android:hint="漯河市公益顺风车活动人员招募情况"
+            android:textColor="#333333"
+            android:textSize="18sp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="143dp"
+            android:layout_marginBottom="30dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+    />
+    <TextView
+            android:id="@+id/tvTop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minHeight="32dp"
+            android:minWidth="22dp"
+            android:text="置顶"
+            android:gravity="center"
+            app:layout_constraintLeft_toLeftOf="@id/tvTitle"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="7dp"
+            app:layout_constraintRight_toLeftOf="@+id/tvAuthor"
+            app:layout_constraintTop_toBottomOf="@id/tvTitle"
+            android:layout_marginTop="7dp"
+            android:textColor="@color/colorPrimary"
+            android:textSize="11sp"
+    />
+
+    <TextView
+            android:id="@+id/tvAuthor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minHeight="16dp"
+            android:text="漯河市顺风车协会"
+            android:textColor="#666666"
+            android:textSize="11sp"
+            app:layout_constraintBottom_toBottomOf="@id/tvTop"
+            app:layout_constraintTop_toTopOf="@id/tvTop"
+            app:layout_constraintLeft_toRightOf="@id/tvTop"
+            android:layout_marginLeft="10dp"
+            app:layout_goneMarginLeft="5dp"/>
+
+
+    <ImageView
+            android:id="@+id/ivImage"
+            android:layout_width="110dp"
+            android:layout_height="70dp"
+            android:scaleType="fitXY"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintLeft_toRightOf="@id/tvTitle"
+            android:layout_marginLeft="8dp"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginRight="20dp"
+            android:src="@mipmap/ic_update_password"
+    ></ImageView>
+
+    <TextView
+            android:id="@+id/tvDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minHeight="16dp"
+            android:text="2018-11-10"
+            android:textColor="#666666"
+            android:textSize="11sp"
+            app:layout_constraintRight_toLeftOf="@id/ivImage"
+            app:layout_constraintTop_toTopOf="@id/tvAuthor"
+            app:layout_constraintBottom_toBottomOf="@id/tvAuthor"
+            android:layout_marginRight="10dp"
+    />
+</androidx.constraintlayout.widget.ConstraintLayout>

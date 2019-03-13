@@ -17,7 +17,7 @@ import android.os.Bundle
 import android.provider.ContactsContract
 import com.cdc.androidcode.BaseActivity
 import com.cdc.androidcode.common.GlideApp
-import kotlinx.android.synthetic.main.glide_contact_uri_activity.*
+import kotlinx.android.synthetic.main.glide_one_activity.*
 
 
 class GlideOneActivity : BaseActivity() {
@@ -26,7 +26,7 @@ class GlideOneActivity : BaseActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.glide_contact_uri_activity)
+        setContentView(R.layout.glide_one_activity)
         setBackBtn()
         setTitle("glide读取联系人头像")
         button_pick_contact.setOnClickListener(this)

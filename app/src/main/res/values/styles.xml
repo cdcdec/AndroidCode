@@ -13,6 +13,22 @@
     </style>
 
 
+    <style name="DayAppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimary</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <!--状态栏不透明-->
+        <item name="android:windowTranslucentStatus">false</item>
+        <item name="android:fitsSystemWindows">true</item>
+        <item name="android:buttonStyle">@style/dayBtnStyle1</item>
+        <item name="android:editTextStyle">@style/dayTvStyle1</item>
+    </style>
+
+
+
+
+
     <style name="push_style">
         <item name="android:hint">@string/style_hint</item>
         <item name="android:inputType">number</item>
@@ -60,7 +76,7 @@
         <item name="cpSearchCursorDrawable">@color/colorPrimary</item>
         <item name="cpIndexBarNormalTextColor">@color/colorPrimary</item>
         <item name="cpIndexBarSelectedTextColor">@color/colorPrimary</item>
-        <item name="cpSectionHeight">36dp</item>
+        <item name="cpSectionHeight">@dimen/cityPickerHeight</item>
         <item name="cpOverlayBackground">@color/colorPrimary</item>
     </style>
 

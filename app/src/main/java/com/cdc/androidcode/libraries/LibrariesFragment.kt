@@ -6,9 +6,10 @@ import com.cdc.androidcode.BaseFragment
 import com.cdc.androidcode.R
 import com.cdc.androidcode.application.RecycleViewDivider
 import com.cdc.androidcode.libraries.camera.CameraMainActivity
-import com.cdc.androidcode.libraries.citypicker.CityPickerMainActivity
+import com.cdc.androidcode.libraries.cityPicker.CityPickerMainActivity
 import com.cdc.androidcode.libraries.glide.GlideMainActivity
 import com.cdc.androidcode.libraries.jpush.JpushMainActivity
+import com.cdc.androidcode.libraries.recy_divider.RecyDividerMainActivity
 import com.cdc.androidcode.libraries.update.UpdateMainActivity
 import com.cdc.androidcode.ui.UIItemAdapter
 import com.cdc.androidcode.ui.UIItemBean
@@ -16,10 +17,7 @@ import com.cdc.autosize.DefaultErrorActivity
 import com.cdc.dialog.FragmentDialogActivity
 import com.cdc.mapsearchlocation.MapSearchLocationMainActivity
 import com.cdc.okhttp3.Okhttp3MainActivity
-import com.cdc.toasty.ToastSyleActivity
-import com.cdc.toasty.ToastyMainActivity
 import com.chad.baserecyclerviewadapterhelper.BaseRecyclerViewAdapterHelperActivity
-import com.yqritc.recyclerviewflexibledivider.sample.SimpleActivity
 import kotlinx.android.synthetic.main.fragment_library.*
 
 /**
@@ -67,12 +65,11 @@ class LibrariesFragment : BaseFragment() {
                 BaseRecyclerViewAdapterHelperActivity::class.java
             )
         )
-
         list.add(
             UIItemBean(
-                "flexibledivider",
+                "RecyclerView 分割线",
                 "https://github.com/yqritc/RecyclerView-FlexibleDivider",
-                SimpleActivity::class.java
+                RecyDividerMainActivity::class.java
             )
         )
 
@@ -84,21 +81,21 @@ class LibrariesFragment : BaseFragment() {
             )
         )
 
-        list.add(
-            UIItemBean(
-                "Toasty",
-                "https://github.com/GrenderG/Toasty",
-                ToastyMainActivity::class.java
-            )
-        )
+//        list.add(
+//            UIItemBean(
+//                "Toasty",
+//                "https://github.com/GrenderG/Toasty",
+//                ToastyMainActivity::class.java
+//            )
+//        )
 
-        list.add(
-            UIItemBean(
-                "StyleableToast",
-                "https://github.com/Muddz/StyleableToast",
-                ToastSyleActivity::class.java
-            )
-        )
+//        list.add(
+//            UIItemBean(
+//                "StyleableToast",
+//                "https://github.com/Muddz/StyleableToast",
+//                ToastSyleActivity::class.java
+//            )
+//        )
 
         list.add(
             UIItemBean(
