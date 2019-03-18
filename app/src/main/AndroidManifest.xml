@@ -44,6 +44,8 @@
             android:supportsRtl="true"
             android:theme="@style/DayAppTheme"
             tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".ui.toast.ToastMainActivity">
+        </activity>
         <activity android:name=".ui.toast.StyleableToastActivity">
         </activity>
         <activity android:name=".libraries.recy_divider.SimpleGridDividerActivity">

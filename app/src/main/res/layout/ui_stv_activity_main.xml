@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<androidx.appcompat.widget.LinearLayoutCompat
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
         xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -13,89 +13,63 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-        <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent"
-                      android:orientation="vertical"
+        <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
         >
             <Button
                     android:id="@+id/button0"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="5dp"
-                    android:layout_marginTop="10dp"
+                    style="@style/comBtnStyle1"
                     android:text="所有组合"/>
-
             <Button
                     android:id="@+id/button1"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    style="@style/comBtnStyle1"
                     android:text="通用"/>
-
             <Button
                     android:id="@+id/button2"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    style="@style/comBtnStyle1"
                     android:text="饿了么"/>
-
             <Button
                     android:id="@+id/button3"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    style="@style/comBtnStyle1"
                     android:text="金融类"/>
-
             <Button
                     android:id="@+id/button4"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    style="@style/comBtnStyle1"
                     android:text="左中右"/>
-
             <Button
                     android:id="@+id/button5"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    style="@style/comBtnStyle1"
                     android:text="带图片类"/>
-
             <Button
                     android:id="@+id/button6"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    style="@style/comBtnStyle1"
                     android:text="对齐效果"/>
-
             <Button
                     android:id="@+id/button7"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    style="@style/comBtnStyle1"
                     android:text="滑动按钮"/>
-
             <Button
                     android:id="@+id/button8"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    style="@style/comBtnStyle1"
                     android:text="圆角样式"
                     android:textColor="@color/colorAccent"/>
-
             <Button
                     android:id="@+id/list_button"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    style="@style/comBtnStyle1"
                     android:text="在列表中使用"/>
-
-            <Button
-                    android:id="@+id/click_button"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+            <Button android:id="@+id/click_button"
+                    style="@style/comBtnStyle1"
                     android:text="点击事件使用"/>
-
             <Button
                     android:id="@+id/super_button"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    style="@style/comBtnStyle1"
                     android:background="@color/colorAccent"
                     android:text="超级按钮"
                     android:textColor="@color/white"/>
-
-
-        </LinearLayout>
+        </androidx.appcompat.widget.LinearLayoutCompat>
 
     </androidx.core.widget.NestedScrollView>
 
-</LinearLayout>
+</androidx.appcompat.widget.LinearLayoutCompat>

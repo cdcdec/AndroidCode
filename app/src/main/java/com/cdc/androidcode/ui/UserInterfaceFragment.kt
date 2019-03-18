@@ -8,6 +8,7 @@ import com.cdc.androidcode.ui.deawable.DrawerArrowActivity
 import com.cdc.androidcode.ui.shape.ShapeMainActivity
 import com.cdc.androidcode.ui.supertextview.UiStvMainActivity
 import com.cdc.androidcode.ui.toast.StyleableToastActivity
+import com.cdc.androidcode.ui.toast.ToastMainActivity
 import com.cdc.androidcode.ui.toolbar.CustomToolBar1Activity
 import com.cdc.androidcode.ui.toolbar.ToolBar1Activity
 import com.cdc.androidcode.ui.toolbar.Toolbar2Activity
@@ -54,6 +55,9 @@ private lateinit var uiAdapter:UIItemAdapter
 
         list.add(UIItemBean("StyleableToast","继承LinearLayout实现",
             StyleableToastActivity::class.java))
+
+        list.add(UIItemBean("StyleableToast","继承LinearLayout实现",
+            ToastMainActivity::class.java))
 
         uiAdapter= UIItemAdapter(R.layout.ui_item,list)
         recyclerViewUi.adapter=uiAdapter
