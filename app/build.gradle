@@ -59,16 +59,15 @@ android {
             jniLibs.srcDirs = ['libs']
 
             res.srcDirs = [
-                    'src/main/res/drawable/drawable_shapedemo',
-                    'src/main/drawable',
+                    'src/main/res',
                     'src/main/res/layout/ui',
                     'src/main/res/layout/library',
                     'src/main/res/layout/mine',
-                    'src/main/res/layout/shape',
                     'src/main/layout',
-                    'src/main/res/values/shape',
-                    'src/main/res/values',
-                    'src/main/res'
+                    'src/main/res-toast',
+                    'src/main/res-okhttp',
+                    'src/main/res-shape',
+
             ]
         }
     }

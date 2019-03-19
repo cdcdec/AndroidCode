@@ -9,6 +9,7 @@ import com.cdc.androidcode.libraries.camera.CameraMainActivity
 import com.cdc.androidcode.libraries.cityPicker.CityPickerMainActivity
 import com.cdc.androidcode.libraries.glide.GlideMainActivity
 import com.cdc.androidcode.libraries.jpush.JpushMainActivity
+import com.cdc.androidcode.libraries.okhttp.OkHttpMainActivity
 import com.cdc.androidcode.libraries.recy_divider.RecyDividerMainActivity
 import com.cdc.androidcode.libraries.update.UpdateMainActivity
 import com.cdc.androidcode.ui.UIItemAdapter
@@ -115,9 +116,9 @@ class LibrariesFragment : BaseFragment() {
 
         list.add(
             UIItemBean(
-                "Okhttp3",
+                "OkHttp3",
                 "https://github.com/square/okhttp",
-                Okhttp3MainActivity::class.java
+                OkHttpMainActivity::class.java
             )
         )
 
