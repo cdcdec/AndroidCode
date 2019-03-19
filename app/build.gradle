@@ -67,6 +67,8 @@ android {
                     'src/main/res-toast',
                     'src/main/res-okhttp',
                     'src/main/res-shape',
+                    'src/main/res-materialdesign',
+                    'src/main/res-supertextview',
 
             ]
         }

@@ -9,6 +9,7 @@ import com.cdc.androidcode.libraries.camera.CameraMainActivity
 import com.cdc.androidcode.libraries.cityPicker.CityPickerMainActivity
 import com.cdc.androidcode.libraries.glide.GlideMainActivity
 import com.cdc.androidcode.libraries.jpush.JpushMainActivity
+import com.cdc.androidcode.libraries.materialDesign.MaterialDesignMainActivity
 import com.cdc.androidcode.libraries.okhttp.OkHttpMainActivity
 import com.cdc.androidcode.libraries.recy_divider.RecyDividerMainActivity
 import com.cdc.androidcode.libraries.update.UpdateMainActivity
@@ -50,6 +51,7 @@ class LibrariesFragment : BaseFragment() {
 
     override fun initData() {
         var list: MutableList<UIItemBean> = ArrayList()
+        list.add(UIItemBean("MaterialDesign", "MaterialDesign", MaterialDesignMainActivity::class.java))
         list.add(UIItemBean("Glide", "Glide1", GlideMainActivity::class.java))
         list.add(UIItemBean("Jpush", "Jpush", JpushMainActivity::class.java))
         list.add(
