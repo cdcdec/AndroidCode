@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           xmlns:tools="http://schemas.android.com/tools"
           package="com.cdc.androidcode">
+
     <!-- Required -->
     <permission
             android:name="com.cdc.androidcode.permission.JPUSH_MESSAGE"
@@ -44,6 +45,14 @@
             android:supportsRtl="true"
             android:theme="@style/DayAppTheme"
             tools:ignore="GoogleAppIndexingWarning">
+
+
+        <activity android:name=".component.alarmManager.AlarmManagerMainActivity">
+        </activity>
+        <activity android:name=".ui.notifications.NotificationMainActivity">
+        </activity>
+        <activity android:name=".component.foregroundService.ForegroundServiceMainActivity">
+        </activity>
         <activity android:name=".libraries.materialDesign.MaterialDesignMainActivity">
         </activity>
         <activity android:name=".libraries.okhttp.OkHttpMainActivity">
@@ -263,7 +272,8 @@
         <activity android:name="com.chad.baserecyclerviewadapterhelper.UpFetchUseActivity"/>
         <activity
                 android:name="com.chad.baserecyclerviewadapterhelper.SectionMultipleItemUseActivity"/> <!-- https://github.com/yqritc/RecyclerView-FlexibleDivider -->
-        <activity
+        <!--
+     <activity
                 android:name="com.yqritc.recyclerviewflexibledivider.sample.PaintActivity"
                 android:label="@string/menu_paint"
                 android:theme="@style/DarkActionBar"/>
@@ -282,13 +292,16 @@
         <activity
                 android:name="com.yqritc.recyclerviewflexibledivider.sample.SimpleActivity"
                 android:label="@string/menu_simple"
-                android:theme="@style/DarkActionBar"/> <!-- 高德地图 -->
+                android:theme="@style/DarkActionBar"/>
+
+        <activity android:name="com.cdc.toasty.ToastyMainActivity"/>
+        <activity android:name="com.cdc.toasty.ToastSyleActivity"/>
+        -->
+        <!-- 高德地图 -->
         <meta-data
                 android:name="com.amap.api.v2.apikey"
                 android:value="f2a76217158aef36658d8f04f690fa5f"/> <!-- 定位需要的服务 -->
         <activity android:name="com.cdc.mapsearchlocation.MapSearchLocationMainActivity"/>
-        <activity android:name="com.cdc.toasty.ToastyMainActivity"/>
-        <activity android:name="com.cdc.toasty.ToastSyleActivity"/>
         <activity
                 android:name="afollestad.AfollestadDialogActivity"
                 android:theme="@style/DarkActionBar"/>
@@ -302,6 +315,24 @@
         <meta-data
                 android:name="design_height_in_dp"
                 android:value="640"/>
+
+        <service android:name=".component.foregroundService.ForService1"/>
+        <service
+                android:name=".component.foregroundService.ForService2"
+                android:enabled="true"
+                android:exported="false">
+            <intent-filter>
+                <action android:name="com.android.code.ForService2"/>
+            </intent-filter>
+        </service>
+        <service
+                android:name=".component.foregroundService.ForService3"
+                android:enabled="true"
+                android:exported="false">
+        </service>
+        <service android:name=".component.foregroundService.ForService3$InnerService"/>
+
+        <receiver android:name=".component.foregroundService.AlarmReceiver"/>
     </application>
 
 </manifest>

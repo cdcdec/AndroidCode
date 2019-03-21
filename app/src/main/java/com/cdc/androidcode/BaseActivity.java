@@ -8,8 +8,6 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import androidx.appcompat.widget.Toolbar;
-import com.cdc.androidcode.log.LogUtil;
-
 public abstract class BaseActivity extends AppCompatActivity implements View.OnClickListener {
 
     private TextView title;

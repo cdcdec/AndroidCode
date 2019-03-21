@@ -5,6 +5,7 @@ import com.cdc.androidcode.BaseFragment
 import com.cdc.androidcode.R
 import com.cdc.androidcode.application.RecycleViewDivider
 import com.cdc.androidcode.ui.deawable.DrawerArrowActivity
+import com.cdc.androidcode.ui.notifications.NotificationMainActivity
 import com.cdc.androidcode.ui.shape.ShapeMainActivity
 import com.cdc.androidcode.ui.supertextview.UiStvMainActivity
 import com.cdc.androidcode.ui.toast.StyleableToastActivity
@@ -39,6 +40,10 @@ private lateinit var uiAdapter:UIItemAdapter
 
     override fun initData() {
         var list:MutableList<UIItemBean> =ArrayList()
+
+
+        list.add(UIItemBean("Notification","Notification",
+            NotificationMainActivity::class.java))
 
         list.add(UIItemBean("Shape Demo","Shape xml文件",
             ShapeMainActivity::class.java))

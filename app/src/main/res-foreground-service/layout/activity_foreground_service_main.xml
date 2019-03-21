@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".component.foregroundService.ForegroundServiceMainActivity">
+    <Button
+            android:id="@+id/fService1Start"
+            style="@style/comBtnStyle1"
+            android:text="@string/fService1Start"/>
+
+    <Button
+            android:id="@+id/fService1Stop"
+            style="@style/comBtnStyle1"
+            android:text="@string/fService1Stop"/>
+
+    <Button
+            android:id="@+id/fService2Start"
+            style="@style/comBtnStyle1"
+            android:text="@string/fService2Start"/>
+
+    <Button
+            android:id="@+id/fService2Stop"
+            style="@style/comBtnStyle1"
+            android:text="@string/fService2Stop"/>
+
+    <Button
+            android:id="@+id/fService3Start"
+            style="@style/comBtnStyle1"
+            android:text="@string/fService3Start"/>
+
+    <Button
+            android:id="@+id/fService3Stop"
+            style="@style/comBtnStyle1"
+            android:text="@string/fService3Stop"/>
+</androidx.appcompat.widget.LinearLayoutCompat>

@@ -1,8 +1,11 @@
 package com.cdc.androidcode.application
 import androidx.multidex.MultiDexApplication
 import cn.jpush.android.api.JPushInterface
-import com.blankj.utilcode.util.LogUtils
+import com.cdc.androidcode.utils.LogUtils
+import com.cdc.androidcode.utils.PathUtils
 import com.chad.baserecyclerviewadapterhelper.util.Utils
+import java.io.File
+
 /**
  * ProjectName：AndroidCode
  * DESC: (类描述)
@@ -31,8 +34,12 @@ class CdcApplication: MultiDexApplication() {
         super.onCreate()
         appContext = this
         Utils.init(this)
-        com.blankj.utilcode.util.Utils.init(this)
-        LogUtils.getConfig().globalTag="code"
+        com.cdc.androidcode.utils.Utils.init(this)
+        var config= LogUtils.getConfig()
+        config.globalTag="code"
+        config.filePrefix="code"
+        config.dir = PathUtils.getExternalStoragePath()+ File.separator+"code"
+
         AutoSizeUtil().init(this)
         //RudenessScreenHelper(this, 750f).activate() //初始化百分比布局
         JPushInterface.setDebugMode(true)    // 设置开启日志,发布时请关闭日志
