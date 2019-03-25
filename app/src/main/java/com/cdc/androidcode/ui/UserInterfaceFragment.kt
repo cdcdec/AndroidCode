@@ -5,6 +5,7 @@ import com.cdc.androidcode.BaseFragment
 import com.cdc.androidcode.R
 import com.cdc.androidcode.application.RecycleViewDivider
 import com.cdc.androidcode.ui.deawable.DrawerArrowActivity
+import com.cdc.androidcode.ui.dialog.DialogMainActivity
 import com.cdc.androidcode.ui.notifications.NotificationMainActivity
 import com.cdc.androidcode.ui.shape.ShapeMainActivity
 import com.cdc.androidcode.ui.supertextview.UiStvMainActivity
@@ -40,7 +41,8 @@ private lateinit var uiAdapter:UIItemAdapter
 
     override fun initData() {
         var list:MutableList<UIItemBean> =ArrayList()
-
+        list.add(UIItemBean("对话框","对话框",
+            DialogMainActivity::class.java))
 
         list.add(UIItemBean("Notification","Notification",
             NotificationMainActivity::class.java))

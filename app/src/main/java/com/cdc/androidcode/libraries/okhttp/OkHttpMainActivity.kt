@@ -56,15 +56,17 @@ class OkHttpMainActivity : BaseActivity() {
                     var backStr = response!!.body()!!.string()
                     //此时的代码执行在子线程，修改UI的操作请使用handler跳转到UI线程。
                     runOnUiThread {
-                        var bo= BottomDialog(this)
-                        bo.setTitle(response.request().url().toString())
-                        bo.setContent("$backStr===$backStr")
-                        bo.show()
+                        var a=BottomDialogScroll(this)
+                        a.title=response.request().url().toString()
+                        a.content=backStr
+                        a.show()
                     }
                 }
             } catch (e: Exception) {
                 e.printStackTrace()
             }
         }).start()
+
+
     }
 }

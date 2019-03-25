@@ -10,9 +10,6 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
-            app:dividerPadding="10dp"
-            app:divider="@drawable/shape_line1"
-            app:showDividers="middle|end"
     >
         <Button
                 android:id="@+id/btnOkHttpGet"
