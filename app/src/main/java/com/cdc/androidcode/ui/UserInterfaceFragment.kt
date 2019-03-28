@@ -4,6 +4,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.cdc.androidcode.BaseFragment
 import com.cdc.androidcode.R
 import com.cdc.androidcode.application.RecycleViewDivider
+import com.cdc.androidcode.ui.countdownview.CountDownViewMainActivity
 import com.cdc.androidcode.ui.deawable.DrawerArrowActivity
 import com.cdc.androidcode.ui.dialog.DialogMainActivity
 import com.cdc.androidcode.ui.notifications.NotificationMainActivity
@@ -41,6 +42,8 @@ private lateinit var uiAdapter:UIItemAdapter
 
     override fun initData() {
         var list:MutableList<UIItemBean> =ArrayList()
+        list.add(UIItemBean("倒计时","https://github.com/iwgang/CountdownView",
+            CountDownViewMainActivity::class.java))
         list.add(UIItemBean("对话框","对话框",
             DialogMainActivity::class.java))
 

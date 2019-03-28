@@ -16,6 +16,8 @@ ext{
             okhttp3:'3.13.1',
             loggingInterceptor:'3.8.0',
             converterGson:'2.4.0',
+            rxjava:'rxjava:2.2.8',
+            rxandroid:'rxandroid:2.1.1',
             adapterRxjava2:'2.2.0',
             orhanobutLogger:'2.2.0',
             retrofit:'2.4.0',
@@ -46,7 +48,11 @@ ext{
             materialDialogsColor:'2.0.3',
             autosize:'1.1.2',
             citypicker:'2.0.3',
-            utilcodex:'1.23.7'
+            utilcodex:'1.23.7',
+            retrofit:'2.5.0',
+            converterGson:'2.5.0',
+            countdownview:'2.1.6',
+
     ]
 
     dSupport=[
@@ -60,6 +66,7 @@ ext{
 
     customview=[
             citypicker:"com.zaaach:citypicker:${depsVersion.citypicker}",
+            countdownview:"com.github.iwgang:countdownview:${depsVersion.countdownview}",
     ]
 
 
@@ -69,6 +76,15 @@ ext{
     ]
     network=[
             okhttp3:"com.squareup.okhttp3:okhttp:${depsVersion.okhttp3}",
+            retrofit:"com.squareup.retrofit2:retrofit:${depsVersion.retrofit}",
+            converterGson:"com.squareup.retrofit2:converter-gson:${depsVersion.converterGson}"
+
+    ]
+
+    rxjava=[
+            rxjava:"io.reactivex.rxjava2:${depsVersion.rxjava}",
+            rxandroid:"io.reactivex.rxjava2:${depsVersion.rxandroid}",
+
     ]
 
 

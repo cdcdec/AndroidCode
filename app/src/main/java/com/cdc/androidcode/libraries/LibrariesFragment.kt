@@ -12,6 +12,8 @@ import com.cdc.androidcode.libraries.jpush.JpushMainActivity
 import com.cdc.androidcode.libraries.materialDesign.MaterialDesignMainActivity
 import com.cdc.androidcode.libraries.okhttp.OkHttpMainActivity
 import com.cdc.androidcode.libraries.recy_divider.RecyDividerMainActivity
+import com.cdc.androidcode.libraries.retrofit.RetrofitMainActivity
+import com.cdc.androidcode.libraries.rxjava.RxJavaMainActivity
 import com.cdc.androidcode.libraries.update.UpdateMainActivity
 import com.cdc.androidcode.ui.UIItemAdapter
 import com.cdc.androidcode.ui.UIItemBean
@@ -51,6 +53,8 @@ class LibrariesFragment : BaseFragment() {
 
     override fun initData() {
         var list: MutableList<UIItemBean> = ArrayList()
+        list.add(UIItemBean("Retrofit", "Retrofit", RetrofitMainActivity::class.java))
+        list.add(UIItemBean("RxJava", "RxJava", RxJavaMainActivity::class.java))
         list.add(UIItemBean("MaterialDesign", "MaterialDesign", MaterialDesignMainActivity::class.java))
         list.add(UIItemBean("Glide", "Glide1", GlideMainActivity::class.java))
         list.add(UIItemBean("Jpush", "Jpush", JpushMainActivity::class.java))

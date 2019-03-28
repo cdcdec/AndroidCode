@@ -2,7 +2,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           xmlns:tools="http://schemas.android.com/tools"
           package="com.cdc.androidcode">
-
     <!-- Required -->
     <permission
             android:name="com.cdc.androidcode.permission.JPUSH_MESSAGE"
@@ -45,8 +44,14 @@
             android:supportsRtl="true"
             android:theme="@style/DayAppTheme"
             tools:ignore="GoogleAppIndexingWarning">
-
-
+        <activity android:name=".ui.countdownview.DynamicShowActivity">
+        </activity>
+        <activity android:name=".ui.countdownview.CountDownViewMainActivity">
+        </activity>
+        <activity android:name=".libraries.retrofit.RetrofitMainActivity">
+        </activity>
+        <activity android:name=".libraries.rxjava.RxJavaMainActivity">
+        </activity>
         <activity android:name=".component.alarmManager.AlarmManagerMainActivity">
         </activity>
         <activity android:name=".ui.notifications.NotificationMainActivity">

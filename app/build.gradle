@@ -71,7 +71,10 @@ android {
                     'src/main/res-supertextview',
                     'src/main/res-foreground-service',
                     'src/main/res-notification',
-                    'src/main/res-dialog'
+                    'src/main/res-dialog',
+                    'src/main/res-rxjava',
+                    'src/main/res-retrofit',
+                    'src/main/res-countdownview',
             ]
         }
     }
@@ -107,7 +110,6 @@ dependencies {
     implementation rootProject.ext.dependencies.AppUpdateDialog
     implementation 'androidx.appcompat:appcompat:1.0.0-beta01'
     implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
-    implementation 'com.google.android.material:material:1.0.0-beta01'
     kapt rootProject.ext.dependencies.glideAnnotationProcessor
     //annotationProcessor rootProject.ext.dependencies.glideAnnotationProcessor
     implementation rootProject.ext.dependencies.picasso
@@ -120,6 +122,12 @@ dependencies {
     implementation rootProject.ext.dependencies.multidex
     implementation rootProject.ext.customview.citypicker
     implementation rootProject.ext.dependencies.utilcodex
+    implementation rootProject.ext.rxjava.rxjava
+    implementation rootProject.ext.rxjava.rxandroid
+    implementation rootProject.ext.network.retrofit
+    implementation rootProject.ext.network.converterGson
+    implementation rootProject.ext.customview.countdownview
+
     //RecyclerView分割线
     //implementation rootProject.ext.dependencies.flexibledivider
     implementation project(':baserecyclerviewadapterhelper')
