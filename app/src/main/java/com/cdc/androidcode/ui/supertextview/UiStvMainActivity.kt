@@ -79,6 +79,7 @@ class UiStvMainActivity : BaseActivity(), View.OnClickListener {
         setTitle("Ui Stv Main")
 
         setContentView(R.layout.ui_stv_activity_main)
+        //所有组合
         button0.setOnClickListener(this)
         button1.setOnClickListener(this)
         button2.setOnClickListener(this)
