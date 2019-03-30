@@ -26,9 +26,6 @@
     </style>
 
 
-
-
-
     <style name="push_style">
         <item name="android:hint">@string/style_hint</item>
         <item name="android:inputType">number</item>
@@ -85,4 +82,10 @@
         <item name="android:windowEnterAnimation">@anim/custom_push_down_in</item>
         <item name="android:windowExitAnimation">@anim/custom_push_up_out</item>
     </style>
+    <style name="DayAppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+    <style name="DayAppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
+    <style name="DayAppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
 </resources>

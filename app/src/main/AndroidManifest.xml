@@ -44,6 +44,17 @@
             android:supportsRtl="true"
             android:theme="@style/DayAppTheme"
             tools:ignore="GoogleAppIndexingWarning">
+        <activity
+                android:name=".libraries.immersionbar.TopIvImmerBarActivity"
+                android:label="@string/title_activity_top_iv_immer_bar"
+                >
+        </activity>
+        <activity android:name=".libraries.immersionbar.ImmersionbarMainActivity">
+        </activity>
+        <activity
+                android:name=".libraries.statusbarColor.StatusBarColorMainActivity"
+                android:theme="@style/AppBaseDarkActionBarTheme">
+        </activity>
         <activity android:name=".ui.countdownview.DynamicShowActivity">
         </activity>
         <activity android:name=".ui.countdownview.CountDownViewMainActivity">

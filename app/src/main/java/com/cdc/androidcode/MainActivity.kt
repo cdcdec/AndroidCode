@@ -21,7 +21,6 @@ class MainActivity : BaseActivity(), OnTabSelectListener {
         mainTabLayout.setTabData(mTabEntities.toList() as java.util.ArrayList<CustomTabEntity>, this, R.id.tab_content, mTabFragments.toList() as java.util.ArrayList<Fragment>)
         mainTabLayout.setOnTabSelectListener(this)
         mainTabLayout.currentTab=0
-
     }
 
 

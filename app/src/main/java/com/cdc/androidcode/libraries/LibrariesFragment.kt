@@ -8,12 +8,14 @@ import com.cdc.androidcode.application.RecycleViewDivider
 import com.cdc.androidcode.libraries.camera.CameraMainActivity
 import com.cdc.androidcode.libraries.cityPicker.CityPickerMainActivity
 import com.cdc.androidcode.libraries.glide.GlideMainActivity
+import com.cdc.androidcode.libraries.immersionbar.ImmersionbarMainActivity
 import com.cdc.androidcode.libraries.jpush.JpushMainActivity
 import com.cdc.androidcode.libraries.materialDesign.MaterialDesignMainActivity
 import com.cdc.androidcode.libraries.okhttp.OkHttpMainActivity
 import com.cdc.androidcode.libraries.recy_divider.RecyDividerMainActivity
 import com.cdc.androidcode.libraries.retrofit.RetrofitMainActivity
 import com.cdc.androidcode.libraries.rxjava.RxJavaMainActivity
+import com.cdc.androidcode.libraries.statusbarColor.StatusBarColorMainActivity
 import com.cdc.androidcode.libraries.update.UpdateMainActivity
 import com.cdc.androidcode.ui.UIItemAdapter
 import com.cdc.androidcode.ui.UIItemBean
@@ -53,6 +55,8 @@ class LibrariesFragment : BaseFragment() {
 
     override fun initData() {
         var list: MutableList<UIItemBean> = ArrayList()
+        list.add(UIItemBean("Immersionbar", "https://github.com/gyf-dev/ImmersionBar", ImmersionbarMainActivity::class.java))
+        list.add(UIItemBean("StatusBarColor", "https://github.com/laobie/StatusBarUtil", StatusBarColorMainActivity::class.java))
         list.add(UIItemBean("Retrofit", "Retrofit", RetrofitMainActivity::class.java))
         list.add(UIItemBean("RxJava", "RxJava", RxJavaMainActivity::class.java))
         list.add(UIItemBean("MaterialDesign", "MaterialDesign", MaterialDesignMainActivity::class.java))

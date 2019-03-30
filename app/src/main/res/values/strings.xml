@@ -60,6 +60,7 @@
     <string name="normal_message_without_icon">Normal toast w/o icon</string>
     <string name="normal_message_with_icon">Normal toast w/ icon</string>
     <string name="custom_message">sudo kill -9 everyone</string>
+    <string name="title_activity_top_iv_immer_bar">TopIvImmerBarActivity</string>
 
 
 </resources>
