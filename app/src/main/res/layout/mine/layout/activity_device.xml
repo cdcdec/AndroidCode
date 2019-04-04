@@ -46,4 +46,27 @@
             style="@style/comTvStyle1"
             android:text="@string/isRoot"
     />
+
+    <TextView
+            android:id="@+id/tvSmallWidth"
+            style="@style/comTvStyle1"
+            android:text="@string/smallWidth"
+    />
+
+    <TextView
+            android:id="@+id/tvDensity"
+            style="@style/comTvStyle1"
+            android:text="@string/logical_density"
+    />
+    <TextView
+            android:id="@+id/tvWidthHeight"
+            style="@style/comTvStyle1"
+            android:text="@string/width_height"
+    />
+
+    <TextView
+            android:id="@+id/tvInch"
+            style="@style/comTvStyle1"
+            android:text="@string/width_height"
+    />
 </androidx.appcompat.widget.LinearLayoutCompat>

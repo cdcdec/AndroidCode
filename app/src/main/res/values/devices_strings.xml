@@ -7,8 +7,10 @@
     <string name="manufacturer">制造商</string>
     <string name="model">型号</string>
     <string name="isRoot">是否root</string>
-
-
+    <string name="smallWidth">最小宽度</string>
+    <string name="logical_density">逻辑密度:%1$.2f</string>
+    <string name="width_height">宽:%1$d,高:%2$d</string>
+    <string name="inch_width_height">宽:%1$.2f,高:%2$.2f,对角线:%3$.2f</string>
     <string name="appName">app名称</string>
     <string name="pkgName">包名称</string>
     <string name="appPath">app路径</string>
