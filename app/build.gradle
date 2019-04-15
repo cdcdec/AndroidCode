@@ -138,6 +138,5 @@ dependencies {
     //implementation project(':toasty')
     implementation project(':dialog')
     implementation project(':okhttp3')
-    implementation project(':autosize')
     implementation project(':camera_orc')
 }

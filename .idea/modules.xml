@@ -4,7 +4,6 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/AndroidCode.iml" filepath="$PROJECT_DIR$/AndroidCode.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/autosize/autosize.iml" filepath="$PROJECT_DIR$/autosize/autosize.iml" />
       <module fileurl="file://$PROJECT_DIR$/baserecyclerviewadapterhelper/baserecyclerviewadapterhelper.iml" filepath="$PROJECT_DIR$/baserecyclerviewadapterhelper/baserecyclerviewadapterhelper.iml" />
       <module fileurl="file://$PROJECT_DIR$/camera_orc/camera_orc.iml" filepath="$PROJECT_DIR$/camera_orc/camera_orc.iml" />
       <module fileurl="file://$PROJECT_DIR$/dialog/dialog.iml" filepath="$PROJECT_DIR$/dialog/dialog.iml" />
