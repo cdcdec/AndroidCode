@@ -14,7 +14,6 @@ import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
-
 import com.just.agentweb.AgentWebConfig;
 import com.just.agentweb.sample.R;
 import com.just.agentweb.sample.common.GuideItemEntity;

@@ -7,7 +7,6 @@
     android:layout_height="match_parent"
     android:background="@android:color/transparent"
     app:tr_pureScrollMode_on="true">
-
     <WebView
         android:id="@+id/webView"
         android:layout_width="match_parent"
