@@ -1,1 +1,0 @@
-include ':app', ':baserecyclerviewadapterhelper', ':mapsearchlocation', ':dialog', ':okhttp3', ':camera_orc', ':utils'

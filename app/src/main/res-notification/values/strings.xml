@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources xmlns:android="http://schemas.android.com/apk/res/android">
-    <string name="notification1">notification1</string>
-    <string name="notification2">notification2</string>
- 	<string name="channel_name">channel_name</string>
-
- 	<string name="channel_description">channel_description</string>
-
-</resources>

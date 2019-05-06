@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources xmlns:android="http://schemas.android.com/apk/res/android">
-  
-<string name="top_iv_status_bar">图片状态栏 + 彩色导航栏</string>
-</resources>

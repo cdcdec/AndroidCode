@@ -1,5 +1,0 @@
-<resources>
-    <string name="okHttpGet">okHttpGet</string>
-    <string name="okHttpPost">okHttpPost</string>
-    <string name="okHttpFile">okHttpFile</string>
-</resources>
