@@ -3,6 +3,10 @@ apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 
 apply plugin: 'kotlin-android-extensions'
+def Properties props = new Properties()
+def apkTime = getTimeSuffix()
+props.load(new FileInputStream(file("signing.properties")))
+
 
 android {
     compileSdkVersion COMPILE_SDK_VERSION.toInteger()
@@ -13,13 +17,37 @@ android {
         targetSdkVersion TARGET_SDK_VERSION.toInteger()
         versionCode 1
         versionName "1.0"
-        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    signingConfigs {
+        release {
+            storeFile file(props['KEYSTORE_FILE'])
+            storePassword props['KEYSTORE_PASSWORD']
+            keyAlias props['KEYSTORE_ALIAS']
+            keyPassword props['KEY_PASSWORD']
+        }
     }
     buildTypes {
         release {
             minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            debuggable false
+            signingConfig signingConfigs.release
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
+        debug {
+            signingConfig signingConfigs.release
+            debuggable true
+        }
+    }
+
+    android.applicationVariants.all { variant ->
+        variant.outputs.all {
+            outputFileName = "AD_${defaultConfig.versionName}_${apkTime}_${defaultConfig.versionCode}.apk"
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
     }
 }
 
@@ -28,12 +56,19 @@ dependencies {
     implementation"org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation 'androidx.appcompat:appcompat:1.0.2'
     implementation 'androidx.core:core-ktx:1.0.1'
-    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
     api 'com.just.agentweb:agentweb:4.0.3-alpha@aar' // (必选)
     api 'com.just.agentweb:filechooser:4.0.3-alpha@aar'// (可选)
     api 'com.just.agentweb:download:4.0.3-alpha@aar' // (可选)
     api 'com.github.Justson:Downloader:v4.0.3'// (可选)
-    testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'androidx.test:runner:1.1.1'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.1'
+    implementation 'com.scwang.smartrefresh:SmartRefreshLayout:1.0.3'
+    implementation 'com.scwang.smartrefresh:SmartRefreshHeader:1.0.3'
+    implementation 'com.lcodecorex:tkrefreshlayout:1.0.7'
 }
+
+//apk包的后缀。年月日，例如20181203174200。
+def getTimeSuffix() {
+    def date = new Date()
+    def time = date.format('yyyyMMddHHmmss')
+    return time
+}
+

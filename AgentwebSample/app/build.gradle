@@ -72,7 +72,7 @@ dependencies {
     //    compile "com.android.support:support-v4:${SUPPORT_LIB_VERSION}"
     testImplementation 'junit:junit:4.12'
     implementation 'com.just.agentweb:agentweb:4.0.3-alpha@aar'
-    implementation 'com.just.agentweb:filechooser:4.0.3-alpha@aar'
+   implementation 'com.just.agentweb:filechooser:4.0.3-alpha@aar'
     implementation 'com.just.agentweb:download:4.0.3-alpha@aar'
     debugImplementation 'com.squareup.leakcanary:leakcanary-android:1.5.1'
     releaseImplementation 'com.squareup.leakcanary:leakcanary-android-no-op:1.5.1'

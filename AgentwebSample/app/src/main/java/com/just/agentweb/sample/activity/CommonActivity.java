@@ -102,7 +102,8 @@ public class CommonActivity extends AppCompatActivity {
             /*优酷全屏播放视屏*/
 			case FLAG_GUIDE_DICTIONARY_VIDEO_FULL_SCREEN:
 				ft.add(R.id.container_framelayout, mAgentWebFragment = AgentWebFragment.getInstance(mBundle = new Bundle()), AgentWebFragment.class.getName());
-				mBundle.putString(AgentWebFragment.URL_KEY, "http://m.youku.com/video/id_XODEzMjU1MTI4.html");
+				//mBundle.putString(AgentWebFragment.URL_KEY, "http://m.youku.com/video/id_XODEzMjU1MTI4.html");
+				mBundle.putString(AgentWebFragment.URL_KEY, "https://v.youku.com/v_show/id_XMzU5MjA3Njk0MA==.html?spm=a2hww.20022069.m_215416.5~5~5~5!2~A");
 //                mBundle.putString(AgentWebFragment.URL_KEY, "https://v.qq.com/x/page/i0530nu6z1a.html");
 				break;
             /*淘宝自定义进度条*/

@@ -4,6 +4,22 @@
 ## 原地址
 https://github.com/Justson/AgentWeb  这是官方的sample
 
+## 使用见sample中的AgentWebFragment.java文件
+
+
+
+## Failed resolution of: Lcom/alipay/sdk/app/H5PayCallback
+
+在debug下面会出现此提示 与没有引入支付宝的jar包有关，不影响使用
+
+## 下拉刷新和回弹有冲突不能直接使用
+
+
+
+
+
+
+
 ## gradle.properties中的全局配置
 
 可以在中增加以下配置:
