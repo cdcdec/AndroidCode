@@ -41,4 +41,9 @@
     android:layout_width="match_parent"
     android:layout_height="47dp"
     android:text="单个页面多个遮罩" />
+  <Button
+          android:id="@+id/btn_coordinate"
+          android:layout_width="match_parent"
+          android:layout_height="47dp"
+          android:text="View的坐标"/>
 </LinearLayout>

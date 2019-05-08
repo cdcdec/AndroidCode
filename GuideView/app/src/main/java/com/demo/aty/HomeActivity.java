@@ -6,10 +6,11 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
+import com.demo.coordinate.CoordinateActivity;
 import com.demo.guide.R;
 
 public class HomeActivity extends Activity implements View.OnClickListener {
-  private Button mBtnAty, mBtnFrag, mBtnList, mBtnView, mBtnFragView, mBtnMore;
+  private Button mBtnAty, mBtnFrag, mBtnList, mBtnView, mBtnFragView, mBtnMore,btn_coordinate;
 
   @Override protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
@@ -20,12 +21,14 @@ public class HomeActivity extends Activity implements View.OnClickListener {
     mBtnList = (Button) findViewById(R.id.btn_list);
     mBtnMore = (Button) findViewById(R.id.btn_more);
     mBtnView = (Button) findViewById(R.id.btn_view);
+    btn_coordinate = (Button) findViewById(R.id.btn_coordinate);
     mBtnAty.setOnClickListener(this);
     mBtnFrag.setOnClickListener(this);
     mBtnFragView.setOnClickListener(this);
     mBtnList.setOnClickListener(this);
     mBtnMore.setOnClickListener(this);
     mBtnView.setOnClickListener(this);
+    btn_coordinate.setOnClickListener(this);
   }
 
   @Override public void onClick(View view) {
@@ -47,6 +50,10 @@ public class HomeActivity extends Activity implements View.OnClickListener {
         break;
       case R.id.btn_view://遮罩某个view
         startActivity(new Intent(HomeActivity.this, ViewActivity.class));
+        break;
+        //测试获取View的坐标
+      case R.id.btn_coordinate:
+        startActivity(new Intent(HomeActivity.this, CoordinateActivity.class));
         break;
     }
   }
