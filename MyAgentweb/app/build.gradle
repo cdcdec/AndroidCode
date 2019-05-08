@@ -42,7 +42,7 @@ android {
 
     android.applicationVariants.all { variant ->
         variant.outputs.all {
-            outputFileName = "AD_${defaultConfig.versionName}_${apkTime}_${defaultConfig.versionCode}.apk"
+            outputFileName = "退役军人_${defaultConfig.versionName}_${apkTime}_${defaultConfig.versionCode}.apk"
         }
     }
     compileOptions {

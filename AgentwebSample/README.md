@@ -16,7 +16,16 @@ https://github.com/Justson/AgentWeb  这是官方的sample
 
 
 
+## 可以用于在手机端测试的几个网站地址
 
+1. 网易 http://www.163.com/
+2. 蘑菇街 http://m.mogujie.com/?f=mgjlm&ptp=_qd._cps______3069826.152.1.0   有视频
+3. 京东  http://www.jd.com/    https://m.jd.com/
+4. 应用宝  https://android.myapp.com/
+5. 唯品会  https://m.vip.com/?source=www&jump_https=1
+6. 优酷视频 https://v.youku.com/v_show/id_XMzU5MjA3Njk0MA==.html?spm=a2hww.20022069.m_215416.5~5~5~5!2~A
+7. 淘宝 https://h5.m.taobao.com/?sprefer=sypc00
+8. 豌豆荚 http://www.wandoujia.com/apps
 
 
 
