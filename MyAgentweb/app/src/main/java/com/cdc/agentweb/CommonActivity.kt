@@ -16,10 +16,7 @@ class CommonActivity : AppCompatActivity() {
         setContentView(R.layout.activity_common)
         val key = intent.getIntExtra(TYPE_KEY, -1)
         mFragmentManager = this.supportFragmentManager
-
         openFragment(key)
-
-
     }
 
     private fun openFragment(key:Int){
@@ -31,6 +28,7 @@ class CommonActivity : AppCompatActivity() {
                 ft.add(R.id.container_framelayout, mAgentWebFragment as SmartRefreshWebFragment,SmartRefreshWebFragment::class.java.name)
                 //mBundle.putString(AgentWebFragment.URL_KEY, "http://www.163.com/")
                 mBundle.putString(AgentWebFragment.URL_KEY, "http://m.mogujie.com/?f=mgjlm&ptp=_qd._cps______3069826.152.1.0")
+                //mBundle.putString(AgentWebFragment.URL_KEY, "http://192.168.1.7/")
             }
         }
         ft.commit()
