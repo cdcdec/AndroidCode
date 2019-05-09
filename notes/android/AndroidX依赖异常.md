@@ -13,3 +13,4 @@ Manifest merger failed : Attribute application@appComponentFactory value=(androi
 One app should use either AndroidX or old Android Support libraries. That's why you faced this issue.
 
 > 一个应用程序应该使用AndroidX或旧的Android支持库。这就是你遇到这个问题的原因。
+
