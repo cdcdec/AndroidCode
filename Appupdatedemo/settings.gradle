@@ -1,0 +1,1 @@
+include ':app' ,':update-app','update-app-kotlin'
