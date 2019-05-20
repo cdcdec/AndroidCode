@@ -30,8 +30,26 @@
 
 ```
 
+##  字符串文件报错
 
+"XXX" is translated here but not found in default locale
+原因:在默认的strings.xml里没有这个字段;
+```
+解决办法:将Value/string.xml中的<resources>改成
 
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="ExtraTranslation">
+
+```
+
+"app_name" is not translated in "en" (English) less... (Ctrl+F1) 
+Inspection info:If an application has more than one locale, then all the strings declared in one language should also be translated in all other languages.
+
+```
+解决办法 将这个字符串添加上以下内容:
+translatable="false"
+例如: <string name="app_name" translatable="false">PickerViewDemo</string>
+
+```
 
 
 
