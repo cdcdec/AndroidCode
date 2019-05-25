@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.inputmethod.InputMethodManager;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -45,6 +46,8 @@ public class MainActivity extends Activity implements OnItemClickListener, OnDis
             }
         });
         mAlertViewExt.addExtView(extView);
+
+
     }
 
     public void alertShow1(View view) {
@@ -134,9 +137,24 @@ public class MainActivity extends Activity implements OnItemClickListener, OnDis
     }
 
     public void alertShowCustom2(View view){
-        MyAlertView alertView=new MyAlertView(this,this).setCancelable(true);
+        MyAlertView alertView=new MyAlertView(this).setCancelable(true);
         ViewGroup extView = (ViewGroup) LayoutInflater.from(this).inflate(R.layout.alertext_custom,null);
         alertView.addExtView(extView);
+        alertView.setOnDismissListener(new MyAlertView.OnDismissListener() {
+            @Override
+            public void onDismiss(Object o) {
+                //Toast.makeText(MainActivity.this,"消失了",Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        ViewGroup viewGroup=alertView.getContentContainer();
+        Button button=viewGroup.findViewById(R.id.btnCustom);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(MainActivity.this, "点击了按钮了", Toast.LENGTH_SHORT).show();
+            }
+        });
         alertView.show();
     }
 }

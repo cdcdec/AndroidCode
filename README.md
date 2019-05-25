@@ -18,3 +18,5 @@
 [app更新框架UpdatePlugin https://github.com/yjfnypeu/UpdatePlugin](Updateplugin/README.md)
 
 [二维码扫描和生成ZXingView Demo](ZxingDemo/README.md)
+
+[对话框AlertviewDemo](AlertviewDemo/README.md)

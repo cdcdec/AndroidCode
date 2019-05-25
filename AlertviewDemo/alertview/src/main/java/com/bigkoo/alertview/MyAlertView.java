@@ -1,7 +1,6 @@
 package com.bigkoo.alertview;
 import android.app.Activity;
 import android.content.Context;
-import android.util.Log;
 import android.view.*;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
@@ -22,18 +21,21 @@ public class MyAlertView {
 
     private WeakReference<Context> contextWeak;
     private ViewGroup contentContainer;
+
+    public ViewGroup getContentContainer() {
+        return contentContainer;
+    }
+
     private ViewGroup decorView;//activity的根View
     private ViewGroup rootView;//AlertView 的 根View
     private OnDismissListener onDismissListener;
-    private OnItemClickListener onItemClickListener;
     private boolean isShowing;
 
     private Animation outAnim;
     private Animation inAnim;
     private int gravity = Gravity.CENTER;
-    public MyAlertView(Context context,OnItemClickListener onItemClickListener){
+    public MyAlertView(Context context){
         this.contextWeak = new WeakReference<>(context);
-        this.onItemClickListener = onItemClickListener;
         initViews();
         init();
         initEvents();
@@ -55,7 +57,6 @@ public class MyAlertView {
         margin_alert_left_right = context.getResources().getDimensionPixelSize(R.dimen.margin_alert_left_right);
         params.setMargins(margin_alert_left_right,0,margin_alert_left_right,0);
         contentContainer.setLayoutParams(params);
-        gravity = Gravity.CENTER;
     }
 
 
@@ -134,19 +135,6 @@ public class MyAlertView {
         this.onDismissListener = onDismissListener;
         return this;
     }
-
-    class OnTextClickListener implements View.OnClickListener{
-
-        private int position;
-        public OnTextClickListener(int position){
-            this.position = position;
-        }
-        @Override
-        public void onClick(View view) {
-            if(onItemClickListener != null)onItemClickListener.onItemClick(MyAlertView.this,position);
-            dismiss();
-        }
-    }
     private Animation.AnimationListener outAnimListener = new Animation.AnimationListener() {
         @Override
         public void onAnimationStart(Animation animation) {
@@ -165,7 +153,6 @@ public class MyAlertView {
     };
     public MyAlertView setCancelable(boolean isCancelable) {
         View view = rootView.findViewById(R.id.out_container);
-        view.addTouchables(new ArrayList<View>());
         if (isCancelable) {
             view.setOnTouchListener(onCancelableTouchListener);
         }
@@ -182,20 +169,25 @@ public class MyAlertView {
         public boolean onTouch(View v, MotionEvent event) {
             if (event.getAction() == MotionEvent.ACTION_DOWN) {
                 int[] position1 = new int[2];
-                Log.e("123456",contentContainer.getWidth()+"=="+contentContainer.getHeight()+"==="+event.getX()+"==="+event.getY());
-               // dismiss();
+                //获取View左上角点的坐标
                 contentContainer.getLocationOnScreen(position1);
-                Log.e("123456","getLocationInWindow1:" + position1[0] + "," + position1[1]);
-                if (!(event.getX() >= -10 && event.getY() >= -10)
-                        || event.getX() >= contentContainer.getWidth() + 10
-                        || event.getY() >= contentContainer.getHeight() + 20) {//如果点击位置在当前View外部则销毁当前视图,其中10与20为微调距离
+                int leftX=position1[0];
+                int leftY=position1[1];
+                //获取View的宽度和高度
+                int widthX=contentContainer.getWidth();
+                int heightY=contentContainer.getHeight();
+                //点击contentContainer之外的区域时,将这个MyAlertView隐藏
+                if(event.getX()<leftX || event.getX()>(leftX+widthX) || event.getY()<leftY  || event.getY()>(leftY+heightY)){
                     dismiss();
                 }
-
             }
             return false;
         }
     };
+
+    public interface OnDismissListener {
+         void onDismiss(Object o);
+    }
 }
 
 //80 318;80,1012;640 318,640,1012

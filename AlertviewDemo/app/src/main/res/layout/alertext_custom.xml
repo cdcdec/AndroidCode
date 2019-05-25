@@ -1,31 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="#007aff">
     <TextView
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="10dp"
-        android:id="@+id/etName"
-        android:text="请输入你的名字"
-        android:gravity="center"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+            android:layout_margin="10dp"
+            android:id="@+id/etName"
+            android:text="标题"
+            android:textSize="17sp"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
 
     <ImageView
             android:layout_width="200dp"
             android:layout_height="200dp"
             android:layout_gravity="center"
             android:scaleType="fitXY"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="10dp"
             android:src="@mipmap/ic_launcher"
     />
-
     <Button
+            android:id="@+id/btnCustom"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="20dp"
+            android:layout_marginTop="20dp"
             android:text="底部按钮"
+            android:background="#ff3b30"
     />
 </LinearLayout>
