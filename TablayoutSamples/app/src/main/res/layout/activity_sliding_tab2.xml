@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.flyco.tablayoutsamples.ui.MyNestedScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        tools:context=".ui.SlidingTabActivity2">
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+        <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:scaleType="fitXY"
+                android:src="@mipmap/ic_launcher"/>
+        <com.flyco.tablayout.SlidingTabLayout
+                android:id="@+id/slidingTab"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="35dp"
+                android:background="#666666"
+                android:paddingBottom="15dp"
+                android:paddingTop="15dp"
+                app:tl_indicator_gravity="BOTTOM"
+                app:tl_textBold="SELECT"
+                app:tl_underline_color="#1A000000"
+                app:tl_underline_gravity="TOP"
+                app:tl_underline_height="1dp"/>
+
+        <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="300dp"
+        >
+            <TextView
+                    android:id="@+id/tv_page"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:background="@android:color/darker_gray"
+                    android:gravity="right"
+                    android:padding="10dp"
+                    android:text="1/10"
+                    android:visibility="invisible"/>
+            <android.support.v4.view.ViewPager
+                    android:id="@+id/viewPager"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/colorAccent"
+            />
+        </FrameLayout>
+
+    </LinearLayout>
+</com.flyco.tablayoutsamples.ui.MyNestedScrollView>
