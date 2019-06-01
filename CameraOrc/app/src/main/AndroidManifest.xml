@@ -19,8 +19,9 @@
             android:supportsRtl="true"
             android:theme="@style/AppTheme"
             tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".OtherActivity"
-        >
+        <activity android:name=".DrawableActivity">
+        </activity>
+        <activity android:name=".OtherActivity">
         </activity>
         <activity android:name=".MainActivity">
             <intent-filter>

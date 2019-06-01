@@ -32,7 +32,6 @@ public class MaskView extends View {
     }
 
     public void setLineColor(int lineColor) {
-        Log.e("123456","setColor");
         this.lineColor = lineColor;
     }
 
@@ -114,7 +113,6 @@ public class MaskView extends View {
         super.onSizeChanged(w, h, oldw, oldh);
         //w=720,h=1118,oldw=0,oldh=0
         //1280  574
-        Log.e("123456","onSizeChanged,w="+w+",h="+h+",oldw="+oldw+",oldh="+oldh);
         if (w > 0 && h > 0) {
             float ratio = h > w ? 0.9f : 0.72f;
             int width = (int) (w * ratio);
@@ -129,7 +127,6 @@ public class MaskView extends View {
             frame.top = top;
             frame.right = right;
             frame.bottom = bottom;
-
         }
     }
 
@@ -137,8 +134,6 @@ public class MaskView extends View {
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
-        Log.e("123456","onDraw");
-
         int width = frame.width();
         int height = frame.height();
 
@@ -148,10 +143,8 @@ public class MaskView extends View {
         int bottom = frame.bottom;
         //648   418
         //921  594
-        Log.e("123456","onDraw,width="+width+",height="+height);
         canvas.drawColor(maskColor);
         path=fillRectRound(left, top, right, bottom, 30, 30, false);
-        Log.e("123456","onDraw");
         pen.setColor(lineColor);
         canvas.drawPath(path, pen);
         canvas.drawPath(path, eraser);

@@ -51,7 +51,15 @@ translatable="false"
 
 ```
 
+## 空格
+```
+\u0020:代表空格
+<string name="number_of_applicants">报名人数\u0020\u0020\u0020\u0020 %1$d  / %2$d</string>
 
+String s=String.format(resources.getString(R.string.number_of_applicants), 20,200)
+
+textView.setText(s);//显示:报名人数  20/200
+```
 
 
 

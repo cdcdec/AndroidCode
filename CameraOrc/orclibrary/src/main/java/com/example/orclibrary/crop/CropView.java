@@ -12,6 +12,7 @@ import android.graphics.Point;
 import android.graphics.Rect;
 import android.media.ExifInterface;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.GestureDetector;
 import android.view.MotionEvent;
 import android.view.ScaleGestureDetector;
@@ -101,8 +102,10 @@ public class CropView extends View {
     @Override
     protected void onSizeChanged(int w, int h, int oldw, int oldh) {
         super.onSizeChanged(w, h, oldw, oldh);
+        Log.e("123456","onSizeChanged,w="+w+",h="+h+",oldw="+oldw+",oldh="+oldh);
         centerImage(w, h);
         invalidate();
+
     }
 
     public Bitmap crop(Rect frame) {

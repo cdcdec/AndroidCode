@@ -1,6 +1,3 @@
-/*
- * Copyright (C) 2017 Baidu, Inc. All Rights Reserved.
- */
 package com.example.orclibrary;
 
 import android.Manifest;
@@ -57,6 +54,9 @@ public class CameraActivity extends Activity {
 
     private OCRCameraLayout takePictureContainer;
     private OCRCameraLayout cropContainer;
+    /**
+     * 确认结果的界面
+     * */
     private OCRCameraLayout confirmResultContainer;
     private ImageView lightButton;
     private CameraView cameraView;
@@ -186,7 +186,7 @@ public class CameraActivity extends Activity {
             lightButton.setImageResource(R.mipmap.bd_ocr_light_off);
         }
     }
-
+    //点击  调用相册  选择图片
     private View.OnClickListener albumButtonOnClickListener = new View.OnClickListener() {
         @Override
         public void onClick(View v) {

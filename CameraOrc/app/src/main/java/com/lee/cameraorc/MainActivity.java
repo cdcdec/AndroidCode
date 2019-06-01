@@ -40,6 +40,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.btn_card_back).setOnClickListener(this);
         findViewById(R.id.btn_bank_card).setOnClickListener(this);
         findViewById(R.id.btnOther).setOnClickListener(this);
+        findViewById(R.id.btnDrawable).setOnClickListener(this);
         mVerifyPhotoA = findViewById(R.id.image_a);
         mVerifyPhotoB = findViewById(R.id.image_b);
         mVerifyPhotoC = findViewById(R.id.image_c);
@@ -120,7 +121,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 intent.putExtra(CameraActivity.KEY_CONTENT_TYPE, CameraActivity.CONTENT_TYPE_ID_CARD_BACK);
                 startActivityForResult(intent, REQUEST_C_CAMERA);
                 break;
-            case R.id.btn_bank_card:
+            case R.id.btn_bank_card://银行卡
                 mCurrFileName = NAME_D;
                 intent = new Intent(this, CameraActivity.class);
                 intent.putExtra(CameraActivity.KEY_OUTPUT_FILE_PATH,
@@ -130,6 +131,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.btnOther:
                 intent = new Intent(this, OtherActivity.class);
+                startActivity(intent);
+                break;
+
+            case R.id.btnDrawable:
+                intent = new Intent(this, DrawableActivity.class);
                 startActivity(intent);
                 break;
         }

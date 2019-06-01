@@ -21,7 +21,7 @@ public class OtherActivity extends AppCompatActivity {
 
         Log.e("123456","type="+type);
 
-        maskView.setMaskType(MaskView.MASK_TYPE_ID_CARD_BACK);
+        maskView.setMaskType(MaskView.MASK_TYPE_NONE);
 
         //maskView.setMaskColor(R.color.colorPrimary);
     }
