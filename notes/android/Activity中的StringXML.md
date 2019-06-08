@@ -34,6 +34,7 @@
 
 "XXX" is translated here but not found in default locale
 原因:在默认的strings.xml里没有这个字段;
+
 ```
 解决办法:将Value/string.xml中的<resources>改成
 
@@ -48,6 +49,14 @@ Inspection info:If an application has more than one locale, then all the strings
 解决办法 将这个字符串添加上以下内容:
 translatable="false"
 例如: <string name="app_name" translatable="false">PickerViewDemo</string>
+
+或者直接设定 string.xml文件内的resources的attribute
+<resources
+   xmlns:tools="http://schemas.android.com/tools"
+   tools:ignore="MissingTranslation">
+    <string name="hello_world">你好</string>
+</resources>
+这样这个文件中的所有字符串就不会报类似的错误了。
 
 ```
 
