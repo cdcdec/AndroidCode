@@ -32,13 +32,8 @@
             android:theme="@style/AppTheme"
             android:screenOrientation="landscape"
             tools:ignore="GoogleAppIndexingWarning">
-      <!-- <activity android:name=".PrinterActivity"
+      <!--<activity android:name=".PrinterActivity"
                   android:screenOrientation="landscape">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-
-                <category android:name="android.intent.category.LAUNCHER"/>
-            </intent-filter>
             <intent-filter>
                 <action android:name="android.hardware.usb.action.USB_DEVICE_ATTACHED"/>
             </intent-filter>
@@ -53,7 +48,8 @@
                     android:name="android.hardware.usb.action.USB_DEVICE_DETACHED"
                     android:resource="@xml/device_filter"/>
         </activity>-->
-        <activity android:name=".MainActivity">
+        <activity android:name=".MainActivity"
+                  android:screenOrientation="landscape">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 

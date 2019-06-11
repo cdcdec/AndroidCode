@@ -3,8 +3,11 @@ package com.cdc.printer;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+
 import com.gprinter.io.CustomerDisplay;
 import com.gprinter.io.GpEquipmentPort;
+
+
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.graphics.Bitmap;

@@ -12,16 +12,6 @@
                 android:layout_height="fill_parent"
                 android:background="#00bfff"
                 android:orientation="vertical">
-
-            <Button
-                    android:id="@+id/btSetUsb"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="40dip"
-                    android:background="#00A398"
-                    android:onClick="setUsb"
-                    android:text="usb打印机设置"/>
-
             <Button
                     android:id="@+id/btOpenDialogue"
                     android:layout_width="match_parent"
@@ -65,7 +55,7 @@
                     android:layout_marginTop="10dip"
                     android:background="#00A398"
                     android:onClick="printReceiptClicked"
-                    android:text="Print receipt" />
+                    android:text="打印收据" />
 
             <Button
                     android:id="@+id/btPrintReceiptByArabic"
@@ -119,6 +109,17 @@
                     android:layout_marginTop="10dip"
                     android:background="#00A398"
                     android:text="参与用户体验" />
+
+         <!--   <Button
+                    android:id="@+id/btOther"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dip"
+                    android:background="#00A398"
+                    android:onClick="other"
+                    android:text="其它" />-->
+
+
         </LinearLayout>
 
     </ScrollView>

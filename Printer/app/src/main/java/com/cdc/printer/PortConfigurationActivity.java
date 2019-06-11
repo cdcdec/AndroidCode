@@ -1,6 +1,5 @@
 package com.cdc.printer;
 
-import android.util.Log;
 import com.gprinter.io.PortParameters;
 import com.gprinter.service.GpPrintService;
 import android.app.Activity;
@@ -181,7 +180,6 @@ public class PortConfigurationActivity extends Activity {
 	public void okButtonClicked(View view) {
 		String ipAddress = etIpAddress.getText().toString();
 		String portNum = etPortNum.getText().toString();
-		Log.e("PrinterConnectDialog","ipAddress="+ipAddress+",portNum="+portNum);
 		mPortParam.setIpAddr(ipAddress);
 		mPortParam.setPortNumber(Integer.valueOf(portNum));
 		Intent intent = new Intent(this, PrinterConnectDialog.class);

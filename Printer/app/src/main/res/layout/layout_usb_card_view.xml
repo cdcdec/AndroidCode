@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               xmlns:tools="http://schemas.android.com/tools"
               android:layout_width="match_parent"
-              android:layout_height="@dimen/dp190"
+              android:layout_height="190dp"
               android:orientation="vertical">
 
     <TextView
@@ -10,8 +10,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:layout_marginTop="@dimen/dp10"
-            android:textSize="@dimen/sp19"
+            android:layout_marginTop="10dp"
             tools:text="usbName"/>
 
     <TextView
@@ -19,21 +18,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:textSize="@dimen/sp15"
-            android:layout_marginTop="@dimen/dp50"
+            android:layout_marginTop="50dp"
             android:text="usb"/>
 
 
-
-    <TextView
-            android:id="@+id/usbUseTv"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:clickable="true"
-            android:textSize="@dimen/sp19"
-            android:layout_marginTop="@dimen/dp50"
-            android:layout_marginBottom="@dimen/dp10"
-            android:text="点击使用"/>
 
 </LinearLayout>

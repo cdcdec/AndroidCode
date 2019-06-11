@@ -21,6 +21,12 @@ Log.e("123","densit=" +dm.density)//3.0
 Log.e("123","densityDpi=" +dm.densityDpi)//480
 Log.e("123","widthPixels=" +dm.widthPixels)//1080
 Log.e("123","heightPixels=" +dm.heightPixels)//1920
+
+widthDp:widthPx/density+0.5
+heightDp:heightPx/density+0.5
+
+widthPx=widthDp*density+0.5
+heightPx=heightDp*density+0.5
 ```
 
 
