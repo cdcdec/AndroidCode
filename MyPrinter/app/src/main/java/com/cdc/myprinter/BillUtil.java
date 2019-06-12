@@ -30,7 +30,7 @@ public class BillUtil {
         // 顶部图片
       esc.addSelectJustification(EscCommand.JUSTIFICATION.CENTER);
         Bitmap b = BitmapFactory.decodeResource(context.getResources(), R.drawable.gprinter);
-        esc.addRastBitImage(b, 384, 0); // 打印图片
+        esc.addRastBitImage(b, 200, 0); // 打印图片
         esc.addPrintAndLineFeed();
         esc.addText(PRINT_LINE);
 
@@ -123,6 +123,7 @@ public class BillUtil {
             esc.addPrintAndLineFeed();
             esc.addText(PRINT_LINE);
         }
+        esc.addPrintAndFeedLines((byte) 3);
         // 加入查询打印机状态，打印完成后，此时会接收到GpCom.ACTION_DEVICE_STATUS广播
         esc.addQueryPrinterStatus();
 
