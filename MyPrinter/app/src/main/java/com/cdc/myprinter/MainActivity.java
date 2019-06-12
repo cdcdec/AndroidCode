@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private static final int REQUEST_PRINT_RECEIPT = 0xfc;
     private static final int REQUEST_PRINT_BILL = 0xff;
 
-    private Button btnSetUsb, btnOpenCashBox, btnPrintTest, btnPrintCustom, btnPrintReceipt;
+    private Button btnSetUsb, btnOpenCashBox, btnPrintTest, btnLabelCommand, btnEscPrintReceipt,btnPrintEscBill;
 
     @Override
     public void onClick(View v) {
@@ -56,19 +56,19 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.btnPrintTest:
                 printTestPage(mGpService);
                 break;
-            case R.id.btnPrintCustom:
+            case R.id.btnLabelCommand:
                 try {
                     int type = mGpService.getPrinterCommandType(0);
-                    if (type != GpCom.ESC_COMMAND) {
+                    if (type == GpCom.LABEL_COMMAND) {
                         mGpService.queryPrinterStatus(0, 1000, REQUEST_PRINT_LABEL);
-                    } else {
-                        Toast.makeText(this, "Printer is not LABEL mode", Toast.LENGTH_SHORT).show();
+                    } else if(type==GpCom.ESC_COMMAND){
+                        Toast.makeText(this, "Printer is esc mode,not label mode", Toast.LENGTH_SHORT).show();
                     }
                 } catch (RemoteException e1) {
                     e1.printStackTrace();
                 }
                 break;
-            case R.id.btnPrintReceipt:
+            case R.id.btnEscPrintReceipt:
                 try {
                     int type = mGpService.getPrinterCommandType(0);
                     if (type == GpCom.ESC_COMMAND) {
@@ -79,6 +79,21 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 } catch (RemoteException e1) {
                     e1.printStackTrace();
                 }
+                break;
+
+            case R.id.btnPrintEscBill:
+                try {
+                    int type = mGpService.getPrinterCommandType(0);
+                    if (type == GpCom.ESC_COMMAND) {
+                        mGpService.queryPrinterStatus(0, 1000, REQUEST_PRINT_BILL);
+                    } else {
+                        Toast.makeText(this, "Printer is not receipt mode", Toast.LENGTH_SHORT).show();
+                    }
+                } catch (RemoteException e1) {
+                    e1.printStackTrace();
+                }
+
+
                 break;
         }
     }
@@ -138,7 +153,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     }
 
-    private void openCashBoxByEsc(){
+    private void openCashBoxByEsc() {
         EscCommand esc = new EscCommand();
         // 开钱箱
         esc.addGeneratePlus(LabelCommand.FOOT.F5, (byte) 255, (byte) 255);
@@ -166,7 +181,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
     }
 
-    private void openCashBoxByLabel(){
+    private void openCashBoxByLabel() {
         LabelCommand tsc = new LabelCommand();
         tsc.addCls();// 清除打印缓冲区
         tsc.addCashdrwer(LabelCommand.FOOT.F5, 255, 255);
@@ -179,7 +194,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             GpCom.ERROR_CODE r = GpCom.ERROR_CODE.values()[rel];
             if (r != GpCom.ERROR_CODE.SUCCESS) {
                 Toast.makeText(getApplicationContext(), GpCom.getErrorText(r), Toast.LENGTH_SHORT).show();
-            }else{
+            } else {
                 Toast.makeText(getApplicationContext(), "打印机使用TSC命令", Toast.LENGTH_SHORT).show();
             }
         } catch (RemoteException e) {
@@ -230,14 +245,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnSetUsb = findViewById(R.id.btnSetUsb);
         btnOpenCashBox = findViewById(R.id.btnOpenCashBox);
         btnPrintTest = findViewById(R.id.btnPrintTest);
-        btnPrintCustom = findViewById(R.id.btnPrintCustom);
-        btnPrintReceipt = findViewById(R.id.btnPrintReceipt);
+        btnLabelCommand = findViewById(R.id.btnLabelCommand);
+        btnEscPrintReceipt = findViewById(R.id.btnEscPrintReceipt);
+        btnPrintEscBill = findViewById(R.id.btnPrintEscBill);
 
         btnSetUsb.setOnClickListener(this);
         btnOpenCashBox.setOnClickListener(this);
         btnPrintTest.setOnClickListener(this);
-        btnPrintCustom.setOnClickListener(this);
-        btnPrintReceipt.setOnClickListener(this);
+        btnLabelCommand.setOnClickListener(this);
+        btnEscPrintReceipt.setOnClickListener(this);
+        btnPrintEscBill.setOnClickListener(this);
 
 
     }
@@ -323,22 +340,22 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 } else if (requestCode == REQUEST_PRINT_RECEIPT) {
                     int status = intent.getIntExtra(GpCom.EXTRA_PRINTER_REAL_STATUS, 16);
                     if (status == GpCom.STATE_NO_ERR) {
-                       // sendReceipt();
-                        BillUtil.createBill(mGpService,context);
-                    } else {
-                        Toast.makeText(MainActivity.this, "query printer status error", Toast.LENGTH_SHORT).show();
-                    }
-                }else if(requestCode == REQUEST_PRINT_BILL){
-                    int status = intent.getIntExtra(GpCom.EXTRA_PRINTER_REAL_STATUS, 16);
-                    if (status == GpCom.STATE_NO_ERR) {
                         sendReceipt();
                     } else {
                         Toast.makeText(MainActivity.this, "query printer status error", Toast.LENGTH_SHORT).show();
                     }
-                }else if (requestCode == REQUEST_PRINT_LABEL) {
+                } else if (requestCode == REQUEST_PRINT_BILL) {
                     int status = intent.getIntExtra(GpCom.EXTRA_PRINTER_REAL_STATUS, 16);
                     if (status == GpCom.STATE_NO_ERR) {
-                        Utils.labelCommand(mGpService,context);
+                        BillUtil.createBill(mGpService, context,DataUtil.getGoodListInfo());
+                        //BillUtil.createBill32(mGpService, context);
+                    } else {
+                        Toast.makeText(MainActivity.this, "query printer status error", Toast.LENGTH_SHORT).show();
+                    }
+                } else if (requestCode == REQUEST_PRINT_LABEL) {
+                    int status = intent.getIntExtra(GpCom.EXTRA_PRINTER_REAL_STATUS, 16);
+                    if (status == GpCom.STATE_NO_ERR) {
+                        Utils.labelCommand(mGpService, context);
                     } else {
                         Toast.makeText(MainActivity.this, "query printer status error", Toast.LENGTH_SHORT).show();
                     }
@@ -382,7 +399,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         esc.addText("打印图片!\n"); // 打印文字
         Bitmap b = BitmapFactory.decodeResource(getResources(), R.drawable.gprinter);
         //此处图片的宽度 设置成b.getWidth()可以将图片后面的内容打印完全，如果图片的宽度设置成b.getWidth()*2或者b.getWidth()*3  则图片后面的内容打印不出来。
-       esc.addRastBitImage(b, b.getWidth(), 0); // 打印图片
+        esc.addRastBitImage(b, b.getWidth(), 0); // 打印图片
         esc.addPrintAndLineFeed();
 
         /* 打印一维条码 */

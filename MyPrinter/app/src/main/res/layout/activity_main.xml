@@ -46,32 +46,33 @@
                     android:layout_marginLeft="@dimen/dp2"
             />
             <Button
-                    android:id="@+id/btnPrintCustom"
+                    android:id="@+id/btnLabelCommand"
                     android:layout_width="@dimen/dp211"
                     android:minHeight="@dimen/dp120"
                     android:layout_height="wrap_content"
-                    android:text="自定义打印"
+                    android:text="LabelCommand"
                     app:layout_constraintLeft_toRightOf="@id/btnPrintTest"
                     app:layout_constraintTop_toTopOf="parent"
+                    android:textAllCaps="false"
                     android:layout_marginLeft="@dimen/dp2"
             />
             <Button
-                    android:id="@+id/btnPrintReceipt"
+                    android:id="@+id/btnEscPrintReceipt"
                     android:layout_width="@dimen/dp211"
                     android:minHeight="@dimen/dp120"
                     android:layout_height="wrap_content"
-                    android:text="打印收据"
-                    app:layout_constraintLeft_toRightOf="@id/btnPrintCustom"
+                    android:text="打印收据Esc"
+                    app:layout_constraintLeft_toRightOf="@id/btnLabelCommand"
                     app:layout_constraintTop_toTopOf="parent"
                     android:layout_marginLeft="@dimen/dp2"
             />
             <Button
-                    android:id="@+id/btnPrintCustom2"
+                    android:id="@+id/btnPrintEscBill"
                     android:layout_width="@dimen/dp211"
                     android:minHeight="@dimen/dp120"
                     android:layout_height="wrap_content"
-                    android:text="打印测试页2"
-                    app:layout_constraintLeft_toRightOf="@id/btnPrintReceipt"
+                    android:text="打印Esc账单"
+                    app:layout_constraintLeft_toRightOf="@id/btnEscPrintReceipt"
                     app:layout_constraintTop_toTopOf="parent"
                     android:layout_marginLeft="@dimen/dp2"
             />
