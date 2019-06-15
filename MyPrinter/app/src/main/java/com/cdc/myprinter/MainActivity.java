@@ -14,8 +14,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Base64;
 import android.util.Log;
+import android.view.KeyEvent;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 import com.gprinter.aidl.GpService;
 import com.gprinter.command.EscCommand;
@@ -41,7 +44,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private static final int REQUEST_PRINT_RECEIPT = 0xfc;
     private static final int REQUEST_PRINT_BILL = 0xff;
 
-    private Button btnSetUsb, btnOpenCashBox, btnPrintTest, btnLabelCommand, btnEscPrintReceipt,btnPrintEscBill;
+    private Button btnSetUsb, btnOpenCashBox, btnPrintTest, btnLabelCommand, btnEscPrintReceipt, btnPrintEscBill,btnOther;
+
+    private CustomEditText etCode;
+
+    private EditText etCode2;
 
     @Override
     public void onClick(View v) {
@@ -61,7 +68,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     int type = mGpService.getPrinterCommandType(0);
                     if (type == GpCom.LABEL_COMMAND) {
                         mGpService.queryPrinterStatus(0, 1000, REQUEST_PRINT_LABEL);
-                    } else if(type==GpCom.ESC_COMMAND){
+                    } else if (type == GpCom.ESC_COMMAND) {
                         Toast.makeText(this, "Printer is esc mode,not label mode", Toast.LENGTH_SHORT).show();
                     }
                 } catch (RemoteException e1) {
@@ -92,6 +99,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 } catch (RemoteException e1) {
                     e1.printStackTrace();
                 }
+                break;
+
+            case R.id.btnOther:
+                
 
 
                 break;
@@ -249,12 +260,46 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnEscPrintReceipt = findViewById(R.id.btnEscPrintReceipt);
         btnPrintEscBill = findViewById(R.id.btnPrintEscBill);
 
+        // etCode=findViewById(R.id.etCode);
+        etCode2 = findViewById(R.id.etCode2);
+
+        btnOther=findViewById(R.id.btnOther);
+
+        etCode2.setOnEditorActionListener(new TextView.OnEditorActionListener() {
+
+            @Override
+            public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
+                if (event.getAction() == KeyEvent.ACTION_UP) {
+                    //扫描到的数据
+                    String s = v.getText().toString().trim();
+
+                    Toast.makeText(MainActivity.this, s, Toast.LENGTH_LONG).show();
+                    //拿到数据后做其他操作
+
+                    etCode2.setText(s);
+
+
+                }
+                return true;
+            }
+
+        });
         btnSetUsb.setOnClickListener(this);
         btnOpenCashBox.setOnClickListener(this);
         btnPrintTest.setOnClickListener(this);
         btnLabelCommand.setOnClickListener(this);
         btnEscPrintReceipt.setOnClickListener(this);
         btnPrintEscBill.setOnClickListener(this);
+
+//        etCode.setScanCodeListener(new CustomEditText.ScanCodeListener() {
+//            @Override
+//            public void handleCode(String code) {
+//                Toast.makeText(MainActivity.this,code,Toast.LENGTH_LONG).show();
+//                etCode.setText(code);
+//            }
+//        });
+
+        btnOther.setOnClickListener(this);
 
 
     }
@@ -347,7 +392,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 } else if (requestCode == REQUEST_PRINT_BILL) {
                     int status = intent.getIntExtra(GpCom.EXTRA_PRINTER_REAL_STATUS, 16);
                     if (status == GpCom.STATE_NO_ERR) {
-                        BillUtil.createBill(mGpService, context,DataUtil.getGoodListInfo());
+                        BillUtil.createBill(mGpService, context, DataUtil.getGoodListInfo());
                         //BillUtil.createBill32(mGpService, context);
                     } else {
                         Toast.makeText(MainActivity.this, "query printer status error", Toast.LENGTH_SHORT).show();
