@@ -102,9 +102,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
 
             case R.id.btnOther:
-                
-
-
+                Intent intent=new Intent();
+                intent.setClass(MainActivity.this,ScanCodeActivity.class);
+                startActivity(intent);
                 break;
         }
     }
