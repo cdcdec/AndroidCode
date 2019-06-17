@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:background="#ff212121"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent">
+
+    <LinearLayout
+            android:gravity="center"
+            android:id="@+id/xiaochengxu"
+            android:background="#00000000"
+            android:layout_width="fill_parent"
+            android:layout_height="24.0dip">
+
+        <ImageView
+                android:layout_width="18.0dip"
+                android:layout_height="18.0dip"
+                android:layout_marginLeft="7.0dip"
+                android:layout_marginRight="7.0dip"
+                android:src="@drawable/ic_xiaochengxu"/>
+
+        <TextView
+                android:textSize="15.0sp"
+                android:textColor="#ffffffff"
+                android:ellipsize="marquee"
+                android:gravity="center"
+                android:id="@+id/gundongtext"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:text="@string/logosheji"
+                android:singleLine="true"
+                android:layout_weight="1.0"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:textAlignment="center"/>
+
+        <ImageView
+                android:id="@+id/close_btn"
+                android:layout_width="18.0dip"
+                android:layout_height="18.0dip"
+                android:layout_marginLeft="7.0dip"
+                android:layout_marginRight="7.0dip"
+                android:src="@drawable/ic_del"/>
+    </LinearLayout>
+
+    <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+        <com.cdc.jiepaiqi.view.ControlScrollViewPager
+                android:id="@+id/viewpager"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:overScrollMode="never"/>
+
+        <View
+                android:id="@+id/centPoint"
+                android:background="#ff393939"
+                android:visibility="invisible"
+                android:layout_width="1.0dip"
+                android:layout_height="1.0dip"
+                android:layout_centerHorizontal="true"/>
+
+        <View
+                android:id="@+id/leftview"
+                android:background="#fff13233"
+                android:layout_width="30.0dip"
+                android:layout_height="4.0dip"
+                android:layout_marginRight="6.0dip"
+                android:layout_marginBottom="11.0dip"
+                android:layout_toLeftOf="@id/centPoint"
+                android:layout_alignParentBottom="true"/>
+
+        <View
+                android:id="@+id/rightview"
+                android:background="#ff393939"
+                android:layout_width="30.0dip"
+                android:layout_height="4.0dip"
+                android:layout_marginLeft="6.0dip"
+                android:layout_marginBottom="11.0dip"
+                android:layout_toRightOf="@id/centPoint"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"/>
+    </RelativeLayout>
+</LinearLayout>

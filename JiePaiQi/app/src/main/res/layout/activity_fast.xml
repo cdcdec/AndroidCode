@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:fancy="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <ImageView android:id="@+id/iv_splash"
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               android:src="@drawable/launcherimage"/>
+    <mehdi.sakout.fancybuttons.FancyButton
+            android:id="@+id/fbt_count_down_time"
+            android:visibility="gone"
+            android:layout_width="60.0dip"
+            android:layout_height="40.0dip"
+            android:layout_marginTop="15.0dip"
+            android:layout_marginRight="20.0dip"
+            android:layout_alignParentRight="true"
+            fancy:fb_defaultColor="#44000000"
+            fancy:fb_text="跳过"
+            fancy:fb_textColor="#ff69665f"
+            fancy:fb_textSize="10.0sp"
+            fancy:fb_borderColor="#5576726e"
+            fancy:fb_borderWidth="1.0dip"
+            fancy:fb_radius="15.0dip"/>
+</RelativeLayout>

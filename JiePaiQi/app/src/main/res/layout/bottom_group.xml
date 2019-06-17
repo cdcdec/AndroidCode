@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/bottomView"
+                android:layout_width="fill_parent"
+                android:layout_height="100.0dip"
+                android:layout_alignParentBottom="true">
+
+    <TextView
+            android:textSize="15.0sp"
+            android:textColor="#ff787878"
+            android:gravity="center"
+            android:id="@+id/imagebutton_setting"
+            android:background="@drawable/savemusic_yuan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="30.0dip"
+            android:layout_marginBottom="30.0dip"
+            android:src="@drawable/home_icon_set"
+            android:text="TAP"
+            android:layout_alignParentRight="true"
+            android:textAlignment="center"/>
+
+    <ImageButton
+            android:id="@+id/saveBtn"
+            android:background="@drawable/savemusic_yuan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/home_icon_save"
+            android:layout_marginStart="30.0dip"/>
+
+    <ImageView
+            android:id="@+id/playBtn"
+            android:background="@drawable/select_fanzhen_play"
+            android:focusable="true"
+            android:clickable="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"/>
+</RelativeLayout>

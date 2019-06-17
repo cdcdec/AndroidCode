@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <RelativeLayout
+            android:background="#ff303030"
+            android:layout_width="match_parent"
+            android:layout_height="50.0dip">
+        <ImageButton android:id="@+id/iv_close"
+                     android:background="@color/clearColor"
+                     android:visibility="gone"
+                     android:layout_width="30.0dip"
+                     android:layout_height="match_parent"
+                     android:layout_marginLeft="10.0dip"
+                     android:src="@drawable/back"/>
+        <TextView android:textSize="20.0dip"
+                  android:textStyle="bold"
+                  android:textColor="#ffffffff"
+                  android:id="@+id/fulishequ"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="福利社区"
+                  android:layout_centerInParent="true"/>
+    </RelativeLayout>
+    <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0.0dip"
+            android:layout_weight="1.0">
+        <LinearLayout
+                android:orientation="horizontal"
+                android:id="@+id/ll_info"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            <com.wang.avi.AVLoadingIndicatorView
+                    android:id="@+id/avi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    app:indicatorName="BallClipRotateMultipleIndicator"
+                    app:indicatorColor="#ffbbbbbb"
+                    style="@style/AVLoadingIndicatorView"/>
+            <TextView android:textSize="14.0sp"
+                      android:textColor="#ffbbbbbb"
+                      android:gravity="center"
+                      android:id="@+id/tv_load"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_marginTop="5.0dip"
+                      android:text="正在加载中..."
+                      android:layout_below="@id/avi"
+                      android:layout_alignBaseline="@id/avi"
+                      android:layout_centerHorizontal="true"/>
+        </RelativeLayout>
+    </FrameLayout>
+</LinearLayout>

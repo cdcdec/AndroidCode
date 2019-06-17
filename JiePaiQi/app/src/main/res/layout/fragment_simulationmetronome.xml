@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:id="@+id/rootview"
+              android:background="#ff212121"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent">
+
+    <include layout="@layout/top_group"/>
+
+    <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0.0dip"
+            android:layout_weight="1.0">
+
+        <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+            <ImageView
+                    android:id="@+id/fangzhenimage"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:src="@drawable/fangzhen_bg"
+                    android:scaleType="fitXY"
+                    android:layout_alignParentBottom="true"/>
+
+            <include
+                    android:id="@+id/group"
+                    layout="@layout/bottom_group"/>
+
+            <ImageView
+                    android:id="@+id/kedu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_marginTop="65.0dip"
+                    android:src="@drawable/fangzhen_kedu"
+                    android:scaleType="fitXY"
+                    android:layout_above="@id/group"
+                    android:layout_centerHorizontal="true"/>
+
+            <com.cdc.jiepaiqi.view.VerticalSeekBar
+                    android:id="@+id/verticalSeek"
+                    android:background="@drawable/fangzhen_pointer"
+                    android:layout_width="24.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_marginTop="55.0dip"
+                    android:layout_alignBottom="@id/kedu"
+                    android:layout_centerHorizontal="true"/>
+        </RelativeLayout>
+    </RelativeLayout>
+</LinearLayout>

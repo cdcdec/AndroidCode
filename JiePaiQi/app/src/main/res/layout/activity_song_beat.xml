@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:orientation="vertical"
+                android:background="#ffe2e2e2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50.0dip">
+
+        <TextView
+                android:textSize="18.0sp"
+                android:textStyle="bold"
+                android:textColor="#ffffffff"
+                android:gravity="center"
+                android:id="@+id/textView4"
+                android:background="#ff303030"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="节拍乐谱"/>
+
+        <ImageButton
+                android:id="@+id/cancelBtn"
+                android:background="@color/clearColor"
+                android:layout_width="50.0dip"
+                android:layout_height="50.0dip"
+                android:src="@drawable/back"
+                android:onClick="cancelClick"/>
+    </RelativeLayout>
+
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="50.0dip">
+
+        <ListView
+                android:id="@+id/beatList"
+                android:background="#ffe2e2e2"
+                android:layout_width="match_parent"
+                android:layout_height="0.0dip"
+                android:divider="@null"
+                android:layout_weight="1.0"/>
+
+        <LinearLayout
+                android:orientation="horizontal"
+                android:id="@id/bannerLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+    </LinearLayout>
+</RelativeLayout>

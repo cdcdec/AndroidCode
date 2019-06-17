@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:background="#ff303030"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <TextView
+            android:textSize="16.0sp"
+            android:textColor="#ffffffff"
+            android:gravity="center"
+            android:id="@id/tv_title"
+            android:background="#ff303030"
+            android:layout_width="match_parent"
+            android:layout_height="45.0dip"
+            android:text="购买说明"/>
+
+    <TextView
+            android:textSize="15.0sp"
+            android:textColor="#ffffffff"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15.0dip"
+            android:layout_marginTop="15.0dip"
+            android:text="1、购买VIP增值服务后，即可在订阅期内享有："/>
+
+    <TextView
+            android:textSize="13.0sp"
+            android:textColor="#ffffffff"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15.0dip"
+            android:layout_marginTop="15.0dip"
+            android:text="(1) 畅享所有节拍音色"/>
+
+    <TextView
+            android:textSize="13.0sp"
+            android:textColor="#ffffffff"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15.0dip"
+            android:layout_marginTop="15.0dip"
+            android:text="(2) 解锁所有默认节拍"/>
+
+    <TextView
+            android:textSize="13.0sp"
+            android:textColor="#ffffffff"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15.0dip"
+            android:layout_marginTop="15.0dip"
+            android:text="(3) 移除首页广告，完美体验"/>
+
+    <TextView
+            android:textSize="15.0sp"
+            android:textColor="#ffffffff"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15.0dip"
+            android:layout_marginTop="15.0dip"
+            android:text="2、特别提示："/>
+
+    <TextView
+            android:textSize="13.0sp"
+            android:textColor="#ffffffff"
+            android:id="@+id/pay_mode"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15.0dip"
+            android:layout_marginTop="15.0dip"
+            android:text="(1) 付费增值服务将通过支付宝购买"/>
+
+    <TextView
+            android:textSize="13.0sp"
+            android:textColor="#ffffffff"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15.0dip"
+            android:layout_marginTop="15.0dip"
+            android:text="(1) 购买成功后，即可在订阅期间享受VIP特权。订阅期后，需重新购买"/>
+
+    <TextView
+            android:textSize="13.0sp"
+            android:textColor="#ffffffff"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15.0dip"
+            android:layout_marginTop="15.0dip"
+            android:text="(2) 如有问题，可联系我们的QQ客服：3213640836（周一至周五：09:00～18:00）"/>
+</LinearLayout>

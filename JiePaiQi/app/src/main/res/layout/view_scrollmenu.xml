@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+    <ImageView
+            android:id="@+id/backImage"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:src="@drawable/chilun"
+            android:scaleType="fitCenter"
+            android:layout_centerInParent="true"/>
+
+    <ImageView
+            android:id="@+id/scrollImage"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:src="@drawable/yuanpan"
+            android:scaleType="fitCenter"
+            android:layout_centerInParent="true"/>
+
+    <ImageView
+            android:id="@+id/redCircle"
+            android:visibility="gone"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:src="@drawable/hongseguangquan"
+            android:scaleType="fitCenter"
+            android:layout_centerInParent="true"/>
+
+    <ImageView
+            android:id="@+id/scrollImageV"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:src="@drawable/zhishihongdian"
+            android:scaleType="fitCenter"
+            android:layout_centerInParent="true"/>
+
+    <Button
+            android:id="@+id/scrollMenuBtn"
+            android:background="@drawable/play_button_selected"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="fitCenter"
+            android:layout_centerInParent="true"/>
+</RelativeLayout>

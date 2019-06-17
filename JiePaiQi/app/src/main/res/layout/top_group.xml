@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:background="#ff212121"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content">
+
+    <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+        <LinearLayout
+                android:gravity="center"
+                android:id="@+id/jiepai_xifen"
+                android:background="@drawable/savemusic_quanyuanjiao"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="14.0dip"
+                android:layout_marginTop="10.0dip">
+
+            <TextView
+                    android:textSize="18.0sp"
+                    android:textColor="#ff787878"
+                    android:id="@+id/paihao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="4/4"/>
+
+            <ImageView
+                    android:id="@+id/xifenjiepai"
+                    android:layout_width="34.0dip"
+                    android:layout_height="34.0dip"
+                    android:src="@drawable/xifen1_1"/>
+        </LinearLayout>
+
+        <Button
+                android:textSize="18.0sp"
+                android:textColor="#ff787878"
+                android:background="@drawable/paihao_banyuanjiao"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="4/4"/>
+
+        <RelativeLayout
+                android:background="@drawable/xifen_banyuanjiao"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            <ImageButton
+                    android:background="@color/clearColor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/xifen1_1"
+                    android:scaleType="fitXY"
+                    android:layout_centerInParent="true"
+                    android:layout_centerVertical="true"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+                android:id="@+id/changjing"
+                android:background="@drawable/savemusic_yuan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10.0dip"
+                android:layout_marginRight="14.0dip"
+                android:layout_alignParentRight="true">
+
+            <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/home_icon_musiclist"
+                    android:layout_centerInParent="true"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+                android:id="@+id/recorderBtn"
+                android:background="@drawable/savemusic_yuan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10.0dip"
+                android:layout_marginRight="12.0dip"
+                android:layout_toLeftOf="@id/changjing">
+
+            <ImageView
+                    android:id="@+id/luyinimage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/home_icon_record1"
+                    android:layout_centerInParent="true"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+                android:id="@+id/reshengBtn"
+                android:background="@drawable/savemusic_yuan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10.0dip"
+                android:layout_marginRight="13.0dip"
+                android:layout_toLeftOf="@id/recorderBtn">
+
+            <ImageView
+                    android:id="@+id/reshengimage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/home_icon_reshen1"
+                    android:layout_centerInParent="true"/>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5.0dip"
+            android:layout_marginBottom="-5.0dip">
+
+        <TextView
+                android:textSize="13.0sp"
+                android:textColor="#ff787878"
+                android:id="@+id/BPM"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="BPM"
+                android:layout_centerInParent="true"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+        <RelativeLayout
+                android:id="@+id/rl_ad"
+                android:layout_width="45.0dip"
+                android:layout_height="45.0dip"
+                android:layout_marginLeft="10.0dip"
+                android:layout_centerVertical="true">
+
+            <ImageView
+                    android:id="@+id/floatAd"
+                    android:layout_width="40.0dip"
+                    android:layout_height="40.0dip"
+                    android:layout_marginLeft="5.0dip"
+                    android:layout_marginTop="5.0dip"
+                    android:scaleType="fitXY"/>
+
+            <ImageView
+                    android:id="@+id/adclose"
+                    android:visibility="gone"
+                    android:layout_width="15.0dip"
+                    android:layout_height="15.0dip"
+                    android:src="@drawable/ad_delete"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"/>
+        </RelativeLayout>
+
+        <TextView
+                android:textSize="35.0sp"
+                android:textColor="#ffffffff"
+                android:id="@+id/bpmValue"
+                android:layout_width="70.0dip"
+                android:layout_height="wrap_content"
+                android:text="400"
+                android:layout_centerInParent="true"
+                android:textAlignment="center"/>
+
+        <ImageView
+                android:id="@+id/leftxuanzhuan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="16.0dip"
+                android:src="@drawable/speed_less_white"
+                android:layout_centerVertical="true"
+                android:layout_toStartOf="@id/bpmValue"/>
+
+        <ImageView
+                android:id="@+id/rightxuanzhuan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16.0dip"
+                android:src="@drawable/speed_add_white"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@id/bpmValue"/>
+    </RelativeLayout>
+</LinearLayout>
