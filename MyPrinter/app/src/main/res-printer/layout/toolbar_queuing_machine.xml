@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent" android:weightSum="2.0"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:gravity="center" android:id="@id/toolbar_desc" android:background="@drawable/titlebar_leftbt_selector_10500" android:layout_width="fill_parent" android:layout_height="56.0dip" android:text="操作说明" android:layout_weight="1.0" style="@style/pos_title_text" />
+    <TextView android:gravity="center" android:id="@id/toolbar_save" android:background="@drawable/titlebar_leftbt_selector_10500" android:layout_width="fill_parent" android:layout_height="56.0dip" android:layout_marginRight="16.0dip" android:text="保存" android:layout_weight="1.0" style="@style/pos_title_text" />
+</LinearLayout>

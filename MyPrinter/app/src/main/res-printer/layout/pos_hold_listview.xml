@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/llBg" android:background="@color/pos_line_grey" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:background="@drawable/pos_select_hold" android:paddingLeft="3.0dip" android:paddingTop="7.0dip" android:paddingRight="3.0dip" android:paddingBottom="7.0dip" android:layout_width="131.0dip" android:layout_height="138.0dip" android:layout_marginRight="1.0dip" android:layout_marginBottom="1.0dip" android:minHeight="138.0dip">
+        <LinearLayout android:gravity="center_horizontal" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+            <TextView android:textSize="14.0dip" android:textColor="@color/setting_bg_color" android:gravity="center" android:id="@id/tvYesterday" android:background="@drawable/pos_red_round_background" android:layout_width="20.0dip" android:layout_height="20.0dip" android:text="@string/pos_hole_yesterday" />
+            <TextView android:textSize="16.0dip" android:textColor="@color/setting_text_color1" android:gravity="center" android:id="@id/tvGrade" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="3.0dip" android:layout_marginRight="26.0dip" android:text="牌号11111" android:layout_weight="1.0" />
+        </LinearLayout>
+        <TextView android:textSize="16.0dip" android:textColor="@color/add_text_color" android:gravity="bottom|center" android:id="@id/tvTime" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="fdf" />
+    </LinearLayout>
+</LinearLayout>

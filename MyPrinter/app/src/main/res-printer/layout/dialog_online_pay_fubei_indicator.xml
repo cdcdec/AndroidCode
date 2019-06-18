@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:background="@color/pos_background_white" android:layout_width="fill_parent" android:layout_height="56.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:orientation="vertical" android:id="@id/rl_fubei_barcode" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+        <TextView android:textSize="20.0dip" android:textColor="@color/pay_blue_color" android:gravity="center" android:id="@id/tv_fubei_barcode_title" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="扫描枪" />
+        <View android:id="@id/tv_fubei_barcode_bottom" android:background="@color/pay_blue_color" android:layout_width="100.0dip" android:layout_height="3.0dip" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+    <View android:layout_gravity="center_vertical" android:id="@id/switch_first_center_line" android:background="@color/setting_line_color" android:layout_width="1.0dip" android:layout_height="30.0dip" android:layout_centerInParent="true" />
+    <RelativeLayout android:id="@id/rl_ali_qrcode" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+        <TextView android:textSize="20.0dip" android:textColor="@color/pay_blue_color" android:gravity="center" android:id="@id/tv_ali_qrcode_title" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="支付宝二维码" />
+        <View android:id="@id/tv_ali_qrcode_bottom" android:background="@color/pay_blue_color" android:layout_width="100.0dip" android:layout_height="3.0dip" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+    <View android:layout_gravity="center_vertical" android:id="@id/switch_center_line" android:background="@color/setting_line_color" android:layout_width="1.0dip" android:layout_height="30.0dip" android:layout_centerInParent="true" />
+    <RelativeLayout android:id="@id/rl_wechat_qrcode" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" android:layout_toLeftOf="@id/switch_center_line">
+        <TextView android:textSize="20.0dip" android:textColor="@color/pay_blue_color" android:gravity="center" android:id="@id/tv_wechat_qrcode_title" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="微信二维码" />
+        <View android:id="@id/tv_wechat_qrcode_bottom" android:background="@color/pay_blue_color" android:layout_width="100.0dip" android:layout_height="3.0dip" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+</LinearLayout>

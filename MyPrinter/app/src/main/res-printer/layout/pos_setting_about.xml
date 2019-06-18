@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/about_l" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:id="@id/category_about" style="@style/pos_setting_right_item">
+            <TextView android:layout_width="wrap_content" android:text="@string/main_menu_category_about" style="@style/pos_setting_right_item_lab" />
+            <TextView android:id="@id/function_hint_category_about" android:visibility="gone" style="@style/red_dot_function" />
+            <TextView android:layout_weight="1.0" style="@style/pos_setting_right_item_lab" />
+            <View style="@style/pos_setting_right_item_icon" />
+        </LinearLayout>
+        <LinearLayout android:id="@id/upgrade_and_evaluate" style="@style/pos_setting_right_item">
+            <TextView android:layout_width="wrap_content" android:text="@string/pos_upgrade_and_evaluate" style="@style/pos_setting_right_item_lab" />
+            <TextView android:layout_weight="1.0" style="@style/pos_setting_right_item_lab" />
+            <TextView android:textColor="@color/white_color_1033" android:gravity="center" android:id="@id/function_hint_upgrade_and_evaluate" android:background="@drawable/pos_red_oval" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="20.0dip" android:layout_marginLeft="10.0dip" android:text="@string/new_version_title" />
+            <View style="@style/pos_setting_right_item_icon" />
+        </LinearLayout>
+        <View style="@style/pos_setting_right_item_line" />
+        <LinearLayout android:id="@id/feedback" android:visibility="gone" style="@style/pos_setting_right_item">
+            <TextView android:layout_width="wrap_content" android:text="@string/mn_Feedback" style="@style/pos_setting_right_item_lab" />
+            <TextView android:id="@id/function_hint_feedback" android:visibility="gone" style="@style/red_dot_function" />
+            <TextView android:id="@id/textView" android:layout_weight="1.0" style="@style/pos_setting_right_item_lab" />
+            <View style="@style/pos_setting_right_item_icon" />
+        </LinearLayout>
+        <LinearLayout android:id="@id/repair_self" style="@style/pos_setting_right_item">
+            <TextView android:text="@string/pos_repair_self" style="@style/pos_setting_right_item_lab" />
+            <TextView android:id="@id/function_hint_repair_self" android:visibility="gone" style="@style/red_dot_function" />
+            <TextView android:layout_weight="1.0" style="@style/pos_setting_right_item_lab" />
+            <View style="@style/pos_setting_right_item_icon" />
+        </LinearLayout>
+        <LinearLayout android:id="@id/ip_title" style="@style/pos_setting_right_item">
+            <TextView android:text="@string/change_ip_title" style="@style/pos_setting_right_item_lab" />
+            <TextView android:id="@id/function_hint_ip_title" android:visibility="gone" style="@style/red_dot_function" />
+            <TextView android:layout_weight="1.0" style="@style/pos_setting_right_item_lab" />
+            <View style="@style/pos_setting_right_item_icon" />
+        </LinearLayout>
+        <LinearLayout android:id="@id/system_halted_log_sd_l" style="@style/pos_setting_right_item">
+            <TextView android:layout_width="wrap_content" android:text="@string/backup_system_halted_title" style="@style/pos_setting_right_item_lab" />
+            <TextView android:id="@id/function_hint_system_halted" android:visibility="gone" style="@style/red_dot_function" />
+            <TextView android:layout_weight="1.0" style="@style/pos_setting_right_item_lab" />
+            <View style="@style/pos_setting_right_item_icon" />
+        </LinearLayout>
+        <include android:id="@id/layout_block_canary" android:layout_width="fill_parent" android:layout_height="56.0dip" layout="@layout/item_layout_check_box" />
+    </LinearLayout>
+</LinearLayout>

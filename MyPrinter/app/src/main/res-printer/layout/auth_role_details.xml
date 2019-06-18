@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              style="@style/grey_background">
+
+    <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0">
+
+        <LinearLayout
+                android:orientation="vertical"
+                android:paddingTop="10.0dip"
+                android:paddingBottom="10.0dip"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+            <LinearLayout
+                    android:orientation="horizontal"
+                    android:visibility="gone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="6.0dip">
+
+                <TextView
+                        android:text="@string/auth_idTxt"
+                        style="@style/edittext_label_style"/>
+
+                <TextView
+                        android:id="@id/auth_idValue"
+                        style="@style/login_edittext_style"/>
+            </LinearLayout>
+
+            <LinearLayout style="@style/linearLayout_rounded_rectangle_u">
+
+                <LinearLayout style="@style/linearLayout_before_pencil">
+
+                    <TextView
+                            android:text="@string/auth_RoleTxt"
+                            style="@style/edittext_label_style"/>
+
+                    <EditText
+                            android:id="@id/auth_RoleValue"
+                            android:hint="@string/auth_RoleHint"
+                            style="@style/editable_edittext_style"/>
+                </LinearLayout>
+
+                <ImageView style="@style/pencil_style"/>
+            </LinearLayout>
+
+            <LinearLayout style="@style/linearLayout_rounded_rectangle_d">
+
+                <LinearLayout style="@style/linearLayout_before_pencil">
+
+                    <TextView
+                            android:text="@string/auth_DescTxt"
+                            style="@style/edittext_label_style"/>
+
+                    <EditText
+                            android:id="@id/auth_DescTxt"
+                            android:hint="@string/auth_DescHint"
+                            style="@style/editable_edittext_style"/>
+                </LinearLayout>
+
+                <ImageView style="@style/pencil_style"/>
+            </LinearLayout>
+
+            <Button
+                    android:id="@id/auth_deleteButton"
+                    android:text="@string/pt_deleteButtonTxt"
+                    style="@style/bottom_grey_button_style"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/setting_line_color" android:layout_width="624.0dip" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:background="@color/setting_title_bg_color" android:layout_width="624.0dip" android:layout_height="64.0dip">
+        <TextView android:textSize="21.0dip" android:textColor="@color/setting_text_color1" android:gravity="center_vertical" android:id="@id/tvTitle" android:paddingLeft="24.0dip" android:layout_width="wrap_content" android:layout_height="64.0dip" android:text="@string/pos_member_title" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" />
+        <LinearLayout android:gravity="center_vertical" android:id="@id/new_member" android:background="@drawable/setting_button_selector_10500" android:paddingLeft="24.0dip" android:paddingRight="24.0dip" android:layout_width="wrap_content" android:layout_height="64.0dip" android:layout_alignParentTop="true" android:layout_alignParentRight="true">
+            <ImageView android:layout_width="22.0dip" android:layout_height="22.0dip" android:layout_marginRight="10.0dip" android:src="@drawable/new_member_1033" />
+            <TextView android:textSize="21.0dip" android:textColor="@color/setting_text_color1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/pos_create_new_member" />
+        </LinearLayout>
+    </RelativeLayout>
+    <LinearLayout android:layout_width="624.0dip" android:layout_height="wrap_content" android:layout_marginTop="1.0dip">
+        <LinearLayout android:orientation="vertical" android:id="@id/llLeft" android:background="@color/setting_bg_color" android:paddingTop="8.0dip" android:layout_width="361.0dip" android:layout_height="408.0dip" android:layout_marginRight="1.0dip">
+            <RelativeLayout android:layout_width="fill_parent" android:layout_height="40.0dip" android:layout_marginLeft="24.0dip" android:layout_marginRight="24.0dip" android:layout_marginBottom="8.0dip">
+                <EditText android:textSize="@dimen/text_20dp" android:textColor="@color/setting_text_color1" android:gravity="center_vertical" android:id="@id/etPosMemberSearch" android:background="@drawable/small_member_edittext_shape" android:paddingLeft="11.0dip" android:layout_width="fill_parent" android:layout_height="40.0dip" android:text="" android:hint="@string/pos_member_selection_card_search_title" android:selectAllOnFocus="true" android:digits="@string/memberNumberDigits" />
+                <Button android:id="@id/btnClean" android:background="@drawable/clear_10500" android:visibility="gone" android:layout_width="26.0dip" android:layout_height="26.0dip" android:layout_marginRight="10.0dip" android:layout_alignRight="@id/etPosMemberSearch" android:layout_centerVertical="true" />
+            </RelativeLayout>
+            <View android:background="@color/setting_line_color" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+            <com.laiqian.ui.listview.PageListView android:id="@id/lvPosMember" android:listSelector="@drawable/listview_selector_10500" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" android:scrollbarFadeDuration="0" android:fadeScrollbars="false" android:overScrollMode="never" style="@style/pos_left_lvPosMember" />
+            <TextView android:textSize="@dimen/text_20dp" android:gravity="center" android:id="@id/tvNoMember" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/no_member_data" />
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:id="@id/llKeyboard" android:background="@color/setting_line_color" android:layout_width="262.0dip" android:layout_height="wrap_content">
+            <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="1.0dip">
+                <Button android:id="@id/btnPosPayNumber7" android:text="7" style="@style/keyboard_btn_style_10500" />
+                <Button android:id="@id/btnPosPayNumber8" android:layout_marginLeft="1.0dip" android:layout_marginRight="1.0dip" android:text="8" style="@style/keyboard_btn_style_10500" />
+                <Button android:id="@id/btnPosPayNumber9" android:text="9" style="@style/keyboard_btn_style_10500" />
+            </LinearLayout>
+            <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="1.0dip">
+                <Button android:id="@id/btnPosPayNumber4" android:text="4" style="@style/keyboard_btn_style_10500" />
+                <Button android:id="@id/btnPosPayNumber5" android:layout_marginLeft="1.0dip" android:layout_marginRight="1.0dip" android:text="5" style="@style/keyboard_btn_style_10500" />
+                <Button android:id="@id/btnPosPayNumber6" android:text="6" style="@style/keyboard_btn_style_10500" />
+            </LinearLayout>
+            <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="1.0dip">
+                <Button android:id="@id/btnPosPayNumber1" android:text="1" style="@style/keyboard_btn_style_10500" />
+                <Button android:id="@id/btnPosPayNumber2" android:layout_marginLeft="1.0dip" android:layout_marginRight="1.0dip" android:text="2" style="@style/keyboard_btn_style_10500" />
+                <Button android:id="@id/btnPosPayNumber3" android:text="3" style="@style/keyboard_btn_style_10500" />
+            </LinearLayout>
+            <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <Button android:id="@id/btnPosPayNumberDot" android:text="." style="@style/keyboard_btn_style_10500" />
+                <Button android:id="@id/btnPosPayNumber0" android:layout_marginLeft="1.0dip" android:layout_marginRight="1.0dip" android:text="0" style="@style/keyboard_btn_style_10500" />
+                <Button android:id="@id/btnPosPayNumberBack" android:text="@string/pos_add_member_number_back_title" style="@style/keyboard_btn_style_10500" />
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:background="@color/setting_title_bg_color" android:layout_width="fill_parent" android:layout_height="66.0dip" android:layout_marginTop="1.0dip">
+                <Button android:textSize="20.0dip" android:textColor="@color/setting_text_color1" android:id="@id/btnPosPayBack" android:background="@drawable/setting_button_selector_10500" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="@string/pos_sync_cancel" android:layout_weight="1.0" />
+                <Button android:textSize="20.0dip" android:textColor="@color/red_color_10500" android:id="@id/btnPosQuery" android:background="@drawable/setting_button_selector_10500" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="@string/pos_reprint_search" android:layout_weight="1.0" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

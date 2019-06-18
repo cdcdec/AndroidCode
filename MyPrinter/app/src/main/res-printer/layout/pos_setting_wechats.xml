@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:id="@id/pos_wechat_payment_l" android:visibility="visible" style="@style/pos_setting_right_item">
+        <TextView android:layout_width="wrap_content" android:text="@string/pos_wechat_payment" style="@style/pos_setting_right_item_lab" />
+        <TextView android:id="@id/function_hint_price_orderdishes" android:visibility="gone" style="@style/red_dot_function" />
+        <TextView android:layout_weight="1.0" style="@style/pos_setting_right_item_lab" />
+        <TextView android:textColor="@color/white_color_1033" android:gravity="center" android:id="@id/function_hint_and_evaluate" android:background="@drawable/pos_red_oval" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="20.0dip" android:layout_marginLeft="10.0dip" android:text="@string/lower_rate_activities_in_progress" />
+        <View style="@style/pos_setting_right_item_icon" />
+    </LinearLayout>
+    <LinearLayout android:id="@id/pos_layout_binding_l" android:visibility="visible" style="@style/pos_setting_right_item">
+        <TextView android:id="@id/function_hint_layout_binding" android:visibility="gone" style="@style/red_dot_function" />
+        <TextView android:id="@id/textView3" android:layout_width="wrap_content" android:text="@string/open_samll_shop" style="@style/pos_setting_right_item_lab" />
+        <TextView android:id="@id/textView4" android:layout_weight="1.0" style="@style/pos_setting_right_item_lab" />
+        <View style="@style/pos_setting_right_item_icon" />
+    </LinearLayout>
+    <LinearLayout android:id="@id/wei_order_manage_l" style="@style/pos_setting_right_item">
+        <TextView android:layout_width="wrap_content" android:text="@string/wei_order_manage" style="@style/pos_setting_right_item_lab" />
+        <TextView android:id="@id/function_hint_order_manage" android:visibility="gone" style="@style/red_dot_function" />
+        <TextView android:layout_weight="1.0" style="@style/pos_setting_right_item_lab" />
+        <TextView android:textColor="@color/text_color_grey" android:id="@id/wei_order_manage_state" android:layout_width="wrap_content" android:layout_marginRight="20.0dip" android:text="" style="@style/pos_setting_right_item_lab" />
+        <View style="@style/pos_setting_right_item_icon" />
+    </LinearLayout>
+    <View style="@style/pos_setting_right_item_line" />
+    <LinearLayout android:id="@id/wei_wechat_member_l" style="@style/pos_setting_right_item">
+        <TextView android:layout_width="wrap_content" android:text="@string/wei_wechat_member" style="@style/pos_setting_right_item_lab" />
+        <TextView android:id="@id/function_hint_wechat_member" android:visibility="gone" style="@style/red_dot_function" />
+        <TextView android:layout_weight="1.0" style="@style/pos_setting_right_item_lab" />
+        <View style="@style/pos_setting_right_item_icon" />
+    </LinearLayout>
+    <LinearLayout android:id="@id/wechat_mini_programs_l" style="@style/pos_setting_right_item">
+        <TextView android:layout_width="wrap_content" android:text="@string/wecaht_mini_programs" style="@style/pos_setting_right_item_lab" />
+        <TextView android:id="@id/function_hint_wechat_mini_programs" android:visibility="gone" style="@style/red_dot_function" />
+        <TextView android:layout_weight="1.0" style="@style/pos_setting_right_item_lab" />
+        <View style="@style/pos_setting_right_item_icon" />
+    </LinearLayout>
+    <LinearLayout android:id="@id/wechat_print_advertisement" android:visibility="visible" style="@style/pos_setting_right_item">
+        <TextView android:layout_width="wrap_content" android:text="@string/ticket_advertisement" style="@style/pos_setting_right_item_lab" />
+        <TextView android:id="@id/function_hint_print_advertisement" android:visibility="gone" style="@style/red_dot_function" />
+        <TextView android:layout_weight="1.0" style="@style/pos_setting_right_item_lab" />
+        <TextView android:textColor="@color/white_color_1033" android:gravity="center" android:id="@id/function_hint_and_evaluate" android:background="@drawable/pos_red_oval" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="20.0dip" android:layout_marginLeft="10.0dip" android:text="@string/advertising_earns_revenue" />
+        <View style="@style/pos_setting_right_item_icon" />
+    </LinearLayout>
+</LinearLayout>

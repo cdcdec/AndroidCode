@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              style="@style/ui201404_background_gray">
+
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+        <Spinner
+                android:id="@id/backup_usb_sp"
+                android:visibility="gone"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"/>
+
+        <ListView
+                android:id="@id/backup_menu_list"
+                android:layout_height="0.0dip"
+                android:dividerHeight="0.0dip"
+                android:layout_weight="1.0"
+                style="@style/default_scrollview_style"/>
+
+        <LinearLayout
+                android:textSize="30.0sp"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:id="@id/show_error_msg"
+                android:visibility="gone"
+                android:layout_width="fill_parent"
+                android:layout_height="0.0dip"
+                android:text="@string/backup_menu_no_usb"
+                android:layout_weight="1.0">
+
+            <ImageView
+                    android:layout_width="120.0dip"
+                    android:layout_height="110.0dip"
+                    android:src="@drawable/backup_msg"/>
+
+            <TextView
+                    android:textSize="30.0sp"
+                    android:gravity="center"
+                    android:id="@id/show_no_usb"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24.0dip"
+                    android:text="@string/backup_menu_no_usb"/>
+        </LinearLayout>
+
+        <TextView
+                android:textSize="20.0sp"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:id="@id/BackUpUsbRefresh"
+                android:background="@drawable/red_button_round"
+                android:visibility="gone"
+                android:layout_width="200.0dip"
+                android:layout_marginLeft="10.0dip"
+                android:layout_marginRight="10.0dip"
+                android:layout_marginBottom="10.0dip"
+                android:text="@string/backup_menu_usb_refresh"
+                style="@style/standard_edition_computer_synchronization_download"/>
+
+        <FrameLayout
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            <TextView
+                    android:textSize="20.0sp"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:id="@id/BackUpBtn"
+                    android:background="@drawable/red_button_round"
+                    android:layout_width="200.0dip"
+                    android:layout_marginLeft="10.0dip"
+                    android:layout_marginRight="10.0dip"
+                    android:layout_marginBottom="10.0dip"
+                    android:text="@string/backup_menu_btn"
+                    style="@style/standard_edition_computer_synchronization_download"/>
+
+            <com.laiqian.ui.ProgressBarCircularIndeterminate
+                    android:layout_gravity="center"
+                    android:id="@id/backup_progress"
+                    android:visibility="gone"
+                    android:layout_width="25.0dip"
+                    android:layout_height="25.0dip"
+                    android:layout_marginTop="5.0dip"/>
+        </FrameLayout>
+    </LinearLayout>
+</LinearLayout>

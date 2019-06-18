@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:id="@id/ll_main"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content">
+
+    <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+        <include
+                android:id="@id/type1"
+                layout="@layout/payment_method_item"/>
+
+        <include
+                android:id="@id/type2"
+                layout="@layout/payment_method_item"/>
+
+        <include
+                android:id="@id/type3"
+                layout="@layout/payment_method_item"/>
+    </LinearLayout>
+
+    <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+        <include
+                android:id="@id/type4"
+                layout="@layout/payment_method_item"/>
+
+        <include
+                android:id="@id/type5"
+                layout="@layout/payment_method_item"/>
+
+        <include
+                android:id="@id/type6"
+                layout="@layout/payment_method_item"/>
+    </LinearLayout>
+</LinearLayout>

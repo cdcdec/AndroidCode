@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:id="@id/scrollView" android:background="@color/ui201404_smj_background_lightgray" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:paddingLeft="24.0dip" android:paddingRight="24.0dip" android:paddingBottom="24.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <View android:layout_width="fill_parent" android:layout_height="24.0dip" />
+        <include layout="@layout/version_legacy" />
+        <LinearLayout android:orientation="vertical" android:id="@id/cur_version" android:paddingLeft="0.0dip" android:paddingRight="0.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" style="@style/clickable_linearLayout_rounded_rectangle_radius_min">
+            <FrameLayout android:orientation="horizontal" android:paddingLeft="24.0dip" android:paddingTop="8.0dip" android:paddingRight="24.0dip" android:paddingBottom="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="56.0dip">
+                <TextView android:textSize="20.0sp" android:textColor="@color/member_list_item_max" android:layout_gravity="center|left" android:id="@id/cur_status" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                <Button android:textSize="20.0sp" android:textColor="#ffffffff" android:gravity="center" android:layout_gravity="center|right" android:id="@id/cur_comment" android:background="@drawable/pos_shift_bt_background_red" android:paddingLeft="8.0dip" android:paddingRight="8.0dip" android:layout_width="wrap_content" android:layout_height="40.0dip" />
+            </FrameLayout>
+            <View android:background="#ffd8d8d8" android:layout_width="fill_parent" android:layout_height="1.0px" />
+            <FrameLayout android:paddingLeft="24.0dip" android:paddingTop="10.0dip" android:paddingRight="24.0dip" android:paddingBottom="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:textSize="16.0sp" android:textColor="@color/member_list_item_max" android:gravity="left" android:id="@id/cur_info" android:layout_width="wrap_content" android:layout_height="wrap_content" android:lineSpacingMultiplier="1.75" style="@style/pos_text_style" />
+            </FrameLayout>
+            <FrameLayout android:id="@id/cur_title" android:background="@drawable/ver_gray_rectangle" android:paddingLeft="24.0dip" android:paddingRight="24.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="56.0dip">
+                <TextView android:textSize="16.0sp" android:textColor="@color/member_list_item_max" android:layout_gravity="center|left" android:layout_width="wrap_content" android:layout_height="fill_parent" android:maxHeight="56.0dip" android:text="@string/version_comment_and_score_title" />
+            </FrameLayout>
+            <com.laiqian.ui.listview.ScalableListView android:id="@id/cur_scoreAndCommend" android:visibility="gone" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="wrap_content" android:divider="#ffd7d7d7" android:dividerHeight="1.0px" />
+            <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <View android:background="#ffd8d8d8" android:layout_width="fill_parent" android:layout_height="1.0px" />
+                <TextView android:textSize="20.0sp" android:textColor="#ff999999" android:gravity="center" android:id="@id/cur_no_comment" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="56.0dip" android:text="暂无评论" />
+            </FrameLayout>
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:id="@id/prev_version" android:paddingLeft="0.0dip" android:paddingRight="0.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" style="@style/clickable_linearLayout_rounded_rectangle_radius_min">
+            <FrameLayout android:orientation="horizontal" android:paddingLeft="24.0dip" android:paddingTop="8.0dip" android:paddingRight="24.0dip" android:paddingBottom="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="56.0dip">
+                <TextView android:textSize="20.0sp" android:textColor="@color/member_list_item_max" android:layout_gravity="center|left" android:id="@id/prev_status" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                <Button android:textSize="20.0sp" android:textColor="#ffffffff" android:gravity="center" android:layout_gravity="center|right" android:id="@id/prev_comment" android:background="@drawable/pos_shift_bt_background_red" android:paddingLeft="8.0dip" android:paddingRight="8.0dip" android:layout_width="wrap_content" android:layout_height="40.0dip" />
+            </FrameLayout>
+            <View android:background="#ffd8d8d8" android:layout_width="fill_parent" android:layout_height="1.0px" />
+            <FrameLayout android:paddingLeft="24.0dip" android:paddingTop="10.0dip" android:paddingRight="24.0dip" android:paddingBottom="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:textSize="16.0sp" android:textColor="@color/member_list_item_max" android:gravity="left" android:id="@id/prev_info" android:layout_width="wrap_content" android:layout_height="wrap_content" android:lineSpacingMultiplier="1.75" style="@style/pos_text_style" />
+            </FrameLayout>
+            <FrameLayout android:id="@id/prev_title" android:background="@drawable/ver_gray_rectangle" android:paddingLeft="24.0dip" android:paddingRight="24.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="56.0dip">
+                <TextView android:textSize="16.0sp" android:textColor="@color/member_list_item_max" android:layout_gravity="center|left" android:layout_width="wrap_content" android:layout_height="fill_parent" android:maxHeight="56.0dip" android:text="@string/version_comment_and_score_title" />
+            </FrameLayout>
+            <com.laiqian.ui.listview.ScalableListView android:id="@id/prev_scoreAndCommend" android:visibility="gone" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="wrap_content" android:divider="#ffd7d7d7" android:dividerHeight="1.0px" />
+            <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <View android:background="#ffd8d8d8" android:layout_width="fill_parent" android:layout_height="1.0px" />
+                <TextView android:textSize="20.0sp" android:textColor="#ff999999" android:gravity="center" android:id="@id/prev_no_comment" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="56.0dip" android:text="暂无评论" />
+            </FrameLayout>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

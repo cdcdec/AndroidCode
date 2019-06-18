@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:paddingTop="48.0dip" android:paddingBottom="48.0dip" android:layout_width="fill_parent" style="@style/grey_background"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:textSize="30.0sp" android:gravity="center" android:orientation="vertical" android:id="@id/show_error_msg" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/backup_menu_no_usb">
+        <ImageView android:layout_width="120.0dip" android:layout_height="110.0dip" android:src="@drawable/backup_msg" />
+        <TextView android:textSize="20.0sp" android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="24.0dip" android:text="@string/sealdata_no_need" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:paddingLeft="100.0dip" android:paddingRight="100.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="50.0dip">
+        <Button android:background="@drawable/seal_shape_left" android:layout_width="28.0dip" android:layout_height="12.0dip" android:layout_marginRight="12.0dip" />
+        <TextView android:textSize="16.0sp" android:textColor="#ff7a7a7a" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/sealdata_have_been" />
+        <View android:layout_width="0.0dip" android:layout_height="0.0dip" android:layout_weight="1.0" />
+        <Button android:background="@drawable/seal_shape_mid" android:layout_width="28.0dip" android:layout_height="12.0dip" android:layout_marginRight="12.0dip" />
+        <TextView android:textSize="16.0sp" android:textColor="@color/sealdata_mid" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/sealdata_can_been" />
+        <View android:layout_width="0.0dip" android:layout_height="0.0dip" android:layout_weight="1.0" />
+        <Button android:background="@drawable/seal_shape_right" android:layout_width="28.0dip" android:layout_height="12.0dip" android:layout_marginRight="12.0dip" />
+        <TextView android:textSize="16.0sp" android:textColor="#ff67da86" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/sealdata_local_been" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:paddingLeft="100.0dip" android:paddingRight="65.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="-50.0px">
+        <LinearLayout android:gravity="center" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <RelativeLayout android:gravity="center" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <View android:background="@drawable/seal_round_left" android:layout_width="22.0dip" android:layout_height="22.0dip" android:layout_centerVertical="true" />
+                <View android:id="@id/seek_left" android:background="@color/sealdata_left" android:layout_width="fill_parent" android:layout_height="12.0dip" android:layout_marginLeft="5.0dip" android:layout_marginTop="1.0dip" android:layout_centerVertical="true" />
+            </RelativeLayout>
+        </LinearLayout>
+        <LinearLayout android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="-124.0px" android:layout_weight="2.0">
+            <RelativeLayout android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <View android:background="@drawable/seal_round_mid" android:layout_width="30.0px" android:layout_height="30.0px" android:layout_marginLeft="65.0px" android:layout_toLeftOf="@id/seek_left" android:layout_centerVertical="true" />
+                <View android:background="@drawable/seal_round_right" android:layout_width="30.0px" android:layout_height="30.0px" android:layout_marginRight="65.0px" android:layout_toLeftOf="@id/seek_left" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+                <SeekBar android:layout_gravity="center" android:id="@id/seekBar" android:paddingLeft="75.0px" android:paddingRight="75.0px" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxHeight="12.0dip" android:progressDrawable="@drawable/sealdata_bg_bar" android:minHeight="12.0dip" android:thumb="@drawable/sealdata_bar" android:thumbOffset="75.0px" />
+                <TextView android:textSize="16.0sp" android:textColor="#ff3b3b3b" android:gravity="center" android:id="@id/seekDate" android:layout_width="150.0px" android:layout_height="50.0px" android:text="2015.07" android:layout_toLeftOf="@id/seek_left" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:paddingLeft="93.0dip" android:paddingRight="93.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="16.0sp" android:textColor="#ff3b3b3b" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/sealdata_earliest" android:layout_weight="1.0" />
+        <TextView android:textSize="16.0sp" android:textColor="#ff3b3b3b" android:id="@id/tvStartTime" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="-31.0dip" android:text="201403" android:layout_weight="1.0" />
+        <TextView android:textSize="16.0sp" android:textColor="#ff3b3b3b" android:gravity="right" android:id="@id/tvEndTime" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="201507" android:layout_weight="1.0" />
+    </LinearLayout>
+    <View android:layout_width="0.0dip" android:layout_height="0.0dip" android:layout_weight="1.0" />
+    <TextView android:textSize="20.0sp" android:gravity="center" android:layout_gravity="center" android:id="@id/SealBtn" android:background="@drawable/red_button_round" android:layout_width="200.0dip" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" android:text="@string/sync_seal_data_title" style="@style/standard_edition_computer_synchronization_download" />
+    <LinearLayout android:gravity="center" android:layout_gravity="center" android:id="@id/SealIngLay" android:background="@drawable/grey_button_round" android:layout_width="200.0dip" style="@style/standard_edition_computer_synchronization_download">
+        <com.laiqian.ui.ProgressBarCircularIndeterminate android:id="@id/ivProgress" android:background="@color/red_color_10500" android:layout_width="30.0dip" android:layout_height="30.0dip" android:layout_centerInParent="true" />
+        <TextView android:textSize="20.0sp" android:textColor="#ffffffff" android:layout_gravity="center|left" android:id="@id/SealIng" android:layout_width="40.0dip" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:text="8%" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@android:color/white" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:id="@id/layTimeFrameId" style="@style/pos_date_dialog_linearlayout">
+        <TextView android:layout_width="60.0dip" android:layout_marginLeft="31.0dip" android:layout_marginRight="31.0dip" android:text="@string/pos_date_dialog_date" style="@style/pos_date_dialog_black_text" />
+        <TextView android:text="@string/sync_start_time_title" style="@style/pos_date_dialog_black_text" />
+        <TextView android:id="@id/date_period_begin" android:layout_marginLeft="24.0dip" android:text="2017-7-19    9:00" style="@style/pos_date_dialog_editable_text" />
+    </LinearLayout>
+    <LinearLayout android:id="@id/layTimeFrameEnd" style="@style/pos_date_dialog_linearlayout">
+        <TextView android:layout_marginLeft="122.0dip" android:text="@string/sync_end_time_title" style="@style/pos_date_dialog_black_text" />
+        <TextView android:id="@id/date_period_end" android:layout_marginLeft="24.0dip" android:text="2017-7-20    13:00" style="@style/pos_date_dialog_editable_text" />
+    </LinearLayout>
+</LinearLayout>

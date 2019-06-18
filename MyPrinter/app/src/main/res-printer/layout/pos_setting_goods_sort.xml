@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:id="@id/llGoodsSorting" android:minHeight="56.0dip" style="@style/main_setting_left_ll1"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:id="@id/tvGoodsName" android:text="@string/pos_product_sort" style="@style/pop_left_text_style_10500" />
+    <TextView android:id="@id/tvGoodsSorting" style="@style/pop_right_text_style_10500" />
+</LinearLayout>

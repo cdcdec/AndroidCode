@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:background="@color/pos_detailed_background" android:layout_width="fill_parent" android:layout_height="fill_parent" style="@style/main_setting_scrollview_style"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:layout_gravity="center_horizontal" android:orientation="vertical" android:paddingTop="24.0dip" android:paddingBottom="24.0dip" android:layout_width="552.0dip" android:layout_height="wrap_content">
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:background="@drawable/pos_shadow_sawtooth_top" android:layout_width="fill_parent" android:layout_height="90.0dip">
+            <TextView android:text="@string/pos_report_imprest" style="@style/pos_report_detailed_top_text_lab" />
+            <TextView android:id="@id/imprest" style="@style/pos_report_detailed_top_text_value" />
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:id="@id/amountAll" android:background="@drawable/pos_shadow_sawtooth_bottom" android:paddingTop="8.0dip" android:paddingBottom="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <LinearLayout android:orientation="vertical" android:background="@drawable/pos_shadow" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="24.0dip">
+            <LinearLayout android:layout_gravity="center_horizontal" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="40.0dip">
+                <TextView android:layout_height="fill_parent" android:text="@string/pos_report_transaction_details_user" style="@style/pos_report_detailed_text_black" />
+                <TextView android:id="@id/user_name" android:layout_height="fill_parent" style="@style/pos_report_detailed_text_black" />
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <LinearLayout android:orientation="vertical" android:id="@id/cash_l" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                    <TextView android:layout_gravity="center_horizontal" android:layout_height="40.0dip" android:text="@string/pos_report_shift_begintime" style="@style/pos_report_detailed_text_black" />
+                    <TextView android:layout_gravity="center_horizontal" android:id="@id/beginTime" android:layout_height="48.0dip" style="@style/pos_report_detailed_text_red" />
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:id="@id/member_l" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                    <TextView android:layout_gravity="center_horizontal" android:layout_height="40.0dip" android:text="@string/pos_report_shift_endtime" style="@style/pos_report_detailed_text_black" />
+                    <TextView android:layout_gravity="center_horizontal" android:id="@id/endTime" android:layout_height="48.0dip" style="@style/pos_report_detailed_text_red" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

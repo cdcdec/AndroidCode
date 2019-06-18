@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/pos_background_white" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/layout_parameters" android:paddingTop="8.0dip" android:paddingBottom="8.0dip" android:layout_width="800.0dip" android:layout_height="wrap_content">
+        <TextView android:textStyle="bold" android:gravity="center|left" android:id="@id/tv_title" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="fill_parent" android:layout_height="56.0dip" style="@style/pos_product_dialog_lab" />
+        <LinearLayout android:id="@id/layout_threshold" android:layout_below="@id/tv_title" style="@style/pos_product_dialog_group">
+            <TextView android:text="@string/weshop_coupon_threshold" style="@style/pos_product_dialog_lab" />
+            <EditText android:id="@id/et_threshold" android:inputType="numberDecimal" style="@style/pos_product_dialog_edit" />
+        </LinearLayout>
+        <LinearLayout android:id="@id/layout_discount" android:clickable="true" android:layout_toRightOf="@id/layout_threshold" android:layout_alignTop="@id/layout_threshold" style="@style/pos_product_dialog_group">
+            <TextView android:text="@string/weshop_coupon_discount" style="@style/pos_product_dialog_lab" />
+            <EditText android:id="@id/et_discount" android:inputType="numberDecimal" style="@style/pos_product_dialog_edit" />
+        </LinearLayout>
+    </RelativeLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/operation" android:layout_width="200.0dip" android:layout_height="wrap_content" android:layout_marginLeft="24.0dip" android:layout_toRightOf="@id/layout_parameters" android:layout_alignTop="@id/layout_parameters" android:layout_alignBottom="@id/layout_parameters">
+        <TextView android:id="@id/tv_cancel" android:text="@string/pos_product_dialog_canal" style="@style/pos_product_dialog_button" />
+        <TextView android:id="@id/tv_delete" android:layout_marginTop="-1.0dip" android:text="@string/pos_product_delete" style="@style/pos_product_dialog_button" />
+        <TextView android:textColor="@color/ok_text_color" android:id="@id/tv_confirm" android:background="@drawable/pos_product_dialog_button_red" android:layout_marginTop="-1.0dip" android:text="@string/pos_product_dialog_sure" style="@style/pos_product_dialog_button" />
+    </LinearLayout>
+</RelativeLayout>

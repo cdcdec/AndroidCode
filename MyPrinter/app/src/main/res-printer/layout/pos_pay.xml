@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@drawable/mainmenu_background" android:layout_width="600.0dip" android:layout_height="wrap_content" android:minWidth="280.0dip" android:minHeight="280.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:textColor="@color/adsbar_text_color" android:orientation="horizontal" android:id="@id/linearlayout_top_title_bar" android:background="@drawable/adsbar_background" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0">
+        <LinearLayout android:gravity="left" android:orientation="horizontal" android:id="@id/linearlayout_top_left_logo" android:padding="5.0dip" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_weight="0.0">
+            <ImageView android:layout_gravity="center" android:id="@id/ss_logo" android:layout_width="20.0dip" android:layout_height="20.0dip" android:src="@drawable/pos_logo" android:layout_centerHorizontal="true" />
+            <TextView android:textSize="16.0dip" android:textStyle="bold" android:textColor="@color/adsbar_text_color" android:layout_gravity="center" android:id="@id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="4.0dip" android:text="请输入实收金额" android:layout_centerHorizontal="true" />
+        </LinearLayout>
+        <LinearLayout android:gravity="right" android:orientation="horizontal" android:id="@id/linearlayout_top_right" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <Button android:layout_gravity="center" android:id="@id/btnPosPayBack" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="返回[ESC]" android:layout_centerHorizontal="true" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:id="@id/linearlayout_content_listview_barcode_keyboard_summary_submit" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:id="@id/linearlayout_content_listview_barcode_keyboard_summary_submit_left" android:padding="5.0dip" android:layout_width="350.0dip" android:layout_height="fill_parent">
+            <ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <TableLayout android:id="@id/tablelayout_content_listview" android:layout_width="fill_parent" android:layout_height="fill_parent" android:stretchColumns="*">
+                    <TableRow>
+                        <TextView android:textSize="22.0dip" android:gravity="center" android:padding="3.0dip" android:text="金额" />
+                        <TextView android:enabled="false" android:textSize="22.0dip" android:gravity="right" android:id="@id/tvPosPayAmount" android:padding="3.0dip" android:text="2550.00" android:hint="支持2位小数" android:selectAllOnFocus="true" />
+                    </TableRow>
+                    <TableRow>
+                        <TextView android:textSize="22.0dip" android:gravity="center" android:padding="3.0dip" android:text="折扣" />
+                        <TextView android:enabled="false" android:textSize="22.0dip" android:gravity="right" android:id="@id/tvPosPayDiscountAmount" android:padding="3.0dip" android:text="2550.00" android:hint="支持2位小数" android:selectAllOnFocus="true" />
+                    </TableRow>
+                    <TableRow>
+                        <TextView android:textSize="22.0dip" android:gravity="center" android:id="@id/tvPosPayReceivableLable" android:padding="3.0dip" android:text="应收" />
+                        <TextView android:enabled="false" android:textSize="22.0dip" android:gravity="right" android:id="@id/tvPosPayReceivable" android:padding="3.0dip" android:text="2550.00" android:hint="支持2位小数" android:selectAllOnFocus="true" />
+                    </TableRow>
+                    <TableRow>
+                        <TextView android:textSize="22.0dip" android:textColor="@color/TextColorBlack" android:gravity="center" android:padding="3.0dip" android:text="找零" />
+                        <TextView android:enabled="false" android:textSize="22.0dip" android:textColor="@color/TextColorBlack" android:gravity="right" android:id="@id/tvPosPayCheck" android:padding="3.0dip" android:text="50.00" android:hint="支持2位小数" android:selectAllOnFocus="true" />
+                    </TableRow>
+                    <TableRow>
+                        <TextView android:textSize="22.0dip" android:textColor="@color/TextColorBlack" android:gravity="center" android:id="@id/tvPosPayReceivedLable" android:padding="3.0dip" android:text="实收" />
+                        <EditText android:textSize="22.0dip" android:gravity="right" android:id="@id/tvPosPayReceived" android:tag="edittext_received" android:padding="3.0dip" android:text="0.00" android:hint="支持2位小数" android:selectAllOnFocus="true" android:numeric="decimal" android:digits="0123456789." android:inputType="numberDecimal" />
+                    </TableRow>
+                    <TableRow>
+                        <TextView android:textSize="22.0dip" android:textColor="@color/TextColorBlack" android:gravity="center" android:padding="3.0dip" android:visibility="gone" android:text="现金" />
+                        <EditText android:textSize="22.0dip" android:gravity="right" android:id="@id/etPosPayPaymentCash" android:tag="edittext_received" android:padding="3.0dip" android:visibility="gone" android:text="0" android:hint="支持2位小数" android:singleLine="true" android:selectAllOnFocus="true" android:numeric="decimal" android:digits="0123456789." android:inputType="numberDecimal" />
+                    </TableRow>
+                    <TableRow>
+                        <TextView android:textSize="22.0dip" android:gravity="center" android:padding="3.0dip" android:visibility="gone" android:text="会员卡" />
+                        <EditText android:textSize="22.0dip" android:gravity="right" android:id="@id/etPosPayPaymentMemberCard" android:tag="edittext_received" android:padding="3.0dip" android:visibility="gone" android:text="0" android:hint="支持2位小数" android:singleLine="true" android:selectAllOnFocus="true" android:numeric="decimal" android:digits="0123456789." android:inputType="numberDecimal" />
+                    </TableRow>
+                    <TableRow>
+                        <TextView android:textSize="22.0dip" android:gravity="center" android:padding="3.0dip" android:visibility="gone" android:text="银行卡" />
+                        <EditText android:textSize="22.0dip" android:gravity="right" android:id="@id/etPosPayPaymentBankCard" android:tag="edittext_received" android:padding="3.0dip" android:visibility="gone" android:text="0" android:hint="支持2位小数" android:singleLine="true" android:selectAllOnFocus="true" android:numeric="decimal" android:digits="0123456789." android:inputType="numberDecimal" />
+                    </TableRow>
+                    <TableRow>
+                        <TextView android:textSize="22.0dip" android:gravity="center" android:padding="3.0dip" android:visibility="gone" android:text="优惠券" />
+                        <EditText android:textSize="22.0dip" android:gravity="right" android:id="@id/etPosPayPaymentCoupon" android:tag="edittext_received" android:padding="3.0dip" android:visibility="gone" android:text="0" android:hint="支持2位小数" android:singleLine="true" android:selectAllOnFocus="true" android:numeric="decimal" android:digits="0123456789." android:inputType="numberDecimal" />
+                    </TableRow>
+                    <TableRow>
+                        <TextView android:textSize="22.0dip" android:gravity="center" android:padding="3.0dip" android:text="付款方式" />
+                        <LinearLayout android:gravity="center" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                            <RadioGroup android:gravity="center" android:orientation="horizontal" android:id="@id/rgPosPayPayment" android:layout_width="fill_parent" android:layout_height="fill_parent" android:checkedButton="@id/rbPosPayPaymentCash">
+                                <RadioButton android:textColor="#ff000000" android:id="@id/rbPosPayPaymentCash" android:tag="radiobutton_1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="现金" />
+                                <RadioButton android:textColor="#ff000000" android:id="@id/rbPosPayPaymentCard" android:tag="radiobutton_2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="银行卡" />
+                                <RadioButton android:textColor="#ff000000" android:id="@id/rbPosPayPaymentMember" android:tag="radiobutton_3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="会员卡" />
+                            </RadioGroup>
+                        </LinearLayout>
+                    </TableRow>
+                </TableLayout>
+            </ScrollView>
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:id="@id/linearlayout_content_listview_barcode_keyboard_summary_submit_right" android:background="@drawable/adsbar_background" android:padding="5.0dip" android:layout_width="wrap_content" android:layout_height="fill_parent">
+            <LinearLayout android:orientation="vertical" android:id="@id/linearlayout_content_keyboard" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="0.0">
+                <TableLayout android:id="@id/tablelayout_content_keyboard" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                    <TableRow>
+                        <Button android:textSize="22.0dip" android:id="@id/btnPosPayNumber7" android:layout_width="fill_parent" android:layout_height="60.0dip" android:text="7" android:layout_weight="1.0" />
+                        <Button android:textSize="22.0dip" android:id="@id/btnPosPayNumber8" android:layout_width="fill_parent" android:layout_height="60.0dip" android:text="8" android:layout_weight="1.0" />
+                        <Button android:textSize="22.0dip" android:id="@id/btnPosPayNumber9" android:layout_width="fill_parent" android:layout_height="60.0dip" android:text="9" android:layout_weight="1.0" />
+                    </TableRow>
+                    <TableRow>
+                        <Button android:textSize="22.0dip" android:id="@id/btnPosPayNumber4" android:layout_width="100.0dip" android:layout_height="60.0dip" android:text="4" android:layout_weight="1.0" />
+                        <Button android:textSize="22.0dip" android:id="@id/btnPosPayNumber5" android:layout_width="100.0dip" android:layout_height="60.0dip" android:text="5" android:layout_weight="1.0" />
+                        <Button android:textSize="22.0dip" android:id="@id/btnPosPayNumber6" android:layout_width="100.0dip" android:layout_height="60.0dip" android:text="6" android:layout_weight="1.0" />
+                    </TableRow>
+                    <TableRow>
+                        <Button android:textSize="22.0dip" android:id="@id/btnPosPayNumber1" android:layout_width="100.0dip" android:layout_height="60.0dip" android:text="1" android:layout_weight="1.0" />
+                        <Button android:textSize="22.0dip" android:id="@id/btnPosPayNumber2" android:layout_width="100.0dip" android:layout_height="60.0dip" android:text="2" android:layout_weight="1.0" />
+                        <Button android:textSize="22.0dip" android:id="@id/btnPosPayNumber3" android:layout_width="100.0dip" android:layout_height="60.0dip" android:text="3" android:layout_weight="1.0" />
+                    </TableRow>
+                    <TableRow>
+                        <Button android:textSize="22.0dip" android:id="@id/btnPosPayNumber0" android:layout_width="100.0dip" android:layout_height="60.0dip" android:text="0" android:layout_weight="1.0" />
+                        <Button android:textSize="22.0dip" android:id="@id/btnPosPayNumberDot" android:layout_width="100.0dip" android:layout_height="60.0dip" android:text="." android:layout_weight="1.0" />
+                        <Button android:textSize="22.0dip" android:id="@id/btnPosPayNumberBack" android:layout_width="100.0dip" android:layout_height="60.0dip" android:text="退格" android:layout_weight="1.0" />
+                    </TableRow>
+                </TableLayout>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:id="@id/linearlayout_content_submit" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0">
+                <Button android:textSize="22.0dip" android:gravity="center" android:id="@id/btnPosPaySubmit" android:layout_width="fill_parent" android:layout_height="100.0dip" android:text="结算[空格键]" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:id="@id/linearlayout_bottom_buttons" android:background="@drawable/adsbar_background" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="0.0">
+        <Button android:id="@id/btnPosPayPaymentSwitch" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="切换付款[F3]" android:layout_weight="1.0" />
+        <Button android:id="@id/btnPosPayHold" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="挂单[F4]" android:layout_weight="1.0" />
+        <Button android:id="@id/btnPosPaySubmitWithReceipt" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="收银打票[空格]" android:layout_weight="1.0" />
+        <Button android:id="@id/btnPosPaySubmitWithoutReceipt" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="收银不打票[F5]" android:layout_weight="1.0" />
+        <Button android:id="@id/btnPosPaySettings" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="设置[F10]" android:layout_weight="1.0" />
+    </LinearLayout>
+</LinearLayout>

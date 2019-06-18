@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:paddingBottom="10.0dip" style="@style/grey_background"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <TextView android:id="@id/sl_UserName" style="@style/textview_above_round_corner_linearLayout" />
+            <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <TextView android:id="@id/sl_startTimeTxt" android:text="@string/sl_start_time_txt" style="@style/textview_above_round_corner_linearLayout" />
+                    <TextView android:id="@id/sl_startTime" android:text="2014-01-01 08:01:01" style="@style/textview_above_round_corner_linearLayout" />
+                </LinearLayout>
+                <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <TextView android:id="@id/sl_endTimeTxt" android:text="@string/sl_end_time_txt" style="@style/textview_above_round_corner_linearLayout" />
+                    <TextView android:id="@id/sl_endTime" android:text="" style="@style/textview_above_round_corner_linearLayout" />
+                </LinearLayout>
+            </LinearLayout>
+            <TextView android:text="@string/sl_transactions_txt" style="@style/textview_above_round_corner_linearLayout" />
+            <LinearLayout style="@style/common_round_corner_linearLayout">
+                <LinearLayout style="@style/linearLayout_In_commonRoundCornerLinearLayout">
+                    <TextView android:text="@string/sl_imprest_txt" style="@style/lable_In_commonRoundCornerLinearLayout" />
+                    <TextView android:id="@id/sl_imprest" style="@style/common_textview_black_style" />
+                </LinearLayout>
+                <LinearLayout style="@style/linearLayout_In_commonRoundCornerLinearLayout">
+                    <TextView android:text="@string/sl_sale_amount_txt" style="@style/lable_In_commonRoundCornerLinearLayout" />
+                    <TextView android:id="@id/sl_sale_amount" style="@style/common_textview_black_style" />
+                    <TextView android:text="@string/sl_cash_amount_txt" style="@style/common_textview_black_style" />
+                    <TextView android:id="@id/sl_cash_amount" style="@style/common_textview_black_style" />
+                    <TextView android:text="@string/sl_bank_amount_txt" style="@style/common_textview_black_style" />
+                    <TextView android:id="@id/sl_bank_amount" style="@style/common_textview_black_style" />
+                    <TextView android:visibility="gone" android:text="@string/sl_alipay_amount_txt" style="@style/common_textview_black_style" />
+                    <TextView android:id="@id/sl_alipay_amount" android:visibility="gone" style="@style/common_textview_black_style" />
+                    <TextView android:text="@string/sl_member_amount_txt" style="@style/common_textview_black_style" />
+                    <TextView android:id="@id/sl_member_amount" style="@style/common_textview_black_style" />
+                    <TextView android:text="@string/sl_brackets" style="@style/common_textview_black_style" />
+                </LinearLayout>
+                <LinearLayout style="@style/linearLayout_In_commonRoundCornerLinearLayout">
+                    <TextView android:text="@string/sl_return_amount_txt" style="@style/lable_In_commonRoundCornerLinearLayout" />
+                    <TextView android:id="@id/sl_return_amount" style="@style/common_textview_black_style" />
+                    <TextView android:text="@string/sl_cash_amount_txt" style="@style/common_textview_black_style" />
+                    <TextView android:id="@id/sl_return_cash_amount" style="@style/common_textview_black_style" />
+                    <TextView android:text="@string/sl_bank_amount_txt" style="@style/common_textview_black_style" />
+                    <TextView android:id="@id/sl_return_bank_amount" style="@style/common_textview_black_style" />
+                    <TextView android:visibility="gone" android:text="@string/sl_alipay_amount_txt" style="@style/common_textview_black_style" />
+                    <TextView android:id="@id/sl_return_alipay_amount" android:visibility="gone" style="@style/common_textview_black_style" />
+                    <TextView android:text="@string/sl_member_amount_txt" style="@style/common_textview_black_style" />
+                    <TextView android:id="@id/sl_return_member_amount" style="@style/common_textview_black_style" />
+                    <TextView android:text="@string/sl_brackets" style="@style/common_textview_black_style" />
+                </LinearLayout>
+                <LinearLayout style="@style/linearLayout_In_commonRoundCornerLinearLayout">
+                    <TextView android:text="@string/sl_member_charge_amount_txt" style="@style/lable_In_commonRoundCornerLinearLayout" />
+                    <TextView android:id="@id/sl_member_charge_amount" style="@style/common_textview_black_style" />
+                </LinearLayout>
+                <LinearLayout style="@style/linearLayout_In_commonRoundCornerLinearLayout">
+                    <TextView android:text="@string/sl_total_amount_txt" style="@style/lable_In_commonRoundCornerLinearLayout" />
+                    <TextView android:id="@id/sl_total_amount" style="@style/common_textview_black_style" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

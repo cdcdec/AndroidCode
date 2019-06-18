@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout style="@style/new_confirm_dialog_father"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:id="@id/ss_top" style="@style/new_pos_dialog_top">
+        <Button android:id="@id/btnPosPayBack" android:visibility="invisible" style="@style/new_pos_dialog_logo_text_day" />
+        <TextView android:id="@id/ss_title" android:text="@string/new_pos_confirm_title" style="@style/new_pos_dialog_title_day" />
+        <Button android:id="@id/ss_btn" android:visibility="invisible" android:text="@string/sync_setting" android:drawableRight="@drawable/setting_201407" style="@style/new_pos_dialog_btn_day" />
+    </LinearLayout>
+    <View android:id="@id/lines" android:layout_below="@id/ss_top" style="@style/new_pos_dialog_line_day" />
+    <LinearLayout android:orientation="vertical" android:id="@id/ss_bottom" android:layout_below="@id/lines" style="@style/new_pos_dialog_bottom">
+        <LinearLayout android:id="@id/ss_bottom_main" android:padding="0.0dip" style="@style/new_pos_dialog_bottom_main">
+            <LinearLayout android:orientation="horizontal" android:padding="15.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="150.0px">
+                <TextView android:textSize="@dimen/text_heigh" android:textColor="@color/pos_text_color" android:gravity="center" android:id="@id/ss_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0px" android:layout_marginRight="10.0px" android:layout_marginBottom="20.0px" android:text="@string/new_pos_confirm_wifi_pwd" />
+                <EditText android:textSize="@dimen/text_22" android:id="@id/ss_edit" android:tag="edittext_received" android:background="@drawable/text_background_input" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="wrap_content" android:hint="@string/new_pos_confirm_connect_hint" android:selectAllOnFocus="true" android:layout_weight="1.0" />
+            </LinearLayout>
+            <LinearLayout android:id="@id/sync_endDateLl" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <LinearLayout style="@style/linearLayout_before_pencil" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:layout_marginLeft="0.0dip" android:layout_marginRight="0.0dip" style="@style/linearLayout_border_center_style">
+            <Button android:textSize="18.0sp" android:id="@id/confirm_left" android:tag="@string/main_menu_category_sync" android:layout_marginRight="10.0dip" android:layout_weight="1.0" style="@style/new_pos_dialog_button_day" />
+            <Button android:textSize="18.0sp" android:id="@id/cancle" android:text="@string/pos_dialog_confirm_no" android:layout_weight="1.0" style="@style/new_pos_dialog_button_confirm" />
+            <Button android:textSize="18.0sp" android:id="@id/confirm_right" android:tag="@string/main_menu_category_sync" android:visibility="gone" android:layout_marginLeft="10.0dip" android:layout_weight="1.0" style="@style/new_pos_dialog_button_day" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

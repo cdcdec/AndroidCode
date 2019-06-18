@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:background="@color/setting_bg_color"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+    <LinearLayout
+            android:orientation="vertical"
+            android:id="@+id/left"
+            android:layout_width="250.0dip"
+            android:layout_height="fill_parent">
+
+        <TextView
+                android:textSize="16.0dip"
+                android:textColor="@color/setting_text_color2"
+                android:gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="36.0dip"
+                android:layout_marginLeft="24.0dip"
+                android:text="@string/pos_use_setting"/>
+
+        <LinearLayout
+                android:id="@id/function_introduction"
+                style="@style/main_setting_left_ll1">
+
+            <ImageView
+                    android:id="@id/ivGroupImage"
+                    android:src="@drawable/function_introduction"
+                    style="@style/main_setting_left_imageview"/>
+
+            <TextView
+                    android:id="@id/tvGroupName"
+                    android:layout_width="wrap_content"
+                    android:text="@string/pos_function_introduction"
+                    style="@style/main_setting_left_tv2"/>
+        </LinearLayout>
+
+        <LinearLayout
+                android:id="@id/qrcode_setting"
+                style="@style/main_setting_left_ll1">
+
+            <ImageView
+                    android:id="@id/ivGroupImage"
+                    android:src="@drawable/qrcode_setting"
+                    style="@style/main_setting_left_imageview"/>
+
+            <TextView
+                    android:id="@id/tvGroupName"
+                    android:layout_width="wrap_content"
+                    android:text="@string/pos_qrcode_setting"
+                    style="@style/main_setting_left_tv2"/>
+        </LinearLayout>
+
+        <LinearLayout
+                android:id="@id/pay_and_sales"
+                style="@style/main_setting_left_ll1">
+
+            <ImageView
+                    android:src="@drawable/icon_weshop_payment"
+                    style="@style/main_setting_left_imageview"/>
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:text="@string/pos_pay_and_sales"
+                    style="@style/main_setting_left_tv2"/>
+        </LinearLayout>
+
+        <LinearLayout
+                android:id="@id/layout_function_switch"
+                style="@style/main_setting_left_ll1">
+
+            <ImageView
+                    android:src="@drawable/icon_function_setting"
+                    style="@style/main_setting_left_imageview"/>
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:text="@string/weshop_payment_function_switch_title"
+                    style="@style/main_setting_left_tv2"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+            android:id="@id/line"
+            android:background="@color/setting_line_color"
+            android:layout_width="1.0px"
+            android:layout_height="fill_parent"
+            android:layout_toRightOf="@id/left"/>
+
+    <FrameLayout
+            android:id="@id/fragment_container"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_toRightOf="@id/line"/>
+</RelativeLayout>

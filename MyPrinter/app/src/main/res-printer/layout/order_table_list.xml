@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <GridView android:scrollbarSize="4.0dip" android:scrollbarThumbVertical="@drawable/pos_scroll_bar_background" android:scrollbarStyle="outsideOverlay" android:id="@id/original_list" android:scrollbars="vertical" android:fadingEdge="none" android:clickable="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:listSelector="#00000000" android:scrollingCache="false" android:numColumns="3" android:divider="@color/setting_line_color" android:dividerHeight="1.0dip" android:layout_alignParentTop="true" android:fadeScrollbars="true" android:overScrollMode="never" />
+</RelativeLayout>

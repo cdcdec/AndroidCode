@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout style="@style/member_setting_background"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:autolistview="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:id="@id/ll_left" android:background="@color/white_color_1033" android:layout_width="360.0dip" android:layout_height="fill_parent">
+        <com.laiqian.ui.listview.PosAutoListView android:id="@id/pl_lv" android:layout_width="360.0dip" android:layout_height="fill_parent" android:choiceMode="singleChoice" style="@style/default_listview_style" />
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <TextView android:textSize="21.0dip" android:textColor="@color/member_list_item_min" android:gravity="center" android:id="@id/tvNoMemberData" android:visibility="gone" android:clickable="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/no_member_data" />
+        <com.laiqian.ui.listview.PosAutoListView android:id="@id/lvMemberRecord" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/default_listview_style" />
+    </LinearLayout>
+</LinearLayout>

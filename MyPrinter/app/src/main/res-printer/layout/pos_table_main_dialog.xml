@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/pos_background_white" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/parameter" android:paddingTop="8.0dip" android:paddingBottom="8.0dip" android:layout_width="801.0dip" android:layout_height="wrap_content">
+        <TextView android:textStyle="bold" android:gravity="center|left" android:id="@id/title" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="fill_parent" android:layout_height="56.0dip" style="@style/pos_product_dialog_lab" />
+        <GridLayout android:orientation="horizontal" android:id="@id/product_info" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/title" android:columnCount="2">
+            <LinearLayout android:id="@id/aera_l" android:background="@drawable/pos_simple_click_background" android:clickable="true" style="@style/pos_product_dialog_group">
+                <TextView android:gravity="center|left" android:text="@string/telephone_area" style="@style/pos_product_dialog_lab" />
+                <TextView android:id="@id/tv_area" android:background="@null" style="@style/pos_product_dialog_edit" />
+            </LinearLayout>
+            <LinearLayout android:id="@id/table_name_l" style="@style/pos_product_dialog_group">
+                <TextView android:gravity="center|left" android:text="@string/pos_table_number_title" style="@style/pos_product_dialog_lab" />
+                <EditText android:id="@id/name" style="@style/pos_product_dialog_edit" />
+            </LinearLayout>
+            <LinearLayout android:id="@id/table_max_person_l" style="@style/pos_product_dialog_group">
+                <TextView android:gravity="center|left" android:text="@string/pos_several_person_seat" style="@style/pos_product_dialog_lab" />
+                <EditText android:id="@id/max_person" android:inputType="number" style="@style/pos_product_dialog_edit" />
+            </LinearLayout>
+        </GridLayout>
+    </RelativeLayout>
+    <FrameLayout android:id="@id/operation" android:layout_width="200.0dip" android:layout_height="wrap_content" android:layout_marginLeft="24.0dip" android:layout_toRightOf="@id/parameter" android:layout_alignTop="@id/parameter" android:layout_alignBottom="@id/parameter">
+        <LinearLayout android:orientation="vertical" android:id="@id/table_update_bottom" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <TextView android:id="@id/canal" android:text="@string/pos_product_dialog_canal" style="@style/pos_product_dialog_button" />
+            <TextView android:id="@id/delete" android:layout_marginTop="-1.0dip" android:text="@string/pos_product_delete" style="@style/pos_product_dialog_button" />
+            <TextView android:textColor="@color/ok_text_color" android:id="@id/sure" android:background="@drawable/pos_product_dialog_button_red" android:layout_marginTop="-1.0dip" android:text="@string/pos_product_dialog_sure" style="@style/pos_product_dialog_button" />
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:id="@id/table_create_bottom" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <TextView android:id="@id/table_create_canal" android:text="@string/pos_product_dialog_canal" style="@style/pos_product_dialog_button" />
+            <TextView android:textColor="@color/pos_text_red" android:id="@id/table_create_save" android:layout_marginTop="-1.0dip" android:text="@string/pos_product_dialog_save" style="@style/pos_product_dialog_button" />
+            <TextView android:textColor="@color/ok_text_color" android:id="@id/table_create_save_new" android:background="@drawable/pos_product_dialog_button_red" android:layout_marginTop="-1.0dip" android:text="@string/pos_product_dialog_savenew" style="@style/pos_product_dialog_button" />
+        </LinearLayout>
+    </FrameLayout>
+</RelativeLayout>

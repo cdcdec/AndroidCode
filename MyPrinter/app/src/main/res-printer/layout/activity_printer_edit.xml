@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:background="@color/pos_big_b_color_10800"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+    <LinearLayout
+            android:layout_gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingTop="24.0dip"
+            android:paddingBottom="24.0dip"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:layout_width="600.0dip"
+            android:layout_height="fill_parent">
+
+        <LinearLayout
+                android:orientation="vertical"
+                android:id="@id/layout_name"
+                android:layout_width="600.0dip"
+                android:layout_height="wrap_content"/>
+
+        <LinearLayout
+                android:orientation="vertical"
+                android:id="@id/layout_usage"
+                android:layout_width="600.0dip"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24.0dip"/>
+
+        <LinearLayout
+                android:orientation="vertical"
+                android:id="@id/layout_usage_setting"
+                android:layout_width="600.0dip"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24.0dip"/>
+
+        <LinearLayout
+                android:orientation="vertical"
+                android:id="@id/layout_printer"
+                android:layout_width="600.0dip"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24.0dip"/>
+
+        <LinearLayout
+                android:orientation="vertical"
+                android:id="@id/layout_printer_status"
+                android:layout_width="600.0dip"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24.0dip"/>
+
+        <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="600.0dip"
+                android:layout_height="56.0dip"
+                android:layout_marginTop="24.0dip">
+
+            <Button
+                    android:textSize="20.0dip"
+                    android:textColor="@color/main_text_color"
+                    android:id="@id/btn_delete"
+                    android:background="@drawable/pos_shift_bt_background"
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="12.0dip"
+                    android:layout_marginRight="12.0dip"
+                    android:layout_weight="1.0"/>
+
+            <Button
+                    android:textSize="20.0dip"
+                    android:textColor="@color/main_text_color"
+                    android:id="@id/btn_print"
+                    android:background="@drawable/pos_shift_bt_background"
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="12.0dip"
+                    android:layout_marginRight="12.0dip"
+                    android:layout_weight="1.0"/>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

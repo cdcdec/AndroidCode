@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout style="@style/light_grey_background"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <EditText android:textSize="20.0dip" android:textColor="@color/member_list_item_max" android:gravity="center|left|top" android:id="@id/if_feedback" android:hint="@string/pos_upgrade_feedback_hint" style="@style/editext_feedback_style" />
+</LinearLayout>

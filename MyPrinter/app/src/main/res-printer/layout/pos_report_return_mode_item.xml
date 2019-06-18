@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="@drawable/pos_simple_click_background" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="73.0dip">
+        <TextView android:textSize="16.0dip" android:textColor="@color/pos_text_black" android:id="@id/table_number" android:layout_width="136.0dip" android:layout_height="wrap_content" android:layout_marginLeft="12.0dip" android:layout_marginTop="12.0dip" android:text="这里是牌号" android:singleLine="true" />
+        <TextView android:textSize="16.0dip" android:textColor="@color/pos_text_black" android:id="@id/products" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="这里是商品" android:singleLine="true" android:layout_toRightOf="@id/table_number" android:layout_alignTop="@id/table_number" />
+        <TextView android:textSize="16.0dip" android:textColor="@color/pos_text_grey" android:id="@id/date_value" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="7.0dip" android:text="这里是时间" android:singleLine="true" android:layout_alignLeft="@id/table_number" android:layout_alignParentBottom="true" />
+        <TextView android:textSize="16.0dip" android:textColor="@color/pos_text_grey" android:id="@id/pay_lab" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/pos_return_item_amount" android:singleLine="true" android:layout_toRightOf="@id/table_number" android:layout_alignLeft="@id/products" android:layout_alignTop="@id/date_value" />
+        <TextView android:textSize="16.0dip" android:textColor="@color/pos_text_grey" android:id="@id/pay_value" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:text="这里是支付信息" android:singleLine="true" android:layout_toRightOf="@id/pay_lab" android:layout_alignTop="@id/date_value" />
+        <View android:layout_alignParentBottom="true" style="@style/pos_line_h" />
+    </RelativeLayout>
+</FrameLayout>

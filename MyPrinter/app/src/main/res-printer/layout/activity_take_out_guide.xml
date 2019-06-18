@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:background="@color/pos_background_white"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+    <RelativeLayout
+            android:orientation="vertical"
+            android:layout_width="300.0dip"
+            android:layout_height="206.0dip"
+            android:layout_centerInParent="true">
+
+        <TextView
+                android:textSize="20.0dip"
+                android:textColor="#ffffffff"
+                android:gravity="center"
+                android:id="@id/tv_start"
+                android:background="@drawable/submit_btn_selector_1033"
+                android:layout_width="fill_parent"
+                android:layout_height="56.0dip"
+                android:layout_alignParentBottom="true"/>
+
+        <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginBottom="30.0dip"
+                android:layout_above="@id/tv_start">
+
+            <RelativeLayout
+                    android:orientation="vertical"
+                    android:id="@id/layout_koubei"
+                    android:background="@drawable/selector_square"
+                    android:layout_width="120.0dip"
+                    android:layout_height="120.0dip"
+                    android:layout_marginRight="18.0dip"
+                    android:layout_weight="1.0">
+
+                <ImageView
+                        android:id="@id/iv_tdd"
+                        android:layout_width="60.0dip"
+                        android:layout_height="60.0dip"
+                        android:layout_marginTop="18.0dip"
+                        android:src="@drawable/icon_tdd"
+                        android:layout_centerHorizontal="true"/>
+
+                <TextView
+                        android:textSize="16.0dip"
+                        android:textColor="@color/text_main_black"
+                        android:gravity="center"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12.0dip"
+                        android:text="@string/KouBei_delivery"
+                        android:layout_below="@id/iv_tdd"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                    android:orientation="vertical"
+                    android:id="@id/layout_wechat"
+                    android:background="@drawable/selector_square"
+                    android:layout_width="120.0dip"
+                    android:layout_height="120.0dip"
+                    android:layout_marginLeft="18.0dip"
+                    android:layout_weight="1.0"
+                    android:layout_alignParentRight="true">
+
+                <ImageView
+                        android:id="@id/iv_wechat"
+                        android:layout_width="60.0dip"
+                        android:layout_height="60.0dip"
+                        android:layout_marginTop="18.0dip"
+                        android:src="@drawable/icon_wechat"
+                        android:layout_centerHorizontal="true"/>
+
+                <TextView
+                        android:textSize="16.0dip"
+                        android:textColor="@color/text_main_black"
+                        android:gravity="center"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12.0dip"
+                        android:text="@string/wechat_delivery"
+                        android:layout_below="@id/iv_wechat"/>
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

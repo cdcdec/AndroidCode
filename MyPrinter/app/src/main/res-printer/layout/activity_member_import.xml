@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:background="@color/pos_background_white"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+        <RelativeLayout
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+            <TextView
+                    android:textSize="20.0sp"
+                    android:textColor="@color/down_template_button_text"
+                    android:id="@id/tv_download_template"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="120.0dip"
+                    android:text="@string/pos_import_download_templates"
+                    android:layout_centerHorizontal="true"/>
+
+            <View
+                    android:id="@id/line"
+                    android:background="@drawable/background_downn_template_dotted_line"
+                    android:layout_width="135.0dip"
+                    android:layout_height="2.0dip"
+                    android:layout_below="@id/tv_download_template"
+                    android:layout_centerHorizontal="true"
+                    android:layerType="software"/>
+
+            <RelativeLayout
+                    android:id="@id/rl_status"
+                    android:background="@drawable/shape_rounded_rectangle_grey_click"
+                    android:layout_width="400.0dip"
+                    android:layout_height="96.0dip"
+                    android:layout_marginTop="5.0dip"
+                    android:layout_below="@id/line"
+                    android:layout_centerHorizontal="true">
+
+                <TextView
+                        android:textSize="20.0dip"
+                        android:textColor="@color/pos_retail_text_black"
+                        android:id="@id/tv_import_path_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="32.0dip"
+                        android:layout_marginLeft="24.0dip"
+                        android:layout_marginTop="8.0dip"
+                        android:text="@string/pos_product_file_path_title"/>
+
+                <TextView
+                        android:textSize="16.0dip"
+                        android:textColor="@color/member_list_item_min"
+                        android:id="@id/tv_import_path"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="24.0dip"
+                        android:layout_below="@id/tv_import_path_title"/>
+
+                <TextView
+                        android:textSize="20.0dip"
+                        android:textColor="@color/pos_retail_text_black"
+                        android:id="@id/tv_udisk_status"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="24.0dip"
+                        android:text="@string/pos_product_insert_udisk"
+                        android:layout_centerVertical="true"/>
+
+                <com.laiqian.ui.ProgressBarCircularIndeterminate
+                        android:id="@id/ivProgress"
+                        android:background="#ffdf554a"
+                        android:layout_width="24.0dip"
+                        android:layout_height="24.0dip"
+                        android:layout_marginRight="24.0dip"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"/>
+
+                <View
+                        android:id="@id/v_ok"
+                        android:background="@drawable/pos_hook_selected"
+                        android:layout_width="30.0dip"
+                        android:layout_height="30.0dip"
+                        android:layout_marginRight="24.0dip"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"/>
+
+                <View
+                        android:id="@id/v_right_arrow"
+                        android:background="@drawable/pos_right_arrow_20150615"
+                        android:layout_width="13.0dip"
+                        android:layout_height="22.0dip"
+                        android:layout_marginRight="24.0dip"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                    android:id="@id/rl_import_product"
+                    android:layout_width="400.0dip"
+                    android:layout_height="50.0dip"
+                    android:layout_marginTop="24.0dip"
+                    android:layout_below="@id/rl_status"
+                    android:layout_alignLeft="@id/rl_status"
+                    android:layout_centerHorizontal="true">
+
+                <FrameLayout
+                        android:id="@id/frameLayout_import_lqk"
+                        android:background="@drawable/submit_button_selector"
+                        android:layout_width="400.0dip"
+                        android:layout_height="fill_parent">
+
+                    <TextView
+                            android:textSize="16.0dip"
+                            android:textColor="@color/white_color_1033"
+                            android:gravity="center"
+                            android:id="@id/tv_import_lqk"
+                            android:layout_width="400.0dip"
+                            android:layout_height="fill_parent"
+                            android:text="@string/pos_product_import"/>
+
+                    <com.laiqian.ui.ProgressBarCircularIndeterminate
+                            android:layout_gravity="center"
+                            android:id="@id/ivImportProgress_lqk"
+                            android:background="@color/setting_line_color"
+                            android:layout_width="24.0dip"
+                            android:layout_height="24.0dip"/>
+                </FrameLayout>
+            </RelativeLayout>
+
+            <TextView
+                    android:textSize="16.0dip"
+                    android:textColor="@color/red_color_10500"
+                    android:id="@id/tv_import_result"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20.0dip"
+                    android:layout_below="@id/rl_import_product"
+                    android:layout_alignLeft="@id/rl_status"/>
+        </RelativeLayout>
+    </LinearLayout>
+</ScrollView>

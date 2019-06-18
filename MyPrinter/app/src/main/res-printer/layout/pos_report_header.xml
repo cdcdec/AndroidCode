@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:id="@id/sum_l" android:layout_width="fill_parent" android:layout_height="150.0dip">
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/sum_qty_l" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <TextView android:id="@id/sum_qty" android:layout_width="wrap_content" style="@style/pos_report_sum_value" />
+            <TextView android:id="@id/sum_qty_lab" android:layout_width="wrap_content" android:layout_marginTop="12.0dip" android:text="@string/pos_report_transaction_head_count" style="@style/pos_report_sum_lab" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/sum_count_l" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <TextView android:id="@id/sum_count" android:layout_width="wrap_content" style="@style/pos_report_sum_value" />
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <TextView android:gravity="center" android:id="@id/sum_count_lab" android:layout_width="wrap_content" android:layout_marginTop="12.0dip" android:text="@string/pos_report_transaction_head_amount" style="@style/pos_report_sum_lab" />
+                <TextView android:textSize="@dimen/dp_16" android:textColor="#ffdf554a" android:gravity="center" android:id="@id/sum_count_sub_lab" android:visibility="gone" android:layout_width="wrap_content" android:layout_marginTop="12.0dip" android:text="@string/consumption_income_include_member_card" style="@style/pos_report_sum_lab" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/sum_amount_l" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <TextView android:id="@id/sum_amount" android:layout_width="wrap_content" style="@style/pos_report_sum_value" />
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <TextView android:gravity="center" android:id="@id/sum_amount_lab" android:layout_width="wrap_content" android:layout_marginTop="12.0dip" android:text="@string/pos_report_transaction_head_amount" style="@style/pos_report_sum_lab" />
+                <TextView android:textSize="@dimen/dp_16" android:textColor="#ffdf554a" android:gravity="center" android:id="@id/sum_amount_sub_lab" android:visibility="gone" android:layout_width="wrap_content" android:layout_marginTop="12.0dip" android:text="@string/consumption_income_include_member_card" style="@style/pos_report_sum_lab" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

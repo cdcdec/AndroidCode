@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="2.5dip" app:layout_column="0" app:layout_columnWeight="1.0" app:layout_row="0" app:layout_rowWeight="1.0"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include layout="@layout/listview_item_buy_sms" />
+</FrameLayout>

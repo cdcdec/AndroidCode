@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:background="@drawable/mainmenu_background"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="@string/cf_LogOnTitle">
+        <CheckBoxPreference android:title="@string/cf_LogonAutoOrNot" android:key="cf_LogOnConf" android:defaultValue="false" android:summaryOn="@string/cf_LogonAuto" android:summaryOff="@string/cf_NotLogonAuto" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/cf_BusinessSettingTitle">
+        <CheckBoxPreference android:title="@string/cf_isPaidorNot" android:key="cf_isPaidorNotConf" android:defaultValue="true" android:summaryOn="@string/cf_isPaid" android:summaryOff="@string/cf_isNotPaid" />
+        <CheckBoxPreference android:title="@string/isItemExpanded" android:key="cf_isItemExpandedConf" android:defaultValue="true" android:summaryOn="@string/cf_isItemExpanded" android:summaryOff="@string/cf_isNotItemExpanded" />
+        <CheckBoxPreference android:title="@string/isZeroStockContained" android:key="cf_containZeroStockConf" android:defaultValue="false" android:summaryOn="@string/cf_ZeroStockContained" android:summaryOff="@string/cf_ZeroStockNotContained" />
+        <CheckBoxPreference android:title="@string/historyPriceTitle" android:key="cf_getHistoryPriceConf" android:defaultValue="true" android:summaryOn="@string/cf_getHistoryPrice" android:summaryOff="@string/cf_notGetHistoryPrice" />
+        <CheckBoxPreference android:title="@string/PurchaseHistoryPriceTitle" android:key="cf_getHistoryPurchasePriceConf" android:defaultValue="true" android:summaryOn="@string/cf_getPurchaseHistoryPrice" android:summaryOff="@string/cf_notGetPurchaseHistoryPrice" />
+        <CheckBoxPreference android:title="@string/showGlobalProductTypeTitle" android:key="cf_showGlobalProductTypeConf" android:defaultValue="false" android:summaryOn="@string/cf_showGlobalProductType" android:summaryOff="@string/cf_notshowGlobalProductType" />
+        <CheckBoxPreference android:title="@string/DailyReportTitle" android:key="cf_DailyReportConf" android:defaultValue="true" android:summaryOn="@string/cf_showDailyReport" android:summaryOff="@string/cf_notShowDailyReport" />
+    </PreferenceCategory>
+    <PreferenceScreen android:title="@string/DailyReport_time_set" android:key="DailyReport_time_set" />
+    <PreferenceCategory android:title="@string/cf_introDialog">
+        <CheckBoxPreference android:title="@string/cf_isEnableNot" android:key="cf_isEnable" android:defaultValue="true" android:summaryOn="@string/cf_Enable" android:summaryOff="@string/cf_Disable" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/cf_DataRetentionTitle">
+        <ListPreference android:entries="@array/entries_DataRetention" android:title="@string/cf_DataRetentionPeriodTitle" android:key="cf_DataRetentionPeriod" android:summary="@string/cf_DataRetentionSummary" android:dialogTitle="@string/cf_DataRetentionPeriodTitle" android:entryValues="@array/entriesValue_DataRetention" />
+        <EditTextPreference android:title="@string/cf_DecimalPointSettingTitle" android:key="cf_DecimalPointSetting" android:summary="" android:defaultValue="2" android:dialogTitle="@string/cf_DecimalPointSettingDialogTitle" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/cf_sortTitle">
+        <ListPreference android:entries="@array/entries_BPartnerSort" android:title="@string/cf_BPartnerSortTitle" android:key="cf_BPartnerSort" android:summary="@string/cf_BPartnerSortSummary" android:dialogTitle="@string/cf_BPartnerSortTitle" android:entryValues="@array/entriesValue_BPartnerSort" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/SmsPreferenceTitle">
+        <CheckBoxPreference android:title="@string/Smsdesc" android:key="sale_new_sms_isEnable" android:defaultValue="true" android:summaryOn="@string/SmssummaryOn" android:summaryOff="@string/SmssummaryOff" />
+        <CheckBoxPreference android:title="@string/sale_return" android:key="sale_return_sms_isEnable" android:defaultValue="false" android:summaryOn="@string/sale_return_summaryOn" android:summaryOff="@string/sale_return_summaryOff" />
+        <CheckBoxPreference android:title="@string/purches_new" android:key="purchase_new_sms_isEnable" android:defaultValue="false" android:summaryOn="@string/purches_new_summaryOn" android:summaryOff="@string/purches_new_summaryOff" />
+        <CheckBoxPreference android:title="@string/purches_retun" android:key="purchase_return_sms_isEnable" android:defaultValue="false" android:summaryOn="@string/purches_retun_summaryOn" android:summaryOff="@string/purches_retun_summaryOff" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/CallInPreferenceTitle">
+        <CheckBoxPreference android:title="@string/callIndesc" android:key="callin_isEnable" android:defaultValue="true" android:summaryOn="@string/callInsummaryOn" android:summaryOff="@string/callInsummaryOff" />
+        <CheckBoxPreference android:title="@string/callOutdesc" android:key="callout_isEnable" android:defaultValue="true" android:summaryOn="@string/callOutsummaryOn" android:summaryOff="@string/callOutsummaryOff" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/auto_upload_setting_info">
+        <CheckBoxPreference android:title="@string/auto_upload_title" android:key="auto_update_isEnable" android:defaultValue="true" android:summaryOn="@string/auto_upload_summaryon" android:summaryOff="@string/auto_upload_summaryoff" />
+    </PreferenceCategory>
+    <PreferenceScreen android:title="@string/auto_upload_time_set" android:key="pref_time_set" />
+</PreferenceScreen>

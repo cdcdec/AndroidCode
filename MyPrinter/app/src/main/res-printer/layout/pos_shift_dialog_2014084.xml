@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout style="@style/new_pos_dialog_father"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:id="@id/ss_top" style="@style/new_pos_dialog_top">
+        <Button android:id="@id/btnPosPayBack" android:drawableLeft="@drawable/dialog_back" style="@style/new_pos_dialog_logo_text" />
+        <TextView android:id="@id/ss_title" android:text="@string/pos_shift_title" style="@style/new_pos_dialog_title" />
+        <Button android:id="@id/ss_btn" android:text="统计交班 " android:drawableRight="@drawable/shif_report_btn" style="@style/new_pos_dialog_btn" />
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/ss_bottom" android:layout_below="@id/ss_top" style="@style/new_pos_dialog_bottom">
+        <TextView android:textColor="@color/pos_text_color" android:id="@id/shift_listview_item_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="6.0dip" android:layout_marginBottom="6.0dip" android:text="交班时间：2014-8-5 10:33:23" />
+        <LinearLayout android:id="@id/ss_bottom_main" style="@style/new_pos_dialog_bottom_main">
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="5.0px">
+                <TextView android:gravity="left" android:id="@id/statistics_view_data_show_income_title" android:layout_width="100.0dip" android:text="@string/pos_imprest_amount_title" style="@style/new_pos_dialog_shift_title" />
+                <TextView android:id="@id/imprest_amount" style="@style/shift_dialog_grey_title" />
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="5.0px">
+                <TextView android:gravity="left" android:layout_width="100.0dip" android:text="@string/bpartner_charge_received" style="@style/new_pos_dialog_shift_title" />
+                <TextView android:id="@id/tvBPartnerChargeReceived" style="@style/shift_dialog_grey_title" />
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="5.0px">
+                <TextView android:gravity="left" android:id="@id/statistics_view_data_show_income_title" android:layout_width="100.0dip" android:text="@string/pos_shift_sale_sum_title" style="@style/new_pos_dialog_shift_title" />
+                <TextView android:id="@id/sale_amount_income" style="@style/shift_dialog_grey_title" />
+                <TextView android:id="@id/cash_bankcard_membership_car" android:layout_marginLeft="10.0dip" style="@style/new_pos_dialog_shift_title" />
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="5.0px">
+                <TextView android:gravity="left" android:id="@id/statistics_view_data_show_income_title" android:layout_width="100.0dip" android:text="@string/pos_shift_sales_return_sum_title" style="@style/new_pos_dialog_shift_title" />
+                <TextView android:id="@id/sale_return_amount" style="@style/shift_dialog_grey_title" />
+                <TextView android:id="@id/sale_return_cash_bankcard_membership_car" android:layout_marginLeft="10.0dip" style="@style/new_pos_dialog_shift_title" />
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="5.0px">
+                <TextView android:gravity="left" android:id="@id/statistics_view_data_show_income_title" android:layout_width="100.0dip" android:text="@string/pos_shift_sum_title" style="@style/new_pos_dialog_shift_title" />
+                <TextView android:id="@id/amount_income" style="@style/shift_dialog_grey_title" />
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="5.0px">
+                <TextView android:gravity="left" android:id="@id/statistics_view_data_show_income_title" android:layout_width="100.0dip" android:text="@string/pos_shift_person_title" style="@style/new_pos_dialog_shift_title" />
+                <TextView android:id="@id/shift_people" style="@style/shift_dialog_grey_title" />
+            </LinearLayout>
+        </LinearLayout>
+        <Button android:id="@id/shiftButton" android:layout_marginTop="10.0dip" android:text="确认交班" style="@style/new_pos_dialog_button" />
+    </LinearLayout>
+</RelativeLayout>

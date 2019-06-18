@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:paddingTop="10.0dip" style="@style/grey_background"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:id="@id/parentProductTypeLayout" android:layout_marginTop="10.0dip" style="@style/dark_linearLayout_rounded_rectangle">
+                <TextView android:text="@string/prodcut_type_parent_name" style="@style/edittext_label_style" />
+                <TextView android:id="@id/parentProductTypeNameTxw" style="@style/notEditable_edittext_style" />
+            </LinearLayout>
+            <LinearLayout android:layout_marginTop="10.0dip" style="@style/clickable_linearLayout_rounded_rectangle">
+                <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0">
+                    <TextView android:text="@string/pt_productTypeTxt" style="@style/edittext_label_style" />
+                    <EditText android:id="@id/pt_productTypeValue" android:hint="@string/auth_RoleHint" style="@style/required_editable_edittext_style" />
+                </LinearLayout>
+                <ImageView style="@style/pencil_style" />
+            </LinearLayout>
+            <TextView android:id="@id/deleteProductTypeHintTxw" android:visibility="gone" android:text="@string/deleteProductTypeHint" style="@style/common_textview_white_shadow_style" />
+            <Button android:id="@id/pt_deleteButton" android:text="@string/pt_deleteButtonTxt" style="@style/bottom_grey_button_style" />
+            <LinearLayout android:visibility="gone" style="@style/linearLayout_rounded_rectangle_d">
+                <TextView android:text="@string/pt_productTypeDescTxt" style="@style/edittext_label_style" />
+                <EditText android:id="@id/pt_productTypeDescTxt" android:hint="@string/pt_productTypeDescHint" style="@style/editable_edittext_style" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

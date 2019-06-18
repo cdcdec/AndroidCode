@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true" android:drawable="@drawable/pos_correcting_esc_gray2">
+        <shape>
+            <gradient android:startColor="#ff484443" android:endColor="#ff484443" android:angle="270.0" />
+            <corners android:radius="4.0px" />
+        </shape>
+    </item>
+    <item android:state_focused="true" android:drawable="@drawable/pos_correcting_esc_gray">
+        <shape>
+            <gradient android:startColor="#ff484443" android:endColor="#ff484443" android:angle="270.0" />
+            <corners android:radius="4.0px" />
+        </shape>
+    </item>
+    <item android:drawable="@drawable/pos_correcting_esc_gray">
+        <shape>
+            <gradient android:startColor="#ff484443" android:endColor="#ff484443" android:angle="180.0" />
+            <corners android:radius="4.0px" />
+        </shape>
+    </item>
+</selector>

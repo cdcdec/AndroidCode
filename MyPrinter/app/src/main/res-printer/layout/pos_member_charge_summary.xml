@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout style="@style/grey_background"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:autolistview="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:layout_gravity="right" android:orientation="horizontal" android:id="@id/llAmount" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="48.0dip" android:layout_marginTop="7.0dip" android:layout_marginBottom="7.0dip">
+        <LinearLayout android:orientation="vertical" android:id="@id/llIncrementAmount" android:layout_width="190.0dip" android:layout_height="wrap_content" android:layout_marginRight="20.0dip">
+            <TextView android:gravity="right" android:layout_gravity="right" android:id="@id/mc_total_increment_amount_titlebar" android:layout_height="24.0dip" android:layout_marginTop="0.0dip" style="@style/lable_lightgrey_max_style" />
+            <TextView android:textSize="16.0dip" android:textColor="@color/member_list_item_min" android:gravity="right" android:layout_gravity="right" android:id="@id/ui_total_increment_amount_txt" android:layout_height="24.0dip" android:layout_marginBottom="0.0dip" android:text="@string/pos_total_increment_amount" style="@style/lable_lightgrey_max_style" />
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:layout_width="190.0dip" android:layout_height="wrap_content" android:layout_marginRight="85.0dip">
+            <TextView android:gravity="right" android:layout_gravity="right" android:id="@id/mc_summary_total_amount" android:layout_height="24.0dip" style="@style/lable_lightgrey_max_style" />
+            <TextView android:textSize="16.0dip" android:textColor="@color/member_list_item_min" android:gravity="right" android:layout_gravity="right" android:id="@id/ui_total_amount_txt" android:layout_height="24.0dip" android:text="@string/pos_total_charge_amount" style="@style/lable_lightgrey_max_style" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/mc_ll" android:layout_marginTop="0.0dip" style="@style/member_listview_linearLayout_style">
+        <com.laiqian.ui.listview.PosAutoListView android:id="@id/lvCharge" android:layout_width="fill_parent" android:layout_height="wrap_content" autolistview:paddingTopHeight="0" style="@style/default_listview_style" />
+    </LinearLayout>
+    <TextView android:textSize="21.0dip" android:gravity="center" android:layout_gravity="center" android:id="@id/tvNoMember" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/no_charge_data" />
+</LinearLayout>

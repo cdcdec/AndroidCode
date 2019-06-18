@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:id="@id/setting_sync_l" style="@style/pos_setting_right_item">
+        <TextView android:layout_width="wrap_content" android:text="@string/pos_main_setting_sync_title" style="@style/pos_setting_right_item_lab" />
+        <TextView android:id="@id/function_hint_setting_sync" android:visibility="gone" style="@style/red_dot_function" />
+        <TextView android:layout_weight="1.0" style="@style/pos_setting_right_item_lab" />
+        <View style="@style/pos_setting_right_item_icon" />
+    </LinearLayout>
+    <View style="@style/pos_setting_right_item_line" />
+    <LinearLayout android:id="@id/menu_sd_l" style="@style/pos_setting_right_item">
+        <TextView android:layout_width="wrap_content" android:text="@string/backup_menu_sd_title" style="@style/pos_setting_right_item_lab" />
+        <TextView android:id="@id/function_hint_menu_sd" android:visibility="gone" style="@style/red_dot_function" />
+        <TextView android:layout_weight="1.0" style="@style/pos_setting_right_item_lab" />
+        <View style="@style/pos_setting_right_item_icon" />
+    </LinearLayout>
+    <LinearLayout android:id="@id/menu_usb_l" style="@style/pos_setting_right_item">
+        <TextView android:layout_width="wrap_content" android:text="@string/backup_menu_usb_title" style="@style/pos_setting_right_item_lab" />
+        <TextView android:id="@id/function_hint_menu_usb" android:visibility="gone" style="@style/red_dot_function" />
+        <TextView android:layout_weight="1.0" style="@style/pos_setting_right_item_lab" />
+        <View style="@style/pos_setting_right_item_icon" />
+    </LinearLayout>
+    <LinearLayout android:id="@id/ll_download_ordinary_data" android:visibility="visible" style="@style/pos_setting_right_item">
+        <TextView android:layout_width="wrap_content" android:text="@string/backup_menu_download_ordinary_data_title" style="@style/pos_setting_right_item_lab" />
+        <TextView android:id="@id/function_hint_transaction_data" android:visibility="gone" style="@style/red_dot_function" />
+        <TextView android:layout_weight="1.0" style="@style/pos_setting_right_item_lab" />
+        <View style="@style/pos_setting_right_item_icon" />
+    </LinearLayout>
+    <LinearLayout android:id="@id/transaction_data_l" android:visibility="gone" style="@style/pos_setting_right_item">
+        <TextView android:layout_width="wrap_content" android:text="@string/backup_menu_download_transaction_data_title" style="@style/pos_setting_right_item_lab" />
+        <TextView android:id="@id/function_hint_transaction_data" android:visibility="gone" style="@style/red_dot_function" />
+        <TextView android:layout_weight="1.0" style="@style/pos_setting_right_item_lab" />
+        <View style="@style/pos_setting_right_item_icon" />
+    </LinearLayout>
+    <View android:id="@id/show_line" android:visibility="visible" style="@style/pos_setting_right_item_line" />
+    <LinearLayout android:id="@id/pos_product_clear_cache_l" style="@style/pos_setting_right_item">
+        <TextView android:layout_width="wrap_content" android:text="@string/pos_main_setting_clear_cache_title" style="@style/pos_setting_right_item_lab" />
+        <TextView android:id="@id/function_hint_clear_cache" android:visibility="gone" style="@style/red_dot_function" />
+        <TextView android:layout_weight="1.0" style="@style/pos_setting_right_item_lab" />
+        <View style="@style/pos_setting_right_item_icon" />
+    </LinearLayout>
+    <LinearLayout android:id="@id/pos_product_data_delete_l" android:visibility="gone" style="@style/pos_setting_right_item">
+        <TextView android:layout_width="wrap_content" android:text="@string/pos_main_setting_data_delete_title" style="@style/pos_setting_right_item_lab" />
+        <TextView android:id="@id/function_hint_data_delete" android:visibility="gone" style="@style/red_dot_function" />
+        <TextView android:layout_weight="1.0" style="@style/pos_setting_right_item_lab" />
+        <View style="@style/pos_setting_right_item_icon" />
+    </LinearLayout>
+</LinearLayout>

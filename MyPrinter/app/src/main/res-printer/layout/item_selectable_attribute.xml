@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@drawable/shape_rectangle_only_click" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="20.0dip" android:textColor="@color/pos_text_black" android:gravity="center" android:id="@id/tv_name" android:padding="8.0dip" android:layout_width="fill_parent" android:layout_height="72.0dip" android:maxLines="2" android:layout_above="@id/tv_value" />
+    <TextView android:textSize="20.0dip" android:textColor="@color/pos_text_grey" android:gravity="center" android:id="@id/tv_value" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="1" />
+    <FrameLayout android:orientation="horizontal" android:clickable="false" android:layout_width="fill_parent" android:layout_height="35.0dip">
+        <TextView android:textSize="20.0dip" android:textColor="@color/red_color_1033" android:gravity="center" android:id="@id/tv_select_value" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <LinearLayout android:id="@id/layout_select" android:background="@drawable/shape_rectangle_outline" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <ImageView android:gravity="center" android:id="@id/btn_minus" android:background="@drawable/click_state_lightgray" android:layout_width="48.0dip" android:layout_height="fill_parent" android:layout_marginLeft="1.0dip" android:layout_marginTop="1.0dip" android:layout_marginBottom="1.0dip" android:src="@drawable/icon_minus" android:scaleType="centerInside" />
+            <View android:background="#80c0bfbe" android:layout_width="1.0dip" android:layout_height="fill_parent" />
+            <View android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" />
+            <View android:background="#80c0bfbe" android:layout_width="1.0dip" android:layout_height="fill_parent" />
+            <ImageView android:id="@id/btn_plus" android:background="@drawable/click_state_lightgray" android:layout_width="48.0dip" android:layout_height="fill_parent" android:layout_marginTop="1.0dip" android:layout_marginRight="1.0dip" android:layout_marginBottom="1.0dip" android:src="@drawable/icon_plus" android:scaleType="centerInside" />
+        </LinearLayout>
+    </FrameLayout>
+</LinearLayout>

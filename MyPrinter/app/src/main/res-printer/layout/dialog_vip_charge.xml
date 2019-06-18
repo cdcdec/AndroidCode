@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/setting_bg_color" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:id="@id/title_l" android:background="@drawable/pos_simple_click_background" android:paddingLeft="24.0dip" android:paddingRight="24.0dip" android:layout_width="wrap_content" android:layout_height="56.0dip">
+        <View style="@style/pos_title_back_icon" />
+        <TextView android:text="@string/pos_charge" style="@style/pos_title_text" />
+    </LinearLayout>
+    <View android:id="@id/line_top" android:background="@color/setting_line_color" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_below="@id/title_l" />
+    <include android:layout_gravity="center_horizontal" android:id="@id/layoutCreditPoints" android:layout_width="354.0dip" android:layout_height="fill_parent" android:layout_marginLeft="24.0dip" android:layout_marginTop="8.0dip" android:layout_marginRight="24.0dip" android:layout_below="@id/line_top" android:layout_alignParentRight="true" layout="@layout/layout_numeric_keyboard_max" />
+    <View android:id="@id/line_center" android:background="@color/setting_line_color" android:layout_width="1.0dip" android:layout_height="fill_parent" android:layout_toLeftOf="@id/layoutCreditPoints" android:layout_below="@id/line_top" />
+    <FrameLayout android:id="@id/fl_left" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_toLeftOf="@id/line_center" android:layout_below="@id/line_top">
+        <LinearLayout android:layout_gravity="center_horizontal" android:orientation="vertical" android:id="@id/ll_vip_info" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="24.0dip" android:layout_marginRight="24.0dip">
+            <LinearLayout android:id="@id/llPosMemberChargeAmount" android:layout_marginTop="8.0dip" style="@style/linearLayout_rounded_rectangle_u_vip">
+                <LinearLayout android:gravity="center_vertical" android:layout_width="110.0dip" android:layout_height="fill_parent">
+                    <TextView android:text="@string/pos_charge_amount" style="@style/vip_charge_textable" />
+                    <TextView android:textColor="@color/red_color_10500" android:text="*" style="@style/vip_charge_textable" />
+                </LinearLayout>
+                <EditText android:textColor="@color/setting_text_color3" android:id="@id/et_charge_amount" style="@style/vip_charge_edittext" />
+            </LinearLayout>
+            <RelativeLayout android:id="@id/llPosMemberChargeGrantAmount" style="@style/linearLayout_rounded_rectangle_m_vip">
+                <TextView android:id="@id/tv_charge_gift_amount_label" android:layout_width="100.0dip" android:layout_marginRight="10.0dip" android:text="@string/pos_member_charge_plus_amount_title" style="@style/vip_charge_textable" />
+                <EditText android:textColor="@color/setting_text_color3" android:id="@id/et_gift_amount" android:layout_width="fill_parent" android:text="0" android:layout_toLeftOf="@id/tv_charge_gift_product_label" android:layout_toRightOf="@id/tv_charge_gift_amount_label" android:layout_centerVertical="true" style="@style/vip_charge_edittext" />
+                <TextView android:id="@id/tv_charge_gift_product_label" android:layout_width="80.0dip" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" android:text="@string/pos_member_charge_plus_product_title" android:layout_toLeftOf="@id/tv_charge_gift_product" style="@style/vip_charge_textable" />
+                <TextView android:id="@id/tv_charge_gift_product" android:layout_width="120.0dip" android:layout_marginRight="10.0dip" android:text="@string/pos_vip_charge_gift_product_none" android:layout_alignParentRight="true" style="@style/vip_charge_textable" />
+            </RelativeLayout>
+            <LinearLayout android:layout_width="fill_parent" android:layout_height="80.0dip" style="@style/linearLayout_rounded_rectangle_d_vip">
+                <TextView android:textSize="20.0dip" android:textColor="@color/pos_text_black" android:layout_gravity="center" android:layout_width="120.0dip" android:layout_height="wrap_content" android:text="@string/pos_main_pay_payment_method" android:layout_centerVertical="true" />
+                <LinearLayout android:orientation="horizontal" android:id="@id/pay_type_body1" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginRight="20.0dip">
+                    <include layout="@layout/pos_activity_settlement_type_item" />
+                    <include layout="@layout/pos_activity_settlement_type_item" />
+                    <include layout="@layout/pos_activity_settlement_type_item" />
+                    <include layout="@layout/pos_activity_settlement_type_item" />
+                    <include layout="@layout/pos_activity_settlement_type_item" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:layout_marginTop="8.0dip" style="@style/linearLayout_rounded_rectangle_u_vip">
+                <TextView android:text="@string/pos_add_member_phone_title" style="@style/vip_charge_textable" />
+                <TextView android:id="@id/tv_phone" style="@style/vip_text_black" />
+            </LinearLayout>
+            <LinearLayout style="@style/linearLayout_rounded_rectangle_m_vip">
+                <TextView android:text="@string/pos_add_member_card_no_title2" style="@style/vip_charge_textable" />
+                <TextView android:id="@id/tv_card_number" style="@style/vip_text_black" />
+            </LinearLayout>
+            <LinearLayout style="@style/linearLayout_rounded_rectangle_m_vip">
+                <TextView android:text="@string/pos_member_amount_title" style="@style/vip_charge_textable" />
+                <TextView android:id="@id/tv_amount" style="@style/vip_text_red" />
+            </LinearLayout>
+            <LinearLayout style="@style/linearLayout_rounded_rectangle_d_vip">
+                <TextView android:text="@string/pos_add_member_point_title" style="@style/vip_charge_textable" />
+                <TextView android:id="@id/tv_points" style="@style/vip_text_black" />
+            </LinearLayout>
+        </LinearLayout>
+    </FrameLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/ll_right" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_toRightOf="@id/line_center" android:layout_below="@id/title_l" />
+</RelativeLayout>

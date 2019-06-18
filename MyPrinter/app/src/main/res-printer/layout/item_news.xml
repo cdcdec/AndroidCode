@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:id="@id/ll_content" android:background="@drawable/pos_product_list_item" android:layout_width="fill_parent" android:layout_height="56.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:layout_gravity="center_vertical" android:id="@id/v_status" android:background="@drawable/red_button_round" android:layout_width="12.0dip" android:layout_height="12.0dip" android:layout_marginLeft="24.0dip" />
+    <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_marginLeft="24.0dip" android:layout_weight="1.0">
+        <TextView android:textSize="20.0dip" android:textColor="@color/setting_text_color1" android:id="@id/tv_area_table_name" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_marginTop="5.0dip" android:layout_weight="1.0" />
+        <TextView android:textSize="16.0dip" android:textColor="@color/setting_text_color2" android:id="@id/tv_time" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+    </LinearLayout>
+    <ImageView android:gravity="center_vertical" android:id="@id/iv_icon_status" android:layout_width="20.0dip" android:layout_height="fill_parent" android:layout_marginRight="6.0dip" android:src="@drawable/icon_pay" />
+    <TextView android:textSize="16.0dip" android:gravity="center_vertical" android:id="@id/tv_icon_status" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginRight="12.0dip" />
+</LinearLayout>

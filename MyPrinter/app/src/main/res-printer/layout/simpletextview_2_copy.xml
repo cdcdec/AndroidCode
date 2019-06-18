@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@id/simpleLayout"
+              style="@style/listview_linearLayout_singleline_style">
+
+    <LinearLayout
+            android:gravity="left"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0">
+
+        <TextView
+                android:id="@id/productTextValue"
+                android:layout_marginLeft="5.0dip"
+                android:singleLine="false"
+                style="@style/common_textview_black_style"/>
+    </LinearLayout>
+
+    <ImageView
+            android:id="@id/um_actionmap"
+            style="@style/imageview_arrow_style"/>
+
+    <TextView
+            android:id="@id/itemIDTextValue"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+</LinearLayout>

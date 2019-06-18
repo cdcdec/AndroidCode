@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:paddingTop="10.0dip" android:paddingBottom="10.0dip" style="@style/grey_background"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout style="@style/linearLayout_rounded_rectangle_u">
+                <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0">
+                    <TextView android:text="@string/wh_nameTxt1" style="@style/edittext_label_style" />
+                    <EditText android:id="@id/wh_nameEdt" android:hint="@string/auth_RoleHint" style="@style/required_editable_edittext_style" />
+                </LinearLayout>
+                <ImageView style="@style/pencil_style" />
+            </LinearLayout>
+            <LinearLayout style="@style/linearLayout_rounded_rectangle_m">
+                <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0">
+                    <TextView android:text="@string/wh_DescriptionTxt" style="@style/edittext_label_style" />
+                    <EditText android:id="@id/wh_DescriptionEdt" style="@style/editable_edittext_style" />
+                </LinearLayout>
+                <ImageView style="@style/pencil_style" />
+            </LinearLayout>
+            <LinearLayout style="@style/linearLayout_rounded_rectangle_m">
+                <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0">
+                    <TextView android:text="@string/wh_numberTxt" style="@style/edittext_label_style" />
+                    <EditText android:id="@id/wh_numberEdt" style="@style/editable_edittext_style" />
+                </LinearLayout>
+                <ImageView style="@style/pencil_style" />
+            </LinearLayout>
+            <LinearLayout style="@style/linearLayout_rounded_rectangle_m">
+                <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0">
+                    <TextView android:text="@string/wh_addressLabel" style="@style/edittext_label_style" />
+                    <EditText android:id="@id/wh_addressEdt" style="@style/editable_edittext_style" />
+                </LinearLayout>
+                <ImageView style="@style/pencil_style" />
+            </LinearLayout>
+            <LinearLayout style="@style/linearLayout_rounded_rectangle_d">
+                <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0">
+                    <TextView android:text="@string/bp_MemoLabel" style="@style/edittext_label_style" />
+                    <EditText android:id="@id/wh_MemoEdt" android:singleLine="false" style="@style/editable_edittext_style" />
+                </LinearLayout>
+                <ImageView style="@style/pencil_style" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center_horizontal" android:orientation="horizontal" style="@style/border_style_manuel_1">
+                <CheckBox android:id="@id/wmd_defaultWarehouse_MoveInBox" android:checked="false" android:text="@string/wmd_defaultWarehouse_MoveIn" style="@style/checkBox_style" />
+                <CheckBox android:id="@id/wmd_defaultWarehouse_MoveOutBox" android:layout_marginLeft="10.0dip" android:checked="false" android:text="@string/wmd_defaultWarehouse_MoveOut" style="@style/checkBox_style" />
+            </LinearLayout>
+            <TextView android:id="@id/deleteWarehouseHintTxw" android:visibility="gone" android:text="@string/deleteWarehouseHint" style="@style/common_textview_white_shadow_style" />
+            <Button android:id="@id/wh_deleteBtn" android:text="@string/pt_deleteButtonTxt" style="@style/bottom_grey_button_style" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

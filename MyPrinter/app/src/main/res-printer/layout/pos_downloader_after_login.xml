@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" style="@style/grey_background"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textColor="@color/common_lightgrey_txt" android:id="@id/syncLastTime" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="24.0dip" android:layout_marginTop="10.0dip" android:text="@string/sync_lasttime" />
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <TextView android:textSize="35.0sp" android:id="@id/top_tips" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="16.0dip" />
+        <FrameLayout android:gravity="center" android:layout_width="230.0dip" android:layout_height="230.0dip">
+            <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:id="@id/sync_btn" android:background="@drawable/sync_layout_bg_selector" android:layout_width="220.0dip" android:layout_height="220.0dip" />
+            <ImageView android:gravity="center" android:id="@id/progressBar" android:layout_width="230.0dip" android:layout_height="230.0dip" android:src="@drawable/sync_progress" />
+            <ImageView android:gravity="center" android:id="@id/progressResult" android:visibility="gone" android:layout_width="230.0dip" android:layout_height="230.0dip" android:src="@drawable/sync_success" />
+            <TextView android:textSize="60.0sp" android:textColor="@color/red_color_10500" android:layout_gravity="center" android:id="@id/progressNum" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/mainmenu_synchronize_sync" />
+        </FrameLayout>
+        <TextView android:textSize="20.0sp" android:textColor="#ff999999" android:layout_gravity="center" android:id="@id/syncText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:text="@string/sync_ing" />
+        <View android:layout_width="fill_parent" android:layout_height="65.0dip" />
+    </LinearLayout>
+</LinearLayout>

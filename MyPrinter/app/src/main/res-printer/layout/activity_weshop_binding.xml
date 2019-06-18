@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:background="@color/confirm_button_bg_grey_color"
+              android:paddingLeft="160.0dip"
+              android:paddingTop="8.0dip"
+              android:paddingRight="160.0dip"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent">
+
+    <LinearLayout
+            android:gravity="center"
+            android:orientation="vertical"
+            android:id="@id/ll_refresh"
+            android:visibility="gone"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+        <ImageView
+                android:id="@id/iv_no_network"
+                android:background="@drawable/selector_no_network"
+                android:duplicateParentState="true"
+                android:layout_width="70.0dip"
+                android:layout_height="70.0dip"/>
+
+        <TextView
+                android:textSize="16.0dip"
+                android:textColor="@color/setting_text_color2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8.0dip"
+                android:text="@string/click_to_refresh"/>
+    </LinearLayout>
+
+    <ScrollView
+            android:layout_gravity="center"
+            android:id="@id/scrollView"
+            android:background="@anim/shape_rounded_rectangle_only_click"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            style="@style/main_setting_scrollview_style">
+
+        <LinearLayout
+                android:orientation="vertical"
+                android:id="@id/layout_settings"
+                android:paddingBottom="8.0dip"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+            <LinearLayout
+                    android:id="@id/layout_wechat_binding"
+                    android:background="@drawable/click_state"
+                    android:paddingLeft="24.0dip"
+                    android:paddingRight="24.0dip"
+                    android:layout_width="fill_parent"
+                    android:layout_height="72.0dip">
+
+                <TextView
+                        android:layout_gravity="center_vertical"
+                        android:id="@id/tv_wechat_binding_label"
+                        android:text="@string/pos_wechat_set_bind_us"
+                        android:layout_weight="1.0"
+                        style="@style/textview_weiorder_settting"/>
+
+                <TextView
+                        android:layout_gravity="center_vertical"
+                        android:id="@id/tv_wechat_binding"
+                        android:layout_marginRight="0.0dip"
+                        android:text="@string/pos_wechat_set_bind_us_public"
+                        style="@style/textview2_weiorder_settting"/>
+            </LinearLayout>
+
+            <LinearLayout
+                    android:orientation="vertical"
+                    android:id="@id/layout_bind_guide"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content">
+
+                <View
+                        android:background="@color/bg_gray_color"
+                        android:layout_width="fill_parent"
+                        android:layout_height="1.0px"/>
+
+                <RelativeLayout
+                        android:id="@id/layout_wechatvip_introduction"
+                        android:background="@drawable/click_state"
+                        android:layout_width="fill_parent"
+                        android:layout_height="56.0dip">
+
+                    <ImageView
+                            android:id="@id/item_layout_iv_right"
+                            android:layout_width="10.0dip"
+                            android:layout_height="17.0dip"
+                            android:layout_marginRight="36.0dip"
+                            android:src="@drawable/right_arrow"
+                            android:scaleType="fitCenter"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"/>
+
+                    <TextView
+                            android:gravity="center|left"
+                            android:id="@id/item_layout_tv_left"
+                            android:layout_width="wrap_content"
+                            android:layout_height="56.0dip"
+                            android:layout_marginLeft="24.0dip"
+                            android:text="@string/weshop_how_to_use_title"
+                            android:singleLine="true"
+                            android:layout_toLeftOf="@id/item_layout_iv_right"
+                            android:layout_alignParentLeft="true"
+                            style="@style/print_item_layout_label"/>
+                </RelativeLayout>
+
+                <View
+                        android:background="@color/bg_gray_color"
+                        android:layout_width="fill_parent"
+                        android:layout_height="1.0px"/>
+
+                <LinearLayout
+                        android:gravity="center"
+                        android:id="@id/layout_bind_public_account"
+                        android:background="@drawable/click_state"
+                        android:paddingLeft="24.0dip"
+                        android:visibility="gone"
+                        android:layout_width="fill_parent"
+                        android:layout_height="72.0dip">
+
+                    <TextView
+                            android:id="@id/tv_bind"
+                            android:layout_width="wrap_content"
+                            android:text="@string/pos_wechat_i_have_official_account"
+                            style="@style/textview_weiorder_settting"/>
+
+                    <TextView
+                            android:textColor="@color/red_color_10500"
+                            android:id="@id/tv_register"
+                            android:layout_width="wrap_content"
+                            android:text="@string/pos_wechat_how_to_register_official_account"
+                            style="@style/textview_weiorder_settting"/>
+
+                    <View
+                            android:layout_width="0.0dip"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="1.0"/>
+
+                    <Button
+                            android:textSize="20.0dip"
+                            android:textColor="@color/ok_text_color"
+                            android:id="@id/btn_bind"
+                            android:background="@drawable/pos_wallet_button_red"
+                            android:layout_width="120.0dip"
+                            android:layout_height="48.0dip"
+                            android:layout_marginRight="24.0dip"
+                            android:text="@string/pos_wechat_bind"/>
+                </LinearLayout>
+
+                <LinearLayout
+                        android:gravity="center"
+                        android:id="@id/layout_wechat_account"
+                        android:background="@drawable/click_state"
+                        android:paddingLeft="24.0dip"
+                        android:visibility="gone"
+                        android:layout_width="fill_parent"
+                        android:layout_height="72.0dip">
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:text="@string/pos_wechat_account_title"
+                            style="@style/textview_weiorder_settting"/>
+
+                    <TextView
+                            android:id="@id/tv_account"
+                            android:layout_width="wrap_content"
+                            android:layout_marginLeft="8.0dip"
+                            android:layout_weight="1.0"
+                            style="@style/textview_weiorder_settting"/>
+
+                    <TextView
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginRight="24.0dip"
+                            android:text="@string/pos_wechat_redelegation_of_authority"
+                            style="@style/textview2_weiorder_settting"/>
+                </LinearLayout>
+
+                <LinearLayout
+                        android:gravity="center"
+                        android:id="@id/ll_auth"
+                        android:background="@drawable/click_state"
+                        android:paddingLeft="24.0dip"
+                        android:layout_width="fill_parent"
+                        android:layout_height="72.0dip">
+
+                    <TextView
+                            android:id="@id/tv_append_receipt_label"
+                            android:text="@string/menu_bar_authorization_to_us"
+                            android:layout_weight="1.0"
+                            style="@style/textview_weiorder_settting"/>
+
+                    <CheckBox
+                            android:id="@id/cb_menu_auth"
+                            style="@style/pop_right_checkBox_style_10500"/>
+                </LinearLayout>
+
+                <TextView
+                        android:textSize="16.0dip"
+                        android:textColor="@color/setting_text_color3"
+                        android:id="@id/tv_auth_notice"
+                        android:paddingLeft="24.0dip"
+                        android:visibility="gone"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/wechat_menu_auth_notice"/>
+
+                <LinearLayout
+                        android:gravity="center"
+                        android:id="@id/ll_takeaway_auth"
+                        android:background="@drawable/click_state"
+                        android:paddingLeft="24.0dip"
+                        android:visibility="gone"
+                        android:layout_width="fill_parent"
+                        android:layout_height="72.0dip">
+
+                    <TextView
+                            android:id="@id/tv_append_receipt_label"
+                            android:text="@string/menu_takeaway"
+                            android:layout_weight="1.0"
+                            style="@style/textview_weiorder_settting"/>
+
+                    <CheckBox
+                            android:id="@id/cb_takeaway_auth"
+                            style="@style/pop_right_checkBox_style_10500"/>
+                </LinearLayout>
+
+                <LinearLayout
+                        android:gravity="center"
+                        android:id="@id/ll_vip_auth"
+                        android:background="@drawable/click_state"
+                        android:paddingLeft="24.0dip"
+                        android:visibility="gone"
+                        android:layout_width="fill_parent"
+                        android:layout_height="72.0dip">
+
+                    <TextView
+                            android:id="@id/tv_append_receipt_label"
+                            android:text="@string/menu_vip"
+                            android:layout_weight="1.0"
+                            style="@style/textview_weiorder_settting"/>
+
+                    <CheckBox
+                            android:id="@id/cb_vip_auth"
+                            style="@style/pop_right_checkBox_style_10500"/>
+                </LinearLayout>
+
+                <LinearLayout
+                        android:gravity="center"
+                        android:id="@id/ll_shop_auth"
+                        android:background="@drawable/click_state"
+                        android:paddingLeft="24.0dip"
+                        android:visibility="gone"
+                        android:layout_width="fill_parent"
+                        android:layout_height="72.0dip">
+
+                    <TextView
+                            android:id="@id/tv_append_receipt_label"
+                            android:text="@string/menu_shop"
+                            android:layout_weight="1.0"
+                            style="@style/textview_weiorder_settting"/>
+
+                    <CheckBox
+                            android:id="@id/cb_shop_auth"
+                            style="@style/pop_right_checkBox_style_10500"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                    android:orientation="vertical"
+                    android:id="@id/layout_qrcode"
+                    android:visibility="visible"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content">
+
+                <View
+                        android:background="@color/bg_gray_color"
+                        android:layout_width="fill_parent"
+                        android:layout_height="1.0px"/>
+
+                <LinearLayout
+                        android:gravity="center"
+                        android:id="@id/layout_append_receipt"
+                        android:background="@drawable/click_state"
+                        android:paddingLeft="24.0dip"
+                        android:layout_width="fill_parent"
+                        android:layout_height="72.0dip">
+
+                    <TextView
+                            android:gravity="center|left"
+                            android:id="@id/tv_append_receipt_label"
+                            android:text="@string/pos_AddToReceipts"
+                            android:layout_weight="1.0"
+                            style="@style/textview_weiorder_settting"/>
+
+                    <CheckBox
+                            android:id="@id/cb_append_to_receipt"
+                            style="@style/pop_right_checkBox_style_10500"/>
+                </LinearLayout>
+
+                <LinearLayout
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:orientation="horizontal"
+                        android:id="@id/layout_qrcode_wrapper"
+                        android:background="@drawable/wechat_img_circle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="28.0dip">
+
+                    <ImageView
+                            android:id="@id/iv_qrcode"
+                            android:layout_width="150.0dip"
+                            android:layout_height="150.0dip"
+                            android:scaleType="centerInside"/>
+                </LinearLayout>
+
+                <LinearLayout
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:paddingLeft="24.0dip"
+                        android:paddingRight="24.0dip"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16.0dip">
+
+                    <TextView
+                            android:gravity="center"
+                            android:id="@id/tv_qrcode_info"
+                            android:layout_width="fill_parent"
+                            android:layout_height="48.0dip"
+                            android:text="@string/pos_wechat_set_bind_wechat_scan"
+                            android:layout_weight="1.0"
+                            style="@style/textview_weiorder_settting"/>
+
+                    <Button
+                            android:textSize="20.0dip"
+                            android:textColor="@color/white_text_color"
+                            android:gravity="center"
+                            android:id="@id/btn_export"
+                            android:background="@drawable/btn_red_round_selector"
+                            android:layout_width="180.0dip"
+                            android:layout_height="48.0dip"
+                            android:text="Export"
+                            android:layout_weight="1.0"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

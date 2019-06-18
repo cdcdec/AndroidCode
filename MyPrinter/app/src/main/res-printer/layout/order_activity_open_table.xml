@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:gravity="center" android:id="@id/rl_rest" android:background="@color/red_title_bar" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="50.0dip" android:layout_alignParentRight="true" android:layout_alignParentBottom="true">
+        <TextView android:textSize="14.0dip" android:textColor="@color/text_color_white" android:gravity="center" android:id="@id/tv_rest" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/auto_failed_click_reconnect" android:layout_centerInParent="true" />
+        <com.laiqian.ui.ProgressBarCircularIndeterminate android:id="@id/pro_rest" android:background="@color/text_color_white" android:visibility="gone" android:layout_width="32.0dip" android:layout_height="32.0dip" android:layout_centerInParent="true" />
+    </RelativeLayout>
+    <LinearLayout android:orientation="vertical" android:background="@color/viewgroup_background_pressed" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_toRightOf="@id/rl_rest" android:layout_alignParentTop="true">
+        <include android:id="@id/header" layout="@layout/ui_header" />
+        <View style="@style/line_h" />
+        <LinearLayout android:id="@id/share" android:visibility="gone" android:layout_height="40.0dip" style="@style/region_area">
+            <include android:visibility="visible" layout="@layout/order_region_area" />
+        </LinearLayout>
+        <View android:id="@id/order_region_area_line" android:visibility="gone" style="@style/line_h" />
+        <LinearLayout android:orientation="vertical" android:id="@id/ll_table" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_marginTop="5.0dip" android:layout_weight="1.0">
+            <View style="@style/line_h" />
+            <include layout="@layout/order_table_list" />
+        </LinearLayout>
+        <View android:id="@id/table_line" android:visibility="gone" style="@style/line_h" />
+        <com.laiqian.ui.ProgressBarCircularIndeterminate android:id="@id/ivProgress" android:background="@color/text_color_white" android:visibility="gone" android:layout_width="32.0dip" android:layout_height="32.0dip" android:layout_centerInParent="true" />
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/bg" android:background="@color/retail_title_bg_color" android:layout_width="1008.0dip" android:layout_height="48.0dip" android:layout_marginLeft="8.0dip" android:layout_marginTop="16.0dip" android:layout_marginRight="8.0dip">
+        <TextView android:textSize="16.0dip" android:textColor="@color/member_list_item_min" android:gravity="center" android:id="@id/tv_telephone_amount" android:paddingRight="10.0dip" android:layout_width="116.0dip" android:layout_height="fill_parent" android:text="@string/pos_report_cashsummary_export_amount" android:layout_alignParentRight="true" />
+        <TextView android:textSize="16.0dip" android:textColor="@color/member_list_item_min" android:gravity="center" android:id="@id/tv_telephone_time" android:paddingRight="10.0dip" android:layout_width="116.0dip" android:layout_height="fill_parent" android:text="@string/telephone_times" android:layout_toLeftOf="@id/tv_telephone_amount" />
+        <TextView android:textSize="16.0dip" android:textColor="@color/member_list_item_min" android:gravity="center" android:id="@id/tv_telephone_address" android:paddingRight="10.0dip" android:layout_width="276.0dip" android:layout_height="fill_parent" android:text="@string/telephone_address" android:layout_toLeftOf="@id/tv_telephone_time" />
+        <TextView android:textSize="16.0dip" android:textColor="@color/member_list_item_min" android:gravity="center" android:id="@id/tv_telephone_gender" android:paddingRight="10.0dip" android:layout_width="116.0dip" android:layout_height="fill_parent" android:text="@string/telephone_gender" android:layout_toLeftOf="@id/tv_telephone_address" />
+        <TextView android:textSize="16.0dip" android:textColor="@color/member_list_item_min" android:gravity="center" android:id="@id/tv_telephone_name" android:paddingRight="10.0dip" android:layout_width="156.0dip" android:layout_height="fill_parent" android:text="@string/pos_report_transaction_details_member_name" android:layout_toLeftOf="@id/tv_telephone_gender" />
+        <TextView android:textSize="16.0dip" android:textColor="@color/member_list_item_min" android:gravity="center" android:id="@id/tv_telephone_phone" android:paddingLeft="10.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/pos_takeaway_mobile" android:layout_toLeftOf="@id/tv_telephone_name" />
+        <View android:background="@color/setting_line_color" android:layout_width="1.0px" android:layout_height="fill_parent" />
+        <View android:background="@color/setting_line_color" android:layout_width="1.0px" android:layout_height="fill_parent" android:layout_toLeftOf="@id/tv_telephone_amount" />
+        <View android:background="@color/setting_line_color" android:layout_width="1.0px" android:layout_height="fill_parent" android:layout_toLeftOf="@id/tv_telephone_time" />
+        <View android:background="@color/setting_line_color" android:layout_width="1.0px" android:layout_height="fill_parent" android:layout_toLeftOf="@id/tv_telephone_address" />
+        <View android:background="@color/setting_line_color" android:layout_width="1.0px" android:layout_height="fill_parent" android:layout_toLeftOf="@id/tv_telephone_gender" />
+        <View android:background="@color/setting_line_color" android:layout_width="1.0px" android:layout_height="fill_parent" android:layout_toLeftOf="@id/tv_telephone_name" />
+        <View android:background="@color/setting_line_color" android:layout_width="1.0px" android:layout_height="fill_parent" android:layout_toLeftOf="@id/tv_telephone_phone" />
+        <View android:background="@color/setting_line_color" android:layout_width="1.0px" android:layout_height="fill_parent" android:layout_alignParentLeft="true" />
+        <View android:background="@color/setting_line_color" android:layout_width="1.0px" android:layout_height="fill_parent" android:layout_alignParentRight="true" />
+        <View android:background="@color/setting_line_color" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+</LinearLayout>

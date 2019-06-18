@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_gravity="center" android:orientation="vertical" android:background="@android:color/transparent" android:layout_width="fill_parent" android:layout_height="fill_parent" android:minWidth="100.0dip" android:minHeight="100.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:gravity="center" android:layout_gravity="center" android:background="@drawable/bg_waiting_dialog_circle" android:layout_width="62.0dip" android:layout_height="62.0dip">
+        <com.laiqian.ui.ProgressBarCircularIndeterminate android:id="@id/ivProgress" android:background="@color/red_color_10500" android:layout_width="32.0dip" android:layout_height="32.0dip" />
+    </RelativeLayout>
+</LinearLayout>

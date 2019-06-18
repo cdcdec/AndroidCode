@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:background="@color/ui201404_smj_background_lightgray" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:layout_gravity="center" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_margin="8.0dip" style="@style/main_setting_scrollview_style">
+        <LinearLayout android:orientation="vertical" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:id="@id/ll_layout_telephon_order_setting" android:background="@anim/shape_rounded_rectangle_up_click" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <include android:id="@id/layout_telephon_order_setting" android:layout_width="fill_parent" android:layout_height="56.0dip" layout="@layout/item_layout_check_box" />
+            </LinearLayout>
+            <LinearLayout android:id="@id/ll_item_layout_click_more" android:background="@anim/shape_rounded_rectangle_down_click" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="-1.0dip">
+                <include android:id="@id/layout_telephone_customer_list" android:layout_width="fill_parent" android:layout_height="56.0dip" layout="@layout/item_layout_click_more" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              style="@style/listview_linearLayout_style">
+
+    <LinearLayout
+            android:gravity="left"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0">
+
+        <LinearLayout
+                android:gravity="left"
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+            <LinearLayout
+                    android:layout_gravity="left"
+                    android:orientation="horizontal"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0">
+
+                <TextView
+                        android:id="@id/ud_userName"
+                        style="@style/lable_lightgrey_style"/>
+            </LinearLayout>
+
+            <LinearLayout
+                    android:layout_gravity="left"
+                    android:orientation="horizontal"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0">
+
+                <TextView
+                        android:text="@string/ud_userRoleTxt"
+                        style="@style/lable_lightgrey_style"/>
+
+                <TextView
+                        android:id="@id/ud_userRole"
+                        android:layout_marginLeft="5.0dip"
+                        style="@style/lable_lightgrey_style"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+                android:gravity="left"
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+            <LinearLayout
+                    android:layout_gravity="left"
+                    android:orientation="horizontal"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0">
+
+                <TextView
+                        android:text="@string/ud_userPhoneTxt"
+                        style="@style/lable_lightgrey_style"/>
+
+                <TextView
+                        android:id="@id/ud_userPhone"
+                        android:layout_marginLeft="5.0dip"
+                        style="@style/lable_lightgrey_style"/>
+            </LinearLayout>
+
+            <LinearLayout
+                    android:layout_gravity="left"
+                    android:orientation="horizontal"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0">
+
+                <TextView
+                        android:text="@string/ud_userStatusTxt"
+                        style="@style/lable_lightgrey_style"/>
+
+                <TextView
+                        android:id="@id/ud_userStatus"
+                        android:layout_marginLeft="5.0dip"
+                        style="@style/lable_lightgrey_style"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

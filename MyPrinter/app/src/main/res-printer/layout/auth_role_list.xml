@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:background="@drawable/mainmenu_background"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent">
+
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0">
+
+        <LinearLayout style="@style/autoCompleteTextView_linearLayout_style">
+
+            <AutoCompleteTextView
+                    android:id="@id/auth_SearchValue"
+                    android:hint="@string/auth_SearchHint"
+                    style="@style/autoCompleteTextView_style"/>
+        </LinearLayout>
+
+        <ListView
+                android:id="@id/auth_lv"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:cacheColorHint="#ffffffff"
+                style="@style/listview_layout_style"/>
+    </LinearLayout>
+
+    <LinearLayout style="@style/bottomButton_linearlayout_style">
+
+        <Button
+                android:id="@id/auth_SearchBtn"
+                android:text="@string/auth_newRoleLabel"
+                android:drawableTop="@drawable/auth_role_list"
+                style="@style/main_tab_bottom_selected"/>
+
+        <Button
+                android:id="@id/auth_newRoleBtn"
+                android:visibility="gone"
+                android:text="@string/auth_newRoleLabel"
+                android:drawableTop="@drawable/menu_cart"
+                style="@style/main_tab_bottom_unselected"/>
+
+        <Button
+                android:id="@id/auth_role_setting_Btn"
+                android:text="@string/auth_role_setting_Label"
+                android:drawableTop="@drawable/auth_setting"
+                style="@style/main_tab_bottom_unselected"/>
+
+        <Button
+                android:id="@id/auth_employee_setting_Btn"
+                android:text="@string/auth_employee_setting_Label"
+                android:drawableTop="@drawable/auth_employee_setting"
+                style="@style/main_tab_bottom_unselected"/>
+    </LinearLayout>
+</LinearLayout>

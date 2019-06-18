@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:background="@drawable/mainmenu_background"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent">
+
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0">
+
+        <ListView
+                android:id="@id/ch_ChargeList"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="2.0dip"
+                android:layout_marginRight="2.0dip"
+                android:cacheColorHint="#ffffffff"
+                style="@style/listview_layout_style"/>
+    </LinearLayout>
+
+    <LinearLayout
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:background="@drawable/adsbar_background"
+            android:padding="10.0dip"
+            android:visibility="gone"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.0">
+
+        <Button
+                android:textSize="14.0dip"
+                android:textColor="@color/main_text_color"
+                android:id="@id/charge_step1_packages_btn"
+                android:background="@drawable/ui_button_bg_left"
+                android:layout_width="70.0dip"
+                android:layout_height="wrap_content"
+                android:text="@string/charge_step1_packages_btn"/>
+
+        <Button
+                android:textSize="14.0dip"
+                android:textColor="@color/main_text_color"
+                android:id="@id/charge_step2_charging_btn"
+                android:background="@drawable/ui_button_bg_highlight"
+                android:layout_width="70.0dip"
+                android:layout_height="wrap_content"
+                android:text="@string/charge_step2_charging_btn"/>
+
+        <Button
+                android:textSize="14.0dip"
+                android:textColor="@color/main_text_color"
+                android:id="@id/charge_step3_save_btn"
+                android:background="@drawable/ui_button_bg_right"
+                android:layout_width="70.0dip"
+                android:layout_height="wrap_content"
+                android:text="@string/charge_step3_save_btn"/>
+    </LinearLayout>
+</LinearLayout>

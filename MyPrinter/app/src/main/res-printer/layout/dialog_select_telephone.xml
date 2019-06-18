@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/setting_bg_color" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:id="@id/title_l" android:background="@drawable/pos_simple_click_background" android:paddingLeft="24.0dip" android:paddingRight="24.0dip" android:layout_width="wrap_content" android:layout_height="56.0dip">
+        <View style="@style/pos_title_back_icon" />
+        <TextView android:text="@string/telephone_people" style="@style/pos_title_text" />
+    </LinearLayout>
+    <ImageView android:layout_gravity="center_vertical" android:id="@id/iv_create" android:background="@drawable/pos_simple_click_background" android:paddingLeft="15.0dip" android:paddingRight="15.0dip" android:layout_width="60.0dip" android:layout_height="56.0dip" android:layout_marginRight="8.0dip" android:src="@drawable/pos_add_small" android:scaleType="fitCenter" android:layout_alignParentRight="true" />
+    <View android:id="@id/line_top" android:background="@color/setting_line_color" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_below="@id/title_l" />
+    <LinearLayout android:orientation="vertical" android:id="@id/ll_right" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_below="@id/title_l" android:layout_alignParentRight="true">
+        <RelativeLayout android:layout_gravity="center_horizontal" android:layout_width="354.0dip" android:layout_height="56.0dip" android:layout_marginLeft="24.0dip" android:layout_marginTop="8.0dip" android:layout_marginRight="24.0dip">
+            <EditText android:textSize="@dimen/text_20dp" android:textColor="@color/member_list_item_max" android:gravity="center|left" android:id="@id/et_query" android:background="@drawable/small_edittext_shape_with_stroke" android:paddingLeft="74.0dip" android:longClickable="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="" android:hint="@string/pos_member_selection_card_search_title" android:singleLine="true" android:selectAllOnFocus="true" />
+            <ImageView android:id="@id/btn_keyboard" android:background="@drawable/click_state" android:paddingTop="18.0dip" android:paddingBottom="18.0dip" android:layout_width="75.0dip" android:layout_height="fill_parent" android:src="@drawable/icon_keyboard" android:scaleType="centerInside" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+            <Button android:id="@id/btn_clean" android:background="@drawable/clear_10500" android:visibility="gone" android:layout_width="26.0dip" android:layout_height="26.0dip" android:layout_marginRight="24.0dip" android:layout_alignRight="@id/et_query" android:layout_centerVertical="true" />
+        </RelativeLayout>
+        <include android:layout_gravity="center_horizontal" android:id="@id/layoutCreditPoints" android:layout_width="350.0dip" android:layout_height="fill_parent" android:layout_marginTop="8.0dip" layout="@layout/layout_numeric_keyboard" />
+    </LinearLayout>
+    <View android:id="@id/line_center" android:background="@color/setting_line_color" android:layout_width="1.0dip" android:layout_height="fill_parent" android:layout_toLeftOf="@id/ll_right" android:layout_below="@id/line_top" />
+    <FrameLayout android:id="@id/fl_left" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="24.0dip" android:layout_marginRight="24.0dip" android:layout_toLeftOf="@id/line_center" android:layout_below="@id/line_top">
+        <ScrollView android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <RelativeLayout android:layout_gravity="center_horizontal" android:id="@id/ll_vip_info" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="20.0dip">
+                <LinearLayout android:gravity="center_vertical" android:layout_gravity="center_horizontal" android:id="@id/telephone_rank_ll" android:background="@anim/shape_rounded_rectangle_up_click" android:paddingLeft="@dimen/dp_24" android:paddingRight="@dimen/dp_24" android:layout_width="fill_parent" android:layout_height="@dimen/dp_56" android:layout_below="@id/ll_charge">
+                    <TextView android:textSize="@dimen/sp_20" android:textColor="@color/setting_text_color1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/pos_takeaway_mobile" />
+                    <TextView android:id="@id/tv_phone" style="@style/vip_text_black" />
+                </LinearLayout>
+                <LinearLayout android:id="@id/ll_cardNo" android:visibility="gone" android:layout_below="@id/telephone_rank_ll" style="@style/linearLayout_rounded_rectangle_m_vip">
+                    <TextView android:text="@string/Pos_MemberCardNo" style="@style/member_title_textable" />
+                    <TextView android:id="@id/tv_cardNo" style="@style/vip_text_black" />
+                </LinearLayout>
+                <LinearLayout android:id="@id/ll_name" android:layout_below="@id/ll_cardNo" style="@style/linearLayout_rounded_rectangle_m_vip">
+                    <TextView android:text="@string/pos_report_transaction_details_member_name" style="@style/member_title_textable" />
+                    <TextView android:id="@id/tv_name" style="@style/vip_text_black" />
+                </LinearLayout>
+                <LinearLayout android:id="@id/ll_gender" android:layout_below="@id/ll_name" style="@style/linearLayout_rounded_rectangle_m_vip">
+                    <TextView android:text="@string/telephone_gender" style="@style/member_title_textable" />
+                    <TextView android:id="@id/tv_gender" style="@style/vip_text_black" />
+                </LinearLayout>
+                <LinearLayout android:id="@id/ll_member_rank" android:layout_below="@id/ll_gender" style="@style/linearLayout_rounded_rectangle_m_vip">
+                    <TextView android:text="@string/member_rank_title" style="@style/member_title_textable" />
+                    <TextView android:id="@id/tv_member_rank" style="@style/vip_text_black" />
+                </LinearLayout>
+                <LinearLayout android:id="@id/ll_birthday" android:layout_below="@id/ll_member_rank" style="@style/linearLayout_rounded_rectangle_m_vip">
+                    <TextView android:text="@string/export_vip_birthday" style="@style/member_title_textable" />
+                    <TextView android:id="@id/tv_birthday" style="@style/vip_text_black" />
+                </LinearLayout>
+                <LinearLayout android:id="@id/ll_balance" android:layout_below="@id/ll_birthday" style="@style/linearLayout_rounded_rectangle_m_vip">
+                    <TextView android:text="@string/pos_main_balance" style="@style/member_title_textable" />
+                    <TextView android:id="@id/tv_balance" style="@style/vip_text_black" />
+                </LinearLayout>
+                <LinearLayout android:id="@id/ll_area" android:layout_below="@id/ll_balance" style="@style/linearLayout_rounded_rectangle_m_vip">
+                    <TextView android:text="@string/telephone_area" style="@style/member_title_textable" />
+                    <TextView android:id="@id/tv_area" style="@style/vip_text_black" />
+                </LinearLayout>
+                <LinearLayout android:id="@id/ll_address" android:layout_below="@id/ll_area" style="@style/linearLayout_rounded_rectangle_m_vip">
+                    <TextView android:text="@string/telephone_address" style="@style/member_title_textable" />
+                    <TextView android:id="@id/tv_address" style="@style/vip_text_black" />
+                </LinearLayout>
+                <LinearLayout android:id="@id/ll_landMark" android:layout_below="@id/ll_address" style="@style/linearLayout_rounded_rectangle_d_vip">
+                    <TextView android:text="@string/telephone_land_mark" style="@style/member_title_textable" />
+                    <TextView android:id="@id/tv_landMark" style="@style/vip_text_black" />
+                </LinearLayout>
+                <Button android:textSize="20.0sp" android:textColor="@color/pos_detailed_text_black" android:id="@id/btn_infoEdit" android:background="@drawable/pos_shift_bt_background" android:layout_width="fill_parent" android:layout_height="56.0dip" android:layout_marginTop="24.0dip" android:layout_marginBottom="32.0dip" android:text="@string/pos_select_telephoneDialog" android:layout_below="@id/ll_landMark" />
+            </RelativeLayout>
+        </ScrollView>
+        <com.laiqian.ui.listview.FormListView android:id="@id/lv_vip" android:visibility="gone" style="@style/vip_listview_style" />
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/ll_tips" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/no_customer" />
+            <TextView android:textSize="@dimen/text_20dp" android:textColor="@color/member_list_item_min" android:gravity="center" android:id="@id/tip_text_view" android:layout_width="400.0dip" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" android:text="@string/pos_vip_query_tips" />
+        </LinearLayout>
+        <TextView android:textSize="21.0dip" android:textColor="@color/member_list_item_min" android:gravity="center" android:id="@id/tv_no_data" android:clickable="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/no_custome_data" />
+    </FrameLayout>
+</RelativeLayout>

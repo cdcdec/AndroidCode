@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:layout_gravity="center" android:id="@id/iv_upper" android:paddingLeft="8.0dip" android:paddingRight="8.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="fitCenter" android:layout_centerInParent="true" />
+    <ImageView android:layout_gravity="center" android:id="@id/iv_lower" android:paddingLeft="8.0dip" android:paddingRight="8.0dip" android:layout_width="250.0dip" android:layout_height="250.0dip" android:scaleType="fitCenter" android:layout_centerInParent="true" />
+    <TextView android:textSize="20.0dip" android:textColor="@color/text_main_black" android:gravity="center" android:id="@id/tv_actual_pay" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="13.0dip" android:layout_below="@id/iv_lower" />
+    <TextView android:textSize="20.0dip" android:textColor="@color/text_main_black" android:gravity="center" android:id="@id/tv_hint" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_above="@id/iv_lower" />
+</RelativeLayout>

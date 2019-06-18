@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="400.0dip" android:layout_height="wrap_content">
+        <RelativeLayout android:background="@color/pos_background_grey" android:layout_width="fill_parent" android:layout_height="56.0dip">
+            <TextView android:gravity="center" android:id="@id/tvTitle" android:focusable="true" android:focusableInTouchMode="true" android:text="@string/pos_resend_date" android:layout_centerInParent="true" style="@style/pos_title_text" />
+        </RelativeLayout>
+        <View android:background="@color/pos_line_grey" android:layout_width="fill_parent" android:layout_height="1.0px" />
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:background="@color/pos_background_white" android:paddingTop="8.0dip" android:paddingBottom="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="100.0dip">
+            <LinearLayout style="@style/pos_product_dialog_linearlayout">
+                <TextView android:layout_width="wrap_content" android:text="@string/resend_dialog_connection_advice" android:layout_weight="0.0" style="@style/pos_product_dialog_text" />
+            </LinearLayout>
+        </LinearLayout>
+        <View android:background="@color/pos_line_grey" android:layout_width="fill_parent" android:layout_height="1.0px" />
+        <RelativeLayout android:id="@id/product_update_bottom" android:background="@color/pos_background_grey" android:layout_width="fill_parent" android:layout_height="56.0dip">
+            <TextView android:id="@id/next_step" android:paddingLeft="24.0dip" android:paddingRight="24.0dip" android:text="@string/pos_dialog_return" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" style="@style/pos_product_content_text_clickable" />
+            <TextView android:id="@id/cancel" android:paddingLeft="24.0dip" android:paddingRight="24.0dip" android:text="@string/pos_product_dialog_canal" android:layout_toLeftOf="@id/sure" android:layout_alignParentTop="true" style="@style/pos_product_content_text_clickable" />
+            <TextView android:textColor="@color/red_color_10500" android:id="@id/sure" android:paddingLeft="24.0dip" android:paddingRight="24.0dip" android:text="@string/pos_dialog_resubmit" android:layout_alignParentRight="true" android:layout_centerVertical="true" style="@style/pos_product_content_text_clickable" />
+        </RelativeLayout>
+    </LinearLayout>
+</FrameLayout>

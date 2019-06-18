@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:paddingTop="24.0dip" android:paddingBottom="10.0dip" style="@style/grey_background"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:laiqian="http://schemas.android.com/apk/res-auto">
+    <ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout style="@style/linearLayout_rounded_rectangle_u_min">
+                <TextView android:textSize="20.0dip" android:textColor="@color/setting_text_color1" android:layout_width="60.0dip" android:layout_height="wrap_content" android:text="@string/pos_add_member_card_no_title2" />
+                <TextView android:textSize="20.0dip" android:textColor="@color/setting_text_color1" android:ellipsize="end" android:gravity="center|right" android:id="@id/tvPosMemberNumber" android:background="@drawable/small_edittext_shape" android:layout_width="fill_parent" android:layout_height="40.0dip" android:lines="1" />
+            </LinearLayout>
+            <LinearLayout style="@style/linearLayout_rounded_rectangle_m_min">
+                <TextView android:textSize="20.0dip" android:textColor="@color/setting_text_color1" android:layout_width="60.0dip" android:layout_height="wrap_content" android:text="@string/pos_takeaway_mobile" />
+                <TextView android:textSize="20.0dip" android:textColor="@color/setting_text_color1" android:ellipsize="end" android:gravity="center|right" android:id="@id/tvPosMemberMobile" android:background="@drawable/small_edittext_shape" android:layout_width="fill_parent" android:layout_height="40.0dip" android:lines="1" />
+            </LinearLayout>
+            <LinearLayout style="@style/linearLayout_rounded_rectangle_m_min">
+                <TextView android:textSize="20.0dip" android:textColor="@color/setting_text_color1" android:layout_width="60.0dip" android:layout_height="wrap_content" android:text="@string/pos_add_member_name_title" />
+                <TextView android:textSize="20.0dip" android:textColor="@color/setting_text_color1" android:ellipsize="end" android:gravity="center|right" android:id="@id/tvPosMemberName" android:background="@drawable/small_edittext_shape" android:layout_width="fill_parent" android:layout_height="40.0dip" android:lines="1" />
+            </LinearLayout>
+            <LinearLayout android:id="@id/po_productType_ll" style="@style/linearLayout_rounded_rectangle_m_min">
+                <TextView android:textSize="20.0dip" android:textColor="@color/setting_text_color1" android:layout_width="60.0dip" android:layout_height="wrap_content" android:text="@string/pos_member_amount_title" />
+                <TextView android:textSize="20.0dip" android:textColor="@color/setting_text_color1" android:ellipsize="end" android:gravity="center|right" android:id="@id/tvPosMemberAmount" android:background="@drawable/small_edittext_shape" android:layout_width="fill_parent" android:layout_height="40.0dip" android:lines="1" />
+            </LinearLayout>
+            <LinearLayout android:id="@id/llMemberStatus" style="@style/linearLayout_rounded_rectangle_d_min">
+                <TextView android:textSize="20.0dip" android:textColor="@color/setting_text_color1" android:layout_width="60.0dip" android:layout_height="wrap_content" android:text="@string/pos_member_status" />
+                <TextView android:textSize="20.0dip" android:textColor="@color/setting_text_color1" android:gravity="center|right" android:id="@id/tvPosMemberStatus" android:layout_width="fill_parent" android:layout_height="40.0dip" />
+            </LinearLayout>
+            <LinearLayout android:id="@id/llChargeRecord" android:layout_marginTop="24.0dip" style="@style/clickable_linearLayout_u_min">
+                <TextView android:textSize="20.0dip" android:textColor="@color/setting_text_color1" android:layout_gravity="center_vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginRight="10.0dip" android:text="@string/pos_main_setting_member_charge_title" android:layout_weight="1.0" />
+                <ImageView style="@style/pop_arrow_style_10500" />
+            </LinearLayout>
+            <LinearLayout android:id="@id/llConsumeRecord" style="@style/clickable_linearLayout_d_min">
+                <TextView android:textSize="20.0dip" android:textColor="@color/setting_text_color1" android:layout_gravity="center_vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginRight="10.0dip" android:text="@string/pos_main_setting_member_consume_title" android:layout_weight="1.0" />
+                <ImageView style="@style/pop_arrow_style_10500" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

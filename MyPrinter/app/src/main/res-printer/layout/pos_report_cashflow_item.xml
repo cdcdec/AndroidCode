@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:id="@id/item" android:background="@drawable/setting_leftll_selector_10500" android:duplicateParentState="true" android:layout_width="fill_parent" android:layout_height="40.0dip" android:layout_marginLeft="8.0dip" android:layout_marginRight="8.0dip">
+        <TextView android:textSize="16.0dip" android:textColor="@color/pos_text_black" android:gravity="center_vertical" android:id="@id/date_time" android:layout_width="242.0dip" android:layout_height="fill_parent" android:layout_marginLeft="10.0dip" android:singleLine="true" />
+        <View style="@style/pos_line_v" />
+        <TextView android:textSize="16.0dip" android:textColor="@color/pos_text_black" android:gravity="center_vertical" android:id="@id/name" android:layout_width="242.0dip" android:layout_height="fill_parent" android:layout_marginLeft="10.0dip" android:singleLine="true" />
+        <View style="@style/pos_line_v" />
+        <TextView android:textSize="16.0dip" android:textColor="@color/pos_text_black" android:gravity="center|right" android:id="@id/amount" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_marginRight="10.0dip" android:singleLine="true" android:layout_weight="1.0" />
+    </LinearLayout>
+    <View android:id="@id/line_top" android:visibility="gone" android:layout_alignLeft="@id/item" android:layout_alignTop="@id/item" android:layout_alignRight="@id/item" style="@style/pos_line_h" />
+    <View android:layout_alignLeft="@id/item" android:layout_alignTop="@id/item" android:layout_alignBottom="@id/item" style="@style/pos_line_v" />
+    <View android:layout_alignLeft="@id/item" android:layout_alignRight="@id/item" android:layout_alignBottom="@id/item" style="@style/pos_line_h" />
+    <View android:layout_alignTop="@id/item" android:layout_alignRight="@id/item" android:layout_alignBottom="@id/item" style="@style/pos_line_v" />
+</RelativeLayout>

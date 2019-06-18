@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@android:color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:id="@id/layTimeFrameId" style="@style/pos_date_dialog_linearlayout">
+        <TextView android:layout_width="60.0dip" android:layout_marginLeft="31.0dip" android:layout_marginRight="31.0dip" android:text="@string/pos_date_dialog_date" style="@style/pos_date_dialog_black_text" />
+        <TextView android:id="@id/date_everyday_begin" android:text="9:00" style="@style/pos_date_dialog_editable_text_time" />
+        <TextView android:text="@string/sync_end_time_title" style="@style/pos_date_dialog_black_text" />
+        <TextView android:id="@id/date_everyday_end" android:text="13:00" style="@style/pos_date_dialog_editable_text_time" />
+    </LinearLayout>
+</LinearLayout>

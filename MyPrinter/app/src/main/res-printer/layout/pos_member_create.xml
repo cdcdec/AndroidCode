@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:paddingTop="24.0dip" android:paddingBottom="10.0dip" style="@style/grey_background"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:gravity="center_vertical" android:layout_gravity="center_horizontal" android:id="@id/member_rank_ll" android:background="@anim/shape_rounded_rectangle_only_click" android:paddingLeft="@dimen/dp_24" android:paddingRight="@dimen/dp_24" android:layout_width="@dimen/dp_552" android:layout_height="@dimen/dp_56">
+                <TextView android:textSize="@dimen/sp_20" android:textColor="@color/setting_text_color1" android:gravity="center|left" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/member_rank_title" />
+                <TextView android:textSize="@dimen/sp_20" android:textColor="@color/setting_text_color3" android:gravity="center|right" android:id="@id/member_rank_tv" android:paddingRight="@dimen/dp_11" android:layout_width="fill_parent" android:layout_height="@dimen/dp_40" />
+            </LinearLayout>
+            <LinearLayout android:layout_marginTop="@dimen/dp_24" style="@style/linearLayout_rounded_rectangle_u_min">
+                <LinearLayout android:gravity="center_vertical" android:layout_width="100.0dip" android:layout_height="fill_parent">
+                    <TextView android:textSize="20.0dip" android:textColor="@color/setting_text_color1" android:gravity="center|left" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/pos_add_member_card_no_title2" />
+                    <TextView android:textSize="20.0dip" android:textColor="@color/red_color_10500" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="*" />
+                </LinearLayout>
+                <EditText android:textSize="20.0dip" android:textColor="@color/setting_text_color3" android:gravity="center|right" android:id="@id/etPosMemberNumber" android:background="@drawable/small_edittext_shape" android:paddingRight="11.0dip" android:layout_width="fill_parent" android:layout_height="40.0dip" android:selectAllOnFocus="true" android:numeric="decimal" android:inputType="number" />
+            </LinearLayout>
+            <LinearLayout style="@style/linearLayout_rounded_rectangle_m_min">
+                <LinearLayout android:gravity="center_vertical" android:layout_width="100.0dip" android:layout_height="fill_parent">
+                    <TextView android:textSize="20.0dip" android:textColor="@color/setting_text_color1" android:gravity="center|left" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/pos_takeaway_mobile" />
+                    <TextView android:textSize="20.0dip" android:textColor="@color/red_color_10500" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="*" />
+                </LinearLayout>
+                <EditText android:textSize="20.0dip" android:textColor="@color/setting_text_color3" android:gravity="center|right" android:id="@id/etPosMemberMobile" android:background="@drawable/small_edittext_shape" android:paddingRight="11.0dip" android:layout_width="fill_parent" android:layout_height="40.0dip" android:selectAllOnFocus="true" android:inputType="number" />
+            </LinearLayout>
+            <LinearLayout style="@style/linearLayout_rounded_rectangle_m_min">
+                <TextView android:textSize="20.0dip" android:textColor="@color/setting_text_color1" android:gravity="center|left" android:layout_width="100.0dip" android:layout_height="wrap_content" android:text="@string/pos_add_member_name_title" />
+                <EditText android:textSize="20.0dip" android:textColor="@color/setting_text_color3" android:gravity="center|right" android:id="@id/etPosMemberName" android:background="@drawable/small_edittext_shape" android:paddingRight="11.0dip" android:layout_width="fill_parent" android:layout_height="40.0dip" android:selectAllOnFocus="true" />
+            </LinearLayout>
+            <LinearLayout android:id="@id/llPosMemberBirthday" android:duplicateParentState="false" style="@style/linearLayout_rounded_rectangle_m_min">
+                <TextView android:textSize="20.0dip" android:textColor="@color/setting_text_color1" android:gravity="center|left" android:layout_width="100.0dip" android:layout_height="wrap_content" android:text="@string/pos_member_birthday_title" />
+                <TextView android:textSize="20.0dip" android:textColor="@color/setting_text_color3" android:textColorHint="@color/setting_text_color3" android:gravity="center|right" android:id="@id/tvPosMemberBirthday" android:paddingRight="11.0dip" android:layout_width="fill_parent" android:layout_height="40.0dip" android:hint="@string/pos_vip_birthday_hint" android:selectAllOnFocus="true" />
+            </LinearLayout>
+            <LinearLayout android:id="@id/po_productType_ll" style="@style/linearLayout_rounded_rectangle_m_min">
+                <LinearLayout android:gravity="center_vertical" android:layout_width="120.0dip" android:layout_height="fill_parent">
+                    <TextView android:textSize="20.0dip" android:textColor="@color/setting_text_color1" android:gravity="center|left" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/pos_charge_amount" />
+                    <TextView android:textSize="20.0dip" android:textColor="@color/red_color_10500" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="*" />
+                </LinearLayout>
+                <EditText android:textSize="20.0dip" android:textColor="@color/setting_text_color3" android:gravity="center|right" android:id="@id/etPosMemberAmount" android:background="@drawable/small_edittext_shape" android:paddingRight="11.0dip" android:layout_width="fill_parent" android:layout_height="40.0dip" android:selectAllOnFocus="true" android:inputType="numberDecimal" />
+            </LinearLayout>
+            <LinearLayout style="@style/linearLayout_rounded_rectangle_d_min">
+                <TextView android:textSize="20.0dip" android:textColor="@color/setting_text_color1" android:gravity="center|left" android:layout_width="110.0dip" android:layout_height="wrap_content" android:layout_marginRight="10.0dip" android:text="@string/pos_member_charge_plus_amount_title" />
+                <EditText android:textSize="20.0dip" android:textColor="@color/setting_text_color3" android:gravity="center|right" android:id="@id/etPosMemberChargeGrantAmount" android:background="@drawable/small_edittext_shape" android:paddingRight="11.0dip" android:layout_width="fill_parent" android:layout_height="40.0dip" android:selectAllOnFocus="true" android:inputType="numberDecimal" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

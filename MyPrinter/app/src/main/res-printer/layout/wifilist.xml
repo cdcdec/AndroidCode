@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout style="@style/white_background"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ListView android:id="@id/wifi_lv" style="@style/listview_layout_style" />
+</LinearLayout>

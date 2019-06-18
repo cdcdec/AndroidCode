@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:layout_gravity="center_vertical" android:orientation="horizontal" android:background="#ffffffff" android:layout_width="307.0dip" android:layout_height="40.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:background="@drawable/pos_query" android:layout_width="30.0dip" android:layout_height="30.0dip" android:layout_marginLeft="33.0dip" />
+    <EditText android:textSize="16.0dip" android:textColor="@color/pos_text_black" android:id="@id/table" android:background="@null" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="28.0dip" android:hint="@string/pos_main_pay_table_no" android:singleLine="true" android:layout_weight="1.0" />
+    <View android:id="@id/clear" android:background="@drawable/pos_report_filter_delete" android:layout_width="30.0dip" android:layout_height="30.0dip" android:layout_marginRight="14.0dip" />
+</LinearLayout>

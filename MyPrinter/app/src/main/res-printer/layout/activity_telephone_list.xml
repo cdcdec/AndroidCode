@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:orientation="vertical"
+             android:id="@id/ll_product"
+             android:layout_width="fill_parent"
+             android:layout_height="fill_parent"
+             style="@style/member_listview_background">
+
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+        <com.laiqian.ui.listview.FormListView
+                android:id="@id/lv_member"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="0.0dip"
+                android:listSelector="@android:color/transparent"
+                android:divider="@null"
+                android:dividerHeight="0.0px"
+                android:choiceMode="singleChoice"
+                android:headerDividersEnabled="false"
+                android:footerDividersEnabled="false"
+                style="@style/main_setting_scrollview_style"/>
+
+        <LinearLayout
+                android:orientation="vertical"
+                android:id="@id/ll_blank_views"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_below="@id/lv_member">
+
+            <include
+                    android:id="@id/first_blank_item"
+                    layout="@layout/blank_telephone_item_odd"/>
+
+            <include layout="@layout/blank_phone_item_even"/>
+
+            <include layout="@layout/blank_telephone_item_odd"/>
+
+            <include layout="@layout/blank_phone_item_even"/>
+
+            <include layout="@layout/blank_telephone_item_odd"/>
+
+            <include layout="@layout/blank_phone_item_even"/>
+
+            <include layout="@layout/blank_telephone_item_odd"/>
+
+            <include layout="@layout/blank_phone_item_even"/>
+
+            <include layout="@layout/blank_telephone_item_odd"/>
+
+            <include layout="@layout/blank_phone_item_even"/>
+
+            <include layout="@layout/blank_telephone_item_odd"/>
+
+            <include layout="@layout/blank_phone_item_even"/>
+
+            <include layout="@layout/blank_telephone_item_odd"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+        <TextView
+                android:textSize="21.0dip"
+                android:textColor="@color/member_list_item_min"
+                android:gravity="center"
+                android:id="@id/tvNoCustomerData"
+                android:visibility="gone"
+                android:clickable="false"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:text="@string/no_custome_data"/>
+    </RelativeLayout>
+
+    <com.laiqian.ui.ProgressBarCircularIndeterminate
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:id="@id/progress"
+            android:background="@color/red_color_10500"
+            android:layout_width="32.0dip"
+            android:layout_height="32.0dip"/>
+</FrameLayout>

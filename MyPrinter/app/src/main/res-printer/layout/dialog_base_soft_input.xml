@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/dialog_queuing_machine_root" android:layout_width="300.0dip" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <EditText android:textSize="26.0dip" android:textColor="#ffffffff" android:textColorHint="#ff6a6e72" android:gravity="center" android:id="@id/et_input" android:background="#ff31363b" android:layout_width="fill_parent" android:layout_height="105.0dip" android:singleLine="true" android:maxLength="4" android:inputType="number" android:imeOptions="actionDone" />
+    <include android:id="@id/layout_keyboard" android:layout_width="fill_parent" android:layout_height="240.0dip" android:layout_margin="1.0px" android:layout_weight="1.0" layout="@layout/layout_keyboard" />
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="60.0dip">
+        <Button android:textSize="20.0dip" android:textColor="@color/taste_text_color_gray" android:id="@id/btn_left" android:background="@drawable/btn_gray_no_round_selector" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0" />
+        <Button android:textSize="20.0dip" android:textColor="#ffffffff" android:id="@id/btn_right" android:background="@drawable/btn_red_no_round_selector" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0" />
+    </LinearLayout>
+</LinearLayout>

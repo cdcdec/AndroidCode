@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:laiqian="http://schemas.android.com/apk/res-auto"
+              android:background="@color/pos_big_b_color_10800"
+              android:paddingTop="0.0dip"
+              android:paddingBottom="0.0dip"
+              style="@style/grey_background">
+
+    <ListView
+            android:layout_gravity="center_horizontal"
+            android:id="@id/lvKitchenPrint"
+            android:background="@null"
+            android:layout_width="fill_parent"
+            android:listSelector="@android:color/transparent"
+            android:divider="@null"
+            android:dividerHeight="0.0dip"
+            style="@style/warehouse_listview_style"/>
+
+    <TextView
+            android:textSize="20.0dip"
+            android:textColor="#ff999999"
+            android:gravity="center"
+            android:id="@android:id/empty"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:text="@string/kitchen_print_range_empty"/>
+</LinearLayout>

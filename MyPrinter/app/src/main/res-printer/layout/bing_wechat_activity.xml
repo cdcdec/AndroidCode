@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:gravity="center"
+              android:orientation="vertical"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent">
+
+    <LinearLayout
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        <LinearLayout
+                android:gravity="center"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+            <ImageView
+                    android:background="@drawable/binding_wechat"
+                    android:layout_width="30.0dip"
+                    android:layout_height="25.0dip"/>
+
+            <TextView
+                    android:textSize="20.0dip"
+                    android:textColor="@color/pos_text_black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5.0dip"
+                    android:text="@string/WeChat_scan_code_binding"/>
+        </LinearLayout>
+
+        <LinearLayout
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:orientation="horizontal"
+                android:id="@id/layout_qrcode_wrapper"
+                android:background="@drawable/wechat_img_circle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10.0dip">
+
+            <ImageView
+                    android:id="@id/iv_qrcode"
+                    android:layout_width="250.0dip"
+                    android:layout_height="250.0dip"
+                    android:scaleType="centerInside"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

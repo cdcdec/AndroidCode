@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:background="@drawable/listview_corner_round_bg" android:layout_width="350.0dip" android:layout_height="159.0dip">
+        <com.laiqian.ui.ProgressBarCircularIndeterminate android:id="@id/ivProgress" android:background="@color/red_color_10500" android:layout_width="30.0dip" android:layout_height="30.0dip" android:layout_marginTop="25.0dip" android:layout_marginBottom="28.0dip" />
+        <TextView android:gravity="center" android:id="@id/tv_import_loading" android:layout_width="260.0dip" android:layout_height="56.0dip" android:text="@string/pos_import_product_wait" />
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/product_l" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:id="@id/product" style="@style/pos_setting_right_item">
+            <TextView android:gravity="left" android:layout_width="wrap_content" android:text="@string/mainmenu_product_management" style="@style/pos_setting_right_item_lab" />
+            <TextView android:id="@id/function_hint_product" android:visibility="gone" style="@style/red_dot_function" />
+            <TextView android:layout_weight="1.0" style="@style/pos_setting_right_item_lab" />
+            <View style="@style/pos_setting_right_item_icon" />
+        </LinearLayout>
+        <LinearLayout android:id="@id/attribute" style="@style/pos_setting_right_item">
+            <TextView android:gravity="left" android:layout_width="wrap_content" android:text="@string/pos_product_attribute_rule" style="@style/pos_setting_right_item_lab" />
+            <TextView android:id="@id/function_hint_attribute" android:visibility="gone" style="@style/red_dot_function" />
+            <TextView android:layout_weight="1.0" style="@style/pos_setting_right_item_lab" />
+            <View style="@style/pos_setting_right_item_icon" />
+        </LinearLayout>
+        <LinearLayout android:id="@id/mealset" style="@style/pos_setting_right_item">
+            <TextView android:gravity="left" android:layout_width="wrap_content" android:text="@string/pos_product_mealset" style="@style/pos_setting_right_item_lab" />
+            <TextView android:id="@id/function_hint_mealset" android:visibility="gone" style="@style/red_dot_function" />
+            <TextView android:layout_weight="1.0" style="@style/pos_setting_right_item_lab" />
+            <View style="@style/pos_setting_right_item_icon" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/rawmaterial_l" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <View android:id="@id/line_1" style="@style/pos_setting_right_item_line" />
+        <LinearLayout android:id="@id/rawmaterial" style="@style/pos_setting_right_item">
+            <TextView android:gravity="left" android:text="@string/pos_product_rawmaterial" style="@style/pos_setting_right_item_lab" />
+            <TextView android:id="@id/function_hint_rawmaterial" android:visibility="gone" style="@style/red_dot_function" />
+            <View android:layout_width="0.0dip" android:layout_height="0.0dip" android:layout_weight="1.0" />
+            <View style="@style/pos_setting_right_item_icon" />
+        </LinearLayout>
+        <LinearLayout android:id="@id/rawmaterial_history" style="@style/pos_setting_right_item">
+            <TextView android:gravity="left" android:layout_width="wrap_content" android:text="@string/pos_product_rawmaterial_history" style="@style/pos_setting_right_item_lab" />
+            <TextView android:id="@id/function_hint_rawmaterial_history" android:visibility="gone" style="@style/red_dot_function" />
+            <TextView android:layout_weight="1.0" style="@style/pos_setting_right_item_lab" />
+            <View style="@style/pos_setting_right_item_icon" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:id="@id/pos_product_picture_management_l" style="@style/pos_setting_right_item">
+        <TextView android:layout_width="wrap_content" android:text="@string/pos_product_picture_management" style="@style/pos_setting_right_item_lab" />
+        <TextView android:layout_weight="1.0" style="@style/pos_setting_right_item_lab" />
+        <TextView android:textColor="@color/text_color_grey" android:layout_marginLeft="5.0dip" android:layout_marginRight="10.0dip" android:text="@string/hot_sale_and_picture" style="@style/pos_setting_right_item_lab" />
+        <TextView android:id="@id/function_hint_picture_management" android:visibility="gone" style="@style/red_dot_function" />
+        <View style="@style/pos_setting_right_item_icon" />
+    </LinearLayout>
+    <View style="@style/pos_setting_right_item_line" />
+    <LinearLayout android:id="@id/product_sort_l" style="@style/pos_setting_right_item">
+        <TextView android:gravity="left" android:text="@string/pos_product_sort" android:layout_weight="1.0" style="@style/pos_setting_right_item_lab" />
+        <TextView android:id="@id/product_sort" style="@style/pos_setting_right_item_value" />
+    </LinearLayout>
+    <LinearLayout android:id="@id/type_rows_l" style="@style/pos_setting_right_item">
+        <TextView android:gravity="left" android:id="@id/decimals_l" android:text="@string/pos_cashier_product_type_lines" android:layout_weight="1.0" style="@style/pos_setting_right_item_lab" />
+        <TextView android:id="@id/type_rows" style="@style/pos_setting_right_item_value" />
+    </LinearLayout>
+    <View style="@style/pos_setting_right_item_line" />
+    <LinearLayout android:id="@id/product_query_l" style="@style/pos_setting_right_item">
+        <TextView android:gravity="center|left" android:text="@string/pos_product_query" android:layout_weight="1.0" style="@style/pos_setting_right_item_lab" />
+        <View android:id="@id/product_query_check" style="@style/pos_setting_right_item_check" />
+    </LinearLayout>
+    <LinearLayout android:id="@id/product_code_l" style="@style/pos_setting_right_item">
+        <TextView android:gravity="left" android:text="@string/pos_product_code" style="@style/pos_setting_right_item_lab" />
+        <TextView android:layout_weight="1.0" style="@style/pos_setting_right_item_lab" />
+        <View android:id="@id/product_code_check" style="@style/pos_setting_right_item_check" />
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/tax_l" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:id="@id/tax" style="@style/pos_setting_right_item">
+            <TextView android:gravity="center|left" android:layout_width="wrap_content" android:text="@string/pos_product_tax_rule" style="@style/pos_setting_right_item_lab" />
+            <TextView android:id="@id/function_hint_tax" android:visibility="gone" style="@style/red_dot_function" />
+            <TextView android:layout_weight="1.0" style="@style/pos_setting_right_item_lab" />
+            <TextView android:textColor="@color/text_color_grey" android:gravity="right" android:id="@id/tv_tax" android:text="@string/pos_product_tax_rule" android:layout_weight="1.0" style="@style/pos_setting_right_item_lab" />
+            <TextView android:textColor="@color/text_color_grey" android:id="@id/tv_tax_suffix" android:layout_marginLeft="5.0dip" android:layout_marginRight="10.0dip" android:text="@string/pos_product_tax_activity" style="@style/pos_setting_right_item_lab" />
+            <View style="@style/pos_setting_right_item_icon" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:id="@id/pos_product_service_charge_l" android:visibility="gone" style="@style/pos_setting_right_item">
+        <TextView android:layout_width="wrap_content" android:text="@string/pos_product_service_charge" style="@style/pos_setting_right_item_lab" />
+        <TextView android:id="@id/function_hint_service_charge" android:visibility="gone" style="@style/red_dot_function" />
+        <TextView android:layout_weight="1.0" style="@style/pos_setting_right_item_lab" />
+        <View style="@style/pos_setting_right_item_icon" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/setting_line_color" android:layout_width="624.0dip" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="21.0dip" android:textColor="@color/setting_text_color1" android:gravity="center_vertical" android:id="@id/tvTitle" android:background="@color/setting_title_bg_color" android:paddingLeft="24.0dip" android:layout_width="624.0dip" android:layout_height="64.0dip" android:text="@string/pos_charge" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" />
+    <LinearLayout android:layout_width="624.0dip" android:layout_height="343.0dip" android:layout_marginTop="1.0dip">
+        <LinearLayout android:orientation="vertical" android:id="@id/llLeft" android:background="@color/setting_bg_color" android:paddingTop="8.0dip" android:layout_width="361.0dip" android:layout_height="fill_parent" android:layout_marginRight="1.0dip">
+            <LinearLayout android:gravity="center_vertical" android:id="@id/llPosMemberChargeAmount" android:paddingLeft="24.0dip" android:paddingRight="24.0dip" android:clickable="true" android:layout_width="fill_parent" android:layout_height="48.0dip">
+                <LinearLayout android:gravity="center_vertical" android:layout_width="110.0dip" android:layout_height="fill_parent">
+                    <TextView android:textSize="20.0dip" android:textColor="@color/setting_text_color1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/pos_charge_amount" />
+                    <TextView android:textSize="20.0dip" android:textColor="@color/red_color_10500" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="*" />
+                </LinearLayout>
+                <EditText android:textSize="20.0dip" android:textColor="@color/setting_text_color3" android:gravity="center|right" android:id="@id/etPosMemberChargeAmount" android:background="@drawable/small_edittext_shape" android:paddingRight="11.0dip" android:layout_width="fill_parent" android:layout_height="40.0dip" android:selectAllOnFocus="true" android:numeric="decimal" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center_vertical" android:id="@id/llPosMemberChargeGrantAmount" android:paddingLeft="24.0dip" android:paddingRight="24.0dip" android:clickable="true" android:layout_width="fill_parent" android:layout_height="48.0dip">
+                <TextView android:textSize="20.0dip" android:textColor="@color/setting_text_color1" android:layout_width="100.0dip" android:layout_height="wrap_content" android:layout_marginRight="10.0dip" android:text="@string/pos_member_charge_plus_amount_title" />
+                <EditText android:textSize="20.0dip" android:textColor="@color/setting_text_color3" android:gravity="center|right" android:id="@id/etPosMemberChargeGrantAmount" android:background="@drawable/small_edittext_shape" android:paddingRight="11.0dip" android:layout_width="fill_parent" android:layout_height="40.0dip" android:selectAllOnFocus="true" android:numeric="decimal" />
+            </LinearLayout>
+            <View android:background="@color/setting_line_color" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginTop="8.0dip" android:layout_marginBottom="8.0dip" />
+            <LinearLayout android:gravity="center_vertical" android:paddingLeft="24.0dip" android:paddingRight="36.0dip" android:layout_width="fill_parent" android:layout_height="48.0dip">
+                <TextView android:textSize="20.0dip" android:textColor="@color/setting_text_color1" android:layout_width="70.0dip" android:layout_height="wrap_content" android:layout_marginRight="10.0dip" android:text="@string/pos_add_member_card_no_title2" />
+                <TextView android:textSize="20.0dip" android:textColor="@color/setting_text_color1" android:ellipsize="end" android:gravity="center|right" android:id="@id/etPosMemberNumber" android:background="@drawable/small_edittext_shape" android:layout_width="fill_parent" android:layout_height="40.0dip" android:lines="1" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center_vertical" android:paddingLeft="24.0dip" android:paddingRight="36.0dip" android:layout_width="fill_parent" android:layout_height="48.0dip">
+                <TextView android:textSize="20.0dip" android:textColor="@color/setting_text_color1" android:layout_width="75.0dip" android:layout_height="wrap_content" android:layout_marginRight="5.0dip" android:text="@string/pos_add_member_mobile_title" />
+                <TextView android:textSize="20.0dip" android:textColor="@color/setting_text_color1" android:ellipsize="end" android:gravity="right" android:id="@id/etPosMemberMobile" android:layout_width="fill_parent" android:layout_height="wrap_content" android:lines="1" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center_vertical" android:paddingLeft="24.0dip" android:paddingRight="36.0dip" android:layout_width="fill_parent" android:layout_height="48.0dip">
+                <TextView android:textSize="20.0dip" android:textColor="@color/setting_text_color1" android:layout_width="70.0dip" android:layout_height="wrap_content" android:layout_marginRight="8.0dip" android:text="@string/pos_memebr_charge_amount" />
+                <TextView android:textSize="20.0dip" android:textColor="@color/red_color_10500" android:ellipsize="end" android:gravity="right" android:id="@id/etPosMemberAmount" android:layout_width="fill_parent" android:layout_height="wrap_content" android:lines="1" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:id="@id/llKeyboard" android:background="@color/setting_line_color" android:layout_width="262.0dip" android:layout_height="343.0dip">
+            <LinearLayout android:layout_width="fill_parent" android:layout_height="85.0dip" android:layout_marginBottom="1.0dip">
+                <Button android:id="@id/btnPosPayNumber7" android:text="7" style="@style/keyboard_member_btn_style_10500" />
+                <Button android:id="@id/btnPosPayNumber8" android:layout_marginLeft="1.0dip" android:layout_marginRight="1.0dip" android:text="8" style="@style/keyboard_member_btn_style_10500" />
+                <Button android:id="@id/btnPosPayNumber9" android:text="9" style="@style/keyboard_member_btn_style_10500" />
+            </LinearLayout>
+            <LinearLayout android:layout_width="fill_parent" android:layout_height="85.0dip" android:layout_marginBottom="1.0dip">
+                <Button android:id="@id/btnPosPayNumber4" android:text="4" style="@style/keyboard_member_btn_style_10500" />
+                <Button android:id="@id/btnPosPayNumber5" android:layout_marginLeft="1.0dip" android:layout_marginRight="1.0dip" android:text="5" style="@style/keyboard_member_btn_style_10500" />
+                <Button android:id="@id/btnPosPayNumber6" android:text="6" style="@style/keyboard_member_btn_style_10500" />
+            </LinearLayout>
+            <LinearLayout android:layout_width="fill_parent" android:layout_height="85.0dip" android:layout_marginBottom="1.0dip">
+                <Button android:id="@id/btnPosPayNumber1" android:text="1" style="@style/keyboard_member_btn_style_10500" />
+                <Button android:id="@id/btnPosPayNumber2" android:layout_marginLeft="1.0dip" android:layout_marginRight="1.0dip" android:text="2" style="@style/keyboard_member_btn_style_10500" />
+                <Button android:id="@id/btnPosPayNumber3" android:text="3" style="@style/keyboard_member_btn_style_10500" />
+            </LinearLayout>
+            <LinearLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <Button android:id="@id/btnPosPayNumberDot" android:text="." style="@style/keyboard_member_btn_style_10500" />
+                <Button android:id="@id/btnPosPayNumber0" android:layout_marginLeft="1.0dip" android:layout_marginRight="1.0dip" android:text="0" style="@style/keyboard_member_btn_style_10500" />
+                <Button android:id="@id/btnPosPayNumberBack" android:text="@string/pos_add_member_number_back_title" style="@style/keyboard_member_btn_style_10500" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:background="@color/setting_title_bg_color" android:paddingLeft="362.0dip" android:layout_width="fill_parent" android:layout_height="64.0dip" android:layout_marginTop="1.0dip">
+        <Button android:textSize="20.0dip" android:textColor="@color/setting_text_color1" android:id="@id/btnPosPayBack" android:background="@drawable/setting_button_selector_10500" android:layout_width="131.0dip" android:layout_height="fill_parent" android:text="@string/pos_sync_cancel" />
+        <Button android:textSize="20.0dip" android:textColor="@color/red_color_10500" android:id="@id/btnPosPaySubmit" android:background="@drawable/setting_button_selector_10500" android:layout_width="131.0dip" android:layout_height="fill_parent" android:text="@string/pos_enter_title" />
+    </LinearLayout>
+</LinearLayout>

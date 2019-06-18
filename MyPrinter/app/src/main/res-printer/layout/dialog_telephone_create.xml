@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/setting_bg_color" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:id="@id/title_l" android:background="@drawable/pos_simple_click_background" android:paddingLeft="24.0dip" android:paddingRight="24.0dip" android:layout_width="wrap_content" android:layout_height="56.0dip">
+        <View style="@style/pos_title_back_icon" />
+        <TextView android:id="@id/tv_create_telephone_title" android:text="@string/create_telephone_people" style="@style/pos_title_text" />
+    </LinearLayout>
+    <View android:id="@id/line_top" android:background="@color/setting_line_color" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_below="@id/title_l" />
+    <include android:layout_gravity="center_horizontal" android:id="@id/layoutCreditPoints" android:layout_width="350.0dip" android:layout_height="fill_parent" android:layout_marginLeft="24.0dip" android:layout_marginTop="8.0dip" android:layout_marginRight="24.0dip" android:layout_below="@id/line_top" android:layout_alignParentRight="true" layout="@layout/layout_numeric_keyboard_max" />
+    <View android:id="@id/line_center" android:background="@color/setting_line_color" android:layout_width="1.0dip" android:layout_height="fill_parent" android:layout_toLeftOf="@id/layoutCreditPoints" android:layout_below="@id/line_top" />
+    <ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_toLeftOf="@id/line_center" android:layout_below="@id/line_top">
+        <FrameLayout android:id="@id/fl_left" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <LinearLayout android:layout_gravity="center_horizontal" android:orientation="vertical" android:id="@id/ll_vip_info" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="24.0dip" android:layout_marginTop="8.0dip" android:layout_marginRight="24.0dip">
+                <LinearLayout android:layout_gravity="center_horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <include layout="@layout/telephone_info" />
+                </LinearLayout>
+            </LinearLayout>
+        </FrameLayout>
+    </ScrollView>
+    <LinearLayout android:orientation="vertical" android:id="@id/ll_right" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_toRightOf="@id/line_center" android:layout_below="@id/title_l" />
+</RelativeLayout>

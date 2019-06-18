@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout android:layout_gravity="center_horizontal" android:background="@color/pos_line_grey" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TableRow android:layout_weight="1.0">
+        <TextView android:tag="@string/keycode_numpad_7" android:text="7" style="@style/pos_activity_keyboard_item" />
+        <TextView android:tag="@string/keycode_numpad_8" android:text="8" style="@style/pos_activity_keyboard_item" />
+        <TextView android:tag="@string/keycode_numpad_9" android:text="9" style="@style/pos_activity_keyboard_item" />
+    </TableRow>
+    <TableRow android:layout_weight="1.0">
+        <TextView android:tag="@string/keycode_numpad_4" android:text="4" style="@style/pos_activity_keyboard_item" />
+        <TextView android:tag="@string/keycode_numpad_5" android:text="5" style="@style/pos_activity_keyboard_item" />
+        <TextView android:tag="@string/keycode_numpad_6" android:text="6" style="@style/pos_activity_keyboard_item" />
+    </TableRow>
+    <TableRow android:layout_weight="1.0">
+        <TextView android:tag="@string/keycode_numpad_1" android:text="1" style="@style/pos_activity_keyboard_item" />
+        <TextView android:tag="@string/keycode_numpad_2" android:text="2" style="@style/pos_activity_keyboard_item" />
+        <TextView android:tag="@string/keycode_numpad_3" android:text="3" style="@style/pos_activity_keyboard_item" />
+    </TableRow>
+    <TableRow android:layout_weight="1.0">
+        <TextView android:tag="@string/keycode_numpad_dot" android:layout_marginBottom="0.0dip" android:text="." style="@style/pos_activity_keyboard_item" />
+        <TextView android:tag="@string/keycode_numpad_0" android:layout_marginBottom="0.0dip" android:text="0" style="@style/pos_activity_keyboard_item" />
+        <TextView android:tag="@string/keycode_del" android:layout_marginBottom="0.0dip" android:text="@string/pos_add_member_number_back_title" style="@style/pos_activity_keyboard_item" />
+    </TableRow>
+</TableLayout>

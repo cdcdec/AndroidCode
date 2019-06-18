@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="21.0dip" android:textColor="@color/pos_text_black" android:id="@id/title" android:background="@drawable/confirm_button_selector_topcenter" android:text="@string/pos_select_title" style="@style/new_pos_confirm_dialog_top" />
+    <View style="@style/pos_line_h" />
+    <ListView android:id="@id/body" android:background="@color/confirm_button_bg_color" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0" style="@style/pos_list" />
+    <View style="@style/pos_line_h" />
+    <TextView android:textSize="21.0dip" android:textColor="@color/pos_text_black" android:gravity="center" android:id="@id/cancel" android:background="@drawable/confirm_button_selector_bottomcenter" android:layout_width="fill_parent" android:layout_height="50.0dip" android:text="@string/pos_dialog_confirm_no" />
+</LinearLayout>

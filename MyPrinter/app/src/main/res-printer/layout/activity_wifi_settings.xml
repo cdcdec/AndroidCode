@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:background="@color/ui201404_smj_viewgroup_background_white_solid"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+    <ListView
+            android:id="@id/lv"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:divider="@null"/>
+
+    <RelativeLayout
+            android:id="@id/layout_empty"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+        <TextView
+                android:textSize="20.0dip"
+                android:textColor="@color/text_color_grey"
+                android:id="@id/tv_empty"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="200.0dip"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"/>
+    </RelativeLayout>
+</RelativeLayout>

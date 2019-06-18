@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:background="@color/pos_detailed_background"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            style="@style/main_setting_scrollview_style">
+
+    <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+        <LinearLayout
+                android:layout_gravity="center_horizontal"
+                android:orientation="vertical"
+                android:paddingBottom="24.0dip"
+                android:layout_width="552.0dip"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true">
+
+            <LinearLayout
+                    android:orientation="horizontal"
+                    android:id="@id/layout_header"
+                    android:background="@drawable/shape_red_rectangle_round_upper_corner_with_shadow"
+                    android:layout_width="fill_parent"
+                    android:layout_height="90.0dip"
+                    android:layout_marginTop="24.0dip">
+
+                <LinearLayout
+                        android:gravity="center_vertical"
+                        android:orientation="vertical"
+                        android:id="@id/paid_l"
+                        android:layout_width="0.0dip"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1.0">
+
+                    <TextView
+                            android:id="@id/recharge_lab"
+                            android:text="@string/pos_report_transaction_details_point"
+                            style="@style/pos_report_detailed_top_text_value"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                    android:orientation="vertical"
+                    android:background="@drawable/pos_shadow"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content">
+
+                <TextView
+                        android:layout_gravity="center_horizontal"
+                        android:id="@id/mc_time"
+                        android:layout_height="40.0dip"
+                        android:text="这里是日期"
+                        style="@style/pos_report_detailed_text_black"/>
+
+                <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content">
+
+                    <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="0.0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.0">
+
+                        <TextView
+                                android:layout_gravity="center_horizontal"
+                                android:layout_height="40.0dip"
+                                android:text="@string/pos_vip_change_points"
+                                style="@style/pos_report_detailed_text_black"/>
+
+                        <TextView
+                                android:textStyle="bold"
+                                android:layout_gravity="center_horizontal"
+                                android:id="@id/tv_point_change"
+                                android:layout_height="48.0dip"
+                                style="@style/pos_report_detailed_text_red"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40.0dip">
+
+                    <TextView
+                            android:layout_height="fill_parent"
+                            android:layout_marginLeft="24.0dip"
+                            android:text="@string/pos_report_transaction_details_user"
+                            style="@style/pos_report_detailed_text_grey"/>
+
+                    <TextView
+                            android:gravity="center|left"
+                            android:id="@id/mc_user_name"
+                            android:layout_width="0.0dip"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="1.0"
+                            style="@style/pos_report_detailed_text_grey"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                    android:orientation="vertical"
+                    android:id="@id/member_info"
+                    android:background="@drawable/pos_shadow_triangle_right"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12.0dip">
+
+                <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="48.0dip">
+
+                    <View
+                            android:background="@drawable/pos_phone_unselected"
+                            android:layout_width="30.0dip"
+                            android:layout_height="30.0dip"
+                            android:layout_marginLeft="24.0dip"
+                            android:layout_centerVertical="true"/>
+
+                    <TextView
+                            android:id="@id/tvPosMemberMobile"
+                            android:layout_height="fill_parent"
+                            android:layout_marginRight="24.0dip"
+                            android:layout_alignParentRight="true"
+                            style="@style/pos_report_detailed_text_black"/>
+
+                    <View
+                            android:background="@color/pos_line_grey"
+                            android:layout_width="fill_parent"
+                            android:layout_height="1.0px"
+                            android:layout_alignParentBottom="true"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="56.0dip">
+
+                    <View
+                            android:background="@drawable/pos_card_unselected"
+                            android:layout_width="30.0dip"
+                            android:layout_height="30.0dip"
+                            android:layout_marginLeft="24.0dip"
+                            android:layout_centerVertical="true"/>
+
+                    <TextView
+                            android:id="@id/tvPosMemberNumber"
+                            android:layout_height="fill_parent"
+                            android:layout_marginRight="24.0dip"
+                            android:layout_alignParentRight="true"
+                            style="@style/pos_report_detailed_text_black"/>
+
+                    <View
+                            android:background="@color/pos_line_grey"
+                            android:layout_width="fill_parent"
+                            android:layout_height="1.0px"
+                            android:layout_alignParentBottom="true"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                        android:id="@id/member_name_l"
+                        android:layout_width="fill_parent"
+                        android:layout_height="48.0dip">
+
+                    <View
+                            android:background="@drawable/pos_user_unselected"
+                            android:layout_width="30.0dip"
+                            android:layout_height="30.0dip"
+                            android:layout_marginLeft="24.0dip"
+                            android:layout_centerVertical="true"/>
+
+                    <TextView
+                            android:id="@id/tvPosMemberName"
+                            android:layout_height="fill_parent"
+                            android:layout_marginRight="24.0dip"
+                            android:layout_alignParentRight="true"
+                            style="@style/pos_report_detailed_text_black"/>
+
+                    <View
+                            android:background="@color/pos_line_grey"
+                            android:layout_width="fill_parent"
+                            android:layout_height="1.0px"
+                            android:layout_alignParentBottom="true"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="56.0dip">
+
+                    <View
+                            android:id="@id/line_middle"
+                            android:background="@color/pos_line_grey"
+                            android:layout_width="1.0px"
+                            android:layout_height="fill_parent"
+                            android:layout_centerHorizontal="true"/>
+
+                    <TextView
+                            android:id="@id/tv_old_amount_title"
+                            android:layout_height="fill_parent"
+                            android:layout_marginLeft="24.0dip"
+                            android:text="@string/pos_point_old_txt"
+                            style="@style/pos_report_detailed_text_black"/>
+
+                    <TextView
+                            android:ellipsize="middle"
+                            android:id="@id/mc_old_amount"
+                            android:layout_height="fill_parent"
+                            android:layout_marginRight="24.0dip"
+                            android:text="1234"
+                            android:layout_toLeftOf="@id/line_middle"
+                            android:layout_toRightOf="@id/tv_old_amount_title"
+                            style="@style/pos_report_detailed_text_red"/>
+
+                    <TextView
+                            android:id="@id/tv_new_amount"
+                            android:layout_height="fill_parent"
+                            android:layout_marginLeft="24.0dip"
+                            android:text="@string/pos_point_new_txt"
+                            android:layout_toRightOf="@id/line_middle"
+                            style="@style/pos_report_detailed_text_black"/>
+
+                    <TextView
+                            android:ellipsize="middle"
+                            android:id="@id/mc_new_amount"
+                            android:layout_height="fill_parent"
+                            android:layout_marginRight="24.0dip"
+                            android:text="1234"
+                            android:layout_toRightOf="@id/tv_new_amount"
+                            android:layout_alignParentRight="true"
+                            style="@style/pos_report_detailed_text_red"/>
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <com.laiqian.ui.ProgressBarCircularIndeterminate
+                android:id="@id/iv_progress"
+                android:background="@color/red_color_10500"
+                android:visibility="gone"
+                android:layout_width="30.0dip"
+                android:layout_height="30.0dip"
+                android:layout_centerInParent="true"/>
+
+        <ImageView
+                android:id="@id/iv_canceled"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/cancel"
+                android:layout_centerInParent="true"/>
+    </RelativeLayout>
+</ScrollView>

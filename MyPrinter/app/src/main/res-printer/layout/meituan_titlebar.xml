@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/setting_title_bg_color" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:id="@id/ui_titlebar_back_btn" style="@style/pos_title_back">
+        <View android:id="@id/pos_title_icon" style="@style/pos_title_back_icon" />
+        <TextView android:id="@id/ui_titlebar_txt" android:text="@string/main_setting_title" style="@style/pos_title_text" />
+    </LinearLayout>
+    <Button android:id="@id/ui_titlebar_help_btn2" android:visibility="visible" android:text="@string/ordertempsave" style="@style/titlebar_right_btn_10500" />
+    <LinearLayout android:id="@id/ui_titlebar_help_ll" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginRight="20.0dip" android:layout_weight="1.0" style="@style/titlebar_right_btn_10500">
+        <ImageView android:layout_gravity="center_vertical" android:id="@id/ui_titlebar_help_iv" android:layout_width="60.0dip" android:layout_height="60.0dip" android:layout_weight="1.0" style="@style/titlebar_right_btn_10500" />
+    </LinearLayout>
+    <Button android:id="@id/ui_titlebar_help_btn" android:visibility="visible" android:layout_marginRight="8.0dip" android:layout_marginBottom="1.0dip" android:text="@string/ui_titlebar_help" android:layout_toLeftOf="@id/ui_titlebar_help_btn2" android:layout_alignParentRight="false" android:layout_alignWithParentIfMissing="true" style="@style/titlebar_right_btn_10500" />
+    <Button android:id="@id/ui_titlebar_help_btn3" android:layout_marginRight="8.0dip" android:layout_marginBottom="1.0dip" android:text="@string/ui_titlebar_help" android:layout_toLeftOf="@id/ui_titlebar_help_btn" android:layout_alignParentRight="false" android:layout_alignWithParentIfMissing="true" style="@style/titlebar_right_btn_10500" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/layout_right" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    <View android:background="@color/setting_line_color" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_alignParentBottom="true" />
+</RelativeLayout>

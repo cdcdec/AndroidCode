@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout style="@style/grey_background"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:id="@id/i_FromDateLayout" android:layout_marginTop="10.0dip" style="@style/clickable_linearLayout_u">
+        <LinearLayout style="@style/linearLayout_before_pencil">
+            <TextView android:id="@id/i_fromDateEdit" android:text="@string/r_dateBegin" style="@style/edittext_label_style" />
+            <TextView android:id="@id/i_fromDateTxw" style="@style/login_edittext_style" />
+        </LinearLayout>
+        <ImageView style="@style/pop_arrow_style" />
+    </LinearLayout>
+    <LinearLayout android:id="@id/i_ToDateLayout" style="@style/clickable_linearLayout_d">
+        <LinearLayout style="@style/linearLayout_before_pencil">
+            <TextView android:id="@id/i_toDateEdit" android:text="@string/r_dateEnd" style="@style/edittext_label_style" />
+            <TextView android:id="@id/i_toDateTxw" style="@style/login_edittext_style" />
+        </LinearLayout>
+        <ImageView style="@style/pop_arrow_style" />
+    </LinearLayout>
+    <LinearLayout android:id="@id/i_productLayout" android:layout_marginTop="10.0dip" style="@style/clickable_linearLayout_u">
+        <LinearLayout style="@style/linearLayout_before_pencil">
+            <TextView android:id="@id/i_toDateEdit" android:text="@string/i_product" style="@style/edittext_label_style" />
+            <TextView android:id="@id/get_productTxw" style="@style/login_edittext_style" />
+        </LinearLayout>
+        <ImageView style="@style/pop_arrow_style" />
+    </LinearLayout>
+    <LinearLayout android:id="@id/i_clientLayout" style="@style/clickable_linearLayout_m">
+        <LinearLayout style="@style/linearLayout_before_pencil">
+            <TextView android:id="@id/i_clientEdit" android:text="@string/statistics_client" style="@style/edittext_label_style" />
+            <TextView android:id="@id/get_clientTxw" style="@style/login_edittext_style" />
+        </LinearLayout>
+        <ImageView style="@style/pop_arrow_style" />
+    </LinearLayout>
+    <LinearLayout android:id="@id/i_staffLayout" style="@style/clickable_linearLayout_d">
+        <LinearLayout style="@style/linearLayout_before_pencil">
+            <TextView android:id="@id/staff_text_string" android:text="@string/statistics_staff" style="@style/edittext_label_style" />
+            <TextView android:id="@id/get_staffTxw" style="@style/login_edittext_style" />
+        </LinearLayout>
+        <ImageView style="@style/pop_arrow_style" />
+    </LinearLayout>
+    <LinearLayout android:id="@id/i_memberLayout" android:visibility="gone" android:layout_marginTop="10.0dip" style="@style/clickable_linearLayout_rounded_rectangle">
+        <LinearLayout style="@style/linearLayout_before_pencil">
+            <TextView android:text="@string/member_text" style="@style/edittext_label_style" />
+            <TextView android:id="@id/get_memberTxw" style="@style/login_edittext_style" />
+        </LinearLayout>
+        <ImageView style="@style/pop_arrow_style" />
+    </LinearLayout>
+    <LinearLayout android:id="@id/i_staffLayout2" android:visibility="gone" android:layout_marginTop="20.0dip" style="@style/clickable_linearLayout_rounded_rectangle">
+        <LinearLayout style="@style/linearLayout_before_pencil">
+            <TextView android:id="@id/staff_text_string" android:text="@string/statistics_staff" style="@style/edittext_label_style" />
+            <TextView android:id="@id/get_staffTxw2" style="@style/login_edittext_style" />
+        </LinearLayout>
+        <ImageView style="@style/pop_arrow_style" />
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:layout_marginLeft="10.0dip" android:layout_marginTop="20.0dip" style="@style/border_style_manuel_1">
+        <CheckBox android:id="@id/i_unReceivedChx" android:visibility="gone" android:checked="false" android:text="@string/statistics_filter_unreceived" style="@style/RadioButton_style" />
+        <CheckBox android:id="@id/i_unPayedChx" android:visibility="gone" android:checked="false" android:text="@string/statistics_filter_unpayed" style="@style/RadioButton_style" />
+    </LinearLayout>
+</LinearLayout>

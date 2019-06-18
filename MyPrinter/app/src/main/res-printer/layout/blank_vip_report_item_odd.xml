@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content">
+
+    <RelativeLayout
+            android:id="@id/bg"
+            android:background="@color/retail_title_bg_color"
+            android:layout_width="fill_parent"
+            android:layout_height="40.0dip"
+            android:layout_marginLeft="8.0dip"
+            android:layout_marginTop="-1.0dip"
+            android:layout_marginRight="8.0dip">
+
+        <TextView
+                android:textSize="16.0dip"
+                android:textColor="@color/member_list_item_max"
+                android:gravity="center|right"
+                android:id="@id/tvPoints"
+                android:paddingRight="10.0dip"
+                android:layout_width="88.0dip"
+                android:layout_height="fill_parent"
+                android:layout_alignParentRight="true"/>
+
+        <TextView
+                android:textSize="16.0dip"
+                android:textColor="@color/member_list_item_max"
+                android:gravity="center|right"
+                android:id="@id/tvAfterAmount"
+                android:paddingRight="10.0dip"
+                android:layout_width="110.0dip"
+                android:layout_height="fill_parent"
+                android:layout_toLeftOf="@id/tvPoints"/>
+
+        <TextView
+                android:textSize="16.0dip"
+                android:textColor="@color/member_list_item_max"
+                android:gravity="center|right"
+                android:id="@id/tvBeforeAmount"
+                android:paddingRight="10.0dip"
+                android:layout_width="110.0dip"
+                android:layout_height="fill_parent"
+                android:layout_toLeftOf="@id/tvAfterAmount"/>
+
+        <TextView
+                android:textSize="16.0dip"
+                android:textColor="@color/pos_red_blackground"
+                android:gravity="center|right"
+                android:id="@id/tvAmount"
+                android:paddingRight="10.0dip"
+                android:layout_width="110.0dip"
+                android:layout_height="fill_parent"
+                android:layout_toLeftOf="@id/tvBeforeAmount"/>
+
+        <TextView
+                android:textSize="16.0dip"
+                android:textColor="@color/member_list_item_max"
+                android:gravity="center|right"
+                android:id="@id/tvTransactionType"
+                android:paddingRight="10.0dip"
+                android:layout_width="140.0dip"
+                android:layout_height="fill_parent"
+                android:layout_toLeftOf="@id/tvAmount"/>
+
+        <TextView
+                android:textSize="16.0dip"
+                android:textColor="@color/member_list_item_max"
+                android:gravity="center|left"
+                android:id="@id/tvDate"
+                android:paddingLeft="10.0dip"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_toLeftOf="@id/tvTransactionType"/>
+
+        <View
+                android:background="@color/setting_line_color"
+                android:layout_width="1.0px"
+                android:layout_height="fill_parent"
+                android:layout_toLeftOf="@id/tvPoints"/>
+
+        <View
+                android:background="@color/setting_line_color"
+                android:layout_width="1.0px"
+                android:layout_height="fill_parent"
+                android:layout_toLeftOf="@id/tvAfterAmount"/>
+
+        <View
+                android:background="@color/setting_line_color"
+                android:layout_width="1.0px"
+                android:layout_height="fill_parent"
+                android:layout_toLeftOf="@id/tvBeforeAmount"/>
+
+        <View
+                android:background="@color/setting_line_color"
+                android:layout_width="1.0px"
+                android:layout_height="fill_parent"
+                android:layout_toLeftOf="@id/tvAmount"/>
+
+        <View
+                android:background="@color/setting_line_color"
+                android:layout_width="1.0px"
+                android:layout_height="fill_parent"
+                android:layout_toLeftOf="@id/tvTransactionType"/>
+
+        <View
+                android:background="@color/setting_line_color"
+                android:layout_width="1.0px"
+                android:layout_height="fill_parent"
+                android:layout_toLeftOf="@id/tvDate"/>
+
+        <View
+                android:background="@color/setting_line_color"
+                android:layout_width="1.0px"
+                android:layout_height="fill_parent"
+                android:layout_alignParentLeft="true"/>
+
+        <View
+                android:background="@color/setting_line_color"
+                android:layout_width="1.0px"
+                android:layout_height="fill_parent"
+                android:layout_alignParentRight="true"/>
+
+        <View
+                android:background="@color/setting_line_color"
+                android:layout_width="fill_parent"
+                android:layout_height="1.0px"
+                android:layout_alignParentBottom="true"/>
+
+        <View
+                android:background="@color/setting_line_color"
+                android:layout_width="fill_parent"
+                android:layout_height="1.0px"
+                android:layout_alignParentTop="true"/>
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@drawable/meituan_select_shop" android:layout_width="683.0dip" android:layout_height="310.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <ImageView android:id="@id/iv_background" android:layout_width="wrap_content" android:layout_height="wrap_content" android:scaleType="fitCenter" />
+        <LinearLayout android:id="@id/ll_close" android:layout_width="56.0dip" android:layout_height="56.0dip" android:layout_alignParentRight="true" android:layout_centerVertical="true">
+            <View android:id="@id/v_close" android:background="@drawable/pos_dialog_close" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="17.0dip" />
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

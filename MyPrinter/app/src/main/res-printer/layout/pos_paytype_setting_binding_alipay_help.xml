@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:background="@color/pos_background_white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="250.0dip" android:layout_height="fill_parent">
+        <TextView android:textSize="14.0dip" android:textColor="@color/pos_text_grey" android:gravity="center_vertical" android:paddingLeft="24.0dip" android:layout_width="fill_parent" android:layout_height="36.0dip" android:text="@string/pos_paytype_binding_alipay_process" />
+        <LinearLayout android:id="@id/sign" style="@style/pos_alipay_binding_item">
+            <View android:background="@drawable/sign_icon" style="@style/pos_alipay_binding_item_icon" />
+            <TextView android:text="@string/pos_paytype_binding_alipay_sign" style="@style/pos_alipay_binding_item_lab" />
+        </LinearLayout>
+        <LinearLayout android:id="@id/bind" style="@style/pos_alipay_binding_item">
+            <View android:background="@drawable/bind_icon" style="@style/pos_alipay_binding_item_icon" />
+            <TextView android:text="@string/pos_paytype_binding_alipay" style="@style/pos_alipay_binding_item_lab" />
+        </LinearLayout>
+        <LinearLayout android:id="@id/publickey" android:visibility="gone" style="@style/pos_alipay_binding_item">
+            <View android:background="@drawable/order_dishes_service" style="@style/pos_alipay_binding_item_icon" />
+            <TextView android:text="@string/pos_paytype_binding_alipay_publickey" style="@style/pos_alipay_binding_item_lab" />
+        </LinearLayout>
+    </LinearLayout>
+    <View android:background="@color/pos_line_grey" android:layout_width="1.0px" android:layout_height="fill_parent" />
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <WebView android:id="@id/webview" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <include android:id="@id/loading" android:visibility="gone" layout="@layout/pos_report_first_load_alone" />
+    </FrameLayout>
+</LinearLayout>

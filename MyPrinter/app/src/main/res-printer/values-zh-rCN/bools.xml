@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <bool name="pos_switch_about_laiqian">true</bool>
+    <bool name="pos_switch_alipay">true</bool>
+    <bool name="pos_switch_alipay_order_in_here">true</bool>
+    <bool name="pos_switch_koubei">false</bool>
+    <bool name="pos_switch_mall">true</bool>
+    <bool name="pos_switch_meituandazhongdianping">true</bool>
+    <bool name="pos_switch_order_in_here">true</bool>
+    <bool name="pos_switch_wallet">true</bool>
+    <bool name="pos_switch_wechar">true</bool>
+    <bool name="pos_switch_wechat_pay_takeaway">true</bool>
+    <bool name="pos_switch_wechat_setting">true</bool>
+    <bool name="show_mall">true</bool>
+    <bool name="show_marketing_messages">true</bool>
+    <bool name="show_sms_setting">true</bool>
+    <bool name="show_vip_credit_setting">false</bool>
+    <bool name="show_vip_export_import">true</bool>
+    <bool name="show_vip_initial_balance">false</bool>
+    <bool name="show_wallet">true</bool>
+    <bool name="takeout_refund">true</bool>
+    <bool name="takeout_settings">true</bool>
+    <bool name="weshop_payment_startprice_unit">true</bool>
+</resources>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout style="@style/grey_background"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:id="@id/ud_currentAccountLayout" android:layout_marginTop="10.0dip" android:layout_marginBottom="10.0dip" style="@style/totalAmount_linearLayout">
+        <TextView android:paddingRight="10.0dip" android:text="@string/ud_userCurrentAccount" style="@style/common_textview_white_shadow_style" />
+        <TextView android:id="@id/ud_userAccountTxw" style="@style/common_textview_white_shadow_style" />
+        <TextView android:visibility="gone" android:text="@string/ud_userList" style="@style/common_textview_white_shadow_style" />
+    </LinearLayout>
+    <LinearLayout style="@style/warehouse_listview_linearLayout_style">
+        <ListView android:id="@id/ud_userdisplay" style="@style/warehouse_listview_style" />
+    </LinearLayout>
+</LinearLayout>

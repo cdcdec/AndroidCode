@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:orientation="vertical" android:background="@color/confirm_button_bg_grey_color" android:padding="8.0dip" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/llContent" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <include android:id="@id/layoutVipOnCredit" android:layout_width="fill_parent" android:layout_height="56.0dip" android:layout_marginTop="8.0dip" layout="@layout/item_layout_check_box" />
+        <include android:id="@id/online_vip" android:layout_width="fill_parent" android:layout_height="56.0dip" android:layout_marginTop="-1.0dip" layout="@layout/item_layout_check_box" />
+        <include android:id="@id/only_read_card_layout" android:layout_width="fill_parent" android:layout_height="56.0dip" android:layout_marginTop="-1.0dip" layout="@layout/item_layout_check_box" />
+    </LinearLayout>
+</ScrollView>

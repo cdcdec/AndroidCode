@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:id="@id/llItem" android:layout_marginTop="10.0dip" style="@style/clickable_linearLayout_u"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout style="@style/linearLayout_before_pencil">
+        <TextView android:id="@id/tvItemTitle" android:text="@string/payment_questions" style="@style/textview_in_rounded_rectangle_style" />
+    </LinearLayout>
+    <ImageView style="@style/pop_arrow_style" />
+</LinearLayout>

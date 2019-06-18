@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/item_l" android:background="@drawable/pos_product_attribute_item_background" android:duplicateParentState="true" android:layout_width="fill_parent" android:layout_height="118.0dip" android:layout_marginTop="26.0dip" android:layout_marginRight="24.0dip">
+        <TextView android:textSize="56.0dip" android:textColor="#ff666666" android:id="@id/add" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="+" android:layout_centerInParent="true" />
+        <RelativeLayout android:id="@id/attribute_l" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <TextView android:textSize="20.0dip" android:textColor="@color/pos_text_black" android:gravity="center|left|top" android:id="@id/name" android:padding="14.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/value" />
+            <TextView android:textSize="20.0dip" android:textColor="@color/pos_text_grey" android:id="@id/value" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="14.0dip" android:layout_marginBottom="14.0dip" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" />
+        </RelativeLayout>
+    </RelativeLayout>
+</FrameLayout>

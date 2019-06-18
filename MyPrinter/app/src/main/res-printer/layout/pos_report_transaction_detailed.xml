@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:background="@color/pos_detailed_background" android:layout_width="fill_parent" android:layout_height="fill_parent" style="@style/main_setting_scrollview_style"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:layout_gravity="center_horizontal" android:orientation="vertical" android:paddingTop="24.0dip" android:paddingBottom="24.0dip" android:layout_width="552.0dip" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="horizontal" android:id="@id/top_l" android:background="@color/red_color_10500" android:layout_width="fill_parent" android:layout_height="90.0dip">
+            <LinearLayout android:orientation="vertical" android:id="@id/total_l" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+                <TextView android:text="@string/pos_report_transaction_details_total" style="@style/pos_report_detailed_top_text_lab" />
+                <TextView android:id="@id/total_value" style="@style/pos_report_detailed_top_text_value" />
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:id="@id/discount_l" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+                <TextView android:text="@string/pos_report_transaction_details_discount" style="@style/pos_report_detailed_top_text_lab" />
+                <TextView android:id="@id/discount_value" style="@style/pos_report_detailed_top_text_value" />
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:id="@id/paid_l" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+                <TextView android:id="@id/paid_lab" android:text="@string/pos_report_transaction_details_shishou" style="@style/pos_report_detailed_top_text_lab" />
+                <TextView android:id="@id/paid_value" style="@style/pos_report_detailed_top_text_value" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:id="@id/products" android:background="@drawable/pos_shadow_sawtooth_bottom" android:paddingTop="8.0dip" android:paddingBottom="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <LinearLayout android:orientation="vertical" android:id="@id/tax_l" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="24.0dip">
+            <LinearLayout android:orientation="horizontal" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="56.0dip">
+                <TextView android:gravity="center_vertical" android:id="@id/textView6" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_marginLeft="24.0dip" android:text="@string/pos_report_transaction_details_tax_item_name" android:layout_weight="1.0" style="@style/pos_report_detailed_text_black" />
+                <TextView android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="@string/pos_report_transaction_details_tax_item_sales" android:layout_weight="1.0" style="@style/pos_report_detailed_text_black" />
+                <TextView android:gravity="center|right" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_marginRight="28.0dip" android:text="@string/pos_report_transaction_details_tax_item_tax" android:layout_weight="1.0" style="@style/pos_report_detailed_text_black" />
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:id="@id/tax_list" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <LinearLayout android:orientation="vertical" android:id="@id/tax_sum_l" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <View android:background="@color/pos_line_grey" android:layout_width="fill_parent" android:layout_height="1.0px" />
+                <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="24.0dip">
+                    <TextView android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="@string/pos_report_transaction_details_tax_sum_sales" android:layout_weight="1.0" style="@style/pos_report_detailed_text_black" />
+                    <TextView android:id="@id/tax_sales" android:layout_width="0.0dip" android:layout_height="56.0dip" android:layout_weight="1.0" style="@style/pos_report_detailed_text_black" />
+                </LinearLayout>
+                <LinearLayout android:id="@id/ll_server_charge" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="24.0dip">
+                    <TextView android:id="@id/tv_server_charge_title" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="@string/pos_product_service_charge" android:layout_weight="1.0" style="@style/pos_report_detailed_text_black" />
+                    <TextView android:id="@id/tv_server_charge" android:layout_width="0.0dip" android:layout_height="56.0dip" android:layout_weight="1.0" style="@style/pos_report_detailed_text_black" />
+                </LinearLayout>
+                <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="24.0dip">
+                    <TextView android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="@string/pos_report_transaction_details_tax_sum_total_tax" android:layout_weight="1.0" style="@style/pos_report_detailed_text_black" />
+                    <TextView android:id="@id/tax_tax" android:layout_width="0.0dip" android:layout_height="56.0dip" android:layout_weight="1.0" style="@style/pos_report_detailed_text_black" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:id="@id/pay_modular" android:background="@drawable/pos_background_white_stroke" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="24.0dip">
+            <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:id="@id/weixin" android:layout_marginRight="10.0dip" style="@style/pos_report_item_wechar_order" />
+                <TextView android:layout_gravity="center_horizontal" android:id="@id/datetime" android:layout_height="40.0dip" style="@style/pos_report_detailed_text_black" />
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:id="@id/pay_type_l" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <include layout="@layout/pos_report_transaction_detailed_pay_item" />
+                <include layout="@layout/pos_report_transaction_detailed_pay_item" />
+                <include layout="@layout/pos_report_transaction_detailed_pay_item" />
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:id="@id/ll_opentable_time_length" android:layout_width="fill_parent" android:layout_height="40.0dip">
+                <TextView android:layout_height="fill_parent" android:layout_marginLeft="24.0dip" android:text="@string/order_detail_opent_table_time_length" style="@style/pos_report_detailed_text_grey" />
+                <TextView android:gravity="center|left" android:id="@id/tv_open_table_time_length" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" style="@style/pos_report_detailed_text_grey" />
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:id="@id/ll_opentable_info" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="40.0dip">
+                <TextView android:layout_height="fill_parent" android:layout_marginLeft="24.0dip" android:text="@string/table_no" style="@style/pos_report_detailed_text_grey" />
+                <TextView android:gravity="center|left" android:id="@id/area_table_name_and_table_person" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" style="@style/pos_report_detailed_text_grey" />
+                <TextView android:id="@id/settlementPerson" android:layout_height="fill_parent" android:layout_marginRight="24.0dip" style="@style/pos_report_detailed_text_grey" />
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:id="@id/ll_otherTable_info" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="40.0dip">
+                <TextView android:layout_height="fill_parent" android:layout_marginLeft="24.0dip" android:text="@string/other_table_number" style="@style/pos_report_detailed_text_grey" />
+                <TextView android:gravity="center|left" android:id="@id/tv_table_numbers" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" style="@style/pos_report_detailed_text_grey" />
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="40.0dip">
+                <TextView android:id="@id/operator" android:layout_height="fill_parent" android:layout_marginLeft="24.0dip" android:text="@string/pos_report_transaction_details_user" style="@style/pos_report_detailed_text_grey" />
+                <TextView android:gravity="center|left" android:id="@id/user_name" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" style="@style/pos_report_detailed_text_grey" />
+                <TextView android:id="@id/orderNo" android:layout_height="fill_parent" android:layout_marginRight="24.0dip" style="@style/pos_report_detailed_text_grey" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:id="@id/pay_return" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/go_return" android:background="@drawable/pos_background_white_stroke_click" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="51.0dip" android:layout_marginTop="-1.0px">
+            <TextView android:gravity="center_vertical" android:layout_height="wrap_content" android:layout_marginLeft="24.0dip" android:text="@string/pos_return_go_relation" android:layout_weight="1.0" style="@style/pos_report_detailed_text_black" />
+            <View android:background="@drawable/right_arrow" android:layout_width="10.0dip" android:layout_height="17.0dip" android:layout_marginRight="24.0dip" />
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:id="@id/member_info" android:background="@drawable/pos_shadow_triangle_middle" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="14.0dip">
+            <RelativeLayout android:layout_width="fill_parent" android:layout_height="48.0dip">
+                <TextView android:text="@string/pos_vip_phone" style="@style/pos_report_detailed_text_gray" />
+                <TextView android:id="@id/member_phone" android:layout_height="fill_parent" android:layout_marginRight="24.0dip" android:layout_alignParentRight="true" style="@style/pos_report_detailed_text_black" />
+            </RelativeLayout>
+            <View android:background="@color/pos_line_grey" android:layout_width="fill_parent" android:layout_height="1.0px" />
+            <RelativeLayout android:layout_width="fill_parent" android:layout_height="48.0dip">
+                <TextView android:text="@string/pos_vip_number" style="@style/pos_report_detailed_text_gray" />
+                <TextView android:id="@id/member_number" android:layout_height="fill_parent" android:layout_marginRight="24.0dip" android:layout_alignParentRight="true" style="@style/pos_report_detailed_text_black" />
+            </RelativeLayout>
+            <View android:background="@color/pos_line_grey" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_alignParentBottom="true" />
+            <RelativeLayout android:id="@id/member_name_l" android:layout_width="fill_parent" android:layout_height="48.0dip">
+                <View android:id="@id/line_middle" android:background="@color/pos_line_grey" android:layout_width="1.0px" android:layout_height="fill_parent" android:layout_centerHorizontal="true" />
+                <TextView android:id="@id/member_icon" android:text="@string/pos_vip_name" style="@style/pos_report_detailed_text_gray" />
+                <TextView android:gravity="center|right" android:id="@id/member_name" android:layout_height="fill_parent" android:layout_marginRight="24.0dip" android:layout_toLeftOf="@id/line_middle" android:layout_toRightOf="@id/member_icon" style="@style/pos_report_detailed_text_black" />
+                <TextView android:id="@id/points_icon" android:text="@string/pos_vip_points_balance" android:layout_toRightOf="@id/line_middle" style="@style/pos_report_detailed_text_gray" />
+                <TextView android:gravity="center|right" android:id="@id/points" android:layout_height="fill_parent" android:layout_marginRight="24.0dip" android:layout_toRightOf="@id/points_icon" android:layout_alignParentRight="true" style="@style/pos_report_detailed_text_black" />
+            </RelativeLayout>
+            <View android:background="@color/pos_line_grey" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_alignParentBottom="true" />
+            <RelativeLayout android:layout_width="fill_parent" android:layout_height="56.0dip">
+                <View android:id="@id/line_middle" android:background="@color/pos_line_grey" android:layout_width="1.0px" android:layout_height="fill_parent" android:layout_centerHorizontal="true" />
+                <TextView android:id="@id/before_balance_lab" android:text="@string/pos_vip_old_amount" style="@style/pos_report_detailed_text_gray" />
+                <TextView android:ellipsize="middle" android:gravity="center|right" android:id="@id/before_balance" android:layout_height="fill_parent" android:layout_marginRight="24.0dip" android:layout_toLeftOf="@id/line_middle" android:layout_toRightOf="@id/before_balance_lab" style="@style/pos_report_detailed_text_red" />
+                <TextView android:id="@id/member_balance_lab" android:text="@string/pos_vip_new_amount" android:layout_toRightOf="@id/line_middle" style="@style/pos_report_detailed_text_gray" />
+                <TextView android:ellipsize="middle" android:gravity="center|right" android:id="@id/member_balance" android:layout_height="fill_parent" android:layout_marginRight="24.0dip" android:layout_toRightOf="@id/member_balance_lab" android:layout_alignParentRight="true" style="@style/pos_report_detailed_text_red" />
+            </RelativeLayout>
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:id="@id/takeaway_info" android:background="@drawable/pos_shadow_triangle_middle" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="14.0dip">
+            <RelativeLayout android:id="@id/rl_takeaway_phone" android:layout_width="fill_parent" android:layout_height="48.0dip">
+                <View android:id="@id/icon" android:background="@drawable/pos_phone_unselected" android:layout_width="30.0dip" android:layout_height="30.0dip" android:layout_marginLeft="24.0dip" android:layout_centerVertical="true" />
+                <TextView android:gravity="center|right" android:id="@id/takeaway_phone" android:layout_height="fill_parent" android:layout_marginRight="24.0dip" android:layout_toRightOf="@id/icon" android:layout_alignParentRight="true" style="@style/pos_report_detailed_text_black" />
+            </RelativeLayout>
+            <RelativeLayout android:id="@id/takeaway_address_l" android:layout_width="fill_parent" android:layout_height="48.0dip">
+                <View android:background="@color/pos_line_grey" android:layout_width="fill_parent" android:layout_height="1.0px" />
+                <View android:id="@id/icon" android:background="@drawable/weixin_address" android:layout_width="30.0dip" android:layout_height="30.0dip" android:layout_marginLeft="24.0dip" android:layout_centerVertical="true" />
+                <TextView android:gravity="center|right" android:id="@id/takeaway_address" android:layout_height="fill_parent" android:layout_marginRight="24.0dip" android:layout_toRightOf="@id/icon" android:layout_alignParentRight="true" style="@style/pos_report_detailed_text_black" />
+            </RelativeLayout>
+            <RelativeLayout android:id="@id/takeaway_name_l" android:layout_width="fill_parent" android:layout_height="48.0dip">
+                <View android:background="@color/pos_line_grey" android:layout_width="fill_parent" android:layout_height="1.0px" />
+                <View android:id="@id/icon" android:background="@drawable/pos_user_unselected" android:layout_width="30.0dip" android:layout_height="30.0dip" android:layout_marginLeft="24.0dip" android:layout_centerVertical="true" />
+                <TextView android:gravity="center|right" android:id="@id/takeaway_name" android:layout_height="fill_parent" android:layout_marginRight="24.0dip" android:layout_toRightOf="@id/icon" android:layout_alignParentRight="true" style="@style/pos_report_detailed_text_black" />
+            </RelativeLayout>
+            <RelativeLayout android:id="@id/weixin_remarks_l" android:layout_width="fill_parent" android:layout_height="48.0dip">
+                <View android:background="@color/pos_line_grey" android:layout_width="fill_parent" android:layout_height="1.0px" />
+                <View android:id="@id/icon" android:background="@drawable/weixin_remarks" android:layout_width="30.0dip" android:layout_height="30.0dip" android:layout_marginLeft="24.0dip" android:layout_centerVertical="true" />
+                <TextView android:gravity="center|right" android:id="@id/takeaway_remarks" android:layout_height="fill_parent" android:layout_marginRight="24.0dip" android:layout_toRightOf="@id/icon" android:layout_alignParentRight="true" style="@style/pos_report_detailed_text_black" />
+            </RelativeLayout>
+        </LinearLayout>
+        <Button android:id="@id/delete" android:background="@drawable/pos_shift_bt_background" android:layout_width="fill_parent" android:layout_height="56.0dip" android:layout_marginTop="24.0dip" android:text="@string/pos_report_transaction_details_delete" style="@style/pos_report_detailed_text_black" />
+    </LinearLayout>
+</ScrollView>

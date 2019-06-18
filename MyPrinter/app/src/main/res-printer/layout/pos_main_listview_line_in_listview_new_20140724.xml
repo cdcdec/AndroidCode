@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:id="@id/llListviewTitle" android:background="#ffe74c3c" android:visibility="invisible" android:layout_width="2.0px" android:layout_height="30.0px" />
+    <TextView android:textColor="@color/main_text_color" android:ellipsize="middle" android:id="@id/tvPosBarcode" android:tag="sBarcode" android:padding="0.0px" android:visibility="gone" android:layout_width="115.0px" android:layout_height="wrap_content" android:text="\ 9787121144073" android:singleLine="true" />
+    <TextView android:textColor="@color/main_text_color" android:ellipsize="middle" android:id="@id/tvPosProductName" android:tag="sProductName" android:layout_width="255.0px" android:layout_marginRight="0.0px" android:text="联想笔记本THINKPAD2013" android:singleLine="true" style="@style/pos_main_listview_listing_commodity_px" />
+    <TextView android:textColor="@color/main_text_color" android:ellipsize="middle" android:gravity="left" android:id="@id/tvPosOrginalPrice" android:tag="fPrice" android:padding="0.0px" android:text="3500.00" android:singleLine="true" style="@style/pos_main_listview_listing_price_px" />
+    <TextView android:textColor="@color/main_text_color" android:ellipsize="middle" android:gravity="left" android:id="@id/tvPosQuantity" android:tag="nProductQty" android:padding="1.0px" android:layout_width="77.0px" android:text="1.00" android:singleLine="true" style="@style/pos_main_listview_listing_price_px" />
+    <TextView android:textColor="@color/main_text_color" android:ellipsize="middle" android:gravity="left" android:id="@id/tvPosDiscountAmount" android:tag="fDiscountAmount" android:padding="1.0px" android:layout_width="77.0px" android:text="无" android:singleLine="true" style="@style/pos_main_listview_listing_price_px" />
+    <TextView android:textColor="@color/main_text_color" android:ellipsize="middle" android:gravity="right" android:id="@id/tvPosAmount" android:tag="fAmount" android:padding="1.0px" android:text="3500.00" android:singleLine="true" style="@style/pos_main_listview_listing_price_px" />
+</LinearLayout>

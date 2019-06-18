@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="303.0dip" android:layout_height="wrap_content">
+        <TextView android:textSize="20.0dip" android:textColor="@color/pos_text_black" android:gravity="center" android:id="@id/title" android:background="@drawable/confirm_button_selector_topcenter" android:layout_width="fill_parent" android:layout_height="50.0dip" android:text="@string/pos_product_code_opendialog_title" />
+        <View style="@style/pos_line_h" />
+        <LinearLayout android:orientation="vertical" android:id="@id/middle" android:background="@color/confirm_button_bg_color" android:paddingTop="6.0dip" android:paddingBottom="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="15.0dip" android:textColor="@color/pos_text_black" android:gravity="center" android:id="@id/message" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        </LinearLayout>
+        <View style="@style/pos_line_h" />
+        <TextView android:textSize="20.0dip" android:textColor="@color/pos_text_red" android:gravity="center" android:id="@id/sure" android:background="@drawable/confirm_button_selector_bottomcenter" android:layout_width="fill_parent" android:layout_height="50.0dip" android:text="@string/pos_product_code_opendialog_ok" />
+    </LinearLayout>
+</FrameLayout>
