@@ -8,10 +8,9 @@ import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
 
-import com.afollestad.aesthetic.Aesthetic;
 
-import io.reactivex.disposables.Disposable;
-import io.reactivex.functions.Consumer;
+
+
 import james.metronome.utils.ConversionUtils;
 
 public class SeekBar extends View implements View.OnTouchListener {
@@ -25,9 +24,6 @@ public class SeekBar extends View implements View.OnTouchListener {
     private int maxProgress = 100;
     private float touchDiff;
 
-    private Disposable textColorPrimarySubscription;
-    private Disposable textColorSecondarySubscription;
-    private Disposable colorAccentSubscription;
 
     public SeekBar(Context context) {
         this(context, null);
@@ -54,46 +50,12 @@ public class SeekBar extends View implements View.OnTouchListener {
         setOnTouchListener(this);
         setClickable(true);
 
-        subscribe();
+
     }
 
-    public void subscribe() {
-        textColorPrimarySubscription = Aesthetic.Companion.get()
-                .textColorPrimary()
-                .subscribe(new Consumer<Integer>() {
-                    @Override
-                    public void accept(Integer integer) throws Exception {
-                        paint.setColor(integer);
-                        invalidate();
-                    }
-                });
 
-        textColorSecondarySubscription = Aesthetic.Companion.get()
-                .textColorSecondary()
-                .subscribe(new Consumer<Integer>() {
-                    @Override
-                    public void accept(Integer integer) throws Exception {
-                        secondaryPaint.setColor(integer);
-                        invalidate();
-                    }
-                });
 
-        colorAccentSubscription = Aesthetic.Companion.get()
-                .colorAccent()
-                .subscribe(new Consumer<Integer>() {
-                    @Override
-                    public void accept(Integer integer) throws Exception {
-                        accentPaint.setColor(integer);
-                        invalidate();
-                    }
-                });
-    }
 
-    public void unsubscribe() {
-        textColorPrimarySubscription.dispose();
-        textColorSecondarySubscription.dispose();
-        colorAccentSubscription.dispose();
-    }
 
     public void setProgress(int progress) {
         this.progress = progress;

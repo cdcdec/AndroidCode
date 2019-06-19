@@ -12,11 +12,9 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.afollestad.aesthetic.Aesthetic;
 
-import io.reactivex.annotations.NonNull;
-import io.reactivex.disposables.Disposable;
-import io.reactivex.functions.Consumer;
+
+
 import james.metronome.R;
 import james.metronome.data.ThemeData;
 
@@ -38,9 +36,7 @@ public class ThemesView extends LinearLayout {
     private Integer textColorPrimary;
     private Integer textColorPrimaryInverse;
 
-    private Disposable colorAccentSubscription;
-    private Disposable textColorPrimarySubscription;
-    private Disposable textColorPrimaryInverseSubscription;
+
 
     public ThemesView(Context context) {
         this(context, null);
@@ -137,59 +133,9 @@ public class ThemesView extends LinearLayout {
         }
     }
 
-    public void subscribe() {
-        colorAccentSubscription = Aesthetic.Companion.get()
-                .colorAccent()
-                .subscribe(new Consumer<Integer>() {
-                    @Override
-                    public void accept(@NonNull Integer integer) throws Exception {
-                        colorAccent = integer;
-                        for (int i = 0; i < getChildCount(); i++) {
-                            View v = getChildAt(i);
-                            v.findViewById(R.id.background).setBackgroundColor(integer);
-                            if (!isExpanded || theme != i)
-                                ((ImageView) v.findViewById(R.id.image)).setColorFilter(integer);
-                        }
-                    }
-                });
 
-        textColorPrimarySubscription = Aesthetic.Companion.get()
-                .textColorPrimary()
-                .subscribe(new Consumer<Integer>() {
-                    @Override
-                    public void accept(@NonNull Integer integer) throws Exception {
-                        textColorPrimary = integer;
-                        DrawableCompat.setTint(getBackground(), integer);
-                        for (int i = 0; i < getChildCount(); i++) {
-                            View v = getChildAt(i);
-                            if (!isExpanded || theme != i)
-                                ((TextView) v.findViewById(R.id.name)).setTextColor(integer);
-                        }
-                    }
-                });
 
-        textColorPrimaryInverseSubscription = Aesthetic.Companion.get()
-                .textColorPrimaryInverse()
-                .subscribe(new Consumer<Integer>() {
-                    @Override
-                    public void accept(@NonNull Integer integer) throws Exception {
-                        textColorPrimaryInverse = integer;
-                        for (int i = 0; i < getChildCount(); i++) {
-                            View v = getChildAt(i);
-                            if (isExpanded && theme == i) {
-                                ((TextView) v.findViewById(R.id.name)).setTextColor(integer);
-                                ((ImageView) v.findViewById(R.id.image)).setColorFilter(integer);
-                            }
-                        }
-                    }
-                });
-    }
 
-    public void unsubscribe() {
-        colorAccentSubscription.dispose();
-        textColorPrimarySubscription.dispose();
-        textColorPrimaryInverseSubscription.dispose();
-    }
 
     public void setListener(OnThemeChangedListener listener) {
         this.listener = listener;

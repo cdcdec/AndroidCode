@@ -10,11 +10,8 @@ import android.util.AttributeSet;
 import android.view.View;
 import android.view.animation.DecelerateInterpolator;
 
-import com.afollestad.aesthetic.Aesthetic;
 
-import io.reactivex.annotations.NonNull;
-import io.reactivex.disposables.Disposable;
-import io.reactivex.functions.Consumer;
+
 import james.metronome.utils.ConversionUtils;
 
 public class EmphasisSwitch extends View implements View.OnClickListener {
@@ -24,9 +21,6 @@ public class EmphasisSwitch extends View implements View.OnClickListener {
     private Paint accentPaint;
     private Paint accentOutlinePaint;
 
-    private Disposable colorAccentSubscription;
-    private Disposable textColorPrimarySubscription;
-    private Disposable textColorSecondarySubscription;
 
     private float checked;
     private boolean isChecked;
@@ -100,44 +94,9 @@ public class EmphasisSwitch extends View implements View.OnClickListener {
         this.listener = listener;
     }
 
-    public void subscribe() {
-        colorAccentSubscription = Aesthetic.Companion.get()
-                .colorAccent()
-                .subscribe(new Consumer<Integer>() {
-                    @Override
-                    public void accept(@NonNull Integer integer) throws Exception {
-                        accentPaint.setColor(integer);
-                        accentOutlinePaint.setColor(integer);
-                        invalidate();
-                    }
-                });
 
-        textColorPrimarySubscription = Aesthetic.Companion.get()
-                .textColorPrimary()
-                .subscribe(new Consumer<Integer>() {
-                    @Override
-                    public void accept(Integer integer) throws Exception {
-                        paint.setColor(integer);
-                        invalidate();
-                    }
-                });
 
-        textColorSecondarySubscription = Aesthetic.Companion.get()
-                .textColorSecondary()
-                .subscribe(new Consumer<Integer>() {
-                    @Override
-                    public void accept(Integer integer) throws Exception {
-                        outlinePaint.setColor(integer);
-                        invalidate();
-                    }
-                });
-    }
 
-    public void unsubscribe() {
-        colorAccentSubscription.dispose();
-        textColorPrimarySubscription.dispose();
-        textColorSecondarySubscription.dispose();
-    }
 
     @Override
     protected void onDraw(Canvas canvas) {

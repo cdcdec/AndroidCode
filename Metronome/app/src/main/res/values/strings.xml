@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="ExtraTranslation">
     <string name="app_name">Metronome</string>
     <string name="app_desc">Metronome is a simple metronome app that is designed to be easy to use and look nice. To keep this app free to use without ads and support the development of other apps like it, please consider making a donation using the button below.</string>
 
@@ -12,6 +12,9 @@
     <string name="title_click">Click</string>
     <string name="title_ding">Ding</string>
     <string name="title_wood">Wood</string>
+    <string name="title_a_0">a_0</string>
+    <string name="title_a_1">a_1</string>
+    <string name="title_a_2">a_2</string>
     <string name="title_vibrate">Vibrate</string>
     <string name="title_about">About</string>
     <string name="title_contributors">Contributors</string>

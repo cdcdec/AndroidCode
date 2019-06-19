@@ -17,12 +17,11 @@ import android.view.View;
 import android.view.animation.AccelerateDecelerateInterpolator;
 import android.view.animation.OvershootInterpolator;
 
-import com.afollestad.aesthetic.Aesthetic;
 
-import io.reactivex.disposables.Disposable;
-import io.reactivex.functions.Consumer;
+
+
+
 import james.metronome.R;
-import james.metronome.utils.ColorUtils;
 import james.metronome.utils.ImageUtils;
 
 public class AppIconView extends View {
@@ -41,7 +40,6 @@ public class AppIconView extends View {
 
     private ValueAnimator animator;
 
-    private Disposable colorAccentSubscription;
 
     public AppIconView(Context context) {
         this(context, null);
@@ -91,26 +89,12 @@ public class AppIconView extends View {
         });
         this.animator.start();
 
-        subscribe();
+
     }
 
-    public void subscribe() {
-        colorAccentSubscription = Aesthetic.Companion.get()
-                .colorAccent()
-                .subscribe(new Consumer<Integer>() {
-                    @Override
-                    public void accept(Integer color) throws Exception {
-                        life.setColorFilter(new PorterDuffColorFilter(color, PorterDuff.Mode.SRC_IN));
-                        int darkColor = ColorUtils.getDarkColor(color);
-                        of.setColorFilter(new PorterDuffColorFilter(darkColor, PorterDuff.Mode.SRC_IN));
-                        lots.setColorFilter(new PorterDuffColorFilter(ColorUtils.getMixedColor(darkColor, Color.BLACK), PorterDuff.Mode.SRC_IN));
-                    }
-                });
-    }
 
-    public void unsubscribe() {
-        colorAccentSubscription.dispose();
-    }
+
+
 
     @Override
     protected void onDraw(Canvas canvas) {

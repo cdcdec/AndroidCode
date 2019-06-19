@@ -1,28 +1,25 @@
 package com.cdc.jiepaiqi.audioplay;
 
+import android.content.ComponentName;
 import android.content.Context;
+import android.content.ServiceConnection;
 import android.content.res.AssetFileDescriptor;
-import android.content.res.AssetManager;
 import android.media.AudioAttributes;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.media.SoundPool;
 import android.os.Build;
+import android.os.IBinder;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-import android.widget.Toast;
-import com.cdc.jiepaiqi.MainActivity;
 import com.cdc.jiepaiqi.R;
-
 import java.io.FileDescriptor;
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.List;
-
-public class AudioPlayActivity extends AppCompatActivity {
+public class AudioPlayActivity extends AppCompatActivity implements ServiceConnection, MetronomeService.TickListener {
 
     private SoundPool soundPool;
 
@@ -46,6 +43,44 @@ public class AudioPlayActivity extends AppCompatActivity {
 
         //重置
         player.reset();
+    }
+
+    private boolean isBound;
+    private MetronomeService service;
+
+    @Override
+    public void onServiceConnected(ComponentName componentName, IBinder iBinder) {
+        MetronomeService.LocalBinder binder = (MetronomeService.LocalBinder) iBinder;
+        service = binder.getService();
+        service.setTickListener(this);
+        isBound = true;
+
+    }
+
+    @Override
+    public void onServiceDisconnected(ComponentName name) {
+        isBound = false;
+    }
+
+    @Override
+    public void onStartTicks() {
+//开始播放了
+    }
+
+    @Override
+    public void onBpmChanged(int bpm) {
+        if (isBound()) {
+
+        }
+    }
+
+    private boolean isBound() {
+        return isBound && service != null;
+    }
+
+    @Override
+    public void onStopTicks() {
+//停止播放了
     }
 
     class Click implements View.OnClickListener {

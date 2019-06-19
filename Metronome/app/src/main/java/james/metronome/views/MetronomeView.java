@@ -9,11 +9,8 @@ import android.util.AttributeSet;
 import android.view.View;
 import android.view.animation.DecelerateInterpolator;
 
-import com.afollestad.aesthetic.Aesthetic;
 
-import io.reactivex.annotations.NonNull;
-import io.reactivex.disposables.Disposable;
-import io.reactivex.functions.Consumer;
+
 
 public class MetronomeView extends View {
 
@@ -23,8 +20,6 @@ public class MetronomeView extends View {
     private float distance;
     private boolean isEmphasis;
 
-    private Disposable colorAccentSubscription;
-    private Disposable textColorPrimarySubscription;
 
     public MetronomeView(Context context) {
         this(context, null);
@@ -48,33 +43,10 @@ public class MetronomeView extends View {
         accentPaint.setAntiAlias(true);
         accentPaint.setColor(Color.BLACK);
 
-        subscribe();
+
     }
 
-    public void subscribe() {
-        colorAccentSubscription = Aesthetic.Companion.get()
-                .colorAccent()
-                .subscribe(new Consumer<Integer>() {
-                    @Override
-                    public void accept(Integer integer) throws Exception {
-                        accentPaint.setColor(integer);
-                    }
-                });
 
-        textColorPrimarySubscription = Aesthetic.Companion.get()
-                .textColorPrimary()
-                .subscribe(new Consumer<Integer>() {
-                    @Override
-                    public void accept(@NonNull Integer integer) {
-                        paint.setColor(integer);
-                    }
-                });
-    }
-
-    public void unsubscribe() {
-        colorAccentSubscription.dispose();
-        textColorPrimarySubscription.dispose();
-    }
 
     public void setInterval(long interval) {
         this.interval = interval;

@@ -4,10 +4,6 @@ import android.content.Context;
 import android.support.annotation.ColorRes;
 import android.support.annotation.StringRes;
 import android.support.v4.content.ContextCompat;
-
-import com.afollestad.aesthetic.Aesthetic;
-
-import james.metronome.R;
 import james.metronome.utils.ColorUtils;
 
 public class ThemeData {
@@ -32,17 +28,7 @@ public class ThemeData {
         int backgroundColor = ContextCompat.getColor(context, colorBackgroundRes);
         boolean isBackgroundDark = ColorUtils.isColorDark(backgroundColor);
 
-        Aesthetic.Companion.get()
-                .colorPrimary(ContextCompat.getColor(context, colorPrimaryRes))
-                .colorAccent(ContextCompat.getColor(context, colorAccentRes))
-                .colorWindowBackground(backgroundColor)
-                .textColorPrimary(ContextCompat.getColor(context, isBackgroundDark ? R.color.textColorPrimary : R.color.textColorPrimaryInverse))
-                .textColorPrimaryInverse(ContextCompat.getColor(context, isBackgroundDark ? R.color.textColorPrimaryInverse : R.color.textColorPrimary))
-                .textColorSecondary(ContextCompat.getColor(context, isBackgroundDark ? R.color.textColorSecondary : R.color.textColorSecondaryInverse))
-                .textColorSecondaryInverse(ContextCompat.getColor(context, isBackgroundDark ? R.color.textColorSecondaryInverse : R.color.textColorSecondary))
-                .colorStatusBarAuto()
-                .colorNavigationBarAuto()
-                .apply();
+
     }
 
 }

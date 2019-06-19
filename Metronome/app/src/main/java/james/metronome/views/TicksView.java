@@ -4,7 +4,6 @@ import android.animation.ArgbEvaluator;
 import android.animation.ValueAnimator;
 import android.content.Context;
 import android.support.annotation.Nullable;
-import android.support.v4.graphics.drawable.DrawableCompat;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,11 +11,9 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.afollestad.aesthetic.Aesthetic;
 
-import io.reactivex.annotations.NonNull;
-import io.reactivex.disposables.Disposable;
-import io.reactivex.functions.Consumer;
+
+
 import james.metronome.R;
 import james.metronome.data.TickData;
 
@@ -27,6 +24,9 @@ public class TicksView extends LinearLayout {
             new TickData(R.string.title_click, R.raw.click),
             new TickData(R.string.title_ding, R.raw.ding),
             new TickData(R.string.title_wood, R.raw.wood),
+            new TickData(R.string.title_a_0, R.raw.a_0),
+            new TickData(R.string.title_a_1, R.raw.a_1),
+            new TickData(R.string.title_a_2, R.raw.a_2),
             new TickData(R.string.title_vibrate)
     };
     private OnTickChangedListener listener;
@@ -34,14 +34,12 @@ public class TicksView extends LinearLayout {
     private boolean isExpanded;
     private int tick;
 
-    private Integer colorAccent;
-    private Integer textColorPrimary;
-    private Integer textColorPrimaryInverse;
+    private Integer colorAccent=R.color.colorAccent;
+    private Integer textColorPrimary=R.color.textColorPrimary;
+    private Integer textColorPrimaryInverse=R.color.textColorPrimaryInverse;
     private int aboutViewColor;
 
-    private Disposable colorAccentSubscription;
-    private Disposable textColorPrimarySubscription;
-    private Disposable textColorPrimaryInverseSubscription;
+
 
     public TicksView(Context context) {
         this(context, null);
@@ -149,59 +147,9 @@ public class TicksView extends LinearLayout {
         }
     }
 
-    public void subscribe() {
-        colorAccentSubscription = Aesthetic.Companion.get()
-                .colorAccent()
-                .subscribe(new Consumer<Integer>() {
-                    @Override
-                    public void accept(@NonNull Integer integer) throws Exception {
-                        colorAccent = integer;
-                        for (int i = 0; i < getChildCount(); i++) {
-                            View v = getChildAt(i);
-                            v.findViewById(R.id.background).setBackgroundColor(integer);
-                            if (!isExpanded || tick != i)
-                                ((ImageView) v.findViewById(R.id.image)).setColorFilter(integer);
-                        }
-                    }
-                });
 
-        textColorPrimarySubscription = Aesthetic.Companion.get()
-                .textColorPrimary()
-                .subscribe(new Consumer<Integer>() {
-                    @Override
-                    public void accept(@NonNull Integer integer) throws Exception {
-                        textColorPrimary = integer;
-                        DrawableCompat.setTint(getBackground(), integer);
-                        for (int i = 0; i < getChildCount(); i++) {
-                            View v = getChildAt(i);
-                            if (!isExpanded || tick != i)
-                                ((TextView) v.findViewById(R.id.name)).setTextColor(integer);
-                        }
-                    }
-                });
 
-        textColorPrimaryInverseSubscription = Aesthetic.Companion.get()
-                .textColorPrimaryInverse()
-                .subscribe(new Consumer<Integer>() {
-                    @Override
-                    public void accept(@NonNull Integer integer) throws Exception {
-                        textColorPrimaryInverse = integer;
-                        for (int i = 0; i < getChildCount(); i++) {
-                            View v = getChildAt(i);
-                            if (isExpanded && tick == i) {
-                                ((TextView) v.findViewById(R.id.name)).setTextColor(integer);
-                                ((ImageView) v.findViewById(R.id.image)).setColorFilter(integer);
-                            }
-                        }
-                    }
-                });
-    }
 
-    public void unsubscribe() {
-        colorAccentSubscription.dispose();
-        textColorPrimarySubscription.dispose();
-        textColorPrimaryInverseSubscription.dispose();
-    }
 
     public void setTick(int tick) {
         this.tick = tick;
