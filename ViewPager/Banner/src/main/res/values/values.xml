@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="Banner"><attr format="integer" name="delay_time"/><attr format="integer" name="scroll_time"/><attr format="boolean" name="is_auto_play"/><attr format="color|reference" name="title_background"/><attr format="color" name="title_textcolor"/><attr format="dimension" name="title_textsize"/><attr format="dimension" name="title_height"/><attr format="dimension" name="indicator_width"/><attr format="dimension" name="indicator_height"/><attr format="dimension" name="indicator_margin"/><attr format="reference" name="indicator_drawable_selected"/><attr format="reference" name="indicator_drawable_unselected"/><attr format="reference" name="banner_layout"/><attr format="reference" name="banner_default_image"/><attr format="enum" name="image_scale_type">
+            <enum name="center" value="0"/>
+            <enum name="center_crop" value="1"/>
+            <enum name="center_inside" value="2"/>
+            <enum name="fit_center" value="3"/>
+            <enum name="fit_end" value="4"/>
+            <enum name="fit_start" value="5"/>
+            <enum name="fit_xy" value="6"/>
+            <enum name="matrix" value="7"/>
+        </attr></declare-styleable>
+    <item name="bannerContainer" type="id"/>
+    <item name="bannerDefaultImage" type="id"/>
+    <item name="bannerTitle" type="id"/>
+    <item name="bannerViewPager" type="id"/>
+    <item name="circleIndicator" type="id"/>
+    <item name="indicatorInside" type="id"/>
+    <item name="numIndicator" type="id"/>
+    <item name="numIndicatorInside" type="id"/>
+    <item name="titleView" type="id"/>
+</resources>

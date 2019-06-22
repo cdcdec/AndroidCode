@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/black">
+
+    <RelativeLayout
+            android:id="@+id/surface_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+    </RelativeLayout>
+
+    <RelativeLayout
+            android:id="@+id/thumb"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:background="#000000"
+            android:scaleType="fitCenter" />
+
+
+
+    <ProgressBar
+            android:id="@+id/bottomProgressbar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="1.5dp"
+            android:layout_alignParentBottom="true"
+            android:max="100"
+            android:progressDrawable="@drawable/video_progress" />
+
+    <ImageView
+            android:id="@+id/imageViewStart"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginBottom="45dp"
+            android:layout_marginLeft="30dp"
+            android:src="@drawable/video_play_pressed"
+            android:visibility="visible"/>
+
+
+</RelativeLayout>

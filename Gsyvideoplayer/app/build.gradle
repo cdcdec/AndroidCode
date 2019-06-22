@@ -1,0 +1,86 @@
+apply plugin: 'com.android.application'
+
+apply plugin: 'kotlin-android'
+
+apply plugin: 'kotlin-android-extensions'
+
+android {
+    def globalConfiguration = rootProject.extensions.getByName("ext")
+    compileSdkVersion globalConfiguration.androidCompileSdkVersion
+    buildToolsVersion globalConfiguration.androidBuildToolsVersion
+    defaultConfig {
+        applicationId "com.example.gsyvideoplayer"
+
+        multiDexEnabled true
+
+        minSdkVersion globalConfiguration.androidMinSdkVersion
+        targetSdkVersion globalConfiguration.androidTargetSdkVersion
+
+        versionCode 6
+        versionName "5.0.0"
+
+        javaCompileOptions {
+            annotationProcessorOptions.includeCompileClasspath = true
+        }
+        ndk {
+            //设置支持的SO库架构
+            abiFilters 'armeabi', 'armeabi-v7a', 'x86'
+        }
+
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+
+    compileOptions { targetCompatibility JavaVersion.VERSION_1_8 }
+
+    lintOptions {
+        abortOnError false
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    def viewDependencies = rootProject.ext.viewDependencies
+    def androidDependencies = rootProject.ext.androidDependencies
+    def dataDependencies = rootProject.ext.dataDependencies
+    implementation 'androidx.appcompat:appcompat:1.0.2'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    annotationProcessor viewDependencies.apt_butterKnife
+    implementation viewDependencies.butterKnife
+    implementation androidDependencies.recyclerView
+    implementation viewDependencies.DanmakuFlameMaster
+    implementation viewDependencies.ndkbitmap_armv7a
+    implementation viewDependencies.ndkbitmap_armv5
+    implementation viewDependencies.ndkbitmap_x86
+    implementation viewDependencies.glide
+    implementation viewDependencies.glideProcessor
+    implementation androidDependencies.support_v4
+    implementation androidDependencies.design
+
+    //完整版引入
+    implementation 'com.shuyu:GSYVideoPlayer:7.0.1'
+
+    implementation dataDependencies.okhttpUtil
+    implementation dataDependencies.okhttp
+
+    implementation(dataDependencies.permissionsdispatcher) {
+        // if you don't use android.app.Fragment you can exclude support for them
+        exclude module: "support-v13"
+    }
+    annotationProcessor dataDependencies.permissionsdispatcherProcessor
+
+    debugImplementation dataDependencies.leakcanary
+    releaseImplementation dataDependencies.leakcanary_no_op
+
+
+}
