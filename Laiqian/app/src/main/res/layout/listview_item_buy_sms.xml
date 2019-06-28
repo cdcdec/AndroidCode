@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:background="@drawable/pos_product_sms_item_background" android:layout_width="wrap_content" android:layout_height="120.0dip">
+        <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:id="@id/ll_package_one" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginRight="5.0dip">
+            <TextView android:textSize="14.0dip" android:textColor="#ff3b3b3b" android:layout_gravity="center" android:id="@id/tv_discount_msg" android:layout_width="119.0dip" android:layout_height="wrap_content" android:text="立享8888条短信" />
+            <TextView android:textSize="14.0dip" android:textColor="@color/label_small_color" android:gravity="center_horizontal" android:id="@id/tv_discount" android:layout_width="107.0dip" android:layout_height="wrap_content" android:text="低至0.999元/条" />
+        </LinearLayout>
+        <ImageView android:layout_gravity="center_vertical" android:layout_width="1.0dip" android:layout_height="fill_parent" android:layout_marginRight="10.0dip" android:src="@drawable/ic_splite" />
+        <FrameLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="fill_parent">
+            <ImageView android:layout_gravity="right" android:id="@id/iv_package_description" android:layout_width="45.19998dip" android:layout_height="45.5dip" android:src="@drawable/ic_practical" />
+            <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <TextView android:textSize="20.0dip" android:textColor="@color/red_color_10500" android:layout_gravity="center_vertical" android:id="@id/tv_now_price" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="88元" />
+                <TextView android:textSize="10.0dip" android:textColor="@color/label_small_color" android:id="@id/tv_old_price" android:layout_width="110.0dip" android:layout_height="wrap_content" android:layout_marginRight="5.0dip" android:text="原价: 100" />
+            </LinearLayout>
+        </FrameLayout>
+    </LinearLayout>
+</LinearLayout>

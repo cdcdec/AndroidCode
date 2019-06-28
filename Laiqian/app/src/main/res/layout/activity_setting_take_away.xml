@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:gravity="center_horizontal"
+              android:orientation="vertical"
+              android:background="@color/pos_big_b_color_10800"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent">
+
+    <RelativeLayout
+            android:id="@id/default_discount_rl"
+            android:paddingLeft="0.0dip"
+            android:paddingRight="0.0dip"
+            android:layout_width="650.0dip"
+            android:layout_marginTop="8.0dip"
+            style="@style/pos_setting_right_item">
+
+        <include
+                android:id="@id/layout_phone_print_size"
+                layout="@layout/item_layout_printer_text"
+                style="@style/print_item_layout_style"/>
+    </RelativeLayout>
+</LinearLayout>

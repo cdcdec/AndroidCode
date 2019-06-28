@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="469.0dip" android:layout_height="254.0dip">
+        <TextView android:textSize="20.0dip" android:textColor="#ff3b3b3b" android:gravity="center" android:id="@id/dialog_weight_quality_product_name" android:background="#ffeeeeee" android:layout_width="fill_parent" android:layout_height="54.0dip" android:text="5555" />
+        <com.laiqian.ui.recycleview.LineGridView android:id="@id/dialog_weight_quality_gv" android:background="#ffe7e8eb" android:layout_width="fill_parent" android:layout_height="200.0dip" android:numColumns="3" android:layout_weight="1.0" android:overScrollMode="never" />
+    </LinearLayout>
+</FrameLayout>

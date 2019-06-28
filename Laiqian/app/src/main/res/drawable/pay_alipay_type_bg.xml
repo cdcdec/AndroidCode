@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_selected="true" android:drawable="@drawable/pay_alipay_selected">
+        <shape>
+            <corners android:radius="4.0dip" />
+            <solid android:color="@color/pos_text_red" />
+        </shape>
+    </item>
+    <item android:drawable="@drawable/pay_alipay_unselected">
+        <shape>
+            <corners android:radius="4.0dip" />
+            <solid android:color="#ffd7d7d7" />
+        </shape>
+    </item>
+</selector>

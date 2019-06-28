@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:laiqian="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:id="@id/type_title_l" android:background="@color/pos_background_grey" android:layout_width="400.0dip" android:layout_height="56.0dip">
+        <LinearLayout android:id="@id/back" style="@style/pos_title_back">
+            <View style="@style/pos_title_back_icon" />
+            <TextView android:text="权限管理" style="@style/pos_title_text" />
+        </LinearLayout>
+        <ImageView android:id="@id/ivAddAuth" android:background="@drawable/titlebar_leftbt_selector_10500" android:paddingLeft="16.0dip" android:paddingTop="16.0dip" android:paddingRight="16.0dip" android:paddingBottom="16.0dip" android:layout_width="55.0dip" android:layout_height="fill_parent" android:layout_marginRight="8.0dip" android:src="@drawable/pos_add_small" android:layout_alignParentRight="true" />
+    </RelativeLayout>
+    <View android:id="@id/line_h" android:background="@color/pos_line_grey" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_below="@id/type_title_l" />
+    <View android:id="@id/line_v" android:background="@color/pos_line_grey" android:layout_width="1.0px" android:layout_height="fill_parent" android:layout_toRightOf="@id/type_title_l" />
+    <RelativeLayout android:id="@id/product_title_l" android:background="@color/pos_background_grey" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_toRightOf="@id/line_v" android:layout_above="@id/line_h">
+        <TextView android:ellipsize="end" android:gravity="center" android:id="@id/tvRoleName" android:layout_width="300.0dip" android:singleLine="true" android:layout_centerInParent="true" style="@style/pos_title_text" />
+        <Button android:textSize="21.0dip" android:textColor="@color/pos_text_red" android:id="@id/btSave" android:background="@drawable/titlebar_leftbt_selector_10500" android:paddingLeft="24.0dip" android:paddingRight="24.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/pos_combo_save" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <ScrollView android:id="@id/svAuth" android:background="@color/pos_background_white" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_toLeftOf="@id/line_v" android:layout_below="@id/line_h" style="@style/main_setting_scrollview_style">
+        <LinearLayout android:orientation="vertical" android:id="@id/type_body_l" android:paddingTop="8.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <RelativeLayout android:id="@id/rlBoss" android:tag="150001" android:background="@drawable/pos_product_list_item" android:paddingLeft="24.0dip" android:paddingRight="24.0dip" android:clickable="true" android:layout_width="fill_parent" android:layout_height="56.0dip">
+                <ImageView android:id="@id/ivBoss" android:layout_width="30.0dip" android:layout_height="30.0dip" android:src="@drawable/pos_am_left_image_selector" android:layout_centerVertical="true" />
+                <TextView android:textSize="20.0dip" android:textColor="@color/setting_text_color1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="24.0dip" android:text="老板" android:layout_toRightOf="@id/ivBoss" android:layout_centerVertical="true" />
+                <TextView android:textSize="20.0dip" android:textColor="@color/setting_text_color2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="无法修改" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+            </RelativeLayout>
+            <RelativeLayout android:id="@id/rlEmployee" android:tag="150003" android:background="@drawable/pos_product_list_item" android:paddingLeft="24.0dip" android:paddingRight="24.0dip" android:clickable="true" android:layout_width="fill_parent" android:layout_height="56.0dip">
+                <ImageView android:id="@id/ivEmployee" android:layout_width="30.0dip" android:layout_height="30.0dip" android:src="@drawable/pos_am_left_image_selector" android:layout_centerVertical="true" />
+                <TextView android:textSize="20.0dip" android:textColor="@color/setting_text_color1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="24.0dip" android:text="员工" android:layout_toRightOf="@id/ivEmployee" android:layout_centerVertical="true" />
+                <TextView android:textSize="20.0dip" android:textColor="@color/setting_text_color2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="无法修改" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+            </RelativeLayout>
+            <View android:background="@color/setting_line_color" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginTop="8.0dip" />
+            <LinearLayout android:orientation="vertical" android:id="@id/llDefinedAuth" android:paddingTop="8.0dip" android:paddingBottom="8.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        </LinearLayout>
+    </ScrollView>><ScrollView android:background="@color/pos_background_white" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_toRightOf="@id/line_v" android:layout_below="@id/line_h" style="@style/main_setting_scrollview_style">
+        <LinearLayout android:orientation="vertical" android:id="@id/product_body_l" android:paddingTop="8.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <com.laiqian.ui.layout.CheckBoxLayout android:id="@id/cblReport" laiqian:text="@string/pos_main_setting_report_title" style="@style/auth_setting_checkboxlayout_style" />
+            <com.laiqian.ui.layout.CheckBoxLayout android:id="@id/cblCashierScreen" laiqian:text="@string/pos_main_setting_cashier_screen_setting_title" style="@style/auth_setting_checkboxlayout_style" />
+            <com.laiqian.ui.layout.CheckBoxLayout android:id="@id/cblWechat" laiqian:text="@string/pos_navigation_bar_takeaway" style="@style/auth_setting_checkboxlayout_style" />
+            <com.laiqian.ui.layout.CheckBoxLayout android:id="@id/cblPrinters" laiqian:text="@string/mainmenu_print_customer_display_setting" style="@style/auth_setting_checkboxlayout_style" />
+            <View android:background="@color/setting_line_color" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginTop="8.0dip" android:layout_marginBottom="8.0dip" />
+            <com.laiqian.ui.layout.CheckBoxLayout android:id="@id/cblProduct" laiqian:text="@string/pos_main_setting_product_title" style="@style/auth_setting_checkboxlayout_style" />
+            <com.laiqian.ui.layout.CheckBoxLayout android:id="@id/cblMember" laiqian:text="@string/pos_member_title" style="@style/auth_setting_checkboxlayout_style" />
+            <com.laiqian.ui.layout.CheckBoxLayout android:id="@id/cblStaff" laiqian:text="@string/mainmenu_product_management" style="@style/auth_setting_checkboxlayout_style" />
+            <View android:background="@color/setting_line_color" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginTop="8.0dip" android:layout_marginBottom="8.0dip" />
+            <com.laiqian.ui.layout.CheckBoxLayout android:id="@id/cblBackup" laiqian:text="@string/pos_main_setting_backup_delete_data_title" style="@style/auth_setting_checkboxlayout_style" />
+            <com.laiqian.ui.layout.CheckBoxLayout android:id="@id/cblCloudServices" laiqian:text="@string/pos_main_setting_cloud_services_title" style="@style/auth_setting_checkboxlayout_style" />
+            <com.laiqian.ui.layout.CheckBoxLayout android:id="@id/cblAboutCloudPos" laiqian:text="@string/pos_main_setting_about_cloud_pos_title" style="@style/auth_setting_checkboxlayout_style" />
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

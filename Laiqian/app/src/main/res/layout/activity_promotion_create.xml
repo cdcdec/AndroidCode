@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:background="@color/pos_background_white"
+             android:layout_width="fill_parent"
+             android:layout_height="fill_parent">
+
+    <RelativeLayout
+            android:id="@id/activity_promotion_create"
+            android:background="@color/pos_background_white"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+        <android.support.v7.widget.RecyclerView
+                android:id="@id/rv_promotion_list"
+                android:scrollbars="vertical"
+                android:layout_width="300.0dip"
+                android:layout_height="wrap_content"/>
+
+        <View
+                android:id="@id/vh_line"
+                android:background="@color/pos_line_grey"
+                android:layout_width="1.0dip"
+                android:layout_height="fill_parent"
+                android:layout_toRightOf="@id/rv_promotion_list"/>
+
+        <ScrollView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/rv_promotion_list"
+                android:layout_alignParentTop="true">
+
+            <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10.0dip">
+
+                <include
+                        android:id="@id/layoutPromotionName"
+                        android:layout_width="fill_parent"
+                        android:layout_height="56.0dip"
+                        android:layout_marginTop="10.0dip"
+                        layout="@layout/item_layout_printer_edit"/>
+
+                <include
+                        android:id="@id/layoutDate"
+                        android:layout_width="fill_parent"
+                        android:layout_height="56.0dip"
+                        android:layout_marginTop="-1.0dip"
+                        layout="@layout/item_layout_click_more_with_textview"/>
+
+                <include
+                        android:id="@id/layoutFitPeople"
+                        android:layout_width="fill_parent"
+                        android:layout_height="56.0dip"
+                        android:layout_marginTop="-1.0dip"
+                        layout="@layout/item_layout_printer_text"/>
+
+                <include
+                        android:id="@id/layoutFitProduct"
+                        android:layout_width="fill_parent"
+                        android:layout_height="56.0dip"
+                        android:layout_marginTop="10.0dip"
+                        layout="@layout/item_layout_printer_text"/>
+
+                <include
+                        android:id="@id/layoutFitType"
+                        android:layout_width="fill_parent"
+                        android:layout_height="56.0dip"
+                        android:layout_marginTop="10.0dip"
+                        layout="@layout/item_layout_printer_text"/>
+
+                <include
+                        android:id="@id/layoutProductDiscount"
+                        android:layout_width="fill_parent"
+                        android:layout_height="56.0dip"
+                        android:layout_marginTop="10.0dip"
+                        layout="@layout/item_horizontal_radio_with_textview"/>
+
+                <include
+                        android:id="@id/layoutProductBuyNum"
+                        android:layout_width="fill_parent"
+                        android:layout_height="56.0dip"
+                        android:layout_marginTop="10.0dip"
+                        layout="@layout/item_layout_printer_edit"/>
+
+                <include
+                        android:id="@id/layoutMinBuyAmount"
+                        android:layout_width="fill_parent"
+                        android:layout_height="56.0dip"
+                        android:layout_marginTop="10.0dip"
+                        layout="@layout/item_layout_printer_edit"/>
+
+                <include
+                        android:id="@id/layoutMinBuyNum"
+                        android:layout_width="fill_parent"
+                        android:layout_height="56.0dip"
+                        android:layout_marginTop="-1.0dip"
+                        layout="@layout/item_layout_printer_edit"/>
+
+                <include
+                        android:id="@id/layoutAddAmount"
+                        android:layout_width="fill_parent"
+                        android:layout_height="56.0dip"
+                        android:layout_marginTop="10.0dip"
+                        layout="@layout/item_layout_printer_edit"/>
+
+                <include
+                        android:id="@id/layoutReChargeAmount"
+                        android:layout_width="fill_parent"
+                        android:layout_height="56.0dip"
+                        android:layout_marginTop="10.0dip"
+                        layout="@layout/item_layout_printer_edit"/>
+
+                <include
+                        android:id="@id/layoutGiftAmount"
+                        android:layout_width="fill_parent"
+                        android:layout_height="56.0dip"
+                        android:layout_marginTop="-1.0dip"
+                        layout="@layout/item_layout_printer_edit"/>
+
+                <include
+                        android:id="@id/layoutGiftProduct"
+                        android:layout_width="fill_parent"
+                        android:layout_height="56.0dip"
+                        android:layout_marginTop="-1.0dip"
+                        layout="@layout/item_layout_printer_text"/>
+
+                <include
+                        android:id="@id/layoutEveryTimeGiftProductNum"
+                        android:layout_width="fill_parent"
+                        android:layout_height="56.0dip"
+                        android:layout_marginTop="-1.0dip"
+                        layout="@layout/item_layout_printer_edit"/>
+
+                <include
+                        android:id="@id/layoutGiftProductTotalNum"
+                        android:layout_width="fill_parent"
+                        android:layout_height="56.0dip"
+                        android:layout_marginTop="-1.0dip"
+                        layout="@layout/item_layout_printer_edit"/>
+
+                <include
+                        android:id="@id/layoutReduceAmount"
+                        android:layout_width="fill_parent"
+                        android:layout_height="56.0dip"
+                        android:layout_marginTop="10.0dip"
+                        layout="@layout/item_layout_printer_edit"/>
+            </LinearLayout>
+        </ScrollView>
+    </RelativeLayout>
+
+    <TextView
+            android:textSize="20.0sp"
+            android:textColor="@color/pos_text_white"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:id="@id/tv_noData"
+            android:background="@drawable/red_button_round"
+            android:layout_width="300.0dip"
+            android:layout_height="56.0dip"
+            android:text="@string/pos_create_promotion"/>
+</FrameLayout>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/pos_background_white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/title_l" android:background="@color/pos_background_grey" android:layout_width="fill_parent" android:layout_height="56.0dip">
+        <LinearLayout android:id="@id/back" style="@style/pos_title_back">
+            <View style="@style/pos_title_back_icon" />
+            <TextView android:text="@string/pos_product_mealset" style="@style/pos_title_text" />
+        </LinearLayout>
+        <ImageView android:id="@id/title_add" android:background="@drawable/titlebar_leftbt_selector_10500" android:paddingLeft="15.0dip" android:paddingRight="15.0dip" android:layout_width="60.0dip" android:layout_height="fill_parent" android:layout_marginLeft="182.0dip" android:src="@drawable/pos_add_small" android:scaleType="fitCenter" />
+        <TextView android:gravity="center" android:id="@id/title_save" android:background="@drawable/pos_simple_click_background" android:paddingLeft="16.0dip" android:paddingRight="16.0dip" android:layout_height="fill_parent" android:layout_marginRight="8.0dip" android:text="@string/save" android:layout_alignParentRight="true" style="@style/pos_title_text" />
+    </RelativeLayout>
+    <View android:id="@id/line_h" android:layout_below="@id/title_l" style="@style/pos_line_h" />
+    <ListView android:id="@id/list" android:layout_width="250.0dip" android:layout_height="fill_parent" android:choiceMode="singleChoice" android:layout_below="@id/line_h" style="@style/pos_list" />
+    <View android:id="@id/line_v" android:layout_toRightOf="@id/list" android:layout_alignTop="@id/list" style="@style/pos_line_v" />
+    <LinearLayout android:orientation="vertical" android:id="@id/right" android:background="@color/confirm_button_bg_grey_color" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_toRightOf="@id/line_v" android:layout_below="@id/line_h">
+        <ScrollView android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" style="@style/pos_list">
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <LinearLayout android:orientation="vertical" android:id="@id/right_top" android:background="@drawable/pos_background_white_stroke" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:layout_marginTop="8.0dip" android:layout_marginRight="8.0dip">
+                    <RelativeLayout android:id="@id/name_l" android:layout_width="fill_parent" android:layout_height="56.0dip">
+                        <TextView android:id="@id/name_lab" android:layout_marginLeft="24.0dip" android:text="@string/pos_product_mealset_name" style="@style/pos_mealset_text" />
+                        <TextView android:gravity="right" android:id="@id/name" android:layout_marginRight="24.0dip" android:layout_alignParentRight="true" style="@style/pos_mealset_text" />
+                    </RelativeLayout>
+                    <RelativeLayout android:id="@id/price_l" android:layout_width="fill_parent" android:layout_height="56.0dip">
+                        <View style="@style/pos_line_h" />
+                        <TextView android:id="@id/price_lab" android:layout_marginLeft="24.0dip" android:text="@string/pos_product_mealset_price" style="@style/pos_mealset_text" />
+                        <TextView android:id="@id/price" android:layout_marginRight="24.0dip" android:layout_alignParentRight="true" style="@style/pos_mealset_text" />
+                    </RelativeLayout>
+                    <RelativeLayout android:id="@id/price_vip_l" android:layout_width="fill_parent" android:layout_height="56.0dip">
+                        <View style="@style/pos_line_h" />
+                        <TextView android:id="@id/price_vip_lab" android:layout_marginLeft="24.0dip" android:text="@string/pos_product_mealset_price_vip" style="@style/pos_mealset_text" />
+                        <TextView android:id="@id/price_vip" android:layout_marginRight="24.0dip" android:layout_alignParentRight="true" style="@style/pos_mealset_text" />
+                    </RelativeLayout>
+                </LinearLayout>
+                <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/add_product" android:background="@drawable/pos_background_white_stroke_click" android:layout_width="fill_parent" android:layout_height="56.0dip" android:layout_marginLeft="8.0dip" android:layout_marginTop="8.0dip" android:layout_marginRight="8.0dip">
+                    <View android:background="@drawable/pos_product_mealset_product_add" android:layout_width="20.0dip" android:layout_height="20.0dip" />
+                    <TextView android:layout_marginLeft="10.0dip" android:text="@string/pos_product_mealset_product_binding" style="@style/pos_mealset_text" />
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:id="@id/selected_products_l" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:layout_marginTop="8.0dip" android:layout_marginRight="8.0dip">
+                    <include layout="@layout/pos_product_mealset_product_item_head" />
+                    <LinearLayout android:orientation="vertical" android:id="@id/selected_products" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+        <View style="@style/pos_line_h" />
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/add_product_bottom" android:background="@drawable/pos_simple_click_background_white" android:layout_width="fill_parent" android:layout_height="56.0dip">
+            <View android:background="@drawable/pos_product_mealset_product_add" android:layout_width="20.0dip" android:layout_height="20.0dip" />
+            <TextView android:layout_marginLeft="10.0dip" android:text="@string/pos_product_mealset_product_binding" style="@style/pos_mealset_text" />
+        </LinearLayout>
+    </LinearLayout>
+    <FrameLayout android:id="@id/nodata_l" android:background="@color/confirm_button_bg_grey_color" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/line_h">
+        <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="horizontal" android:id="@id/nodata" android:background="@drawable/red_button_round" android:layout_width="300.0dip" android:layout_height="56.0dip">
+            <View android:background="@drawable/add_type_up" android:layout_width="18.0dip" android:layout_height="18.0dip" />
+            <TextView android:textSize="20.0dip" android:textColor="@color/pos_text_white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:text="@string/pos_product_mealset_add" />
+        </LinearLayout>
+    </FrameLayout>
+</RelativeLayout>

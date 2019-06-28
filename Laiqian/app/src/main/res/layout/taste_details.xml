@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:paddingTop="10.0dip" style="@style/grey_background"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout style="@style/linearLayout_round_corner_up">
+                <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0">
+                    <TextView android:text="@string/TasteNameLabel" style="@style/edittext_label_style" />
+                    <EditText android:id="@id/ud_shortNameEdt" android:tag="sFieldName" android:hint="@string/auth_RoleHint" style="@style/required_editable_edittext_style" />
+                </LinearLayout>
+                <ImageView style="@style/pencil_style" />
+            </LinearLayout>
+            <LinearLayout style="@style/linearLayout_round_corner_down">
+                <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0">
+                    <TextView android:text="@string/TastePriceLabel" style="@style/edittext_label_style" />
+                    <EditText android:id="@id/ud_FullNameEdt" android:tag="sFieldValue" android:numeric="decimal" style="@style/editable_edittext_style" />
+                </LinearLayout>
+                <ImageView style="@style/pencil_style" />
+            </LinearLayout>
+            <TextView android:id="@id/deleteUnitHintTxw" android:visibility="gone" android:text="@string/deleteUnitHint" style="@style/common_textview_white_shadow_style" />
+            <Button android:id="@id/ud_deleteBtn" android:text="@string/pt_deleteButtonTxt" style="@style/bottom_grey_button_style" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

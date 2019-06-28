@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="horizontal" android:background="@color/pos_background_white" android:paddingTop="24.0dip" android:paddingBottom="24.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/alipay_l" android:background="@drawable/pos_paytype_setting_item_background" android:layout_width="310.0dip" android:layout_height="fill_parent">
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/alipay_title_view" android:background="@drawable/pos_paytype_setting_item_title_background" android:layout_width="fill_parent" android:layout_height="56.0dip">
+            <View android:background="@drawable/pos_paytype_icon_alipay" android:layout_width="34.0dip" android:layout_height="34.0dip" />
+            <TextView android:text="@string/pos_paytype_alipay" style="@style/pos_paytype_setting_item_title" />
+        </LinearLayout>
+        <RelativeLayout android:id="@id/alipay_account_l" android:background="@drawable/pos_simple_click_background" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_marginLeft="1.0dip" android:layout_marginRight="1.0dip" android:layout_weight="1.0">
+            <TextView android:text="@string/pos_paytype_account_receiving" android:layout_above="@id/alipay_account" style="@style/pos_paytype_setting_text_lab" />
+            <TextView android:id="@id/alipay_account" style="@style/pos_paytype_setting_text_value" />
+        </RelativeLayout>
+        <View android:background="@color/pos_line_grey" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+        <RelativeLayout android:id="@id/alipay_type_l" android:background="@drawable/pos_paytype_setting_item_child_bottom_background" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_marginLeft="1.0dip" android:layout_marginRight="1.0dip" android:layout_marginBottom="1.0dip" android:layout_weight="1.0">
+            <TextView android:text="@string/pos_paytype_pay_detailed" android:layout_above="@id/alipay_type" style="@style/pos_paytype_setting_text_lab" />
+            <TextView android:id="@id/alipay_type" style="@style/pos_paytype_setting_text_value" />
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

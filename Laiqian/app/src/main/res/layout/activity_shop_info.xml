@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:background="@color/ui201404_smj_background_lightgray"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+    <LinearLayout
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingTop="24.0dip"
+            android:paddingBottom="24.0dip"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+        <include
+                android:id="@id/layout_business_hours"
+                android:layout_width="600.0dip"
+                android:layout_height="56.0dip"
+                android:layout_marginTop="-1.0dip"
+                android:layout_centerHorizontal="true"
+                layout="@layout/business_hours_item"/>
+
+        <include
+                android:id="@id/layout_basic_info"
+                android:layout_width="600.0dip"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24.0dip"
+                android:layout_below="@id/layout_business_hours"
+                android:layout_centerHorizontal="true"
+                layout="@layout/layout_shop_info"/>
+
+        <com.laiqian.ui.container.LayoutLeftTextRightTextWithArrow
+                android:id="@id/ll_member_mode_setting"
+                android:background="@drawable/shape_rounded_rectangle_only_click"
+                android:layout_width="600.0dip"
+                android:layout_height="56.0dip"
+                android:layout_marginTop="@dimen/text_20dp"
+                android:layout_below="@id/layout_basic_info"
+                android:layout_centerHorizontal="true"
+                app:left_text="@string/shop_mode_multi_device"
+                app:right_text="@string/member_online_switch"/>
+
+        <include
+                android:id="@id/layout_tel"
+                android:layout_width="600.0dip"
+                android:layout_height="56.0dip"
+                android:layout_marginTop="-1.0dip"
+                android:layout_below="@id/layout_address"
+                android:layout_centerHorizontal="true"
+                layout="@layout/item_layout_printer_edit"/>
+
+        <include
+                android:id="@id/layout_email"
+                android:layout_width="600.0dip"
+                android:layout_height="56.0dip"
+                android:layout_marginTop="-1.0dip"
+                android:layout_below="@id/layout_tel"
+                android:layout_centerHorizontal="true"
+                layout="@layout/item_layout_printer_edit"/>
+
+        <include
+                android:id="@id/layout_roc_no"
+                android:layout_width="600.0dip"
+                android:layout_height="56.0dip"
+                android:layout_marginTop="24.0dip"
+                android:layout_below="@id/layout_email"
+                android:layout_centerHorizontal="true"
+                layout="@layout/item_layout_printer_edit"/>
+
+        <include
+                android:id="@id/layout_gst_reg_no"
+                android:layout_width="600.0dip"
+                android:layout_height="56.0dip"
+                android:layout_marginTop="-1.0dip"
+                android:layout_below="@id/layout_roc_no"
+                android:layout_centerHorizontal="true"
+                layout="@layout/item_layout_printer_edit"/>
+
+        <LinearLayout
+                android:orientation="horizontal"
+                android:background="@anim/shape_rounded_rectangle"
+                android:paddingTop="16.0dip"
+                android:paddingRight="20.0dip"
+                android:paddingBottom="16.0dip"
+                android:layout_width="600.0dip"
+                android:layout_height="fill_parent"
+                android:layout_marginTop="24.0dip"
+                android:layout_below="@id/layout_gst_reg_no"
+                android:layout_centerHorizontal="true">
+
+            <LinearLayout
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="24.0dip"
+                    android:paddingRight="24.0dip"
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.0">
+
+                <TextView
+                        android:gravity="center_vertical"
+                        android:layout_gravity="center_vertical"
+                        android:id="@id/tv_qrcode_info"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/pos_shop_cover_figure"
+                        style="@style/textview_weiorder_settting"/>
+
+                <TextView
+                        android:textSize="18.0sp"
+                        android:textColor="@color/pos_correcting_gray"
+                        android:gravity="center_vertical"
+                        android:layout_gravity="center_vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/pos_shop_cover_figure_recommended"/>
+            </LinearLayout>
+
+            <LinearLayout
+                    android:gravity="center"
+                    android:layout_gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:id="@id/layout_cover_figure"
+                    android:background="@anim/selector_rounded_rectangle"
+                    android:layout_width="250.0dip"
+                    android:layout_height="125.0dip">
+
+                <ImageView
+                        android:id="@id/iv_add_icon"
+                        android:layout_width="250.0dip"
+                        android:layout_height="125.0dip"
+                        android:src="@drawable/wechat_qrcode_add_ico"
+                        android:scaleType="center"/>
+
+                <ImageView
+                        android:id="@id/iv_cover_figure"
+                        android:layout_width="250.0dip"
+                        android:layout_height="125.0dip"
+                        android:scaleType="center"/>
+
+                <com.laiqian.ui.ProgressBarCircularIndeterminate
+                        android:gravity="center"
+                        android:id="@id/iv_loading"
+                        android:background="@color/red_color_10500"
+                        android:visibility="gone"
+                        android:layout_width="60.0dip"
+                        android:layout_height="60.0dip"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

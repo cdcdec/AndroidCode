@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:laiqian="http://schemas.android.com/apk/res-auto">
+    <com.laiqian.ui.layout.CheckBoxLayout android:id="@id/cblReport" android:paddingRight="12.0dip" android:layout_alignParentRight="true" android:layout_centerVertical="true" laiqian:text="@string/pos_main_setting_report_title" style="@style/pop_right_checkBox_style_10500" />
+</RelativeLayout>

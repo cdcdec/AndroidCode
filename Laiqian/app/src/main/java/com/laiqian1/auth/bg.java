@@ -1,0 +1,15 @@
+package com.laiqian.auth;
+
+import android.view.View;
+
+class bg implements View.OnClickListener {
+  bg(ShopInfo paramShopInfo) {}
+  
+  public void onClick(View paramView) { ShopInfo.a(this.aFs); }
+}
+
+
+/* Location:              F:\chrome_download\android-Decompile\dex2jar-2.0\classes-dex2jar.jar!\com\laiqian\auth\bg.class
+ * Java compiler version: 6 (50.0)
+ * JD-Core Version:       1.0.4
+ */

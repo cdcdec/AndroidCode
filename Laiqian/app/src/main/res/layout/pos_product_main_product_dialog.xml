@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/pos_background_white" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/parameter" android:paddingTop="8.0dip" android:paddingBottom="8.0dip" android:layout_width="801.0dip" android:layout_height="wrap_content">
+        <TextView android:textStyle="bold" android:gravity="center|left" android:id="@id/title" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="fill_parent" android:layout_height="56.0dip" style="@style/pos_product_dialog_lab" />
+        <GridLayout android:orientation="horizontal" android:id="@id/product_info" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/title" android:columnCount="2">
+            <LinearLayout android:id="@id/product_name_l" style="@style/pos_product_dialog_group">
+                <TextView android:gravity="center|left" android:text="@string/pos_product_product_name_" style="@style/pos_product_dialog_lab" />
+                <EditText android:id="@id/name" style="@style/pos_product_dialog_edit" />
+            </LinearLayout>
+            <LinearLayout android:id="@id/product_name2_l" style="@style/pos_product_dialog_group">
+                <TextView android:gravity="center|left" android:text="@string/pos_second_name" style="@style/pos_product_dialog_lab" />
+                <EditText android:id="@id/name2" style="@style/pos_product_dialog_edit" />
+            </LinearLayout>
+            <LinearLayout android:id="@id/product_price_l" style="@style/pos_product_dialog_group">
+                <TextView android:gravity="center|left" android:id="@id/price_t" android:text="@string/pos_product_dialog_price" style="@style/pos_product_dialog_lab" />
+                <EditText android:id="@id/price" android:inputType="numberDecimal" style="@style/pos_product_dialog_edit" />
+            </LinearLayout>
+            <LinearLayout android:id="@id/product_type_l" android:background="@drawable/pos_simple_click_background" android:clickable="true" style="@style/pos_product_dialog_group">
+                <TextView android:gravity="center|left" android:text="@string/pos_product_producttype" style="@style/pos_product_dialog_lab" />
+                <TextView android:id="@id/type" android:background="@null" style="@style/pos_product_dialog_edit" />
+            </LinearLayout>
+            <LinearLayout android:id="@id/product_qty_l" style="@style/pos_product_dialog_group">
+                <TextView android:gravity="center|left" android:id="@id/qty_t" android:text="@string/pos_product_dialog_stockqty" style="@style/pos_product_dialog_lab" />
+                <EditText android:id="@id/qty" android:inputType="numberDecimal" style="@style/pos_product_dialog_edit" />
+            </LinearLayout>
+            <LinearLayout android:id="@id/product_code_l" style="@style/pos_product_dialog_group">
+                <TextView android:gravity="center|left" android:id="@id/code_t" android:text="@string/pos_product_code_simple" style="@style/pos_product_dialog_lab" />
+                <EditText android:id="@id/code" style="@style/pos_product_dialog_edit" />
+            </LinearLayout>
+            <LinearLayout android:id="@id/product_member_price_l" style="@style/pos_product_dialog_group">
+                <TextView android:gravity="center|left" android:id="@id/member_price_t" android:text="@string/product_member_price" style="@style/pos_product_dialog_lab" />
+                <EditText android:id="@id/member_price" android:inputType="numberDecimal" style="@style/pos_product_dialog_edit" />
+            </LinearLayout>
+            <LinearLayout android:id="@id/ll_product_weight_switch" style="@style/pos_product_dialog_group">
+                <TextView android:gravity="center|left" android:text="@string/wighting_goods" style="@style/pos_product_dialog_lab" />
+                <LinearLayout android:gravity="right" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0">
+                    <com.laiqian.ui.ImageCheckBox android:id="@id/product_weight_switch" android:background="@drawable/selector_checkbox_10500" android:clickable="true" android:layout_width="43.0dip" android:layout_height="25.0dip" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+                </LinearLayout>
+            </LinearLayout>
+        </GridLayout>
+    </RelativeLayout>
+    <FrameLayout android:id="@id/operation" android:layout_width="200.0dip" android:layout_height="wrap_content" android:layout_marginLeft="24.0dip" android:layout_toRightOf="@id/parameter" android:layout_alignTop="@id/parameter" android:layout_alignBottom="@id/parameter">
+        <LinearLayout android:orientation="vertical" android:id="@id/product_update_bottom" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <TextView android:id="@id/canal" android:text="@string/pos_product_dialog_canal" style="@style/pos_product_dialog_button" />
+            <TextView android:id="@id/delete" android:layout_marginTop="-1.0dip" android:text="@string/pos_product_delete" style="@style/pos_product_dialog_button" />
+            <TextView android:textColor="@color/ok_text_color" android:id="@id/sure" android:background="@drawable/pos_product_dialog_button_red" android:layout_marginTop="-1.0dip" android:text="@string/pos_product_dialog_sure" style="@style/pos_product_dialog_button" />
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:id="@id/product_create_bottom" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <TextView android:id="@id/product_create_canal" android:text="@string/pos_product_dialog_canal" style="@style/pos_product_dialog_button" />
+            <TextView android:textColor="@color/pos_text_red" android:id="@id/product_create_save" android:layout_marginTop="-1.0dip" android:text="@string/pos_product_dialog_save" style="@style/pos_product_dialog_button" />
+            <TextView android:textColor="@color/ok_text_color" android:id="@id/product_create_save_new" android:background="@drawable/pos_product_dialog_button_red" android:layout_marginTop="-1.0dip" android:text="@string/pos_product_dialog_savenew" style="@style/pos_product_dialog_button" />
+        </LinearLayout>
+    </FrameLayout>
+</RelativeLayout>

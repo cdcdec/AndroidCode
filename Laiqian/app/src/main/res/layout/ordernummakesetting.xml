@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:paddingTop="10.0dip" android:paddingBottom="10.0dip" style="@style/grey_background"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ScrollView android:id="@id/scrollView1" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <LinearLayout style="@style/dark_linearLayout_u">
+                <TextView android:text="@string/business_type_string_text" style="@style/edittext_label_style" />
+                <TextView android:id="@id/ordernummakesetting_business_type_text" style="@style/notEditable_edittext_style" />
+            </LinearLayout>
+            <LinearLayout style="@style/dark_linearLayout_m">
+                <TextView android:text="@string/date_time_text" style="@style/edittext_label_style" />
+                <TextView android:id="@id/ordernummakesetting_time_text" style="@style/notEditable_edittext_style" />
+            </LinearLayout>
+            <LinearLayout style="@style/linearLayout_rounded_rectangle_m">
+                <TextView android:text="@string/name_shout_text" style="@style/edittext_label_style" />
+                <EditText android:id="@id/ordernummakesetting_name_short" android:digits="1234567890qwertyuiopasdfghjklzxcvbnm" style="@style/editable_edittext_style" />
+            </LinearLayout>
+            <LinearLayout style="@style/linearLayout_rounded_rectangle_d">
+                <TextView android:text="@string/start_number_text" style="@style/edittext_label_style" />
+                <EditText android:id="@id/ordernummakesetting_num_edittext" android:numeric="integer" android:inputType="numberSigned" style="@style/editable_edittext_style" />
+            </LinearLayout>
+            <LinearLayout android:gravity="right" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <CheckBox android:id="@id/ordernummakercheckbox" android:text="@string/auto_make_order_number_text" style="@style/checkBox_style" />
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <TextView android:text="@string/order_number_style_text" style="@style/common_textview_white_shadow_style" />
+                <TextView android:id="@id/ordernummakesetting_businesstypetext" android:layout_marginLeft="10.0dip" android:text="sellout" style="@style/common_textview_white_shadow_style" />
+                <TextView android:id="@id/ordernummakesetting_timetext" android:layout_marginLeft="0.0dip" style="@style/common_textview_white_shadow_style" />
+                <TextView android:id="@id/ordernummakesetting_usertext" android:layout_marginLeft="0.0dip" android:text="" style="@style/common_textview_white_shadow_style" />
+                <TextView android:id="@id/ordernummakesetting_numtext" android:layout_marginLeft="0.0dip" android:text="" style="@style/common_textview_white_shadow_style" />
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:layout_marginLeft="10.0dip" android:text="@string/order_number_distinct_number_title" style="@style/common_textview_white_shadow_style" />
+                <TextView android:layout_marginLeft="10.0dip" android:text="@string/order_number_distinct_number_text" style="@style/common_textview_white_shadow_style" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

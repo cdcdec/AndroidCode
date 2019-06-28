@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:background="@color/pos_background_grey" android:layout_width="400.0dip" android:layout_height="56.0dip">
+        <TextView android:id="@id/title" android:focusable="true" android:focusableInTouchMode="true" android:layout_marginLeft="24.0dip" android:text="@string/pos_main_hold_number_please_enter" android:layout_centerVertical="true" style="@style/pos_title_text" />
+    </RelativeLayout>
+    <View android:background="@color/pos_line_grey" android:layout_width="400.0dip" android:layout_height="1.0px" />
+    <LinearLayout android:orientation="vertical" android:background="@color/pos_background_white" android:paddingTop="8.0dip" android:paddingBottom="8.0dip" android:layout_width="400.0dip" android:layout_height="wrap_content">
+        <LinearLayout android:gravity="center_vertical" android:id="@id/type_name_l" android:background="@color/pos_background_white" style="@style/pos_product_dialog_linearlayout">
+            <TextView android:gravity="center|left" android:id="@id/tvNameLable" android:layout_width="110.0dip" android:text="@string/pos_main_hold_number" style="@style/pos_product_content_text" />
+            <EditText android:id="@id/number" android:maxLength="4" android:inputType="number" style="@style/pos_grade_dialog_text_edit" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center_vertical" android:id="@id/type_msg_to_chef_l" android:background="@color/pos_background_white" style="@style/pos_product_dialog_linearlayout">
+            <TextView android:gravity="center|left" android:id="@id/tvNameLable" android:layout_width="110.0dip" android:text="@string/pos_main_hold_msg_to_chef" style="@style/pos_product_content_text" />
+            <EditText android:id="@id/et_msg_to_chef" style="@style/pos_grade_dialog_text_edit" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/pack_l" android:layout_width="fill_parent" android:layout_height="56.0dip" android:layout_marginLeft="20.0dip" android:layout_marginRight="20.0dip">
+            <TextView android:textSize="20.0dip" android:textColor="@color/pos_text_black" android:gravity="center|left" android:id="@id/pack" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/pos_activity_pack" />
+            <TextView android:textSize="20.0dip" android:textColor="@color/pos_text_red" android:gravity="center|left" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" />
+            <CheckBox android:id="@id/pack_check" android:layout_width="wrap_content" android:layout_height="wrap_content" android:button="@drawable/pos_check_switch" />
+        </LinearLayout>
+    </LinearLayout>
+    <View android:background="@color/pos_line_grey" android:layout_width="400.0dip" android:layout_height="1.0px" />
+    <RelativeLayout android:background="@color/pos_background_grey" android:layout_width="400.0dip" android:layout_height="56.0dip">
+        <TextView android:id="@id/canal" android:paddingLeft="24.0dip" android:paddingRight="24.0dip" android:text="@string/pos_product_dialog_canal" android:layout_toLeftOf="@id/sure" android:layout_centerVertical="true" style="@style/pos_product_content_text_clickable" />
+        <TextView android:textColor="@color/pos_text_red" android:id="@id/sure" android:paddingLeft="24.0dip" android:paddingRight="24.0dip" android:text="@string/pos_product_dialog_sure" android:layout_alignParentRight="true" android:layout_centerVertical="true" style="@style/pos_product_content_text_clickable" />
+    </RelativeLayout>
+</LinearLayout>

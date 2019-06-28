@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+    <include
+            android:id="@id/pos_report_nodata_image_l"
+            layout="@layout/pos_report_mobile_rq"/>
+
+    <TextView
+            android:textSize="20.0dip"
+            android:textColor="@color/pos_text_grey"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32.0dip"
+            android:text="@string/pos_report_noData"
+            android:layout_below="@id/pos_report_nodata_image_l"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"/>
+</RelativeLayout>

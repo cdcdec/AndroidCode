@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/dialoglayout" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:laiqian="http://schemas.android.com/apk/res-auto">
+    <LinearLayout style="@style/dialog_body_linearLayout_m">
+        <TextView android:textColor="@color/main_text_color" android:id="@id/titleText" android:layout_marginLeft="10.0dip" style="@style/titlebar_txt" />
+    </LinearLayout>
+    <LinearLayout style="@style/dialog_body_linearLayout_m">
+        <LinearLayout style="@style/linearLayout_before_pencil">
+            <TextView android:id="@id/qtyText" android:text="@string/sales_new_qtyLabel" style="@style/edittext_label_style" />
+            <com.laiqian.ui.edittext.EditText android:id="@id/qtyEdt" android:background="@drawable/laiqian_201404_machine_text_background_input" android:focusable="true" android:focusableInTouchMode="true" android:layout_height="34.0dip" android:minWidth="200.0dip" android:text="1" android:hint="@string/auth_RoleHint" android:numeric="decimal" laiqian:lqkeyBoard="true" style="@style/required_editable_edittext_style" />
+        </LinearLayout>
+        <TextView android:id="@id/productUnit" style="@style/unit_textview_style" />
+    </LinearLayout>
+    <LinearLayout style="@style/dialog_body_linearLayout_m">
+        <LinearLayout style="@style/linearLayout_before_pencil">
+            <TextView android:id="@id/priceText" android:text="@string/assemble_input_cost_price" style="@style/edittext_label_style" />
+            <com.laiqian.ui.edittext.EditText android:id="@id/priceEdt" android:background="@drawable/laiqian_201404_machine_text_background_input" android:focusable="true" android:focusableInTouchMode="true" android:layout_height="34.0dip" android:minWidth="200.0dip" android:numeric="decimal" android:inputType="numberDecimal" laiqian:lqkeyBoard="true" style="@style/required_editable_edittext_style" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" style="@style/pos_paytype_setting_other_item_viewgroup">
+        <View android:id="@id/selected" style="@style/pos_paytype_setting_item_check" />
+        <TextView android:gravity="center|left" android:id="@id/name" android:text="@string/pos_paytype_other_coupon_dp" android:layout_weight="1.0" style="@style/pos_paytype_setting_item_text" />
+        <RelativeLayout android:id="@id/update" android:layout_width="wrap_content" android:layout_height="fill_parent">
+            <View android:background="@drawable/pos_pay_other_update" android:duplicateParentState="true" android:layout_width="24.0dip" android:layout_height="24.0dip" android:layout_marginLeft="16.0dip" android:layout_marginRight="16.0dip" android:layout_centerVertical="true" />
+        </RelativeLayout>
+    </LinearLayout>
+</FrameLayout>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@drawable/start_14" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:layout_gravity="center" android:id="@id/ss_logo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/pos_logo" android:layout_above="@id/ss_brand" android:layout_centerHorizontal="true" />
+    <TextView android:textSize="22.0dip" android:textStyle="bold" android:textColor="@color/adsbar_text_color" android:id="@id/ss_brand" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/BRAND_NAME" android:layout_centerHorizontal="true" android:layout_centerVertical="true" />
+    <TextView android:textSize="16.0dip" android:textColor="@color/adsbar_text_color" android:id="@id/ss_versionnumber" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/VERSION_NUMBER" android:layout_below="@id/ss_brand" android:layout_centerHorizontal="true" />
+    <TextView android:textSize="16.0dip" android:textColor="@color/adsbar_text_color" android:id="@id/ss_upgrade" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/UPGRADE_INFO" android:layout_above="@id/ss_splashProgressBar" android:layout_below="@id/ss_versionnumber" android:layout_centerHorizontal="true" />
+    <ProgressBar android:id="@id/ss_splashProgressBar" android:layout_width="30.0dip" android:layout_height="30.0dip" android:max="100" android:progressDrawable="@drawable/startscreen_progressbar" android:layout_above="@id/ss_slogan" android:layout_centerHorizontal="true" />
+    <ImageView android:layout_gravity="center" android:id="@id/ss_slogan" android:layout_width="wrap_content" android:layout_height="wrap_content" android:scaleType="centerInside" android:layout_above="@id/ss_copyright" android:layout_centerHorizontal="true" />
+    <TextView android:textSize="14.0dip" android:textColor="@color/adsbar_text_color" android:id="@id/ss_copyright" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/COPYRIGHT" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" />
+</RelativeLayout>

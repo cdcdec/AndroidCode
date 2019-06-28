@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/linerlayout_alipay_content" android:background="@color/pos_big_b_color_10800" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:autolistview="http://schemas.android.com/apk/res-auto">
+    <include android:id="@id/layout_alipay_qrcode" android:layout_marginTop="24.0dip" layout="@layout/item_alipay_setting_checkbox" style="@style/print_item_layout_style" />
+</LinearLayout>

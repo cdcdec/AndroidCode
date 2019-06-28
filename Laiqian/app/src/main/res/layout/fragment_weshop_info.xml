@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="vertical" android:background="@color/confirm_button_bg_grey_color" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/ll_refresh" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ImageView android:id="@id/iv_no_network" android:background="@drawable/selector_no_network" android:duplicateParentState="true" android:layout_width="70.0dip" android:layout_height="70.0dip" />
+        <TextView android:textSize="16.0dip" android:textColor="@color/setting_text_color2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:text="@string/click_to_refresh" />
+    </LinearLayout>
+    <ScrollView android:id="@id/scrollView" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:padding="8.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <LinearLayout android:orientation="vertical" android:id="@id/ll_content" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <include android:id="@id/layout_open_shop" android:layout_width="fill_parent" android:layout_height="56.0dip" layout="@layout/item_layout_check_box" />
+                <include android:id="@id/layout_takeway_business_hours" android:layout_width="fill_parent" android:layout_height="56.0dip" android:layout_marginTop="-1.0dip" android:layout_marginBottom="10.0dip" android:layout_centerHorizontal="true" layout="@layout/business_hours_item" />
+                <include android:id="@id/layout_shop_name" android:layout_width="fill_parent" android:layout_height="56.0dip" layout="@layout/item_layout_printer_edit" />
+                <include android:id="@id/layout_contact" android:layout_width="fill_parent" android:layout_height="56.0dip" android:layout_marginTop="-1.0dip" layout="@layout/item_layout_printer_edit" />
+                <include android:id="@id/layout_address" android:layout_width="fill_parent" android:layout_height="56.0dip" android:layout_marginTop="-1.0dip" layout="@layout/item_layout_printer_edit" />
+                <LinearLayout android:orientation="horizontal" android:background="@anim/shape_rounded_rectangle" android:paddingTop="16.0dip" android:paddingRight="20.0dip" android:paddingBottom="16.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="8.0dip">
+                    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:paddingLeft="24.0dip" android:paddingRight="24.0dip" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+                        <TextView android:gravity="center_vertical" android:layout_gravity="center_vertical" android:id="@id/tv_qrcode_info" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/pos_shop_cover_figure" style="@style/textview_weiorder_settting" />
+                        <TextView android:textSize="18.0sp" android:textColor="@color/pos_correcting_gray" android:gravity="center_vertical" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/pos_shop_cover_figure_recommended" />
+                    </LinearLayout>
+                    <LinearLayout android:gravity="center" android:layout_gravity="center_vertical" android:orientation="vertical" android:id="@id/layout_cover_figure" android:background="@anim/selector_rounded_rectangle" android:layout_width="250.0dip" android:layout_height="125.0dip">
+                        <ImageView android:id="@id/iv_add_icon" android:layout_width="250.0dip" android:layout_height="125.0dip" android:src="@drawable/wechat_qrcode_add_ico" android:scaleType="center" />
+                        <ImageView android:id="@id/iv_cover_figure" android:layout_width="250.0dip" android:layout_height="125.0dip" android:scaleType="center" />
+                        <com.laiqian.ui.ProgressBarCircularIndeterminate android:gravity="center" android:id="@id/iv_loading" android:background="@color/red_color_10500" android:visibility="gone" android:layout_width="60.0dip" android:layout_height="60.0dip" />
+                    </LinearLayout>
+                </LinearLayout>
+                <include android:id="@id/layout_shop_infomessage" android:layout_width="fill_parent" android:layout_height="56.0dip" android:layout_marginTop="8.0dip" layout="@layout/item_layout_printer_edit" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+    <com.laiqian.ui.ProgressBarCircularIndeterminate android:id="@id/ivProgress" android:background="@color/red_color_10500" android:layout_width="32.0dip" android:layout_height="32.0dip" />
+</LinearLayout>

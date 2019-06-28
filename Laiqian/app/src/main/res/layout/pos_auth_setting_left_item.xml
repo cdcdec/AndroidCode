@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@drawable/pos_product_list_item" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="56.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/ivEmployee" android:layout_width="30.0dip" android:layout_height="30.0dip" android:layout_marginLeft="24.0dip" android:src="@drawable/pos_am_left_image_selector" android:layout_centerVertical="true" />
+    <RelativeLayout android:id="@id/rlEditEmployee" android:paddingLeft="24.0dip" android:paddingRight="24.0dip" android:layout_width="wrap_content" android:layout_height="56.0dip" android:layout_alignParentRight="true" android:layout_centerVertical="true">
+        <View android:background="@drawable/pos_product_list_item_view" android:layout_width="20.0dip" android:layout_height="20.0dip" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <TextView android:textSize="20.0dip" android:textColor="@color/setting_text_color1" android:ellipsize="end" android:id="@id/tvEmployee" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="24.0dip" android:layout_marginRight="10.0dip" android:text="员工" android:singleLine="true" android:layout_toLeftOf="@id/rlEditEmployee" android:layout_toRightOf="@id/ivEmployee" android:layout_centerVertical="true" />
+</RelativeLayout>

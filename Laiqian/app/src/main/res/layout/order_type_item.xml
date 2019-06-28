@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="100.0dip" android:layout_height="56.0dip" android:minHeight="56.0dip" style="@style/order_type_item"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:ellipsize="end" android:gravity="center" android:id="@id/type_name" android:text="@string/pos_dishes" android:maxLines="2" android:singleLine="false" android:layout_centerVertical="true" style="@style/order_type_item_text" />
+    <TextView android:textSize="10.0dip" android:textColor="@color/text_color_white" android:gravity="center" android:layout_gravity="center" android:id="@id/type_number" android:background="@drawable/type_tips_bg" android:visibility="gone" android:layout_width="20.0dip" android:layout_height="15.0dip" android:layout_marginTop="5.0dip" android:layout_marginRight="5.0dip" android:text="15" android:layout_alignParentRight="true" />
+</RelativeLayout>

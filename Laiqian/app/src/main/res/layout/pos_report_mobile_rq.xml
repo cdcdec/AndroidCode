@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="270.0dip"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true">
+
+    <View
+            android:id="@id/pos_report_nodata_image"
+            android:background="@drawable/pos_report_nodata_image"
+            android:layout_width="270.0dip"
+            android:layout_height="240.0dip"/>
+
+    <View
+            android:id="@id/pos_mobile_website"
+            android:background="@drawable/pos_mobile_website"
+            android:layout_width="80.0dip"
+            android:layout_height="80.0dip"
+            android:layout_marginTop="70.0dip"
+            android:layout_centerHorizontal="true"/>
+
+    <TextView
+            android:textSize="16.0dip"
+            android:textColor="@color/pos_text_black"
+            android:id="@id/tvReportCase"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8.0dip"
+            android:maxWidth="270.0dip"
+            android:text="@string/pos_report_noData_download_app"
+            android:layout_below="@id/pos_report_nodata_image"
+            android:layout_centerHorizontal="true"/>
+</RelativeLayout>

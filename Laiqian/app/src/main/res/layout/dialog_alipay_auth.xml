@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="400.0dip" android:layout_height="470.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/rl_title_l" android:background="@color/setting_title_bg_color" android:layout_width="400.0dip" android:layout_height="56.0dip">
+        <TextView android:textSize="20.0dip" android:textColor="@color/pay_blue_color" android:gravity="center_vertical" android:id="@id/tv_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="支付宝" android:drawableLeft="@drawable/icon_alipay" android:layout_centerInParent="true" android:layout_centerVertical="true" />
+        <View android:background="@color/setting_line_color" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_alignParentBottom="true" />
+        <LinearLayout android:id="@id/ll_close" android:layout_width="56.0dip" android:layout_height="fill_parent" android:layout_alignParentRight="true" android:layout_centerVertical="true">
+            <View android:id="@id/v_close" android:background="@drawable/pos_dialog_close" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="17.0dip" />
+        </LinearLayout>
+    </RelativeLayout>
+    <FrameLayout android:id="@id/ll_content" android:background="@color/pos_text_white" android:layout_width="fill_parent" android:layout_height="307.0dip">
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/ll_processing" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <com.laiqian.ui.ProgressBarCircularIndeterminate android:id="@id/ivPayProgress" android:background="@color/red_color_10500" android:layout_width="45.0dip" android:layout_height="45.0dip" android:layout_marginTop="-30.0dip" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/ll_result" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <ImageView android:layout_gravity="center_horizontal" android:id="@id/iv_qrcode" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" android:scaleType="center" />
+            <TextView android:textSize="20.0dip" android:textColor="@color/label_text_color" android:gravity="center" android:id="@id/tv_result" android:layout_width="200.0dip" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" />
+        </LinearLayout>
+    </FrameLayout>
+    <View android:background="@color/setting_line_color" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+    <LinearLayout android:orientation="horizontal" android:background="@color/setting_title_bg_color" android:layout_width="fill_parent" android:layout_height="56.0dip">
+        <Button android:textSize="20.0dip" android:id="@id/btn_success" android:background="@drawable/pos_simple_click_background" android:layout_height="56.0dip" android:text="@string/auth_success" android:layout_weight="1.0" style="@style/content_text_clickable" />
+    </LinearLayout>
+</LinearLayout>

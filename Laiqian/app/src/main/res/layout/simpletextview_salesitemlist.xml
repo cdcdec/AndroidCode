@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:id="@id/simpleLayout" android:paddingLeft="10.0dip" android:paddingRight="10.0dip" style="@style/warehouse_listItem_linearLayout"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="left" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="5.0dip" android:src="@drawable/arrow_down_icon" />
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:gravity="left" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:id="@id/sales_smt_ProductNameValue" style="@style/listviewItem_title_style" />
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0">
+                    <TextView android:layout_gravity="right" android:text="@string/sales_smt_QuantityLabel" style="@style/lable_lightgrey_style" />
+                    <TextView android:layout_gravity="right" android:id="@id/sales_smt_QuantityValue" style="@style/lable_lightgrey_style" />
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0">
+                    <TextView android:layout_gravity="right" android:text="@string/sales_smt_priceLabel" style="@style/lable_lightgrey_style" />
+                    <TextView android:layout_gravity="right" android:id="@id/sales_smt_priceValue" style="@style/lable_lightgrey_style" />
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0">
+                    <TextView android:layout_gravity="right" android:text="@string/sales_smt_AmountLabel" style="@style/lable_lightgrey_style" />
+                    <TextView android:layout_gravity="right" android:id="@id/sales_smt_amountValue" style="@style/lable_lightgrey_style" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+        <TextView android:id="@id/sales_smt_itemIDTextValue" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </LinearLayout>
+</LinearLayout>

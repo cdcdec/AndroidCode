@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@drawable/bg_more" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <Button android:textSize="20.0dip" android:textColor="@color/pos_retail_text_black" android:gravity="center" android:id="@id/btn_import" android:background="@drawable/titlebar_leftbt_selector" android:layout_width="126.0dip" android:layout_height="48.0dip" android:text="@string/pos_product_import" />
+    <View android:layout_gravity="center_horizontal" android:background="@color/setting_line_color" android:layout_width="60.0dip" android:layout_height="1.0dip" />
+    <Button android:textSize="20.0dip" android:textColor="@color/pos_retail_text_black" android:gravity="center" android:id="@id/btn_export" android:background="@drawable/titlebar_leftbt_selector" android:layout_width="126.0dip" android:layout_height="48.0dip" android:text="@string/pos_product_export" />
+</LinearLayout>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:background="@color/confirm_button_bg_grey_color" android:paddingLeft="8.0dip" android:paddingTop="8.0dip" android:paddingRight="8.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" style="@style/main_setting_scrollview_style"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:id="@id/ll_content" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <TextView android:gravity="center|left" android:id="@id/tv_alipay_payment_label" android:paddingLeft="24.0dip" android:layout_width="fill_parent" android:layout_height="48.0dip" />
+            <include android:id="@id/layout_offline_alipay" android:layout_width="fill_parent" android:layout_height="56.0dip" android:layout_marginTop="-1.0px" layout="@layout/item_layout_check_box_with_title" />
+            <include android:id="@id/layout_online_alipay_cb" android:layout_width="fill_parent" android:layout_height="56.0dip" android:layout_marginTop="-1.0dip" layout="@layout/item_layout_check_box_with_title" />
+            <TextView android:gravity="center|left" android:id="@id/tv_wechat_payment_label" android:paddingLeft="24.0dip" android:layout_width="fill_parent" android:layout_height="48.0dip" />
+            <include android:id="@id/layout_offline_wechat_pay" android:layout_width="fill_parent" android:layout_height="56.0dip" android:layout_marginTop="-1.0px" layout="@layout/item_layout_check_box_with_title" />
+            <include android:id="@id/layout_online_wechat_pay_cb" android:layout_width="fill_parent" android:layout_height="56.0dip" android:layout_marginTop="-1.0dip" layout="@layout/item_layout_check_box_with_title" />
+            <TextView android:gravity="center|left" android:id="@id/tv_vip_payment_label" android:paddingLeft="24.0dip" android:layout_width="fill_parent" android:layout_height="48.0dip" />
+            <include android:id="@id/layout_vip_pay" android:layout_width="fill_parent" android:layout_height="56.0dip" android:layout_marginTop="-1.0px" layout="@layout/item_layout_check_box_with_title" />
+            <TextView android:gravity="center|left" android:id="@id/tv_marketing_label" android:paddingLeft="24.0dip" android:layout_width="fill_parent" android:layout_height="48.0dip" />
+            <include android:id="@id/layout_discount" android:layout_width="fill_parent" android:layout_height="56.0dip" android:layout_marginBottom="10.0dip" layout="@layout/item_layout_edit_unit" />
+        </LinearLayout>
+        <com.laiqian.ui.ProgressBarCircularIndeterminate android:layout_gravity="center" android:id="@id/ivProgress" android:background="@color/red_color_10500" android:layout_width="32.0dip" android:layout_height="32.0dip" android:layout_marginTop="200.0dip" />
+    </LinearLayout>
+</ScrollView>

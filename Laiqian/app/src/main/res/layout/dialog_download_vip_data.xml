@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:background="@drawable/shape_bg_dialog_test_send" android:layout_width="300.0dip" android:layout_height="wrap_content">
+        <RelativeLayout android:background="@drawable/confirm_button_selector_topcenter" android:layout_width="fill_parent" android:layout_height="56.0dip">
+            <TextView android:gravity="center" android:id="@id/tvTitle" android:focusable="true" android:focusableInTouchMode="true" android:text="@string/new_pos_confirm_title" android:layout_centerInParent="true" style="@style/pos_title_text" />
+        </RelativeLayout>
+        <FrameLayout android:orientation="vertical" android:background="#ffffffff" android:paddingTop="8.0dip" android:paddingBottom="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:visibility="invisible" style="@style/pos_product_dialog_linearlayout">
+                <TextView android:layout_width="wrap_content" android:text="@string/sync_start_time_title" android:layout_weight="0.0" style="@style/pos_product_dialog_text" />
+                <TextView android:textColor="@color/red_color_10500" android:gravity="center" android:id="@id/date_picker" android:text="" style="@style/pos_product_dialog_text" />
+                <TextView android:layout_width="wrap_content" android:text="@string/sync_end_time_title" android:layout_weight="0.0" style="@style/pos_product_dialog_text" />
+                <TextView android:visibility="gone" android:layout_marginLeft="24.0dip" android:text="@string/sync_end_time_name" style="@style/pos_product_dialog_text" />
+                <TextView android:textColor="@color/red_color_10500" android:gravity="center" android:id="@id/date_end_picker" android:text="" style="@style/pos_product_dialog_text" />
+            </LinearLayout>
+            <TextView android:id="@id/layTimeFrameId" android:paddingLeft="24.0dip" android:paddingRight="24.0dip" android:layout_width="fill_parent" android:text="@string/sync_vip_data_msg" android:singleLine="false" android:lineSpacingExtra="12.0dip" style="@style/pos_product_dialog_text" />
+        </FrameLayout>
+        <LinearLayout android:id="@id/product_update_bottom" android:layout_width="fill_parent" android:layout_height="56.0dip">
+            <TextView android:id="@id/sure" android:background="@drawable/confirm_button_selector_bottomleft" android:paddingLeft="24.0dip" android:paddingRight="24.0dip" android:text="@string/pos_product_dialog_sure" android:layout_weight="1.0" android:layout_alignParentRight="true" android:layout_centerVertical="true" style="@style/pos_product_content_text_clickable" />
+            <TextView android:textColor="@color/red_color_10500" android:id="@id/cancel" android:background="@drawable/confirm_button_selector_bottomright" android:paddingLeft="24.0dip" android:paddingRight="24.0dip" android:text="@string/pos_product_dialog_canal" android:layout_weight="1.0" android:layout_toLeftOf="@id/sure" android:layout_alignParentTop="true" style="@style/pos_product_content_text_clickable" />
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:background="@color/setting_title_bg_color" android:layout_width="fill_parent" android:layout_height="30.0dip" />
+    <View android:background="@color/setting_line_color" android:layout_width="fill_parent" android:layout_height="1.0px" />
+    <TextView android:textSize="20.0dip" android:textColor="@color/setting_text_color1" android:gravity="center" android:id="@id/tvDelete" android:background="@drawable/listview_selector_10500" android:layout_width="fill_parent" android:layout_height="48.0dip" android:text="删除" />
+    <View android:background="@color/setting_line_color" android:layout_width="fill_parent" android:layout_height="1.0px" />
+    <View android:background="@color/setting_title_bg_color" android:layout_width="fill_parent" android:layout_height="30.0dip" />
+</LinearLayout>

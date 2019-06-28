@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:id="@id/llBusinessModel" style="@style/main_setting_left_ll1">
+        <TextView android:text="经营模式" style="@style/pop_left_text_style_10500" />
+        <TextView android:id="@id/tvBusinessModel" style="@style/pop_right_text_style_10500" />
+    </LinearLayout>
+    <View android:background="@color/setting_line_color" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginTop="8.0dip" android:layout_marginBottom="8.0dip" />
+</LinearLayout>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/report_item" android:background="@drawable/setting_leftll_selector_10500" android:layout_width="fill_parent" android:layout_height="48.0dip" android:layout_marginLeft="24.0dip" android:layout_marginRight="24.0dip">
+        <LinearLayout android:orientation="horizontal" android:id="@id/report_context" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="24.0dip" android:layout_marginRight="24.0dip">
+            <TextView android:gravity="center|left" android:id="@id/delivery" android:layout_width="0.0dip" android:text="@string/pos_report_delivery_boy" android:layout_weight="100.0" style="@style/pos_report_item_text" />
+            <TextView android:gravity="left" android:id="@id/account" android:layout_width="0.0dip" android:text="@string/pos_report_operate_account" android:layout_weight="150.0" style="@style/pos_report_item_text" />
+            <TextView android:gravity="right" android:id="@id/customerCount" android:layout_width="0.0dip" android:text="@string/pos_report_operate_ordercount" android:layout_weight="72.0" style="@style/pos_report_item_text" />
+            <TextView android:gravity="right" android:id="@id/amount" android:layout_width="0.0dip" android:text="@string/pos_report_transaction_head_amount" android:layout_weight="100.0" style="@style/pos_report_item_text" />
+        </LinearLayout>
+        <View android:id="@id/line" android:background="@color/pos_line_grey" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_alignLeft="@id/report_context" android:layout_alignRight="@id/report_context" android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+</FrameLayout>

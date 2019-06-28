@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/ll_cancel" android:background="@drawable/pos_canceling_background" android:layout_width="280.0dip" android:layout_height="70.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.laiqian.ui.ProgressBarCircularIndeterminate android:id="@id/ivProgress" android:background="@color/red_color_10500" android:layout_width="30.0dip" android:layout_height="30.0dip" android:layout_marginLeft="10.0dip" />
+    <TextView android:layout_marginLeft="10.0dip" android:text="@string/pos_canceling_order" style="@style/pos_product_content_text" />
+</LinearLayout>

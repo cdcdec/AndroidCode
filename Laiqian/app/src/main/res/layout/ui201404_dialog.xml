@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/llRoot" android:background="@drawable/standard_edition_message_box_bg" android:paddingBottom="9.0dip" android:layout_width="260.0dip" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:gravity="center" android:id="@id/title_rl" android:padding="0.0dip" android:layout_width="fill_parent" android:layout_height="40.0dip">
+        <View android:id="@id/title_icon" android:background="@drawable/pos_logo" android:layout_width="28.0dip" android:layout_height="28.0dip" android:layout_centerVertical="true" />
+        <TextView android:textSize="@dimen/standard_edition_text_size_40" android:textColor="@color/text_main_title_red" android:id="@id/title_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/lqj_exit_all" android:layout_toRightOf="@id/title_icon" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <TextView android:textSize="@dimen/standard_edition_text_size_40" android:textColor="@color/tabulation_text_color" android:id="@id/message" android:padding="3.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:layout_marginBottom="8.0dip" android:minHeight="50.0dip" android:layout_below="@id/title_rl" android:layout_centerHorizontal="true" />
+    <Button android:id="@id/Sure" android:layout_marginLeft="9.0dip" android:layout_marginTop="9.0dip" android:text="@string/lqj_ok" android:layout_below="@id/message" android:layout_alignLeft="@id/message" style="@style/ui201404_small_button_yellow" />
+    <Button android:id="@id/Cancel" android:layout_marginTop="9.0dip" android:layout_marginRight="9.0dip" android:text="@string/lqj_cancel" android:layout_below="@id/message" android:layout_alignRight="@id/message" style="@style/ui201404_small_button_lightGrey" />
+    <Button android:id="@id/Center_button" android:visibility="gone" android:layout_marginTop="9.0dip" android:text="@string/lqj_ok" android:layout_below="@id/message" android:layout_centerHorizontal="true" style="@style/ui201404_small_button_yellow" />
+</RelativeLayout>

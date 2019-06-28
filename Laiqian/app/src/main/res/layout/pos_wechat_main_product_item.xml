@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:padding="8.0dip" android:layout_width="fill_parent" android:layout_height="96.0dip">
+        <LinearLayout android:gravity="center|left" android:layout_gravity="center|left" android:orientation="vertical" android:id="@id/product_left_lay" android:paddingLeft="16.0dip" android:paddingTop="10.0dip" android:paddingBottom="12.0dip" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <TextView android:textSize="20.0sp" android:gravity="center|left" android:id="@id/product_name" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="2.0dip" style="@style/pos_product_content_text" />
+            <View android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+            <TextView android:textSize="24.0sp" android:textColor="@color/pos_text_red" android:id="@id/product_price" style="@style/pos_product_content_text" />
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:id="@id/product_upload_lay" android:background="@drawable/selector_rounded_rectangle" android:layout_width="80.0dip" android:layout_height="fill_parent">
+            <TextView android:textColor="@color/pos_text_black" android:gravity="center" android:id="@id/product_upload_txt" android:layout_width="80.0dip" android:layout_height="80.0dip" android:text="@string/pos_upload_photo" />
+            <ImageView android:id="@id/product_img" android:layout_width="80.0dip" android:layout_height="80.0dip" android:src="@drawable/loading_07" />
+            <LinearLayout android:gravity="center" android:layout_gravity="center" android:layout_width="80.0dip" android:layout_height="80.0dip">
+                <com.laiqian.ui.ProgressBarCircularIndeterminate android:id="@id/product_loading" android:background="@color/red_color_10500" android:layout_width="60.0dip" android:layout_height="60.0dip" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <View android:id="@id/line_h" android:background="@color/pos_line_grey" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_below="@id/type_title_l" />
+</LinearLayout>

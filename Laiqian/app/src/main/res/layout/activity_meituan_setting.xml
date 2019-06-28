@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:background="@color/ui201404_smj_background_lightgray"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            style="@style/main_setting_scrollview_style">
+
+    <LinearLayout
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+        <LinearLayout
+                android:orientation="vertical"
+                android:id="@id/ll_bind_status"
+                android:background="@color/setting_line_color"
+                android:layout_width="589.0dip"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50.0dip">
+
+            <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="64.0dip">
+
+                <TextView
+                        android:textSize="26.0dip"
+                        android:textColor="@color/white_color_1033"
+                        android:id="@id/tv_bind_status"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/takeaway_unbind"
+                        android:layout_centerInParent="true"/>
+
+                <ImageView
+                        android:id="@id/iv_bind_status"
+                        android:layout_width="30.0dip"
+                        android:layout_height="fill_parent"
+                        android:layout_marginRight="15.0dip"
+                        android:src="@drawable/icon_takeaway_unbind"
+                        android:layout_toLeftOf="@id/tv_bind_status"/>
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+                android:orientation="vertical"
+                android:id="@id/ll_unbind"
+                android:background="@color/white_color_1033"
+                android:visibility="gone"
+                android:layout_width="589.0dip"
+                android:layout_height="314.0dip">
+
+            <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="151.0dip"
+                    android:layout_marginLeft="26.0dip"
+                    android:layout_marginTop="34.0dip"
+                    android:layout_marginRight="26.0dip"
+                    android:src="@drawable/bind_demo"/>
+
+            <TextView
+                    android:textSize="16.0dip"
+                    android:layout_gravity="center_horizontal"
+                    android:id="@id/tv_bind_note"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="28.0dip"
+                    android:text="hahahahaha"/>
+
+            <Button
+                    android:textSize="20.0dip"
+                    android:textColor="@color/white_text_color"
+                    android:layout_gravity="center_horizontal"
+                    android:id="@id/btn_bind"
+                    android:background="@drawable/btn_red_round_selector"
+                    android:layout_width="220.0dip"
+                    android:layout_height="44.0dip"
+                    android:layout_marginTop="15.0dip"
+                    android:text="@string/takeaway_goto_bind"/>
+        </LinearLayout>
+
+        <LinearLayout
+                android:orientation="horizontal"
+                android:id="@id/ll_setting"
+                android:visibility="visible"
+                android:layout_width="589.0dip"
+                android:layout_height="wrap_content">
+
+            <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content">
+
+                <ListView
+                        android:id="@id/lv_setting"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:listSelector="@android:color/transparent"
+                        android:divider="@null"
+                        android:dividerHeight="0.0px"
+                        android:choiceMode="singleChoice"
+                        style="@style/main_setting_scrollview_style"/>
+
+                <include
+                        android:id="@id/auto_confirm_layout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="56.0dip"
+                        android:layout_marginTop="-1.0dip"
+                        layout="@layout/item_layout_check_box"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+                android:gravity="center"
+                android:orientation="vertical"
+                android:id="@id/ll_refresh"
+                android:visibility="gone"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="20.0dip"
+                    android:layout_marginTop="200.0dip"
+                    android:text="@string/fail_to_get_shop_info"/>
+
+            <Button
+                    android:textSize="20.0dip"
+                    android:textColor="#ffffffff"
+                    android:id="@id/btn_refresh"
+                    android:background="@drawable/ui201407_red_button_background_only"
+                    android:layout_width="200.0dip"
+                    android:layout_height="48.0dip"
+                    android:layout_marginTop="10.0dip"
+                    android:text="@string/click_to_refresh"/>
+        </LinearLayout>
+
+        <com.laiqian.ui.webview.PosWebViewLinearLayout
+                android:orientation="vertical"
+                android:id="@id/show_webview"
+                android:visibility="gone"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"/>
+
+        <com.laiqian.ui.ProgressBarCircularIndeterminate
+                android:layout_gravity="center"
+                android:id="@id/ivProgress"
+                android:background="@color/red_color_10500"
+                android:layout_width="32.0dip"
+                android:layout_height="32.0dip"
+                android:layout_marginTop="200.0dip"/>
+    </LinearLayout>
+</ScrollView>

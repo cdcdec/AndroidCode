@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:gravity="center_horizontal"
+              android:background="#ffe3e5e8"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent">
+
+    <ListView
+            android:id="@id/member_bill_lv"
+            android:layout_width="@dimen/dp_552"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_16"
+            android:listSelector="@android:color/transparent"
+            android:divider="@android:color/transparent"
+            android:dividerHeight="0.0dip"/>
+</LinearLayout>

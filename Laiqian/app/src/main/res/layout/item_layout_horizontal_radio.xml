@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <android.support.v7.widget.AppCompatRadioButton android:theme="@style/MyCheckBox" android:textSize="@dimen/sp_20" android:id="@id/apb_left_radio" android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="true" />
+    <android.support.v7.widget.AppCompatRadioButton android:theme="@style/MyCheckBox" android:textSize="@dimen/sp_20" android:id="@id/apb_right_radio" android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="false" />
+</LinearLayout>

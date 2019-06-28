@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:background="@color/ui201404_smj_background_lightgray" android:paddingTop="24.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/mode_l" android:background="@drawable/selector_rounded_rectangle_up" android:paddingLeft="24.0dip" android:paddingRight="24.0dip" android:layout_width="614.0dip" android:layout_height="56.0dip" android:layout_marginBottom="-1.0px">
+        <TextView android:text="@string/pos_bill_number_setting_mode" android:layout_weight="1.0" style="@style/pos_setting_right_item_lab" />
+        <TextView android:id="@id/mode_value" android:singleLine="true" style="@style/pos_setting_right_item_value" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/document_no_l" android:background="@drawable/selector_rounded_rectangle_unupdown" android:paddingLeft="24.0dip" android:paddingRight="24.0dip" android:layout_width="614.0dip" android:layout_height="56.0dip">
+        <TextView android:id="@id/document_no_lab" android:layout_width="200.0dip" android:text="@string/pos_bill_number_setting_document" style="@style/pos_setting_right_item_lab" />
+        <EditText android:textColor="@color/setting_text_color3" android:gravity="center|right" android:id="@id/document_no" android:background="@drawable/small_edittext_shape" android:paddingRight="12.0dip" android:layout_width="fill_parent" android:layout_height="40.0dip" android:singleLine="true" android:selectAllOnFocus="true" android:maxLength="10" android:inputType="number" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/terminal_no_l" android:background="@drawable/selector_rounded_rectangle_down" android:paddingLeft="24.0dip" android:paddingRight="24.0dip" android:layout_width="614.0dip" android:layout_height="56.0dip" android:layout_marginTop="-1.0dip">
+        <TextView android:id="@id/terminal_no_lab" android:layout_width="200.0dip" android:text="@string/pos_bill_number_setting_terminal" style="@style/pos_setting_right_item_lab" />
+        <EditText android:textColor="@color/setting_text_color3" android:gravity="center|right" android:id="@id/terminal_no" android:background="@drawable/small_edittext_shape" android:paddingRight="12.0dip" android:layout_width="fill_parent" android:layout_height="40.0dip" android:singleLine="true" android:selectAllOnFocus="true" android:maxLength="10" android:digits="1234567890qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM" />
+    </LinearLayout>
+</LinearLayout>

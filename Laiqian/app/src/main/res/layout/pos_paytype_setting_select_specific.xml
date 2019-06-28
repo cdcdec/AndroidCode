@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:background="@color/pos_background_white" android:padding="24.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/barcode_l" android:background="@drawable/pos_paytype_setting_item_background" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+        <RelativeLayout android:id="@id/title_view" android:background="@drawable/pos_paytype_setting_item_title_background" android:duplicateParentState="true" android:layout_width="fill_parent" android:layout_height="56.0dip">
+            <LinearLayout android:gravity="center" android:orientation="horizontal" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_centerInParent="true">
+                <View android:background="@drawable/pos_paytype_barcode_title_icon_change" android:duplicateParentState="true" android:layout_width="34.0dip" android:layout_height="34.0dip" />
+                <TextView android:textColor="@color/pos_text_black_white_activate" android:duplicateParentState="true" android:text="@string/order_payment_online" style="@style/pos_paytype_setting_item_title" />
+            </LinearLayout>
+            <View android:id="@id/selected" style="@style/pos_paytype_setting_item_check_title" />
+        </RelativeLayout>
+        <LinearLayout android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <View android:id="@id/barcode_icon" android:duplicateParentState="true" android:layout_width="210.0dip" android:layout_height="210.0dip" android:layout_marginTop="10.0dip" />
+            <View android:id="@id/barcode_icon" android:background="@drawable/pos_paytype_line" android:duplicateParentState="true" android:layout_width="1.0dip" android:layout_height="210.0dip" android:layout_marginLeft="10.0dip" android:layout_marginTop="10.0dip" android:layout_marginRight="10.0dip" />
+            <View android:background="@drawable/pos_paytype_qrcode_body_icon_change" android:duplicateParentState="true" android:layout_width="210.0dip" android:layout_height="210.0dip" android:layout_marginTop="10.0dip" />
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip">
+            <TextView android:textColor="@color/pos_text_gray_black" android:gravity="center" android:id="@id/barcode_detailed" android:duplicateParentState="true" android:lineSpacingExtra="10.0dip" style="@style/pos_paytype_setting_item_text" />
+        </LinearLayout>
+        <View android:visibility="invisible" android:layout_width="0.0dip" android:layout_height="0.0dip" android:layout_weight="1.0" />
+        <TextView android:textSize="20.0dip" android:textColor="@color/pos_text_white" android:gravity="center" android:id="@id/buy_barcodegun" android:background="@drawable/pos_paytype_buy_barcodegun" android:layout_width="140.0dip" android:layout_height="48.0dip" android:layout_marginBottom="14.0dip" android:text="@string/pos_alipay_barcode_buy_barcode" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/qrcode_l" android:background="@drawable/pos_paytype_setting_item_background" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_marginLeft="24.0dip" android:layout_weight="1.0">
+        <RelativeLayout android:id="@id/title_view" android:background="@drawable/pos_paytype_setting_item_title_background" android:layout_width="fill_parent" android:layout_height="56.0dip">
+            <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_centerInParent="true">
+                <View android:background="@drawable/pos_paytype_qrcode_title_icon" android:layout_width="34.0dip" android:layout_height="34.0dip" />
+                <TextView android:text="@string/pos_paytype_alipay_qrcode" style="@style/pos_paytype_setting_item_title" />
+            </LinearLayout>
+            <View android:id="@id/selected" style="@style/pos_paytype_setting_item_check_title" />
+        </RelativeLayout>
+        <View android:background="@drawable/pos_paytype_qrcode_body_icon" android:layout_width="160.0dip" android:layout_height="160.0dip" android:layout_marginTop="10.0dip" />
+        <LinearLayout android:orientation="vertical" android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip">
+            <TextView android:id="@id/qrcode_detailed" android:lineSpacingExtra="10.0dip" style="@style/pos_paytype_setting_item_text" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/accounting_l" android:background="@drawable/pos_paytype_setting_item_background" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_marginLeft="24.0dip" android:layout_weight="1.0">
+        <RelativeLayout android:id="@id/title_view" android:background="@drawable/pos_paytype_setting_item_title_background" android:duplicateParentState="true" android:layout_width="fill_parent" android:layout_height="56.0dip">
+            <LinearLayout android:gravity="center" android:orientation="horizontal" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_centerInParent="true">
+                <View android:background="@drawable/pos_paytype_accounting_title_icon_change" android:duplicateParentState="true" android:layout_width="34.0dip" android:layout_height="34.0dip" />
+                <TextView android:textColor="@color/pos_text_black_white" android:duplicateParentState="true" android:text="@string/pos_paytype_alipay_simple_accounting" style="@style/pos_paytype_setting_item_title" />
+            </LinearLayout>
+            <View android:id="@id/selected" style="@style/pos_paytype_setting_item_check_title" />
+        </RelativeLayout>
+        <View android:id="@id/view2" android:background="@drawable/pos_paytype_accounting_body_icon_change" android:duplicateParentState="true" android:layout_width="210.0dip" android:layout_height="210.0dip" android:layout_marginTop="10.0dip" />
+        <LinearLayout android:orientation="vertical" android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip">
+            <TextView android:textColor="@color/pos_text_gray_black" android:gravity="center" android:id="@id/accounting_detailed" android:duplicateParentState="true" android:lineSpacingExtra="10.0dip" style="@style/pos_paytype_setting_item_text" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

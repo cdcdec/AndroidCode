@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/printers_l" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:id="@id/printers" style="@style/pos_setting_right_item">
+            <TextView android:layout_width="wrap_content" android:text="@string/mainmenu_printers_setting" style="@style/pos_setting_right_item_lab" />
+            <TextView android:id="@id/function_hint_printers" android:visibility="gone" style="@style/red_dot_function" />
+            <TextView android:layout_weight="1.0" style="@style/pos_setting_right_item_lab" />
+            <View style="@style/pos_setting_right_item_icon" />
+        </LinearLayout>
+        <LinearLayout android:id="@id/usage_receipt" style="@style/pos_setting_right_item">
+            <TextView android:layout_width="wrap_content" android:text="@string/printer_usage_receipt" style="@style/pos_setting_right_item_lab" />
+            <TextView android:id="@id/function_hint_usage_receipt" android:visibility="gone" style="@style/red_dot_function" />
+            <TextView android:layout_weight="1.0" style="@style/pos_setting_right_item_lab" />
+            <View style="@style/pos_setting_right_item_icon" />
+        </LinearLayout>
+        <LinearLayout android:id="@id/usage_tag" style="@style/pos_setting_right_item">
+            <TextView android:layout_width="wrap_content" android:text="@string/printer_usage_tag" style="@style/pos_setting_right_item_lab" />
+            <TextView android:id="@id/function_hint_usage_tag" android:visibility="gone" style="@style/red_dot_function" />
+            <TextView android:layout_weight="1.0" style="@style/pos_setting_right_item_lab" />
+            <View style="@style/pos_setting_right_item_icon" />
+        </LinearLayout>
+        <LinearLayout android:id="@id/usage_kitchen" style="@style/pos_setting_right_item">
+            <TextView android:text="@string/printer_usage_kitchen" style="@style/pos_setting_right_item_lab" />
+            <TextView android:id="@id/function_hint_usage_kitchen" android:visibility="gone" style="@style/red_dot_function" />
+            <TextView android:layout_weight="1.0" style="@style/pos_setting_right_item_lab" />
+            <View style="@style/pos_setting_right_item_icon" />
+        </LinearLayout>
+        <LinearLayout android:id="@id/usage_delivery" style="@style/pos_setting_right_item">
+            <TextView android:text="@string/printer_usage_delivery" style="@style/pos_setting_right_item_lab" />
+            <TextView android:id="@id/function_hint_usage_kitchen" android:visibility="gone" style="@style/red_dot_function" />
+            <TextView android:layout_weight="1.0" style="@style/pos_setting_right_item_lab" />
+            <View style="@style/pos_setting_right_item_icon" />
+        </LinearLayout>
+        <View android:id="@id/line_1" style="@style/pos_setting_right_item_line" />
+        <LinearLayout android:id="@id/card_reader" style="@style/pos_setting_right_item">
+            <TextView android:text="@string/mainmenu_card_reader" style="@style/pos_setting_right_item_lab" />
+            <TextView android:id="@id/function_hint_card_reader" android:visibility="gone" style="@style/red_dot_function" />
+            <View android:id="@id/little_red_dot" android:visibility="gone" style="@style/red_dot_function" />
+            <View android:layout_width="0.0dip" android:layout_height="0.0dip" android:layout_weight="1.0" />
+            <View style="@style/pos_setting_right_item_icon" />
+        </LinearLayout>
+        <LinearLayout android:id="@id/display_settings" style="@style/pos_setting_right_item">
+            <TextView android:text="@string/customer_display_settings" style="@style/pos_setting_right_item_lab" />
+            <TextView android:id="@id/function_hint_display_settings" android:visibility="gone" style="@style/red_dot_function" />
+            <TextView android:layout_weight="1.0" style="@style/pos_setting_right_item_lab" />
+            <View style="@style/pos_setting_right_item_icon" />
+        </LinearLayout>
+        <LinearLayout android:id="@id/screen_settings" style="@style/pos_setting_right_item">
+            <TextView android:text="@string/dual_screen_settings_title" style="@style/pos_setting_right_item_lab" />
+            <TextView android:id="@id/function_hint_screen_settings" android:visibility="gone" style="@style/red_dot_function" />
+            <TextView android:layout_weight="1.0" style="@style/pos_setting_right_item_lab" />
+            <View style="@style/pos_setting_right_item_icon" />
+        </LinearLayout>
+        <View android:id="@id/line_1" style="@style/pos_setting_right_item_line" />
+        <LinearLayout android:id="@id/weight_setting" style="@style/pos_setting_right_item">
+            <TextView android:text="@string/weigh_setting" style="@style/pos_setting_right_item_lab" />
+            <TextView android:id="@id/function_hint_screen_settings" android:visibility="gone" style="@style/red_dot_function" />
+            <TextView android:layout_weight="1.0" style="@style/pos_setting_right_item_lab" />
+            <View style="@style/pos_setting_right_item_icon" />
+        </LinearLayout>
+        <LinearLayout android:id="@id/queuing_machine_setting" style="@style/pos_setting_right_item">
+            <TextView android:text="@string/queuing_machine" style="@style/pos_setting_right_item_lab" />
+            <TextView android:id="@id/function_hint_screen_settings" android:visibility="gone" style="@style/red_dot_function" />
+            <TextView android:layout_weight="1.0" style="@style/pos_setting_right_item_lab" />
+            <View style="@style/pos_setting_right_item_icon" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/dialoglayout" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:laiqian="http://schemas.android.com/apk/res-auto">
+    <LinearLayout style="@style/dialog_tilte_linearLayout_u">
+        <TextView android:textColor="@color/main_text_color" android:id="@id/titleText" android:layout_marginLeft="10.0dip" style="@style/titlebar_txt" />
+    </LinearLayout>
+    <LinearLayout style="@style/dialog_body_linearLayout_m">
+        <LinearLayout style="@style/linearLayout_before_pencil">
+            <TextView android:id="@id/qtyText" android:text="@string/sales_new_qtyLabel" style="@style/edittext_label_style" />
+            <com.laiqian.ui.edittext.EditText android:id="@id/qtyEdt" android:focusable="true" android:focusableInTouchMode="true" android:minWidth="200.0dip" android:hint="@string/auth_RoleHint" android:numeric="decimal" android:inputType="numberDecimal" laiqian:lqkeyBoard="true" style="@style/required_editable_edittext_style" />
+        </LinearLayout>
+        <TextView android:id="@id/productUnitText" style="@style/unit_textview_style" />
+    </LinearLayout>
+</LinearLayout>

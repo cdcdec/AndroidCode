@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:paddingLeft="@dimen/print_margins" android:paddingRight="@dimen/print_margins" style="@style/grey_background"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <EditText android:id="@id/message" android:clickable="false" style="@style/print_editext_MultiLine" />
+</LinearLayout>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+<LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+    <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="50.0dip">
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="50.0dip"
+                android:text="每次请求次数:"/>
+
+        <EditText
+                android:id="@id/etCount"
+                android:layout_width="200.0dip"
+                android:layout_height="50.0dip"/>
+    </LinearLayout>
+
+    <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="50.0dip">
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="50.0dip"
+                android:text="每次请求间隔:"/>
+
+        <EditText
+                android:id="@id/etTime"
+                android:layout_width="200.0dip"
+                android:layout_height="50.0dip"/>
+    </LinearLayout>
+
+    <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="50.0dip">
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="50.0dip"
+                android:text="模拟美团推单的shopid:"/>
+
+        <EditText
+                android:id="@id/etShopid"
+                android:layout_width="200.0dip"
+                android:layout_height="50.0dip"/>
+    </LinearLayout>
+
+    <Button
+            android:id="@id/receiveButton"
+            android:layout_width="200.0dip"
+            android:layout_height="50.0dip"
+            android:text="请求美团推送接口"/>
+
+    <Button
+            android:id="@id/pendingButton"
+            android:layout_width="200.0dip"
+            android:layout_height="50.0dip"
+            android:text="请求美团未接单接口"/>
+
+    <Button
+            android:id="@id/allButton"
+            android:layout_width="200.0dip"
+            android:layout_height="50.0dip"
+            android:text="请求美团所有订单接口"/>
+
+    <Button
+            android:id="@id/stopButton"
+            android:layout_width="200.0dip"
+            android:layout_height="50.0dip"
+            android:text="停止请求"/>
+
+    <TextView
+            android:id="@id/tvTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    <TextView
+            android:id="@id/tvResult"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"/>
+</LinearLayout>
+</ScrollView>

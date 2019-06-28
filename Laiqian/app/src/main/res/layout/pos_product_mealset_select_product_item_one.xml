@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@drawable/pos_simple_click_background_white_selected" android:layout_width="fill_parent" android:layout_height="64.0dip" android:layout_weight="1.0"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="20.0dip" android:textColor="@color/pos_text_black_white" android:gravity="center" android:id="@id/product_name" android:duplicateParentState="true" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="这里是商品名称" />
+    <TextView android:textSize="16.0dip" android:textColor="@color/pos_text_black_white" android:id="@id/product_qty" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" android:layout_marginRight="4.0dip" android:layout_alignParentTop="true" android:layout_alignParentRight="true" />
+    <View android:id="@id/line_top" android:layout_alignParentTop="true" style="@style/pos_line_h" />
+    <View android:layout_alignParentBottom="true" style="@style/pos_line_h" />
+    <View android:id="@id/line_left" android:layout_alignParentLeft="true" style="@style/pos_line_v" />
+    <View android:layout_alignParentRight="true" style="@style/pos_line_v" />
+</RelativeLayout>

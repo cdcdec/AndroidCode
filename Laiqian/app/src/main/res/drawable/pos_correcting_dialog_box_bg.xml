@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/laiqian_201404_top">
+        <shape>
+            <gradient android:startColor="#ff202225" android:endColor="#ff202225" android:angle="90.0" />
+            <corners android:radius="6.0px" />
+        </shape>
+    </item>
+</layer-list>

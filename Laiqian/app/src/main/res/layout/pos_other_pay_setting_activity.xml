@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/linerlayout_alipay_content" android:background="@color/ui201404_smj_background_lightgray" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:autolistview="http://schemas.android.com/apk/res-auto">
+    <TextView android:textSize="16.0dip" android:textColor="@color/text_color_grey" android:gravity="center" android:layout_width="wrap_content" android:layout_height="48.0dip" android:layout_marginLeft="24.0dip" android:text="@string/pos_pay_type_alipay" />
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <include android:id="@id/layout_alipay_barcode" android:layout_marginLeft="24.0dip" layout="@layout/item_alipay_setting_checkbox" style="@style/pos_pay_type_style" />
+        <LinearLayout android:orientation="vertical" android:id="@id/tv_barcode_note" android:background="@drawable/pos_pay_note_background" android:paddingLeft="12.0dip" android:paddingRight="12.0dip" android:layout_width="180.0dip" android:layout_height="158.0dip" android:layout_marginLeft="-1.0dip">
+            <TextView android:textSize="14.0sp" android:textColor="@color/setting_text_color1" android:id="@id/tv_barcode_note_txt" android:layout_width="180.0dip" android:layout_height="wrap_content" android:layout_marginTop="60.0dip" android:text="@string/pos_alipay_barcode_text" />
+            <Button android:textSize="14.0sp" android:textColor="@color/text_color" android:layout_gravity="center_horizontal" android:id="@id/btn_buy_scanner" android:background="@drawable/red_button_round" android:layout_width="100.0dip" android:layout_height="32.0dip" android:layout_marginTop="10.0dip" android:text="@string/pos_alipay_barcode_buy_barcode" />
+        </LinearLayout>
+        <include android:id="@id/layout_alipay_qrcode" android:layout_marginLeft="24.0dip" layout="@layout/item_alipay_setting_checkbox" style="@style/pos_pay_type_style" />
+        <TextView android:id="@id/tv_qrcode_note" android:paddingLeft="12.0dip" android:paddingRight="12.0dip" android:visibility="gone" android:layout_marginLeft="-1.0dip" android:text="@string/pos_alipay_qrcode_text" style="@style/textview_pay_note" />
+        <include android:id="@id/layout_alipay_account" android:layout_marginLeft="24.0dip" layout="@layout/item_alipay_setting_checkbox" style="@style/pos_pay_type_style" />
+        <TextView android:id="@id/tv_account_note" android:paddingLeft="12.0dip" android:paddingRight="12.0dip" android:visibility="gone" android:layout_marginLeft="-1.0dip" android:text="@string/pos_alipay_account_text" style="@style/textview_pay_note" />
+    </LinearLayout>
+    <TextView android:textSize="16.0dip" android:textColor="@color/text_color_grey" android:gravity="center" android:layout_width="wrap_content" android:layout_height="48.0dip" android:layout_marginLeft="24.0dip" android:layout_marginTop="8.0dip" android:text="@string/pos_other_pay_type" />
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <include android:id="@id/layout_alipay_meituan_coupons" android:layout_marginLeft="24.0dip" layout="@layout/item_alipay_setting_checkbox" style="@style/pos_pay_type_style" />
+        <include android:id="@id/layout_alipay_dzdp_coupons" android:layout_marginLeft="24.0dip" layout="@layout/item_alipay_setting_checkbox" style="@style/pos_pay_type_style" />
+        <include android:id="@id/layout_alipay_dp_coupons" android:layout_marginLeft="24.0dip" layout="@layout/item_alipay_setting_checkbox" style="@style/pos_pay_type_style" />
+    </LinearLayout>
+</LinearLayout>

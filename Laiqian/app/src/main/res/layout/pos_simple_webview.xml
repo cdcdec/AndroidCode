@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/pos_background_white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <WebView android:scrollbarSize="4.0dip" android:scrollbarThumbVertical="@drawable/pos_scroll_bar_background" android:scrollbarStyle="outsideOverlay" android:id="@id/webview" android:scrollbars="vertical" android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_centerHorizontal="true" android:overScrollMode="never" />
+    <include android:id="@id/loading" android:visibility="gone" layout="@layout/pos_report_first_load_alone" />
+</RelativeLayout>

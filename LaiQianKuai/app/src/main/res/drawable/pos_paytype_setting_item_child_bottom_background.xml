@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true">
+        <shape>
+            <corners android:bottomLeftRadius="2.0dip" android:bottomRightRadius="2.0dip" />
+            <solid android:color="@color/setting_select_bg_color" />
+        </shape>
+    </item>
+    <item android:drawable="@android:color/transparent" />
+</selector>

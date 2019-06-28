@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@android:color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:id="@id/layTimeFrameId" style="@style/pos_date_dialog_linearlayout">
+        <TextView android:layout_width="60.0dip" android:layout_marginLeft="31.0dip" android:layout_marginRight="31.0dip" android:text="@string/pos_date_dialog_date" style="@style/pos_date_dialog_black_text" />
+        <TextView android:id="@id/date_weekly_begin" android:text="@string/pos_date_dialog_00_00" style="@style/pos_date_dialog_editable_text_time" />
+        <TextView android:text="@string/sync_end_time_title" style="@style/pos_date_dialog_black_text" />
+        <TextView android:id="@id/date_weekly_end" android:text="@string/pos_date_dialog_23_59" style="@style/pos_date_dialog_editable_text_time" />
+    </LinearLayout>
+    <LinearLayout android:id="@id/layWeekTimeFrameId" style="@style/pos_date_dialog_linearlayout">
+        <TextView android:layout_width="60.0dip" android:layout_marginLeft="31.0dip" android:layout_marginRight="5.0dip" android:text="@string/pos_date_dialog_week" style="@style/pos_date_dialog_black_text" />
+        <com.laiqian.promotion.ui.datePicker.CheckTextView android:id="@id/checkedTextView" android:text="@string/pos_date_dialog_week_mon" style="@style/pos_date_dialog_week_text" />
+        <com.laiqian.promotion.ui.datePicker.CheckTextView android:text="@string/pos_date_dialog_week_tues" style="@style/pos_date_dialog_week_text" />
+        <com.laiqian.promotion.ui.datePicker.CheckTextView android:text="@string/pos_date_dialog_week_wed" style="@style/pos_date_dialog_week_text" />
+        <com.laiqian.promotion.ui.datePicker.CheckTextView android:text="@string/pos_date_dialog_week_thur" style="@style/pos_date_dialog_week_text" />
+        <com.laiqian.promotion.ui.datePicker.CheckTextView android:text="@string/pos_date_dialog_week_fri" style="@style/pos_date_dialog_week_text" />
+        <com.laiqian.promotion.ui.datePicker.CheckTextView android:text="@string/pos_date_dialog_week_sat" style="@style/pos_date_dialog_week_text" />
+        <com.laiqian.promotion.ui.datePicker.CheckTextView android:text="@string/pos_date_dialog_week_sun" style="@style/pos_date_dialog_week_text" />
+    </LinearLayout>
+</LinearLayout>

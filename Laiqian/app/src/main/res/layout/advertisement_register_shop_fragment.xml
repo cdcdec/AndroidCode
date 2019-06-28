@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <include android:id="@id/top" android:visibility="gone" layout="@layout/advertisement_register_top" />
+        <include android:id="@id/stepOne" android:visibility="gone" layout="@layout/advertisement_register_step1" />
+        <include android:id="@id/stepSecond" android:visibility="gone" layout="@layout/advertisement_register_step2" />
+        <include android:id="@id/stepThird" android:visibility="gone" layout="@layout/advertisement_register_step3" />
+    </LinearLayout>
+    <com.laiqian.ui.ProgressBarCircularIndeterminate android:id="@id/ivLoad" android:background="@color/red_color_10500" android:visibility="visible" android:layout_width="30.0dip" android:layout_height="30.0dip" android:layout_centerInParent="true" />
+</RelativeLayout>

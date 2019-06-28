@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/pos_background_grey" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:id="@id/title_back" style="@style/pos_title_back">
+        <View style="@style/pos_title_back_icon" />
+        <TextView android:id="@id/title_text" style="@style/pos_title_text" />
+    </LinearLayout>
+    <Button android:textSize="20.0dip" android:textColor="@color/text_main_black" android:id="@id/title_right" android:background="@drawable/titlebar_leftbt_selector_10500" android:paddingLeft="16.0dip" android:paddingRight="16.0dip" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginRight="8.0dip" android:layout_alignParentRight="true" />
+    <Button android:textSize="20.0dip" android:textColor="@color/text_main_black" android:id="@id/title_right2" android:background="@drawable/titlebar_leftbt_selector_10500" android:paddingLeft="16.0dip" android:paddingRight="16.0dip" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginRight="8.0dip" android:layout_toLeftOf="@id/title_right" />
+    <View android:id="@id/line_h" android:background="@color/pos_line_grey" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_alignParentBottom="true" />
+</RelativeLayout>

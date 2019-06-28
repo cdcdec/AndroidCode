@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:paddingTop="60.0dip" style="@style/grey_background"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:autolistview="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:id="@id/llAlipayPartner" style="@style/pos_qrcode_linearlayout_style">
+        <TextView android:text="@string/pos_alipay_partner" style="@style/pos_left_text_style_qrcode_pay" />
+        <EditText android:id="@id/ed_partnerid" style="@style/pos_right_edit_text_style" />
+    </LinearLayout>
+    <LinearLayout android:id="@id/llAlipayKey" style="@style/pos_qrcode_linearlayout_style">
+        <TextView android:text="@string/pos_alipay_key" style="@style/pos_left_text_style_qrcode_pay" />
+        <EditText android:id="@id/ed_partner_key" style="@style/pos_right_edit_text_style" />
+    </LinearLayout>
+    <Button android:textSize="20.0dip" android:textColor="@color/white_color_1033" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/btnTestAlipay" android:background="@drawable/btn_red_round_selector" android:layout_width="250.0dip" android:layout_height="56.0dip" android:layout_marginTop="24.0dip" android:text="@string/pos_alipay_test_alipay" />
+</LinearLayout>

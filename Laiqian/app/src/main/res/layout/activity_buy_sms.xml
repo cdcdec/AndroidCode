@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:scrollbars="none"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:overScrollMode="never">
+
+    <LinearLayout
+            android:orientation="vertical"
+            android:background="@color/confirm_button_bg_grey_color"
+            android:padding="16.0dip"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+        <LinearLayout
+                android:layout_gravity="center_horizontal"
+                android:orientation="horizontal"
+                android:id="@id/ll_phone"
+                android:layout_width="@dimen/buy_sms_width"
+                android:layout_height="56.0dip">
+
+            <TextView
+                    android:textSize="20.0dip"
+                    android:textColor="@color/label_text_color"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="24.0dip"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:text="@string/vip_buy_sms_phone"
+                    android:layout_weight="1.0"/>
+
+            <TextView
+                    android:textSize="20.0dip"
+                    android:textColor="@color/setting_text_color2"
+                    android:gravity="center_vertical"
+                    android:id="@id/tv_phone"
+                    android:paddingRight="24.0dip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="56.0dip"/>
+        </LinearLayout>
+
+        <LinearLayout
+                android:layout_gravity="center_horizontal"
+                android:orientation="horizontal"
+                android:id="@id/ll_sms"
+                android:layout_width="@dimen/buy_sms_width"
+                android:layout_height="56.0dip"
+                android:layout_marginTop="-1.0dip">
+
+            <TextView
+                    android:textSize="20.0dip"
+                    android:textColor="@color/label_text_color"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="24.0dip"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:text="@string/vip_buy_sms_quantity"
+                    android:layout_weight="1.0"/>
+
+            <TextView
+                    android:textSize="20.0dip"
+                    android:textColor="@color/setting_text_color2"
+                    android:gravity="center_vertical"
+                    android:id="@id/tv_sms_quantity_left"
+                    android:paddingRight="24.0dip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="56.0dip"
+                    android:layout_marginTop="-1.0dip"/>
+        </LinearLayout>
+
+        <com.laiqian.ui.container.LayoutLeftTextRightLabelWithAddButton
+                android:layout_gravity="center_horizontal"
+                android:id="@id/btn_add_coupon"
+                android:background="@drawable/shape_rounded_rectangle_down_click"
+                android:layout_width="@dimen/buy_sms_width"
+                android:layout_height="56.0dip"
+                android:layout_marginTop="-1.0dip"
+                app:left_text="@string/use_discount_number"
+                app:right_text="X"/>
+
+        <TextView
+                android:textColor="@color/startscreen_version_text_color"
+                android:gravity="center|left"
+                android:layout_gravity="center_horizontal"
+                android:id="@id/tv_notification_scope"
+                android:paddingLeft="24.0dip"
+                android:layout_width="@dimen/buy_sms_width"
+                android:layout_height="48.0dip"
+                android:text="@string/vip_sms_package"/>
+
+        <android.support.v7.widget.GridLayout
+                android:layout_gravity="center_horizontal"
+                android:id="@id/gv_package"
+                android:layout_width="@dimen/buy_sms_width"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0"
+                app:columnCount="3"
+                app:rowCount="3">
+
+            <include
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="2.5dip"
+                    android:layout_marginBottom="5.0dip"
+                    app:layout_column="0"
+                    app:layout_columnWeight="1.0"
+                    app:layout_row="0"
+                    app:layout_rowWeight="1.0"
+                    layout="@layout/listview_item_buy_sms"/>
+
+            <include
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2.5dip"
+                    android:layout_marginRight="2.5dip"
+                    android:layout_marginBottom="5.0dip"
+                    app:layout_column="1"
+                    app:layout_columnWeight="1.0"
+                    app:layout_row="0"
+                    app:layout_rowWeight="1.0"
+                    layout="@layout/listview_item_buy_sms"/>
+
+            <include
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2.5dip"
+                    android:layout_marginBottom="5.0dip"
+                    app:layout_column="2"
+                    app:layout_columnWeight="1.0"
+                    app:layout_row="0"
+                    app:layout_rowWeight="1.0"
+                    layout="@layout/listview_item_buy_sms"/>
+
+            <include
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="2.5dip"
+                    android:layout_marginBottom="5.0dip"
+                    app:layout_column="0"
+                    app:layout_columnWeight="1.0"
+                    app:layout_row="1"
+                    app:layout_rowWeight="1.0"
+                    layout="@layout/listview_item_buy_sms"/>
+
+            <include
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2.5dip"
+                    android:layout_marginRight="2.5dip"
+                    android:layout_marginBottom="5.0dip"
+                    app:layout_column="1"
+                    app:layout_columnWeight="1.0"
+                    app:layout_row="1"
+                    app:layout_rowWeight="1.0"
+                    layout="@layout/listview_item_buy_sms"/>
+
+            <include
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2.5dip"
+                    android:layout_marginBottom="5.0dip"
+                    app:layout_column="2"
+                    app:layout_columnWeight="1.0"
+                    app:layout_row="1"
+                    app:layout_rowWeight="1.0"
+                    layout="@layout/listview_item_buy_sms"/>
+
+            <include
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="2.5dip"
+                    android:layout_marginBottom="5.0dip"
+                    app:layout_column="0"
+                    app:layout_columnWeight="1.0"
+                    app:layout_row="2"
+                    app:layout_rowWeight="1.0"
+                    layout="@layout/listview_item_buy_sms"/>
+
+            <include
+                    android:visibility="gone"
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2.5dip"
+                    android:layout_marginBottom="5.0dip"
+                    app:layout_column="1"
+                    app:layout_columnWeight="1.0"
+                    app:layout_row="2"
+                    app:layout_rowWeight="1.0"
+                    layout="@layout/listview_item_buy_sms"/>
+        </android.support.v7.widget.GridLayout>
+    </LinearLayout>
+</ScrollView>

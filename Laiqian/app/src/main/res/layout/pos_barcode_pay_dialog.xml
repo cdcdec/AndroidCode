@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="280.0dip" android:layout_height="320.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/tv_switch_qrcode_l" android:background="@color/setting_title_bg_color" android:layout_width="280.0dip" android:layout_height="56.0dip">
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/tv_switch_qrcode" android:background="@drawable/pos_simple_click_background" android:paddingLeft="8.0dip" android:paddingRight="8.0dip" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_alignParentRight="true">
+            <TextView android:background="@null" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="切换到" style="@style/pos_product_content_text_clickable_white" />
+            <View android:background="@drawable/qrcode_icon" android:layout_width="20.0dip" android:layout_height="20.0dip" android:layout_marginLeft="8.0dip" />
+        </LinearLayout>
+        <View android:background="@color/setting_line_color" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/ll_content" android:layout_width="280.0dip" android:layout_height="264.0dip">
+        <View android:id="@id/vScanView" android:background="@drawable/pos_scan_barcode_background" android:layout_width="225.0dip" android:layout_height="240.0dip" android:layout_marginTop="24.0dip" android:layout_centerHorizontal="true" />
+        <View android:id="@id/vPayProgressView" android:background="@drawable/pos_iphone6_background" android:layout_width="144.0dip" android:layout_height="240.0dip" android:layout_marginTop="24.0dip" android:layout_centerHorizontal="true" />
+        <com.laiqian.ui.ProgressBarCircularIndeterminate android:id="@id/ivPayProgress" android:background="@color/red_color_10500" android:layout_width="24.0dip" android:layout_height="24.0dip" android:layout_marginTop="76.0dip" android:layout_centerHorizontal="true" />
+        <View android:id="@id/v_ok" android:background="@drawable/pos_hook_selected" android:layout_width="24.0dip" android:layout_height="24.0dip" android:layout_marginTop="76.0dip" android:layout_centerHorizontal="true" />
+        <View android:id="@id/v_warn" android:background="@drawable/pos_warning_icon" android:layout_width="50.0dip" android:layout_height="50.0dip" android:layout_marginTop="76.0dip" android:layout_centerHorizontal="true" />
+        <TextView android:textSize="18.0dip" android:textColor="@color/pos_retail_text_black" android:gravity="center" android:id="@id/tv_paystatus" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="112.0dip" android:layout_centerHorizontal="true" />
+        <TextView android:textSize="20.0dip" android:textColor="@color/pos_retail_text_black" android:gravity="center" android:id="@id/tv_warn" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="145.0dip" android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+    <View android:background="@color/setting_line_color" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+    <LinearLayout android:orientation="horizontal" android:background="@color/setting_title_bg_color" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <Button android:id="@id/btn_cancel" android:background="@drawable/pos_simple_click_background" android:layout_height="56.0dip" android:text="@string/pos_product_dialog_canal" android:layout_weight="1.0" style="@style/pos_product_content_text_clickable_white" />
+        <View android:id="@id/v_line_confirm" android:background="@color/setting_line_color" android:layout_width="1.0dip" android:layout_height="fill_parent" />
+        <Button android:id="@id/btn_confirm" android:background="@drawable/pos_simple_click_background" android:layout_height="56.0dip" android:text="@string/pos_product_dialog_sure" android:layout_weight="1.0" style="@style/pos_product_content_text_clickable_white" />
+        <View android:id="@id/v_line_retry" android:background="@color/setting_line_color" android:layout_width="1.0dip" android:layout_height="fill_parent" />
+        <Button android:id="@id/btn_retry" android:background="@drawable/pos_simple_click_background" android:layout_height="56.0dip" android:text="@string/pos_retry" android:layout_weight="1.0" style="@style/pos_product_content_text_clickable_red" />
+        <Button android:id="@id/btn_wifi" android:background="@drawable/pos_simple_click_background" android:layout_height="56.0dip" android:text="@string/pos_wifi_setting" android:layout_weight="1.0" style="@style/pos_product_content_text_clickable_red" />
+    </LinearLayout>
+</LinearLayout>

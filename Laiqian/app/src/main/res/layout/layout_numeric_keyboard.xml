@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:id="@id/llKeyboard"
+              android:background="@color/setting_line_color"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent">
+
+    <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0.0dip"
+            android:layout_marginTop="1.0dip"
+            android:layout_marginBottom="1.0dip"
+            android:layout_weight="1.0">
+
+        <Button
+                android:id="@id/btnPosPayNumber7"
+                android:layout_marginLeft="1.0dip"
+                android:text="7"
+                style="@style/keyboard_btn_style_vip"/>
+
+        <Button
+                android:id="@id/btnPosPayNumber8"
+                android:layout_marginLeft="1.0dip"
+                android:layout_marginRight="1.0dip"
+                android:text="8"
+                style="@style/keyboard_btn_style_vip"/>
+
+        <Button
+                android:id="@id/btnPosPayNumber9"
+                android:layout_marginRight="1.0dip"
+                android:text="9"
+                style="@style/keyboard_btn_style_vip"/>
+    </LinearLayout>
+
+    <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0.0dip"
+            android:layout_marginBottom="1.0dip"
+            android:layout_weight="1.0">
+
+        <Button
+                android:id="@id/btnPosPayNumber4"
+                android:layout_marginLeft="1.0dip"
+                android:text="4"
+                style="@style/keyboard_btn_style_vip"/>
+
+        <Button
+                android:id="@id/btnPosPayNumber5"
+                android:layout_marginLeft="1.0dip"
+                android:layout_marginRight="1.0dip"
+                android:text="5"
+                style="@style/keyboard_btn_style_vip"/>
+
+        <Button
+                android:id="@id/btnPosPayNumber6"
+                android:layout_marginRight="1.0dip"
+                android:text="6"
+                style="@style/keyboard_btn_style_vip"/>
+    </LinearLayout>
+
+    <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0.0dip"
+            android:layout_marginBottom="1.0dip"
+            android:layout_weight="1.0">
+
+        <Button
+                android:id="@id/btnPosPayNumber1"
+                android:layout_marginLeft="1.0dip"
+                android:text="1"
+                style="@style/keyboard_btn_style_vip"/>
+
+        <Button
+                android:id="@id/btnPosPayNumber2"
+                android:layout_marginLeft="1.0dip"
+                android:layout_marginRight="1.0dip"
+                android:text="2"
+                style="@style/keyboard_btn_style_vip"/>
+
+        <Button
+                android:id="@id/btnPosPayNumber3"
+                android:layout_marginRight="1.0dip"
+                android:text="3"
+                style="@style/keyboard_btn_style_vip"/>
+    </LinearLayout>
+
+    <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0.0dip"
+            android:layout_weight="1.0">
+
+        <Button
+                android:id="@id/btnPosPayNumberDot"
+                android:layout_marginLeft="1.0dip"
+                android:text="."
+                style="@style/keyboard_btn_style_vip"/>
+
+        <Button
+                android:id="@id/btnPosPayNumber0"
+                android:layout_marginLeft="1.0dip"
+                android:layout_marginRight="1.0dip"
+                android:text="0"
+                style="@style/keyboard_btn_style_vip"/>
+
+        <Button
+                android:id="@id/btnPosPayNumberBack"
+                android:layout_marginRight="1.0dip"
+                android:text="@string/pos_add_member_number_back_title"
+                style="@style/keyboard_btn_style_vip"/>
+    </LinearLayout>
+
+    <LinearLayout
+            android:orientation="horizontal"
+            android:background="@color/setting_title_bg_color"
+            android:layout_width="fill_parent"
+            android:layout_height="0.0dip"
+            android:layout_marginTop="1.0dip"
+            android:layout_weight="1.0">
+
+        <Button
+                android:textSize="20.0dip"
+                android:textColor="@color/setting_text_color1"
+                android:id="@id/btnPosPayBack"
+                android:background="@drawable/setting_button_selector_10500"
+                android:visibility="gone"
+                android:layout_width="0.0dip"
+                android:layout_height="fill_parent"
+                android:text="@string/lqj_cancel"
+                android:layout_weight="1.0"/>
+
+        <RelativeLayout
+                android:background="@color/red_color_10500"
+                android:layout_width="0.0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0">
+
+            <Button
+                    android:textSize="@dimen/text_28"
+                    android:textColor="@color/ok_text_color"
+                    android:id="@id/btn_submit"
+                    android:background="@drawable/submit_btn_selector_1033"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:text="@string/pos_confirm"/>
+
+            <com.laiqian.ui.ProgressBarCircularIndeterminate
+                    android:id="@id/progress"
+                    android:background="@color/white_color_1033"
+                    android:visibility="gone"
+                    android:layout_width="32.0dip"
+                    android:layout_height="32.0dip"
+                    android:layout_centerInParent="true"/>
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

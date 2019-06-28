@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:background="@color/ui201404_smj_background_lightgray"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            style="@style/main_setting_scrollview_style">
+
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+        <LinearLayout
+                android:orientation="horizontal"
+                android:id="@id/ll_setting"
+                android:visibility="visible"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+            <View
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.0"/>
+
+            <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3.0">
+
+                <TextView
+                        android:textSize="16.0dip"
+                        android:textColor="#ff999999"
+                        android:gravity="center_vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="48.0dip"
+                        android:text="@string/pos_receive_order"/>
+
+                <com.laiqian.ui.listview.PosAutoListView
+                        android:id="@id/lv_shop_pushable"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        style="@style/default_listview_style"/>
+
+                <TextView
+                        android:textSize="16.0dip"
+                        android:textColor="#ff999999"
+                        android:gravity="center_vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="48.0dip"
+                        android:text="@string/pos_myshop"/>
+
+                <ListView
+                        android:id="@id/lv_setting"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:listSelector="@android:color/transparent"
+                        android:divider="@null"
+                        android:dividerHeight="0.0px"
+                        android:choiceMode="singleChoice"
+                        style="@style/main_setting_scrollview_style"/>
+
+                <LinearLayout
+                        android:gravity="center"
+                        android:id="@id/ll_auth_admin"
+                        android:layout_width="fill_parent"
+                        android:layout_marginTop="-1.0dip"
+                        style="@style/clickable_linearLayout_rounded_rectangle_radius_d">
+
+                    <LinearLayout style="@style/linearLayout_before_pencil">
+
+                        <TextView
+                                android:textSize="20.0dip"
+                                android:textColor="@color/setting_text_color1"
+                                android:text="@string/meituan_auth_admin"
+                                style="@style/content_In_commonRoundCornerLinearLayout"/>
+                    </LinearLayout>
+
+                    <ImageView style="@style/pop_arrow_style_10500"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.0"/>
+        </LinearLayout>
+
+        <com.laiqian.ui.webview.PosWebViewLinearLayout
+                android:orientation="vertical"
+                android:id="@id/show_webview"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"/>
+    </LinearLayout>
+</ScrollView>

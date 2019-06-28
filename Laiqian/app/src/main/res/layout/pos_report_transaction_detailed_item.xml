@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="56.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:gravity="left" android:layout_gravity="center_vertical" android:id="@id/product_name" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="24.0dip" android:singleLine="false" android:layout_weight="1.0" style="@style/pos_report_detailed_text_black" />
+    <TextView android:layout_gravity="center_vertical" android:id="@id/product_qty" android:layout_width="75.0dip" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" style="@style/pos_report_detailed_text_black" />
+    <TextView android:gravity="right" android:layout_gravity="center_vertical" android:id="@id/product_amount" android:layout_width="165.0dip" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:layout_marginRight="28.0dip" style="@style/pos_report_detailed_text_black" />
+    <TextView android:textSize="16.0dip" android:textColor="@color/pos_text_black" android:gravity="center" android:layout_gravity="center_vertical" android:id="@id/return_button" android:background="@drawable/button_gray" android:visibility="gone" android:layout_width="64.0dip" android:layout_height="28.0dip" android:layout_marginLeft="8.0dip" android:layout_marginRight="24.0dip" android:text="@string/pos_return_products" style="@style/pos_report_detailed_text_black" />
+</LinearLayout>

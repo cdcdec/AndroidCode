@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_enabled="false">
+        <shape>
+            <corners android:radius="5.0dip" />
+            <solid android:color="@color/frontEnd_grey_background" />
+        </shape>
+    </item>
+    <item android:state_pressed="true" android:drawable="@drawable/button_standard_gray_alyer1_bg" />
+    <item android:state_focused="true" android:drawable="@drawable/l_standard_edition_tabulation_two_alyer2_bg" />
+    <item android:drawable="@drawable/button_standard_gray_alyer2_bg" />
+</selector>

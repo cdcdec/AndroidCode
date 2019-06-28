@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:orientation="vertical" android:background="@color/confirm_button_bg_grey_color" android:padding="8.0dip" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/llContent" android:padding="20.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="horizontal" android:background="@drawable/shape_rectangle_only_click" android:padding="16.0dip" android:layout_width="fill_parent" android:layout_height="120.0dip">
+            <ImageView android:layout_width="40.0dip" android:layout_height="wrap_content" android:src="@drawable/vip_market_icon" />
+            <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_weight="1.0">
+                <TextView android:textSize="22.0dip" android:textColor="@color/setting_text_color1" android:gravity="center_vertical" android:layout_width="100.0dip" android:layout_height="fill_parent" android:text="会员活动" />
+                <TextView android:textSize="18.0dip" android:gravity="center_vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="给所有会员发送营销短信,吸引用户消费,提升用户好感\n度,提高会员的消费次数" />
+            </LinearLayout>
+            <Button android:textSize="20.0dip" android:textColor="@color/white_text_color" android:gravity="center" android:id="@id/btn_marketting" android:background="@drawable/btn_red_round_selector" android:layout_width="100.0dip" android:layout_height="48.0dip" android:layout_marginTop="20.0dip" android:layout_marginRight="20.0dip" android:text="@string/create_sms" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

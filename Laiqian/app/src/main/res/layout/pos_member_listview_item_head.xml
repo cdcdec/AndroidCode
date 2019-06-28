@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/bg" android:background="@color/retail_title_bg_color" android:layout_width="1008.0dip" android:layout_height="48.0dip" android:layout_marginLeft="8.0dip" android:layout_marginTop="16.0dip" android:layout_marginRight="8.0dip">
+        <RelativeLayout android:id="@id/rl_points" android:layout_width="80.0dip" android:layout_height="fill_parent" android:layout_alignParentRight="true">
+            <TextView android:textSize="16.0dip" android:textColor="@color/member_list_item_min" android:gravity="center_vertical" android:id="@id/tv_points" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="10.0dip" android:text="@string/pos_vip_points" />
+            <View android:id="@id/center_line2" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_marginTop="1.0dip" android:layout_marginBottom="1.0dip" android:layout_centerVertical="true" />
+            <View android:id="@id/point_sort_up" android:background="@drawable/pos_report_sort_up" android:layout_marginRight="10.0dip" android:layout_above="@id/center_line2" android:layout_alignParentRight="true" style="@style/pos_report_product_sort" />
+            <View android:id="@id/point_sort_down" android:background="@drawable/pos_report_sort_down" android:layout_marginRight="10.0dip" android:layout_below="@id/center_line2" android:layout_alignParentRight="true" style="@style/pos_report_product_sort" />
+        </RelativeLayout>
+        <RelativeLayout android:id="@id/rl_balance" android:layout_width="90.0dip" android:layout_height="fill_parent" android:layout_toLeftOf="@id/rl_points">
+            <TextView android:textSize="16.0dip" android:textColor="@color/member_list_item_min" android:gravity="center|right" android:id="@id/tv_balance" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="10.0dip" android:text="@string/pos_vip_balance" />
+            <View android:id="@id/center_line" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_marginTop="1.0dip" android:layout_marginRight="10.0dip" android:layout_marginBottom="1.0dip" android:layout_centerVertical="true" />
+            <View android:id="@id/balance_sort_up" android:background="@drawable/pos_report_sort_up" android:layout_marginRight="10.0dip" android:layout_above="@id/center_line" android:layout_alignParentRight="true" style="@style/pos_report_product_sort" />
+            <View android:id="@id/balance_sort_down" android:background="@drawable/pos_report_sort_down" android:layout_marginRight="10.0dip" android:layout_below="@id/center_line" android:layout_alignParentRight="true" style="@style/pos_report_product_sort" />
+        </RelativeLayout>
+        <RelativeLayout android:id="@id/rl_total_consume" android:layout_width="110.0dip" android:layout_height="fill_parent" android:layout_toLeftOf="@id/rl_balance">
+            <TextView android:textSize="16.0dip" android:textColor="@color/member_list_item_min" android:gravity="center|right" android:id="@id/tv_total_consume" android:paddingRight="10.0dip" android:layout_width="85.0dip" android:layout_height="fill_parent" android:text="@string/pos_vip_total_consume_title" />
+            <View android:id="@id/center_line" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_marginTop="1.0dip" android:layout_marginBottom="1.0dip" android:layout_centerVertical="true" />
+            <View android:id="@id/total_sort_up" android:background="@drawable/pos_report_sort_up" android:layout_marginRight="10.0dip" android:layout_above="@id/center_line" android:layout_alignParentRight="true" style="@style/pos_report_product_sort" />
+            <View android:id="@id/total_sort_down" android:background="@drawable/pos_report_sort_down" android:layout_marginRight="10.0dip" android:layout_below="@id/center_line" android:layout_alignParentRight="true" style="@style/pos_report_product_sort" />
+        </RelativeLayout>
+        <RelativeLayout android:id="@id/rl_consume_times" android:layout_width="110.0dip" android:layout_height="fill_parent" android:layout_toLeftOf="@id/rl_total_consume">
+            <TextView android:textSize="16.0dip" android:textColor="@color/member_list_item_min" android:gravity="center|right" android:id="@id/tv_consume_times" android:paddingRight="10.0dip" android:layout_width="85.0dip" android:layout_height="fill_parent" android:text="@string/pos_vip_consume_times" />
+            <View android:id="@id/center_line" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_marginTop="1.0dip" android:layout_marginBottom="1.0dip" android:layout_centerVertical="true" />
+            <View android:id="@id/times_sort_up" android:background="@drawable/pos_report_sort_up" android:layout_marginRight="10.0dip" android:layout_above="@id/center_line" android:layout_alignParentRight="true" style="@style/pos_report_product_sort" />
+            <View android:id="@id/times_sort_down" android:background="@drawable/pos_report_sort_down" android:layout_marginRight="10.0dip" android:layout_below="@id/center_line" android:layout_alignParentRight="true" style="@style/pos_report_product_sort" />
+        </RelativeLayout>
+        <RelativeLayout android:id="@id/rl_latest_consume" android:layout_width="110.0dip" android:layout_height="fill_parent" android:layout_toLeftOf="@id/rl_consume_times">
+            <TextView android:textSize="16.0dip" android:textColor="@color/member_list_item_min" android:gravity="center|right" android:id="@id/tv_latest_consume" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="10.0dip" android:text="@string/pos_vip_latest_consume" android:layout_toLeftOf="@id/tv_consume_times" />
+            <View android:id="@id/center_line" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_marginTop="1.0dip" android:layout_marginBottom="1.0dip" android:layout_centerVertical="true" />
+            <View android:id="@id/latest_sort_up" android:background="@drawable/pos_report_sort_up" android:layout_marginRight="10.0dip" android:layout_above="@id/center_line" android:layout_alignParentRight="true" style="@style/pos_report_product_sort" />
+            <View android:id="@id/latest_sort_down" android:background="@drawable/pos_report_sort_down" android:layout_marginRight="10.0dip" android:layout_below="@id/center_line" android:layout_alignParentRight="true" style="@style/pos_report_product_sort" />
+        </RelativeLayout>
+        <RelativeLayout android:id="@id/rl_birthday" android:layout_width="100.0dip" android:layout_height="fill_parent" android:layout_toLeftOf="@id/rl_latest_consume">
+            <TextView android:textSize="16.0dip" android:textColor="@color/member_list_item_min" android:gravity="center|left" android:id="@id/tv_birthday" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="10.0dip" android:text="@string/pos_vip_birthday" />
+            <View android:id="@id/center_line1" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_marginTop="1.0dip" android:layout_marginBottom="1.0dip" android:layout_centerVertical="true" />
+            <View android:id="@id/birthday_sort_up" android:background="@drawable/pos_report_sort_up" android:layout_marginRight="10.0dip" android:layout_above="@id/center_line1" android:layout_alignParentRight="true" style="@style/pos_report_product_sort" />
+            <View android:id="@id/birthday_sort_down" android:background="@drawable/pos_report_sort_down" android:layout_marginRight="10.0dip" android:layout_below="@id/center_line1" android:layout_alignParentRight="true" style="@style/pos_report_product_sort" />
+        </RelativeLayout>
+        <TextView android:textSize="16.0dip" android:textColor="@color/member_list_item_min" android:gravity="center|right" android:id="@id/tv_mobile_phone" android:paddingRight="10.0dip" android:layout_width="120.0dip" android:layout_height="fill_parent" android:text="@string/pos_vip_phone" android:layout_toLeftOf="@id/rl_birthday" />
+        <RelativeLayout android:id="@id/rl_card" android:layout_width="120.0dip" android:layout_height="fill_parent" android:layout_toLeftOf="@id/tv_mobile_phone">
+            <TextView android:textSize="16.0dip" android:textColor="@color/member_list_item_min" android:gravity="center|left" android:id="@id/tv_card_number" android:paddingLeft="10.0dip" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/pos_vip_number" />
+            <View android:id="@id/card_center_line" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_marginTop="1.0dip" android:layout_marginBottom="1.0dip" android:layout_centerVertical="true" />
+            <View android:id="@id/member_card_sort_up" android:background="@drawable/pos_report_sort_up" android:layout_marginRight="10.0dip" android:layout_above="@id/card_center_line" android:layout_alignParentRight="true" style="@style/pos_report_product_sort" />
+            <View android:id="@id/card_sort_down" android:background="@drawable/pos_report_sort_down" android:layout_marginRight="10.0dip" android:layout_below="@id/card_center_line" android:layout_alignParentRight="true" style="@style/pos_report_product_sort" />
+        </RelativeLayout>
+        <RelativeLayout android:id="@id/rl_member_name" android:layout_width="100.0dip" android:layout_height="fill_parent" android:layout_toLeftOf="@id/rl_card">
+            <TextView android:textSize="16.0dip" android:textColor="@color/member_list_item_min" android:gravity="center|left" android:id="@id/tv_member_name" android:paddingLeft="10.0dip" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/pos_vip_name" />
+            <View android:id="@id/name_center_line" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_marginTop="1.0dip" android:layout_marginBottom="1.0dip" android:layout_centerVertical="true" />
+            <View android:id="@id/name_sort_up" android:background="@drawable/pos_report_sort_up" android:layout_marginRight="10.0dip" android:layout_above="@id/name_center_line" android:layout_alignParentRight="true" style="@style/pos_report_product_sort" />
+            <View android:id="@id/name_sort_down" android:background="@drawable/pos_report_sort_down" android:layout_marginRight="10.0dip" android:layout_below="@id/name_center_line" android:layout_alignParentRight="true" style="@style/pos_report_product_sort" />
+        </RelativeLayout>
+        <TextView android:textSize="16.0dip" android:textColor="@color/member_list_item_min" android:gravity="center|left" android:id="@id/tv_serial_number" android:paddingLeft="10.0dip" android:layout_width="50.0dip" android:layout_height="fill_parent" android:text="@string/pos_serial_number" android:layout_toLeftOf="@id/rl_member_name" />
+        <View android:background="@color/setting_line_color" android:layout_width="1.0px" android:layout_height="fill_parent" android:layout_toLeftOf="@id/rl_points" />
+        <View android:background="@color/setting_line_color" android:layout_width="1.0px" android:layout_height="fill_parent" android:layout_toLeftOf="@id/rl_balance" />
+        <View android:background="@color/setting_line_color" android:layout_width="1.0px" android:layout_height="fill_parent" android:layout_toLeftOf="@id/rl_total_consume" />
+        <View android:background="@color/setting_line_color" android:layout_width="1.0px" android:layout_height="fill_parent" android:layout_toLeftOf="@id/rl_consume_times" />
+        <View android:background="@color/setting_line_color" android:layout_width="1.0px" android:layout_height="fill_parent" android:layout_toLeftOf="@id/rl_latest_consume" />
+        <View android:background="@color/setting_line_color" android:layout_width="1.0px" android:layout_height="fill_parent" android:layout_toLeftOf="@id/rl_birthday" />
+        <View android:background="@color/setting_line_color" android:layout_width="1.0px" android:layout_height="fill_parent" android:layout_toLeftOf="@id/tv_mobile_phone" />
+        <View android:background="@color/setting_line_color" android:layout_width="1.0px" android:layout_height="fill_parent" android:layout_toLeftOf="@id/rl_card" />
+        <View android:background="@color/setting_line_color" android:layout_width="1.0px" android:layout_height="fill_parent" android:layout_toLeftOf="@id/rl_member_name" />
+        <View android:background="@color/setting_line_color" android:layout_width="1.0px" android:layout_height="fill_parent" android:layout_alignParentLeft="true" />
+        <View android:background="@color/setting_line_color" android:layout_width="1.0px" android:layout_height="fill_parent" android:layout_alignParentRight="true" />
+        <View android:background="@color/setting_line_color" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_alignParentBottom="true" />
+        <View android:background="@color/setting_line_color" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_alignParentTop="true" />
+    </RelativeLayout>
+</LinearLayout>

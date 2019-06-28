@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/left" android:background="@color/pos_activity_main_split_line" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="horizontal" android:background="@color/setting_title_bg_color" android:layout_width="fill_parent" android:layout_height="64.0dip">
+            <LinearLayout android:id="@id/ll_title" android:background="@drawable/titlebar_leftbt_selector_10500" android:layout_width="160.0dip" android:layout_height="fill_parent">
+                <ImageView android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="20.0dip" android:src="@drawable/main_setting_back_button" />
+                <TextView android:textSize="21.0dip" android:textColor="@color/pos_text_black" android:gravity="center_vertical" android:id="@id/title" android:paddingLeft="10.0dip" android:layout_width="fill_parent" android:layout_height="64.0dip" android:layout_marginBottom="1.0dip" android:text="@string/pos_product_attribute_rule" />
+            </LinearLayout>
+        </LinearLayout>
+        <View android:background="@color/setting_line_color" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+        <RelativeLayout android:background="@color/pos_big_b_color_10800" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <GridView android:id="@id/attribute_body" android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="fill_parent" android:listSelector="@android:color/transparent" android:horizontalSpacing="1.0dip" android:verticalSpacing="1.0dip" android:stretchMode="columnWidth" android:numColumns="7" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" android:overScrollMode="never" />
+        </RelativeLayout>
+        <LinearLayout android:id="@id/bottom" android:background="@color/setting_title_bg_color" android:layout_width="fill_parent" android:layout_height="64.0dip" android:layout_marginTop="1.0dip">
+            <TextView android:textSize="20.0dip" android:textColor="@color/pos_text_black" android:gravity="center" android:id="@id/tv_empty" android:background="@drawable/pos_simple_click_background" android:paddingLeft="24.0dip" android:paddingRight="24.0dip" android:layout_width="170.0dip" android:layout_height="fill_parent" android:text="@string/pos_report_transaction_clear" />
+            <TextView android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" />
+            <TextView android:textSize="20.0dip" android:textColor="@color/pos_text_black" android:gravity="center" android:id="@id/canal" android:background="@drawable/pos_simple_click_background" android:paddingLeft="24.0dip" android:paddingRight="24.0dip" android:layout_width="170.0dip" android:layout_height="fill_parent" android:text="@string/pos_sync_cancel" />
+            <TextView android:textSize="20.0dip" android:textColor="@color/ok_text_color" android:gravity="center" android:id="@id/sure" android:background="@drawable/submit_btn_selector_1033" android:paddingLeft="24.0dip" android:paddingRight="24.0dip" android:layout_width="170.0dip" android:layout_height="fill_parent" android:text="@string/pos_enter_title" android:layout_alignParentRight="true" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

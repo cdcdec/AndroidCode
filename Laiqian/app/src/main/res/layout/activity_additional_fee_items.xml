@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:background="@color/pos_background_white"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+    <com.laiqian.scanorder.settings.AutoGridView
+            android:id="@id/gridview"
+            android:paddingLeft="24.0dip"
+            android:paddingTop="24.0dip"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:listSelector="@android:color/transparent"
+            android:horizontalSpacing="0.0dip"
+            android:stretchMode="columnWidth"
+            android:numColumns="6"/>
+</RelativeLayout>

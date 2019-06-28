@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:background="@drawable/pos_simple_click_background" style="@style/pos_report_filter_group_canclick"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:id="@id/custom_lab" android:text="lab" style="@style/pos_report_filter_text_noclick" />
+    <TextView android:textSize="20.0dip" android:id="@id/custom_value" android:text="value" style="@style/pos_report_filter_text_canclick_brown" />
+    <View android:id="@id/custom_lab_view" android:layout_marginLeft="10.0dip" style="@style/pos_report_filter_right_down_icon" />
+</LinearLayout>

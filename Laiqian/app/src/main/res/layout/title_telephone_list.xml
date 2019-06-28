@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/setting_title_bg_color" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:id="@id/back" style="@style/pos_title_back">
+        <View style="@style/pos_title_back_icon" />
+        <TextView android:text="@string/telephone_customer_list" style="@style/pos_title_text" />
+    </LinearLayout>
+    <View android:background="@color/pos_line_grey" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_alignParentBottom="true" />
+</RelativeLayout>

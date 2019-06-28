@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:background="@color/ui201404_smj_background_lightgray" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout style="@style/light_grey_background"
+      xmlns:android="http://schemas.android.com/apk/res/android" xmlns:laiqian="http://schemas.android.com/apk/res-auto">
+        <TextView android:textSize="16.0dip" android:textColor="#ff999999" android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="48.0dip" android:layout_marginLeft="235.0dip" android:text="@string/s_date" />
+        <LinearLayout android:id="@id/i_FromDateLayout" style="@style/clickable_linearLayout_u_min">
+            <LinearLayout style="@style/linearLayout_before_pencil">
+                <TextView android:id="@id/i_fromDateEdit" android:text="@string/r_dateBegin" style="@style/edittext_label_style" />
+                <TextView android:textColor="@color/setting_text_color3" android:gravity="center|right" android:id="@id/i_fromDateTxw" style="@style/login_edittext_style" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:id="@id/i_ToDateLayout" style="@style/clickable_linearLayout_d_min">
+            <LinearLayout style="@style/linearLayout_before_pencil">
+                <TextView android:id="@id/i_toDateEdit" android:text="@string/r_dateEnd" style="@style/edittext_label_style" />
+                <TextView android:textColor="@color/setting_text_color3" android:gravity="center|right" android:id="@id/i_toDateTxw" style="@style/login_edittext_style" />
+            </LinearLayout>
+        </LinearLayout>
+        <TextView android:textSize="16.0dip" android:textColor="#ff999999" android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="48.0dip" android:layout_marginLeft="235.0dip" android:text="@string/statistics_query_condition" />
+        <LinearLayout android:id="@id/i_productLayout" android:visibility="gone" android:layout_marginTop="10.0dip" style="@style/clickable_linearLayout_u_min">
+            <LinearLayout style="@style/linearLayout_before_pencil">
+                <TextView android:id="@id/i_toDateEdit" android:text="@string/i_product" style="@style/edittext_label_style" />
+                <TextView android:id="@id/get_productTxw" style="@style/login_edittext_style" />
+            </LinearLayout>
+            <ImageView style="@style/pop_arrow_style" />
+        </LinearLayout>
+        <LinearLayout android:id="@id/i_clientLayout" android:visibility="gone" style="@style/clickable_linearLayout_m_min">
+            <LinearLayout style="@style/linearLayout_before_pencil">
+                <TextView android:id="@id/i_clientEdit" android:text="@string/statistics_client" style="@style/edittext_label_style" />
+                <TextView android:id="@id/get_clientTxw" style="@style/login_edittext_style" />
+            </LinearLayout>
+            <ImageView style="@style/pop_arrow_style" />
+        </LinearLayout>
+        <LinearLayout android:id="@id/i_staffLayout" android:visibility="gone" style="@style/clickable_linearLayout_d_min">
+            <LinearLayout style="@style/linearLayout_before_pencil">
+                <TextView android:id="@id/staff_text_string" android:text="@string/statistics_staff" style="@style/edittext_label_style" />
+                <TextView android:id="@id/get_staffTxw" style="@style/login_edittext_style" />
+            </LinearLayout>
+            <ImageView style="@style/pop_arrow_style" />
+        </LinearLayout>
+        <LinearLayout android:id="@id/i_memberLayout" android:paddingRight="11.0dip" style="@style/clickable_linearLayout_u_min">
+            <LinearLayout style="@style/linearLayout_before_pencil">
+                <TextView android:text="@string/member_text" style="@style/edittext_label_style" />
+                <EditText android:textSize="20.0dip" android:textColor="@color/setting_text_color3" android:gravity="center|right" android:layout_gravity="center_vertical" android:id="@id/get_memberTxw" android:background="@drawable/small_edittext_shape" android:paddingRight="11.0dip" android:layout_width="fill_parent" android:layout_height="40.0dip" android:selectAllOnFocus="true" android:numeric="decimal" android:inputType="number" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:id="@id/i_staffLayout2" style="@style/clickable_linearLayout_d_min">
+            <LinearLayout style="@style/linearLayout_before_pencil">
+                <TextView android:id="@id/staff_text_string" android:text="@string/statistics_staff" style="@style/edittext_label_style" />
+                <TextView android:textColor="@color/setting_text_color3" android:gravity="center|right" android:id="@id/get_staffTxw2" android:paddingRight="24.0dip" style="@style/login_edittext_style" />
+            </LinearLayout>
+            <ImageView style="@style/pop_arrow_style_10500" />
+        </LinearLayout>
+        <Button android:id="@id/btn_clean_filters" android:layout_marginTop="20.0dip" android:text="@string/pos_clean_filter" style="@style/bottom_red_button_style_20150319" />
+    </LinearLayout>
+</ScrollView>
