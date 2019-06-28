@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <include android:id="@id/layout_wechat_pay" android:layout_width="fill_parent" android:layout_height="64.0dip" layout="@layout/item_layout_check_box" />
-    <include android:id="@id/layout_arrival_pay" android:layout_width="fill_parent" android:layout_height="64.0dip" layout="@layout/item_layout_check_box" />
-    <View android:background="@color/ui201404_smj_viewgroup_background_white_stroke" android:layout_width="fill_parent" android:layout_height="1.0px" />
-    <include android:id="@id/layout_start_price" android:layout_width="fill_parent" android:layout_height="64.0dip" layout="@layout/item_layout_edit_unit" />
-    <include android:id="@id/layout_coupon" android:layout_width="fill_parent" android:layout_height="64.0dip" layout="@layout/item_layout_click_more" />
-</LinearLayout>

@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:id="@id/rlStart" android:background="@color/startscreen_bg_color" android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <ImageView android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/startscreen_bg_image" />
-    <ImageView android:id="@id/ivStartCenter" android:background="@drawable/evakostart" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerHorizontal="true" android:layout_centerVertical="true" />
-    <ImageView android:id="@id/ivStartBottomRight" android:background="@drawable/evakopowered" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="24.0dip" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" />
-    <TextView android:textSize="18.0dip" android:textColor="@color/startscreen_version_text_color" android:id="@id/ss_versionnumber" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="24.0dip" android:text="@string/VERSION_NUMBER" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" />
-    <TextView android:textSize="18.0dip" android:textColor="@color/startscreen_version_text_color" android:id="@id/ss_upgrade" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="80.0dip" android:text="@string/UPGRADE_INFO" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" />
-</RelativeLayout>

@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <RelativeLayout android:orientation="horizontal" android:id="@id/report_item" android:background="@drawable/setting_leftll_selector_10500" android:duplicateParentState="true" android:layout_width="fill_parent" android:layout_height="48.0dip" android:layout_marginLeft="24.0dip" android:layout_marginRight="24.0dip">
-        <TextView android:id="@id/time" android:layout_width="wrap_content" android:layout_marginLeft="24.0dip" style="@style/pos_report_item_text" />
-        <TextView android:gravity="right" android:id="@id/amount" android:layout_width="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginRight="24.0dip" android:text="@string/pos_report_shift_cash" android:layout_alignParentRight="true" style="@style/pos_report_item_text" />
-        <View android:background="@color/pos_line_grey" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_marginLeft="24.0dip" android:layout_marginRight="24.0dip" android:layout_alignParentBottom="true" />
-    </RelativeLayout>
-</RelativeLayout>

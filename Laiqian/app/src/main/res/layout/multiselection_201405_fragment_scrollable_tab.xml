@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout style="@style/standard_edition_purchase_scrollable_bar"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <Button android:id="@id/multiselection_scrollable_tab_button" android:visibility="gone" android:layout_alignParentTop="true" android:layout_alignParentRight="true" style="@style/standard_edition_purchase_scrollable_tab_button" />
-    <com.laiqian.ui.listview.HorizontalListView android:id="@id/multiselection_scrollable_tab_list" android:focusableInTouchMode="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_toLeftOf="@id/multiselection_scrollable_tab_button" android:layout_alignParentTop="true" />
-    <View android:id="@id/multiselection_scrollable_tab_animator" android:visibility="gone" android:layout_alignBottom="@id/multiselection_scrollable_tab_list" android:layout_alignParentRight="true" style="@style/standard_edition_purchase_list_tab_animator" />
-</RelativeLayout>

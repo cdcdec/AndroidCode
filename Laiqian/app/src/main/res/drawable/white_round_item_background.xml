@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<selector
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:state_pressed="true" android:drawable="@drawable/white_round_select" />
-    <item android:drawable="@drawable/white_round_select" android:state_activated="true" />
-    <item android:state_enabled="false" android:drawable="@drawable/white_round" />
-    <item android:drawable="@drawable/white_round" />
-</selector>

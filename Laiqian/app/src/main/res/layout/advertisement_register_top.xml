@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_10"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <TextView android:textSize="18.0dip" android:textColor="@drawable/text_white_gray" android:gravity="center" android:id="@id/tvStep1" android:background="@drawable/red_gray_round_selector" android:layout_width="40.0dip" android:layout_height="40.0dip" android:text="1" />
-    <TextView android:textSize="30.0dip" android:textColor="@drawable/text_red_gray" android:gravity="center" android:id="@id/tvLineStep1" android:layout_width="140.0dip" android:layout_height="40.0dip" android:text="············>" />
-    <TextView android:textSize="18.0dip" android:textColor="@drawable/text_white_gray" android:gravity="center" android:id="@id/tvStep2" android:background="@drawable/red_gray_round_selector" android:layout_width="40.0dip" android:layout_height="40.0dip" android:text="2" />
-    <TextView android:textSize="30.0dip" android:textColor="@drawable/text_red_gray" android:gravity="center" android:id="@id/tvLineStep2" android:layout_width="140.0dip" android:layout_height="40.0dip" android:text="············>" />
-    <TextView android:textSize="18.0dip" android:textColor="@drawable/text_white_gray" android:gravity="center" android:id="@id/tvStep3" android:background="@drawable/red_gray_round_selector" android:layout_width="40.0dip" android:layout_height="40.0dip" android:text="3" />
-</LinearLayout>

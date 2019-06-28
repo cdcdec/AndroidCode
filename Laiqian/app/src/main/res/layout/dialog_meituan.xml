@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:orientation="horizontal" android:layout_width="500.0dip" android:layout_height="400.0dip"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <WebView android:orientation="vertical" android:id="@id/show_webview" android:layout_width="358.0dip" android:layout_height="400.0dip" />
-    <LinearLayout android:gravity="center_horizontal" android:id="@id/ll_right" android:background="@color/status_view" android:layout_width="40.0dip" android:layout_height="400.0dip">
-        <Button android:id="@id/btn_close" android:background="@drawable/clear_10500" android:layout_width="26.0dip" android:layout_height="26.0dip" android:layout_marginTop="10.0dip" android:layout_centerVertical="true" />
-    </LinearLayout>
-</LinearLayout>

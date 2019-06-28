@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:orientation="vertical" android:id="@id/llRoot" android:layout_width="252.0dip" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <TextView android:textSize="16.0sp" android:textColor="@color/label_text_color" android:gravity="center" android:id="@id/tvTitle" android:background="@drawable/confirm_button_selector_topcenter" android:layout_width="fill_parent" android:layout_height="44.0dip" />
-    <View style="@style/pos_line_h" />
-    <ListView android:id="@id/lvContent" android:background="@color/confirm_button_bg_color" android:layout_width="fill_parent" android:layout_height="wrap_content" android:divider="@color/line_color" android:dividerHeight="1.0px" android:layout_weight="1.0" />
-    <View style="@style/pos_line_h" />
-    <TextView android:textSize="16.0sp" android:textColor="@color/pos_text_black" android:gravity="center" android:id="@id/tvCancel" android:background="@drawable/confirm_button_selector_bottomcenter" android:layout_width="fill_parent" android:layout_height="44.0dip" android:text="@string/cancel" />
-</LinearLayout>

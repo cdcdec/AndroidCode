@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:background="@color/ui201404_smj_background_lightgray" android:paddingTop="24.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/time_out_l" android:background="@drawable/selector_rounded_rectangle_down" android:paddingLeft="24.0dip" android:paddingRight="24.0dip" android:layout_width="614.0dip" android:layout_height="56.0dip">
-        <TextView android:text="@string/pos_payment_waiting_time" android:layout_weight="1.0" style="@style/pos_setting_right_item_lab" />
-        <TextView android:id="@id/timeOut" android:singleLine="true" style="@style/pos_setting_right_item_value" />
-    </LinearLayout>
-</LinearLayout>

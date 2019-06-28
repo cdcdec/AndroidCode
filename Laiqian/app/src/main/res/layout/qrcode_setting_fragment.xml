@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <LinearLayout android:id="@id/show_weiorder_search_time" style="@style/main_setting_left_ll1">
-        <TextView android:text="@string/weiorder_search_time" style="@style/pop_left_text_style_10500" />
-        <TextView android:id="@id/tv_weiorder_search_time" style="@style/pop_right_text_style_10500" />
-    </LinearLayout>
-</LinearLayout>

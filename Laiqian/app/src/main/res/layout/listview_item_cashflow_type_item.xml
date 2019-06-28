@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:orientation="horizontal" android:background="@drawable/pos_product_list_item" android:paddingLeft="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <TextView android:gravity="center|left" android:id="@id/cashflow_type_name" android:layout_height="56.0dip" android:layout_marginLeft="16.0dip" style="@style/pos_product_content_text" />
-</LinearLayout>

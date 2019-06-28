@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:minHeight="40.0dip"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <TextView android:textSize="@dimen/standard_edition_text_size_32" android:textColor="@color/ads_background_color_black" android:gravity="center" android:id="@id/multiselection_item_spinner_text" android:layout_width="fill_parent" android:layout_height="54.0dip" />
-</RelativeLayout>

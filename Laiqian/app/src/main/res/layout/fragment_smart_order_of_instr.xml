@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <TextView android:textSize="20.0sp" android:gravity="center" android:id="@id/intro_title" android:layout_width="fill_parent" android:layout_height="56.0dip" />
-    <View android:background="@color/setting_line_color" android:layout_width="fill_parent" android:layout_height="1.0px" />
-    <FrameLayout android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
-        <ImageView android:layout_gravity="center" android:id="@id/instr_image" android:layout_width="400.0dip" android:layout_height="300.0dip" android:scaleType="centerInside" />
-    </FrameLayout>
-</LinearLayout>

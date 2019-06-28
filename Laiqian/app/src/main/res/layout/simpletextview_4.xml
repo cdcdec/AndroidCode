@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:orientation="horizontal" style="@style/listview_linearLayout_singleline_style"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <TextView android:layout_gravity="center_vertical" android:id="@id/um_useracount" android:layout_weight="1.0" style="@style/common_textview_black_style" />
-    <ImageView android:id="@id/um_actionmap" style="@style/imageview_arrow_style" />
-</LinearLayout>

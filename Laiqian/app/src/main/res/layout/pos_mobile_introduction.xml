@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <RelativeLayout android:layout_width="900.0dip" android:layout_height="470.0dip">
-        <View android:background="@drawable/bg_mobile_introduction" android:layout_width="fill_parent" android:layout_height="fill_parent" />
-        <ImageView android:id="@id/close" android:background="@drawable/transparent_button_selector_10500" android:padding="20.0dip" android:layout_width="70.0dip" android:layout_height="70.0dip" android:src="@drawable/image_close_mobile_introduction" android:layout_alignParentRight="true" />
-        <View android:background="@drawable/pos_mobile_website" android:layout_width="120.0dip" android:layout_height="120.0dip" android:layout_marginTop="10.0dip" android:layout_marginRight="304.0dip" android:layout_alignParentRight="true" />
-    </RelativeLayout>
-</LinearLayout>

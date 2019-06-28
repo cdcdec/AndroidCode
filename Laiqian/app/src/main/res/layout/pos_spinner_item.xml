@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="50.0dip"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <View android:id="@id/lines" style="@style/new_pos_dialog_line_day" />
-    <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/spinner_lay" android:background="@drawable/pos_select_item_bg_color" android:layout_width="fill_parent" android:layout_height="fill_parent">
-        <TextView android:textSize="20.0sp" android:textColor="#ff3b3b3b" android:ellipsize="end" android:gravity="center|left" android:id="@id/spinner_text" android:layout_width="0.0dip" android:layout_height="49.0dip" android:layout_marginLeft="24.0dip" android:singleLine="true" android:layout_weight="1.0" />
-        <CheckBox android:id="@id/spinner_radio" android:background="@drawable/spinner_radio_style" android:layout_width="22.0dip" android:layout_height="17.0dip" android:layout_marginRight="24.0dip" android:button="@null" />
-    </LinearLayout>
-</LinearLayout>

@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:orientation="vertical" android:background="@android:color/transparent" android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <RelativeLayout android:layout_width="388.0dip" android:layout_height="475.0dip">
-        <ImageView android:id="@id/iv_background" android:layout_width="432.0dip" android:layout_height="528.0dip" android:src="@drawable/download_promote_background" android:scaleType="fitCenter" />
-        <ImageButton android:id="@id/btn_close" android:background="@android:color/transparent" android:layout_width="24.0dip" android:layout_height="24.0dip" android:layout_margin="10.0dip" android:src="@drawable/close" android:layout_alignParentTop="true" android:layout_alignParentRight="true" />
-        <ImageView android:id="@id/iv_qrcode" android:layout_width="90.0dip" android:layout_height="90.0dip" android:layout_marginTop="243.0dip" android:src="@drawable/wechat_icon" android:scaleType="fitCenter" android:layout_centerHorizontal="true" />
-    </RelativeLayout>
-</LinearLayout>

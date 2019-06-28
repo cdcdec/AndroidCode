@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="700.0dip" android:layout_height="370.0dip"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <ImageView android:id="@id/img_src" android:layout_width="670.0dip" android:layout_height="240.0dip" android:src="@drawable/queuing_machine_operation" />
-    <Button android:textSize="21.0dip" android:textColor="#ffffffff" android:id="@id/known" android:background="@drawable/btn_red_round_selector" android:layout_width="170.0dip" android:layout_height="50.0dip" android:layout_marginTop="5.0dip" android:layout_marginBottom="16.0dip" android:text="@string/tip_knew" />
-</LinearLayout>

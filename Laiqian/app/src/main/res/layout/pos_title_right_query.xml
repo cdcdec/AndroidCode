@@ -1,3 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<ImageView android:background="@drawable/titlebar_leftbt_selector_10500" android:paddingLeft="16.0dip" android:paddingRight="16.0dip" android:layout_width="62.0dip" android:layout_height="fill_parent" android:src="@drawable/pos_query" android:scaleType="fitCenter"
-  xmlns:android="http://schemas.android.com/apk/res/android" />

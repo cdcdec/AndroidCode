@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <View android:background="@drawable/directing_down_long" android:layout_width="9.0dip" android:layout_height="49.0dip" />
-    <View android:background="@drawable/take_out_big" android:layout_width="238.0dip" android:layout_height="56.0dip" />
-</LinearLayout>

@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <TextView android:textSize="48.0dip" android:textColor="@color/pos_text_black" android:gravity="center" android:background="@drawable/pos_simple_click_background_white" android:layout_width="fill_parent" android:layout_height="85.0dip" android:text="+" />
-</FrameLayout>

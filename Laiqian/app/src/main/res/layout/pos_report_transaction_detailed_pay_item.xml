@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:orientation="vertical" android:visibility="visible" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <TextView android:layout_gravity="center_horizontal" android:id="@id/pay_type_lab" android:layout_height="40.0dip" android:text="这里是支付方式" style="@style/pos_report_detailed_text_black" />
-    <TextView android:textStyle="bold" android:layout_gravity="center_horizontal" android:id="@id/pay_type_value" android:layout_height="48.0dip" android:text="12345" style="@style/pos_report_detailed_text_red" />
-</LinearLayout>

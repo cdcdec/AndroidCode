@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:background="@drawable/pos_simple_click_background" android:layout_width="fill_parent" android:layout_height="wrap_content"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <TextView android:textSize="20.0dip" android:textColor="@color/pos_text_black" android:ellipsize="end" android:gravity="center|left" android:id="@id/product_code" android:layout_width="45.0dip" android:layout_height="48.0dip" android:layout_marginLeft="12.0dip" android:text="编码" android:singleLine="true" />
-    <TextView android:textSize="20.0dip" android:textColor="@color/pos_text_black" android:ellipsize="end" android:gravity="center|left" android:id="@id/product_name" android:layout_width="0.0dip" android:layout_height="48.0dip" android:layout_marginLeft="12.0dip" android:text="商品名称" android:maxLines="2" android:layout_weight="1.0" />
-    <TextView android:textSize="20.0dip" android:textColor="@color/pos_text_black" android:gravity="center|right" android:id="@id/product_price" android:layout_width="100.0dip" android:layout_height="48.0dip" android:layout_marginRight="12.0dip" android:text="单价" />
-    <TextView android:textSize="20.0dip" android:textColor="@color/red_text_color" android:gravity="center|right" android:id="@id/product_status" android:layout_width="100.0dip" android:layout_height="48.0dip" android:layout_marginRight="12.0dip" android:text="@string/pos_sell_out" />
-</LinearLayout>

@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:id="@id/ll_content" android:background="@drawable/pos_pay_note_background" android:layout_width="158.0dip" android:layout_height="158.0dip"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <ImageView android:id="@id/item_top_image" android:layout_width="110.0dip" android:layout_height="110.0dip" android:layout_marginTop="4.0dip" android:layout_centerHorizontal="true" />
-    <View android:id="@id/item_selected_view" android:background="@drawable/pos_pay_selected" android:layout_width="24.0dip" android:layout_height="24.0dip" android:layout_marginTop="8.0dip" android:layout_marginRight="8.0dip" android:layout_alignParentRight="true" />
-    <TextView android:id="@id/item_bottom_textview" android:layout_alignParentBottom="true" style="@style/textview_pay_type" />
-</RelativeLayout>

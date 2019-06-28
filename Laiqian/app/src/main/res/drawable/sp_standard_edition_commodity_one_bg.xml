@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<selector
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:state_pressed="true" android:drawable="@drawable/sp_standard_edition_commodity_center_alyer1_bg" />
-    <item android:state_focused="true" android:drawable="@drawable/standard_edition_tabulation_one_alyer2_bg" />
-    <item android:drawable="@drawable/sp_standard_edition_tabulation_two_alyer3_bg" />
-</selector>

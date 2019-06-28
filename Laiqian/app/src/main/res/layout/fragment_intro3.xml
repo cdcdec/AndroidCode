@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <ImageView android:id="@id/iv" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="fitCenter" android:adjustViewBounds="true" android:layout_centerInParent="true" />
-    <TextView android:textSize="30.0dip" android:textColor="#ffdf554a" android:id="@id/tv_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="44.0dip" android:layout_alignParentTop="true" android:layout_centerHorizontal="true" />
-    <TextView android:textSize="20.0dip" android:textColor="#ff999999" android:id="@id/tv_desc" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:layout_below="@id/tv_title" android:layout_centerHorizontal="true" />
-    <ImageView android:id="@id/iv_qrcode" android:layout_width="160.0dip" android:layout_height="160.0dip" android:layout_marginRight="56.0dip" android:scaleType="fitCenter" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
-    <TextView android:textSize="20.0dip" android:textColor="@color/text_main_black" android:gravity="center" android:id="@id/tv_qrcode" android:layout_width="160.0dip" android:layout_height="56.0dip" android:layout_marginTop="8.0dip" android:layout_marginRight="56.0dip" android:layout_below="@id/iv_qrcode" android:layout_alignParentRight="true" />
-</RelativeLayout>

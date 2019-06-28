@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <RelativeLayout android:gravity="center_vertical" android:paddingLeft="24.0dip" android:duplicateParentState="true" android:layout_width="140.0dip" android:layout_height="48.0dip">
-        <TextView android:id="@id/showText" style="@style/pos_popup_select_text" />
-    </RelativeLayout>
-</LinearLayout>

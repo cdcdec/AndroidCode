@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <RelativeLayout android:layout_gravity="center_horizontal" android:id="@id/item" android:layout_width="650.0dip" android:layout_height="56.0dip">
-        <TextView android:textSize="20.0sp" android:textColor="@color/pos_text_black" android:gravity="start|center" android:id="@id/promotion_product_type_name" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="24.0dip" android:layout_toLeftOf="@id/promotion_product_type_check" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
-        <View android:id="@id/promotion_product_type_check" android:background="@drawable/pos_check_switch" android:layout_width="60.0dip" android:layout_height="36.0dip" android:layout_marginRight="24.0dip" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
-    </RelativeLayout>
-</FrameLayout>

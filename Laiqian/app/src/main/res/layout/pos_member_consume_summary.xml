@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout style="@style/grey_background"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:autolistview="http://schemas.android.com/apk/res-auto">
-    <LinearLayout android:orientation="vertical" android:id="@id/mc_ll" android:layout_marginTop="0.0dip" style="@style/member_listview_linearLayout_style">
-        <com.laiqian.ui.listview.PosAutoListView android:id="@id/lvCharge" android:layout_width="fill_parent" android:layout_height="wrap_content" autolistview:paddingTopHeight="0" style="@style/default_listview_style" />
-    </LinearLayout>
-    <TextView android:textSize="21.0dip" android:gravity="center" android:id="@id/tvNoMember" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/no_consume_data" />
-</LinearLayout>

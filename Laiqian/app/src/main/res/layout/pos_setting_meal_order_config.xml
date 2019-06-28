@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:id="@id/llGoodsSorting" android:minHeight="56.0dip" style="@style/main_setting_left_ll1"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <TextView android:id="@id/tvMealOrderName" android:text="@string/meal_order_name" style="@style/pop_left_text_style_10500" />
-    <TextView android:textColor="@color/text_color_grey" android:id="@id/tvMealOrderConfig" android:layout_marginRight="20.0dip" style="@style/pop_right_text_style_10500" />
-    <ImageView android:layout_marginRight="24.0dip" style="@style/pop_arrow_style_10500" />
-</LinearLayout>

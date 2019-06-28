@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:orientation="horizontal" android:background="@color/setting_bg_color" android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <ListView android:id="@id/type_body" android:layout_width="250.0dip" android:layout_height="fill_parent" android:choiceMode="singleChoice" style="@style/pos_list" />
-    <View android:id="@id/line_v" android:background="@color/pos_line_grey" android:layout_width="1.0px" android:layout_height="fill_parent" android:layout_toRightOf="@id/type_title_l" />
-    <FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
-        <ListView android:id="@id/raw_body" android:layout_width="fill_parent" android:layout_height="fill_parent" style="@style/pos_list" />
-    </FrameLayout>
-</LinearLayout>

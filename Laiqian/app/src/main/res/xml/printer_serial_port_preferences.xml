@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<PreferenceScreen android:title="Serial port setup"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <ListPreference android:persistent="true" android:title="Device" android:key="DEVICE" />
-    <ListPreference android:persistent="true" android:entries="@array/baudrates_name" android:title="Baud rate" android:key="BAUDRATE" android:entryValues="@array/baudrates_value" />
-</PreferenceScreen>

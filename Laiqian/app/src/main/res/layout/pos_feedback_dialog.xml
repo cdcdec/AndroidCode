@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout style="@style/pos_feedback_dialog_px"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/lltitle" android:paddingLeft="24.0dip" android:paddingRight="24.0dip" android:layout_width="fill_parent" android:layout_height="50.0dip">
-        <TextView android:textSize="20.0dip" android:textColor="@color/new_pos_dialog_button_text" android:gravity="center_vertical" android:layout_gravity="center|left" android:id="@id/tv_feedback_title" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/order_type_feedback" style="@style/pos_version_right_button_px" />
-        <Button android:textSize="20.0dip" android:textColor="@color/new_pos_dialog_button_text" android:layout_gravity="center|right" android:id="@id/btnSend" android:layout_width="50.0dip" android:layout_height="fill_parent" android:layout_marginLeft="525.0dip" android:text="@string/if_submit" style="@style/pos_version_right_button_px" />
-    </LinearLayout>
-    <EditText android:gravity="center|left|top" android:id="@id/et_content" android:hint="@string/pos_upgrade_feedback_hint" style="@style/pos_feedback_dialog" />
-</LinearLayout>

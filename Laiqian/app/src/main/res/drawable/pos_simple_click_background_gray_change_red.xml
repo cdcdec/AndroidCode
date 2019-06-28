@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<selector
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:state_pressed="true" android:drawable="@color/pos_version_dialog_version_button_text" />
-    <item android:drawable="@color/pos_version_dialog_version_button_text" android:state_activated="true" />
-    <item android:state_selected="true" android:drawable="@color/pos_version_dialog_version_button_text" />
-    <item android:drawable="@color/setting_title_bg_color" />
-</selector>

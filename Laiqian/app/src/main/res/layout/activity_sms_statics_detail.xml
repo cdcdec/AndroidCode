@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<com.laiqian.ui.recycleview.LineGridViewPadding xmlns:android="http://schemas.android.com/apk/res/android"
-                                                android:id="@id/lv_sms_static_detail"
-                                                android:clickable="true"
-                                                android:layout_width="fill_parent"
-                                                android:layout_height="fill_parent"
-                                                android:layout_marginTop="20.0dip"
-                                                android:numColumns="1"
-                                                style="@style/main_setting_scrollview_style"/>

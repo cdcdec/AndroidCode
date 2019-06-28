@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <TextView android:id="@id/lab" android:layout_height="56.0dip" android:layout_marginLeft="24.0dip" style="@style/pos_report_detailed_text_black" />
-    <TextView android:gravity="center|right" android:id="@id/value" android:layout_height="56.0dip" android:layout_marginRight="24.0dip" android:layout_alignParentRight="true" style="@style/pos_report_detailed_text_black" />
-</RelativeLayout>

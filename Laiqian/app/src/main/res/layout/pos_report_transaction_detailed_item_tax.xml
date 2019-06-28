@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="56.0dip"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <TextView android:gravity="center_vertical" android:id="@id/tax_name" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_marginLeft="24.0dip" android:text="这里是税" android:layout_weight="1.0" style="@style/pos_report_detailed_text_black" />
-    <TextView android:id="@id/tax_product" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="这里是税基" android:layout_weight="1.0" style="@style/pos_report_detailed_text_black" />
-    <TextView android:gravity="center|right" android:id="@id/tax_amount" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_marginRight="28.0dip" android:text="这里是税的金额" android:layout_weight="1.0" style="@style/pos_report_detailed_text_black" />
-</LinearLayout>

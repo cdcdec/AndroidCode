@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <LinearLayout android:gravity="center" android:layout_gravity="center_horizontal" android:orientation="horizontal" android:background="@color/pos_background_grey" android:layout_width="260.0dip" android:layout_height="40.0dip">
-        <TextView android:textSize="16.0dip" android:textColor="@color/text_color_grey" android:gravity="center" android:id="@id/number" android:layout_width="27.0dip" android:layout_height="fill_parent" />
-        <TextView android:textSize="16.0dip" android:textColor="@color/pos_text_black" android:gravity="center_vertical" android:id="@id/group" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" />
-        <View android:id="@id/revoke" android:background="@drawable/icon_group_revoke" android:layout_width="17.0dip" android:layout_height="20.0dip" android:layout_marginRight="8.0dip" />
-    </LinearLayout>
-</FrameLayout>

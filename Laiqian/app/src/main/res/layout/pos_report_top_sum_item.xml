@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="150.0dip" android:layout_weight="1.0"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <TextView android:textSize="36.0dip" android:textColor="@color/pos_text_red" android:gravity="center_horizontal" android:id="@id/value" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="这里是值" android:singleLine="true" />
-    <TextView android:textSize="18.0dip" android:textColor="@color/pos_text_grey" android:gravity="center_horizontal" android:id="@id/lab" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="12.0dip" android:text="这里是lab" android:singleLine="true" />
-</LinearLayout>

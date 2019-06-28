@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:gravity="center_vertical" android:id="@id/llPayMTCoupons" android:background="@drawable/setting_leftll_selector_10500" android:layout_width="180.0dip" android:layout_height="48.0dip"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <TextView android:textSize="15.0dip" android:textColor="#ffffffff" android:gravity="center" android:id="@id/image" android:layout_width="24.0dip" android:layout_height="24.0dip" android:layout_marginLeft="14.0dip" android:src="@drawable/iv_mt_coupons" android:singleLine="true" />
-    <TextView android:id="@id/tvLable" style="@style/pos_main_other_pay_tv" />
-</LinearLayout>

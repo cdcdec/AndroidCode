@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <ListView android:scrollbarSize="4.0dip" android:scrollbarThumbVertical="@drawable/pos_scroll_bar_background" android:scrollbarStyle="outsideOverlay" android:id="@id/product_list" android:layout_width="fill_parent" android:layout_height="fill_parent" android:listSelector="@android:color/transparent" android:divider="@color/transparent" android:dividerHeight="0.0px" />
-</LinearLayout>

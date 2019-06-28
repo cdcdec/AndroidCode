@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <LinearLayout android:id="@id/ll_tax_line" android:paddingLeft="0.0dip" android:paddingRight="0.0dip" android:layout_width="614.0dip" android:layout_marginTop="-1.0dip" style="@style/pos_setting_right_item">
-        <TextView android:gravity="center|left" android:id="@id/tv_tax_sname" android:layout_marginLeft="24.0dip" android:text="@string/pos_product_tax_rule" android:layout_weight="1.0" style="@style/pos_setting_right_item_lab" />
-        <TextView android:textColor="@color/text_color_grey" android:gravity="right" android:id="@id/tv_tax_fvalue" android:text="@string/pos_product_tax_rule" android:layout_weight="1.0" style="@style/pos_setting_right_item_lab" />
-        <View android:layout_marginRight="28.0dip" style="@style/pos_setting_right_item_icon" />
-    </LinearLayout>
-</LinearLayout>

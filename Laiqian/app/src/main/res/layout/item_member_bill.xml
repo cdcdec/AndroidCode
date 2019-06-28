@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:padding="@dimen/dp_16" android:layout_width="fill_parent" android:layout_height="wrap_content"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <TextView android:textSize="@dimen/sp_20" android:textColor="#ff3b3b3b" android:id="@id/bill_name_tv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="店铺名称" android:layout_alignParentTop="true" />
-    <TextView android:id="@id/bill_charge_tv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="费用" android:layout_alignParentRight="true" />
-    <TextView android:id="@id/bill_address_tv" android:paddingTop="@dimen/dp_8" android:paddingBottom="@dimen/dp_8" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="店铺地址" android:layout_below="@id/bill_name_tv" />
-    <TextView android:id="@id/bill_time_tv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="2016-05-06 15:01" android:layout_below="@id/bill_address_tv" />
-    <TextView android:id="@id/bill_amount_tv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="余额" android:layout_below="@id/bill_address_tv" android:layout_alignParentRight="true" />
-</RelativeLayout>

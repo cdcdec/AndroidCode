@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:id="@id/simpleLayout" style="@style/listview_linearLayout_singleline_style"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <LinearLayout android:gravity="left" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0">
-        <TextView android:text="@string/auth_list_role_txt" style="@style/lable_lightgrey_style" />
-        <TextView android:id="@id/auth_list_role_txt" android:layout_marginLeft="5.0dip" android:singleLine="true" style="@style/common_textview_black_style" />
-    </LinearLayout>
-    <ImageView android:id="@id/um_actionmap" style="@style/imageview_arrow_style" />++++<TextView android:id="@id/itemIDTextValue" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" />
-</LinearLayout>

@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<merge
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <TextView android:textSize="20.0dip" android:textColor="@color/text_color_white" android:id="@id/text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" />
-    <com.laiqian.ui.ProgressBarCircularIndeterminate android:id="@id/progress_bar" android:background="@color/text_color_white" android:visibility="gone" android:layout_width="32.0dip" android:layout_height="32.0dip" android:layout_centerInParent="true" />
-</merge>

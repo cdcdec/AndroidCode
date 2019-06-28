@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <TextView android:textSize="20.0dip" android:textColor="@color/text_main_black" android:gravity="center" android:id="@id/tv_province" android:background="@drawable/click_state" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_margin="1.0dip" android:layout_weight="1.0" />
-    <View android:background="@color/ui201404_smj_viewgroup_background_white_stroke_2corners" android:layout_width="1.0px" android:layout_height="fill_parent" />
-    <TextView android:textSize="20.0dip" android:textColor="@color/text_main_black" android:gravity="center" android:id="@id/tv_city" android:background="@drawable/click_state" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_margin="1.0dip" android:layout_weight="1.0" />
-    <View android:background="@color/ui201404_smj_viewgroup_background_white_stroke_2corners" android:layout_width="1.0px" android:layout_height="fill_parent" />
-    <TextView android:textSize="20.0dip" android:textColor="@color/text_main_black" android:gravity="center" android:id="@id/tv_district" android:background="@drawable/click_state" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_margin="1.0dip" android:layout_weight="1.0" />
-</LinearLayout>
