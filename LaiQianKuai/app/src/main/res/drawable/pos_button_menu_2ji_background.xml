@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<selector
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:state_pressed="true" android:drawable="@drawable/pos_button_menu_2ji_alyer1_background" />
-    <item android:state_focused="true" android:drawable="@drawable/pos_button_menu_2ji_alyer2_background" />
-    <item android:drawable="@drawable/pos_button_menu_2ji_alyer3_background" />
-</selector>

@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<selector
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:state_pressed="true" android:drawable="@drawable/pos_red_float_button_clicked_type" />
-    <item android:state_focused="true" android:drawable="@drawable/pos_red_float_button_clicked_type" />
-    <item android:drawable="@drawable/pos_red_float_button_clicked_type" android:state_activated="true" />
-    <item android:drawable="@drawable/pos_red_float_button_type" />
-</selector>

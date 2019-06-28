@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<shape android:shape="rectangle"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <corners android:radius="5.0dip" />
-    <solid android:color="@color/window_bg" />
-    <gradient android:startColor="@color/click_effect_1033_dark" android:endColor="@color/click_effect_1033_dark" android:angle="90.0" android:centerColor="@color/click_effect_1033" />
-</shape>
