@@ -37,3 +37,51 @@ systemModel:"S1", deviceBrand:"Allwinner",
 facturer:"Allwinner", product:"tulip_zf101s",
 sdkLevel:23
 }
+
+
+//vivo
+{
+density:3.0,
+densityDpi:480,
+widthPixels:1920, heightPixels:1080,
+widthDpi:640.5, heightDpi:360.5,
+ststusHeightPix:69,
+statusHeightDp:23,
+orientation:"横屏",
+systemVersion:"5.0.2",
+systemModel:"vivo X5Pro V",
+deviceBrand:"vivo",
+facturer:"vivo",
+product:"PD1421V",
+sdkLevel:21
+}
+
+//华为
+{density:2.0,
+ densityDpi:320,
+  widthPixels:1280,heightPixels:720,
+  widthDpi:640.5, heightDpi:360.5,
+  ststusHeightPix:50,
+  statusHeightDp:25,
+  orientation:"横屏",
+  systemVersion:"5.0.2",
+  systemModel:"CHE-TL00",
+  deviceBrand:"Honor",
+  facturer:"HUAWEI",
+  product:"CHE-TL00",
+  sdkLevel:21}
+
+
+  420dpi  density=2.625
+  width:1920  1080
+
+  1920:731.92dp
+
+  1080:411.92dp
+
+  3: 411,最小宽度
+  2019-07-02 16:36:45.822 8186-8186/com.cdc.Keyboard E/123: 387,高度
+  2019-07-02 16:36:45.822 8186-8186/com.cdc.Keyboard E/123: 683,宽度
+
+
+<item android:color="?textColorError" />  这种写法？？？

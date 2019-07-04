@@ -35,7 +35,7 @@
         <Key android:horizontalGap="11.000002%p" android:codes="109" android:keyEdgeFlags="right" android:keyLabel="m" />
     </Row>
     <Row android:rowEdgeFlags="bottom">
-        <Key android:keyWidth="15.100002%p" android:codes="-9" android:keyLabel="符号" />
-        <Key android:keyWidth="84.5%p" android:horizontalGap="0.0dip" android:codes="32" android:keyEdgeFlags="right" android:isRepeatable="true" android:keyLabel="空格" />
+        <Key android:keyWidth="15.100002%p" android:codes="-9" android:keyLabel="@string/pos_keyboard_symbol" />
+        <Key android:keyWidth="84.5%p" android:horizontalGap="0.0dip" android:codes="32" android:keyEdgeFlags="right" android:isRepeatable="true" android:keyLabel="@string/pos_keyboard_space" />
     </Row>
 </Keyboard>

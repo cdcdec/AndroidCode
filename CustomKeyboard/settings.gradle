@@ -1,1 +1,1 @@
-include ':app', ':customkeyboardlibrary'
+include ':app'

@@ -38,7 +38,7 @@
         <Key android:horizontalGap="0.0dip" android:keyEdgeFlags="right" android:keyLabel="/" />
     </Row>
     <Row>
-        <Key android:codes="-9" android:keyEdgeFlags="left" android:keyLabel="返回" />
+        <Key android:codes="-9" android:keyEdgeFlags="left" android:keyLabel="@string/backButton" />
         <Key android:keyLabel="\\" />
         <Key android:keyLabel="|" />
         <Key android:keyLabel="、" />

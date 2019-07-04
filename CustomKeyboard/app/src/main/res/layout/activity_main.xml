@@ -11,19 +11,48 @@
            style="@style/lin1">
 
         <Button
-                android:id="@+id/btn1"
+                android:id="@+id/btnAbout"
                 style="@style/btn1"
-                android:text="@string/test_1"/>
+                android:text="关于"/>
 
         <Button
-            android:id="@+id/btn2"
+            android:id="@+id/btnAgreement"
             style="@style/btn1"
-            android:text="@string/test_2"/>
+            android:text="用户协议"/>
 
         <Button
-                android:id="@+id/btn3"
+                android:id="@+id/btnAliOrder"
                 style="@style/btn1"
-                android:text="@string/test_3"/>
+                android:text="aliOrder"/>
+
+        <Button
+                android:id="@+id/btnWelcome"
+                style="@style/btn1"
+                android:text="欢迎页面"/>
+        <Button
+                android:id="@+id/btnBlueToothPrinterEdit"
+                style="@style/btn1"
+                android:text="蓝牙打印编辑"/>
+
+        <Button
+                android:id="@+id/btnLogin"
+                style="@style/btn1"
+                android:text="登录"/>
+        <Button
+                android:id="@+id/btnAfterLogin"
+                style="@style/btn1"
+                android:text="pos_downloader_after_login"/>
+
+        <Button
+                android:id="@+id/btnAppIntro"
+                style="@style/btn1"
+                android:text="app intro"/>
+
+        <Button
+                android:id="@+id/btnOrderOperation"
+                style="@style/btn1"
+                android:text="orderOperation"/>
+
     </LinearLayout>
 
 </androidx.core.widget.NestedScrollView>

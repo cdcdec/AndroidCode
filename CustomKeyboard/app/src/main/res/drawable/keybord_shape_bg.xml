@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true">
+        <shape>
+            <padding android:left="5.0dip" android:top="5.0dip" android:right="5.0dip" android:bottom="5.0dip" />
+            <gradient android:startColor="@color/viewgroup_pressed" android:endColor="@color/viewgroup_pressed" android:angle="180.0" />
+            <stroke android:width="1.0dip" android:color="#ffd7d7d7" />
+            <corners android:topLeftRadius="4.0dip" android:topRightRadius="4.0dip" android:bottomLeftRadius="4.0dip" android:bottomRightRadius="4.0dip" />
+        </shape>
+    </item>
+    <item>
+        <shape>
+            <padding android:left="5.0dip" android:top="5.0dip" android:right="5.0dip" android:bottom="5.0dip" />
+            <gradient android:startColor="#ffffffff" android:endColor="#fff8f8f8" android:angle="180.0" />
+            <stroke android:width="1.0dip" android:color="#ffd7d7d7" />
+            <corners android:topLeftRadius="4.0dip" android:topRightRadius="4.0dip" android:bottomLeftRadius="4.0dip" android:bottomRightRadius="4.0dip" />
+        </shape>
+    </item>
+</selector>

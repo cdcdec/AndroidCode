@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:id="@id/llRoot"
+              android:background="@color/setting_bg_color"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent">
+
+    <RelativeLayout
+            android:id="@id/llTop"
+            android:background="@color/setting_title_bg_color"
+            android:layout_width="fill_parent"
+            android:layout_height="64.0dip"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true">
+
+        <ImageView
+                android:id="@id/ivTopAuto"
+                android:paddingLeft="24.0dip"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/pos_logo2"
+                android:layout_centerVertical="true"/>
+
+        <LinearLayout
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:id="@id/ll_icon_title"
+                android:background="@drawable/titlebar_leftbt_selector_10500"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_centerVertical="true">
+
+            <ImageView
+                    android:id="@id/ivTop"
+                    android:layout_width="36.0dip"
+                    android:layout_height="36.0dip"
+                    android:layout_marginLeft="24.0dip"
+                    android:src="@drawable/pos_logo2"
+                    android:scaleType="fitCenter"
+                    android:layout_centerVertical="true"/>
+
+            <TextView
+                    android:textSize="21.0dip"
+                    android:textColor="@color/setting_text_color1"
+                    android:id="@id/tv_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="18.0dip"
+                    android:text="@string/BRAND_NAME"
+                    android:layout_toRightOf="@id/ivTop"
+                    android:layout_centerVertical="true"/>
+
+            <Space
+                    android:layout_width="@dimen/text_34dp"
+                    android:layout_height="fill_parent"/>
+        </LinearLayout>
+
+        <TextView
+                android:textSize="21.0dip"
+                android:textColor="@color/setting_text_color1"
+                android:id="@id/vRegister"
+                android:background="@drawable/titlebar_leftbt_selector_10500"
+                android:paddingLeft="24.0dip"
+                android:paddingRight="24.0dip"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/l_register"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"/>
+
+        <ImageView
+                android:id="@id/btn_hint"
+                android:background="@drawable/titlebar_leftbt_selector_10500"
+                android:paddingLeft="24.0dip"
+                android:paddingRight="24.0dip"
+                android:layout_width="78.0dip"
+                android:layout_height="fill_parent"
+                android:layout_marginRight="16.0dip"
+                android:src="@drawable/question_mark"
+                android:scaleType="centerInside"
+                android:layout_alignParentRight="true"/>
+
+        <pl.droidsonroids.gif.GifImageView
+                android:id="@id/btn_download"
+                android:paddingLeft="24.0dip"
+                android:paddingRight="24.0dip"
+                android:layout_width="78.0dip"
+                android:layout_height="fill_parent"
+                android:text="download"
+                android:layout_toLeftOf="@id/btn_hint"
+                android:layout_alignParentRight="false"
+                style="@style/titlebar_right_btn_10500"/>
+    </RelativeLayout>
+
+    <View
+            android:background="@color/setting_line_color"
+            android:layout_width="fill_parent"
+            android:layout_height="1.0dip"/>
+
+    <RelativeLayout
+            android:id="@id/rlContent"
+            android:background="@color/setting_bg_color"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+        <RelativeLayout
+                android:id="@id/rlTop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="60.0dip"
+                android:layout_centerHorizontal="true">
+
+            <LinearLayout
+                    android:gravity="center_vertical"
+                    android:id="@id/l_userPhoneLayout"
+                    android:background="@anim/shape_rounded_rectangle_up"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:layout_width="400.0dip"
+                    android:layout_height="48.0dip">
+
+                <ImageView
+                        android:layout_width="25.0dip"
+                        android:layout_height="25.0dip"
+                        android:layout_marginLeft="13.0dip"
+                        android:layout_marginRight="13.0dip"
+                        android:src="@drawable/pos_login_phone"/>
+
+                <View
+                        android:background="@color/setting_line_color"
+                        android:layout_width="1.0dip"
+                        android:layout_height="36.0dip"/>
+
+                <AutoCompleteTextView
+                        android:textSize="20.0dip"
+                        android:textColor="@color/setting_text_color3"
+                        android:id="@id/l_userPhone"
+                        android:paddingLeft="10.0dip"
+                        android:hint="@string/l_userPhone"
+                        android:password="true"
+                        android:maxLength="15"
+                        android:completionThreshold="1"
+                        android:inputType="phone"
+                        android:imeOptions="actionNext"
+                        android:dropDownHeight="120.0dip"
+                        style="@style/editable_login_edittext_style"/>
+            </LinearLayout>
+
+            <RelativeLayout
+                    android:gravity="center_vertical"
+                    android:id="@id/l_passwordLayout"
+                    android:background="@anim/shape_rounded_rectangle_down"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:layout_width="400.0dip"
+                    android:layout_height="48.0dip"
+                    android:layout_marginTop="-1.0dip"
+                    android:layout_below="@id/l_userPhoneLayout"
+                    android:layout_alignLeft="@id/l_userPhoneLayout"
+                    android:layout_centerHorizontal="true">
+
+                <ImageView
+                        android:id="@id/iv_password"
+                        android:layout_width="25.0dip"
+                        android:layout_height="25.0dip"
+                        android:layout_marginLeft="13.0dip"
+                        android:layout_marginRight="13.0dip"
+                        android:src="@drawable/pos_login_password"
+                        android:layout_centerVertical="true"/>
+
+                <View
+                        android:id="@id/v_line"
+                        android:background="@color/setting_line_color"
+                        android:layout_width="1.0dip"
+                        android:layout_height="36.0dip"
+                        android:layout_toRightOf="@id/iv_password"
+                        android:layout_centerVertical="true"/>
+
+                <EditText
+                        android:textSize="20.0dip"
+                        android:textColor="@color/setting_text_color3"
+                        android:id="@id/l_password"
+                        android:paddingLeft="10.0dip"
+                        android:hint="@string/l_password"
+                        android:password="true"
+                        android:layout_toRightOf="@id/v_line"
+                        android:layout_centerVertical="true"
+                        android:imeOptions="actionDone"
+                        style="@style/editable_login_edittext_style"/>
+
+                <com.cdc.keyboard.ui.ImageCheckBox
+                        android:id="@id/icbPassword"
+                        android:background="@drawable/selector_checkbox_login_password"
+                        android:visibility="invisible"
+                        android:clickable="true"
+                        android:layout_width="40.0dip"
+                        android:layout_height="25.0dip"
+                        android:layout_marginRight="10.0dip"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                    android:gravity="center_vertical"
+                    android:id="@id/l_login"
+                    android:background="@anim/shape_rounded_rectangle_only_click"
+                    android:layout_width="120.0dip"
+                    android:layout_height="96.0dip"
+                    android:layout_marginLeft="20.0dip"
+                    android:layout_toRightOf="@id/l_userPhoneLayout"
+                    android:layout_centerHorizontal="true">
+
+                <com.cdc.keyboard.ui.ProgressBarCircularIndeterminate
+                        android:id="@id/ivProgress"
+                        android:background="@color/red_color_10500"
+                        android:visibility="gone"
+                        android:layout_width="30.0dip"
+                        android:layout_height="30.0dip"
+                        android:layout_centerInParent="true"/>
+
+                <TextView
+                        android:textSize="21.0dip"
+                        android:textColor="@color/setting_text_color1"
+                        android:gravity="center"
+                        android:id="@id/tvLoginLable"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/l_login"
+                        android:layout_centerInParent="true"/>
+
+                <TextView
+                        android:textSize="18.0dip"
+                        android:textColor="@color/setting_text_color2"
+                        android:id="@id/tvLoginMsg"
+                        android:visibility="gone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/pos_login_waiting"
+                        android:layout_below="@id/ivProgress"
+                        android:layout_centerHorizontal="true"/>
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+                android:id="@id/l_belowlogin"
+                android:layout_width="400.0dip"
+                android:layout_height="48.0dip"
+                android:layout_below="@id/rlTop"
+                android:layout_alignLeft="@id/rlTop"
+                android:layout_centerHorizontal="true">
+
+            <TextView
+                    android:textSize="16.0dip"
+                    android:textColor="@color/setting_text_color3"
+                    android:id="@id/tvErrorLog"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"/>
+
+            <TextView
+                    android:textSize="16.0dip"
+                    android:textColor="@color/setting_text_color1"
+                    android:id="@id/tv_register"
+                    android:paddingLeft="@dimen/dp_10"
+                    android:paddingRight="@dimen/dp_10"
+                    android:visibility="gone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/pos_login_register"
+                    android:layout_toLeftOf="@id/l_info"
+                    android:layout_centerVertical="true"/>
+
+            <TextView
+                    android:textSize="16.0dip"
+                    android:textColor="@color/setting_text_color2"
+                    android:id="@id/l_info"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/pos_login_forget_password"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"/>
+
+            <TextView
+                    android:textSize="16.0dip"
+                    android:textColor="@color/setting_text_color3"
+                    android:id="@id/tvCustomerCalls"
+                    android:visibility="invisible"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="8.0dip"
+                    android:layout_toLeftOf="@id/tv_register"
+                    android:layout_centerVertical="true"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="60.0dip"
+                android:layout_marginTop="10.0dip"
+                android:layout_alignLeft="@id/rlTop"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true">
+
+            <ImageView
+                    android:id="@id/iv_wifi"
+                    android:background="@drawable/click_state"
+                    android:visibility="visible"
+                    android:layout_width="50.0dip"
+                    android:layout_height="50.0dip"
+                    android:src="@drawable/wifi_icon"
+                    android:scaleType="centerInside"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"/>
+
+            <TextView
+                    android:textSize="16.0dip"
+                    android:textColor="@color/setting_text_color2"
+                    android:gravity="center_vertical"
+                    android:id="@id/tv_register_tips"
+                    android:visibility="gone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:text="@string/pos_register_account_tips"
+                    android:layout_alignParentBottom="true"/>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <com.cdc.keyboard.ui.keybord.KeyBoardLinearlayout
+            android:orientation="horizontal"
+            android:id="@id/myKeyBoard"
+            android:paddingLeft="5.0dip"
+            android:paddingRight="5.0dip"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            />
+</LinearLayout>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="@string/preferences_scanning_title">
+        <EditTextPreference android:enabled="false" android:title="@string/order_type" android:selectable="false" android:key="order_type" />
+        <EditTextPreference android:enabled="false" android:title="@string/shop_id" android:selectable="false" android:key="shop_id" />
+        <EditTextPreference android:enabled="false" android:title="@string/user_id" android:selectable="false" android:key="user_id" />
+    </PreferenceCategory>
+</PreferenceScreen>

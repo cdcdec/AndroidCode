@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="TemplateType">
+        <item>销售</item>
+        <item>销售退货</item>
+        <item>采购</item>
+        <item>采购退货</item>
+        <item>组装</item>
+        <item>拆卸</item>
+    </string-array>
+    <string-array name="TemplateTypeID">
+        <item>100001</item>
+        <item>100015</item>
+        <item>100002</item>
+        <item>100016</item>
+        <item>100021</item>
+        <item>100022</item>
+    </string-array>
+    <string-array name="UMageList">
+        <item>Age</item>
+        <item>&lt;18</item>
+        <item>18~24</item>
+        <item>25~30</item>
+        <item>31~35</item>
+        <item>36~40</item>
+        <item>41~50</item>
+        <item>51~59</item>
+        <item>>=60</item>
+    </string-array>
+    <string-array name="UMgenderList">
+        <item>Gender</item>
+        <item>Male</item>
+        <item>Female</item>
+    </string-array>
+    <string-array name="baudrates_name">
+        <item>50</item>
+        <item>75</item>
+        <item>110</item>
+        <item>134</item>
+        <item>150</item>
+        <item>200</item>
+        <item>300</item>
+        <item>600</item>
+        <item>1200</item>
+        <item>1800</item>
+        <item>2400</item>
+        <item>4800</item>
+        <item>9600</item>
+        <item>19200</item>
+        <item>38400</item>
+        <item>57600</item>
+        <item>115200</item>
+        <item>230400</item>
+        <item>460800</item>
+        <item>500000</item>
+        <item>576000</item>
+        <item>921600</item>
+        <item>1000000</item>
+        <item>1152000</item>
+        <item>1500000</item>
+        <item>2000000</item>
+        <item>2500000</item>
+        <item>3000000</item>
+        <item>3500000</item>
+        <item>4000000</item>
+    </string-array>
+    <string-array name="baudrates_value">
+        <item>50</item>
+        <item>75</item>
+        <item>110</item>
+        <item>134</item>
+        <item>150</item>
+        <item>200</item>
+        <item>300</item>
+        <item>600</item>
+        <item>1200</item>
+        <item>1800</item>
+        <item>2400</item>
+        <item>4800</item>
+        <item>9600</item>
+        <item>19200</item>
+        <item>38400</item>
+        <item>57600</item>
+        <item>115200</item>
+        <item>230400</item>
+        <item>460800</item>
+        <item>500000</item>
+        <item>576000</item>
+        <item>921600</item>
+        <item>1000000</item>
+        <item>1152000</item>
+        <item>1500000</item>
+        <item>2000000</item>
+        <item>2500000</item>
+        <item>3000000</item>
+        <item>3500000</item>
+        <item>4000000</item>
+    </string-array>
+    <string-array name="da_hua_plu_hot_key">
+        <item>000100020003000400050006000700080009001000110012001300140015001600170018001900200021002201580024002500260027002800290030003100320033003400350036B</item>
+        <item>003700380039004000410042004300440045004600470048004900500051005200530054005500560057005800590060006100620063006400650066006700680069007000710072B</item>
+        <item>007300740075007600770078007900800081008200830084008500860087008800890090009100920093009400950096009700980099010001010102010301040105010601070108B</item>
+        <item>010901100111011201130114011501160117011801190120012101220123012401250126012701280129013001310132013301340135013601370138013901400141014200000000B</item>
+    </string-array>
+    <string-array name="date_dialog_title">
+        <item>@string/date_dialog_type_period_title</item>
+        <item>@string/date_dialog_type_every_day_title</item>
+        <item>@string/date_dialog_type_weekly_title</item>
+        <item>@string/date_dialog_type_per_month_title</item>
+    </string-array>
+    <string-array name="date_setting_type">
+        <item>@string/date_setting_type_not_limit</item>
+        <item>@string/date_setting_type_period</item>
+        <item>@string/date_setting_type_every_day</item>
+        <item>@string/date_setting_type_weekly</item>
+        <item>@string/date_setting_type_per_month</item>
+    </string-array>
+    <string-array name="date_week_text">
+        <item>@string/pos_date_dialog_week_mon_text</item>
+        <item>@string/pos_date_dialog_week_tues_text</item>
+        <item>@string/pos_date_dialog_week_wed_text</item>
+        <item>@string/pos_date_dialog_week_thur_text</item>
+        <item>@string/pos_date_dialog_week_fri_text</item>
+        <item>@string/pos_date_dialog_week_sat_text</item>
+        <item>@string/pos_date_dialog_week_sun_text</item>
+    </string-array>
+    <string-array name="default_dualscreen_images">
+        <item>dualscreen_1.png</item>
+        <item>dualscreen_2.png</item>
+        <item>dualscreen_3.png</item>
+        <item>dualscreen_4.png</item>
+    </string-array>
+    <string-array name="entriesValue_BPartnerSort">
+        <item>0</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="entriesValue_DataRetention">
+        <item>1</item>
+        <item>7</item>
+        <item>15</item>
+        <item>30</item>
+        <item>90</item>
+        <item>180</item>
+        <item>360</item>
+        <item>10000</item>
+    </string-array>
+    <string-array name="entriesValue_Intro_Dialog">
+        <item>@string/cf_introStep_0</item>
+        <item>@string/cf_introStep_1</item>
+        <item>@string/cf_introStep_2</item>
+        <item>@string/cf_introStep_3</item>
+    </string-array>
+    <string-array name="entriesValue_backup_Interval">
+        <item>@string/backup_Interval_1</item>
+        <item>@string/backup_Interval_2</item>
+        <item>@string/backup_Interval_3</item>
+        <item>@string/backup_Interval_4</item>
+        <item>@string/backup_Interval_5</item>
+        <item>@string/backup_Interval_6</item>
+        <item>@string/backup_Interval_7</item>
+        <item>@string/backup_Interval_8</item>
+    </string-array>
+    <string-array name="entriesValue_defaultWay_preference">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+    <string-array name="entries_BPartnerSort">
+        <item>@string/cf_BPartnerSort_by_PinYin_asc</item>
+        <item>@string/cf_BPartnerSort_by_Number_asc</item>
+    </string-array>
+    <string-array name="entries_DataRetention">
+        <item>@string/cf_DataRetentionPeriod_0</item>
+        <item>@string/cf_DataRetentionPeriod_1</item>
+        <item>@string/cf_DataRetentionPeriod_2</item>
+        <item>@string/cf_DataRetentionPeriod_3</item>
+        <item>@string/cf_DataRetentionPeriod_4</item>
+        <item>@string/cf_DataRetentionPeriod_5</item>
+        <item>@string/cf_DataRetentionPeriod_6</item>
+        <item>@string/cf_DataRetentionPeriod_7</item>
+    </string-array>
+    <string-array name="entries_defaultWay_preference">
+        <item>@string/s_inventoryBtnLabel</item>
+        <item>@string/s_scanBtnLabel</item>
+        <item>@string/s_manualBtnLabel</item>
+    </string-array>
+    <string-array name="forever_list_member_effective_period">
+        <item>Forever</item>
+        <item>Self-define duration</item>
+    </string-array>
+    <string-array name="list_member_effective_period">
+        <item>Forever</item>
+        <item>A year</item>
+        <item>Half a year</item>
+        <item>One Month</item>
+        <item>Self-define duration</item>
+    </string-array>
+    <string-array name="list_neglect_small_changes">
+        <item>这单不抹零</item>
+        <item>抹零到元</item>
+        <item>抹零到角</item>
+        <item>四舍五入到元</item>
+        <item>四舍五入到角</item>
+    </string-array>
+    <string-array name="member_rank_name">
+        <item>@string/member_silver_card</item>
+        <item>@string/member_gold_card</item>
+        <item>@string/member_diamond_card</item>
+    </string-array>
+    <integer-array name="member_upgrade_amount">
+        <item>@integer/member_upgrade_1</item>
+        <item>@integer/member_upgrade_2</item>
+        <item>@integer/member_upgrade_3</item>
+    </integer-array>
+    <string-array name="orderItem">
+        <item>All Status</item>
+        <item>In Delivery</item>
+        <item>Successful Order</item>
+        <item>Closed Order</item>
+    </string-array>
+    <string-array name="orderItemUrl">
+        <item></item>
+        <item>delivered</item>
+        <item>successed</item>
+        <item>closed</item>
+    </string-array>
+    <string-array name="people_type">
+        <item>@string/pos_people_type_not_limit</item>
+        <item>@string/pos_people_type_ordinary_customers</item>
+        <item>@string/pos_people_type_all_members</item>
+        <item>@string/pos_people_type_silver_card_members</item>
+        <item>@string/pos_people_type_gold_card_members</item>
+        <item>@string/pos_people_type_copper_card_members</item>
+    </string-array>
+    <string-array name="phone_take_out_distribution_mode">
+        <item>Delivery</item>
+        <item>Take away</item>
+    </string-array>
+    <string-array name="pos_bill_number_setting_mode">
+        <item>Always accumulated</item>
+        <item>Reset after day closing</item>
+    </string-array>
+    <string-array name="pos_mail_address">
+        <item>\@qq.com</item>
+        <item>\@163.com</item>
+        <item>\@aliyun.com</item>
+        <item>\@sina.com</item>
+        <item>\@sina.cn</item>
+        <item>\@139.com</item>
+        <item>\@sohu.com</item>
+        <item>\@189.cn</item>
+        <item>\@126.com</item>
+        <item>\@tom.com</item>
+        <item>\@foxmail.com</item>
+    </string-array>
+    <string-array name="pos_mail_address_foreign">
+        <item>\@gmail.com</item>
+        <item>\@outlook.com</item>
+        <item>\@yahoo.com</item>
+        <item>\@hotmail.com</item>
+        <item>\@evakodine.com</item>
+        <item>\@outlook.com</item>
+    </string-array>
+    <string-array name="pos_mainsetting_product_sort">
+        <item>Add Sequence</item>
+        <item>Custom sorting</item>
+        <item>Name</item>
+        <item>Price Low To High</item>
+        <item>Pirce High To Low</item>
+    </string-array>
+    <string-array name="pos_mainsetting_product_sort_field">
+        <item>_id</item>
+        <item>nSpareField4 desc,_id</item>
+        <item>LOWER(sText)</item>
+        <item>fSalePrice</item>
+        <item>fSalePrice desc</item>
+    </string-array>
+    <string-array name="pos_product_attribute_rule_type_lab">
+        <item>Price</item>
+        <item></item>
+        <item>Discount</item>
+    </string-array>
+    <string-array name="pos_product_attribute_rule_type_typeNames">
+        <item>Add-on</item>
+        <item>Taste</item>
+        <item>Discount</item>
+    </string-array>
+    <string-array name="pos_product_attribute_rule_type_typeNames_short">
+        <item>Add-on</item>
+        <item>Taste</item>
+        <item>Discount</item>
+    </string-array>
+    <string-array name="pos_product_attribute_rule_type_value">
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>50</item>
+    </string-array>
+    <string-array name="pos_product_name_set_value">
+        <item>First Name</item>
+        <item>Second Name</item>
+    </string-array>
+    <string-array name="pos_report_period_print_titles">
+        <item>Time</item>
+        <item>Amount accounted for</item>
+        <item>Order number</item>
+        <item>Amount of money</item>
+    </string-array>
+    <string-array name="pos_report_period_type">
+        <item>Period</item>
+        <item>Item</item>
+    </string-array>
+    <string-array name="pos_report_product_product_print_labs">
+        <item>Item Name</item>
+        <item>Quantity</item>
+        <item>Sub-Total</item>
+    </string-array>
+    <string-array name="pos_weeks_lab">
+        <item>Sunday</item>
+        <item>Monday</item>
+        <item>Tuesday</item>
+        <item>Wednesday</item>
+        <item>Thursday</item>
+        <item>Friday</item>
+        <item>Saturday</item>
+    </string-array>
+    <string-array name="promotion_type_create">
+        <item>@string/pos_create_new_all_order_discount</item>
+        <item>@string/pos_create_new_all_order_reduced</item>
+        <item>@string/pos_create_new_product_discount</item>
+        <item>@string/pos_create_new_full_gift</item>
+        <item>@string/pos_create_new_buy_some_gift_some</item>
+        <item>@string/pos_create_new_recharge_gift_some</item>
+    </string-array>
+    <integer-array name="promotion_type_id">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+    </integer-array>
+    <array name="promotion_type_list_item_left_icon">
+        <item>@drawable/ic_promotion_all_order_discount</item>
+        <item>@drawable/ic_promotion_all_order_full_reduce</item>
+        <item>@drawable/ic_promotion_product_discount_price</item>
+        <item>@drawable/ic_promotion_full_gift</item>
+        <item>@drawable/ic_promotion_buy_some_gift_some_</item>
+        <item>@drawable/ic_promotion_recharge_send</item>
+    </array>
+    <string-array name="promotion_type_name">
+        <item>@string/pos_promotion_all_order_discount</item>
+        <item>@string/pos_promotion_all_order_reduced</item>
+        <item>@string/pos_promotion_product_discount</item>
+        <item>@string/pos_promotion_full_gift</item>
+        <item>@string/pos_promotion_buy_some_gift_some</item>
+        <item>@string/pos_promotion_recharge_gift_some</item>
+    </string-array>
+    <string-array name="sourceItem">
+        <item>All Orders</item>
+        <item>Online Order</item>
+        <item>Table Order</item>
+    </string-array>
+    <string-array name="sourceItemUrl">
+        <item></item>
+        <item>weixin</item>
+        <item>order</item>
+    </string-array>
+    <string-array name="statistics_product_sort">
+        <item>新建顺序</item>
+        <item>名称</item>
+        <item>价格从低到高</item>
+        <item>价格从高到低</item>
+    </string-array>
+    <string-array name="statistics_report_filter_time">
+        <item>今天</item>
+        <item>昨天</item>
+        <item>近一周</item>
+        <item>本月</item>
+        <item>选择班次</item>
+        <item>自定义时间</item>
+    </string-array>
+
+
+
+
+</resources>

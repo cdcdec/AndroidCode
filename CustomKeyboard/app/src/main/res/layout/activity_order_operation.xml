@@ -1,0 +1,415 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              style="@style/grey_background">
+
+    <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0">
+
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+            <LinearLayout
+                    android:id="@id/o_focus"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:layout_width="0.0dip"
+                    android:layout_height="0.0dip"
+                    android:orientation="horizontal"/>
+
+            <LinearLayout
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/showinfoarea_layout_style">
+
+                <LinearLayout
+                        android:gravity="left"
+                        android:orientation="vertical"
+                        android:background="@drawable/corner_round_title_bg"
+                        android:padding="5.0dip"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content">
+
+                    <TextView
+                            android:textSize="16.0dip"
+                            android:textColor="#ff000000"
+                            android:gravity="center"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/o_orderoperationtitle"/>
+                </LinearLayout>
+
+                <LinearLayout
+                        android:orientation="horizontal"
+                        android:paddingTop="7.0dip"
+                        android:paddingBottom="7.0dip"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        style="@style/border_style_manuel">
+
+                    <TextView
+                            android:ellipsize="marquee"
+                            android:gravity="left"
+                            android:focusable="true"
+                            android:focusableInTouchMode="true"
+                            android:layout_width="100.0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="16.0dip"
+                            android:text="@string/o_orderTypeTxt"
+                            android:singleLine="true"
+                            android:marqueeRepeatLimit="marquee_forever"
+                            style="@style/showinfoarea_text_style"/>
+
+                    <TextView
+                            android:id="@id/o_bizTypeValue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:editable="false"
+                            style="@style/showinfoarea_text_style"/>
+                </LinearLayout>
+
+                <LinearLayout
+                        android:orientation="horizontal"
+                        android:paddingTop="7.0dip"
+                        android:paddingBottom="7.0dip"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        style="@style/border_style_manuel">
+
+                    <TextView
+                            android:ellipsize="marquee"
+                            android:gravity="left"
+                            android:id="@id/o_itemIDLabel"
+                            android:focusable="true"
+                            android:focusableInTouchMode="true"
+                            android:layout_width="100.0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="16.0dip"
+                            android:text="@string/o_orderIDTxt_1"
+                            android:singleLine="true"
+                            android:marqueeRepeatLimit="marquee_forever"
+                            style="@style/showinfoarea_text_style"/>
+
+                    <TextView
+                            android:id="@id/o_itemIDValue"
+                            android:paddingRight="4.0dip"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            style="@style/showinfoarea_text_style"/>
+                </LinearLayout>
+
+                <LinearLayout
+                        android:orientation="horizontal"
+                        android:paddingTop="7.0dip"
+                        android:paddingBottom="7.0dip"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        style="@style/border_style_manuel">
+
+                    <TextView
+                            android:ellipsize="marquee"
+                            android:gravity="left"
+                            android:paddingRight="4.0dip"
+                            android:focusable="true"
+                            android:focusableInTouchMode="true"
+                            android:layout_width="100.0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="16.0dip"
+                            android:text="@string/o_createTimeTxt"
+                            android:singleLine="true"
+                            android:marqueeRepeatLimit="marquee_forever"
+                            style="@style/showinfoarea_text_style"/>
+
+                    <TextView
+                            android:id="@id/o_createTimeValue"
+                            android:paddingRight="4.0dip"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            style="@style/showinfoarea_text_style"/>
+                </LinearLayout>
+
+                <LinearLayout
+                        android:orientation="horizontal"
+                        android:paddingTop="7.0dip"
+                        android:paddingBottom="7.0dip"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        style="@style/border_style_manuel">
+
+                    <TextView
+                            android:ellipsize="marquee"
+                            android:gravity="left"
+                            android:paddingRight="4.0dip"
+                            android:focusable="true"
+                            android:focusableInTouchMode="true"
+                            android:layout_width="100.0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="16.0dip"
+                            android:text="@string/o_productTxt"
+                            android:singleLine="true"
+                            android:marqueeRepeatLimit="marquee_forever"
+                            style="@style/showinfoarea_text_style"/>
+
+                    <TextView
+                            android:enabled="false"
+                            android:id="@id/o_productValue"
+                            android:paddingRight="4.0dip"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            style="@style/showinfoarea_text_style"/>
+                </LinearLayout>
+
+                <LinearLayout
+                        android:orientation="horizontal"
+                        android:paddingTop="7.0dip"
+                        android:paddingBottom="7.0dip"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        style="@style/border_style_manuel">
+
+                    <TextView
+                            android:ellipsize="marquee"
+                            android:gravity="left"
+                            android:paddingRight="4.0dip"
+                            android:focusable="true"
+                            android:focusableInTouchMode="true"
+                            android:layout_width="100.0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="16.0dip"
+                            android:text="@string/o_amountTxt"
+                            android:singleLine="true"
+                            android:marqueeRepeatLimit="marquee_forever"
+                            style="@style/showinfoarea_text_style"/>
+
+                    <TextView
+                            android:enabled="false"
+                            android:id="@id/o_amountValue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:numeric="integer"
+                            style="@style/showinfoarea_text_style"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/showinfoarea_layout_style">
+
+                <LinearLayout
+                        android:gravity="left"
+                        android:orientation="vertical"
+                        android:background="@drawable/corner_round_title_bg"
+                        android:padding="5.0dip"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content">
+
+                    <TextView
+                            android:textSize="16.0dip"
+                            android:textColor="#ff000000"
+                            android:gravity="center"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/o_orderoperationresult"/>
+                </LinearLayout>
+
+                <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        style="@style/border_style_manuel">
+
+                    <TextView
+                            android:ellipsize="marquee"
+                            android:gravity="left"
+                            android:id="@id/o_receivableTxt"
+                            android:paddingRight="4.0dip"
+                            android:focusable="true"
+                            android:focusableInTouchMode="true"
+                            android:layout_width="100.0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="16.0dip"
+                            android:text="@string/o_receivableTxt"
+                            android:singleLine="true"
+                            android:marqueeRepeatLimit="marquee_forever"
+                            style="@style/inputarea_text_style"/>
+
+                    <EditText
+                            android:id="@id/o_receivableValue"
+                            android:paddingRight="4.0dip"
+                            android:layout_width="90.0dip"
+                            android:layout_height="wrap_content"
+                            android:singleLine="true"
+                            android:numeric="decimal"
+                            style="@style/inputarea_text_style"/>
+
+                    <TextView
+                            android:paddingLeft="4.0dip"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=" (*)"
+                            style="@style/inputarea_text_style"/>
+                </LinearLayout>
+
+                <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        style="@style/border_style_manuel">
+
+                    <TextView
+                            android:ellipsize="marquee"
+                            android:gravity="left"
+                            android:id="@id/o_receivedTxt"
+                            android:paddingRight="4.0dip"
+                            android:focusable="true"
+                            android:focusableInTouchMode="true"
+                            android:layout_width="100.0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="16.0dip"
+                            android:text="@string/o_receivedTxt"
+                            android:singleLine="true"
+                            android:marqueeRepeatLimit="marquee_forever"
+                            style="@style/inputarea_text_style"/>
+
+                    <EditText
+                            android:textSize="16.0dip"
+                            android:textColor="@color/orderOperationActivity_textColor"
+                            android:id="@id/o_receivedValue"
+                            android:paddingRight="4.0dip"
+                            android:layout_width="90.0dip"
+                            android:layout_height="wrap_content"
+                            android:singleLine="true"
+                            android:numeric="decimal"/>
+
+                    <TextView
+                            android:textSize="14.0dip"
+                            android:textStyle="bold"
+                            android:textColor="@color/adsbar_text_color"
+                            android:paddingLeft="4.0dip"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=" (*)"/>
+                </LinearLayout>
+
+                <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        style="@style/border_style_manuel">
+
+                    <TextView
+                            android:ellipsize="marquee"
+                            android:gravity="left"
+                            android:id="@id/o_receivableSumTxt"
+                            android:paddingRight="4.0dip"
+                            android:focusable="true"
+                            android:focusableInTouchMode="true"
+                            android:layout_width="100.0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="16.0dip"
+                            android:text="@string/o_receivableSumTxt"
+                            android:singleLine="true"
+                            android:marqueeRepeatLimit="marquee_forever"
+                            style="@style/inputarea_text_style"/>
+
+                    <TextView
+                            android:id="@id/o_receivableSumValue"
+                            android:paddingRight="4.0dip"
+                            android:layout_width="70.0dip"
+                            android:layout_height="wrap_content"
+                            android:numeric="decimal"
+                            style="@style/inputarea_text_style"/>
+                </LinearLayout>
+
+                <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        style="@style/border_style_manuel">
+
+                    <TextView
+                            android:textColor="@color/adsbar_text_color"
+                            android:id="@id/o_receivableSuminfo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="16.0dip"
+                            android:text="@string/o_receivableSuminfo"
+                            style="@style/inputarea_text_style"/>
+                </LinearLayout>
+
+                <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        style="@style/border_style_manuel">
+
+                    <TextView
+                            android:paddingRight="4.0dip"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="16.0dip"
+                            android:text="@string/o_commentsTxt"
+                            style="@style/inputarea_text_style"/>
+
+                    <EditText
+                            android:textSize="16.0dip"
+                            android:textColor="@color/orderOperationActivity_textColor"
+                            android:id="@id/o_commentsValue"
+                            android:paddingRight="4.0dip"
+                            android:layout_width="160.0dip"
+                            android:layout_height="wrap_content"/>
+                </LinearLayout>
+
+                <LinearLayout
+                        android:orientation="vertical"
+                        android:visibility="gone"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content">
+
+                    <TextView
+                            android:textSize="16.0dip"
+                            android:textStyle="bold"
+                            android:textColor="@color/orderOperationActivity_textColor"
+                            android:id="@id/o_noticeTxt"
+                            android:paddingRight="4.0dip"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/o_receivableNoticeTxt"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="10.0dip"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.0">
+
+        <Button
+                android:textSize="14.0dip"
+                android:id="@id/o_cancelButton"
+                android:layout_width="70.0dip"
+                android:layout_height="wrap_content"
+                android:text="@string/s_cancelButton"/>
+
+        <Button
+                android:textSize="14.0dip"
+                android:id="@id/o_submitButton"
+                android:layout_width="70.0dip"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20.0dip"
+                android:text="@string/s_submitButton"/>
+    </LinearLayout>
+</LinearLayout>

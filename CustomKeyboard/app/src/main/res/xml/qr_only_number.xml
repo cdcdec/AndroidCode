@@ -18,6 +18,6 @@
     </Row>
     <Row>
         <Key android:codes="48" android:keyLabel="0" />
-        <Key android:keyWidth="19.9%p" android:horizontalGap="1.0dip" android:codes="-5" android:keyLabel="退格" />
+        <Key android:keyWidth="19.9%p" android:horizontalGap="1.0dip" android:codes="-5" android:keyLabel="@string/pos_keyboard_backspace" />
     </Row>
 </Keyboard>
