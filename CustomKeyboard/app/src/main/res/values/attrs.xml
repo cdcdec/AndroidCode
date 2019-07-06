@@ -215,12 +215,12 @@
     <attr name="dialogTheme" format="reference" />
     <attr name="dialog_big_backgroud" format="reference|color" />
     <attr name="dialog_white_shape" format="reference|color" />
-    <attr name="direction">
+  <!--  <attr name="direction">
         <enum name="column" value="4" />
         <enum name="column_reverse" value="8" />
         <enum name="row" value="1" />
         <enum name="row_reverse" value="2" />
-    </attr>
+    </attr>-->
     <attr name="displayOptions_my">
         <flag name="disableHome" value="0x00000020" />
         <flag name="homeAsUp" value="0x00000004" />
@@ -234,12 +234,12 @@
     <attr name="dividerHorizontal" format="reference" />
     <attr name="dividerPadding" format="dimension" />
     <attr name="dividerVertical" format="reference" />
-    <attr name="dot_alignTo">
+   <!-- <attr name="dot_alignTo">
         <flag name="bottom" value="0x00000004" />
         <flag name="left" value="0x00000008" />
         <flag name="right" value="0x00000002" />
         <flag name="top" value="0x00000001" />
-    </attr>
+    </attr>-->
     <attr name="dot_alignToIcon" format="boolean" />
     <attr name="dot_color" format="color" />
     <attr name="dot_marginBottom" format="dimension" />

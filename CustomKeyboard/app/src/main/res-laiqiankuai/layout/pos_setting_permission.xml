@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:background="@drawable/pos_popup_background"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content">
+
+    <RelativeLayout
+            android:id="@+id/shopInfoRel"
+            android:layout_marginTop="@dimen/w11_0"
+            android:background="@drawable/pos_simple_click_background"
+            android:layout_width="@dimen/w220_0"
+            android:layout_height="@dimen/w64_4"
+            >
+
+        <View
+                android:id="@+id/shopInfoIcon"
+                android:background="@drawable/pos_setting_shop_info"
+                android:layout_width="@dimen/w33_6"
+                android:layout_height="@dimen/w33_6"
+                android:layout_marginLeft="@dimen/w19_0"
+                android:layout_centerVertical="true"
+                />
+
+        <TextView
+                android:gravity="center|left"
+                android:text="@string/pos_shop_info_title"
+                android:layout_toRightOf="@id/shopInfoIcon"
+                android:textSize="@dimen/wsp20"
+                android:textColor="@color/pos_text_black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/w21_8"
+                android:layout_centerVertical="true"
+                />
+
+        <View
+                android:layout_height="1.0px"
+                android:layout_width="match_parent"
+                android:background="@color/pos_line_grey"
+                android:layout_alignParentBottom="true"
+                />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+            android:id="@+id/userManagementRel"
+            android:background="@drawable/pos_simple_click_background"
+            android:layout_width="@dimen/w220_0"
+            android:layout_height="@dimen/w64_4"
+            >
+
+
+        <View
+                android:id="@+id/userManagementIcon"
+                android:background="@drawable/pos_setting_user_manage"
+                android:layout_width="@dimen/w33_6"
+                android:layout_height="@dimen/w33_6"
+                android:layout_marginLeft="@dimen/w19_0"
+                android:layout_centerVertical="true"/>
+
+        <TextView
+                android:gravity="center|left"
+                android:text="@string/mainmenu_user_management"
+                android:layout_toRightOf="@id/userManagementIcon"
+                android:textSize="@dimen/wsp20"
+                android:textColor="@color/pos_text_black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/w21_8"
+                android:layout_centerVertical="true"/>
+
+        <View
+                android:layout_height="1.0px"
+                android:layout_width="match_parent"
+                android:background="@color/pos_line_grey"
+                android:layout_alignParentBottom="true"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+            android:id="@+id/changePwdRel"
+            android:background="@drawable/pos_simple_click_background"
+            android:layout_width="@dimen/w220_0"
+            android:layout_height="@dimen/w64_4">
+
+        <View
+                android:id="@+id/changePwdIcon"
+                android:background="@drawable/pos_setting_change_pwd"
+                android:layout_width="@dimen/w33_6"
+                android:layout_height="@dimen/w33_6"
+                android:layout_marginLeft="@dimen/w19_0"
+                android:layout_centerVertical="true"/>
+
+        <TextView
+                android:gravity="center|left"
+                android:text="@string/mainmenu_user_change_pwd"
+                android:layout_toRightOf="@id/changePwdIcon"
+                android:textSize="@dimen/wsp20"
+                android:textColor="@color/pos_text_black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/w21_8"
+                android:layout_centerVertical="true"/>
+
+        <View
+                android:layout_height="1.0px"
+                android:layout_width="match_parent"
+                android:background="@color/pos_line_grey"
+                android:layout_alignParentBottom="true"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+            android:id="@+id/syncBackRel"
+            android:background="@drawable/pos_simple_click_background"
+            android:layout_width="@dimen/w220_0"
+            android:layout_height="@dimen/w64_4">
+
+        <View
+                android:id="@+id/syncBackIcon"
+                android:background="@drawable/pos_setting_sync_back"
+                android:layout_width="@dimen/w33_6"
+                android:layout_height="@dimen/w33_6"
+                android:layout_marginLeft="@dimen/w19_0"
+                android:layout_centerVertical="true"/>
+
+        <TextView
+                android:gravity="center|left"
+                android:text="@string/sync_and_logout"
+                android:layout_toRightOf="@id/syncBackIcon"
+                android:textSize="@dimen/wsp20"
+                android:textColor="@color/pos_text_black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/w21_8"
+                android:layout_centerVertical="true"/>
+    </RelativeLayout>
+</LinearLayout>

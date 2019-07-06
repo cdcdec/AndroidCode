@@ -4,7 +4,7 @@
     <style name="AlertDialog.AppCompat.Light" parent="@style/Base.AlertDialog.AppCompat.Light" />
     <style name="AlipayBGCanvas320x480">
         <item name="android:paddingBottom">2.0dip</item>
-        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
     </style>
     <style name="AlipayDealQueryContentText320x480">
@@ -18,7 +18,7 @@
     </style>
     <style name="AlipayEditText320x480">
         <item name="android:textSize">14.0dip</item>
-        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">35.0dip</item>
         <item name="android:layout_marginLeft">10.0dip</item>
         <item name="android:layout_marginTop">3.0dip</item>
@@ -34,7 +34,7 @@
         <item name="android:layout_height">wrap_content</item>
     </style>
     <style name="AlipayInputCanvas320x480">
-        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_marginLeft">0.0dip</item>
         <item name="android:layout_marginTop">2.0dip</item>
@@ -51,7 +51,7 @@
     </style>
     <style name="AlipayInputEditText320x480">
         <item name="android:textSize">16.0dip</item>
-        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">38.0dip</item>
         <item name="android:layout_marginTop">3.0dip</item>
         <item name="android:layout_marginRight">10.0dip</item>
@@ -104,7 +104,7 @@
     </style>
     <style name="AlipayLoginPasswordInputEditText320x480">
         <item name="android:textSize">16.0dip</item>
-        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">38.0dip</item>
         <item name="android:layout_marginTop">3.0dip</item>
         <item name="android:layout_marginRight">10.0dip</item>
@@ -114,7 +114,7 @@
     </style>
     <style name="AlipayMoneyInputEditText320x480">
         <item name="android:textSize">16.0dip</item>
-        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">38.0dip</item>
         <item name="android:layout_marginTop">3.0dip</item>
         <item name="android:layout_marginRight">10.0dip</item>
@@ -134,7 +134,7 @@
     <style name="AlipayNormalButtonStyle320x480">
         <item name="android:textSize">24.0dip</item>
         <item name="android:textColor">@color/TextColorWhite</item>
-        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_marginTop">4.0dip</item>
         <item name="android:layout_centerHorizontal">true</item>
@@ -1134,7 +1134,7 @@
     </style>
     <style name="DialogWindowTitle">
         <item name="android:visibility">gone</item>
-        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
     </style>
     <style name="InfoPopAnimation" parent="@android:style/Animation">
@@ -1145,8 +1145,8 @@
         <item name="android:textSize">16.0dip</item>
         <item name="android:textColor">@color/TextColorRed</item>
         <item name="android:gravity">center</item>
-        <item name="android:layout_width">fill_parent</item>
-        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
     </style>
     <style name="InputLongNameBeforeEditText320x480">
         <item name="android:textSize">16.0dip</item>
@@ -1740,7 +1740,7 @@
     </style>
     <style name="adjust_height_listview_style">
         <item name="android:background">#ffffffff</item>
-        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:cacheColorHint">#ffffffff</item>
         <item name="android:divider">#ffacacac</item>
@@ -1749,7 +1749,7 @@
     <style name="auth_setting_checkboxlayout_style">
         <item name="android:background">@drawable/setting_leftll_selector_10500</item>
         <item name="android:clickable">true</item>
-        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">56.0dip</item>
     </style>
     <style name="autoCompleteTextView_linearLayout_style">
@@ -1757,13 +1757,13 @@
         <item name="android:paddingLeft">3.0dip</item>
         <item name="android:paddingTop">3.0dip</item>
         <item name="android:paddingRight">3.0dip</item>
-        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
     </style>
     <style name="autoCompleteTextView_style">
         <item name="android:textSize">16.0dip</item>
         <item name="android:textColor">@color/main_text_color</item>
-        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:singleLine">true</item>
     </style>
@@ -1783,13 +1783,13 @@
     </style>
     <style name="border_style_manuel_1">
         <item name="android:gravity">center_vertical</item>
-        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
     </style>
     <style name="bottomButton_linearlayout_style">
         <item name="android:gravity">center</item>
         <item name="android:orientation">horizontal</item>
-        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_weight">0.0</item>
     </style>
@@ -1797,7 +1797,7 @@
         <item name="android:textSize">16.0dip</item>
         <item name="android:textColor">@color/common_deepgrey_txt</item>
         <item name="android:background">@drawable/grey_btn</item>
-        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_marginLeft">10.0dip</item>
         <item name="android:layout_marginTop">10.0dip</item>
@@ -1811,7 +1811,7 @@
         <item name="android:textSize">16.0dip</item>
         <item name="android:textColor">#ffffffff</item>
         <item name="android:background">@drawable/redbtn</item>
-        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_margin">10.0dip</item>
     </style>
@@ -1838,7 +1838,7 @@
         <item name="android:background">@drawable/category_level_two_btn_selector_1033</item>
         <item name="android:padding">0.0dip</item>
         <item name="android:layout_width">0.0dip</item>
-        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_height">match_parent</item>
         <item name="android:layout_weight">1.0</item>
     </style>
     <style name="btn_prev_and_next">
@@ -1847,21 +1847,21 @@
         <item name="android:background">@drawable/category_btn_selector_1033</item>
         <item name="android:padding">0.0dip</item>
         <item name="android:layout_width">0.0dip</item>
-        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_height">match_parent</item>
         <item name="android:layout_weight">1.0</item>
     </style>
     <style name="btn_prev_and_next2_10500">
         <item name="android:background">@drawable/category_2_btn_selector_10500</item>
         <item name="android:padding">0.0dip</item>
         <item name="android:layout_width">0.0dip</item>
-        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_height">match_parent</item>
         <item name="android:layout_weight">1.0</item>
     </style>
     <style name="btn_prev_and_next_10500">
         <item name="android:background">@drawable/setting_button_selector_10500</item>
         <item name="android:padding">0.0dip</item>
         <item name="android:layout_width">0.0dip</item>
-        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_height">match_parent</item>
         <item name="android:layout_weight">1.0</item>
     </style>
     <style name="button_bg_2">
@@ -1878,7 +1878,7 @@
         <item name="android:orientation">horizontal</item>
         <item name="android:background">@anim/selector_rounded_rectangle_down</item>
         <item name="android:clickable">true</item>
-        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_marginLeft">10.0dip</item>
         <item name="android:layout_marginTop">-1.0dip</item>
@@ -1900,7 +1900,7 @@
         <item name="android:orientation">horizontal</item>
         <item name="android:background">@anim/selector_rounded_rectangle_unupdown</item>
         <item name="android:clickable">true</item>
-        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_marginLeft">10.0dip</item>
         <item name="android:layout_marginTop">-1.0dip</item>
@@ -1921,7 +1921,7 @@
         <item name="android:gravity">center_vertical</item>
         <item name="android:layout_gravity">center_horizontal</item>
         <item name="android:background">@drawable/selector_rounded_rectangle</item>
-        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_marginLeft">10.0dip</item>
         <item name="android:layout_marginRight">10.0dip</item>
@@ -1942,7 +1942,7 @@
         <item name="android:background">@anim/selector_rounded_rectangle_down</item>
         <item name="android:paddingLeft">24.0dip</item>
         <item name="android:paddingRight">24.0dip</item>
-        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:minHeight">56.0dip</item>
     </style>
@@ -1950,7 +1950,7 @@
         <item name="android:background">@anim/selector_rounded_rectangle_unupdown</item>
         <item name="android:paddingLeft">24.0dip</item>
         <item name="android:paddingRight">24.0dip</item>
-        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:minHeight">56.0dip</item>
     </style>
@@ -1958,14 +1958,14 @@
         <item name="android:background">@drawable/selector_min_rounded_rectangle</item>
         <item name="android:paddingLeft">10.0dip</item>
         <item name="android:paddingRight">10.0dip</item>
-        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">48.0dip</item>
     </style>
     <style name="clickable_linearLayout_rounded_rectangle_radius_min">
         <item name="android:background">@drawable/selector_min_rounded_rectangle</item>
         <item name="android:paddingLeft">24.0dip</item>
         <item name="android:paddingRight">24.0dip</item>
-        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:minHeight">56.0dip</item>
     </style>
@@ -1973,7 +1973,7 @@
         <item name="android:background">@drawable/selector_min_rounded_rectangle_top</item>
         <item name="android:paddingLeft">24.0dip</item>
         <item name="android:paddingRight">24.0dip</item>
-        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:minHeight">56.0dip</item>
     </style>
@@ -1981,14 +1981,14 @@
         <item name="android:background">@anim/shape_rounded_rectangle_only_click</item>
         <item name="android:paddingLeft">24.0dip</item>
         <item name="android:paddingRight">24.0dip</item>
-        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">56.0dip</item>
     </style>
     <style name="clickable_linearLayout_u">
         <item name="android:layout_gravity">center_horizontal</item>
         <item name="android:background">@anim/selector_rounded_rectangle_up</item>
         <item name="android:clickable">true</item>
-        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_marginLeft">10.0dip</item>
         <item name="android:layout_marginRight">10.0dip</item>
@@ -2006,7 +2006,7 @@
         <item name="android:gravity">center_vertical</item>
         <item name="android:layout_gravity">center_horizontal</item>
         <item name="android:background">@anim/shape_rounded_rectangle</item>
-        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_marginLeft">10.0dip</item>
         <item name="android:layout_marginRight">10.0dip</item>
@@ -2017,7 +2017,7 @@
         <item name="android:orientation">vertical</item>
         <item name="android:background">@drawable/linearlayout_corner_round_bg</item>
         <item name="android:padding">10.0dip</item>
-        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_marginLeft">10.0dip</item>
         <item name="android:layout_marginRight">10.0dip</item>
@@ -2052,23 +2052,23 @@
     <style name="content_In_commonRoundCornerLinearLayout">
         <item name="android:textSize">16.0dip</item>
         <item name="android:textColor">@color/login_edittext_txt</item>
-        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
     </style>
     <style name="content_text_clickable">
         <item name="android:textSize">20.0dip</item>
         <item name="android:gravity">center</item>
         <item name="android:background">@drawable/setting_button_selector_10500</item>
-        <item name="android:layout_width">fill_parent</item>
-        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
     </style>
     <style name="content_text_clickable_red">
         <item name="android:textSize">20.0dip</item>
         <item name="android:textColor">@color/pos_text_red</item>
         <item name="android:gravity">center</item>
         <item name="android:background">@drawable/setting_button_selector_10500</item>
-        <item name="android:layout_width">fill_parent</item>
-        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
     </style>
     <style name="copyright_style">
         <item name="android:textSize">14.0dip</item>
@@ -2114,13 +2114,13 @@
         <item name="android:textColor">@color/setting_text_color1</item>
         <item name="android:background">@null</item>
         <item name="android:layout_width">0.0dip</item>
-        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_height">match_parent</item>
         <item name="android:layout_weight">1.0</item>
     </style>
     <style name="daohanglan_layout_style_nobackground_10500">
         <item name="android:background">@null</item>
         <item name="android:layout_width">0.0dip</item>
-        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_height">match_parent</item>
         <item name="android:layout_weight">1.0</item>
     </style>
     <style name="dark_linearLayout_d">
@@ -2128,7 +2128,7 @@
         <item name="android:layout_gravity">center_horizontal</item>
         <item name="android:orientation">horizontal</item>
         <item name="android:background">@anim/darkbackground_rounded_rectangle_down</item>
-        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_marginLeft">10.0dip</item>
         <item name="android:layout_marginTop">-1.0dip</item>
@@ -2139,7 +2139,7 @@
         <item name="android:layout_gravity">center_horizontal</item>
         <item name="android:orientation">horizontal</item>
         <item name="android:background">@anim/darkbackground_rounded_rectangle_unupdown</item>
-        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_marginLeft">10.0dip</item>
         <item name="android:layout_marginTop">-1.0dip</item>
@@ -2149,7 +2149,7 @@
         <item name="android:gravity">center_vertical</item>
         <item name="android:layout_gravity">center_horizontal</item>
         <item name="android:background">@anim/darkbackground_rounded_rectangle_all</item>
-        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_marginLeft">10.0dip</item>
         <item name="android:layout_marginRight">10.0dip</item>
@@ -2158,7 +2158,7 @@
         <item name="android:gravity">center_vertical</item>
         <item name="android:layout_gravity">center_horizontal</item>
         <item name="android:background">@anim/darkbackground_rounded_rectangle_up</item>
-        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_marginLeft">10.0dip</item>
         <item name="android:layout_marginRight">10.0dip</item>
@@ -2174,8 +2174,8 @@
         <item name="android:scrollbars">vertical</item>
         <item name="android:fadingEdge">none</item>
         <item name="android:animationCache">false</item>
-        <item name="android:layout_width">fill_parent</item>
-        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
         <item name="android:listSelector">#00000000</item>
         <item name="android:scrollingCache">false</item>
         <item name="android:cacheColorHint">#00000000</item>
@@ -2184,7 +2184,7 @@
         <item name="android:overScrollMode">never</item>
     </style>
     <style name="default_select_style" parent="@style/default_scrollview_style">
-        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">200.0dip</item>
         <item name="android:dividerHeight">0.0dip</item>
     </style>
@@ -2213,7 +2213,7 @@
         <item name="android:layout_gravity">center_horizontal</item>
         <item name="android:orientation">horizontal</item>
         <item name="android:background">@anim/shape_rounded_rectangle_down</item>
-        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_marginLeft">5.0dip</item>
         <item name="android:layout_marginTop">-1.0dip</item>
@@ -2224,7 +2224,7 @@
         <item name="android:layout_gravity">center_horizontal</item>
         <item name="android:orientation">horizontal</item>
         <item name="android:background">@anim/shape_rounded_rectangle_unupdown</item>
-        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_marginLeft">0.0dip</item>
         <item name="android:layout_marginTop">-1.0dip</item>
@@ -2235,7 +2235,7 @@
         <item name="android:orientation">horizontal</item>
         <item name="android:background">@anim/selector_rounded_rectangle_down</item>
         <item name="android:clickable">true</item>
-        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_marginTop">-1.0dip</item>
     </style>
@@ -2244,7 +2244,7 @@
         <item name="android:orientation">horizontal</item>
         <item name="android:background">@anim/selector_rounded_rectangle_unupdown</item>
         <item name="android:clickable">true</item>
-        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_marginTop">-1.0dip</item>
     </style>
@@ -2252,7 +2252,7 @@
         <item name="android:layout_gravity">center_horizontal</item>
         <item name="android:background">@anim/selector_rounded_rectangle_up</item>
         <item name="android:clickable">true</item>
-        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
     </style>
     <style name="dialog_edittext_label_style">
@@ -2280,7 +2280,7 @@
         <item name="android:layout_gravity">center_horizontal</item>
         <item name="android:orientation">horizontal</item>
         <item name="android:background">@anim/shape_rounded_rectangle_unupdown</item>
-        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_marginTop">-1.0dip</item>
     </style>
@@ -2291,8 +2291,8 @@
         <item name="android:gravity">center_vertical</item>
         <item name="android:background">@null</item>
         <item name="android:paddingLeft">5.0dip</item>
-        <item name="android:layout_width">fill_parent</item>
-        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
         <item name="android:minWidth">150.0dip</item>
         <item name="android:singleLine">true</item>
         <item name="android:selectAllOnFocus">true</item>
@@ -2303,8 +2303,8 @@
         <item name="android:textColorHint">@color/editable_edittext_hint</item>
         <item name="android:gravity">center|left</item>
         <item name="android:background">@drawable/small_edittext_shape</item>
-        <item name="android:layout_width">fill_parent</item>
-        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
         <item name="android:singleLine">true</item>
         <item name="android:selectAllOnFocus">true</item>
     </style>
@@ -2320,7 +2320,7 @@
         <item name="android:gravity">center_vertical</item>
         <item name="android:layout_gravity">center_horizontal</item>
         <item name="android:background">@anim/dialog_title_background</item>
-        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_marginLeft">0.0dip</item>
         <item name="android:layout_marginRight">0.0dip</item>
@@ -2351,7 +2351,7 @@
         <item name="android:textColorHint">@color/editable_edittext_hint</item>
         <item name="android:gravity">center|left</item>
         <item name="android:background">@drawable/small_edittext_shape</item>
-        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:minWidth">250.0dip</item>
         <item name="android:minHeight">46.0dip</item>
@@ -2363,7 +2363,7 @@
         <item name="android:textColor">@color/setting_text_color3</item>
         <item name="android:gravity">center|right</item>
         <item name="android:background">@drawable/small_edittext_shape</item>
-        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">45.0dip</item>
         <item name="android:singleLine">true</item>
         <item name="android:selectAllOnFocus">true</item>
@@ -2372,7 +2372,7 @@
         <item name="android:gravity">center_vertical</item>
         <item name="android:layout_gravity">center_horizontal</item>
         <item name="android:background">@anim/shape_rounded_rectangle</item>
-        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_marginLeft">10.0dip</item>
         <item name="android:layout_marginRight">10.0dip</item>
@@ -2384,8 +2384,8 @@
         <item name="android:textColorHint">@color/editable_login_edittext_hint</item>
         <item name="android:gravity">center|left</item>
         <item name="android:background">@null</item>
-        <item name="android:layout_width">fill_parent</item>
-        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
         <item name="android:singleLine">true</item>
         <item name="android:selectAllOnFocus">true</item>
     </style>
@@ -2422,8 +2422,8 @@
         <item name="android:paddingLeft">24.0dip</item>
         <item name="android:paddingTop">12.0dip</item>
         <item name="android:paddingRight">24.0dip</item>
-        <item name="android:layout_width">fill_parent</item>
-        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
         <item name="android:layout_margin">24.0dip</item>
         <item name="android:minLines">3</item>
         <item name="android:maxLength">100</item>
@@ -2447,7 +2447,7 @@
         <item name="android:textColor">#ff4b4b4b</item>
         <item name="android:gravity">right</item>
         <item name="android:background">@null</item>
-        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_marginRight">5.0dip</item>
     </style>
@@ -2457,8 +2457,8 @@
     </style>
     <style name="feature_introduction_framelayout_style">
         <item name="android:orientation">vertical</item>
-        <item name="android:layout_width">fill_parent</item>
-        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
     </style>
     <style name="feature_introduction_guide_bottom_scroll_img_style">
         <item name="android:layout_gravity">center_vertical</item>
@@ -2502,7 +2502,7 @@
     <style name="feature_introduction_guidepage03_start_btn_ll_style">
         <item name="android:gravity">bottom|center</item>
         <item name="android:orientation">vertical</item>
-        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">190.0dip</item>
     </style>
     <style name="feature_introduction_guidepage05_line_above_mobile_img_style">
@@ -2662,14 +2662,14 @@
     <style name="feature_introduction_linearLayout_center_in_screen_style">
         <item name="android:layout_gravity">center</item>
         <item name="android:orientation">vertical</item>
-        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
     </style>
     <style name="feature_introduction_linearLayout_directly_next_to_framelayout_style">
         <item name="android:gravity">center</item>
         <item name="android:orientation">vertical</item>
-        <item name="android:layout_width">fill_parent</item>
-        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
     </style>
     <style name="feature_introduction_question_exclamation_dot_style">
         <item name="android:layout_gravity">center_horizontal</item>
@@ -2696,8 +2696,8 @@
     <style name="grey_background">
         <item name="android:orientation">vertical</item>
         <item name="android:background">@color/setting_bg_color</item>
-        <item name="android:layout_width">fill_parent</item>
-        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
     </style>
     <style name="grey_button_style">
         <item name="android:textSize">14.0dip</item>
@@ -2718,12 +2718,12 @@
     <style name="guide_bg_style">
         <item name="android:orientation">vertical</item>
         <item name="android:background">#ab000000</item>
-        <item name="android:layout_width">fill_parent</item>
-        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
     </style>
     <style name="guide_framelayout_style">
         <item name="android:paddingTop">15.0dip</item>
-        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">136.0dip</item>
     </style>
     <style name="guide_image_style">
@@ -2772,8 +2772,8 @@
     <style name="homepage_bg_style">
         <item name="android:orientation">vertical</item>
         <item name="android:background">#ff000000</item>
-        <item name="android:layout_width">fill_parent</item>
-        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
     </style>
     <style name="homepage_largeImage_style">
         <item name="android:layout_width">128.0dip</item>
@@ -2806,7 +2806,7 @@
         <item name="android:orientation">horizontal</item>
         <item name="android:background">@drawable/homepage_submenu_round_corner_rectangle</item>
         <item name="android:padding">3.0dip</item>
-        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_centerHorizontal">true</item>
     </style>
@@ -2821,7 +2821,7 @@
     </style>
     <style name="homepage_submenu_parent_gridview_style">
         <item name="android:gravity">center</item>
-        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:horizontalSpacing">10.0dip</item>
         <item name="android:verticalSpacing">2.0dip</item>
@@ -2858,7 +2858,7 @@
         <item name="android:gravity">center_vertical</item>
         <item name="android:orientation">horizontal</item>
         <item name="android:background">@drawable/viewgroup_background</item>
-        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">49.0dip</item>
     </style>
     <style name="icon_triangle_warning_function">
@@ -2938,7 +2938,7 @@
         <item name="android:layout_weight">1.0</item>
     </style>
     <style name="keyboard_btn_style_10323_height_50dp" parent="@style/keyboard_btn_style_10323">
-        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_height">match_parent</item>
     </style>
     <style name="keyboard_btn_style_10500">
         <item name="android:textSize">@dimen/text_24dp</item>
@@ -2955,7 +2955,7 @@
         <item name="android:background">@drawable/product_btn_selector_1033</item>
         <item name="android:padding">1.0dip</item>
         <item name="android:layout_width">0.0dip</item>
-        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_height">match_parent</item>
         <item name="android:layout_weight">1.0</item>
     </style>
     <style name="keyboard_btn_style_retail2" parent="@style/keyboard_btn_style_retail">
@@ -2967,7 +2967,7 @@
         <item name="android:background">@drawable/product_btn_selector_1033</item>
         <item name="android:padding">1.0dip</item>
         <item name="android:layout_width">0.0dip</item>
-        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_height">match_parent</item>
         <item name="android:layout_weight">1.0</item>
     </style>
     <style name="keyboard_btn_style_vip_max">
@@ -2976,7 +2976,7 @@
         <item name="android:background">@drawable/product_btn_selector_1033</item>
         <item name="android:padding">1.0dip</item>
         <item name="android:layout_width">0.0dip</item>
-        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_height">match_parent</item>
         <item name="android:layout_weight">1.0</item>
     </style>
     <style name="keyboard_cancel_btn_style_10323" parent="@style/keyboard_ok_btn_style_10323">
@@ -2986,7 +2986,7 @@
         <item name="android:gravity">center</item>
         <item name="android:background">@drawable/product_btn_selector_1033</item>
         <item name="android:layout_width">0.0dip</item>
-        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_height">match_parent</item>
         <item name="android:layout_marginRight">1.0dip</item>
         <item name="android:layout_marginBottom">1.0dip</item>
         <item name="android:layout_weight">1.0</item>
@@ -3008,7 +3008,7 @@
         <item name="android:background">@drawable/retail_number_btn_selector_1033</item>
         <item name="android:padding">1.0dip</item>
         <item name="android:layout_width">0.0dip</item>
-        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_height">match_parent</item>
         <item name="android:layout_weight">1.0</item>
     </style>
     <style name="keyboard_member_btn_style_10500">
@@ -3017,7 +3017,7 @@
         <item name="android:background">@drawable/product_btn_selector_1033</item>
         <item name="android:padding">1.0dip</item>
         <item name="android:layout_width">0.0dip</item>
-        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_height">match_parent</item>
         <item name="android:layout_weight">1.0</item>
     </style>
     <style name="keyboard_ok_btn_style_10323">
@@ -3026,7 +3026,7 @@
         <item name="android:background">@drawable/submit_btn_selector_1033</item>
         <item name="android:padding">1.0dip</item>
         <item name="android:layout_width">0.0dip</item>
-        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_height">match_parent</item>
         <item name="android:layout_weight">1.0</item>
     </style>
     <style name="keyboard_submit_btn_style_10323">
@@ -3034,8 +3034,8 @@
         <item name="android:textColor">@color/pos_text_color</item>
         <item name="android:background">?title_bottom_backgroud</item>
         <item name="android:padding">1.0dip</item>
-        <item name="android:layout_width">fill_parent</item>
-        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
         <item name="android:layout_margin">2.0dip</item>
     </style>
     <style name="lable_In_commonRoundCornerLinearLayout">
@@ -3071,7 +3071,7 @@
         <item name="android:ellipsize">end</item>
         <item name="android:gravity">center|right</item>
         <item name="android:layout_width">120.0dip</item>
-        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_height">match_parent</item>
         <item name="android:lines">1</item>
     </style>
     <style name="lable_lightgrey_member_style3_min">
@@ -3096,7 +3096,7 @@
         <item name="android:ellipsize">end</item>
         <item name="android:gravity">center|left</item>
         <item name="android:layout_width">130.0dip</item>
-        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_height">match_parent</item>
         <item name="android:lines">1</item>
     </style>
     <style name="lable_lightgrey_min_style_with_wrap_hight" parent="@style/lable_lightgrey_min_style">
@@ -3137,22 +3137,22 @@
     <style name="light_grey_background">
         <item name="android:orientation">vertical</item>
         <item name="android:background">@color/ui201404_smj_background_lightgray</item>
-        <item name="android:layout_width">fill_parent</item>
-        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
     </style>
     <style name="line_h">
         <item name="android:background">@color/line_color</item>
-        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">1.0px</item>
     </style>
     <style name="line_v">
         <item name="android:background">@color/line_color</item>
         <item name="android:layout_width">1.0px</item>
-        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_height">match_parent</item>
     </style>
     <style name="linearLayout_In_commonRoundCornerLinearLayout">
         <item name="android:orientation">horizontal</item>
-        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_marginTop">5.0dip</item>
         <item name="android:layout_marginBottom">5.0dip</item>
@@ -3160,14 +3160,14 @@
     </style>
     <style name="linearLayout_before_pencil">
         <item name="android:orientation">horizontal</item>
-        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_weight">1.0</item>
     </style>
     <style name="linearLayout_border_center_style">
         <item name="android:gravity">left</item>
         <item name="android:orientation">horizontal</item>
-        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_marginLeft">10.0dip</item>
         <item name="android:layout_marginTop">10.0dip</item>
@@ -3176,7 +3176,7 @@
     <style name="linearLayout_confirm_border_center_style">
         <item name="android:gravity">bottom|center</item>
         <item name="android:orientation">horizontal</item>
-        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_marginLeft">10.0dip</item>
         <item name="android:layout_marginTop">10.0dip</item>
@@ -3187,7 +3187,7 @@
         <item name="android:layout_gravity">center_horizontal</item>
         <item name="android:orientation">horizontal</item>
         <item name="android:background">@anim/shape_rounded_rectangle_unupdown</item>
-        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_marginLeft">10.0dip</item>
         <item name="android:layout_marginTop">-1.0dip</item>
@@ -3198,7 +3198,7 @@
         <item name="android:layout_gravity">center_horizontal</item>
         <item name="android:orientation">horizontal</item>
         <item name="android:background">@anim/shape_rounded_rectangle_down</item>
-        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_marginLeft">10.0dip</item>
         <item name="android:layout_marginTop">-1.0dip</item>
@@ -3208,7 +3208,7 @@
         <item name="android:gravity">center_vertical</item>
         <item name="android:layout_gravity">center_horizontal</item>
         <item name="android:background">@anim/shape_rounded_rectangle_up</item>
-        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_marginLeft">10.0dip</item>
         <item name="android:layout_marginRight">10.0dip</item>
@@ -3218,7 +3218,7 @@
         <item name="android:layout_gravity">center_horizontal</item>
         <item name="android:orientation">horizontal</item>
         <item name="android:background">@anim/shape_rounded_rectangle_down</item>
-        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_marginLeft">10.0dip</item>
         <item name="android:layout_marginTop">-1.0dip</item>
@@ -3231,7 +3231,7 @@
         <item name="android:background">@anim/shape_rounded_rectangle_down_click</item>
         <item name="android:paddingLeft">10.0dip</item>
         <item name="android:paddingRight">10.0dip</item>
-        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">48.0dip</item>
         <item name="android:layout_marginTop">-1.0dip</item>
     </style>
@@ -3253,7 +3253,7 @@
         <item name="android:background">@anim/shape_rounded_rectangle_down_click</item>
         <item name="android:paddingLeft">24.0dip</item>
         <item name="android:paddingRight">24.0dip</item>
-        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">56.0dip</item>
         <item name="android:layout_marginTop">-1.0dip</item>
     </style>
@@ -3262,7 +3262,7 @@
         <item name="android:layout_gravity">center_horizontal</item>
         <item name="android:orientation">horizontal</item>
         <item name="android:background">@anim/shape_rounded_rectangle_unupdown</item>
-        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_marginLeft">10.0dip</item>
         <item name="android:layout_marginTop">-1.0dip</item>
@@ -3275,7 +3275,7 @@
         <item name="android:background">@anim/shape_rounded_rectangle_unupdown_click</item>
         <item name="android:paddingLeft">10.0dip</item>
         <item name="android:paddingRight">10.0dip</item>
-        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">48.0dip</item>
         <item name="android:layout_marginTop">-1.0dip</item>
     </style>
@@ -3297,7 +3297,7 @@
         <item name="android:background">@anim/shape_rounded_rectangle_unupdown_click</item>
         <item name="android:paddingLeft">24.0dip</item>
         <item name="android:paddingRight">24.0dip</item>
-        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">56.0dip</item>
         <item name="android:layout_marginTop">-1.0dip</item>
     </style>
@@ -3305,7 +3305,7 @@
         <item name="android:gravity">center_vertical</item>
         <item name="android:layout_gravity">center_horizontal</item>
         <item name="android:background">@anim/shape_rounded_rectangle_up</item>
-        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_marginLeft">10.0dip</item>
         <item name="android:layout_marginRight">10.0dip</item>
@@ -3316,7 +3316,7 @@
         <item name="android:background">@anim/shape_rounded_rectangle_up_click</item>
         <item name="android:paddingLeft">10.0dip</item>
         <item name="android:paddingRight">10.0dip</item>
-        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">48.0dip</item>
     </style>
     <style name="linearLayout_rounded_rectangle_u_min">
@@ -3334,7 +3334,7 @@
         <item name="android:background">@anim/shape_rounded_rectangle_up_click</item>
         <item name="android:paddingLeft">24.0dip</item>
         <item name="android:paddingRight">24.0dip</item>
-        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">56.0dip</item>
     </style>
     <style name="listviewItem_highlight_value_style">
@@ -3365,8 +3365,8 @@
     <style name="listview_layout_style">
         <item name="android:background">@color/listview_background_color</item>
         <item name="android:animationCache">false</item>
-        <item name="android:layout_width">fill_parent</item>
-        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
         <item name="android:scrollingCache">false</item>
         <item name="android:cacheColorHint">#ffffffff</item>
         <item name="android:divider">@drawable/liner</item>
@@ -3374,19 +3374,19 @@
     </style>
     <style name="listview_linearLayout_member_bill_style">
         <item name="android:orientation">vertical</item>
-        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">48.0dip</item>
     </style>
     <style name="listview_linearLayout_member_style">
         <item name="android:orientation">horizontal</item>
         <item name="android:paddingLeft">24.0dip</item>
-        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">64.0dip</item>
     </style>
     <style name="listview_linearLayout_singleline_style">
         <item name="android:padding">10.0dip</item>
-        <item name="android:layout_width">fill_parent</item>
-        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
     </style>
     <style name="listview_linearLayout_style">
         <item name="android:orientation">horizontal</item>
@@ -3394,8 +3394,8 @@
         <item name="android:paddingTop">5.0dip</item>
         <item name="android:paddingRight">7.0dip</item>
         <item name="android:paddingBottom">5.0dip</item>
-        <item name="android:layout_width">fill_parent</item>
-        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
     </style>
     <style name="listview_linearLayout_style_px">
         <item name="android:orientation">horizontal</item>
@@ -3403,14 +3403,14 @@
         <item name="android:paddingTop">5.0px</item>
         <item name="android:paddingRight">7.0px</item>
         <item name="android:paddingBottom">5.0px</item>
-        <item name="android:layout_width">fill_parent</item>
-        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
     </style>
     <style name="listview_memebr_layout_style">
         <item name="android:background">#ffffffff</item>
         <item name="android:animationCache">false</item>
-        <item name="android:layout_width">fill_parent</item>
-        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
         <item name="android:scrollingCache">false</item>
         <item name="android:cacheColorHint">#ffffffff</item>
         <item name="android:divider">@color/pos_listview_grey_divier</item>
@@ -3429,7 +3429,7 @@
     </style>
     <style name="ll_yijifenglei_10500">
         <item name="android:layout_width">0.0dip</item>
-        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_height">match_parent</item>
         <item name="android:layout_marginRight">1.0dip</item>
         <item name="android:layout_weight">1.0</item>
     </style>
@@ -3440,8 +3440,8 @@
         <item name="android:gravity">center_vertical</item>
         <item name="android:background">@null</item>
         <item name="android:paddingLeft">5.0dip</item>
-        <item name="android:layout_width">fill_parent</item>
-        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
         <item name="android:minWidth">250.0dip</item>
         <item name="android:singleLine">true</item>
         <item name="android:selectAllOnFocus">true</item>
@@ -3452,7 +3452,7 @@
         <item name="android:gravity">center_horizontal</item>
         <item name="android:background">@drawable/main_tab_bottom_selected</item>
         <item name="android:padding">10.0dip</item>
-        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:singleLine">true</item>
         <item name="android:drawablePadding">2.0dip</item>
@@ -3464,7 +3464,7 @@
         <item name="android:gravity">center_horizontal</item>
         <item name="android:background">@drawable/main_tab_bottom_unselected</item>
         <item name="android:padding">10.0dip</item>
-        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:singleLine">true</item>
         <item name="android:layout_weight">1.0</item>
@@ -3478,13 +3478,13 @@
         <item name="android:background">@drawable/setting_leftll_selector_10500</item>
         <item name="android:paddingLeft">24.0dip</item>
         <item name="android:clickable">true</item>
-        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">56.0dip</item>
     </style>
     <style name="main_setting_left_ll1_no_clickable">
         <item name="android:gravity">center_vertical</item>
         <item name="android:paddingLeft">24.0dip</item>
-        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">56.0dip</item>
     </style>
     <style name="main_setting_left_tv1">
@@ -3492,7 +3492,7 @@
         <item name="android:textColor">@color/setting_text_color2</item>
         <item name="android:gravity">center_vertical</item>
         <item name="android:paddingLeft">24.0dip</item>
-        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">48.0dip</item>
     </style>
     <style name="main_setting_left_tv2">
@@ -3500,8 +3500,8 @@
         <item name="android:textColor">@color/setting_text_color1</item>
         <item name="android:gravity">center|left</item>
         <item name="android:paddingLeft">24.0dip</item>
-        <item name="android:layout_width">fill_parent</item>
-        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
     </style>
     <style name="main_setting_scrollview_style">
         <item name="android:scrollbarSize">4.0dip</item>
@@ -3515,7 +3515,7 @@
         <item name="android:textColor">@color/bottom_button_selected_text</item>
         <item name="android:gravity">center_horizontal</item>
         <item name="android:background">@drawable/main_tab_bottom_selected</item>
-        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:singleLine">true</item>
         <item name="android:drawablePadding">2.0dip</item>
@@ -3526,7 +3526,7 @@
         <item name="android:textColor">@color/bottom_button_unselected_text</item>
         <item name="android:gravity">center_horizontal</item>
         <item name="android:background">@drawable/main_tab_bottom_unselected</item>
-        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:singleLine">true</item>
         <item name="android:drawablePadding">2.0dip</item>
@@ -3536,18 +3536,18 @@
         <item name="android:textSize">16.0dip</item>
         <item name="android:textColor">@color/member_list_item_max</item>
         <item name="android:gravity">center|right</item>
-        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">48.0dip</item>
     </style>
     <style name="member_listview_background">
         <item name="android:background">#ffe3e5e8</item>
-        <item name="android:layout_width">fill_parent</item>
-        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
     </style>
     <style name="member_listview_linearLayout_style">
         <item name="android:orientation">vertical</item>
         <item name="android:padding">2.0dip</item>
-        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_marginTop">24.0dip</item>
         <item name="android:layout_weight">1.0</item>
@@ -3561,8 +3561,8 @@
         <item name="android:paddingRight">24.0dip</item>
         <item name="android:scrollbars">vertical</item>
         <item name="android:fadingEdge">none</item>
-        <item name="android:layout_width">fill_parent</item>
-        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
         <item name="android:overScrollMode">never</item>
     </style>
     <style name="member_setting_background">
@@ -3571,15 +3571,15 @@
         <item name="android:paddingLeft">24.0dip</item>
         <item name="android:paddingTop">16.0dip</item>
         <item name="android:paddingRight">24.0dip</item>
-        <item name="android:layout_width">fill_parent</item>
-        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
     </style>
     <style name="member_title_textable">
         <item name="android:textSize">20.0dip</item>
         <item name="android:textColor">@color/member_list_item_max</item>
         <item name="android:gravity">center|left</item>
         <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_height">match_parent</item>
     </style>
     <style name="mobile_list">
         <item name="android:scrollbarSize">4.0dip</item>
@@ -3592,7 +3592,7 @@
         <item name="android:textSize">16.0dip</item>
         <item name="android:textColor">@color/common_deepgrey_txt</item>
         <item name="android:background">@drawable/more_btn</item>
-        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_marginTop">10.0dip</item>
         <item name="android:shadowColor">#ffffffff</item>
@@ -3606,7 +3606,7 @@
         <item name="android:background">@drawable/viewgroup_background</item>
         <item name="android:paddingLeft">18.0dip</item>
         <item name="android:paddingRight">18.0dip</item>
-        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">49.0dip</item>
     </style>
     <style name="more_main_item_text" parent="@style/more_main_text_default">
@@ -3669,7 +3669,7 @@
         <item name="android:textColor">@color/bottom_button_selected_text</item>
         <item name="android:gravity">left</item>
         <item name="android:background">@drawable/main_tab_bottom_selected</item>
-        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">40.0dip</item>
         <item name="android:singleLine">true</item>
         <item name="android:drawablePadding">2.0dip</item>
@@ -3680,7 +3680,7 @@
         <item name="android:textColor">@color/bottom_button_selected_text</item>
         <item name="android:gravity">left</item>
         <item name="android:background">@drawable/main_tab_bottom_unselected</item>
-        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">40.0dip</item>
         <item name="android:singleLine">true</item>
         <item name="android:layout_weight">1.0</item>
@@ -3688,11 +3688,11 @@
     <style name="new_pos_confirm_dialog_top">
         <item name="android:gravity">center</item>
         <item name="android:background">@drawable/confirm_button_selector_topcenter</item>
-        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">50.0dip</item>
     </style>
     <style name="new_pos_dialog_bottom">
-        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
     </style>
     <style name="new_pos_dialog_bottom_down" parent="@style/new_pos_confirm_dialog_top">
@@ -3701,13 +3701,13 @@
     <style name="new_pos_dialog_bottom_main">
         <item name="android:orientation">vertical</item>
         <item name="android:padding">10.0px</item>
-        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
     </style>
     <style name="new_pos_dialog_bottom_white_shape">
         <item name="android:orientation">vertical</item>
         <item name="android:padding">10.0px</item>
-        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
     </style>
     <style name="new_pos_dialog_btn">
@@ -3736,7 +3736,7 @@
         <item name="android:gravity">center</item>
         <item name="android:layout_gravity">center</item>
         <item name="android:background">?settle_background</item>
-        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:text">@string/pos_dialog_confirm_yes</item>
     </style>
@@ -3755,7 +3755,7 @@
         <item name="android:textColor">@color/new_pos_dialog_button_text</item>
         <item name="android:gravity">center</item>
         <item name="android:layout_gravity">center</item>
-        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:text">@string/pos_dialog_confirm_yes</item>
     </style>
@@ -3769,12 +3769,12 @@
     </style>
     <style name="new_pos_dialog_line">
         <item name="android:background">?linetwo_color</item>
-        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">1.0px</item>
     </style>
     <style name="new_pos_dialog_line_day">
         <item name="android:background">#ffd7d7d7</item>
-        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">1.0dip</item>
     </style>
     <style name="new_pos_dialog_logo">
@@ -3851,7 +3851,7 @@
         <item name="android:background">@anim/selector_rounded_rectangle_up</item>
     </style>
     <style name="new_pos_spinner_bottom">
-        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
     </style>
     <style name="new_select_dialog_father">
@@ -3900,7 +3900,7 @@
         <item name="android:gravity">center|left</item>
         <item name="android:background">@drawable/small_edittext_shape</item>
         <item name="android:paddingLeft">5.0dip</item>
-        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">49.0dip</item>
         <item name="android:minWidth">250.0dip</item>
         <item name="android:singleLine">true</item>
@@ -3908,27 +3908,27 @@
     <style name="order_product_name_text">
         <item name="android:textSize">16.0dip</item>
         <item name="android:textColor">@color/pos_order_product_name</item>
-        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:singleLine">true</item>
     </style>
     <style name="order_product_price_text">
         <item name="android:textSize">16.0dip</item>
         <item name="android:textColor">@color/text_color_red</item>
-        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:singleLine">true</item>
     </style>
     <style name="order_type_item">
         <item name="android:background">@drawable/bg_type_list_item</item>
-        <item name="android:layout_width">fill_parent</item>
-        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
     </style>
     <style name="order_type_item_text">
         <item name="android:textSize">16.0dip</item>
         <item name="android:textColor">@drawable/order_type_item_selector</item>
-        <item name="android:layout_width">fill_parent</item>
-        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
         <item name="android:singleLine">true</item>
     </style>
     <style name="otherPayPopupAnimation" parent="@android:style/Animation">
@@ -3976,7 +3976,7 @@
         <item name="android:textSize">20.0dip</item>
         <item name="android:textColor">@color/setting_text_color1</item>
         <item name="android:gravity">center|left</item>
-        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_weight">10.0</item>
     </style>
@@ -4011,12 +4011,12 @@
     <style name="pos_activity_button">
         <item name="android:background">@drawable/pos_simple_click_background</item>
         <item name="android:layout_width">58.0dip</item>
-        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_height">match_parent</item>
     </style>
     <style name="pos_activity_button_has_icon">
         <item name="android:background">@drawable/pos_simple_click_background</item>
         <item name="android:layout_width">58.0dip</item>
-        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_height">match_parent</item>
     </style>
     <style name="pos_activity_button_item">
         <item name="android:layout_width">58.0dip</item>
@@ -4028,7 +4028,7 @@
         <item name="android:gravity">center|right</item>
         <item name="android:background">@drawable/small_edittext_shape</item>
         <item name="android:paddingRight">11.0dip</item>
-        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">40.0dip</item>
         <item name="android:selectAllOnFocus">true</item>
         <item name="android:inputType">numberDecimal</item>
@@ -4038,7 +4038,7 @@
         <item name="android:orientation">horizontal</item>
         <item name="android:paddingLeft">24.0dip</item>
         <item name="android:paddingRight">24.0dip</item>
-        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">48.0dip</item>
     </style>
     <style name="pos_activity_edit_product_text_lab">
@@ -4055,8 +4055,8 @@
         <item name="android:background">@drawable/keyboard_btn_selector_10500</item>
     </style>
     <style name="pos_activity_list" parent="@style/pos_list">
-        <item name="android:layout_width">fill_parent</item>
-        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
     </style>
     <style name="pos_activity_main_vip_text">
         <item name="android:textSize">14.0dip</item>
@@ -4066,7 +4066,7 @@
     </style>
     <style name="pos_activity_product_item">
         <item name="android:background">@drawable/pos_activity_product_item_background</item>
-        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">100.0dip</item>
         <item name="android:minHeight">100.0dip</item>
     </style>
@@ -4093,7 +4093,7 @@
     </style>
     <style name="pos_activity_table_item">
         <item name="android:background">@drawable/pos_activity_table_item_background</item>
-        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">99.0dip</item>
         <item name="android:minHeight">99.0dip</item>
     </style>
@@ -4102,7 +4102,7 @@
         <item name="android:orientation">horizontal</item>
         <item name="android:background">@drawable/pos_simple_click_background_selected</item>
         <item name="android:paddingLeft">24.0dip</item>
-        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">56.0dip</item>
     </style>
     <style name="pos_alipay_binding_item_icon">
@@ -4113,7 +4113,7 @@
     <style name="pos_alipay_binding_item_lab">
         <item name="android:textSize">20.0dip</item>
         <item name="android:textColor">@color/pos_text_black</item>
-        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
     </style>
     <style name="pos_amount_name_below">
@@ -4143,7 +4143,7 @@
     </style>
     <style name="pos_barcode_keyboard_summary_submit_text_px">
         <item name="android:orientation">horizontal</item>
-        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
     </style>
     <style name="pos_bottom_background">
@@ -4245,7 +4245,7 @@
     <style name="pos_calculator_text_input_px">
         <item name="android:gravity">left</item>
         <item name="android:padding">6.0px</item>
-        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">46.0px</item>
         <item name="android:layout_margin">3.0px</item>
     </style>
@@ -4316,7 +4316,7 @@
         <item name="android:textColor">@color/pos_detailed_text_black</item>
         <item name="android:gravity">center</item>
         <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_height">match_parent</item>
         <item name="android:singleLine">true</item>
     </style>
     <style name="pos_check_report_detailed_text_grey">
@@ -4330,7 +4330,7 @@
     </style>
     <style name="pos_content_keyboard_px">
         <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_height">match_parent</item>
     </style>
     <style name="pos_context_text">
         <item name="android:textSize">20.0dip</item>
@@ -4364,7 +4364,7 @@
         <item name="android:textColor">@color/setting_text_color3</item>
         <item name="android:gravity">center_vertical</item>
         <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_height">match_parent</item>
         <item name="android:singleLine">true</item>
     </style>
     <style name="pos_date_dialog_editable_text_date" parent="@style/pos_date_dialog_editable_text">
@@ -4377,7 +4377,7 @@
     </style>
     <style name="pos_date_dialog_linearlayout">
         <item name="android:gravity">center_vertical</item>
-        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">56.0dip</item>
     </style>
     <style name="pos_date_dialog_text_clickable_left">
@@ -4386,7 +4386,7 @@
         <item name="android:gravity">center</item>
         <item name="android:background">@drawable/setting_button_selector_white</item>
         <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_height">match_parent</item>
     </style>
     <style name="pos_date_dialog_text_clickable_right">
         <item name="android:textSize">20.0sp</item>
@@ -4394,7 +4394,7 @@
         <item name="android:gravity">center</item>
         <item name="android:background">@drawable/confirm_button_selector_bottomright</item>
         <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_height">match_parent</item>
     </style>
     <style name="pos_date_dialog_week_text">
         <item name="android:textSize">18.0sp</item>
@@ -4421,7 +4421,7 @@
     </style>
     <style name="pos_detailed_information_tabulation">
         <item name="android:textSize">16.0px</item>
-        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
     </style>
     <style name="pos_dialog" parent="@android:style/Theme.Dialog">
@@ -4431,14 +4431,14 @@
     </style>
     <style name="pos_dialog_button_px">
         <item name="android:gravity">center</item>
-        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">55.0px</item>
         <item name="android:layout_marginLeft">3.0px</item>
         <item name="android:layout_marginRight">3.0px</item>
     </style>
     <style name="pos_dialog_px">
         <item name="android:orientation">vertical</item>
-        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">500.0px</item>
         <item name="android:minWidth">280.0px</item>
         <item name="android:minHeight">280.0px</item>
@@ -4490,7 +4490,7 @@
         <item name="android:layout_marginTop">12.0px</item>
     </style>
     <style name="pos_dinner_table_tabulation">
-        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
     </style>
     <style name="pos_discount_background">
@@ -4506,13 +4506,13 @@
     </style>
     <style name="pos_discount_linearlayout_content_submit_px">
         <item name="android:orientation">vertical</item>
-        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
     </style>
     <style name="pos_discount_ok_button_dp">
         <item name="android:gravity">center</item>
         <item name="android:background">?settle_background</item>
-        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">60.0dip</item>
         <item name="android:layout_marginLeft">3.0dip</item>
         <item name="android:layout_marginTop">6.0dip</item>
@@ -4522,7 +4522,7 @@
     <style name="pos_discount_ok_button_px">
         <item name="android:gravity">center</item>
         <item name="android:background">?settle_background</item>
-        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">60.0px</item>
         <item name="android:layout_marginLeft">3.0px</item>
         <item name="android:layout_marginTop">6.0px</item>
@@ -4531,8 +4531,8 @@
     </style>
     <style name="pos_discount_ok_px">
         <item name="android:orientation">vertical</item>
-        <item name="android:layout_width">fill_parent</item>
-        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
     </style>
     <style name="pos_editable_edittext_style">
         <item name="android:textSize">16.0dip</item>
@@ -4540,7 +4540,7 @@
         <item name="android:textColorHint">@color/editable_edittext_hint</item>
         <item name="android:gravity">center|left</item>
         <item name="android:background">@drawable/small_edittext_shape</item>
-        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:minWidth">250.0dip</item>
         <item name="android:minHeight">46.0dip</item>
@@ -4556,8 +4556,8 @@
         <item name="android:gravity">left</item>
         <item name="android:background">@null</item>
         <item name="android:padding">3.0dip</item>
-        <item name="android:layout_width">fill_parent</item>
-        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
         <item name="android:layout_margin">0.0dip</item>
     </style>
     <style name="pos_etPosProductSearch1_text_px">
@@ -4565,7 +4565,7 @@
         <item name="android:gravity">left</item>
         <item name="android:background">?barcode_background</item>
         <item name="android:padding">6.0px</item>
-        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">46.0px</item>
         <item name="android:layout_margin">3.0px</item>
     </style>
@@ -4575,8 +4575,8 @@
         <item name="android:paddingLeft">24.0dip</item>
         <item name="android:paddingTop">12.0dip</item>
         <item name="android:paddingRight">24.0dip</item>
-        <item name="android:layout_width">fill_parent</item>
-        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
         <item name="android:layout_marginLeft">24.0dip</item>
         <item name="android:layout_marginRight">24.0dip</item>
         <item name="android:layout_marginBottom">24.0dip</item>
@@ -4591,7 +4591,7 @@
         <item name="android:gravity">center|right</item>
         <item name="android:background">@drawable/small_edittext_shape</item>
         <item name="android:paddingRight">12.0dip</item>
-        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">48.0dip</item>
         <item name="android:layout_marginLeft">14.0dip</item>
         <item name="android:selectAllOnFocus">true</item>
@@ -4628,7 +4628,7 @@
     <style name="pos_holding_order_selection_calculator_text_input_px">
         <item name="android:gravity">left</item>
         <item name="android:padding">8.0px</item>
-        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">50.0px</item>
         <item name="android:layout_margin">3.0px</item>
     </style>
@@ -4670,8 +4670,8 @@
         <item name="android:gravity">left</item>
         <item name="android:orientation">horizontal</item>
         <item name="android:padding">5.0px</item>
-        <item name="android:layout_width">fill_parent</item>
-        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
     </style>
     <style name="pos_idscount_head_left_title_px">
         <item name="android:layout_gravity">center</item>
@@ -4681,7 +4681,7 @@
     </style>
     <style name="pos_idscount_head_px">
         <item name="android:orientation">horizontal</item>
-        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
     </style>
     <style name="pos_idscount_head_right_button_px">
@@ -4696,7 +4696,7 @@
         <item name="android:gravity">right</item>
         <item name="android:orientation">horizontal</item>
         <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_height">match_parent</item>
     </style>
     <style name="pos_idscount_left_calculator_width_px">
         <item name="android:orientation">vertical</item>
@@ -4774,7 +4774,7 @@
         <item name="android:orientation">vertical</item>
         <item name="android:padding">5.0px</item>
         <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_height">match_parent</item>
     </style>
     <style name="pos_idscount_left_text_right_calculator_px">
         <item name="android:orientation">horizontal</item>
@@ -4926,11 +4926,11 @@
     <style name="pos_inventory_tabulation">
         <item name="android:orientation">vertical</item>
         <item name="android:padding">3.0px</item>
-        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
     </style>
     <style name="pos_inventory_thread_px">
-        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">1.0px</item>
         <item name="android:layout_marginTop">1.0px</item>
     </style>
@@ -4975,7 +4975,7 @@
     </style>
     <style name="pos_item_edit_top_bar_px">
         <item name="android:orientation">horizontal</item>
-        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_marginBottom">4.0px</item>
     </style>
@@ -4998,8 +4998,8 @@
         <item name="android:background">#00000000</item>
         <item name="android:fadingEdge">none</item>
         <item name="android:animationCache">false</item>
-        <item name="android:layout_width">fill_parent</item>
-        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
         <item name="android:scrollingCache">false</item>
         <item name="android:cacheColorHint">#ffffffff</item>
         <item name="android:divider">#ffffffff</item>
@@ -5010,7 +5010,7 @@
         <item name="android:fadingEdge">none</item>
         <item name="android:animationCache">false</item>
         <item name="android:layout_width">0.0dip</item>
-        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_height">match_parent</item>
         <item name="android:layout_marginTop">5.0dip</item>
         <item name="android:scrollingCache">false</item>
         <item name="android:cacheColorHint">#ffffffff</item>
@@ -5022,7 +5022,7 @@
         <item name="android:fadingEdge">none</item>
         <item name="android:animationCache">false</item>
         <item name="android:layout_width">300.0px</item>
-        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_height">match_parent</item>
         <item name="android:layout_marginTop">5.0px</item>
         <item name="android:scrollingCache">false</item>
         <item name="android:cacheColorHint">#ffffffff</item>
@@ -5038,17 +5038,17 @@
     </style>
     <style name="pos_line_h">
         <item name="android:background">@color/pos_line_grey</item>
-        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">1.0px</item>
     </style>
     <style name="pos_line_v">
         <item name="android:background">@color/pos_line_grey</item>
         <item name="android:layout_width">1.0px</item>
-        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_height">match_parent</item>
     </style>
     <style name="pos_linearlayout_content_keyboard_px">
         <item name="android:orientation">vertical</item>
-        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
     </style>
     <style name="pos_linearlayout_content_listview_barcode_keyboard_summary_submit_left_px">
@@ -5059,7 +5059,7 @@
     </style>
     <style name="pos_linearlayout_content_listview_barcode_keyboard_summary_submit_px">
         <item name="android:orientation">horizontal</item>
-        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_margin">6.0px</item>
     </style>
@@ -5072,25 +5072,25 @@
     </style>
     <style name="pos_linearlayout_content_submit_px">
         <item name="android:orientation">vertical</item>
-        <item name="android:layout_width">fill_parent</item>
-        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
     </style>
     <style name="pos_linearlayout_top_left_logo_px">
         <item name="android:gravity">left</item>
         <item name="android:orientation">horizontal</item>
         <item name="android:padding">5.0px</item>
         <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_height">match_parent</item>
     </style>
     <style name="pos_linearlayout_top_right_px">
         <item name="android:gravity">right</item>
         <item name="android:orientation">horizontal</item>
-        <item name="android:layout_width">fill_parent</item>
-        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
     </style>
     <style name="pos_linearlayout_top_title_bar_px">
         <item name="android:orientation">horizontal</item>
-        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
     </style>
     <style name="pos_list">
@@ -5108,17 +5108,17 @@
         <item name="android:singleLine">true</item>
     </style>
     <style name="pos_listxiew_listing_merchandise1_style_px">
-        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
     </style>
     <style name="pos_listxiew_listing_merchandise2_style_px">
-        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_marginRight">12.0px</item>
     </style>
     <style name="pos_listxiew_listing_style_px">
         <item name="android:paddingRight">5.0px</item>
-        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
     </style>
     <style name="pos_logo_px">
@@ -5127,8 +5127,8 @@
         <item name="android:layout_height">20.0px</item>
     </style>
     <style name="pos_lvPosMember_px">
-        <item name="android:layout_width">fill_parent</item>
-        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
         <item name="android:dividerHeight">1.0px</item>
     </style>
     <style name="pos_main_btnPosCloud_dp">
@@ -5155,7 +5155,7 @@
         <item name="android:layout_marginTop">2.0px</item>
     </style>
     <style name="pos_main_correcting_fast_food_thread_px">
-        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">1.0px</item>
     </style>
     <style name="pos_main_fast_food_1ji_exit_px">
@@ -5291,13 +5291,13 @@
     <style name="pos_main_fast_food_linearlayout_bottom_buttons_px">
         <item name="android:orientation">horizontal</item>
         <item name="android:padding">5.0px</item>
-        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
     </style>
     <style name="pos_main_fast_food_linearlayout_content_keyboard_listing_left_bottom_px">
         <item name="android:orientation">vertical</item>
         <item name="android:padding">3.0px</item>
-        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
     </style>
     <style name="pos_main_fast_food_linearlayout_content_keyboard_px">
@@ -5333,7 +5333,7 @@
     </style>
     <style name="pos_main_fast_food_px">
         <item name="android:orientation">horizontal</item>
-        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_marginRight">4.0px</item>
     </style>
@@ -5360,7 +5360,7 @@
         <item name="android:layout_marginBottom">6.0px</item>
     </style>
     <style name="pos_main_fast_food_tablelayout_content_keyboard_px">
-        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_marginBottom">6.0px</item>
     </style>
@@ -5372,7 +5372,7 @@
     <style name="pos_main_fast_food_text_input_px">
         <item name="android:gravity">left</item>
         <item name="android:padding">6.0px</item>
-        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">43.0px</item>
         <item name="android:layout_marginTop">3.0px</item>
     </style>
@@ -5497,14 +5497,14 @@
     <style name="pos_main_linearlayout_bottom_buttons_px">
         <item name="android:orientation">horizontal</item>
         <item name="android:padding">5.0px</item>
-        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_marginTop">5.0px</item>
     </style>
     <style name="pos_main_linearlayout_content_keyboard_listing_left_bottom_px">
         <item name="android:orientation">vertical</item>
         <item name="android:padding">3.0px</item>
-        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
     </style>
     <style name="pos_main_listing_BarCode_px">
@@ -5659,7 +5659,7 @@
         <item name="android:textSize">@dimen/text_16</item>
         <item name="android:gravity">center|left</item>
         <item name="android:layout_width">97.0px</item>
-        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_height">match_parent</item>
     </style>
     <style name="pos_main_retail_version_hour_text">
         <item name="android:padding">2.0px</item>
@@ -5767,7 +5767,7 @@
     </style>
     <style name="pos_main_to_go_tabulation_px" parent="@style/pos_main_listing_left_px">
         <item name="android:layout_width">690.0px</item>
-        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_height">match_parent</item>
     </style>
     <style name="pos_main_to_go_title_px">
         <item name="android:gravity">center</item>
@@ -5927,17 +5927,17 @@
     <style name="pos_member_charge_left_text_input_px">
         <item name="android:orientation">vertical</item>
         <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_height">match_parent</item>
     </style>
     <style name="pos_member_charge_linearlayout_content_listview_barcode_keyboard_summary_submit_left_px">
         <item name="android:orientation">vertical</item>
         <item name="android:padding">5.0px</item>
         <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_height">match_parent</item>
     </style>
     <style name="pos_member_charge_linearlayout_content_listview_barcode_keyboard_summary_submit_px">
         <item name="android:orientation">horizontal</item>
-        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_margin">5.0px</item>
     </style>
@@ -5950,7 +5950,7 @@
     </style>
     <style name="pos_member_charge_right_calculator_ok_px">
         <item name="android:gravity">center</item>
-        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">68.0px</item>
         <item name="android:layout_marginLeft">3.0px</item>
         <item name="android:layout_marginTop">6.0px</item>
@@ -5972,7 +5972,7 @@
         <item name="android:layout_marginBottom">3.0px</item>
     </style>
     <style name="pos_member_charge_thread_dp">
-        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">1.0dip</item>
         <item name="android:layout_marginTop">4.0dip</item>
     </style>
@@ -5991,7 +5991,7 @@
         <item name="android:orientation">horizontal</item>
         <item name="android:padding">5.0px</item>
         <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_height">match_parent</item>
     </style>
     <style name="pos_member_charge_top_right_button_px">
         <item name="android:layout_gravity">center</item>
@@ -6001,13 +6001,13 @@
     <style name="pos_member_charge_top_right_px">
         <item name="android:gravity">right</item>
         <item name="android:orientation">horizontal</item>
-        <item name="android:layout_width">fill_parent</item>
-        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
         <item name="android:layout_margin">5.0px</item>
     </style>
     <style name="pos_member_charge_top_title_bar_px">
         <item name="android:orientation">horizontal</item>
-        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
     </style>
     <style name="pos_member_charge_top_title_px">
@@ -6021,7 +6021,7 @@
         <item name="android:textColor">?text_color</item>
         <item name="android:background">?edittext_background</item>
         <item name="android:padding">3.0px</item>
-        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
     </style>
     <style name="pos_member_dialog_edit_day">
@@ -6029,7 +6029,7 @@
         <item name="android:textColor">@color/pos_text_color</item>
         <item name="android:background">@drawable/text_background_input</item>
         <item name="android:padding">3.0px</item>
-        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
     </style>
     <style name="pos_member_dialog_text">
@@ -6079,7 +6079,7 @@
     </style>
     <style name="pos_ok_button_px">
         <item name="android:gravity">center</item>
-        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">70.0px</item>
         <item name="android:layout_marginLeft">3.0px</item>
         <item name="android:layout_marginTop">6.0px</item>
@@ -6116,12 +6116,12 @@
         <item name="android:orientation">vertical</item>
         <item name="android:padding">5.0px</item>
         <item name="android:layout_width">350.0px</item>
-        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_height">match_parent</item>
     </style>
     <style name="pos_pay_new_linearlayout_bottom_buttons_px">
         <item name="android:orientation">horizontal</item>
         <item name="android:padding">2.0px</item>
-        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_marginTop">2.0px</item>
     </style>
@@ -6134,7 +6134,7 @@
     </style>
     <style name="pos_pay_new_ok_button_px">
         <item name="android:gravity">center</item>
-        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">100.0px</item>
     </style>
     <style name="pos_pay_new_px">
@@ -6159,21 +6159,21 @@
         <item name="android:layout_height">60.0px</item>
     </style>
     <style name="pos_pay_new_right_button_px">
-        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">60.0px</item>
     </style>
     <style name="pos_pay_new_right_px">
         <item name="android:orientation">vertical</item>
         <item name="android:padding">5.0px</item>
         <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_height">match_parent</item>
     </style>
     <style name="pos_pay_new_top_bar_px">
         <item name="android:gravity">left</item>
         <item name="android:orientation">horizontal</item>
         <item name="android:padding">5.0px</item>
         <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_height">match_parent</item>
     </style>
     <style name="pos_pay_new_top_logo_dp">
         <item name="android:layout_width">20.0dip</item>
@@ -6248,7 +6248,7 @@
         <item name="android:gravity">center_vertical</item>
         <item name="android:background">@drawable/pos_simple_click_background</item>
         <item name="android:paddingLeft">16.0dip</item>
-        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">56.0dip</item>
     </style>
     <style name="pos_paytype_setting_text_lab">
@@ -6347,7 +6347,7 @@
     </style>
     <style name="pos_predetermined_order_rl_dp">
         <item name="android:padding">8.0dip</item>
-        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_marginLeft">10.0dip</item>
         <item name="android:layout_marginRight">10.0dip</item>
@@ -6387,23 +6387,23 @@
         <item name="android:gravity">center</item>
         <item name="android:background">@drawable/setting_button_selector_10500</item>
         <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_height">match_parent</item>
     </style>
     <style name="pos_product_content_text_clickable_red">
         <item name="android:textSize">20.0dip</item>
         <item name="android:textColor">@color/pos_text_red</item>
         <item name="android:gravity">center</item>
         <item name="android:background">@drawable/setting_button_selector_white</item>
-        <item name="android:layout_width">fill_parent</item>
-        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
     </style>
     <style name="pos_product_content_text_clickable_white">
         <item name="android:textSize">20.0dip</item>
         <item name="android:textColor">@color/pos_retail_text_black</item>
         <item name="android:gravity">center</item>
         <item name="android:background">@drawable/setting_button_selector_white</item>
-        <item name="android:layout_width">fill_parent</item>
-        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
     </style>
     <style name="pos_product_content_text_edit">
         <item name="android:textSize">20.0dip</item>
@@ -6425,15 +6425,15 @@
         <item name="android:gravity">center</item>
         <item name="android:background">@drawable/setting_button_selector_10500</item>
         <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_height">match_parent</item>
     </style>
     <style name="pos_product_content_text_white_clickable">
         <item name="android:textSize">20.0sp</item>
         <item name="android:textColor">@color/white_color_1033</item>
         <item name="android:gravity">center</item>
         <item name="android:background">@drawable/setting_button_selector_red</item>
-        <item name="android:layout_width">fill_parent</item>
-        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
     </style>
     <style name="pos_product_dialog">
         <item name="android:windowNoTitle">true</item>
@@ -6444,7 +6444,7 @@
         <item name="android:textColor">@color/pos_text_black</item>
         <item name="android:gravity">center</item>
         <item name="android:background">@drawable/pos_product_dialog_button_white</item>
-        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">62.0dip</item>
         <item name="android:layout_weight">1.0</item>
     </style>
@@ -6452,7 +6452,7 @@
         <item name="android:gravity">center|right</item>
         <item name="android:background">@drawable/pos_product_edit_background</item>
         <item name="android:paddingRight">12.0dip</item>
-        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">48.0dip</item>
         <item name="android:selectAllOnFocus">true</item>
     </style>
@@ -6469,7 +6469,7 @@
     <style name="pos_product_dialog_linearlayout">
         <item name="android:paddingLeft">24.0dip</item>
         <item name="android:paddingRight">24.0dip</item>
-        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">56.0dip</item>
     </style>
     <style name="pos_product_dialog_text" parent="@style/pos_product_content_text">
@@ -6494,7 +6494,7 @@
     </style>
     <style name="pos_product_selection_big_background_px">
         <item name="android:orientation">horizontal</item>
-        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
     </style>
     <style name="pos_product_selection_px">
@@ -6512,7 +6512,7 @@
         <item name="android:paddingLeft">16.0dip</item>
         <item name="android:paddingRight">16.0dip</item>
         <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_height">match_parent</item>
         <item name="android:layout_centerVertical">true</item>
     </style>
     <style name="pos_product_title_style_10323">
@@ -6545,18 +6545,18 @@
     <style name="pos_rawmaterial_raw_item_text">
         <item name="android:textSize">16.0dip</item>
         <item name="android:textColor">@color/pos_text_black</item>
-        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_height">match_parent</item>
     </style>
     <style name="pos_rawmaterial_raw_item_title_text">
         <item name="android:textSize">16.0dip</item>
         <item name="android:textColor">@color/pos_text_grey</item>
         <item name="android:background">@drawable/pos_simple_click_background</item>
-        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_height">match_parent</item>
     </style>
     <style name="pos_recharge_button_px">
         <item name="android:orientation">horizontal</item>
         <item name="android:padding">5.0px</item>
-        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
     </style>
     <style name="pos_report_cash_detail_grey">
@@ -6585,7 +6585,7 @@
         <item name="android:textColor">@color/pos_text_grey</item>
         <item name="android:gravity">center_vertical</item>
         <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_height">match_parent</item>
         <item name="android:layout_marginLeft">24.0dip</item>
         <item name="android:layout_centerVertical">true</item>
     </style>
@@ -6639,7 +6639,7 @@
         <item name="android:gravity">center_vertical</item>
         <item name="android:orientation">horizontal</item>
         <item name="android:background">@drawable/pos_report_filter_item_click_background</item>
-        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">48.0dip</item>
         <item name="android:layout_marginLeft">24.0dip</item>
         <item name="android:layout_marginTop">8.0dip</item>
@@ -6679,7 +6679,7 @@
         <item name="android:gravity">center</item>
         <item name="android:background">@drawable/pos_simple_click_background</item>
         <item name="android:layout_width">0.0dip</item>
-        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_height">match_parent</item>
         <item name="android:layout_weight">1.0</item>
     </style>
     <style name="pos_report_filter_text_canclick_brown" parent="@style/pos_report_filter_text_canclick">
@@ -6695,7 +6695,7 @@
         <item name="android:textColor">@color/pos_text_black</item>
         <item name="android:gravity">center</item>
         <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_height">match_parent</item>
     </style>
     <style name="pos_report_filter_text_right_style">
         <item name="android:textSize">20.0dip</item>
@@ -6710,7 +6710,7 @@
         <item name="android:textSize">20.0dip</item>
         <item name="android:textColor">@color/pos_report_time_fast_text_color</item>
         <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_height">match_parent</item>
     </style>
     <style name="pos_report_item_text">
         <item name="android:textSize">18.0dip</item>
@@ -6750,8 +6750,8 @@
         <item name="android:gravity">center</item>
         <item name="android:background">@color/pos_background_white</item>
         <item name="android:visibility">gone</item>
-        <item name="android:layout_width">fill_parent</item>
-        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
         <item name="android:text">@string/pos_report_noData</item>
     </style>
     <style name="pos_report_product_sort">
@@ -6821,7 +6821,7 @@
     <style name="pos_retail_version_bar">
         <item name="android:textColor">@color/pos_text_color</item>
         <item name="android:background">#40897e70</item>
-        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">70.0px</item>
     </style>
     <style name="pos_retail_version_bg">
@@ -6887,7 +6887,7 @@
         <item name="android:textColor">@color/encode_view</item>
         <item name="android:gravity">center</item>
         <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_height">match_parent</item>
         <item name="android:layout_marginLeft">6.0px</item>
     </style>
     <style name="pos_retail_version_logo">
@@ -6955,7 +6955,7 @@
         <item name="android:textColor">@color/encode_view</item>
         <item name="android:gravity">center</item>
         <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_height">match_parent</item>
         <item name="android:layout_marginLeft">6.0px</item>
     </style>
     <style name="pos_retail_version_taskbar">
@@ -6994,8 +6994,8 @@
         <item name="android:background">#00000000</item>
         <item name="android:fadingEdge">none</item>
         <item name="android:animationCache">false</item>
-        <item name="android:layout_width">fill_parent</item>
-        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
         <item name="android:scrollingCache">false</item>
         <item name="android:cacheColorHint">#ffffffff</item>
         <item name="android:divider">#ffbdc3c7</item>
@@ -7047,7 +7047,7 @@
     </style>
     <style name="pos_setting_permission_dialog_item_line">
         <item name="android:background">@color/pos_line_grey</item>
-        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">1.0px</item>
         <item name="android:layout_alignParentBottom">true</item>
     </style>
@@ -7057,7 +7057,7 @@
         <item name="android:background">@drawable/pos_simple_click_background</item>
         <item name="android:paddingLeft">24.0dip</item>
         <item name="android:paddingRight">24.0dip</item>
-        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">56.0dip</item>
     </style>
     <style name="pos_setting_right_item_check">
@@ -7078,7 +7078,7 @@
     </style>
     <style name="pos_setting_right_item_line">
         <item name="android:background">@color/pos_line_grey</item>
-        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">1.0px</item>
         <item name="android:layout_marginTop">8.0dip</item>
         <item name="android:layout_marginBottom">8.0dip</item>
@@ -7105,7 +7105,7 @@
         <item name="android:textColor">@color/pos_text_black</item>
         <item name="android:gravity">right</item>
         <item name="android:layout_gravity">center_vertical</item>
-        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_marginRight">16.0dip</item>
     </style>
@@ -7114,7 +7114,7 @@
         <item name="android:gravity">center</item>
         <item name="android:background">@drawable/pos_simple_click_background</item>
         <item name="android:layout_width">0.0dip</item>
-        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_height">match_parent</item>
         <item name="android:layout_weight">1.0</item>
     </style>
     <style name="pos_store_calculator_button_background">
@@ -7144,7 +7144,7 @@
         <item name="android:gravity">center|right</item>
         <item name="android:background">@drawable/small_edittext_shape</item>
         <item name="android:paddingRight">12.0dip</item>
-        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">40.0dip</item>
         <item name="android:selectAllOnFocus">true</item>
     </style>
@@ -7156,7 +7156,7 @@
         <item name="android:textColor">@color/member_list_item_max</item>
         <item name="android:gravity">center</item>
         <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_height">match_parent</item>
     </style>
     <style name="pos_text_yinput_cancel_button_px">
         <item name="android:background">@drawable/number_back_1033</item>
@@ -7187,7 +7187,7 @@
         <item name="android:paddingLeft">24.0dip</item>
         <item name="android:paddingRight">24.0dip</item>
         <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_height">match_parent</item>
         <item name="android:onClick">closeActivity</item>
     </style>
     <style name="pos_title_back_icon">
@@ -7235,15 +7235,15 @@
     <style name="pos_top_right_px">
         <item name="android:gravity">right</item>
         <item name="android:orientation">horizontal</item>
-        <item name="android:layout_width">fill_parent</item>
-        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
     </style>
     <style name="pos_top_title_logo_esc_px">
         <item name="android:gravity">left</item>
         <item name="android:orientation">horizontal</item>
         <item name="android:padding">5.0px</item>
         <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_height">match_parent</item>
     </style>
     <style name="pos_version_dialog_px">
         <item name="android:orientation">vertical</item>
@@ -7267,7 +7267,7 @@
     </style>
     <style name="pos_version_vertical_thread_px">
         <item name="android:layout_width">1.0px</item>
-        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_height">match_parent</item>
     </style>
     <style name="pos_waitingdialog" parent="@android:style/Theme.Dialog">
         <item name="android:windowBackground">@color/background_color</item>
@@ -7350,7 +7350,7 @@
         <item name="android:gravity">top</item>
         <item name="android:background">@drawable/selector_rounded_rectangle</item>
         <item name="android:padding">@dimen/print_margins</item>
-        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">150.0dip</item>
         <item name="android:layout_marginTop">30.0dip</item>
         <item name="android:inputType">textMultiLine</item>
@@ -7387,14 +7387,14 @@
         <item name="android:background">@drawable/laiqian_201404_purchase_dropdownlist</item>
         <item name="android:padding">4.0dip</item>
         <item name="android:layout_width">0.0dip</item>
-        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_height">match_parent</item>
         <item name="android:layout_marginLeft">0.0dip</item>
         <item name="android:layout_marginTop">0.0dip</item>
         <item name="android:layout_marginBottom">0.0dip</item>
     </style>
     <style name="ratingbar_style_small" parent="@android:style/Widget.RatingBar">
         <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_height">match_parent</item>
         <item name="android:maxHeight">40.0dip</item>
         <item name="android:progressDrawable">@drawable/custom_ratingbar_progress</item>
         <item name="android:minHeight">40.0dip</item>
@@ -7421,13 +7421,13 @@
     <style name="region_area">
         <item name="android:gravity">center</item>
         <item name="android:orientation">horizontal</item>
-        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">49.0dip</item>
     </style>
     <style name="report_totalAmount_linearLayout">
         <item name="android:orientation">horizontal</item>
         <item name="android:background">@drawable/titlebar_background</item>
-        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
     </style>
     <style name="reportarea_layout_style">
@@ -7443,8 +7443,8 @@
         <item name="android:textColorHint">@color/editable_edittext_hint</item>
         <item name="android:gravity">center|left</item>
         <item name="android:background">@drawable/small_edittext_shape</item>
-        <item name="android:layout_width">fill_parent</item>
-        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
         <item name="android:minWidth">250.0dip</item>
         <item name="android:minHeight">46.0dip</item>
         <item name="android:singleLine">true</item>
@@ -7466,20 +7466,20 @@
         <item name="android:layout_gravity">center_horizontal</item>
         <item name="android:background">@anim/sales_new_add_product</item>
         <item name="android:clickable">true</item>
-        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:minHeight">48.0dip</item>
     </style>
     <style name="salesNew_listviewItem_linearLayout">
         <item name="android:paddingTop">5.0dip</item>
         <item name="android:paddingBottom">5.0dip</item>
-        <item name="android:layout_width">fill_parent</item>
-        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
     </style>
     <style name="salesNew_listview_style">
         <item name="android:background">@null</item>
-        <item name="android:layout_width">fill_parent</item>
-        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
         <item name="android:cacheColorHint">#ffffffff</item>
         <item name="android:divider">#ffacacac</item>
         <item name="android:dividerHeight">1.0dip</item>
@@ -7558,7 +7558,7 @@
         <item name="android:gravity">center</item>
         <item name="android:background">@drawable/standard_edition_top_left_bg</item>
         <item name="android:layout_width">100.0dip</item>
-        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_height">match_parent</item>
     </style>
     <style name="standard_edition_computer_synchronization_download" parent="@style/standard_edition_computer_synchronization_upload">
         <item name="android:textColor">@color/text_color</item>
@@ -7620,15 +7620,15 @@
     </style>
     <style name="standard_edition_layout_login">
         <item name="android:background">@drawable/zc_standard_edition_login_button_bg</item>
-        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">45.0dip</item>
         <item name="android:layout_marginLeft">18.0dip</item>
         <item name="android:layout_marginRight">18.0dip</item>
     </style>
     <style name="standard_edition_progress_bar_box_bg">
         <item name="android:padding">5.0dip</item>
-        <item name="android:layout_width">fill_parent</item>
-        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
         <item name="android:minWidth">160.0dip</item>
         <item name="android:minHeight">130.0dip</item>
     </style>
@@ -7674,12 +7674,12 @@
         <item name="android:textColor">@color/text_main_black</item>
         <item name="android:gravity">center|left</item>
         <item name="android:layout_width">140.0dip</item>
-        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_height">match_parent</item>
         <item name="android:layout_marginLeft">7.0dip</item>
     </style>
     <style name="standard_edition_purchase_locker_tabulation_box">
         <item name="android:background">@color/purchase_bg_gray</item>
-        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">54.0dip</item>
     </style>
     <style name="standard_edition_purchase_scrollable_bar">
@@ -7700,7 +7700,7 @@
         <item name="android:gravity">center</item>
         <item name="android:background">@drawable/standard_edition_top_center_alyer3_bg</item>
         <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_height">match_parent</item>
         <item name="android:layout_centerHorizontal">true</item>
     </style>
     <style name="standard_list_item_title">
@@ -7711,22 +7711,22 @@
         <item name="android:orientation">vertical</item>
         <item name="android:paddingTop">5.0dip</item>
         <item name="android:paddingBottom">5.0dip</item>
-        <item name="android:layout_width">fill_parent</item>
-        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
     </style>
     <style name="stock_listview_linearLayout_style">
         <item name="android:orientation">vertical</item>
         <item name="android:background">@drawable/listview_corner_round_bg</item>
-        <item name="android:layout_width">fill_parent</item>
-        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
         <item name="android:layout_marginLeft">10.0dip</item>
         <item name="android:layout_marginRight">10.0dip</item>
         <item name="android:layout_weight">1.0</item>
     </style>
     <style name="stock_listview_style">
         <item name="android:background">#ffffffff</item>
-        <item name="android:layout_width">fill_parent</item>
-        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
         <item name="android:cacheColorHint">#ffffffff</item>
         <item name="android:divider">#ffacacac</item>
         <item name="android:dividerHeight">1.0dip</item>
@@ -7796,7 +7796,7 @@
         <item name="android:textSize">16.0sp</item>
         <item name="android:textColor">@color/setting_text_color1</item>
         <item name="android:gravity">center</item>
-        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">44.0dip</item>
     </style>
     <style name="textview_user_notice">
@@ -7822,7 +7822,7 @@
         <item name="android:paddingLeft">15.0dip</item>
         <item name="android:paddingRight">15.0dip</item>
         <item name="android:layout_width">60.0dip</item>
-        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_height">match_parent</item>
         <item name="android:layout_marginLeft">300.0dip</item>
         <item name="android:src">@drawable/pos_query</item>
         <item name="android:scaleType">fitCenter</item>
@@ -7834,7 +7834,7 @@
         <item name="android:paddingLeft">15.0dip</item>
         <item name="android:paddingRight">15.0dip</item>
         <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_height">match_parent</item>
         <item name="android:layout_alignParentLeft">true</item>
         <item name="android:layout_centerVertical">true</item>
     </style>
@@ -7843,7 +7843,7 @@
         <item name="android:background">@drawable/titlebar_leftbt_selector_10500</item>
         <item name="android:paddingLeft">24.0dip</item>
         <item name="android:layout_width">64.0dip</item>
-        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_height">match_parent</item>
         <item name="android:layout_alignParentLeft">true</item>
         <item name="android:layout_centerVertical">true</item>
     </style>
@@ -7862,7 +7862,7 @@
         <item name="android:paddingLeft">15.0dip</item>
         <item name="android:paddingRight">15.0dip</item>
         <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_height">match_parent</item>
         <item name="android:layout_alignParentRight">true</item>
         <item name="android:layout_centerVertical">true</item>
     </style>
@@ -7873,7 +7873,7 @@
         <item name="android:paddingLeft">15.0dip</item>
         <item name="android:paddingRight">15.0dip</item>
         <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_height">match_parent</item>
         <item name="android:layout_alignParentRight">true</item>
         <item name="android:layout_centerVertical">true</item>
     </style>
@@ -7892,7 +7892,7 @@
         <item name="android:textColor">@color/setting_text_color1</item>
         <item name="android:gravity">center</item>
         <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_height">match_parent</item>
         <item name="android:singleLine">true</item>
     </style>
     <style name="titlebar_weiorder_10500">
@@ -7906,7 +7906,7 @@
     </style>
     <style name="totalAmount_linearLayout">
         <item name="android:orientation">horizontal</item>
-        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_marginRight">10.0dip</item>
         <item name="android:layout_weight">0.0</item>
@@ -7916,13 +7916,13 @@
         <item name="android:textColor">@color/login_edittext_value_txt</item>
         <item name="android:gravity">center|left</item>
         <item name="android:background">@null</item>
-        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">48.0dip</item>
     </style>
     <style name="transparentSpinner_style">
         <item name="android:background">@null</item>
-        <item name="android:layout_width">fill_parent</item>
-        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
     </style>
     <style name="txtTopmenu_1">
         <item name="android:textSize">22.0dip</item>
@@ -7947,20 +7947,20 @@
     <style name="ui201404_background_gray">
         <item name="android:orientation">vertical</item>
         <item name="android:background">@color/ui201404_smj_background_lightgray</item>
-        <item name="android:layout_width">fill_parent</item>
-        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
     </style>
     <style name="ui201404_background_white">
         <item name="android:orientation">vertical</item>
         <item name="android:background">@color/text_color_white</item>
-        <item name="android:layout_width">fill_parent</item>
-        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
     </style>
     <style name="ui201404_bottom_button">
         <item name="android:textSize">@dimen/standard_edition_text_size_32</item>
         <item name="android:gravity">center</item>
         <item name="android:clickable">true</item>
-        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">46.0dip</item>
         <item name="android:layout_marginLeft">8.0dip</item>
         <item name="android:layout_marginTop">20.0dip</item>
@@ -7987,7 +7987,7 @@
         <item name="android:layout_gravity">center_vertical</item>
         <item name="android:background">@drawable/laiqian_201404_machine_text_background_input</item>
         <item name="android:padding">4.0dip</item>
-        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">34.0dip</item>
         <item name="android:layout_marginLeft">2.0dip</item>
         <item name="android:layout_marginRight">8.0dip</item>
@@ -8035,7 +8035,7 @@
     <style name="ui201404_viewgroup_white">
         <item name="android:orientation">horizontal</item>
         <item name="android:paddingLeft">8.0dip</item>
-        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">54.0dip</item>
         <item name="android:layout_marginLeft">8.0dip</item>
         <item name="android:layout_marginRight">8.0dip</item>
@@ -8079,7 +8079,7 @@
     <style name="ui201406_edit_multi_message">
         <item name="android:gravity">top</item>
         <item name="android:padding">9.0dip</item>
-        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">150.0dip</item>
         <item name="android:layout_marginTop">30.0dip</item>
         <item name="android:inputType">textMultiLine</item>
@@ -8121,7 +8121,7 @@
     </style>
     <style name="ui201406_line_dotted_gray">
         <item name="android:background">@color/frontEnd_grey_background</item>
-        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">1.0px</item>
         <item name="android:layout_marginLeft">1.0px</item>
         <item name="android:layout_marginRight">1.0px</item>
@@ -8133,7 +8133,7 @@
         <item name="android:scrollbars">none</item>
         <item name="android:fadingEdge">none</item>
         <item name="android:clickable">false</item>
-        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:cacheColorHint">@color/ui201404_smj_background_lightgray</item>
         <item name="android:divider">@null</item>
@@ -8152,7 +8152,7 @@
     <style name="ui201406_report_detailed_productNameList">
         <item name="android:textColor">@color/taste_text_color_gray</item>
         <item name="android:gravity">center_vertical</item>
-        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_marginLeft">9.0dip</item>
         <item name="android:minHeight">35.0dip</item>
@@ -8197,7 +8197,7 @@
         <item name="android:orientation">vertical</item>
         <item name="android:background">@drawable/new_dialog_white_shape</item>
         <item name="android:padding">10.0px</item>
-        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
     </style>
     <style name="umeng_share_update_bottom_btn_style">
@@ -8235,14 +8235,14 @@
     <style name="ver_normal_bg">
         <item name="android:background">#fff2f2f2</item>
         <item name="android:padding">24.0dip</item>
-        <item name="android:layout_width">fill_parent</item>
-        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
     </style>
     <style name="ver_rounded_rectangle_white">
         <item name="android:background">@drawable/ver_shape_rounded_rectangle_white</item>
         <item name="android:paddingLeft">24.0dip</item>
         <item name="android:paddingRight">24.0dip</item>
-        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:minHeight">56.0dip</item>
     </style>
@@ -8298,7 +8298,7 @@
         <item name="android:background">@drawable/shape_rounded_rectangle_hollow</item>
         <item name="android:paddingLeft">24.0dip</item>
         <item name="android:paddingRight">24.0dip</item>
-        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:minHeight">56.0dip</item>
     </style>
@@ -8308,7 +8308,7 @@
         <item name="android:gravity">center|right</item>
         <item name="android:background">@drawable/small_edittext_shape</item>
         <item name="android:paddingRight">11.0dip</item>
-        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">48.0dip</item>
         <item name="android:selectAllOnFocus">true</item>
     </style>
@@ -8317,7 +8317,7 @@
         <item name="android:textColor">@color/member_list_item_max</item>
         <item name="android:gravity">center|left</item>
         <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_height">match_parent</item>
     </style>
     <style name="vip_detail_func">
         <item name="android:textSize">@dimen/sp_20</item>
@@ -8325,7 +8325,7 @@
         <item name="android:gravity">center</item>
         <item name="android:background">@drawable/pos_simple_click_background</item>
         <item name="android:layout_width">0.0dip</item>
-        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_height">match_parent</item>
         <item name="android:layout_weight">1.0</item>
     </style>
     <style name="vip_listview_style">
@@ -8333,7 +8333,7 @@
         <item name="android:scrollbarThumbVertical">@drawable/pos_scroll_bar_background</item>
         <item name="android:scrollbars">vertical</item>
         <item name="android:fadingEdge">none</item>
-        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:listSelector">@android:color/transparent</item>
         <item name="android:divider">@null</item>
@@ -8347,7 +8347,7 @@
         <item name="android:textSize">20.0dip</item>
         <item name="android:textColor">@color/member_list_item_max</item>
         <item name="android:gravity">center|right</item>
-        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">48.0dip</item>
     </style>
     <style name="vip_text_center">
@@ -8362,7 +8362,7 @@
         <item name="android:textSize">20.0dip</item>
         <item name="android:textColor">@color/pos_red_blackground</item>
         <item name="android:gravity">center|right</item>
-        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">48.0dip</item>
     </style>
     <style name="warehouse_listItem_amount_style">
@@ -8378,8 +8378,8 @@
         <item name="android:background">#ffffffff</item>
         <item name="android:paddingTop">5.0dip</item>
         <item name="android:paddingBottom">5.0dip</item>
-        <item name="android:layout_width">fill_parent</item>
-        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
     </style>
     <style name="warehouse_listItem_value_lightgrey_style">
         <item name="android:textSize">16.0dip</item>
@@ -8399,8 +8399,8 @@
         <item name="android:orientation">vertical</item>
         <item name="android:background">@drawable/listview_corner_round_bg</item>
         <item name="android:padding">2.0dip</item>
-        <item name="android:layout_width">fill_parent</item>
-        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
         <item name="android:layout_marginLeft">10.0dip</item>
         <item name="android:layout_marginRight">10.0dip</item>
         <item name="android:layout_weight">1.0</item>
@@ -8408,8 +8408,8 @@
     <style name="warehouse_listview_style">
         <item name="android:background">#ffffffff</item>
         <item name="android:animationCache">false</item>
-        <item name="android:layout_width">fill_parent</item>
-        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
         <item name="android:scrollingCache">false</item>
         <item name="android:cacheColorHint">#ffffffff</item>
         <item name="android:divider">#ffacacac</item>
@@ -8428,8 +8428,8 @@
     <style name="white_background">
         <item name="android:orientation">vertical</item>
         <item name="android:background">@drawable/mainmenu_background</item>
-        <item name="android:layout_width">fill_parent</item>
-        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
     </style>
     <style name="yijifenglei" parent="@style/ll_yijifenglei">
         <item name="android:textSize">26.0dip</item>
@@ -8453,8 +8453,8 @@
         <item name="android:textColor">@color/add_text_color</item>
         <item name="android:ellipsize">end</item>
         <item name="android:background">@drawable/category_btn_selector_10500</item>
-        <item name="android:layout_width">fill_parent</item>
-        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
         <item name="android:text">一级分类</item>
         <item name="android:maxLines">2</item>
     </style>

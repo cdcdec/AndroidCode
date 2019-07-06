@@ -85,3 +85,43 @@ sdkLevel:21
 
 
 <item android:color="?textColorError" />  这种写法？？？
+
+V void (只能用于返回值类型)
+Z boolean
+B byte
+S short
+C char
+I int
+J long（64位）
+F float
+D double（64位）
+
+
+基本指令
+smali字节码是类似于汇编的，如果你有汇编基础，理解起来是非常容易的。
+move v0, v3 把v3寄存器的值移动到寄存器v0上
+const-string v0, “MainActivity” 把字符串”MainActivity”赋值给v0寄存器
+invoke-super　　调用父函数
+return-void　　函数返回void
+new-instance　　创建实例
+iput-object　　对象赋值
+iget-object　　调用对象
+invoke-static　　调用静态函数
+invoke-direct　　调用函数
+
+
+adb 报错
+
+https://blog.csdn.net/gufenchen/article/details/91383397
+
+pos_activity-->main
+pos_main_takeout.xml--->外面  订单管理
+
+PosActivityMoreSettingsFragment  更多
+
+PosActivitySettingFragment  设置页面父
+
+main_setting_10500.xml  设置页面布局
+
+MainSetting  设置页面
+

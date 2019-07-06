@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
+    <item type="id" name="bannerTv" />
     <item type="id" name="BackUpBtn" />
     <item type="id" name="BackUpIntervalSpinner" />
     <item type="id" name="BackUpIntervalSpinnerTv" />

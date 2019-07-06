@@ -3,13 +3,13 @@
               android:orientation="vertical"
               android:id="@id/llRoot"
               android:background="@color/setting_bg_color"
-              android:layout_width="fill_parent"
-              android:layout_height="fill_parent">
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
 
     <RelativeLayout
             android:id="@id/llTop"
             android:background="@color/setting_title_bg_color"
-            android:layout_width="fill_parent"
+            android:layout_width="match_parent"
             android:layout_height="64.0dip"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true">
@@ -29,7 +29,7 @@
                 android:id="@id/ll_icon_title"
                 android:background="@drawable/titlebar_leftbt_selector_10500"
                 android:layout_width="wrap_content"
-                android:layout_height="fill_parent"
+                android:layout_height="match_parent"
                 android:layout_centerVertical="true">
 
             <ImageView
@@ -54,7 +54,7 @@
 
             <Space
                     android:layout_width="@dimen/text_34dp"
-                    android:layout_height="fill_parent"/>
+                    android:layout_height="match_parent"/>
         </LinearLayout>
 
         <TextView
@@ -77,7 +77,7 @@
                 android:paddingLeft="24.0dip"
                 android:paddingRight="24.0dip"
                 android:layout_width="78.0dip"
-                android:layout_height="fill_parent"
+                android:layout_height="match_parent"
                 android:layout_marginRight="16.0dip"
                 android:src="@drawable/question_mark"
                 android:scaleType="centerInside"
@@ -88,7 +88,7 @@
                 android:paddingLeft="24.0dip"
                 android:paddingRight="24.0dip"
                 android:layout_width="78.0dip"
-                android:layout_height="fill_parent"
+                android:layout_height="match_parent"
                 android:text="download"
                 android:layout_toLeftOf="@id/btn_hint"
                 android:layout_alignParentRight="false"
@@ -97,13 +97,13 @@
 
     <View
             android:background="@color/setting_line_color"
-            android:layout_width="fill_parent"
+            android:layout_width="match_parent"
             android:layout_height="1.0dip"/>
 
     <RelativeLayout
             android:id="@id/rlContent"
             android:background="@color/setting_bg_color"
-            android:layout_width="fill_parent"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
         <RelativeLayout
@@ -322,7 +322,7 @@
                     android:id="@id/tv_register_tips"
                     android:visibility="gone"
                     android:layout_width="wrap_content"
-                    android:layout_height="fill_parent"
+                    android:layout_height="match_parent"
                     android:text="@string/pos_register_account_tips"
                     android:layout_alignParentBottom="true"/>
         </RelativeLayout>
@@ -333,7 +333,7 @@
             android:id="@id/myKeyBoard"
             android:paddingLeft="5.0dip"
             android:paddingRight="5.0dip"
-            android:layout_width="fill_parent"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             />
 </LinearLayout>

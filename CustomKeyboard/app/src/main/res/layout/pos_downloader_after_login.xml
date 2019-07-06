@@ -16,8 +16,8 @@
     <LinearLayout
             android:gravity="center"
             android:orientation="vertical"
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent">
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
         <TextView
                 android:textSize="35.0sp"
@@ -77,7 +77,7 @@
                 android:text="@string/sync_ing"/>
 
         <View
-                android:layout_width="fill_parent"
+                android:layout_width="match_parent"
                 android:layout_height="65.0dip"/>
     </LinearLayout>
 </LinearLayout>

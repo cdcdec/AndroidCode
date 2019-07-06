@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                android:layout_width="fill_parent"
-                android:layout_height="fill_parent">
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
     <TextView
             android:gravity="center|left"
             android:id="@id/item_layout_tv_left"
             android:layout_width="150.0dip"
-            android:layout_height="fill_parent"
+            android:layout_height="match_parent"
             android:layout_marginLeft="24.0dip"
             android:singleLine="true"
             android:layout_alignParentLeft="true"
@@ -18,8 +18,8 @@
             android:gravity="center|right"
             android:id="@id/item_layout_tv_right"
             android:paddingRight="11.0dip"
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:layout_marginRight="36.0dip"
             android:singleLine="true"
             android:layout_toRightOf="@id/item_layout_tv_left"

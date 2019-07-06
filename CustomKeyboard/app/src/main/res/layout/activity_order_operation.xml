@@ -3,14 +3,14 @@
               style="@style/grey_background">
 
     <ScrollView
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:layout_weight="1.0">
 
         <LinearLayout
                 android:orientation="vertical"
-                android:layout_width="fill_parent"
-                android:layout_height="fill_parent">
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
             <LinearLayout
                     android:id="@id/o_focus"
@@ -23,7 +23,7 @@
             <LinearLayout
                     android:gravity="center"
                     android:orientation="vertical"
-                    android:layout_width="fill_parent"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     style="@style/showinfoarea_layout_style">
 
@@ -32,7 +32,7 @@
                         android:orientation="vertical"
                         android:background="@drawable/corner_round_title_bg"
                         android:padding="5.0dip"
-                        android:layout_width="fill_parent"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content">
 
                     <TextView
@@ -48,7 +48,7 @@
                         android:orientation="horizontal"
                         android:paddingTop="7.0dip"
                         android:paddingBottom="7.0dip"
-                        android:layout_width="fill_parent"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         style="@style/border_style_manuel">
 
@@ -77,7 +77,7 @@
                         android:orientation="horizontal"
                         android:paddingTop="7.0dip"
                         android:paddingBottom="7.0dip"
-                        android:layout_width="fill_parent"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         style="@style/border_style_manuel">
 
@@ -108,7 +108,7 @@
                         android:orientation="horizontal"
                         android:paddingTop="7.0dip"
                         android:paddingBottom="7.0dip"
-                        android:layout_width="fill_parent"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         style="@style/border_style_manuel">
 
@@ -138,7 +138,7 @@
                         android:orientation="horizontal"
                         android:paddingTop="7.0dip"
                         android:paddingBottom="7.0dip"
-                        android:layout_width="fill_parent"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         style="@style/border_style_manuel">
 
@@ -169,7 +169,7 @@
                         android:orientation="horizontal"
                         android:paddingTop="7.0dip"
                         android:paddingBottom="7.0dip"
-                        android:layout_width="fill_parent"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         style="@style/border_style_manuel">
 
@@ -200,7 +200,7 @@
             <LinearLayout
                     android:gravity="center"
                     android:orientation="vertical"
-                    android:layout_width="fill_parent"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     style="@style/showinfoarea_layout_style">
 
@@ -209,7 +209,7 @@
                         android:orientation="vertical"
                         android:background="@drawable/corner_round_title_bg"
                         android:padding="5.0dip"
-                        android:layout_width="fill_parent"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content">
 
                     <TextView
@@ -223,7 +223,7 @@
 
                 <LinearLayout
                         android:orientation="horizontal"
-                        android:layout_width="fill_parent"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         style="@style/border_style_manuel">
 
@@ -261,7 +261,7 @@
 
                 <LinearLayout
                         android:orientation="horizontal"
-                        android:layout_width="fill_parent"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         style="@style/border_style_manuel">
 
@@ -302,7 +302,7 @@
 
                 <LinearLayout
                         android:orientation="horizontal"
-                        android:layout_width="fill_parent"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         style="@style/border_style_manuel">
 
@@ -332,7 +332,7 @@
 
                 <LinearLayout
                         android:orientation="horizontal"
-                        android:layout_width="fill_parent"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         style="@style/border_style_manuel">
 
@@ -348,7 +348,7 @@
 
                 <LinearLayout
                         android:orientation="horizontal"
-                        android:layout_width="fill_parent"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         style="@style/border_style_manuel">
 
@@ -372,7 +372,7 @@
                 <LinearLayout
                         android:orientation="vertical"
                         android:visibility="gone"
-                        android:layout_width="fill_parent"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content">
 
                     <TextView
@@ -393,7 +393,7 @@
             android:gravity="center"
             android:orientation="horizontal"
             android:padding="10.0dip"
-            android:layout_width="fill_parent"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="0.0">
 

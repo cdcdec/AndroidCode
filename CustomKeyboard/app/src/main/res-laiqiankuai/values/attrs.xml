@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ivTvLin">
+        <attr name = "ivLeftSrc" format = "reference" />
+        <attr name = "ivRightSrc" format = "reference" />
+        <attr name="tvLeft" format="string|reference"></attr>
+        <attr name="tvLeft2" format="string|reference"></attr>
+        <attr name="tvLeft3" format="string|reference"></attr>
+
+        <attr name="show_views">
+            <flag name="left_text" value="0x01" />
+            <flag name="left_img" value="0x02" />
+            <flag name="right_text" value="0x04" />
+            <flag name="right_img" value="0x08" />
+            <flag name="center_text" value="0x10" />
+            <flag name="center_img" value="0x20" />
+        </attr>
+    </declare-styleable>
+</resources>

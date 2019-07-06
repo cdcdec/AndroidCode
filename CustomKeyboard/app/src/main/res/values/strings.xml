@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
     <string name="BPartnerType">会员类型</string>
-    <string name="BRAND_NAME">来钱快 · 餐饮版</string>
-    <string name="CONTACT_about">"公司：杭州萨宝科技有限公司
+    <string name="BRAND_NAME">酷软收银</string>
+    <string name="CONTACT_about">"公司：酷软网络科技有限公司
 全国客服：400 998 1300
 电子邮箱：i@91laiqian.com
 客服qq群：413438511

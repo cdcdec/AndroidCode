@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
                 android:background="@color/setting_bg_color"
-                android:layout_width="fill_parent"
-                android:layout_height="fill_parent">
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
     <LinearLayout
             android:orientation="vertical"
             android:id="@+id/leftAliOrder"
             android:layout_width="250.0dip"
-            android:layout_height="fill_parent">
+            android:layout_height="match_parent">
 
         <TextView
                 android:textSize="16.0dip"
@@ -104,13 +104,13 @@
             android:id="@id/line"
             android:background="@color/setting_line_color"
             android:layout_width="1.0px"
-            android:layout_height="fill_parent"
+            android:layout_height="match_parent"
             android:layout_toRightOf="@id/leftAliOrder"/>
 
     <com.cdc.keyboard.ui.webview.SimplePosWebViewLinearLayout
             android:orientation="vertical"
             android:id="@id/show_webview"
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:layout_toRightOf="@id/line"/>
 </RelativeLayout>

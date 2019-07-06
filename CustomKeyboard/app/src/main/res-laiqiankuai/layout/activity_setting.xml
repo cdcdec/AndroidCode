@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:background="@color/setting_bg_color"
+              tools:context="com.cdc.keyboard.activities.SettingActivity"
+              android:layout_height="match_parent"
+              android:layout_width="match_parent"
+        >
+
+    <RelativeLayout
+            android:background="@color/setting_title_bg_color"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/w75_4">
+
+        <LinearLayout
+                android:id="@+id/settingTitleBarBackBtnLin"
+                android:orientation="horizontal"
+                android:background="@drawable/titlebar_leftbt_selector_10500"
+                android:paddingLeft="@dimen/w32_4"
+                android:paddingRight="@dimen/w32_4"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:onClick="closeActivity">
+
+            <View
+                    android:background="@drawable/main_setting_back_button"
+                    android:layout_width="@dimen/w13_8"
+                    android:layout_height="@dimen/w22_4"
+                    android:layout_gravity="center_vertical"
+                    />
+
+            <TextView
+                    android:id="@+id/settingTitleTv"
+                    android:text="@string/main_setting_title"
+                    android:textSize="@dimen/wsp21"
+                    android:textColor="@color/pos_text_black"
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/w32_4"
+                    android:layout_centerVertical="true"
+                    />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+                android:gravity="center|right"
+                android:layout_width="@dimen/w666_0"
+                android:layout_height="match_parent"
+                android:layout_marginRight="@dimen/w11_0"
+                android:layout_alignParentRight="true">
+
+            <LinearLayout
+                    android:gravity="center_vertical"
+                    android:id="@+id/settingTopRightLin"
+                    android:background="@drawable/titlebar_leftbt_selector_10500"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+
+                <ImageView
+                        android:layout_width="@dimen/w40_4"
+                        android:layout_height="@dimen/w40_4"
+                        android:layout_marginLeft="@dimen/w32_4"
+                        android:layout_marginRight="@dimen/w19_0"
+                        android:src="@drawable/pos_um_not_on_line"/>
+
+                <TextView
+                        android:textSize="@dimen/wsp21"
+                        android:textColor="@color/setting_text_color1"
+                        android:ellipsize="end"
+                        android:id="@+id/settingTopRightTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/w32_4"
+                        android:text="@string/wei_order_setting"
+                        android:singleLine="true"/>
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <View
+            android:background="@color/setting_line_color"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/w1_8"
+            android:layout_alignParentBottom="true"/>
+
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <ScrollView
+                android:scrollbarStyle="outsideOverlay"
+                android:id="@+id/leftScroll"
+                android:layout_width="@dimen/w333_2"
+                android:layout_height="match_parent"
+                style="@style/main_setting_scrollview_style">
+
+            <LinearLayout
+                    android:orientation="vertical"
+                    android:id="@+id/leftScrollLin"
+                    android:paddingTop="@dimen/w5_4"
+                    android:layout_width="@dimen/w333_2"
+                    android:layout_height="wrap_content">
+
+
+                <com.cdc.keyboard.ui.linearlayout.TvIvLinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/w75_0"
+                        android:minHeight="@dimen/w75_0"
+                        app:ivLeftSrc="@drawable/setting_report"
+                        app:tvLeft="@string/main_menu_category_report"
+                        />
+
+                <View
+                        android:background="@color/setting_line_color"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/w1_8"
+                        android:layout_marginTop="@dimen/w5_4"
+                        android:layout_marginBottom="@dimen/w5_4"/>
+
+                <com.cdc.keyboard.ui.linearlayout.TvIvLinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/w75_0"
+                        android:minHeight="@dimen/w75_0"
+                        app:ivLeftSrc="@drawable/setting_take_out_food"
+                        app:tvLeft="@string/order_wm_btn"
+                        />
+
+                <com.cdc.keyboard.ui.linearlayout.TvIvLinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/w75_0"
+                        android:minHeight="@dimen/w75_0"
+                        app:ivLeftSrc="@drawable/setting_wechats"
+                        app:tvLeft="@string/pos_main_setting_wechat_title"
+                        />
+
+                <com.cdc.keyboard.ui.linearlayout.TvIvLinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/w75_0"
+                        android:minHeight="@dimen/w75_0"
+                        app:ivLeftSrc="@drawable/setting_alipay"
+                        app:tvLeft="@string/pos_main_pay_payment_alipay"
+                        />
+                <View
+                        android:background="@color/setting_line_color"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/w1_8"
+                        android:layout_marginTop="@dimen/w5_4"
+                        android:layout_marginBottom="@dimen/w5_4"/>
+
+                <com.cdc.keyboard.ui.linearlayout.TvIvLinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/w75_0"
+                        android:minHeight="@dimen/w75_0"
+                        app:ivLeftSrc="@drawable/setting_order_dishes"
+                        app:tvLeft="@string/pos_main_setting_meal_order"
+                        />
+
+                <com.cdc.keyboard.ui.linearlayout.TvIvLinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/w75_0"
+                        android:minHeight="@dimen/w75_0"
+                        app:ivLeftSrc="@drawable/setting_member"
+                        app:tvLeft="@string/member_text"
+                        />
+
+                <com.cdc.keyboard.ui.linearlayout.TvIvLinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/w75_0"
+                        android:minHeight="@dimen/w75_0"
+                        app:ivLeftSrc="@drawable/user_and_permission"
+                        app:tvLeft="@string/sj_product"
+                        />
+                <View
+                        android:background="@color/setting_line_color"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/w1_8"
+                        android:layout_marginTop="@dimen/w5_4"
+                        android:layout_marginBottom="@dimen/w5_4"/>
+
+                <com.cdc.keyboard.ui.linearlayout.TvIvLinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/w75_0"
+                        android:minHeight="@dimen/w75_0"
+                        app:ivLeftSrc="@drawable/printer_and_display"
+                        app:tvLeft="@string/mainmenu_print_customer_display_setting"
+                        />
+
+                <com.cdc.keyboard.ui.linearlayout.TvIvLinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/w75_0"
+                        android:minHeight="@dimen/w75_0"
+                        app:ivLeftSrc="@drawable/cashier_set_icon"
+                        app:tvLeft="@string/pos_main_setting_cash_setting_title"
+                        />
+
+                <com.cdc.keyboard.ui.linearlayout.TvIvLinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/w75_0"
+                        android:minHeight="@dimen/w75_0"
+                        app:ivLeftSrc="@drawable/pos_wallet_icon"
+                        app:tvLeft="@string/pos_wallet"
+                        />
+                <View
+                        android:background="@color/setting_line_color"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/w1_8"
+                        android:layout_marginTop="@dimen/w5_4"
+                        android:layout_marginBottom="@dimen/w5_4"/>
+
+                <com.cdc.keyboard.ui.linearlayout.TvIvLinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/w75_0"
+                        android:minHeight="@dimen/w75_0"
+                        app:ivLeftSrc="@drawable/data_backup"
+                        app:tvLeft="@string/pos_main_setting_backup_delete_data_title"
+                        />
+
+                <com.cdc.keyboard.ui.linearlayout.TvIvLinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/w75_0"
+                        android:minHeight="@dimen/w75_0"
+                        app:ivLeftSrc="@drawable/about_cloud_pos"
+                        app:tvLeft="@string/pos_main_setting_about_title"
+                        />
+
+            </LinearLayout>
+        </ScrollView>
+
+        <View
+                android:background="@color/setting_line_color"
+                android:layout_width="@dimen/w1_8"
+                android:layout_height="match_parent"/>
+
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            <ScrollView
+                    android:id="@id/svMainSettingParent"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fillViewport="true"
+                    style="@style/main_setting_scrollview_style">
+
+                <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                    <FrameLayout
+                            android:id="@id/flMainSetting"
+                            android:paddingTop="@dimen/w11_0"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+
+                    <LinearLayout
+                            android:orientation="vertical"
+                            android:id="@id/svMainSetting"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+
+                    <FrameLayout
+                            android:id="@id/flMainSettingBottom"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"/>
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

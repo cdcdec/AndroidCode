@@ -1,0 +1,1055 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/mainRoot"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+    <!--顶部左侧 显示 外卖  设置  更多-->
+    <RelativeLayout
+            android:id="@+id/mainTopLeft"
+            android:background="@color/setting_title_bg_color"
+            android:layout_width="@dimen/w533_0"
+            android:layout_height="@dimen/w85_4"
+            android:visibility="visible">
+
+        <com.assistne.icondottextview.IconDotTextView
+                android:id="@+id/topLeft1"
+                android:background="@drawable/setting_button_selector_10500"
+                android:layout_width="@dimen/w186_8"
+                android:layout_height="@dimen/w64_4"
+                android:layout_centerVertical="true"
+                app:direction="row"
+                app:dot_alignToIcon="false"
+                app:dot_color="@color/red_color_10500"
+                app:dot_visible="false"
+                app:icon="@drawable/pos_logo2"
+                app:icon_height="@dimen/w48_4"
+                app:icon_width="@dimen/w48_4"
+                app:spacing="@dimen/w11_0"
+                app:text="@string/nus_noti_title"
+                app:textColor="@color/setting_text_color1"
+                app:textSize="@dimen/wsp20"/>
+
+        <com.assistne.icondottextview.IconDotTextView
+                android:textSize="@dimen/wsp14"
+                android:id="@id/NewsFrame"
+                android:visibility="gone"
+                android:layout_toLeftOf="@id/weiXinFrameIdTv"
+                app:dot_color="@color/red_color_10500"
+                app:icon="@drawable/icon_news"
+                app:icon_height="@dimen/w35_0"
+                app:icon_width="@dimen/w35_0"
+                app:text="@string/orders"
+                app:textColor="@color/setting_text_color1"
+                android:background="@drawable/pos_simple_click_background"
+                android:layout_width="@dimen/w77_8"
+                android:layout_height="match_parent"
+                android:paddingBottom="@dimen/w16_0"
+                />
+
+        <com.assistne.icondottextview.IconDotTextView
+                android:textSize="@dimen/wsp14"
+                android:id="@+id/weiXinFrameIdTv"
+                android:layout_toLeftOf="@+id/settingsIdTv"
+                android:visibility="visible"
+                app:dot_alignTo="right|top"
+                app:dot_color="@color/red_color_10500"
+                app:dot_visible="true"
+                app:icon="@drawable/mail_10500"
+                app:icon_height="@dimen/w35_0"
+                app:icon_width="@dimen/w35_0"
+                app:text="@string/takeway"
+                app:textColor="@color/setting_text_color1"
+                android:background="@drawable/pos_simple_click_background"
+                android:layout_width="@dimen/w77_8"
+                android:layout_height="match_parent"
+                android:paddingBottom="@dimen/w16_0"/>
+
+        <com.assistne.icondottextview.IconDotTextView
+                android:textSize="@dimen/wsp14"
+                android:id="@id/settingsIdTv"
+                android:layout_toLeftOf="@id/moreButtonParent"
+                app:dot_color="@color/red_color_10500"
+                app:icon="@drawable/setting_10500"
+                app:icon_height="@dimen/w35_0"
+                app:icon_width="@dimen/w35_0"
+                app:text="@string/setting"
+                app:textColor="@color/setting_text_color1"
+                android:background="@drawable/pos_simple_click_background"
+                android:layout_width="@dimen/w77_8"
+                android:layout_height="match_parent"
+                android:paddingBottom="@dimen/w16_0"
+                android:onClick="settingsIdTvClick"
+                />
+
+        <com.assistne.icondottextview.IconDotTextView
+                android:textSize="@dimen/wsp14"
+                android:id="@+id/moreButtonParent"
+                android:layout_alignParentRight="true"
+                app:dot_color="@color/red_color_10500"
+                app:icon="@drawable/more_10500"
+                app:icon_height="@dimen/w35_0"
+                app:icon_width="@dimen/w35_0"
+                app:text="@string/pos_more"
+                app:textColor="@color/setting_text_color1"
+                android:background="@drawable/pos_simple_click_background"
+                android:layout_width="@dimen/w77_8"
+                android:layout_height="match_parent"
+                android:paddingBottom="@dimen/w16_0"/>
+
+        <com.assistne.icondottextview.IconDotTextView
+                android:textSize="@dimen/wsp14"
+                android:id="@+id/telephoneFrameIdTv"
+                android:layout_toLeftOf="@id/weiXinFrameIdTv"
+                app:dot_color="@color/red_color_10500"
+                app:icon="@drawable/phone_order"
+                android:visibility="gone"
+                app:icon_height="@dimen/w35_0"
+                app:icon_width="@dimen/w35_0"
+                app:textColor="@color/setting_text_color1"
+                android:background="@drawable/pos_simple_click_background"
+                android:layout_width="@dimen/w77_8"
+                android:layout_height="match_parent"
+                android:paddingBottom="@dimen/w16_0"/>
+
+        <com.assistne.icondottextview.IconDotTextView
+                android:textSize="@dimen/wsp14"
+                android:id="@+id/queuingMachineVoiceIdTv"
+                android:layout_toLeftOf="@id/weiXinFrameIdTv"
+                app:dot_color="@color/red_color_10500"
+                app:icon="@drawable/queuing_machine_voice"
+                app:icon_height="@dimen/w35_0"
+                app:icon_width="@dimen/w35_0"
+                android:visibility="gone"
+                app:text="@string/call_take_dinner"
+                app:textColor="@color/setting_text_color1"
+                android:background="@drawable/pos_simple_click_background"
+                android:layout_width="@dimen/w77_8"
+                android:layout_height="match_parent"
+                android:paddingBottom="@dimen/w16_0"/>
+
+        <View
+                android:id="@id/view"
+                android:background="@color/pos_activity_main_split_line"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/w1_8"
+                android:layout_alignParentBottom="true"/>
+
+    </RelativeLayout>
+    <!--顶部左侧 显示 外卖  设置  更多的位置  显示  开台后的位置  人数  开台时间 开单人等信息-->
+    <RelativeLayout
+            android:id="@+id/rlOpenTableInfo"
+            android:background="@color/setting_title_bg_color"
+            android:visibility="gone"
+            android:layout_width="@dimen/w533_0"
+            android:layout_height="@dimen/w85_4">
+
+        <View
+                android:id="@+id/vOpenTakeReturn"
+                android:background="@drawable/open_table_result"
+                android:layout_width="@dimen/w27_0"
+                android:layout_height="@dimen/w27_0"
+                android:layout_marginLeft="@dimen/w27_0"
+                android:layout_marginTop="@dimen/w13_8"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"/>
+
+        <View
+                android:id="@+id/vOpenTakeHint"
+                android:background="@drawable/open_table_order"
+                android:layout_width="@dimen/w35_0"
+                android:layout_height="@dimen/w35_0"
+                android:layout_marginLeft="@dimen/w27_0"
+                android:layout_marginTop="@dimen/w8_4"
+                android:layout_toRightOf="@id/vOpenTakeReturn"
+                android:layout_alignParentTop="true"/>
+
+        <TextView
+                android:textSize="@dimen/wsp16"
+                android:textStyle="bold"
+                android:textColor="@color/pos_text_red"
+                android:ellipsize="end"
+                android:id="@+id/areaTableInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/w13_8"
+                android:layout_marginTop="@dimen/w13_8"
+                android:layout_marginRight="@dimen/w200_0"
+                android:text="大厅102"
+                android:maxLines="2"
+                android:layout_toRightOf="@id/vOpenTakeHint"
+                android:layout_alignParentTop="true"/>
+
+        <TextView
+                android:textSize="@dimen/wsp16"
+                android:textColor="@color/text_color_grey"
+                android:ellipsize="start"
+                android:id="@+id/drawerInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/w27_0"
+                android:layout_marginRight="@dimen/w200_0"
+                android:layout_marginBottom="@dimen/w7_0"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentBottom="true"/>
+
+        <TextView
+                android:textSize="@dimen/wsp20"
+                android:textColor="@color/pos_text_red"
+                android:id="@+id/personUnit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/w7_0"
+                android:layout_marginRight="@dimen/w13_8"
+                android:text="@string/pos_shop_info_staff_count_unit"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"/>
+
+        <TextView
+                android:textSize="@dimen/wsp20"
+                android:textColor="@color/pos_text_red"
+                android:id="@+id/personInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/w7_0"
+                android:text="4"
+                android:layout_toLeftOf="@id/personUnit"
+                android:layout_alignParentTop="true"/>
+
+        <TextView
+                android:textSize="@dimen/wsp15"
+                android:textColor="@color/setting_text_color2"
+                android:id="@+id/timeInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/w13_8"
+                android:layout_marginBottom="@dimen/w7_0"
+                android:text="2016.10.13 18:59"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"/>
+
+        <View
+                android:id="@+id/viewLine"
+                android:background="@color/pos_activity_main_split_line"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/w1_8"
+                android:layout_alignParentBottom="true"/>
+    </RelativeLayout>
+    <!--界面左右两侧 间的分割线-->
+    <View
+            android:id="@+id/centerLine"
+            android:background="@color/pos_activity_main_split_line"
+            android:layout_width="@dimen/w1_8"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@id/mainTopLeft"/>
+    <!--顶部左侧 显示 外卖  设置  更多，位置的下面  显示 退货模式  取消-->
+    <RelativeLayout
+            android:id="@+id/saleReturnButtonRel"
+            android:background="@color/setting_bg_color"
+            android:paddingLeft="@dimen/w32_4"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/w64_4"
+            android:layout_toLeftOf="@id/centerLine"
+            android:layout_below="@id/mainTopLeft">
+
+        <View
+                android:id="@+id/phoneTakeoutIcon"
+                android:background="@drawable/phone_red"
+                android:visibility="gone"
+                android:layout_width="@dimen/w40_4"
+                android:layout_height="@dimen/w41_6"
+                android:layout_marginRight="@dimen/w23_0"
+                android:layout_centerVertical="true"/>
+
+        <TextView
+                android:textSize="@dimen/wsp20"
+                android:textColor="@color/text_green_black"
+                android:id="@+id/saleReturnLab"
+                android:duplicateParentState="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/pos_cancel_sale_return"
+                android:layout_toRightOf="@id/phoneTakeoutIcon"
+                android:layout_centerVertical="true"/>
+
+        <TextView
+                android:textSize="@dimen/wsp20"
+                android:textColor="@color/text_green_black"
+                android:gravity="center"
+                android:id="@+id/saleReturnButton"
+                android:background="@drawable/product_btn_selector_1033"
+                android:paddingLeft="@dimen/w32_4"
+                android:paddingRight="@dimen/w32_4"
+                android:duplicateParentState="true"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/pos_dialog_confirm_no"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"/>
+
+        <View
+                android:background="@color/setting_line_color"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/w1_8"
+                android:layout_marginRight="@dimen/w32_4"
+                android:layout_alignParentBottom="true"/>
+    </RelativeLayout>
+
+    <!--顶部左侧 显示 外卖  设置  更多，位置的下面  显示内容未知-->
+    <LinearLayout
+            android:orientation="vertical"
+            android:id="@+id/linTableNumber"
+            android:background="@drawable/pos_activity_selected_item_background"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/centerLine"
+            android:layout_below="@id/saleReturnButtonRel">
+
+        <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerTableNumber"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/w100_0"
+                android:layout_marginTop="@dimen/w8_4"
+                android:layout_marginBottom="@dimen/w8_4"/>
+
+        <View
+                android:background="@color/line_color"
+                android:layout_width="match_parent"
+                android:layout_height="1.0px"/>
+    </LinearLayout>
+
+    <!--左侧 底部 属性 称重  这里是总金额 等按钮 -->
+    <LinearLayout
+            android:orientation="horizontal"
+            android:id="@+id/bottomOperation"
+            android:background="@color/setting_title_bg_color"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/w85_6"
+            android:layout_alignRight="@id/mainTopLeft"
+            android:layout_alignParentBottom="true">
+
+        <LinearLayout
+                android:orientation="horizontal"
+                android:id="@+id/orderOpenTable"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+            <com.assistne.icondottextview.IconDotTextView
+                    android:id="@+id/productAreaPrint"
+                    android:layout_marginLeft="@dimen/w11_0"
+                    android:layout_marginBottom="@dimen/w27_0"
+                    app:icon="@drawable/icon_printer"
+                    app:icon_height="@dimen/w35_0"
+                    app:icon_width="@dimen/w35_0"
+                    app:text="@string/print"
+                    app:textColor="@color/setting_text_color1"
+                    app:textSize="@dimen/wsp14"
+                    style="@style/pos_activity_button_has_icon"/>
+
+            <com.assistne.icondottextview.IconDotTextView
+                    android:id="@id/addition_and_subtraction_button"
+                    android:layout_marginBottom="@dimen/w27_0"
+                    app:icon="@drawable/add_sub_dish"
+                    app:icon_height="@dimen/w35_0"
+                    app:icon_width="@dimen/w35_0"
+                    app:text="@string/add_and_subtract"
+                    app:textColor="@color/pos_text_red"
+                    app:textSize="@dimen/wsp14"
+                    android:background="@drawable/pos_simple_click_background"
+                    android:layout_width="@dimen/w77_6"
+                    android:layout_height="match_parent"
+                    />
+        </LinearLayout>
+        <!--左侧 底部 属性 称重 等按钮 -->
+        <LinearLayout
+                android:orientation="horizontal"
+                android:id="@+id/orderSimple"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+            <com.assistne.icondottextview.IconDotTextView
+                    android:id="@+id/productDeleteButton"
+                    android:layout_marginLeft="@dimen/w11_0"
+                    android:layout_marginBottom="@dimen/w27_0"
+                    app:icon="@drawable/delete_10500"
+                    app:icon_height="@dimen/w35_0"
+                    app:icon_width="@dimen/w35_0"
+                    app:text="@string/pos_delete_title_delete"
+                    app:textColor="@color/setting_text_color1"
+                    app:textSize="@dimen/wsp14"
+                    style="@style/pos_activity_button_has_icon"/>
+
+            <com.assistne.icondottextview.IconDotTextView
+                    android:id="@+id/attributeButton"
+                    android:layout_marginBottom="@dimen/w27_0"
+                    app:icon="@drawable/taste_10500"
+                    app:icon_height="@dimen/w35_0"
+                    app:icon_width="@dimen/w35_0"
+                    app:text="@string/pos_product_attribute_rule_simple"
+                    app:textColor="@color/setting_text_color1"
+                    app:textSize="@dimen/wsp14"
+                    style="@style/pos_activity_button_has_icon"/>
+
+            <LinearLayout
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:id="@+id/takeOrdersButton"
+                    android:visibility="gone"
+                    style="@style/pos_activity_button_has_icon">
+
+                <TextView
+                        android:textSize="@dimen/wsp14"
+                        android:textColor="@color/result_text"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:id="@+id/takeOrdersCount"
+                        android:background="@drawable/pos_hold_orders_count"
+                        android:layout_width="@dimen/w35_0"
+                        android:layout_height="@dimen/w35_0"/>
+
+                <TextView
+                        android:textSize="@dimen/wsp14"
+                        android:textColor="@color/setting_text_color1"
+                        android:gravity="center_horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/pos_hold_title"/>
+            </LinearLayout>
+
+            <com.assistne.icondottextview.IconDotTextView
+                    android:id="@+id/weighButton"
+                    android:layout_marginBottom="@dimen/w27_0"
+                    app:icon="@drawable/weigh"
+                    app:icon_height="@dimen/w35_0"
+                    app:icon_width="@dimen/w35_0"
+                    app:text="@string/weigh_button"
+                    app:textColor="@color/setting_text_color1"
+                    app:textSize="@dimen/wsp14"
+                    style="@style/pos_activity_button_has_icon"/>
+        </LinearLayout>
+        <!--左侧 底部 这里是总金额  按钮 -->
+        <LinearLayout
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                android:id="@id/tvSum_l"
+                android:layout_width="0.0dip"
+                android:layout_height="match_parent"
+                android:layout_marginRight="@dimen/w32_4"
+                android:layout_weight="1.0">
+
+            <TextView
+                    android:textSize="21.0dip"
+                    android:textColor="@color/pos_text_grey"
+                    android:gravity="right"
+                    android:id="@id/tvSumTax"
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+            <TextView
+                    android:textSize="21.0dip"
+                    android:textColor="@color/pos_text_red"
+                    android:ellipsize="end"
+                    android:gravity="right"
+                    android:id="@id/tvSumAmount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="这里是总金额"
+                    android:maxLines="2"/>
+        </LinearLayout>
+    </LinearLayout>
+    <!--顶部左侧 显示 外卖  设置  更多，位置的下面  显示内容未知linTableNumber linTableNumber布局的下面  显示的列表   -->
+    <ListView
+            android:id="@+id/productBodySelected"
+            android:background="@color/setting_bg_color"
+            android:choiceMode="singleChoice"
+            android:layout_toLeftOf="@id/centerLine"
+            android:layout_above="@+id/bottomLine"
+            android:layout_below="@id/linTableNumber"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+
+    <!--bottomOperation布局上面  的水平线-->
+    <View
+            android:id="@id/bottomLine"
+            android:background="@color/pos_activity_main_split_line"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/w1_8"
+            android:layout_above="@id/bottomOperation"/>
+
+    <!--将bottomOperation布局遮住的布局  -->
+    <View
+            android:id="@+id/openTableBottomView"
+            android:background="@color/white_color_1033"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/w87_0"
+            android:layout_toLeftOf="@id/centerLine"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"/>
+    <!--右侧 布局  宽度占满  高度 内容适应  默认显示  -->
+
+ <!--   android:background="@color/pos_big_b_color_10800"-->
+    <FrameLayout
+            android:id="@+id/productTypeBody"
+            android:background="@color/pos_big_b_color_10800"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/centerLine"/>
+    <!--右侧 布局  宽度占满  高度 内容适应  默认占位 但是不显示  -->
+    <FrameLayout
+            android:id="@+id/areaTableBody"
+            android:background="@color/pos_big_b_color_10800"
+            android:visibility="invisible"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/centerLine"/>
+
+    <!--productTypeBody布局下面显示的一条水平线-->
+    <View
+            android:background="@color/pos_activity_main_split_line"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/w1_8"
+            android:layout_alignLeft="@id/productTypeBody"
+            android:layout_alignBottom="@id/productTypeBody"/>
+<!--productTypeBody左侧上面的加号按钮-->
+    <com.assistne.icondottextview.IconDotTextView
+            android:id="@+id/productAreaNoDataAdd"
+            android:background="@color/pos_red_blackground"
+            android:paddingBottom="@dimen/w27_0"
+            android:visibility="gone"
+            android:layout_width="@dimen/w140_0"
+            android:layout_height="@dimen/w85_6"
+            android:layout_alignLeft="@id/productTypeBody"
+            android:layout_alignTop="@id/productTypeBody"
+            app:icon="@drawable/add_type_up"
+            app:icon_height="@dimen/w25_8"
+            app:icon_width="@dimen/w25_8"
+            app:text="@string/pos_area_new_title_add"
+            app:textColor="@color/ok_text_color"
+            app:textSize="@dimen/wsp16"/>
+    <!--productTypeBody左侧上面的加号按钮-->
+    <com.assistne.icondottextview.IconDotTextView
+            android:id="@+id/productTypeNoDataAdd"
+            android:background="@color/pos_red_blackground"
+            android:paddingBottom="@dimen/w27_0"
+            android:layout_width="@dimen/w140_0"
+            android:layout_height="@dimen/w85_6"
+            android:layout_alignLeft="@id/productTypeBody"
+            android:layout_alignTop="@id/productTypeBody"
+            app:icon="@drawable/add_type_up"
+            app:icon_height="@dimen/w25_8"
+            app:icon_width="@dimen/w25_8"
+            app:text="@string/pos_main_create_type"
+            app:textColor="@color/ok_text_color"
+            app:textSize="@dimen/wsp16"/>
+    <!--productTypeBody左侧下面的布局  占满为止-->
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:id="@+id/productBodyC"
+            android:background="@color/pos_big_b_color_10800"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/bottomLine"
+            android:layout_below="@id/productTypeBody"
+            android:layout_alignLeft="@id/productTypeBody">
+
+        <RelativeLayout
+                android:id="@+id/productBodyRel"
+                android:background="@color/pos_big_b_color_10800"
+                android:visibility="visible"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@id/bottomLine"
+                android:layout_below="@id/productTypeBody"
+                android:layout_alignLeft="@id/productTypeBody">
+
+            <GridView
+                    android:scrollbarSize="4.0dip"
+                    android:scrollbarThumbVertical="@drawable/pos_scroll_bar_background"
+                    android:id="@+id/productBody"
+                    android:padding="0.0dip"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:listSelector="@null"
+                    android:stretchMode="columnWidth"
+                    android:numColumns="4"
+                    android:layout_above="@id/bannerTv"
+                    tools:ignore="NotSibling"/>
+
+            <TextView
+                    android:textSize="@dimen/w27_0"
+                    android:textColor="@color/setting_text_color2"
+                    android:id="@+id/productBodyNoType"
+                    android:visibility="gone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/pos_main_first_set_type"
+                    android:layout_centerInParent="true"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+                android:id="@+id/areaTableBodyRel"
+                android:background="@color/pos_big_b_color_10800"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@id/bottom_line"
+                android:layout_below="@id/productTypeBody"
+                android:layout_alignLeft="@id/productTypeBody">
+
+            <GridView
+                    android:scrollbarSize="4.0dip"
+                    android:scrollbarThumbVertical="@drawable/pos_scroll_bar_background"
+                    android:id="@+id/tableBody"
+                    android:padding="0.0dip"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:listSelector="@null"
+                    android:stretchMode="columnWidth"
+                    android:numColumns="4"
+                    android:layout_above="@id/bannerTv"
+                    tools:ignore="NotSibling"/>
+
+            <TextView
+                    android:textSize="@dimen/w27_0"
+                    android:textColor="@color/setting_text_color2"
+                    android:id="@+id/productAreaNoType"
+                    android:visibility="gone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"/>
+        </RelativeLayout>
+        <!--右下角的同步按钮-->
+        <RelativeLayout
+                android:layout_gravity="bottom|center|right"
+                android:id="@+id/relTableRefresh"
+                android:background="@drawable/white_round_item_background"
+                android:visibility="gone"
+                android:layout_width="@dimen/w80_4"
+                android:layout_height="@dimen/w80_4"
+                android:layout_margin="@dimen/w27_0"
+                android:layout_below="@id/areaTableBodyRel">
+
+            <ImageView
+                    android:id="@+id/ivTableRefresh"
+                    android:background="@drawable/table_refresh"
+                    android:layout_width="@dimen/w60_4"
+                    android:layout_height="@dimen/w60_4"
+                    android:layout_centerInParent="true"/>
+        </RelativeLayout>
+
+        <!--打印 设置上面 占满右侧宽度的TextView 背景是红色的 -->
+        <TextView
+                android:textSize="@dimen/w27_0"
+                android:textColor="@color/pos_text_white"
+                android:gravity="center"
+                android:visibility="gone"
+                android:layout_gravity="bottom"
+                android:id="@+id/bannerTv"
+                android:background="@color/red_color_10500"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/w85_6"
+                android:layout_alignParentBottom="true"/>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    <!--右侧底部  按钮  打印设置  -->
+    <LinearLayout
+            android:orientation="horizontal"
+            android:id="@+id/bottomOperationRight"
+            android:background="@color/setting_title_bg_color"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@id/centerLine"
+            android:layout_below="@id/bottomLine">
+
+        <LinearLayout
+                android:orientation="vertical"
+                android:id="@+id/printButtonLin"
+                android:background="@drawable/pos_simple_click_background"
+                android:layout_width="@dimen/w277_4"
+                android:layout_height="match_parent">
+
+            <TextView
+                    android:textSize="@dimen/w27_0"
+                    android:textColor="@color/pos_text_black"
+                    android:gravity="center"
+                    android:id="@+id/printNoData"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/pos_main_print_setting"/>
+
+            <TextView
+                    android:textSize="@dimen/w27_0"
+                    android:textColor="@color/setting_text_color1"
+                    android:gravity="center"
+                    android:id="@+id/printerTv1"
+                    android:background="@null"
+                    android:paddingLeft="@dimen/w27_0"
+                    android:paddingRight="@dimen/w27_0"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.0dip"
+                    android:drawableLeft="@drawable/pos_activity_usb_state"
+                    android:layout_weight="1.0"/>
+
+            <TextView
+                    android:textSize="@dimen/w27_0"
+                    android:textColor="@color/setting_text_color1"
+                    android:gravity="center"
+                    android:id="@+id/printerTv2"
+                    android:background="@null"
+                    android:paddingLeft="@dimen/w27_0"
+                    android:paddingRight="@dimen/w27_0"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.0dip"
+                    android:drawableLeft="@drawable/pos_activity_usb_state"
+                    android:layout_weight="1.0"/>
+
+            <TextView
+                    android:textSize="@dimen/w27_0"
+                    android:textColor="@color/setting_text_color1"
+                    android:gravity="center"
+                    android:id="@+id/printerTv3"
+                    android:background="@null"
+                    android:paddingLeft="@dimen/w27_0"
+                    android:paddingRight="@dimen/w27_0"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.0dip"
+                    android:drawableLeft="@drawable/pos_activity_usb_state"
+                    android:layout_weight="1.0"/>
+
+            <TextView
+                    android:textSize="@dimen/w27_0"
+                    android:textColor="@color/setting_text_color1"
+                    android:gravity="center"
+                    android:id="@+id/printerTv4"
+                    android:background="@null"
+                    android:paddingLeft="@dimen/w27_0"
+                    android:paddingRight="@dimen/w27_0"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.0dip"
+                    android:drawableLeft="@drawable/pos_activity_usb_state"
+                    android:layout_weight="1.0"/>
+        </LinearLayout>
+
+        <View
+                android:background="@color/pos_activity_main_split_line"
+                android:layout_width="@dimen/w1_8"
+                android:layout_height="match_parent"/>
+
+        <RelativeLayout
+                android:id="@+id/vipRel"
+                android:layout_width="@dimen/w277_4"
+                android:layout_height="match_parent">
+
+            <ImageView
+                    android:id="@+id/vipDeleteIv"
+                    android:background="@drawable/pos_simple_click_background"
+                    android:paddingLeft="@dimen/w16_4"
+                    android:paddingRight="@dimen/w16_4"
+                    android:layout_width="@dimen/w64_4"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/pos_activity_vip_delete"
+                    android:scaleType="fitCenter"
+                    android:layout_alignParentRight="true"/>
+
+            <View
+                    android:id="@+id/vipLineView"
+                    android:background="@color/pos_activity_main_split_line"
+                    android:layout_width="@dimen/w1_8"
+                    android:layout_height="30.0dip"
+                    android:layout_toLeftOf="@id/vipDeleteIv"
+                    android:layout_centerVertical="true"/>
+
+            <RelativeLayout
+                    android:id="@+id/vipInfoRel"
+                    android:paddingLeft="@dimen/w11_0"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@id/vipLineView"
+                    android:layout_centerVertical="true">
+
+                <TextView
+                        android:textColor="@color/pos_text_grey"
+                        android:id="@+id/vipPhoneLabTv"
+                        android:text="@string/pos_activity_main_vip_phone"
+                        style="@style/pos_activity_main_vip_text"/>
+
+                <TextView
+                        android:textColor="@color/pos_text_black"
+                        android:id="@+id/vipPhoneValueTv"
+                        android:layout_toRightOf="@id/vipPhoneLabTv"
+                        style="@style/pos_activity_main_vip_text"/>
+
+                <TextView
+                        android:textColor="@color/pos_text_grey"
+                        android:id="@+id/vipBalanceLabTv"
+                        android:text="@string/pos_activity_main_vip_balance"
+                        android:layout_below="@id/vipPhoneLabTv"
+                        style="@style/pos_activity_main_vip_text"/>
+
+                <TextView
+                        android:textColor="@color/pos_text_red"
+                        android:id="@+id/vipBalanceValueTv"
+                        android:layout_toRightOf="@id/vipBalanceLabTv"
+                        android:layout_alignTop="@id/vipBalanceLabTv"
+                        style="@style/pos_activity_main_vip_text"/>
+
+                <TextView
+                        android:textColor="@color/pos_text_grey"
+                        android:id="@+id/vipPointsLabTv"
+                        android:text="@string/pos_activity_main_vip_points"
+                        android:layout_below="@id/vipBalanceLabTv"
+                        style="@style/pos_activity_main_vip_text"/>
+
+                <TextView
+                        android:textColor="@color/pos_text_black"
+                        android:id="@+id/vipPointsValueTv"
+                        android:layout_toRightOf="@id/vipPointsLabTv"
+                        android:layout_alignTop="@id/vipPointsLabTv"
+                        style="@style/pos_activity_main_vip_text"/>
+            </RelativeLayout>
+
+            <LinearLayout
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:id="@+id/vipNoSelectedLin"
+                    android:background="@drawable/pos_simple_click_background_gray"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                <View
+                        android:id="@+id/vipCardReaderStatusView"
+                        android:background="@drawable/pos_activity_usb_state"
+                        android:visibility="gone"
+                        android:layout_width="@dimen/w13_8"
+                        android:layout_height="@dimen/w13_8"
+                        android:layout_marginRight="@dimen/w11_0"/>
+
+                <TextView
+                        android:textSize="@dimen/w27_0"
+                        android:textColor="@color/pos_text_black"
+                        android:visibility="visible"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/pos_member_title"/>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <View
+                android:background="@color/pos_activity_main_split_line"
+                android:layout_width="@dimen/w1_8"
+                android:layout_height="match_parent"/>
+
+        <TextView
+                android:textSize="@dimen/w27_0"
+                android:textColor="@color/pos_activity_submit_textcolor"
+                android:gravity="center"
+                android:id="@+id/settlementButtonTv"
+                android:background="@drawable/pos_activity_submit_background"
+                android:visibility="visible"
+                android:layout_width="0.0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="1.0"/>
+
+        <!--点击开台-->
+        <TextView
+                android:textSize="@dimen/w27_0"
+                android:textColor="@color/pos_activity_submit_textcolor"
+                android:gravity="center"
+                android:id="@+id/takeOrderButtonTv"
+                android:background="@drawable/pos_activity_submit_background"
+                android:visibility="gone"
+                android:layout_width="0.0dip"
+                android:layout_height="match_parent"
+                android:text="@string/pos_opentable_click_billing"
+                android:layout_weight="1.0"/>
+        <!--确定-->
+        <TextView
+                android:textSize="@dimen/w27_0"
+                android:textColor="@color/pos_activity_submit_textcolor"
+                android:gravity="center"
+                android:id="@+id/completeButtonTv"
+                android:background="@drawable/pos_activity_submit_background"
+                android:visibility="gone"
+                android:layout_width="0.0dip"
+                android:layout_height="match_parent"
+                android:text="@string/pos_opentable_complete_settlement_order"
+                android:layout_weight="1.0"/>
+    </LinearLayout>
+
+    <!--右侧 占满整个布局  搜索商品 -->
+
+    <RelativeLayout
+            android:id="@+id/productQueryRel"
+            android:background="#ffffffff"
+            android:visibility="gone"
+            android:clickable="true"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@id/centerLine">
+
+        <RelativeLayout
+                android:orientation="horizontal"
+                android:id="@+id/productQueryEditRel"
+                android:background="@color/setting_title_bg_color"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/w85_6">
+
+            <EditText
+                    android:textSize="@dimen/w27_0"
+                    android:textColor="@color/pos_text_black"
+                    android:textColorHint="@color/pos_text_grey"
+                    android:id="@+id/productQueryEdit"
+                    android:background="@drawable/pos_edit_background"
+                    android:paddingLeft="@dimen/w13_8"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/w53_6"
+                    android:layout_marginLeft="@dimen/w32_4"
+                    android:layout_weight="1.0"
+                    android:layout_toLeftOf="@id/productQueryCancelTv"
+                    android:layout_centerVertical="true"/>
+
+            <View
+                    android:id="@+id/productQueryClearView"
+                    android:background="@drawable/cancel_sale_reaturn"
+                    android:visibility="gone"
+                    android:layout_width="@dimen/w24_4"
+                    android:layout_height="@dimen/w24_4"
+                    android:layout_marginRight="@dimen/w16_4"
+                    android:layout_alignRight="@id/productQueryEdit"
+                    android:layout_centerVertical="true"/>
+
+            <TextView
+                    android:textSize="@dimen/w27_0"
+                    android:textColor="@color/pos_text_black"
+                    android:gravity="center_vertical"
+                    android:id="@+id/productQueryCancelTv"
+                    android:background="@drawable/pos_simple_click_background"
+                    android:paddingLeft="@dimen/w32_4"
+                    android:paddingRight="@dimen/w32_4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="@string/cancelButton"
+                    android:layout_alignParentRight="true"/>
+        </RelativeLayout>
+
+        <View
+                android:id="@+id/productQueryLineView"
+                android:background="@color/pos_activity_main_split_line"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/w1_8"
+                android:layout_alignBottom="@id/productQueryEditRel"/>
+
+        <FrameLayout
+                android:id="@+id/productQueryKeyboardBodyFra"
+                android:layout_width="@dimen/w399_8"
+                android:layout_height="match_parent"
+                android:layout_below="@id/productQueryLineView"
+                android:layout_alignParentRight="true">
+
+            <include
+                    android:id="@+id/productQueryKeyboardBodyInclude"
+                    layout="@layout/pos_activity_keyboard_query_product"/>
+
+            <View
+                    android:background="@color/pos_activity_main_split_line"
+                    android:layout_width="@dimen/w1_8"
+                    android:layout_height="match_parent"/>
+        </FrameLayout>
+
+        <FrameLayout
+                android:id="@+id/productQueryBodyFra"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toLeftOf="@id/productQueryKeyboardBodyFra"
+                android:layout_below="@id/productQueryLineView">
+
+            <ListView
+                    android:id="@+id/productQueryBodyListView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    style="@style/pos_list"/>
+
+            <LinearLayout
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:id="@+id/productQueryBodyNoDataLin"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                <View
+                        android:background="@drawable/product_query_nodata"
+                        android:layout_width="@dimen/w93_6"
+                        android:layout_height="@dimen/w93_6"/>
+
+                <TextView
+                        android:textSize="@dimen/wsp16"
+                        android:textColor="@color/pos_text_grey"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/w27_0"
+                        android:text="@string/pos_activity_main_product_query_nodata"/>
+            </LinearLayout>
+        </FrameLayout>
+    </RelativeLayout>
+
+    <!--在左侧界面上显示  结算成功  或者 退货成功  -->
+    <RelativeLayout
+            android:id="@+id/settlementFinishRel"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <View
+                android:background="@drawable/pos_activity_submit_finish_background"
+                android:duplicateParentState="true"
+                android:layout_width="@dimen/w346_6"
+                android:layout_height="@dimen/w194_8"
+                android:layout_marginLeft="@dimen/w93_6"
+                android:layout_centerVertical="true"/>
+    </RelativeLayout>
+
+    <!--在打印设置上面 显示一个  叉号 -->
+
+    <RelativeLayout
+            android:id="@+id/productCodeShowRel"
+            android:background="@drawable/product_code_show_background"
+            android:focusable="false"
+            android:visibility="gone"
+            android:layout_width="@dimen/w306_6"
+            android:layout_height="@dimen/w64_4"
+            android:layout_marginBottom="@dimen/w16_4"
+            android:layout_above="@id/bottomOperationRight"
+            android:layout_centerHorizontal="true"
+            android:alpha="0.3">
+
+        <TextView
+                android:textSize="@dimen/wsp20"
+                android:textColor="@color/pos_text_white"
+                android:gravity="center"
+                android:id="@+id/productCodeShowText"
+                android:focusable="false"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:minWidth="@dimen/w226_8"
+                android:singleLine="true"
+                android:layout_centerInParent="true"/>
+
+        <View
+                android:id="@+id/hideProductCodeAction"
+                android:background="@drawable/product_code_show_close_icon"
+                android:layout_width="@dimen/w19_0"
+                android:layout_height="@dimen/w19_0"
+                android:layout_marginRight="@dimen/w16_4"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"/>
+    </RelativeLayout>
+
+</RelativeLayout>

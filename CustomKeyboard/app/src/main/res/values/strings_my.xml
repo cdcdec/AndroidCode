@@ -1,4 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
-
+<resources xmlns:tools="http://schemas.android.com/tools"  tools:ignore="MissingTranslation">
+    <string name="keycode_del">67</string>
+    <string name="keycode_numpad_0">144</string>
+    <string name="keycode_numpad_1">145</string>
+    <string name="keycode_numpad_2">146</string>
+    <string name="keycode_numpad_3">147</string>
+    <string name="keycode_numpad_4">148</string>
+    <string name="keycode_numpad_5">149</string>
+    <string name="keycode_numpad_6">150</string>
+    <string name="keycode_numpad_7">151</string>
+    <string name="keycode_numpad_8">152</string>
+    <string name="keycode_numpad_9">153</string>
+    <string name="keycode_numpad_dot">158</string>
 </resources>

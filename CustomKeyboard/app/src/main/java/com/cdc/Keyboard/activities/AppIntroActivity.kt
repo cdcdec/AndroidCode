@@ -1,6 +1,6 @@
 package com.cdc.keyboard.activities
 
-import androidx.appcompat.app.AppCompatActivity
+import com.cdc.keyboard.basic.BaseActivity
 import android.os.Bundle
 import com.cdc.keyboard.R
 
