@@ -11,8 +11,15 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.InputStream;
 
-public class DatabaseHelper extends SQLiteOpenHelper{
+/**
+ * .class public Lcom/laiqian/db/a;
+ * .super Landroid/database/sqlite/SQLiteOpenHelper;
+ * .source "DatabaseHelper.java"
+ */
+public class DatabaseHelper extends SQLiteOpenHelper {
     private Context mContext = null;
+
+    private static String aNG;
 
     private static Integer aND = Integer.valueOf(0);
 
@@ -24,18 +31,30 @@ public class DatabaseHelper extends SQLiteOpenHelper{
 
     private String aNI = "";
 
+    public DatabaseHelper(Context paramContext) {
+        super(paramContext, "laiqian.db", null, 1);
+        this.mContext = paramContext;
+        StringBuilder stringBuilder = new StringBuilder();
+        stringBuilder.append("/data/data/");
+        stringBuilder.append(this.mContext.getPackageName());
+        stringBuilder.append("/");
+        stringBuilder.append("laiqian.db");
+        aNG = stringBuilder.toString();
+        copyDb(aNG);
+        aND = Integer.valueOf(0);
+    }
+
     public DatabaseHelper(@Nullable Context context, @Nullable String name, @Nullable SQLiteDatabase.CursorFactory factory, int version) {
         super(context, "laiqian.db", null, 1);
-        init(context);
+
 
     }
 
     public DatabaseHelper(@Nullable Context context, @Nullable String name, @Nullable SQLiteDatabase.CursorFactory factory, int version, @Nullable DatabaseErrorHandler errorHandler) {
-        super(context,"laiqian.db", null, 1, errorHandler);
-        init(context);
+        super(context, "laiqian.db", null, 1, errorHandler);
+
 
     }
-
 
 
     @Override
@@ -48,8 +67,8 @@ public class DatabaseHelper extends SQLiteOpenHelper{
 
     }
 
-    private void init(Context context){
-        this.mContext=context;
+    private void init(Context context) {
+        this.mContext = context;
         StringBuilder stringBuilder = new StringBuilder();
         stringBuilder.append("/data/data/");
         stringBuilder.append(this.mContext.getPackageName());
@@ -57,11 +76,11 @@ public class DatabaseHelper extends SQLiteOpenHelper{
         stringBuilder.append("laiqian.db");
         dbPath = stringBuilder.toString();
         copyDb(dbPath);
-
     }
 
     /**
-     * 将数据库文件从raw复制到data/data  下面
+     * 将数据库文件从raw复制到data/data  下面  cq
+     *
      * @param paramString
      */
     private void copyDb(String paramString) {
@@ -86,6 +105,10 @@ public class DatabaseHelper extends SQLiteOpenHelper{
             } catch (Exception e) {
                 e.printStackTrace();
             }
+    }
+
+    public SQLiteDatabase getWritableDatabase() {
+        return LaiqianConnection.aOw.Dk();
     }
 
 

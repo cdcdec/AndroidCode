@@ -1,5 +1,10 @@
 package com.cdc.keyboard.db;
 
+/**
+ * .class public final enum Lcom/laiqian/db/multidatabase/a/a;
+ * .super Ljava/lang/Enum;
+ * .source "CurrentYearDatabaseConnection.java"
+ */
 public class CurrentYearDatabaseConnection {
     public static enum MonthDb{
         January("january.db"),

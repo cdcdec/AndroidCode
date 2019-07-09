@@ -37,7 +37,7 @@
                 android:textSize="@dimen/wsp14"
                 android:id="@id/NewsFrame"
                 android:visibility="gone"
-                android:layout_toLeftOf="@id/weiXinFrameIdTv"
+                android:layout_toLeftOf="@id/takeawayIdTv"
                 app:dot_color="@color/red_color_10500"
                 app:icon="@drawable/icon_news"
                 app:icon_height="@dimen/w35_0"
@@ -52,7 +52,7 @@
 
         <com.assistne.icondottextview.IconDotTextView
                 android:textSize="@dimen/wsp14"
-                android:id="@+id/weiXinFrameIdTv"
+                android:id="@+id/takeawayIdTv"
                 android:layout_toLeftOf="@+id/settingsIdTv"
                 android:visibility="visible"
                 app:dot_alignTo="right|top"
@@ -103,7 +103,7 @@
         <com.assistne.icondottextview.IconDotTextView
                 android:textSize="@dimen/wsp14"
                 android:id="@+id/telephoneFrameIdTv"
-                android:layout_toLeftOf="@id/weiXinFrameIdTv"
+                android:layout_toLeftOf="@id/takeawayIdTv"
                 app:dot_color="@color/red_color_10500"
                 app:icon="@drawable/phone_order"
                 android:visibility="gone"
@@ -118,7 +118,7 @@
         <com.assistne.icondottextview.IconDotTextView
                 android:textSize="@dimen/wsp14"
                 android:id="@+id/queuingMachineVoiceIdTv"
-                android:layout_toLeftOf="@id/weiXinFrameIdTv"
+                android:layout_toLeftOf="@id/takeawayIdTv"
                 app:dot_color="@color/red_color_10500"
                 app:icon="@drawable/queuing_machine_voice"
                 app:icon_height="@dimen/w35_0"

@@ -1,9 +1,16 @@
 package com.cdc.keyboard.db;
 
+import android.util.Log;
+
 import java.io.File;
 import java.util.Calendar;
 import java.util.regex.Pattern;
 
+/**
+ * .class public Lcom/laiqian/db/multidatabase/d/b;
+ * .super Ljava/lang/Object;
+ * .source "DbUtil.java"
+ */
 public class DbUtil {
     private static final boolean DEBUG;
 
@@ -90,5 +97,11 @@ public class DbUtil {
                 break;
         }
         return CurrentYearDatabaseConnection.MonthDb.January;
+    }
+
+
+    public static void ct(String paramString) {
+        if (DEBUG)
+            Log.i(TAG, paramString);
     }
 }

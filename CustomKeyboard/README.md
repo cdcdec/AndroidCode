@@ -115,6 +115,7 @@ adb 报错
 https://blog.csdn.net/gufenchen/article/details/91383397
 
 pos_activity-->main
+PosActivity -->MainActivity
 pos_main_takeout.xml--->外面  订单管理
 
 PosActivityMoreSettingsFragment  更多
@@ -123,5 +124,25 @@ PosActivitySettingFragment  设置页面父
 
 main_setting_10500.xml  设置页面布局
 
-MainSetting  设置页面
+com.laiqian.pos.industry.setting.MainSetting  设置页面
+com.laiqian.pos.settings.ShopInfoSettingsActivity  店铺管理  activity_shop_infos_setting
 
+com.laiqian.auth.UserManagement  员工管理
+
+订单管理
+pos_wechat_titlebar_right
+wei_order_list
+
+接单
+takeout_receiver
+pos_wechat_titlebar_left
+
+退款
+print_content_return_suffix
+dialog_pay_return_title
+pos_return_pay_amount
+
+
+pos_wechat_titlebar_center  pos_wechat_titlebar_left pos_wechat_titlebar_right
+
+pos_main_more_10500.xml

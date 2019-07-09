@@ -6,7 +6,7 @@
 
     <LinearLayout
             android:orientation="horizontal"
-            android:id="@+id/keyboard_lay_letter"
+            android:id="@+id/keyboardViewLin"
             android:paddingLeft="@dimen/w16_0"
             android:paddingRight="@dimen/w16_0"
             android:layout_width="match_parent"
@@ -36,14 +36,14 @@
 
     <LinearLayout
             android:orientation="horizontal"
-            android:id="@+id/keyboard_lay_symbol"
+            android:id="@+id/keyboardViewSymbolLin"
             android:paddingLeft="@dimen/w16_0"
             android:paddingRight="@dimen/w16_0"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
         <android.inputmethodservice.KeyboardView
-                android:id="@+id/keyboard_view_symbol_left"
+                android:id="@+id/keyboardViewSymbolLeft"
                 android:background="@color/setting_bg_color"
                 android:layout_width="0.0dip"
                 android:layout_height="wrap_content"
@@ -53,7 +53,7 @@
                 android:keyTextColor="#ff3b3b3b"/>
 
         <android.inputmethodservice.KeyboardView
-                android:id="@+id/keyboard_view_symbol_right"
+                android:id="@+id/keyboardViewSymbolRight"
                 android:background="@color/setting_bg_color"
                 android:layout_width="0.0dip"
                 android:layout_height="wrap_content"
@@ -66,7 +66,7 @@
 
     <LinearLayout
             android:orientation="horizontal"
-            android:id="@+id/keyboard_lay_number"
+            android:id="@+id/keyboardViewNumberLin"
             android:paddingLeft="@dimen/w16_0"
             android:paddingRight="@dimen/w16_0"
             android:layout_width="match_parent"
@@ -78,7 +78,7 @@
                 android:layout_weight="5.0"/>
 
         <android.inputmethodservice.KeyboardView
-                android:id="@+id/keyboard_view_number"
+                android:id="@+id/keyboardViewNumber"
                 android:background="@color/setting_bg_color"
                 android:layout_width="0.0dip"
                 android:layout_height="wrap_content"

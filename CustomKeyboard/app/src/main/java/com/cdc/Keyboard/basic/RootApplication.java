@@ -1,6 +1,7 @@
 package com.cdc.keyboard.basic;
 
 import androidx.multidex.MultiDexApplication;
+import com.cdc.keyboard.db.DatabaseHelper;
 import me.jessyan.autosize.AutoSizeConfig;
 import me.jessyan.autosize.unit.Subunits;
 
@@ -19,5 +20,7 @@ public class RootApplication extends MultiDexApplication {
                 .setSupportDP(false)
                 .setSupportSP(false)
                 .setSupportSubunits(Subunits.PT);
+
+        new DatabaseHelper(this);
     }
 }

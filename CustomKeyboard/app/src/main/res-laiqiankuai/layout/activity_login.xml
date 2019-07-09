@@ -12,7 +12,7 @@
             android:id="@+id/loginTop"
             android:background="@color/setting_title_bg_color"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/w84_0"
+            android:layout_height="@dimen/w64_0"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true">
 
@@ -80,10 +80,9 @@
             <AutoCompleteTextView
                     android:textSize="@dimen/wsp20"
                     android:textColor="@color/setting_text_color3"
-                    android:id="@+id/lUserPhone"
+                    android:id="@+id/editTextUserPhone"
                     android:paddingLeft="@dimen/w15_0"
                     android:hint="@string/l_userPhone"
-                    android:password="true"
                     android:maxLength="15"
                     android:completionThreshold="1"
                     android:inputType="phone"
@@ -120,7 +119,7 @@
             <EditText
                     android:textSize="20.0dip"
                     android:textColor="@color/setting_text_color3"
-                    android:id="@+id/lPassword"
+                    android:id="@+id/editTextPassword"
                     android:paddingLeft="@dimen/w15_0"
                     android:hint="@string/l_password"
                     android:password="true"
@@ -142,25 +141,34 @@
         </RelativeLayout>
         <RelativeLayout
                 android:gravity="center_vertical"
-                android:id="@+id/lLogin"
+                android:id="@+id/loginRel"
                 android:background="@anim/shape_rounded_rectangle_only_click"
                 android:layout_width="@dimen/w150_0"
                 android:layout_height="@dimen/w117_0"
                 android:layout_marginLeft="@dimen/w28_0"
                 android:layout_toRightOf="@id/lUserPhoneLayout"
                 android:layout_centerHorizontal="true">
-            <com.cdc.keyboard.ui.ProgressBarCircularIndeterminate
+
+            <androidx.core.widget.ContentLoadingProgressBar
+                    android:id="@+id/loginIvProgress"
+                    style="?android:attr/progressBarStyleSmall"
+                    android:layout_width="@dimen/w50_0"
+                    android:layout_height="@dimen/w50_0"
+                    android:visibility="invisible"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center_horizontal"/>
+        <!--    <com.cdc.keyboard.ui.ProgressBarCircularIndeterminate
                     android:id="@+id/loginIvProgress"
                     android:background="@color/red_color_10500"
                     android:visibility="invisible"
                     android:layout_width="@dimen/w50_0"
                     android:layout_height="@dimen/w50_0"
-                    android:layout_centerInParent="true"/>
+                    android:layout_centerInParent="true"/>-->
             <TextView
                     android:textSize="@dimen/wsp20"
                     android:textColor="@color/setting_text_color1"
                     android:gravity="center"
-                    android:id="@+id/tvLoginLable"
+                    android:id="@+id/tvLogin"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/l_login"
@@ -182,7 +190,8 @@
         android:layout_width="@dimen/w499_0"
         android:layout_height="wrap_content"
         android:id="@+id/reRegisterRoot"
-        android:layout_marginTop="@dimen/w19_0"
+        android:layout_marginTop="@dimen/w10_0"
+        android:layout_marginBottom="@dimen/w10_0"
         android:layout_marginLeft="@dimen/w300_0"
         >
 
@@ -191,7 +200,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
-            android:hint="手机号不存在"/>
+            />
 
     <TextView
             android:id="@+id/loginForgotPasswordTv"
@@ -217,3 +226,6 @@
             android:layout_height="match_parent"
             />
 </LinearLayout>
+
+
+<!--login_10900.xml-->

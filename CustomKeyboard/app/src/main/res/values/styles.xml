@@ -161,6 +161,9 @@
         <item name="android:buttonStyle">?android:borderlessButtonStyle</item>
         <item name="android:textAppearanceButton">@style/TextAppearance.AppCompat</item>
         <item name="android:textAllCaps">false</item>
+        <item name="android:windowNoTitle">false</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowActionBarOverlay">false</item>
     </style>
     <style name="Base.AlertDialog.AppCompat" parent="@android:style/Widget">
         <item name="android:layout">@layout/abc_alert_dialog_material</item>

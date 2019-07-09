@@ -14,24 +14,41 @@
             android:supportsRtl="false"
             android:theme="@style/AppTheme"
             tools:ignore="GoogleAppIndexingWarning">
+        <activity
+                android:name=".activities.LoginActivity"
+                android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+                android:screenOrientation="sensorLandscape">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity
+                android:name=".activities.TakeawayActivity"
+                android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+                android:screenOrientation="sensorLandscape"
+                android:theme="@style/XTheme">
+        </activity>
         <activity android:name=".basic.RootActivity">
         </activity>
         <activity
                 android:name=".activities.UserManagementActivity"
                 android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
-                android:screenOrientation="sensorLandscape">
+                android:screenOrientation="sensorLandscape"
+                android:theme="@style/XTheme">
         </activity>
         <activity
                 android:name=".activities.ShopInfoSettingsActivity"
                 android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
-                android:screenOrientation="sensorLandscape">
+                android:screenOrientation="sensorLandscape"
+                android:theme="@style/XTheme">
         </activity>
         <activity
                 android:name=".activities.SettingActivity"
                 android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
                 android:screenOrientation="sensorLandscape">
         </activity>
-        <activity android:name=".basic.BaseActivity"/>
         <activity
                 android:name=".activities.AboutActivity"
                 android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
@@ -56,16 +73,6 @@
                 android:name=".activities.BlueToothPrinterEditActivity"
                 android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
                 android:screenOrientation="sensorLandscape">
-        </activity>
-        <activity
-                android:name=".activities.LoginActivity"
-                android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
-                android:screenOrientation="sensorLandscape">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-
-                <category android:name="android.intent.category.LAUNCHER"/>
-            </intent-filter>
         </activity>
         <activity
                 android:name=".activities.WelcomeActivity"

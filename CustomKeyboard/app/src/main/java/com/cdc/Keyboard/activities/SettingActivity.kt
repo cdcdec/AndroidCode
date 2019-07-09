@@ -1,18 +1,17 @@
 package com.cdc.keyboard.activities
 
 import android.graphics.drawable.ColorDrawable
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.view.ViewGroup
 import android.widget.PopupWindow
 import android.widget.RelativeLayout
 import com.cdc.keyboard.R
-import com.cdc.keyboard.basic.BaseActivity
+import com.cdc.keyboard.basic.RootActivity
 import com.cdc.keyboard.ui.dialog.DialogRoot
 import kotlinx.android.synthetic.main.activity_setting.*
 
-class SettingActivity : BaseActivity() {
+class SettingActivity : RootActivity() {
 
     private var permissionPopupWindow: PopupWindow? = null
 
@@ -20,7 +19,7 @@ class SettingActivity : BaseActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_setting)
+        setContentViewNoTitle(R.layout.activity_setting)
         initView()
 
 
@@ -35,7 +34,7 @@ class SettingActivity : BaseActivity() {
 
     }
 
-    fun closeActivity(v: View){
+    override fun closeActivity(v: View){
         finish()
     }
 

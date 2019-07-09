@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:background="@color/pos_background_grey"
+              android:layout_width="wrap_content"
+              android:minWidth="@dimen/w450_0"
+              android:layout_height="@dimen/w50_0"
+              android:orientation="horizontal">
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:minWidth="@dimen/w150_0"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:text="接单"/>
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:minWidth="@dimen/w150_0"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:text="退款"/>
+
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:minWidth="@dimen/w150_0"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:text="订单管理"/>
+
+
+
+
+</LinearLayout>

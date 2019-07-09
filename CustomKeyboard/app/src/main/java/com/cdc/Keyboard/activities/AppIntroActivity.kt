@@ -1,10 +1,10 @@
 package com.cdc.keyboard.activities
 
-import com.cdc.keyboard.basic.BaseActivity
 import android.os.Bundle
 import com.cdc.keyboard.R
+import com.cdc.keyboard.basic.RootActivity
 
-class AppIntroActivity : BaseActivity() {
+class AppIntroActivity : RootActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

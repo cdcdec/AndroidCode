@@ -4,15 +4,16 @@
                 xmlns:app="http://schemas.android.com/apk/res-auto"
                 android:background="@color/pos_background_grey"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="@dimen/w75_4"
                 tools:context="com.cdc.keyboard.basic.RootActivity">
-
+ <!--   android:paddingLeft="@dimen/w32_4"
+    android:paddingRight="@dimen/w32_4"-->
     <LinearLayout
-            android:id="@id/title_back"
+            android:id="@+id/titleBackRoot"
             android:orientation="horizontal"
+            android:paddingLeft="@dimen/w32_4"
+            android:paddingRight="@dimen/w32_4"
             android:background="@drawable/titlebar_leftbt_selector_10500"
-            android:paddingLeft="24.0dip"
-            android:paddingRight="24.0dip"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:onClick="closeActivity"
@@ -20,37 +21,30 @@
         <View
                 android:layout_gravity="center_vertical"
                 android:background="@drawable/main_setting_back_button"
-                android:layout_width="10.0dip"
-                android:layout_height="16.5dip"/>
+                android:layout_width="@dimen/w13_8"
+                android:layout_height="@dimen/w22_4"/>
         <TextView
-                android:id="@id/title_text"
+                android:id="@+id/titleTextRootLeft"
                 android:text="左侧"
                 android:textSize="@dimen/wsp21"
                 android:textColor="@color/pos_text_black"
                 android:layout_gravity="center_vertical"
-                android:layout_width="10.0dip"
-                android:layout_height="16.5dip"
-
-
-                style="@style/pos_title_text"/>
-
-
-        <item name="android:layout_gravity">center_vertical</item>
-        <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_marginLeft">24.0dip</item>
-        <item name="android:layout_centerVertical">true</item>
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/w32_4"
+                android:layout_centerVertical="true"/>
     </LinearLayout>
 
     <FrameLayout
-            android:id="@id/title_center_customize"
+            android:id="@+id/centerFragment"
             android:layout_width="wrap_content"
+            android:visibility="visible"
             android:background="@color/green_color_10500"
             android:layout_height="match_parent"
             android:layout_centerInParent="true"/>
 
     <FrameLayout
-            android:id="@id/fl_setting"
+            android:id="@+id/flSetting"
             android:visibility="gone"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
@@ -58,7 +52,7 @@
 
         <TextView
                 android:gravity="center"
-                android:id="@id/title_right_setting_text"
+                android:id="@+id/titleRightSettingText"
                 android:background="@drawable/titlebar_leftbt_selector_10500"
                 android:paddingLeft="16.0dip"
                 android:paddingRight="16.0dip"
@@ -68,7 +62,9 @@
                 android:layout_alignParentRight="true"
                 style="@style/pos_title_text"/>
 
-        <com.laiqian.ui.ProgressBarCircularIndeterminate
+
+
+        <com.cdc.keyboard.ui.ProgressBarCircularIndeterminate
                 android:id="@id/title_right_setting_text_progress"
                 android:background="@color/red_color_10500"
                 android:paddingLeft="16.0dip"
@@ -85,8 +81,8 @@
             android:visibility="gone"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:layout_marginLeft="24.0dip"
-            android:layout_toLeftOf="@id/fl_title_right">
+            android:layout_marginLeft="@dimen/w32_4"
+            android:layout_toLeftOf="@id/flTitleRight">
 
         <TextView
                 android:gravity="center"
@@ -100,7 +96,7 @@
                 android:layout_marginRight="8.0dip"
                 style="@style/pos_title_text"/>
 
-        <com.laiqian.ui.ProgressBarCircularIndeterminate
+        <com.cdc.keyboard.ui.ProgressBarCircularIndeterminate
                 android:layout_gravity="center"
                 android:id="@id/title_right_refresh_text_progress"
                 android:background="@color/red_color_10500"
@@ -115,14 +111,15 @@
     </FrameLayout>
 
     <FrameLayout
-            android:id="@id/fl_title_right"
+            android:id="@+id/flTitleRight"
+            android:visibility="visible"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_alignParentRight="true">
 
         <TextView
                 android:gravity="center"
-                android:id="@id/title_right_text"
+                android:id="@+id/titleRightText"
                 android:background="@drawable/titlebar_leftbt_selector_10500"
                 android:paddingLeft="16.0dip"
                 android:paddingRight="16.0dip"
@@ -132,7 +129,7 @@
                 android:layout_alignParentRight="true"
                 style="@style/pos_title_text"/>
 
-        <com.laiqian.ui.ProgressBarCircularIndeterminate
+        <com.cdc.keyboard.ui.ProgressBarCircularIndeterminate
                 android:id="@id/title_right_text_progress"
                 android:background="@color/red_color_10500"
                 android:paddingLeft="16.0dip"
@@ -151,6 +148,7 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_marginRight="8.0dip"
+            android:visibility="gone"
             android:layout_alignParentRight="true"/>
 
     <View

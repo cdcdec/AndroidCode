@@ -2,6 +2,11 @@ package com.cdc.keyboard.db;
 
 import com.cdc.keyboard.basic.RootApplication;
 
+/**
+ * .class public Lcom/laiqian/db/multidatabase/b/a;
+ * .super Ljava/lang/Object;
+ * .source "DbConstant.java"
+ */
 public class DbConstant {
     public static final String aOB;
 

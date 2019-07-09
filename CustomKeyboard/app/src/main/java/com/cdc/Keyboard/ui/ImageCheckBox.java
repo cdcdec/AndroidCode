@@ -11,7 +11,7 @@ public class ImageCheckBox extends View implements Checkable {
 
     private boolean dwa;
 
-    private a dwb;
+    private Listener listener;//wb;
 
     public ImageCheckBox(Context paramContext) {
         super(paramContext, null);
@@ -21,8 +21,8 @@ public class ImageCheckBox extends View implements Checkable {
         super(paramContext, paramAttributeSet);
     }
 
-    public void a(a parama) {
-        this.dwb = parama;
+    public void setListener(Listener listener) {
+        this.listener = listener;
     }
 
     public void hb(boolean paramBoolean) {
@@ -45,8 +45,8 @@ public class ImageCheckBox extends View implements Checkable {
     public void setChecked(boolean paramBoolean) {
         if (isSelected() != paramBoolean) {
             setSelected(paramBoolean);
-            if (this.dwb != null && !this.dvZ)
-                this.dwb.a(this, paramBoolean);
+            if (this.listener != null && !this.dvZ)
+                this.listener.listener(this, paramBoolean);
         }
     }
 
@@ -54,7 +54,7 @@ public class ImageCheckBox extends View implements Checkable {
         setChecked(isChecked() ^ true);
     }
 
-    public static interface a {
-        void a(ImageCheckBox param1ImageCheckBox, boolean param1Boolean);
+    public  interface Listener{
+        void listener(ImageCheckBox param1ImageCheckBox, boolean param1Boolean);
     }
 }

@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content">
+
+    <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5.0dip"
+            style="@style/main_setting_scrollview_style">
+
+        <LinearLayout
+                android:orientation="vertical"
+                android:id="@id/svMainSettingMenu"
+                android:background="@drawable/pos_main_more_ll_background"
+                android:paddingLeft="1.0dip"
+                android:paddingTop="8.0dip"
+                android:paddingRight="1.0dip"
+                android:paddingBottom="8.0dip"
+                android:layout_width="165.0dip"
+                android:layout_height="wrap_content">
+
+            <LinearLayout
+                    android:id="@id/ll_open_cash"
+                    style="@style/pos_main_more_ll">
+
+                <ImageView
+                        android:src="@drawable/open_cash_box_1033"
+                        style="@style/pos_main_more_imageview"/>
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:text="@string/pos_open_cash_box_title"
+                        style="@style/pos_main_more_tv"/>
+
+                <TextView
+                        android:textSize="@dimen/sp_14"
+                        android:textColor="#ff999999"
+                        android:gravity="center_vertical"
+                        android:layout_width="40.0dip"
+                        android:layout_height="fill_parent"
+                        android:layout_marginLeft="8.0dip"
+                        android:text="(F12)"/>
+            </LinearLayout>
+
+            <LinearLayout
+                    android:id="@id/ll_pos_navigation_bar_shift"
+                    style="@style/pos_main_more_ll">
+
+                <ImageView
+                        android:src="@drawable/join_1033"
+                        style="@style/pos_main_more_imageview"/>
+
+                <TextView
+                        android:text="@string/pos_navigation_bar_shift"
+                        style="@style/pos_main_more_tv"/>
+            </LinearLayout>
+
+            <LinearLayout
+                    android:id="@id/ll_pos_navigation_bar_reprint"
+                    style="@style/pos_main_more_ll">
+
+                <ImageView
+                        android:src="@drawable/reprint_receipt_1033"
+                        style="@style/pos_main_more_imageview"/>
+
+                <TextView
+                        android:text="@string/pos_re_print_title"
+                        style="@style/pos_main_more_tv"/>
+            </LinearLayout>
+
+            <View
+                    android:background="@color/setting_line_color"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1.0dip"
+                    android:layout_marginTop="8.0dip"
+                    android:layout_marginBottom="8.0dip"/>
+
+            <LinearLayout
+                    android:id="@id/ll_pos_navigation_bar_sale_return"
+                    style="@style/pos_main_more_ll">
+
+                <ImageView
+                        android:src="@drawable/sale_return_10800"
+                        style="@style/pos_main_more_imageview"/>
+
+                <TextView
+                        android:text="@string/pos_return_type_title"
+                        style="@style/pos_main_more_tv"/>
+            </LinearLayout>
+
+            <LinearLayout
+                    android:id="@id/ll_pos_navigation_bar_lock_screen"
+                    android:visibility="gone"
+                    style="@style/pos_main_more_ll">
+
+                <ImageView
+                        android:src="@drawable/lock_screen_1033"
+                        style="@style/pos_main_more_imageview"/>
+
+                <TextView
+                        android:text="@string/pos_navigation_bar_lock_screen"
+                        style="@style/pos_main_more_tv"/>
+            </LinearLayout>
+
+           <!-- <LinearLayout
+                    android:id="@id/cash_flow"
+                    style="@style/pos_main_more_ll">
+
+                <ImageView
+                        android:src="@drawable/cash_flow_icon"
+                        style="@style/pos_main_more_imageview"/>
+
+                <TextView
+                        android:text="pos_report_cashflow_short"
+                        style="@style/pos_main_more_tv"/>
+            </LinearLayout>-->
+
+            <LinearLayout
+                    android:id="@id/ll_pos_cloud_service"
+                    style="@style/pos_main_more_ll">
+
+                <ImageView
+                        android:src="@drawable/cloud_1033"
+                        style="@style/pos_main_more_imageview"/>
+
+                <TextView
+                        android:text="@string/pos_main_setting_sync_title"
+                        style="@style/pos_main_more_tv"/>
+            </LinearLayout>
+
+          <!--  <LinearLayout
+                    android:id="@id/ll_pos_customer_service"
+                    style="@style/pos_main_more_ll">
+
+                <ImageView
+                        android:src="@drawable/customer_service_icon"
+                        style="@style/pos_main_more_imageview"/>
+
+                <TextView
+                        android:text="@string/customer_service_title"
+                        style="@style/pos_main_more_tv"/>
+            </LinearLayout>-->
+
+            <View
+                    android:background="@color/setting_line_color"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1.0dip"
+                    android:layout_marginTop="8.0dip"
+                    android:layout_marginBottom="8.0dip"/>
+
+            <LinearLayout
+                    android:id="@id/ll_pos_navigation_bar_quit_10500"
+                    style="@style/pos_main_more_ll">
+
+                <ImageView
+                        android:src="@drawable/quit_1033"
+                        style="@style/pos_main_more_imageview"/>
+
+                <TextView
+                        android:text="@string/pos_navigation_bar_quit_10500"
+                        style="@style/pos_main_more_tv"/>
+            </LinearLayout>
+
+            <FrameLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="56.0dip">
+
+                <LinearLayout
+                        android:id="@id/ll_pos_navigation_user_feedback"
+                        style="@style/pos_main_more_ll">
+
+                    <ImageView
+                            android:src="@drawable/user_feedback_10500"
+                            style="@style/pos_main_more_imageview"/>
+
+                    <TextView
+                            android:text="@string/pos_navigation_user_feedback"
+                            style="@style/pos_main_more_tv"/>
+                </LinearLayout>
+
+                <TextView
+                        android:id="@id/pos_main_more_function_hint"
+                        android:visibility="invisible"
+                        style="@style/red_dot_function"/>
+            </FrameLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
