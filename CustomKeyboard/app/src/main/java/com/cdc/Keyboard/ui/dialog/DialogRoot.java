@@ -8,9 +8,10 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import com.cdc.keyboard.R;
 
-public class DialogRoot extends DimAmountDialog {
+public  class DialogRoot extends DimAmountDialog {
     private Context mContext;
     protected View mView;
+
     public DialogRoot(@NonNull Context context) {
         super(context);
     }
@@ -21,8 +22,6 @@ public class DialogRoot extends DimAmountDialog {
         this.mView = LayoutInflater.from(context).inflate(themeResId, null);
         setContentView(this.mView, new ViewGroup.LayoutParams(-1, -1));
         setCanceledOnTouchOutside(true);
-
-
     }
 
     public DialogRoot(Context context, int paramInt1, int paramInt2) {
@@ -32,6 +31,8 @@ public class DialogRoot extends DimAmountDialog {
         setContentView(this.mView, new ViewGroup.LayoutParams(-1, -1));
         setCanceledOnTouchOutside(true);
     }
+
+
 
 
 }

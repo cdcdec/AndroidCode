@@ -1,7 +1,6 @@
 package com.cdc.keyboard.activities;
 
 import android.graphics.PorterDuff;
-import android.text.InputType;
 import android.text.method.HideReturnsTransformationMethod;
 import android.text.method.PasswordTransformationMethod;
 import android.util.Log;
@@ -12,18 +11,18 @@ import android.view.animation.ScaleAnimation;
 import android.widget.EditText;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import android.widget.Toast;
-import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import androidx.core.content.ContextCompat;
 import androidx.core.widget.ContentLoadingProgressBar;
 import com.cdc.keyboard.MainActivity;
 import com.cdc.keyboard.R;
+import com.cdc.keyboard.basic.RootApplication;
+import com.cdc.keyboard.basic.api.Api;
 import com.cdc.keyboard.basic.RootActivity;
 import com.cdc.keyboard.ui.ImageCheckBox;
-import com.cdc.keyboard.ui.ProgressBarCircularIndeterminate;
 import com.cdc.keyboard.ui.keybord.KeyBoardLinearLayout;
 import com.cdc.keyboard.ui.keybord.KeyboardManage;
+import com.cdc.keyboard.util.ChuanBeiUtil;
 import com.cdc.keyboard.util.SoundPlayer;
 
 public class LoginActivity extends RootActivity {
@@ -91,6 +90,8 @@ public class LoginActivity extends RootActivity {
         }
         keyboardManage = new KeyboardManage(this, new EditText[]{editTextUserPhone, editTextPassword}, loginKeyBoard, soundPlayer);
 
+        editTextUserPhone.setText(RootApplication.getPreferenceManager().getUserPhone());
+
 
     }
 
@@ -106,7 +107,8 @@ public class LoginActivity extends RootActivity {
         loginReRegisterTv.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                goToPage(RegisteredActivity.class);
+                 goToPage(RegisteredActivity.class);
+                //goToPage(TestActivity.class);
             }
         });
 
@@ -159,12 +161,27 @@ public class LoginActivity extends RootActivity {
             loginResultTv.setText(getString(R.string.l_loginAlertInfo));
             hideProgress();
             return;
+        }else{
+            long[] checkResult=RootApplication.getDataBaseOperator().checkUserPassWord(userPhone,userPassWord);
+            if(checkResult[0]>0){
+                Log.e("123","本地密码验证成功！");
+                hideProgress();
+                goToPage(MainActivity.class);
+            }else{
+                RootApplication.getPreferenceManager().saveUserPhone(userPhone);
+                //去服务器验证
+                long resultLong=RootApplication.getDataBaseOperator().insertData(userPhone,userPhone, ChuanBeiUtil.change(userPassWord));
+                if(resultLong>0){
+                    hideProgress();
+                    goToPage(MainActivity.class);
+                }else{
+                    hideProgress();
+                    loginResultTv.setVisibility(View.VISIBLE);
+                    loginResultTv.setText(getString(R.string.l_loginFail));
+                }
+            }
+
         }
-
-
-
-
-
 
     }
 

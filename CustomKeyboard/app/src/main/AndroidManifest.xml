@@ -3,6 +3,10 @@
           xmlns:tools="http://schemas.android.com/tools"
           package="com.cdc.keyboard">
 
+    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
     <application
             android:name=".basic.RootApplication"
             android:allowBackup="true"
@@ -14,6 +18,10 @@
             android:supportsRtl="false"
             android:theme="@style/AppTheme"
             tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".activities.TestActivity"
+                  android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+                  android:screenOrientation="sensorLandscape">
+        </activity>
         <activity
                 android:name=".activities.LoginActivity"
                 android:configChanges="keyboard|keyboardHidden|orientation|screenSize"

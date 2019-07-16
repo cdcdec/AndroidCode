@@ -146,3 +146,6 @@ pos_return_pay_amount
 pos_wechat_titlebar_center  pos_wechat_titlebar_left pos_wechat_titlebar_right
 
 pos_main_more_10500.xml
+
+//单例模式
+https://www.jianshu.com/p/829a523c32aa
