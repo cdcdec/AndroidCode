@@ -44,6 +44,8 @@
                 android:layout_gravity="center"
                 android:padding="10dp"
                 android:text="我是底部"
+                android:clickable="true"
+                android:onClick="goToMyDemo"
                 android:textColor="@color/black" />
         </LinearLayout>
     </FrameLayout>
