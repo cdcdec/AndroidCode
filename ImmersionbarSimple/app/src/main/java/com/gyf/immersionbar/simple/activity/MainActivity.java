@@ -34,6 +34,8 @@ import com.gyf.immersionbar.simple.bean.FunBean;
 import com.gyf.immersionbar.simple.event.NetworkEvent;
 import com.gyf.immersionbar.simple.fragment.SplashFragment;
 import com.gyf.immersionbar.simple.model.DataUtils;
+import com.gyf.immersionbar.simple.myimmerdemo.MyDemoMainActivity;
+import com.gyf.immersionbar.simple.myimmerdemo.MyPicDemoActivity;
 import com.gyf.immersionbar.simple.utils.DensityUtil;
 import com.gyf.immersionbar.simple.utils.GlideUtils;
 import com.gyf.immersionbar.simple.utils.Utils;
@@ -463,5 +465,11 @@ public class MainActivity extends BaseActivity implements DrawerLayout.DrawerLis
                 }
             }
         }
+    }
+
+    public void goToMyDemo(View view){
+        Intent intent=new Intent();
+        intent.setClass(this, MyDemoMainActivity.class);
+        startActivity(intent);
     }
 }
