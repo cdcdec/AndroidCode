@@ -75,7 +75,7 @@ public class FragmentFourActivity extends BaseActivity implements View.OnClickLi
             case R.id.ll_mine:
                 selectedFragment(3);
                 tabSelected(llMine);
-                ImmersionBar.with(this).keyboardEnable(true).statusBarDarkFont(false).navigationBarColor(R.color.btn7).init();
+                ImmersionBar.with(this).keyboardEnable(true).statusBarDarkFont(false).init();
                 break;
             default:
                 break;

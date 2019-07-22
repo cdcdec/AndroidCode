@@ -104,6 +104,7 @@ public class MainActivity extends BaseActivity implements DrawerLayout.DrawerLis
     @Override
     protected void initImmersionBar() {
         super.initImmersionBar();
+        //
         ImmersionBar.with(this).titleBar(R.id.toolbar).setOnBarListener(this::adjustView).init();
     }
 

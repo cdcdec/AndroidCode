@@ -32,7 +32,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="?actionBarSize"
                 app:title="图片状态栏 + 彩色导航栏"
-                app:titleTextColor="@android:color/white"/>
+                app:titleTextColor="@android:color/white"
+            android:visibility="gone"/>
         </LinearLayout>
     </FrameLayout>
 

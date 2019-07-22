@@ -62,7 +62,7 @@ public class ParamsActivity extends BaseActivity {
             Toast.makeText(this, "导航栏" + (show ? "显示了" : "隐藏了"), Toast.LENGTH_SHORT).show();
         }).navigationBarColor(R.color.btn13).init();
     }
-
+//navigationBarColor(R.color.btn13).init();
     @Override
     protected void initData() {
         super.initData();

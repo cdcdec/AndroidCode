@@ -26,7 +26,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:overScrollMode="never"
-                    app:layoutManager="android.support.v7.widget.LinearLayoutManager" />
+                    app:layoutManager="android.support.v7.widget.LinearLayoutManager"/>
+
+                <!---->
 
                 <android.support.v7.widget.Toolbar
                     android:id="@+id/toolbar"
@@ -35,7 +37,8 @@
                     android:alpha="0"
                     android:background="@drawable/shape_main"
                     app:title="沉浸式（ImmersionBar）"
-                    app:titleTextColor="@android:color/white" />
+                    app:titleTextColor="@android:color/white"
+                android:visibility="gone"/>
             </FrameLayout>
 
             <TextView
