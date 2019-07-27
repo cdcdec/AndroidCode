@@ -32,7 +32,7 @@ public class TabLayoutActivity extends SwipeBackActivity {
         initData(1);
         initView();
         ImmersionBar.with(this)
-                .statusBarView(R.id.view)
+              .statusBarView(R.id.view)
                 .navigationBarColor(R.color.cool_green_normal)
                 .init();
     }

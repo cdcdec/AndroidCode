@@ -23,7 +23,8 @@
             android:layout_height="wrap_content">
 
             <!--标题栏-->
-            <include layout="@layout/cool_title" />
+            <include
+                    layout="@layout/cool_title" />
 
             <!--选项卡-->
             <android.support.design.widget.TabLayout

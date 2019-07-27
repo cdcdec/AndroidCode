@@ -56,6 +56,7 @@ public class FragmentOneActivity extends BaseActivity implements View.OnClickLis
     protected void initView() {
         viewPager.setAdapter(new MyAdapter(getSupportFragmentManager()));
         viewPager.setOffscreenPageLimit(3);
+        viewPager.setScroll(false);
         llHome.setSelected(true);
     }
 
