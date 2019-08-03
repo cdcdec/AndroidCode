@@ -1,0 +1,422 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.yzx.mydefineview.ResizeRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:emojicon="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/im_immessage"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.yzx.im_demo.IMMessageActivity$PlaceholderFragment" >
+
+    <com.yzx.mydefineview.YzxTopBar
+        android:id="@+id/yzx_topbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:background="#1D1D1D" />
+
+    <LinearLayout
+        android:id="@+id/im_network"
+        android:layout_width="match_parent"
+        android:layout_height="50dip"
+        android:layout_below="@id/yzx_topbar"
+        android:background="#fff0c5"
+        android:orientation="horizontal"
+        android:visibility="gone" >
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="15dip"
+            android:layout_marginRight="10dip"
+            android:background="@drawable/message_repeat"
+            android:clickable="false"
+            android:focusable="false" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:clickable="false"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dip"
+            android:text="网络连接不可用，请连接"
+            android:textColor="@color/item_content_color"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/yzx_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/ll_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dip"
+                android:background="#ececec" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#ffffff"
+                android:orientation="horizontal" >
+
+                <RelativeLayout
+                    android:id="@+id/im_audio"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3" >
+
+                    <ImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/record"
+                        android:clickable="false"
+                        android:focusable="false" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/im_key"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:visibility="gone" >
+
+                    <ImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/key"
+                        android:clickable="false"
+                        android:focusable="false" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+					android:paddingBottom="2dp"
+                    android:layout_weight="1" >
+
+                    <com.rockerhieu.emojicon.EmojiconEditText
+                        android:id="@+id/im_send_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="2dip"
+                        android:layout_marginTop="2dip"
+                        android:background="@drawable/im_text_input"
+                        android:hint="输入内容"
+                        android:inputType="textMultiLine"
+                        android:maxLength="500"
+                        android:maxLines="4"
+                        android:minLines="2"
+                        android:paddingLeft="3dip"
+                        android:paddingRight="25dip"
+                        android:textColor="#383838"
+                        emojicon:emojiconSize="28sp" />
+
+                    <ImageView
+                        android:id="@+id/im_send_image"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="3dip"
+                        android:background="@drawable/expression" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/im_more"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3" >
+
+                    <ImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/more"
+                        android:clickable="false"
+                        android:focusable="false" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/im_send_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="3"
+                    android:clickable="false"
+                    android:gravity="center"
+                    android:text="发送"
+                    android:textColor="#67b83d"
+                    android:textSize="16sp"
+                    android:visibility="gone" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <com.yzx.mydefineview.YZXVisibleLinearLayout
+            android:id="@+id/yzx_operate"
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            android:background="@color/item_gray_color"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:id="@+id/im_ll_more"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="gone" >
+                
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="15dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center_horizontal" >
+
+                    <ImageButton
+                        android:id="@+id/im_ll_file"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/image_selector" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="图片"
+                        android:textColor="#333333"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="15dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical" 
+                    android:gravity="center_horizontal">
+
+                    <ImageButton
+                        android:id="@+id/im_ll_shot"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/shot_selector" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="拍照"
+                        android:textColor="#333333"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="15dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center_horizontal">
+                    <ImageButton
+                        android:id="@+id/im_ll_location"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/location_selector" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="位置"
+                        android:textColor="#333333"
+                        android:textSize="12sp" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="15dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center_horizontal">
+                    <ImageButton
+                        android:id="@+id/im_ll_customMsg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/custom_msg_selector" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="自定义消息"
+                        android:textColor="#333333"
+                        android:textSize="12sp" />
+                </LinearLayout>
+                </LinearLayout>
+                
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+                
+                 <LinearLayout
+                    android:id="@+id/id_ll_voice"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center_horizontal" >
+
+                    <ImageButton
+                        android:id="@+id/im_ll_voice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/voice_selector" />
+
+                    <TextView
+                        android:id="@+id/im_tv_voice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="语音聊天"
+                        android:textColor="#333333"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/id_ll_video"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="15dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center_horizontal" >
+
+                    <ImageButton
+                        android:id="@+id/im_ll_video"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/video_selector" />
+
+                    <TextView
+                        android:id="@+id/im_tv_video"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="视频聊天"
+                        android:textColor="#333333"
+                        android:textSize="12sp" />
+                </LinearLayout>
+                
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+                
+                </LinearLayout>
+
+                
+		
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/im_ll_record"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:orientation="vertical"
+                android:visibility="gone" >
+
+                <TextView
+                    android:id="@+id/im_tv_record"
+                    android:layout_width="match_parent"
+                    android:layout_height="38dip"
+                    android:layout_marginTop="13dp"
+                    android:clickable="false"
+                    android:gravity="center"
+                    android:text="按住说话"
+                    android:textColor="#4a4c4a"
+                    android:textSize="16sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="15dip"
+                    android:layout_marginTop="10dip"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+
+                    <ImageView
+                        android:id="@+id/im_iv_record_left"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:background="@drawable/im_record_left0" />
+
+                    <ImageView
+                        android:id="@+id/im_iv_record"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="35dip"
+                        android:layout_marginRight="35dip"
+                        android:background="@drawable/im_record" />
+
+                    <ImageView
+                        android:id="@+id/im_iv_record_right"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:background="@drawable/im_record_right0" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/im_ll_images"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="gone" >
+
+                <fragment
+                    android:id="@+id/emojicons"
+                    android:layout_width="match_parent"
+                    android:layout_height="220dp"
+                    class="com.rockerhieu.emojicon.EmojiconsFragment" />
+            </LinearLayout>
+        </com.yzx.mydefineview.YZXVisibleLinearLayout>
+    </LinearLayout>
+
+    <com.yzx.mydefineview.MyListView
+        android:id="@+id/messagelist"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/yzx_bottom"
+        android:layout_below="@id/im_network"
+        android:background="@null"
+        android:dividerHeight="0dip"
+        android:fadingEdge="none"
+        android:footerDividersEnabled="true"
+        android:listSelector="#00000000"
+        android:scrollbars="vertical"
+        android:transcriptMode="normal" />
+
+</com.yzx.mydefineview.ResizeRelativeLayout>

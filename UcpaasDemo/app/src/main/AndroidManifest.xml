@@ -1,0 +1,153 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:tools="http://schemas.android.com/tools" package="com.yzx.im_demo"
+    android:versionCode="7"
+    android:versionName="3.0.7.5">
+
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" tools:ignore="ProtectedPermissions"/>
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.BROADCAST_STICKY" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS" tools:ignore="ProtectedPermissions"/>
+
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+
+   <!-- <instrumentation
+        android:name="android.test.InstrumentationTestRunner"
+        android:targetPackage="com.yzx.im_demo"></instrumentation>-->
+
+    <application
+        android:name=".MainApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@android:style/Theme.NoTitleBar">
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="CDedae22vZzbG3u8ZzzOF77z9KkVfzhV" />
+
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote" />
+
+        <uses-library android:name="android.test.runner" />
+
+        <activity
+            android:name=".IMDemoActivity"
+            android:label="@string/title_activity_imdemo">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".IMLoginV2Activity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".IMRegisterV2Activity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".IMChatActivity"
+            android:alwaysRetainTaskState="true"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden"></activity>
+        <activity
+            android:name=".IMMessageActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity android:name=".IMMessageInfoActivity"></activity>
+        <activity
+            android:name=".IMBroadcastActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".IMCustomMsgActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize"></activity>
+        <activity android:name=".AddressConfigActivity"></activity>
+        <activity android:name=".IMMessageBgActivity"></activity>
+        <activity android:name=".IMSelectBgActivity"></activity>
+        <activity android:name=".IMFriendListActivity"></activity>
+        <activity android:name=".IMDiscussListActivity"></activity>
+        <activity android:name=".IMDiscussInfoActivity"></activity>
+        <activity android:name=".IMGroupListActivity"></activity>
+        <activity android:name=".IMImageActivity"></activity>
+        <activity
+            android:name="com.yzx.im_demo.ConverseActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.yzx.im_demo.AudioConverseActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.yzx.im_demo.TelUserInfoActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.yzx.im_demo.UserInfoActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.yzx.im_demo.TransDataActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+        <activity
+            android:name=".IMBaiduMapActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+        <activity
+            android:name="com.yzx.im_demo.DirectEntryActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.yzx.im_demo.VideoConverseActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".IMLoginOutActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:host="com.yzx.im_demo"
+                    android:pathPrefix="/login_out"
+                    android:scheme="yzx" />
+            </intent-filter>
+        </activity>
+
+        <service android:name="com.yzx.service.ConnectionService" />
+        <service android:name="com.yzx.service.GrayInnerService" />
+
+        <receiver android:name="com.yzxtcp.tools.tcp.receiver.AlarmReceiver" />
+        <receiver android:name="com.yzxtcp.tools.tcp.receiver.MsgBackReceiver" />
+        <receiver android:name="com.yzx.tools.RtppReceiver" />
+
+    </application>
+
+</manifest>

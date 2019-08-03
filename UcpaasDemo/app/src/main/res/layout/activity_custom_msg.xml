@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.yzx.mydefineview.ResizeRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:yzx="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rl_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/custom_msg_bgk">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="#1D1D1D">
+
+            <ImageButton
+                android:id="@+id/imbtn_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:background="@null"
+                android:clickable="false"
+                android:focusable="false"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp"
+                android:src="@drawable/register_back" />
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:paddingLeft="@dimen/titleBar_text_padding"
+                android:paddingRight="@dimen/titleBar_text_padding"
+                android:singleLine="true"
+                android:text="@string/custom_msg_text"
+                android:textColor="#fff"
+                android:textSize="19sp" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.2"
+            android:orientation="vertical">
+
+            <com.yzx.mydefineview.YZXCustomMsgEditText
+                android:id="@+id/et_custom_text"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/custom_msg_text_bkg"
+                android:ems="10"
+                android:gravity="left|top"
+                android:hint="点击输入自定义消息"
+                android:maxLength="200"
+                android:paddingBottom="14dp"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:paddingTop="8dp"
+                android:textSize="15sp"
+                yzx:textColor="#898989"
+                yzx:textSize="14sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="13dp"
+                android:layout_marginRight="13dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/custom_info_text"
+                android:textColor="@color/custom_msg_text"
+                android:textSize="14sp" />
+
+            <Button
+                android:id="@+id/send_msg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="19dp"
+                android:layout_marginRight="19dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/cycle_button"
+                android:text="@string/send_msg_text"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/block_softinput"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+    </LinearLayout>
+</com.yzx.mydefineview.ResizeRelativeLayout>

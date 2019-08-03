@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <attr name="normal_icon" format="reference" />
+    <attr name="select_icon" format="reference" />
+    <attr name="text" format="string" />
+    <attr name="text_size" format="dimension" />
+    <attr name="text_normal_color" format="color" />
+    <attr name="text_select_color" format="color" />
+
+    <declare-styleable name="ChangeColorIconView">
+        <attr name="normal_icon" />
+        <attr name="select_icon" />
+        <attr name="text" />
+        <attr name="text_size" />
+        <attr name="text_normal_color" />
+        <attr name="text_select_color" />
+    </declare-styleable>
+    <declare-styleable name="Emojicon">
+        <attr name="emojiconSize" format="dimension" />
+    </declare-styleable>
+
+    <attr name="firstColor" format="color" />
+    <attr name="secondColor" format="color" />
+    <attr name="circleWidth" format="dimension" />
+    <attr name="textSize" format="dimension" />
+
+    <declare-styleable name="YZXProgressBar">
+        <attr name="firstColor" />
+        <attr name="secondColor" />
+        <attr name="circleWidth" />
+        <attr name="textSize" />
+    </declare-styleable>
+
+    <attr name="from">
+        <enum name="left" value="1" />
+        <enum name="right" value="0" />
+    </attr>
+    <attr name="image" format="reference" />
+    <attr name="textColor" format="color" />
+    <attr name="normalColor" format="color" />
+    <attr name="focusColor" format="color" />
+    <attr name="operateStyle">
+        <enum name="copy" value="0" />
+        <enum name="delete" value="1" />
+        <enum name="copyAnddelete" value="2" />
+    </attr>
+    <attr name="imageStyle">
+        <enum name="normal" value="0" />
+        <enum name="location" value="1" />
+    </attr>
+    <attr name="textAreaBkg" format="color" />
+    <attr name="arrowWidthOffset" format="dimension" />
+    <attr name="arrowHeightOffset" format="dimension" />
+    <attr name="circleDismen" format="dimension" />
+
+    <declare-styleable name="IMChatImageView">
+        <attr name="from" />
+        <attr name="image" />
+        <attr name="imageStyle" />
+        <attr name="textSize" />
+        <attr name="textColor" />
+        <attr name="textAreaBkg" />
+        <attr name="arrowWidthOffset" />
+        <attr name="arrowHeightOffset" />
+        <attr name="circleDismen" />
+    </declare-styleable>
+
+    <attr name="trangleH" format="dimension" />
+    <attr name="paddingL" format="dimension" />
+    <attr name="devideWidth" format="dimension" />
+    <attr name="devideColor" format="color" />
+
+    <declare-styleable name="MessagePopView">
+        <attr name="textSize" />
+        <attr name="textColor" />
+        <attr name="normalColor" />
+        <attr name="focusColor" />
+        <attr name="operateStyle" />
+        <attr name="trangleH" />
+        <attr name="paddingL" />
+        <attr name="devideWidth" />
+        <attr name="devideColor" />
+    </declare-styleable>
+
+    <attr name="nameTextSize" format="dimension" />
+    <attr name="addressTextSize" format="dimension" />
+    <attr name="textPadding" format="dimension" />
+    <attr name="bkg" format="color" />
+
+    <declare-styleable name="IMLocationInfoView">
+        <attr name="circleDismen" />
+        <attr name="trangleH" />
+        <attr name="nameTextSize" />
+        <attr name="addressTextSize" />
+        <attr name="textPadding" />
+        <attr name="textColor" />
+        <attr name="bkg" />
+    </declare-styleable>
+    <declare-styleable name="YZXCustomMsgEditText">
+        <attr name="textSize" />
+        <attr name="textColor" />
+    </declare-styleable>
+
+</resources>

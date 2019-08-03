@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical">
+    
+    <TextView 
+        android:id="@+id/dialog_tv"
+    	android:layout_width="match_parent"
+    	android:layout_height="60dip"
+    	android:gravity="center"
+    	android:textColor="#383838"
+    	android:text=""/>
+    <EditText
+        android:id="@+id/dialog_et"
+        android:layout_width="match_parent"
+    	android:layout_height="60dip"
+    	android:gravity="center"
+    	android:textColor="#383838"
+    	android:background="@null"
+    	android:inputType="textUri"
+    	android:visibility="gone"/>
+    <View 
+        android:layout_width="match_parent"
+    	android:layout_height="1dip"
+    	android:background="#dadada"/>
+    <LinearLayout 
+        android:layout_width="match_parent"
+    	android:layout_height="60dip"
+    	android:orientation="horizontal">
+    	<TextView 
+    	    android:id="@+id/dialog_tv_cencel"
+    	    android:layout_width="match_parent"
+    		android:layout_height="60dip"
+    		android:layout_weight="1"
+    		android:gravity="center"
+    		android:textColor="@color/item_name_color"
+    		android:text="取消 "
+    		android:background="@drawable/item_press_selector"/>
+    	<View 
+	        android:layout_width="1dip"
+	    	android:layout_height="60dip"
+	    	android:background="#dadada"/>
+        <TextView 
+            android:id="@+id/dialog_tv_sure"
+    	    android:layout_width="match_parent"
+    		android:layout_height="60dip"
+    		android:layout_weight="1"
+    		android:gravity="center"
+    		android:textColor="#46ac5e"
+    		android:text="确定"
+    		android:background="@drawable/item_press_selector"/>
+    </LinearLayout>
+
+</LinearLayout>

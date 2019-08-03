@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:descendantFocusability="afterDescendants"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp" 
+        android:background="#1D1D1D" 
+        >
+
+        <ImageButton
+            android:id="@+id/imbtn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:src="@drawable/register_back"
+            android:background="@null"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:clickable="false"
+            android:focusable="false" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:paddingLeft="@dimen/titleBar_text_padding"
+            android:paddingRight="@dimen/titleBar_text_padding"
+            android:singleLine="true"
+            android:text="@string/location_info"
+            android:layout_centerInParent="true"
+            android:textColor="#fff"
+            android:textSize="19sp" />
+
+        <Button
+            android:id="@+id/send_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:text="发送"
+            android:background="@null"
+            android:textColor="#46ac5e"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:paddingRight="12dp"
+            android:paddingLeft="12dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:textSize="17sp"
+            />
+    </RelativeLayout>
+    
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1.5">
+
+        <com.baidu.mapapi.map.MapView
+            android:id="@+id/bmap_View"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clickable="true" />
+
+        <ImageView
+            android:id="@+id/bmap_local_myself"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="11dp"
+            android:background="@drawable/icon_arrow_bg"
+            />
+        
+        <ImageView
+            android:id="@+id/bmap_center_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/icon_local" 
+            android:paddingBottom="40dp"
+            android:paddingLeft="12dp"
+            />
+    </RelativeLayout>
+    
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="@drawable/icon_bmap_bg" />
+
+    <ListView
+        android:id="@+id/bmap_listview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:visibility="gone"
+        android:cacheColorHint="#00000000"
+        android:listSelector="@drawable/location_item_selector"
+        />
+    <TextView 
+        android:id="@+id/search_poi"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="正在加载..."
+        android:textSize="19sp"
+        android:gravity="center"
+        android:visibility="visible"
+        />
+
+</LinearLayout>

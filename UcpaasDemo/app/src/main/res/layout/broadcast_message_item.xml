@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="8dp"
+    android:paddingTop="8dp" >
+
+    <TextView
+        android:id="@+id/message_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="5dip"
+        android:layout_marginTop="5dip"
+        android:background="@drawable/message_time"
+        android:gravity="center"
+        android:text="昨天 16:20"
+        android:textColor="#ffffff"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/message_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="18dp"
+        android:layout_marginRight="18dp"
+        android:gravity="left"
+        android:background="@drawable/broadcast_item_text"
+        android:layout_gravity="center_horizontal"
+        android:padding="8dp"
+        android:textColor="@android:color/black"
+        android:text="您好，这里是云吞吞在线！ 
+技术支持在线服务时间为：
+周一至周四：9:00-21:30，周五至周六：9:00-18:00
+其余时间段，您可在【哔】的一声给我们留言！
+您的留言，我们将在上线第一时间为您详细解答，
+请耐心等候哦 ! 
+【哔】~ " />
+
+</LinearLayout>

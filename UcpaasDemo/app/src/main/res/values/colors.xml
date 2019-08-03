@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <color name="info_show_normal" tools:ignore="MissingDefaultResource">#ffffff</color>
+    <color name="info_show_press">#fafafa</color>
+    <color name="info_button_normal">#ff6161</color>
+    <color name="info_button_press">#d8d8d8</color>
+    <color name="item_name_color">#262626</color>
+    <color name="item_content_color">#8c8c8c</color>
+    <color name="item_gray_color">#f5f5f5</color>
+    <color name="btn_press_color">#46ac5e</color>
+    <color name="btn_normal_color">#00ffffff</color>
+    <color name="location_normal_color">#00ffffff</color>
+    <color name="location_press_color">#99E1E6F6</color>
+    <color name="more_operate_n">#747775</color>
+    <color name="more_operate_p">#46ac5e</color>
+    <color name="broadcast_bkg">#F2F2F2</color>
+    <color name="custom_msg_bgk">#f5f5f5</color>
+    <color name="custom_msg_text">#898989</color>
+    <color name="msg_custom_text">#ff651a</color>
+    
+    <!-- dialog颜色 -->
+    <color name="white">#FFFFFF</color>
+    <color name="dialog_blue">#0095D9</color>
+    <color name="dialog_orange">#FF7B02</color>
+    <color name="dialog_gray">#e6e6e6</color>
+    <color name="dialogColor">#f0ffffff</color>
+    <color name="dialogTxtColor">#0048fc</color>
+    <color name="black">#000000</color>
+    <color name="red">#FF0000</color>
+    <color name="tv_tel_name">#383838</color>
+    <color name="tv_msg_mode">#999999</color>
+    <color name="tv_mis_dial">#fc533a</color>
+    <color name="line">#e5e5e5</color>
+    <color name="text_gray">#787878</color>
+    <color name="call_user_name_color">#1d1d1d</color>
+    <color name="call_user_phone_color">#696969</color>
+    <color name="call_voice_normal_back_color">#89d043</color>
+    <color name="call_voice_down_back_color">#5fad12</color>
+    <color name="call_video_normal_back_color">#12b7f5</color>
+    <color name="call_video_down_back_color">#0094cc</color>
+    <color name="call_content_color">#777777</color>
+    <color name="tv_tel_hint_name">#a6a6a6</color>
+    <color name="login_btn_normal">#787878</color>
+    <color name="color_f2f2f2">#f2f2f2</color>
+
+</resources>

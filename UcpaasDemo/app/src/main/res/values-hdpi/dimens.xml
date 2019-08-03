@@ -1,0 +1,10 @@
+<resources>
+
+    <dimen name="titleBar_text">28sp</dimen>
+    <dimen name="bottom_padding">7dp</dimen>
+    <dimen name="itme_name_padding">18dp</dimen>
+    <dimen name="bottom_height">54dp</dimen>
+    
+    <dimen name="titleBar_text_padding">100dp</dimen>
+    <dimen name="titleBar_textLen">66dp</dimen>
+</resources>

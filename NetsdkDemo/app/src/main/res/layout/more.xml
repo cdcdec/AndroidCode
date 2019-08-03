@@ -1,0 +1,88 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    tools:context="com.example.netsdk_demo.MoreActivity" >
+
+    <Button
+        android:id="@+id/device_info"
+        android:layout_width="fill_parent"
+        android:layout_height="70dp"
+        android:background="#00000000"
+        android:text="Device Info"/>
+    
+    <View
+        android:id="@+id/tab1"
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:layout_below="@+id/device_info"
+        android:background="#999"/>
+    
+     <Button
+        android:id="@+id/alarm_info"
+        android:layout_width="fill_parent"
+        android:layout_height="70dp"
+        android:layout_below="@+id/tab1"
+        android:background="#00000000"
+        android:text="Alarm Info"/>
+     
+     <View
+        android:id="@+id/tab2"
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:layout_below="@+id/alarm_info"
+        android:background="#999"/>
+
+    <Button
+        android:id="@+id/DeviceTime"
+        android:layout_width="fill_parent"
+        android:layout_height="70dp"
+        android:layout_below="@+id/tab2"
+        android:background="#00000000"
+        android:text="Get Device Time"/>
+    <View
+        android:id="@+id/tab3"
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:layout_below="@+id/DeviceTime"
+        android:background="#999"/>
+
+    <Button
+        android:id="@+id/setDeviceTime"
+        android:layout_width="fill_parent"
+        android:layout_height="70dp"
+        android:layout_below="@+id/tab3"
+        android:background="#00000000"
+        android:text="Set Device Time"/>
+    <View
+        android:id="@+id/tab4"
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:layout_below="@+id/setDeviceTime"
+        android:background="#999"/>
+
+    <Button
+        android:id="@+id/CalendarQuery"
+        android:layout_width="fill_parent"
+        android:layout_height="70dp"
+        android:layout_below="@+id/tab4"
+        android:background="#00000000"
+        android:text="Calendar Query"/>
+    <View
+        android:id="@+id/tab5"
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:layout_below="@+id/CalendarQuery"
+        android:background="#999"/>
+
+    <Button
+        android:id="@+id/logout"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:background="#FF0038"
+        android:text="Logout" />
+
+</RelativeLayout>

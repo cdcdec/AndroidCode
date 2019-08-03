@@ -1,0 +1,50 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/id_viewpager"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" >
+    </androidx.viewpager.widget.ViewPager>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/tabbg"
+        android:orientation="horizontal" >
+   
+   <!--  <com.yzx.mydefineview.MyBottomBar 
+        android:id="@+id/id_indicator_msg"
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:padding="5dp"
+        yzx:icon="@drawable/bottom_message"
+        yzx:text="@string/bottom_msg"
+        yzx:text_size="15sp" />
+
+   <com.yzx.mydefineview.MyBottomBar 
+        android:id="@+id/id_indicator_contact"
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:padding="5dp"
+        yzx:icon="@drawable/bottom_contact"
+        yzx:text="@string/bottom_contact"
+        yzx:text_size="15sp" />
+   
+   <com.yzx.mydefineview.MyBottomBar 
+        android:id="@+id/id_indicator_setting"
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:padding="5dp"
+        yzx:icon="@drawable/bottom_setting"
+        yzx:text="@string/bottom_setting"
+        yzx:text_size="15sp" /> -->
+ </LinearLayout>
+ 
+</LinearLayout>

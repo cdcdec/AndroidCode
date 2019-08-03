@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff">
+	<LinearLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:background="#ffffff"
+	    android:orientation="vertical" >
+		
+	    <com.yzx.mydefineview.YzxTopBar
+		    android:id="@+id/yzx_topbar"
+	        android:layout_width="match_parent"
+	        android:layout_height="50dp"
+	        android:layout_alignParentTop="true"
+	        android:background="#1D1D1D"/>
+		<TextView
+		    android:id="@+id/selectbg"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:paddingLeft="20dip"
+			android:paddingTop="20dip"
+			android:paddingBottom="20dip"
+			android:clickable="false"
+			android:text="选择背景图"
+			android:textSize="16sp"
+			android:textColor="#383838"
+			android:gravity="center_vertical" /> 
+		<View 
+		    android:layout_width="match_parent"
+			android:layout_height="1dip"
+			android:layout_marginLeft="20dip"
+			android:layout_marginRight="20dip"
+			android:background="#ececec"/>
+		<TextView
+		    android:id="@+id/selectfromcamera"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:paddingLeft="20dip"
+			android:paddingTop="20dip"
+			android:paddingBottom="20dip"
+			android:clickable="false"
+			android:text="从相机中选择"
+			android:textSize="16sp"
+			android:textColor="#383838"
+			android:gravity="center_vertical" /> 
+		<View 
+		    android:layout_width="match_parent"
+			android:layout_height="1dip"
+			android:layout_marginLeft="20dip"
+			android:layout_marginRight="20dip"
+			android:background="#ececec"/>
+		<TextView
+		    android:id="@+id/selectfromnow"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:paddingLeft="20dip"
+			android:paddingTop="20dip"
+			android:paddingBottom="20dip"
+			android:clickable="false"
+			android:text="拍一张"
+			android:textSize="16sp"
+			android:textColor="#383838"
+			android:gravity="center_vertical" /> 
+	</LinearLayout>
+</ScrollView>

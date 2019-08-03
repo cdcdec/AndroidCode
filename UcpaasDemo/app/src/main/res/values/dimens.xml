@@ -1,0 +1,15 @@
+<resources>
+
+    <dimen name="padding_small">8dp</dimen>
+    <dimen name="padding_medium">8dp</dimen>
+    <dimen name="padding_large">16dp</dimen>
+
+    <dimen name="itme_name_size">16sp</dimen>
+    <dimen name="itme_name_padding">15dp</dimen>
+    <dimen name="item_content_size">12sp</dimen>
+    <dimen name="titleBar_text">21sp</dimen>
+    
+    <dimen name="titleBar_textLen">80dp</dimen>
+    
+    <dimen name="padding10">10dp</dimen>
+</resources>

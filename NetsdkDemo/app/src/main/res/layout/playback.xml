@@ -1,0 +1,206 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="${relativePackage}.${activityClass}" >
+
+	<LinearLayout
+		android:id="@+id/linear1"
+		android:layout_width="fill_parent"
+		android:layout_height="150dp"
+		android:orientation="horizontal"
+		android:layout_alignParentTop="true"
+		android:layout_alignParentLeft="true">
+
+		<com.example.netsdk_demo.CPlayView
+			android:id="@+id/playback_View"
+			android:layout_width="0dp"
+			android:layout_height="150dp"
+			android:layout_weight="1"
+			android:layout_margin="0.5dp"/>
+
+		<com.example.netsdk_demo.CPlayView
+			android:id="@+id/playback1_View"
+			android:layout_width="0dp"
+			android:layout_height="150dp"
+			android:layout_weight="1"
+			android:layout_margin="0.5dp"/>
+	</LinearLayout>
+
+	<LinearLayout
+		android:id="@+id/linear2"
+		android:layout_below="@+id/linear1"
+		android:layout_width="fill_parent"
+		android:layout_height="150dp"
+		android:orientation="horizontal"
+		android:layout_marginTop="0.5dp">
+
+		<com.example.netsdk_demo.CPlayView
+			android:id="@+id/playback2_View"
+			android:layout_width="0dp"
+			android:layout_height="150dp"
+			android:layout_weight="1"
+			android:layout_margin="0.5dp"/>
+
+		<com.example.netsdk_demo.CPlayView
+			android:id="@+id/playback3_View"
+			android:layout_width="0dp"
+			android:layout_height="150dp"
+			android:layout_margin="0.5dp"
+			android:layout_weight="1" />
+	</LinearLayout>
+
+    <TableLayout
+        android:id="@+id/tableLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linear2"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:stretchColumns="0,1,2,3" >
+
+        <TableRow>
+
+            <Button
+                android:id="@+id/startPlayback"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:focusable="true"
+                android:text="Play"/>
+             <Button
+                android:id="@+id/stopPlayback"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Stop" />
+
+            <Button
+                android:id="@+id/pause"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pause" />
+            
+            <Button
+                android:id="@+id/resume"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Resume"/>
+
+        </TableRow>
+    </TableLayout>
+
+    <TableLayout
+        android:id="@+id/tableLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tableLayout1"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:stretchColumns="0,1,2,3" >
+
+        <TableRow>
+			<Button
+		        android:id="@+id/backward"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:focusable="true"
+		        android:text="Backward" />
+
+		    <Button
+		        android:id="@+id/forward"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:focusable="true"
+		        android:text="Forward" />
+			<Button
+				android:id="@+id/startDownload"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:focusable="true"
+				android:text="down"/>
+			<Button
+				android:id="@+id/StopDownload"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:focusable="true"
+				android:text="Sdown"/>
+		    <TextView
+		        android:id="@+id/playspeed"
+		        android:layout_width="50dp"
+		        android:layout_height="wrap_content"
+		        android:focusable="true" />
+		       />
+
+        </TableRow>
+    </TableLayout>
+    
+    
+ <TableLayout
+        android:id="@+id/tableLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tableLayout2"
+        android:orientation="vertical"
+        android:stretchColumns="0,1">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Begin Time"
+            android:textColor="#00BFFF"/>
+        
+        <TableRow>
+			
+	        <EditText
+	            android:id="@+id/begindate"
+	            android:layout_width="wrap_content"
+            	android:layout_height="wrap_content"
+	            android:maxLength="10" 
+	            android:hint="yyyy-MM-dd"/>
+
+	        <EditText
+	            android:id="@+id/begintime"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:maxLength="8" 
+	            android:hint="HH:mm:ss"/>	
+		         
+        </TableRow>
+        
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="End Time" 
+            android:textColor="#00BFFF"/>
+        
+        <TableRow>
+	        <EditText
+	            android:id="@+id/enddate"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:maxLength="10"
+	            android:hint="yyyy-MM-dd" />
+		
+	        <EditText
+	            android:id="@+id/endtime"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:maxLength="8"
+	            android:hint="HH:mm:ss" />
+		         
+        </TableRow>
+
+        <Button
+			android:id="@+id/queryRecordFile"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_alignParentLeft="true"
+			android:layout_alignParentRight="true"
+			android:layout_alignParentBottom="true"
+			android:layout_below="@+id/tableLayout3"
+			android:text="Query" />
+
+    </TableLayout>
+
+
+
+</RelativeLayout>

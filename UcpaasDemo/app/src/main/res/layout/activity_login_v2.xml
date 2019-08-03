@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f5f5f5"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#f5f5f5"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/imv_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="80dp"
+            android:background="@drawable/default_logo" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dip"
+                android:text="@string/login_admin"
+                android:textColor="@color/item_name_color"
+                android:textSize="@dimen/itme_name_size"
+                android:visibility="gone" />
+
+            <com.yzx.mydefineview.EditTextWithClearImg
+                android:id="@+id/edt_account"
+                android:layout_width="match_parent"
+                android:layout_height="40dip"
+                android:layout_gravity="center"
+                android:layout_marginLeft="20dip"
+                android:layout_marginRight="20dip"
+                android:background="@null"
+                android:drawableRight="@drawable/login_clear"
+                android:hint="@string/login_hint"
+                android:inputType="numberDecimal"
+                android:maxLength="11"
+                android:textColor="@color/tv_tel_name"
+                android:textColorHint="@color/tv_tel_hint_name" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="20dip"
+            android:layout_marginRight="20dip"
+            android:layout_marginTop="5dp"
+            android:background="@color/line" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dip"
+            android:layout_marginRight="20dip"
+            android:layout_marginTop="15dp">
+
+            <EditText
+                android:id="@+id/edt_veri_code"
+                android:layout_width="160dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_marginRight="20dip"
+                android:background="@null"
+                android:hint="@string/veri_code_hint"
+                android:inputType="numberDecimal"
+                android:singleLine="true"
+                android:textColor="@color/tv_tel_name"
+                android:textColorHint="@color/tv_tel_hint_name" />
+            <!--
+                Button
+                android:id="@+id/btn_obtain_veri_code"
+                android:layout_width="120dp"
+                android:layout_height="40dp"
+                android:layout_marginRight="10dip"
+                android:layout_alignParentRight="true"
+                android:text="@string/obtain_veri_code"
+                android:textSize="18dp"
+                android:textColor="#787878" />
+            -->
+
+            <Button
+                android:id="@+id/btn_obtain_veri_code"
+                android:layout_width="120dp"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dip"
+                android:background="@drawable/btnstyle_normal"
+                android:text="@string/obtain_veri_code"
+                android:textColor="@color/login_btn_normal"
+                android:textSize="18sp" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="20dip"
+            android:layout_marginRight="20dip"
+            android:layout_marginTop="5dp"
+            android:background="#e5e5e5" />
+
+        <Button
+            android:id="@+id/btn_login"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/cycle_button"
+            android:text="@string/login_login"
+            android:textColor="#ffffff"
+            android:textSize="22sp" />
+
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/address_setting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="26dp"
+        android:layout_marginRight="26dp"
+        android:src="@drawable/login_setting_selector" />
+
+</RelativeLayout>

@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    android:fillViewport="true"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:orientation="vertical" >
+
+        <com.yzx.mydefineview.YzxTopBar
+            android:id="@+id/yzx_topbar_disinfo"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="#1D1D1D"/>
+
+        <RelativeLayout
+            android:id="@+id/discuss_rename"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:padding="20dip" >
+
+            <TextView
+                android:id="@+id/id_discussionInfo_disName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:background="@drawable/info_show"
+                android:clickable="false"
+                android:gravity="center_vertical"
+                android:text="讨论组名称"
+                android:textColor="@color/item_name_color"
+                android:textSize="@dimen/itme_name_size" />
+
+            <TextView
+                android:id="@+id/discuss_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/id_discussionInfo_disName"
+                android:background="@drawable/info_show"
+                android:clickable="false"
+                android:ellipsize="end"
+                android:gravity="center_vertical|right"
+                android:singleLine="true"
+                android:text=""
+                android:textColor="#cccccc"
+                android:textSize="@dimen/itme_name_size" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            android:layout_marginLeft="20dip"
+            android:layout_marginRight="20dip"
+            android:background="@color/item_gray_color" />
+
+        <com.yzx.mydefineview.MyGridView
+            android:id="@+id/info_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="#ffffff"
+            android:clickable="false"
+            android:listSelector="@android:color/transparent"
+            android:numColumns="4"
+            android:scrollbars="none"
+            android:scrollingCache="false"
+            android:stretchMode="columnWidth" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="15dip"
+            android:background="@color/item_gray_color"
+            />
+
+        <TextView
+            android:id="@+id/selectbg_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/info_show"
+            android:clickable="false"
+            android:gravity="center_vertical"
+            android:paddingBottom="20dip"
+            android:paddingLeft="20dip"
+            android:paddingTop="20dip"
+            android:text="更换聊天背景"
+            android:textColor="@color/item_name_color"
+            android:textSize="16sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="15dip"
+            android:background="@color/item_gray_color"
+            android:visibility="gone" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:paddingBottom="10dip"
+            android:paddingLeft="20dip"
+            android:paddingTop="10dip"
+            android:visibility="gone" >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/info_show"
+                android:clickable="false"
+                android:gravity="center_vertical"
+                android:text="成员邀请"
+                android:textColor="@color/item_name_color"
+                android:textSize="16sp" />
+
+            <CheckBox
+                android:id="@+id/item_check_invite"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:layout_marginRight="20dip"
+                android:button="@drawable/setting_checkbox_selector"
+                android:checked="true"
+                android:gravity="center"
+                android:tag="true" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            android:layout_marginLeft="20dip"
+            android:layout_marginRight="20dip"
+            android:visibility="gone"
+            android:background="@color/item_gray_color" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="15dip"
+            android:background="@color/item_gray_color"
+            />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:orientation="horizontal"
+            android:paddingBottom="10dip"
+            android:paddingLeft="20dip"
+            android:paddingTop="10dip"
+            android:visibility="gone" >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/info_show"
+                android:clickable="false"
+                android:gravity="center_vertical"
+                android:text="接收消息"
+                android:textColor="@color/item_name_color"
+                android:textSize="16sp" />
+
+            <CheckBox
+                android:id="@+id/item_check_receive"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:layout_marginRight="20dip"
+                android:button="@drawable/setting_checkbox_selector"
+                android:checked="true"
+                android:gravity="center"
+                android:tag="true" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="15dip"
+            android:background="@color/item_gray_color"
+            android:visibility="gone" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:clickable="false"
+            android:gravity="center_vertical"
+            android:paddingBottom="10dip"
+            android:paddingLeft="20dip"
+            android:paddingTop="10dip"
+            android:text="查找聊天记录"
+            android:textColor="#F1F1F1"
+            android:textSize="16sp"
+            android:visibility="gone" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            android:layout_marginLeft="20dip"
+            android:layout_marginRight="20dip"
+            android:background="@color/item_gray_color" />
+
+        <TextView
+            android:id="@+id/clear_msgs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:clickable="false"
+            android:gravity="center_vertical"
+            android:paddingBottom="20dip"
+            android:paddingLeft="20dip"
+            android:paddingTop="20dip"
+            android:text="清空聊天记录"
+            android:textColor="@color/item_name_color"
+            android:textSize="16sp" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="15dip"
+            android:background="@color/item_gray_color"
+            />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" >
+
+            <Button
+                android:id="@+id/quit_chatroom"
+                android:layout_width="match_parent"
+                android:layout_height="50dip"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="25dip"
+                android:layout_marginLeft="20dip"
+                android:layout_marginRight="20dip"
+                android:layout_marginTop="50dip"
+                android:background="@drawable/info_button"
+                android:text="删除并退出"
+                android:textColor="#ffffff"
+                android:textSize="18sp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</ScrollView>

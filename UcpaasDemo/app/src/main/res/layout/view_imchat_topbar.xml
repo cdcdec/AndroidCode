@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    >
+    
+<TextView android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="13dp"
+    android:textSize="18sp"
+    android:id="@+id/tv_actionbar"
+    android:text="消息"
+    android:textColor="#ffffff"
+    android:gravity="center_vertical"
+    />
+
+<ImageButton android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:layout_centerHorizontal="true"
+    android:layout_alignParentRight="true"
+    android:layout_marginRight="5dp"
+    android:background="@drawable/actionbar_add_icon"
+    android:id="@+id/im_actionbar_add"/>
+
+<ImageButton android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:layout_centerHorizontal="true"
+    android:background="@drawable/actionbar_search_icon"
+    android:id="@+id/im_actionbar_search"
+    android:visibility="gone"
+    android:layout_marginRight="5dp"
+    android:layout_toLeftOf="@id/im_actionbar_add"/>
+
+
+</RelativeLayout>

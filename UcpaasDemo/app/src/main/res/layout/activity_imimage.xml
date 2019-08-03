@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:yzx="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/imimage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <com.yzx.mydefineview.YZXProgressBar
+        android:id="@+id/yzx_progressBar"
+        android:layout_width="54dp"
+        android:layout_height="54dp"
+        yzx:circleWidth="5dp"
+        yzx:firstColor="#00FFFFFF"
+        yzx:secondColor="#FFFFFFFF"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        yzx:textSize="19sp" />
+
+</RelativeLayout>

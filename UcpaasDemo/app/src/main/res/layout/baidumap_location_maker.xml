@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" 
+    >
+
+    <RelativeLayout
+        android:id="@+id/location_text"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/tv_location_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@drawable/location_info_bkg"
+            android:paddingBottom="19dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:paddingTop="8dp"
+            android:text="深圳市南山区科技园"
+            android:textColor="#ffffff"
+            android:gravity="center_horizontal"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:paddingLeft="12dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_below="@id/location_text"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/icon_local" />
+
+</RelativeLayout>

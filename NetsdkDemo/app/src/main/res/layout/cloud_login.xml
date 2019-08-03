@@ -1,0 +1,78 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.netsdk_demo.CCloudLogin" >
+
+    <LinearLayout
+        android:id="@+id/LinearLayout01"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+		android:layout_marginTop="20dp"
+        android:gravity="center_horizontal" 
+        android:layout_below="@+id/cloud_device"
+        android:orientation="vertical"  >
+
+        
+    	<EditText
+        android:id="@+id/cloud_server_url"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" 
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:ems="10"
+        android:hint="Account"
+        android:text="http://ezcloud.uniview.com"
+        android:inputType="textPersonName" >
+         <requestFocus />
+         </EditText>
+
+		<EditText
+			android:id="@+id/cloud_username"
+			android:layout_width="fill_parent"
+			android:layout_height="fill_parent"
+			android:layout_alignLeft="@+id/cloud_server_url"
+			android:layout_alignRight="@+id/cloud_server_url"
+			android:layout_below="@+id/cloud_server_url"
+			android:layout_marginTop="20dp"
+			android:ems="10"
+			android:hint="Cloud Name"
+			android:text="mnbv2223"
+			android:inputType="textPostalAddress">
+		</EditText>
+		<EditText
+			android:id="@+id/cloud_password"
+			android:layout_width="fill_parent"
+			android:layout_height="fill_parent"
+			android:layout_alignLeft="@+id/cloud_username"
+			android:layout_alignRight="@+id/cloud_username"
+			android:layout_below="@+id/cloud_username"
+			android:layout_marginTop="20dp"
+			android:ems="10"
+			android:hint="Passward"
+			android:text="123456l"
+			android:inputType="textPassword" />
+        
+   	</LinearLayout>
+
+    <Button
+        android:id="@+id/cloud_account_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/LinearLayout01"
+        android:layout_alignLeft="@+id/LinearLayout01"
+        android:layout_alignRight="@+id/LinearLayout01"
+        android:background="@drawable/button_shape"
+        android:layout_marginTop="20dp"
+        android:focusable="true"
+        android:text="Login"
+        android:textSize="20dp"
+        android:textColor="#FFF" />    
+    
+
+</RelativeLayout>

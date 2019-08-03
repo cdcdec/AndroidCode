@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/input_numbers"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:background="@drawable/item_press_selector"
+        android:drawableLeft="@drawable/input_phones"
+        android:drawablePadding="5dp"
+        android:gravity="center_vertical"
+        android:paddingBottom="8dip"
+        android:paddingLeft="13dp"
+        android:paddingTop="8dip"
+        android:text="输入对方手机号"
+        android:textColor="@color/item_name_color"
+        android:textSize="@dimen/itme_name_size" />
+    
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dip"
+        android:background="@color/item_gray_color" />
+
+    <TextView
+        android:id="@+id/group"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:background="@drawable/item_press_selector"
+        android:drawableLeft="@drawable/persones"
+        android:drawablePadding="5dp"
+        android:gravity="center_vertical"
+        android:paddingBottom="8dip"
+        android:paddingLeft="13dp"
+        android:paddingTop="8dip"
+        android:text="群组"
+        android:textColor="@color/item_name_color"
+        android:textSize="@dimen/itme_name_size" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dip"
+        android:background="@color/item_gray_color" />
+
+    <TextView
+        android:id="@+id/chatroom"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:background="@drawable/item_press_selector"
+        android:drawableLeft="@drawable/persons"
+        android:drawablePadding="5dp"
+        android:gravity="center_vertical"
+        android:paddingBottom="8dip"
+        android:paddingLeft="13dp"
+        android:paddingTop="8dip"
+        android:text="讨论组"
+        android:textColor="@color/item_name_color"
+        android:textSize="@dimen/itme_name_size" />
+
+</LinearLayout>

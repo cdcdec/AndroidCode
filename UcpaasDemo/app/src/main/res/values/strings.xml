@@ -1,0 +1,64 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <string name="app_name">云之讯Demo</string>
+    <string name="menu_settings" tools:ignore="ExtraTranslation">Settings</string>
+    <string name="title_activity_imdemo">云之讯Demo</string>
+    <string name="login_admin">手机号</string>
+    <string name="login_hint">请输入11位手机号</string>
+    <string name="login_pwd">密码</string>
+    <string name="login_login">登录</string>
+    <string name="login_register">设置昵称</string>
+    <string name="login_select">请选择体验账号</string>
+    <string name="login_client">立即体验</string>
+    <string name="login_cancel">取消</string>
+    <string name="login_nick">设置昵称</string>
+    <string name="login_nick_hint">请输入昵称(数字或字母或中文)</string>
+    <string name="login_sure">确认</string>
+    <string name="ability_name">云之讯能力演示</string>
+    <string name="location_info">位置信息</string>
+    <string name="custom_msg_text">自定义消息</string>
+    <string name="custom_info_text">这里的自定义消息是加密后的文本消息，开发者可以在自己的App中定制自己的自定义消息</string>
+    <string name="send_msg_text">立即发送</string>
+    <string name="trans_content_hint">请输入透传内容</string>
+
+    <string name="action_group_chat">发起群聊</string>
+    <string name="action_search">搜索</string>
+
+    <string name="bottom_msg">消息</string>
+    <string name="bottom_contact">通讯录</string>
+    <string name="bottom_setting">设置</string>
+
+    <string name="setting_changeClient">更换体验账号</string>
+    <string name="setting_msgNotigy">接收消息通知</string>
+    <string name="setting_voice">声音</string>
+    <string name="setting_vibrator">振动</string>
+    <string name="setting_720p">视频720P</string>
+    <string name="max_rate">最大码率</string>
+    <string name="min_rate">最小码率</string>
+    <string name="setting_about">关于</string>
+    <string name="setting_quite">退出登录</string>
+    <string name="setting_tcp_trans">TCP透传</string>
+    <string name="setting_personProgramer">个人开发者</string>
+    <string name="trans_clear">清除</string>
+
+    <string name="dial_hide">隐藏</string>
+    <string name="veri_code_hint">验证码</string>
+    <string name="obtain_veri_code">获取验证码</string>
+    <string name="tv_meg">消息</string>
+    <string name="tv_tel">电话</string>
+    <string name="direct_back">返回</string>
+
+    <string-array name="encryption_mode_values">
+        <item>未选择</item>
+        <item>demotest1</item>
+        <item>demotest2</item>
+        <item>demotest3</item>
+        <item>demotest4</item>
+        <item>demotest5</item>
+        <item>demotest6</item>
+        <item>demotest7</item>
+        <item>demotest8</item>
+        <item>demotest9</item>
+        <item>demotest10</item>
+    </string-array>
+</resources>

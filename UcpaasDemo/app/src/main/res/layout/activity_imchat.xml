@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:yzx="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <com.yzx.mydefineview.YzxTopBar
+        android:id="@+id/actionBar_chat"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#1D1D1D"
+        android:gravity="center" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" >
+
+        <FrameLayout
+            android:id="@+id/id_frameLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent" >
+        </FrameLayout>
+
+        <ImageView
+            android:id="@+id/iv_direct"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/direct" 
+            android:focusable="false"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="30dp"
+            android:visibility="gone"/>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#dcdcdc" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#f7f7f7"
+        android:orientation="horizontal" >
+
+        <FrameLayout
+            android:id="@+id/fl_left"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" >
+
+            <com.yzx.mydefineview.MainBottomBar
+                android:id="@+id/id_bottombar_msg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:padding="5dp"
+                yzx:normal_icon="@drawable/bottom_message"
+                yzx:select_icon="@drawable/bottom_message_down"
+                yzx:text="消息"
+                yzx:text_normal_color="#ff797979"
+                yzx:text_select_color="#ff46ac5e"
+                yzx:text_size="12sp" />
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:paddingRight="40dip"
+                android:paddingTop="4dip" >
+
+                <ImageView
+                    android:id="@+id/conversations_cout_bg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/unreadsmall" />
+
+                <TextView
+                    android:id="@+id/conversations_cout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@null"
+                    android:clickable="false"
+                    android:gravity="center"
+                    android:text="1"
+                    android:textColor="#ffffff"
+                    android:textSize="10sp" />
+            </FrameLayout>
+        </FrameLayout>
+
+        <com.yzx.mydefineview.MainBottomBar
+            android:id="@+id/id_bottombar_contact"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="5dp"
+            yzx:normal_icon="@drawable/bottom_contact"
+            yzx:select_icon="@drawable/bottom_contact_down"
+            yzx:text="通讯录"
+            yzx:text_normal_color="#ff797979"
+            yzx:text_select_color="#ff46ac5e"
+            yzx:text_size="12sp" />
+
+        <com.yzx.mydefineview.MainBottomBar
+            android:id="@+id/id_bottombar_setting"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="@dimen/bottom_padding"
+            yzx:normal_icon="@drawable/bottom_setting"
+            yzx:select_icon="@drawable/bottom_setting_down"
+            yzx:text="设置"
+            yzx:text_normal_color="#ff797979"
+            yzx:text_select_color="#ff46ac5e"
+            yzx:text_size="12sp" />
+    </LinearLayout>
+
+</LinearLayout>

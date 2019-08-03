@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">NetSDK Demo</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_liveview">MyActivity</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_cloud">CloudActivity</string>
+    <string name="title_activity_cloud_dev_login">DevloginActivity</string>
+    <string name="title_activity_ptz">PtzActivity</string>
+    <string name="title_activity_playback">PlaybackActivity</string>
+    <string name="title_activity_alarmreport">AlarmActivity</string>
+    <string name="title_activity_double_dialog">DoubleDialogActivity</string>
+    <string name="title_activity_nagvigation">NagvigationActivity</string>
+    <string name="title_activity_more">MeActivity</string>
+    <string name="title_activity_dev_info">DevinfoActivity</string>
+
+</resources>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    >
+    <com.yzx.mydefineview.YzxTopBar
+        android:id="@+id/broadcast_top"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#1D1D1D" />
+    <com.yzx.mydefineview.MyListView
+        android:id="@+id/broadcast_msgs"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/broadcast_bkg"
+        android:layout_below="@id/broadcast_top"
+        android:divider="@null"
+        android:fadingEdge="none"
+        android:footerDividersEnabled="true"
+        android:listSelector="#00000000"
+        android:scrollbars="vertical"
+        android:transcriptMode="normal" />
+</RelativeLayout>

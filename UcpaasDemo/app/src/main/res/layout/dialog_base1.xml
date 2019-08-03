@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical" >
+    <TextView 
+        android:id="@+id/dialog_tv1"
+    	android:layout_width="match_parent"
+    	android:layout_height="60dip"
+    	android:gravity="center"
+    	android:textColor="#383838"
+    	android:text="置顶聊天"/>
+    <View 
+        android:layout_width="match_parent"
+    	android:layout_height="1dip"
+    	android:background="#cccccc"/>
+    <TextView 
+        android:id="@+id/dialog_tv2"
+    	android:layout_width="match_parent"
+    	android:layout_height="60dip"
+    	android:gravity="center"
+    	android:textColor="#383838"
+    	android:text="删除该聊天"/>
+
+</LinearLayout>

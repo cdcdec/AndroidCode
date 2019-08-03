@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical" >
+
+    <com.yzx.mydefineview.EditTextWithClearImg
+        android:id="@+id/trans_edit_phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="10dip"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/edit_arrow_bkg"
+        android:drawableRight="@drawable/login_clear"
+        android:hint="@string/login_hint"
+        android:inputType="numberDecimal"
+        android:maxLength="11"
+        android:paddingBottom="2dp"
+        android:paddingLeft="2dp"
+        android:textSize="17sp" />
+
+    <com.yzx.mydefineview.EditTextWithClearImg
+        android:id="@+id/trans_edit_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="10dip"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/edit_arrow_bkg"
+        android:drawableRight="@drawable/login_clear"
+        android:hint="@string/trans_content_hint"
+        android:maxLength="11"
+        android:paddingBottom="2dp"
+        android:paddingLeft="2dp"
+        android:textSize="17sp" />
+
+    <Button
+        android:id="@+id/trans_send"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/cycle_button"
+        android:text="@string/send_msg_text"
+        android:textColor="#ffffff"
+        android:textSize="14sp" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="2dp"
+        android:layout_marginRight="2dp"
+        android:layout_marginBottom="2dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/trans_datalists_bkg" >
+
+        <ListView
+            android:id="@+id/trans_data"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="8dp"
+            android:background="@null"
+            android:dividerHeight="0dp"
+            android:fadingEdge="none"
+            android:footerDividersEnabled="false"
+            android:divider="@null"
+            android:transcriptMode="normal" />
+    </FrameLayout>
+
+</LinearLayout>

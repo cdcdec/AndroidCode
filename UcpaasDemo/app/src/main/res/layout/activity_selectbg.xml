@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff" >
+    
+    <com.yzx.mydefineview.YzxTopBar
+	  	android:id="@+id/yzx_topbar"
+	    android:layout_width="match_parent"
+	    android:layout_height="50dp"
+	    android:background="#1D1D1D" />
+    
+    <com.yzx.mydefineview.MyGridView
+		android:id="@+id/info_list"
+		android:layout_below="@id/yzx_topbar"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:background="#ffffff"
+		android:listSelector="@android:color/transparent"
+		android:layout_gravity="center"
+		android:clickable="false"
+		android:numColumns="3"
+		android:scrollbars="none"
+		android:scrollingCache="false"
+		android:stretchMode="columnWidth" />
+
+</RelativeLayout>
