@@ -9,27 +9,6 @@
 	    android:gravity="center_vertical"
 	    android:orientation="vertical" >
 	    
-	    <LinearLayout
-	        android:orientation="horizontal"
-	        android:layout_width="fill_parent"
-	        android:layout_height="wrap_content">
-	        
-		    <CheckBox
-		        android:id="@+id/is_timeline_cb"
-		        android:clickable="true"
-			    android:layout_width="wrap_content"
-			    android:layout_height="wrap_content"/>
-		    
-		    <TextView
-		        android:layout_width="wrap_content"
-		        android:layout_height="wrap_content"
-		        android:layout_weight="1"
-		        android:textColor="@color/black"
-		        android:text="@string/is_timeline"/>
-		    
-	    </LinearLayout>
-	    
-       
 	    <TextView
 	        style="@style/TitleText"
 	        android:text="@string/send"/>
@@ -75,6 +54,12 @@
 	        style="@style/MMLineActionButton"
 	        android:layout_margin="10dp"
 	        android:text="@string/send_appdata"/>
+	    
+	    <Button
+	        android:id="@+id/send_file"
+	        style="@style/MMLineActionButton"
+	        android:layout_margin="10dp"
+	        android:text="@string/send_file"/>
 	    
 	    <Button
 	        android:id="@+id/send_emoji"

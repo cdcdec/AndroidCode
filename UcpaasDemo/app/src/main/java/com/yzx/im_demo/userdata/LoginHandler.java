@@ -2,6 +2,7 @@ package com.yzx.im_demo.userdata;
 
 import android.app.ProgressDialog;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -11,6 +12,8 @@ import com.yzx.db.UserInfoDBManager;
 import com.yzx.db.domain.UserInfo;
 import com.yzx.im_demo.IMChatActivity;
 import com.yzx.im_demo.IMLoginV2Activity;
+import com.yzx.im_demo.IMMessageActivity;
+import com.yzx.im_demo.VideoConverseActivity;
 import com.yzx.mydefineview.MyToast;
 import com.yzx.tools.RestTools;
 import com.yzxtcp.UCSManager;
@@ -156,6 +159,19 @@ public class LoginHandler extends Handler implements ILoginListener {
 
             //移出登录监听回调
             UCSManager.removeLoginListener(this);
+
+            Intent intent = new Intent(mContext, VideoConverseActivity.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
+//					intent.putExtra("userName",conversationinfo.getConversationTitle());
+//					intent.putExtra("userId", conversationinfo.getTargetId());
+//					intent.putExtra("call_phone", conversationinfo.getTargetId());
+//					intent.putExtra("call_position", "");
+
+
+            intent.putExtra("userName","smt0209");
+            intent.putExtra("userId", "smt0209");
+            intent.putExtra("call_phone", "smt0209");
+            mContext.startActivity(intent);
         } else {
             sendEmptyMessage(RestTools.LOGIN_STATUS_FAIL);
         }

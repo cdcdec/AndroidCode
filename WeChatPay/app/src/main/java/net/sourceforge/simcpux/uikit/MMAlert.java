@@ -4,11 +4,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 import net.sourceforge.simcpux.R;
+import net.sourceforge.simcpux.Util;
+
 import android.app.Activity;
 import android.app.AlertDialog;
-import android.app.AlertDialog.Builder;
 import android.app.Dialog;
 import android.app.ProgressDialog;
+import android.app.AlertDialog.Builder;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnCancelListener;
@@ -18,12 +20,14 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
 import android.widget.AdapterView;
-import android.widget.AdapterView.OnItemClickListener;
 import android.widget.BaseAdapter;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.AdapterView.OnItemClickListener;
 
 public final class MMAlert {
 
@@ -285,6 +289,50 @@ public final class MMAlert {
 		});
 	}
 
+	public static AlertDialog showWebAlert(final Context context, final String title, final String rawUrl, final WebViewClient client, final DialogInterface.OnClickListener lOk,
+			final DialogInterface.OnDismissListener lDismiss) {
+		final View view = View.inflate(context, R.layout.webalert, null);
+		final AlertDialog alert = showAlert(context, title, view, lOk);
+		alert.setOnDismissListener(new DialogInterface.OnDismissListener() {
+
+			@Override
+			public void onDismiss(DialogInterface dialog) {
+
+				if (lDismiss != null) {
+					lDismiss.onDismiss(dialog);
+				}
+			}
+		});
+		final WebView info = (WebView) view.findViewById(R.id.info_wv);
+		info.loadUrl(rawUrl);
+		if (client != null) {
+			info.setWebViewClient(client);
+		}
+		return alert;
+	}
+
+	public static AlertDialog showWebAlert(final Context context, final String title, final String rawUrl, final WebViewClient client, final String ok, final String cancel,
+			final DialogInterface.OnClickListener lOk, final DialogInterface.OnClickListener lCancel, final DialogInterface.OnDismissListener lDismiss) {
+		final View view = View.inflate(context, R.layout.webalert, null);
+		final AlertDialog alert = showAlert(context, title, view, ok, cancel, lOk, lCancel);
+		alert.setOnDismissListener(new DialogInterface.OnDismissListener() {
+
+			@Override
+			public void onDismiss(DialogInterface dialog) {
+				if (lDismiss != null) {
+					lDismiss.onDismiss(dialog);
+				}
+			}
+		});
+
+		final WebView info = (WebView) view.findViewById(R.id.info_wv);
+		info.loadUrl(rawUrl);
+		if (client != null) {
+			info.setWebViewClient(client);
+		}
+		return alert;
+	}
+
 	/**
 	 * @param context
 	 *            Context.
@@ -362,7 +410,7 @@ class AlertAdapter extends BaseAdapter {
 		if (items == null || items.length == 0) {
 			this.items = new ArrayList<String>();
 		} else {
-			this.items = stringsToList(items);
+			this.items = Util.stringsToList(items);
 		}
 		this.types = new int[this.items.size() + 3];
 		this.context = context;
@@ -443,16 +491,5 @@ class AlertAdapter extends BaseAdapter {
 		// LinearLayout view;
 		TextView text;
 		int type;
-	}
-	
-	public static List<String> stringsToList(final String[] src) {
-		if (src == null || src.length == 0) {
-			return null;
-		}
-		final List<String> result = new ArrayList<String>();
-		for (int i = 0; i < src.length; i++) {
-			result.add(src[i]);
-		}
-		return result;
 	}
 }

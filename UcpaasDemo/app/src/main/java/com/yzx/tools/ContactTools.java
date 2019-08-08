@@ -163,7 +163,7 @@ public class ContactTools {
 	
 	private static void contactAddDefaultAccount(List<SortModel> mSortList){
 		String[] contactName = new String[]{"测试账号1","测试账号2","测试账号3","测试账号4"};
-		String[] phoneNumber = new String[]{"18687654321", "18687654322", "18687654323","smt0203"};
+		String[] phoneNumber = new String[]{"18687654321", "18687654322", "18687654323","smt0209"};
 		for(int i = 0; i < contactName.length; i++){
 			SortModel sortModel = new SortModel();
 			sortModel.setName(contactName[i]);

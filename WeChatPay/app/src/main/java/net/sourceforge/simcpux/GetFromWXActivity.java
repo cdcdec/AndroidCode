@@ -1,5 +1,6 @@
 package net.sourceforge.simcpux;
 
+import net.sourceforge.simcpux.R;
 import net.sourceforge.simcpux.uikit.CameraUtil;
 import net.sourceforge.simcpux.uikit.MMAlert;
 import android.app.Activity;
@@ -35,7 +36,7 @@ public class GetFromWXActivity extends Activity {
 		super.onCreate(savedInstanceState);
 
 		// acquire wxapi
-		api = WXAPIFactory.createWXAPI(this, Constants.APP_ID,false);
+		api = WXAPIFactory.createWXAPI(this, Constants.APP_ID);
 		bundle = getIntent().getExtras();
 
 		setContentView(R.layout.get_from_wx);
@@ -107,7 +108,7 @@ public class GetFromWXActivity extends Activity {
 				GetMessageFromWX.Resp resp = new GetMessageFromWX.Resp();
 				resp.transaction = getTransaction();
 				resp.message = msg;
-				
+
 				api.sendResp(resp);
 				finish();
 			}
@@ -131,7 +132,7 @@ public class GetFromWXActivity extends Activity {
 				GetMessageFromWX.Resp resp = new GetMessageFromWX.Resp();
 				resp.transaction = getTransaction();
 				resp.message = msg;
-				
+
 				api.sendResp(resp);
 				finish();
 			}
@@ -151,7 +152,7 @@ public class GetFromWXActivity extends Activity {
 				GetMessageFromWX.Resp resp = new GetMessageFromWX.Resp();
 				resp.transaction = getTransaction();
 				resp.message = msg;
-				
+
 				api.sendResp(resp);
 				finish();
 			}
@@ -171,7 +172,7 @@ public class GetFromWXActivity extends Activity {
 				GetMessageFromWX.Resp resp = new GetMessageFromWX.Resp();
 				resp.transaction = getTransaction();
 				resp.message = msg;
-				
+
 				api.sendResp(resp);
 				finish();
 			}
@@ -197,41 +198,37 @@ public class GetFromWXActivity extends Activity {
 		super.onActivityResult(requestCode, resultCode, data);
 
 		switch (requestCode) {
-		case 0x100: {
-			if (resultCode == RESULT_OK) {
-				final WXAppExtendObject appdata = new WXAppExtendObject();
-				final String path = CameraUtil.getResultPhotoPath(this, data, "/mnt/sdcard/tencent/");
-				appdata.filePath = path;
-				appdata.extInfo = "this is ext info";
-	
-				final WXMediaMessage msg = new WXMediaMessage();
-				msg.setThumbImage(Util.extractThumbNail(path, 150, 150, true));
-				msg.title = "this is title";
-				msg.description = "this is description";
-				msg.mediaObject = appdata;
-	
-				
-				GetMessageFromWX.Resp resp = new GetMessageFromWX.Resp();
-				resp.transaction = getTransaction();
-				resp.message = msg;
-				
-				api.sendResp(resp);
-				finish();
-			}
-			break;
-		}
+			case 0x100: {
+				if (resultCode == RESULT_OK) {
+					final WXAppExtendObject appdata = new WXAppExtendObject();
+					final String path = CameraUtil.getResultPhotoPath(this, data, "/mnt/sdcard/tencent/");
+					appdata.filePath = path;
+					appdata.extInfo = "this is ext info";
 
-		default:
-			break;
+					final WXMediaMessage msg = new WXMediaMessage();
+					msg.setThumbImage(Util.extractThumbNail(path, 150, 150, true));
+					msg.title = "this is title";
+					msg.description = "this is description";
+					msg.mediaObject = appdata;
+
+
+					GetMessageFromWX.Resp resp = new GetMessageFromWX.Resp();
+					resp.transaction = getTransaction();
+					resp.message = msg;
+
+					api.sendResp(resp);
+					finish();
+				}
+				break;
+			}
+
+			default:
+				break;
 		}
 	}
 
 	private String getTransaction() {
-		try {
-			final GetMessageFromWX.Req req = new GetMessageFromWX.Req(bundle);
-			return req.transaction;
-		} catch (Exception e) {
-			return "";
-		}
+		final GetMessageFromWX.Req req = new GetMessageFromWX.Req(bundle);
+		return req.transaction;
 	}
 }

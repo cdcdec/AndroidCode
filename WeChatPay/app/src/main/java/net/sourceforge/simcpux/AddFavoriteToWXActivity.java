@@ -1,12 +1,14 @@
 package net.sourceforge.simcpux;
 
+import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.net.URL;
 
-import net.sourceforge.simcpux.R;
+import com.tencent.mm.opensdk.modelmsg.*;
+import com.tencent.mm.opensdk.openapi.IWXAPI;
+import com.tencent.mm.opensdk.openapi.WXAPIFactory;
 import net.sourceforge.simcpux.uikit.CameraUtil;
 import net.sourceforge.simcpux.uikit.MMAlert;
-
 import android.app.Activity;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -15,26 +17,13 @@ import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.os.Environment;
 import android.view.View;
-import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
-import com.tencent.mm.opensdk.modelmsg.SendAuth;
-import com.tencent.mm.opensdk.modelmsg.SendMessageToWX;
-import com.tencent.mm.opensdk.modelmsg.WXAppExtendObject;
-import com.tencent.mm.opensdk.modelmsg.WXEmojiObject;
-import com.tencent.mm.opensdk.modelmsg.WXImageObject;
-import com.tencent.mm.opensdk.modelmsg.WXMediaMessage;
-import com.tencent.mm.opensdk.modelmsg.WXMusicObject;
-import com.tencent.mm.opensdk.modelmsg.WXTextObject;
-import com.tencent.mm.opensdk.modelmsg.WXVideoObject;
-import com.tencent.mm.opensdk.modelmsg.WXWebpageObject;
-import com.tencent.mm.opensdk.openapi.IWXAPI;
-import com.tencent.mm.opensdk.openapi.WXAPIFactory;
 
-public class SendToWXActivity extends Activity {
 
+public class AddFavoriteToWXActivity extends Activity {
 	private static final int THUMB_SIZE = 150;
 
 	private static final String SDCARD_ROOT = Environment.getExternalStorageDirectory().getAbsolutePath();
@@ -44,22 +33,17 @@ public class SendToWXActivity extends Activity {
 	private static final int MMAlertSelect2  =  1;
 	private static final int MMAlertSelect3  =  2;
 
-	private CheckBox isTimelineCb;
-
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 
 		api = WXAPIFactory.createWXAPI(this, Constants.APP_ID);
 
-		setContentView(R.layout.send_to_wx);
+		setContentView(R.layout.add_fav_to_wx);
 		initView();
 	}
 
 	private void initView() {
-
-		isTimelineCb = (CheckBox) findViewById(R.id.is_timeline_cb);
-		isTimelineCb.setChecked(false);
 
 		// send to weixin
 		findViewById(R.id.send_text).setOnClickListener(new View.OnClickListener() {
@@ -67,11 +51,11 @@ public class SendToWXActivity extends Activity {
 			@Override
 			public void onClick(View v) {
 
-				final EditText editor = new EditText(SendToWXActivity.this);
+				final EditText editor = new EditText(AddFavoriteToWXActivity.this);
 				editor.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.FILL_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT));
 				editor.setText(R.string.send_text_default);
 
-				MMAlert.showAlert(SendToWXActivity.this, "send text", editor, getString(R.string.app_share), getString(R.string.app_cancel), new DialogInterface.OnClickListener() {
+				MMAlert.showAlert(AddFavoriteToWXActivity.this, "send text", editor, getString(R.string.app_share), getString(R.string.app_cancel), new DialogInterface.OnClickListener() {
 
 					@Override
 					public void onClick(DialogInterface dialog, int which) {
@@ -95,7 +79,7 @@ public class SendToWXActivity extends Activity {
 						SendMessageToWX.Req req = new SendMessageToWX.Req();
 						req.transaction = buildTransaction("text"); // transaction字段用于唯一标识一个请求
 						req.message = msg;
-						req.scene = isTimelineCb.isChecked() ? SendMessageToWX.Req.WXSceneTimeline : SendMessageToWX.Req.WXSceneSession;
+						req.scene = SendMessageToWX.Req.WXSceneFavorite;
 						req.openId = getOpenId();
 						// 调用api接口发送数据到微信
 						api.sendReq(req);
@@ -109,8 +93,8 @@ public class SendToWXActivity extends Activity {
 
 			@Override
 			public void onClick(View v) {
-				MMAlert.showAlert(SendToWXActivity.this, getString(R.string.send_img),
-						SendToWXActivity.this.getResources().getStringArray(R.array.send_img_item),
+				MMAlert.showAlert(AddFavoriteToWXActivity.this, getString(R.string.send_img),
+						AddFavoriteToWXActivity.this.getResources().getStringArray(R.array.send_img_item),
 						null, new MMAlert.OnAlertSelectId(){
 
 							@Override
@@ -130,7 +114,7 @@ public class SendToWXActivity extends Activity {
 										SendMessageToWX.Req req = new SendMessageToWX.Req();
 										req.transaction = buildTransaction("img");
 										req.message = msg;
-										req.scene = isTimelineCb.isChecked() ? SendMessageToWX.Req.WXSceneTimeline : SendMessageToWX.Req.WXSceneSession;
+										req.scene = SendMessageToWX.Req.WXSceneFavorite;
 										req.openId = getOpenId();
 										api.sendReq(req);
 
@@ -141,8 +125,8 @@ public class SendToWXActivity extends Activity {
 										String path = SDCARD_ROOT + "/test.png";
 										File file = new File(path);
 										if (!file.exists()) {
-											String tip = SendToWXActivity.this.getString(R.string.send_img_file_not_exist);
-											Toast.makeText(SendToWXActivity.this, tip + " path = " + path, Toast.LENGTH_LONG).show();
+											String tip = AddFavoriteToWXActivity.this.getString(R.string.send_img_file_not_exist);
+											Toast.makeText(AddFavoriteToWXActivity.this, tip + " path = " + path, Toast.LENGTH_LONG).show();
 											break;
 										}
 
@@ -160,7 +144,7 @@ public class SendToWXActivity extends Activity {
 										SendMessageToWX.Req req = new SendMessageToWX.Req();
 										req.transaction = buildTransaction("img");
 										req.message = msg;
-										req.scene = isTimelineCb.isChecked() ? SendMessageToWX.Req.WXSceneTimeline : SendMessageToWX.Req.WXSceneSession;
+										req.scene = SendMessageToWX.Req.WXSceneFavorite;
 										req.openId = getOpenId();
 										api.sendReq(req);
 
@@ -172,8 +156,8 @@ public class SendToWXActivity extends Activity {
 
 										try{
 											WXImageObject imgObj = new WXImageObject();
+											imgObj.imagePath=url;
 											//imgObj.imageUrl = url;
-											imgObj.imagePath = url;
 
 											WXMediaMessage msg = new WXMediaMessage();
 											msg.mediaObject = imgObj;
@@ -186,7 +170,7 @@ public class SendToWXActivity extends Activity {
 											SendMessageToWX.Req req = new SendMessageToWX.Req();
 											req.transaction = buildTransaction("img");
 											req.message = msg;
-											req.scene = isTimelineCb.isChecked() ? SendMessageToWX.Req.WXSceneTimeline : SendMessageToWX.Req.WXSceneSession;
+											req.scene = SendMessageToWX.Req.WXSceneFavorite;
 											req.openId = getOpenId();
 											api.sendReq(req);
 
@@ -206,13 +190,96 @@ public class SendToWXActivity extends Activity {
 			}
 		});
 
+		findViewById(R.id.send_file).setOnClickListener(new View.OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				MMAlert.showAlert(AddFavoriteToWXActivity.this, getString(R.string.send_file),
+						AddFavoriteToWXActivity.this.getResources().getStringArray(R.array.send_file_item),
+						null, new MMAlert.OnAlertSelectId(){
+
+							@Override
+							public void onClick(int whichButton) {
+								switch(whichButton){
+									case MMAlertSelect1: {
+										Bitmap bmp = BitmapFactory.decodeResource(getResources(), R.drawable.send_img);
+										byte[] dataBuf = null;
+										try {
+											final ByteArrayOutputStream os = new ByteArrayOutputStream();
+											bmp.compress(Bitmap.CompressFormat.JPEG, 85, os);
+											dataBuf = os.toByteArray();
+											os.close();
+
+										} catch (Exception e) {
+											e.printStackTrace();
+										}
+										WXFileObject fileObject = new WXFileObject(dataBuf);
+
+										WXMediaMessage msg = new WXMediaMessage();
+										msg.mediaObject = fileObject;
+
+										Bitmap thumbBmp = Bitmap.createScaledBitmap(bmp, THUMB_SIZE, THUMB_SIZE, true);
+										bmp.recycle();
+										msg.thumbData = Util.bmpToByteArray(thumbBmp, true);  // 设置缩略图
+
+										SendMessageToWX.Req req = new SendMessageToWX.Req();
+										req.transaction = buildTransaction("file");
+										req.message = msg;
+										req.scene = SendMessageToWX.Req.WXSceneFavorite;
+										req.openId = getOpenId();
+										api.sendReq(req);
+
+										finish();
+										break;
+									}
+									case MMAlertSelect2: {
+										String path = SDCARD_ROOT + "/test.jpg";
+										File file = new File(path);
+										if (!file.exists()) {
+											String tip = AddFavoriteToWXActivity.this.getString(R.string.send_img_file_not_exist);
+											Toast.makeText(AddFavoriteToWXActivity.this, tip + " path = " + path, Toast.LENGTH_LONG).show();
+											break;
+										}
+
+										WXFileObject fileObject = new WXFileObject();
+										fileObject.setFilePath(path);
+
+										WXMediaMessage msg = new WXMediaMessage();
+										msg.mediaObject = fileObject;
+
+										Bitmap bmp = BitmapFactory.decodeFile(path);
+										Bitmap thumbBmp = Bitmap.createScaledBitmap(bmp, THUMB_SIZE, THUMB_SIZE, true);
+										bmp.recycle();
+										msg.thumbData = Util.bmpToByteArray(thumbBmp, true);
+
+										SendMessageToWX.Req req = new SendMessageToWX.Req();
+										req.transaction = buildTransaction("file");
+										req.message = msg;
+										req.scene = SendMessageToWX.Req.WXSceneFavorite;
+										req.openId = getOpenId();
+										api.sendReq(req);
+
+										finish();
+										break;
+									}
+
+									default:
+										break;
+								}
+							}
+
+						});
+			}
+		});
+
+
 		findViewById(R.id.send_music).setOnClickListener(new View.OnClickListener() {
 
 			@Override
 			public void onClick(View v) {
 
-				MMAlert.showAlert(SendToWXActivity.this, getString(R.string.send_music),
-						SendToWXActivity.this.getResources().getStringArray(R.array.send_music_item),
+				MMAlert.showAlert(AddFavoriteToWXActivity.this, getString(R.string.send_music),
+						AddFavoriteToWXActivity.this.getResources().getStringArray(R.array.send_music_item),
 						null, new MMAlert.OnAlertSelectId(){
 
 							@Override
@@ -235,7 +302,7 @@ public class SendToWXActivity extends Activity {
 										SendMessageToWX.Req req = new SendMessageToWX.Req();
 										req.transaction = buildTransaction("music");
 										req.message = msg;
-										req.scene = isTimelineCb.isChecked() ? SendMessageToWX.Req.WXSceneTimeline : SendMessageToWX.Req.WXSceneSession;
+										req.scene = SendMessageToWX.Req.WXSceneFavorite;
 										req.openId = getOpenId();
 										api.sendReq(req);
 
@@ -257,7 +324,7 @@ public class SendToWXActivity extends Activity {
 										SendMessageToWX.Req req = new SendMessageToWX.Req();
 										req.transaction = buildTransaction("music");
 										req.message = msg;
-										req.scene = isTimelineCb.isChecked() ? SendMessageToWX.Req.WXSceneTimeline : SendMessageToWX.Req.WXSceneSession;
+										req.scene = SendMessageToWX.Req.WXSceneFavorite;
 										req.openId = getOpenId();
 										api.sendReq(req);
 
@@ -276,8 +343,8 @@ public class SendToWXActivity extends Activity {
 
 			@Override
 			public void onClick(View v) {
-				MMAlert.showAlert(SendToWXActivity.this, getString(R.string.send_video),
-						SendToWXActivity.this.getResources().getStringArray(R.array.send_video_item),
+				MMAlert.showAlert(AddFavoriteToWXActivity.this, getString(R.string.send_video),
+						AddFavoriteToWXActivity.this.getResources().getStringArray(R.array.send_video_item),
 						null, new MMAlert.OnAlertSelectId(){
 
 							@Override
@@ -296,7 +363,7 @@ public class SendToWXActivity extends Activity {
 										SendMessageToWX.Req req = new SendMessageToWX.Req();
 										req.transaction = buildTransaction("video");
 										req.message = msg;
-										req.scene = isTimelineCb.isChecked() ? SendMessageToWX.Req.WXSceneTimeline : SendMessageToWX.Req.WXSceneSession;
+										req.scene = SendMessageToWX.Req.WXSceneFavorite;
 										req.openId = getOpenId();
 										api.sendReq(req);
 
@@ -314,7 +381,7 @@ public class SendToWXActivity extends Activity {
 										SendMessageToWX.Req req = new SendMessageToWX.Req();
 										req.transaction = buildTransaction("video");
 										req.message = msg;
-										req.scene = isTimelineCb.isChecked() ? SendMessageToWX.Req.WXSceneTimeline : SendMessageToWX.Req.WXSceneSession;
+										req.scene = SendMessageToWX.Req.WXSceneFavorite;
 										req.openId = getOpenId();
 										api.sendReq(req);
 
@@ -333,8 +400,8 @@ public class SendToWXActivity extends Activity {
 
 			@Override
 			public void onClick(View v) {
-				MMAlert.showAlert(SendToWXActivity.this, getString(R.string.send_webpage),
-						SendToWXActivity.this.getResources().getStringArray(R.array.send_webpage_item),
+				MMAlert.showAlert(AddFavoriteToWXActivity.this, getString(R.string.send_webpage),
+						AddFavoriteToWXActivity.this.getResources().getStringArray(R.array.send_webpage_item),
 						null, new MMAlert.OnAlertSelectId(){
 
 							@Override
@@ -352,7 +419,7 @@ public class SendToWXActivity extends Activity {
 										SendMessageToWX.Req req = new SendMessageToWX.Req();
 										req.transaction = buildTransaction("webpage");
 										req.message = msg;
-										req.scene = isTimelineCb.isChecked() ? SendMessageToWX.Req.WXSceneTimeline : SendMessageToWX.Req.WXSceneSession;
+										req.scene = SendMessageToWX.Req.WXSceneFavorite;
 										req.openId = getOpenId();
 										api.sendReq(req);
 
@@ -370,8 +437,8 @@ public class SendToWXActivity extends Activity {
 
 			@Override
 			public void onClick(View v) {
-				MMAlert.showAlert(SendToWXActivity.this, getString(R.string.send_appdata),
-						SendToWXActivity.this.getResources().getStringArray(R.array.send_appdata_item),
+				MMAlert.showAlert(AddFavoriteToWXActivity.this, getString(R.string.send_appdata),
+						AddFavoriteToWXActivity.this.getResources().getStringArray(R.array.send_appdata_item),
 						null, new MMAlert.OnAlertSelectId(){
 
 							@Override
@@ -383,7 +450,7 @@ public class SendToWXActivity extends Activity {
 										if (!file.exists()) {
 											file.mkdirs();
 										}
-										CameraUtil.takePhoto(SendToWXActivity.this, dir, "send_appdata", 0x101);
+										CameraUtil.takePhoto(AddFavoriteToWXActivity.this, dir, "send_appdata", 0x101);
 										break;
 									case MMAlertSelect2: {
 										final WXAppExtendObject appdata = new WXAppExtendObject();
@@ -400,7 +467,7 @@ public class SendToWXActivity extends Activity {
 										SendMessageToWX.Req req = new SendMessageToWX.Req();
 										req.transaction = buildTransaction("appdata");
 										req.message = msg;
-										req.scene = isTimelineCb.isChecked() ? SendMessageToWX.Req.WXSceneTimeline : SendMessageToWX.Req.WXSceneSession;
+										req.scene = SendMessageToWX.Req.WXSceneFavorite;
 										req.openId = getOpenId();
 										api.sendReq(req);
 
@@ -419,7 +486,7 @@ public class SendToWXActivity extends Activity {
 										SendMessageToWX.Req req = new SendMessageToWX.Req();
 										req.transaction = buildTransaction("appdata");
 										req.message = msg;
-										req.scene = isTimelineCb.isChecked() ? SendMessageToWX.Req.WXSceneTimeline : SendMessageToWX.Req.WXSceneSession;
+										req.scene = SendMessageToWX.Req.WXSceneFavorite;
 										req.openId = getOpenId();
 										api.sendReq(req);
 
@@ -439,8 +506,8 @@ public class SendToWXActivity extends Activity {
 
 			@Override
 			public void onClick(View v) {
-				MMAlert.showAlert(SendToWXActivity.this, getString(R.string.send_emoji),
-						SendToWXActivity.this.getResources().getStringArray(R.array.send_emoji_item),
+				MMAlert.showAlert(AddFavoriteToWXActivity.this, getString(R.string.send_emoji),
+						AddFavoriteToWXActivity.this.getResources().getStringArray(R.array.send_emoji_item),
 						null, new MMAlert.OnAlertSelectId(){
 
 							@Override
@@ -461,7 +528,7 @@ public class SendToWXActivity extends Activity {
 										SendMessageToWX.Req req = new SendMessageToWX.Req();
 										req.transaction = buildTransaction("emoji");
 										req.message = msg;
-										req.scene = isTimelineCb.isChecked() ? SendMessageToWX.Req.WXSceneTimeline : SendMessageToWX.Req.WXSceneSession;
+										req.scene = SendMessageToWX.Req.WXSceneFavorite;
 										req.openId = getOpenId();
 										api.sendReq(req);
 
@@ -481,7 +548,7 @@ public class SendToWXActivity extends Activity {
 										SendMessageToWX.Req req = new SendMessageToWX.Req();
 										req.transaction = buildTransaction("emoji");
 										req.message = msg;
-										req.scene = isTimelineCb.isChecked() ? SendMessageToWX.Req.WXSceneTimeline : SendMessageToWX.Req.WXSceneSession;
+										req.scene = SendMessageToWX.Req.WXSceneFavorite;
 										req.openId = getOpenId();
 										api.sendReq(req);
 
@@ -509,6 +576,7 @@ public class SendToWXActivity extends Activity {
 
 				// send oauth request
 				final SendAuth.Req req = new SendAuth.Req();
+				//req.scope = "post_timeline";
 				req.scope = scope;
 				req.state = "none";
 				req.openId = getOpenId();
@@ -548,7 +616,7 @@ public class SendToWXActivity extends Activity {
 				SendMessageToWX.Req req = new SendMessageToWX.Req();
 				req.transaction = buildTransaction("appdata");
 				req.message = msg;
-				req.scene = isTimelineCb.isChecked() ? SendMessageToWX.Req.WXSceneTimeline : SendMessageToWX.Req.WXSceneSession;
+				req.scene = SendMessageToWX.Req.WXSceneFavorite;
 				req.openId = getOpenId();
 				api.sendReq(req);
 

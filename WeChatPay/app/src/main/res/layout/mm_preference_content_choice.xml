@@ -9,7 +9,7 @@
 	<TextView
 		style="@style/MMFontPreferenceLarge"
 		android:layout_marginLeft="14dp"
-		android:id="@+android:id/title"
+		android:id="@+id/title"
 		android:layout_height="wrap_content"
 		android:layout_width="73dp"
 		android:singleLine="true" />

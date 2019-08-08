@@ -85,8 +85,10 @@
         <item name="android:windowBackground">@color/semitransparent</item>
         <item name="android:windowNoTitle">true</item>
         <item name="android:windowIsTranslucent">true</item>
-        <item name="android:windowAnimationStyle">@android:style/Animation.Translucent</item>
+
     </style>
+
+<!--    <item name="android:windowAnimationStyle">@+android:style/Animation.Translucent</item>-->
 
     <style name="MMTheme.Launcher" parent="MMTheme.Basic">
         <item name="android:windowNoTitle">true</item>

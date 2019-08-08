@@ -11,13 +11,13 @@
 
 	<TextView
 		style="@style/MMFontPreferenceLarge"
-		android:id="@+android:id/title"
+		android:id="@+id/title"
 		android:layout_width="fill_parent"
 		android:layout_height="wrap_content"
 		android:singleLine="true" />
 
 	<TextView
 		style="@style/MMFontPreferenceSmall"
-		android:id="@+android:id/summary"
+		android:id="@+id/summary"
 		android:singleLine="true" />
 </LinearLayout>

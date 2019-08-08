@@ -47,8 +47,9 @@
         <item name="android:paddingTop">26dp</item>
         <item name="android:paddingBottom">18dp</item>
         <item name="android:orientation">vertical</item>
-        <item name="android:fadingEdge">@null</item>
     </style>
+
+    <!--<item name="android:fadingEdge">@null></item>-->
 
     <style name="MMScroll">
         <item name="android:layout_width">fill_parent</item>
@@ -426,6 +427,13 @@
     
     <style name="DataSheetAnimation" parent="@android:style/Animation.Dialog">
         <item name="android:windowEnterAnimation">@anim/push_up_in</item>
+    </style>
+    
+    <style name="TitleText">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/BasicTextSize</item>
+        <item name="android:textColor">#ff000000</item>
     </style>
 
 </resources>
