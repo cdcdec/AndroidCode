@@ -18,7 +18,7 @@
             android:layout_marginRight="40dp"
             android:textSize="20sp"
             android:textColor="@color/black"
-            android:text="@string/headimg"/>
+            android:text="string/headimg"/>
         <ImageView
             android:layout_gravity="center"
             android:id="@+id/headimg"

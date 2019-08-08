@@ -39,19 +39,19 @@
             android:id="@+id/goto_subscribe_message_btn"
             style="@style/MMLineActionButton"
             android:layout_margin="10dp"
-            android:text="@string/subscribe_message"/>
+            android:text="subscribe_message"/>
 
         <Button
             android:id="@+id/goto_subscribe_mini_program_msg_btn"
             style="@style/MMLineActionButton"
             android:layout_margin="10dp"
-            android:text="@string/subscribe_mini_program"/>
+            android:text="subscribe_mini_program"/>
 
         <Button
             android:id="@+id/jump_to_offline_pay"
             style="@style/MMLineActionButton"
             android:layout_margin="10dp"
-            android:text="@string/jump_to_offline_pay"/>
+            android:text="jump_to_offline_pay"/>
 
     </LinearLayout>
 

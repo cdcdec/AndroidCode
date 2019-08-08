@@ -14,7 +14,7 @@
         android:orientation="vertical" >
 
         <TextView
-            android:id="@+android:id/title"
+            android:id="@+id/title"
             style="@style/MMFontPreferenceLarge"
             android:layout_width="73dp"
             android:layout_height="wrap_content"
@@ -32,7 +32,7 @@
         android:layout_height="wrap_content" />
 
     <TextView
-        android:id="@+android:id/summary"
+        android:id="@+id/summary"
         style="@style/MMFontPreferenceSummary"
         android:ellipsize="none"
         android:singleLine="false" />

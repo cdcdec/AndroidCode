@@ -13,6 +13,7 @@ import android.os.SystemClock;
 import android.provider.Settings;
 import android.provider.Settings.SettingNotFoundException;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.OrientationEventListener;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -500,32 +501,40 @@ public class VideoConverseActivity extends ConverseActivity implements OnClickLi
     private void initData() {
         // 判断是否是来电信息，默认是去电，（来电信息是由ConnectionService中的onIncomingCall回调中发送广播，开启通话界面，inCall为true）
         if (getIntent().hasExtra("inCall")) {
+            Log.e("123","hasExtra="+"inCall");
             inCall = getIntent().getBooleanExtra("inCall", false);
         }
         // 获得要拨打的号码，智能拨打和免费通话：phoneNumber代表ClientID，直拨和回拨代表ClientID绑定的手机号码
         if (getIntent().hasExtra("userId")) {
             calledUid = getIntent().getStringExtra("userId");
+            Log.e("123","hasExtra="+"userId"+calledUid);
         }
         if (getIntent().hasExtra("call_phone")) {
             calledPhone = getIntent().getStringExtra("call_phone");
+            Log.e("123","hasExtra="+"call_phone"+calledPhone);
         }
         if (getIntent().hasExtra("userName")) {
             userName = getIntent().getStringExtra("userName");
+            Log.e("123","hasExtra="+"userName"+userName);
         }
         if (getIntent().hasExtra("phoneNumber")) {
             phoneNumber = getIntent().getStringExtra("phoneNumber");
+            Log.e("123","hasExtra="+"phoneNumber"+phoneNumber);
         }
 
         if (getIntent().hasExtra("call_phone")) {
             phoneNumber = getIntent().getStringExtra("call_phone");
+            Log.e("123","hasExtra="+"call_phone2"+phoneNumber);
             CustomLog.v("dialing phone :" + phoneNumber);
         } else if (getIntent().hasExtra("phoneNumber")) {
             phoneNumber = getIntent().getStringExtra("phoneNumber");
+            Log.e("123","hasExtra="+"phoneNumber2"+phoneNumber);
         }
 
         if (phoneNumber != null && phoneNumber.length() > 0) {
             // 先显示通讯录中的昵称
             userName = ContactTools.getConTitle(phoneNumber);
+            Log.e("123","userName="+"userName"+userName);
             // 在从IM会话中获取通话记录昵称
             if (TextUtils.isEmpty(userName)) {
                 @SuppressWarnings("unchecked")

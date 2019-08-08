@@ -9,7 +9,7 @@
         style="@style/MMBriefText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/input_mini_program_appid" />
+        android:text="string/input_mini_program_appid" />
 
     <EditText
         android:id="@+id/mini_program_appid_et"
@@ -26,7 +26,7 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_margin="5dp"
-        android:text="@string/check_subscribe_message" />
+        android:text="string/check_subscribe_message" />
 
     <Button
         android:id="@+id/subscribe_message_btn"
@@ -34,6 +34,6 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_margin="5dp"
-        android:text="@string/subscribe_message" />
+        android:text="string/subscribe_message" />
 
 </LinearLayout>

@@ -153,7 +153,7 @@ public class IMLoginV2Activity extends Activity {
                         //RestTools.getToken(IMLoginV2Activity.this,mAccount, mHandler);
                         //使用验证码登录认证
                         //RestTools.getToken(IMLoginV2Activity.this, mAccount, veriCodeTmp, mHandler);
-                        RestTools.loginByToken("smt0203",mHandler,"eyJBbGciOiJIUzI1NiIsIkFjY2lkIjoiMWM2NGE2MzMwZTRhNDRlMWI4ODQwN2UzYmM5OGRmNDEiLCJBcHBpZCI6IjgxNTBiMDQ4ZWQ3OTRmM2U4NzQzOWViZmMxY2I2N2QwIiwiVXNlcmlkIjoiMTEwMDA3MzYifQ==.JmDnMo8vZtbPhEN1zjIf18ctVMVYRl/PL2ihEc400dA=");
+                        RestTools.loginByToken("smt0209",mHandler,"eyJBbGciOiJIUzI1NiIsIkFjY2lkIjoiMWM2NGE2MzMwZTRhNDRlMWI4ODQwN2UzYmM5OGRmNDEiLCJBcHBpZCI6IjgxNTBiMDQ4ZWQ3OTRmM2U4NzQzOWViZmMxY2I2N2QwIiwiVXNlcmlkIjoiMTEwMDA3MzYifQ==.JmDnMo8vZtbPhEN1zjIf18ctVMVYRl/PL2ihEc400dA=");
                     }
                 }, 100);
             }

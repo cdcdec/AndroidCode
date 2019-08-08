@@ -15,7 +15,7 @@
         android:minHeight="@dimen/PreferenceItemHeight" >
 
         <TextView
-            android:id="@+android:id/title"
+            android:id="@+id/title"
             style="@style/MMFontPreferenceLarge"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
@@ -24,7 +24,7 @@
             android:singleLine="true"/>
 
         <TextView
-            android:id="@+android:id/summary"
+            android:id="@+id/summary"
             style="@style/MMFontPreferenceSummary"
             android:singleLine="true" />
     </LinearLayout>
@@ -32,7 +32,7 @@
     <!-- Preference should place its actual preference widget here. -->
 
     <LinearLayout
-        android:id="@+android:id/widget_frame"
+        android:id="@+id/widget_frame"
         android:layout_width="wrap_content"
         android:layout_height="fill_parent"
         android:gravity="right|center_vertical"
