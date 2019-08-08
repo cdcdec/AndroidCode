@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">PahoMqtt</string>
+    <string name="app_name">Paho Example</string>
+
 </resources>
