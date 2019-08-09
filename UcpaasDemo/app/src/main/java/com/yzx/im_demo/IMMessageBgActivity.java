@@ -110,7 +110,7 @@ public class IMMessageBgActivity extends Activity {
 				}
 				
 			}
-			CustomLog.i("RESULT_PATH:" + uri.toString());
+			CustomLog.e("RESULT_PATH:" + uri.toString());
 			if(requestCode == SELECT_PIC){
 				path = getFilePathFromUri(uri);
 			}else{

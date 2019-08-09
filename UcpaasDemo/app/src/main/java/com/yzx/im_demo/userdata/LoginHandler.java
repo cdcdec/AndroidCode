@@ -73,7 +73,7 @@ public class LoginHandler extends Handler implements ILoginListener {
                 break;
 
             case RestTools.LOGIN_REST_TOKEN_OK:
-//			showProgressDialog();
+			showProgressDialog();
                 data = msg.getData();
                 token = data.getString("imtoken");
                 Log.e("123","token="+token);
@@ -157,21 +157,7 @@ public class LoginHandler extends Handler implements ILoginListener {
 //			mContext.startActivity(intent);
             IMChatActivity.actionStart(mContext, false);
 
-            //移出登录监听回调
-            UCSManager.removeLoginListener(this);
 
-            Intent intent = new Intent(mContext, VideoConverseActivity.class);
-            intent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
-//					intent.putExtra("userName",conversationinfo.getConversationTitle());
-//					intent.putExtra("userId", conversationinfo.getTargetId());
-//					intent.putExtra("call_phone", conversationinfo.getTargetId());
-//					intent.putExtra("call_position", "");
-
-
-            intent.putExtra("userName","smt0209");
-            intent.putExtra("userId", "smt0209");
-            intent.putExtra("call_phone", "smt0209");
-            mContext.startActivity(intent);
         } else {
             sendEmptyMessage(RestTools.LOGIN_STATUS_FAIL);
         }

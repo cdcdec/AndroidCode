@@ -25,6 +25,9 @@ import com.yzx.mydefineview.MyToast;
 import com.yzx.tools.NetWorkTools;
 import com.yzx.tools.RestTools;
 import com.yzx.tools.StringUtils;
+import com.yzxtcp.UCSManager;
+import com.yzxtcp.data.UcsReason;
+import com.yzxtcp.listener.ILoginListener;
 import com.yzxtcp.tools.CustomLog;
 import com.yzxtcp.tools.tcp.packet.PacketSerialize;
 
@@ -156,6 +159,32 @@ public class IMLoginV2Activity extends Activity {
                         RestTools.loginByToken("smt0209",mHandler,"eyJBbGciOiJIUzI1NiIsIkFjY2lkIjoiMWM2NGE2MzMwZTRhNDRlMWI4ODQwN2UzYmM5OGRmNDEiLCJBcHBpZCI6IjgxNTBiMDQ4ZWQ3OTRmM2U4NzQzOWViZmMxY2I2N2QwIiwiVXNlcmlkIjoiMTEwMDA3MzYifQ==.JmDnMo8vZtbPhEN1zjIf18ctVMVYRl/PL2ihEc400dA=");
                     }
                 }, 100);
+
+
+//                UCSManager.connect("eyJBbGciOiJIUzI1NiIsIkFjY2lkIjoiMWM2NGE2MzMwZTRhNDRlMWI4ODQwN2UzYmM5OGRmNDEiLCJBcHBpZCI6IjgxNTBiMDQ4ZWQ3OTRmM2U4NzQzOWViZmMxY2I2N2QwIiwiVXNlcmlkIjoiMTEwMDA3MzYifQ==.JmDnMo8vZtbPhEN1zjIf18ctVMVYRl/PL2ihEc400dA=", new ILoginListener() {
+//                    @Override
+//                    public void onLogin(UcsReason ucsReason) {
+//                        //移出登录监听回调
+//                        UCSManager.removeLoginListener(this);
+//
+//                        Intent intent = new Intent(IMLoginV2Activity.this, VideoConverseActivity.class);
+//                        intent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
+////					intent.putExtra("userName",conversationinfo.getConversationTitle());
+////					intent.putExtra("userId", conversationinfo.getTargetId());
+////					intent.putExtra("call_phone", conversationinfo.getTargetId());
+////					intent.putExtra("call_position", "");
+//
+//
+//                        intent.putExtra("userName","smt0209");
+//                        intent.putExtra("userId", "smt0209");
+//                        intent.putExtra("call_phone", "smt0209");
+//                        IMLoginV2Activity.this.startActivity(intent);
+
+
+
+
+
+
             }
         });
 

@@ -55,6 +55,7 @@ public class CCloudDevlogin extends Activity {
         final NetDEVSDK oNetSDKDemo = new NetDEVSDK();
         oNetSDKDemo.NETDEV_Init();
 		NetDEVSDK.NETDEV_SetT2UPayLoad(800);
+		//登录
         Button oDevLoginBtn = (Button) findViewById(R.id.devlogin);
         final Intent oIntent = new Intent(this, CMainMenu.class);
         Button oGetDevListBtn = (Button) findViewById(R.id.get_dev_list);
@@ -82,6 +83,9 @@ public class CCloudDevlogin extends Activity {
                 String strRegCodeTxt = m_oRegCodeTxt.getText().toString();
                 String strUsername = m_DevUsername.getText().toString();
                 String strDevPassword = m_DevPassword.getText().toString();
+                Log.e("123","strRegCodeTxt="+strRegCodeTxt);
+                Log.e("123","strUsername="+strUsername);
+                Log.e("123","strDevPassword="+strDevPassword);
 
                 if (strRegCodeTxt.isEmpty() || strUsername.isEmpty() || strDevPassword.isEmpty()) {
                     AlertDialog.Builder oBuilder = new Builder(CCloudDevlogin.this);
@@ -162,6 +166,9 @@ public class CCloudDevlogin extends Activity {
          *
          * Get Dev list: get all device information of cloud
          * */
+        /**
+         * 登录
+         */
         oDevLoginBtn.setOnClickListener(new OnClickListener() {
 
             @Override
@@ -171,6 +178,15 @@ public class CCloudDevlogin extends Activity {
                 stCloudDevInfo.szDeviceName = NetDEVSDK.strDevName;
                 stCloudDevInfo.szDevicePassword = "";
                 stCloudDevInfo.dwT2UTimeout = 10;
+
+
+                //stCloudDevInfo.szDeviceName = "mnbv2223";
+                stCloudDevInfo.szDeviceName = "Device0001";
+                stCloudDevInfo.dwT2UTimeout = 10;
+
+                Log.e("123","NetDEVSDK.strDevName="+stCloudDevInfo.szDeviceName);
+                Log.e("123","NetDEVSDK.strDevName="+stCloudDevInfo.szDevicePassword);
+                Log.e("123","NetDEVSDK.strDevName="+stCloudDevInfo.dwT2UTimeout);
 
                 if (null == stCloudDevInfo.szDeviceName) {
                     AlertDialog.Builder oBuilder = new Builder(CCloudDevlogin.this);
@@ -187,7 +203,8 @@ public class CCloudDevlogin extends Activity {
                         stLoginInfo.dwT2UTimeout = 15;
                         stLoginInfo.szDeviceName = stCloudDevInfo.szDeviceName;
                         stLoginInfo.mPassword = "";
-                        Log.i("wbtest", "NETDEV_LoginV2 start");
+                        Log.e("123", "NETDEV_LoginV2 start");
+                        Log.e("123", "glpcloudID="+NetDEVSDK.glpcloudID);
                         NetDEVSDK.lpUserID = NetDEVSDK.NETDEV_LoginV2(NetDEVSDK.glpcloudID, stLoginInfo);
                         Log.i("wbtest", "NETDEV_LoginV2 end");
                         if (0 == NetDEVSDK.lpUserID) {

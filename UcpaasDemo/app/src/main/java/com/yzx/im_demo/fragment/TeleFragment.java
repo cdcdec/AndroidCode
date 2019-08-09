@@ -35,13 +35,13 @@ public class TeleFragment extends Fragment implements OnTelListListener {
 	@Override
 	public void onAttach(Activity activity) {
 		super.onAttach(activity);
-		CustomLog.i("teleFragment onAttach() ...");
+		CustomLog.e("teleFragment onAttach() ...");
 	}
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		CustomLog.i("teleFragment onCreate() ...");
+		CustomLog.e("teleFragment onCreate() ...");
 		IntentFilter filter = new IntentFilter();
 		filter.addAction(UIDfineAction.ACTION_TEL_LIST_DATA_UPDATE);
 		getActivity().registerReceiver(receiver, filter);
@@ -96,7 +96,7 @@ public class TeleFragment extends Fragment implements OnTelListListener {
 			Bundle savedInstanceState) {
 		mView = inflater
 				.inflate(R.layout.tele_fragment_lists, container, false);
-		CustomLog.i("teleFragment onCreateView() ...");
+		CustomLog.e("teleFragment onCreateView() ...");
 		telLists.clear();
 		initData();
 		initView();
@@ -106,19 +106,19 @@ public class TeleFragment extends Fragment implements OnTelListListener {
 	@Override
 	public void onActivityCreated(Bundle savedInstanceState) {
 		super.onActivityCreated(savedInstanceState);
-		CustomLog.i("teleFragment onActivityCreated() ...");
+		CustomLog.e("teleFragment onActivityCreated() ...");
 	}
 
 	@Override
 	public void onStart() {
 		super.onStart();
-		CustomLog.i("teleFragment onStart() ...");
+		CustomLog.e("teleFragment onStart() ...");
 	}
 
 	@Override
 	public void onResume() {
 		super.onResume();
-		CustomLog.i("teleFragment onResume() ...");
+		CustomLog.e("teleFragment onResume() ...");
 		//解决系统日期变更后通话记录日期格式不自动更新的问题
 		if (telListApapter != null) {
 		    telListApapter.notifyDataSetChanged();
@@ -128,19 +128,19 @@ public class TeleFragment extends Fragment implements OnTelListListener {
 	@Override
 	public void onPause() {
 		super.onPause();
-		CustomLog.i("teleFragment onPause() ...");
+		CustomLog.e("teleFragment onPause() ...");
 	}
 
 	@Override
 	public void onStop() {
 		super.onStop();
-		CustomLog.i("teleFragment onStop() ...");
+		CustomLog.e("teleFragment onStop() ...");
 	}
 
 	@Override
 	public void onDestroyView() {
 		super.onDestroyView();
-		CustomLog.i("teleFragment onDestroyView() ...");
+		CustomLog.e("teleFragment onDestroyView() ...");
 	}
 
 	@Override
@@ -149,13 +149,13 @@ public class TeleFragment extends Fragment implements OnTelListListener {
 			getActivity().unregisterReceiver(receiver);
 		}
 		super.onDestroy();
-		CustomLog.i("teleFragment onDestroy() ...");
+		CustomLog.e("teleFragment onDestroy() ...");
 	}
 
 	@Override
 	public void onDetach() {
 		super.onDetach();
-		CustomLog.i("teleFragment onDetach() ...");
+		CustomLog.e("teleFragment onDetach() ...");
 	}
 
 	private void initData() {

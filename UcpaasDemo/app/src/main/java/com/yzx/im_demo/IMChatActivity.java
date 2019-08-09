@@ -186,7 +186,7 @@ public class IMChatActivity extends FragmentActivity implements
 				//启动登出界面
 /*				Intent intent = new Intent();
 				Uri uri = Uri.parse("yzx://"+getApplicationInfo().packageName).buildUpon().appendPath("login_out").build();
-				CustomLog.i("收到踢线消息启动登出Activty uri = "+uri.toString());
+				CustomLog.e("收到踢线消息启动登出Activty uri = "+uri.toString());
 				intent.setAction(Intent.ACTION_VIEW);
 				intent.setData(uri);
 				intent.addCategory(Intent.CATEGORY_DEFAULT);
@@ -444,25 +444,25 @@ public class IMChatActivity extends FragmentActivity implements
 				+ reason.getMsg());
 		int status = 0;
 		if (reason.getReason() == UcsErrorCode.NET_ERROR_KICKOUT) {// 服务器强制下线通知
-			CustomLog.i("收到服务器强制下线通知");
+			CustomLog.e("收到服务器强制下线通知");
 			mHandler.sendEmptyMessage(101);
 			//UCSManager.disconnect();
 		} else if (reason.getReason() == UcsErrorCode.NET_ERROR_TOKENERROR) {
-			CustomLog.i("token超时,请重新登录");
+			CustomLog.e("token超时,请重新登录");
 		} else if(reason.getReason() == UcsErrorCode.NET_ERROR_TCPCONNECTOK){
-			CustomLog.i("TCPCONNECTOK errorcode = " +reason.getReason());
+			CustomLog.e("TCPCONNECTOK errorcode = " +reason.getReason());
 			status = 400;
 		} else if(reason.getReason() == UcsErrorCode.NET_ERROR_TCPCONNECTFAIL){
-			CustomLog.i("TCPCONNECTFAIL errorcode = " +reason.getReason());
+			CustomLog.e("TCPCONNECTFAIL errorcode = " +reason.getReason());
 			status = 408;
 		} else if(reason.getReason() == UcsErrorCode.NET_ERROR_TCPCONNECTING){
-			CustomLog.i("TCPCONNECTING errorcode = " +reason.getReason());
+			CustomLog.e("TCPCONNECTING errorcode = " +reason.getReason());
 			status = 406;
 		} else if(reason.getReason() == UcsErrorCode.PUBLIC_ERROR_NETUNCONNECT){
-			CustomLog.i("NETUNCONNECT errorcode = " +reason.getReason());
+			CustomLog.e("NETUNCONNECT errorcode = " +reason.getReason());
 			status = 402;
 		} else if(reason.getReason() == UcsErrorCode.PUBLIC_ERROR_NETCONNECTED){
-			CustomLog.i("NETCONNECTED errorcode = " +reason.getReason());
+			CustomLog.e("NETCONNECTED errorcode = " +reason.getReason());
 			if(UCSManager.isConnect()){
 				status = 400;
 			}else{
@@ -510,7 +510,7 @@ public class IMChatActivity extends FragmentActivity implements
 		Log.i(TAG, "onLogin status errorCode = "+reason.getReason());
 		int sdkStatus = 0;
 		if (reason.getReason() == UcsErrorCode.NET_ERROR_CONNECTOK){
-			CustomLog.i("connect sdk successfully -----  enjoy --------");
+			CustomLog.e("connect sdk successfully -----  enjoy --------");
 			isNeedConnect = false;
 			state = new LoginState();
 			sdkStatus = 400;

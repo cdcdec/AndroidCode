@@ -319,7 +319,7 @@ public class AudioConverseActivity extends ConverseActivity implements OnClickLi
 				if(conversationLists != null && conversationLists.size() > 0) {
 					for (ConversationInfo conversationInfo : conversationLists) {
 						if(phoneNumber.equals(conversationInfo.getTargetId())) {
-							CustomLog.i("conversation number ...");
+							CustomLog.e("conversation number ...");
 							userName = conversationInfo.getConversationTitle();
 						}
 					}
@@ -525,7 +525,7 @@ public class AudioConverseActivity extends ConverseActivity implements OnClickLi
 		}
 		unregisterReceiver(br);
 		UCSCall.stopCallRinging(AudioConverseActivity.this);
-		CustomLog.i("audioConverseActivity onDestroy() ...");
+		CustomLog.e("audioConverseActivity onDestroy() ...");
 		if(sound == 1) {  // 如果系统触摸提示音是开的，前面把它给关系，现在退出页面要把它还原
             Settings.System.putInt(getContentResolver(), Settings.System.SOUND_EFFECTS_ENABLED, 1); 
             mAudioManager.loadSoundEffects();   

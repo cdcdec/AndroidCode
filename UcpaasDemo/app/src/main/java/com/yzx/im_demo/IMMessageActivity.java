@@ -435,7 +435,7 @@ public class IMMessageActivity extends FragmentActivity implements
 	private void initdata(Bundle savedInstanceState, Intent intent) {
 		conversationinfo = (ConversationInfo) intent
 				.getSerializableExtra("conversation");
-		CustomLog.i("conversationinfo:" + conversationinfo.toString());
+		CustomLog.e("conversationinfo:" + conversationinfo.toString());
 		MainApplication.getInstance().targetId = conversationinfo.getTargetId();
 		
 		if (savedInstanceState != null
@@ -1280,14 +1280,14 @@ public class IMMessageActivity extends FragmentActivity implements
 				}
 
 			}
-			CustomLog.i("RESULT_PATH:" + uri.toString());
+			CustomLog.e("RESULT_PATH:" + uri.toString());
 			String path = "";
 			if (requestCode == SELECT_PIC) {
 				path = getFilePathFromUri(uri);
 			} else {
 				path = ContentResolverUtils.getPath(this, uri);
 			}
-			CustomLog.i("android version is older then 4.4 : "
+			CustomLog.e("android version is older then 4.4 : "
 					+ (requestCode == SELECT_PIC)
 					+ "，select image imagePath = " + path);
 			try {
@@ -1300,9 +1300,9 @@ public class IMMessageActivity extends FragmentActivity implements
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
-			CustomLog.i("RESULT_PATH:" + path);
+			CustomLog.e("RESULT_PATH:" + path);
 			File file = new File(path);
-			CustomLog.i("RESULT_PATH_EXISTS:" + file.exists());
+			CustomLog.e("RESULT_PATH_EXISTS:" + file.exists());
 			if (file.exists()) {
 				ChatMessage msg = null;
 				switch (conversationinfo.getCategoryId()) {
@@ -1357,9 +1357,9 @@ public class IMMessageActivity extends FragmentActivity implements
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
-			CustomLog.i("RESULT_PATH:" + shot_path);
+			CustomLog.e("RESULT_PATH:" + shot_path);
 			File file = new File(shot_path);
-			CustomLog.i("RESULT_PATH_EXISTS:" + file.exists());
+			CustomLog.e("RESULT_PATH_EXISTS:" + file.exists());
 			if (file.exists()) {
 				ChatMessage msg = null;
 				switch (conversationinfo.getCategoryId()) {
@@ -1603,7 +1603,7 @@ public class IMMessageActivity extends FragmentActivity implements
 	 * @return
 	 */
 	public String getFilePathFromUri(Uri fileUrl) {
-		CustomLog.i("IMMessageActivity select image uri : " + fileUrl);
+		CustomLog.e("IMMessageActivity select image uri : " + fileUrl);
 		String fileName = "";
 		if (fileUrl != null) {
 			if (fileUrl.getScheme().toString().compareTo("content") == 0) {

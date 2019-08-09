@@ -108,7 +108,7 @@ public class VideoConverseActivity extends ConverseActivity implements OnClickLi
         public void dispatchMessage(Message msg) {
             switch (msg.what) {
                 case 0:
-                    CustomLog.i("Video status refresh begin....");
+                    CustomLog.e("Video status refresh begin....");
                     // 呼出电话，对方还未接听
                     if (!inCall && !incallAnswer) {
                         UCSCall.refreshCamera(UCSCameraType.LOCALCAMERA, UCSFrameType.ORIGINAL);
@@ -123,7 +123,7 @@ public class VideoConverseActivity extends ConverseActivity implements OnClickLi
                             UCSCall.refreshCamera(UCSCameraType.BACKGROUNDCAMERA, UCSFrameType.ORIGINAL);
                         }
                     }
-                    CustomLog.i("Video status refresh end....");
+                    CustomLog.e("Video status refresh end....");
                     break;
                 case 1:
                     if (!bConverseClose) {
@@ -190,7 +190,7 @@ public class VideoConverseActivity extends ConverseActivity implements OnClickLi
 
             if (intent.getAction().equals(UIDfineAction.ACTION_DIAL_STATE)) {
                 int state = intent.getIntExtra("state", 0);
-                CustomLog.i("VIDEO_CALL_STATE:" + state);
+                CustomLog.e("VIDEO_CALL_STATE:" + state);
                 if (UIDfineAction.dialState.keySet().contains(state)) {
                     if (state == 300226) {
                         ll_video_network_time.setVisibility(View.GONE);
@@ -326,7 +326,7 @@ public class VideoConverseActivity extends ConverseActivity implements OnClickLi
         setContentView(R.layout.activity_video_converse_new);
         initview();
         initListener();
-        initData();
+        //initData();
         IntentFilter ift = new IntentFilter();
         ift.addAction(UIDfineAction.ACTION_DIAL_STATE);
         ift.addAction(UIDfineAction.ACTION_ANSWER);
@@ -543,7 +543,7 @@ public class VideoConverseActivity extends ConverseActivity implements OnClickLi
                 if (conversationLists != null && conversationLists.size() > 0) {
                     for (ConversationInfo conversationInfo : conversationLists) {
                         if (phoneNumber.equals(conversationInfo.getTargetId())) {
-                            CustomLog.i("conversation number ...");
+                            CustomLog.e("conversation number ...");
                             userName = conversationInfo.getConversationTitle();
                         }
                     }

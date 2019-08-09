@@ -9,6 +9,7 @@ package com.example.netsdk_demo;
 import java.util.Timer;
 import java.util.TimerTask;
 
+import android.util.Log;
 import com.example.netsdk_demo.R;
 import com.sdk.NETDEV_CLOUD_LIMIT_INFO_S;
 import com.sdk.NETDEV_CLOUD_MOBILE_INFO_S;
@@ -69,6 +70,7 @@ public class CCloudLogin extends Activity {
 					iNoAccountFlag = 1;
 				}
 				NetDEVSDK.glpcloudID = NetDEVSDK.NETDEV_LoginCloudEx(strCloudServerUrl, strCloudUserName, strCloudPassword, iNoAccountFlag);
+				Log.e("123","NetDEVSDK.glpcloudID="+NetDEVSDK.glpcloudID);
 				if(0 != NetDEVSDK.glpcloudID)
 				{
 					/* Client info as demo. Must be filled by real data while actual development */

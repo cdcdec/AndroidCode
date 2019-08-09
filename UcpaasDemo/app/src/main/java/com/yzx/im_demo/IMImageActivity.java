@@ -136,7 +136,7 @@ public class IMImageActivity extends Activity implements MessageListener, Bitmap
 				break;
 			case 4:
 				// 下载失败
-				CustomLog.i("下载异常");
+				CustomLog.e("下载异常");
 				MainApplication.getInstance().removeThread(msgid);
 				yzx_progressBar.setProcess(0);
 				yzx_progressBar.setVisibility(View.GONE);
@@ -145,10 +145,10 @@ public class IMImageActivity extends Activity implements MessageListener, Bitmap
 					File downFile = new File(new_path);
 					boolean isDelete = downFile.delete();
 					if (downFile.exists() && isDelete) {
-						CustomLog.i("清除文件 -----" + new_path + "成功");
+						CustomLog.e("清除文件 -----" + new_path + "成功");
 					}
 					if (!isDelete) {
-						CustomLog.i("清除文件 -----" + new_path + "失败");
+						CustomLog.e("清除文件 -----" + new_path + "失败");
 					}
 				}
 				break;

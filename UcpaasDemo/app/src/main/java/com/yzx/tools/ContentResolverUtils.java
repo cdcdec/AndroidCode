@@ -25,7 +25,7 @@ public class ContentResolverUtils {
 	
 	@TargetApi(Build.VERSION_CODES.KITKAT)
 	public static String getPath(final Context context, final Uri uri) {  
-		CustomLog.i("ContentResolverUtils select image uri : "+uri.toString());
+		CustomLog.e("ContentResolverUtils select image uri : "+uri.toString());
 	    // DocumentProvider  
 	    if (isKitKat && DocumentsContract.isDocumentUri(context, uri)) {  
 	        // ExternalStorageProvider  

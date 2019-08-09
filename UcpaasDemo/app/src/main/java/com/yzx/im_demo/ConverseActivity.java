@@ -203,7 +203,7 @@ public class ConverseActivity extends Activity{
 			public void run() {
 				TelListsInfo user = new TelListsInfo();
 				user.setGravator("");
-				CustomLog.i("phoneNumber:" + phoneNumber);
+				CustomLog.e("phoneNumber:" + phoneNumber);
 				user.setIsTop(0);
 				if(inCall) {
 					if (userName != null && userName.length() > 0){ 
