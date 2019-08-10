@@ -11,6 +11,7 @@ import android.media.AudioTrack;
 import android.os.Bundle;
 import android.os.Environment;
 import android.os.Handler;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -64,6 +65,9 @@ public class CMainMenu extends Activity {
     static Map<String, List<NETDEV_VIDEO_CHL_DETAIL_INFO_S>> NameChannelMap = new HashMap<String, List<NETDEV_VIDEO_CHL_DETAIL_INFO_S>>();
     static Map<String, Integer> ipLpUserIDMap = new HashMap<String, Integer>();
     static Map<String, Integer> nameLpUserIDMap = new HashMap<String, Integer>();
+    /**
+     * isLocalDevFlag
+     */
     private static boolean isLocalDevFlag;
     private static boolean isNoAccountDevFlag;
     private ActionBar m_oActionBar;
@@ -76,9 +80,15 @@ public class CMainMenu extends Activity {
     /* Liveview */
     private Button m_oPTZSetPtrsetBtn;
     private Button m_oGetPTZPresetBtn;
+    /**
+     * play  play 按钮
+     */
     private Button m_oStartLiveViewBtn;
     private Button m_oStopLiveViewBtn;
     private Button m_oSnapshotBtn;
+    /**
+     * 开始  start 按钮
+     */
     private Button startTalkBackBtn;
     private Button stopTalkBackBtn;
     //private Button mRecordButton;
@@ -90,6 +100,9 @@ public class CMainMenu extends Activity {
     private Button m_oZoomOutBtn;
     public static int lpLiveViewHandle[] = new int[4];     //live video ID
     public static float scaleRatio[] = new float[4];     //live video ID
+    /**
+     * 第一个视频  CPlayView
+     */
     public CPlayView m_oPlayer;        //Live GLsurfaceADMIN12345
     public CPlayView m_oPlayer1;        //Live GLsurfaceADMIN12345
     public CPlayView m_oPlayer2;        //Live GLsurfaceADMIN12345
@@ -113,6 +126,9 @@ public class CMainMenu extends Activity {
     private Button m_oStartPlayBackBtn;
     private Button m_oPauseBtn;
     private Button m_oResumeBtn;
+    /**
+     * 停止按钮
+     */
     private Button m_oStopPlayBackBtn;
     private Button m_oForwardBtn;
     private Button m_oBackwardBtn;
@@ -157,6 +173,9 @@ public class CMainMenu extends Activity {
     //public SurfaceHolder mViewHolder;
     private ArrayAdapter<String> m_oChnAdapter;
     private int m_dwChannelID;
+    /**
+     * m_lpVoiceComHandle
+     */
     private int m_lpVoiceComHandle = 0;
     private boolean m_bKeepRunning;
     private AudioTrack mAudioPlayer;
@@ -240,6 +259,7 @@ public class CMainMenu extends Activity {
 
         /*live*/
         m_oPTZSetPtrsetBtn = (Button) m_oLiveView.findViewById(R.id.set);
+        /**开始按钮*/
         startTalkBackBtn = (Button) m_oLiveView.findViewById(R.id.startTalkBack);
         stopTalkBackBtn = (Button) m_oLiveView.findViewById(R.id.stopTalkBack);
         m_oGetPTZPresetBtn = (Button) m_oLiveView.findViewById(R.id.get);
@@ -703,11 +723,18 @@ public class CMainMenu extends Activity {
             @Override
             public void onClick(View v) {
                 NETDEV_PREVIEWINFO_S stPreviewInfo = new NETDEV_PREVIEWINFO_S();
-                stPreviewInfo.dwChannelID = m_dwChannelID;                        //  the value can be modified at the interface
+                Log.e("123","m_dwChannelID="+m_dwChannelID);//1
+                stPreviewInfo.dwChannelID = m_dwChannelID;
+                //  the value can be modified at the interface
                 stPreviewInfo.dwLinkMode = 1;                                // 1,/* TCP */             2,/* UDP */
                 stPreviewInfo.dwStreamIndex = 0;                            // 0,/*   Main stream */       1,/*   Sub stream */       2,/*  Third stream */
+                Log.e("123","NetDEVSDK.gdwWinIndex="+NetDEVSDK.gdwWinIndex);//1
                 if (1 == NetDEVSDK.gdwWinIndex) {
                     m_oPlayer.m_bCanDrawFrame = true;
+                    //0
+                    Log.e("123","playId="+lpLiveViewHandle[m_oPlayer.m_dwWinIndex - 1]);
+                    //1
+                    Log.e("123","m_oPlayer.m_dwWinIndex="+m_oPlayer.m_dwWinIndex);
                     NetDEVSDK.NETDEV_StopRealPlay(lpLiveViewHandle[m_oPlayer.m_dwWinIndex - 1], m_oPlayer.m_dwWinIndex);
                 } else if (2 == NetDEVSDK.gdwWinIndex) {
                     m_oPlayer1.m_bCanDrawFrame = true;
@@ -719,11 +746,14 @@ public class CMainMenu extends Activity {
                     m_oPlayer3.m_bCanDrawFrame = true;
                     NetDEVSDK.NETDEV_StopRealPlay(lpLiveViewHandle[m_oPlayer3.m_dwWinIndex - 1], m_oPlayer3.m_dwWinIndex);
                 }
+                Log.e("123","isLocalDevFlag="+isLocalDevFlag);
                 if (isLocalDevFlag) {
                     lpLiveViewHandle[NetDEVSDK.gdwWinIndex - 1] = NetDEVSDK.NETDEV_RealPlay(ipLpUserIDMap.get(strDevIP), stPreviewInfo, NetDEVSDK.gdwWinIndex);
                 } else {
+
                     lpLiveViewHandle[NetDEVSDK.gdwWinIndex - 1] = NetDEVSDK.NETDEV_RealPlay(nameLpUserIDMap.get(strCloudDevName), stPreviewInfo, NetDEVSDK.gdwWinIndex);
                 }
+
                 scaleRatio[NetDEVSDK.gdwWinIndex - 1] = 1.0f;
                 NetDEVSDK.Scale(scaleRatio[NetDEVSDK.gdwWinIndex - 1], 0, 0, NetDEVSDK.gdwWinIndex);
 //				String strStreamUrl = NetDEVSDK.NETDEV_GetStreamUrl(NetDEVSDK.lpUserID, m_dwChannelID, 0);
@@ -748,14 +778,23 @@ public class CMainMenu extends Activity {
         // Start Two-way Audio
         startTalkBackBtn.setOnClickListener(new OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(View v){
                 if (0 != m_lpVoiceComHandle) {
                     return;
                 }
                 if (isLocalDevFlag) {
                     m_lpVoiceComHandle = NetDEVSDK.NETDEV_Android_StartInputVoiceSrv(ipLpUserIDMap.get(strDevIP), m_dwChannelID);
+//                    Log.e("123","m_dwChannelID1="+m_dwChannelID);
+//                    Log.e("123","strDevIP1="+ipLpUserIDMap.get(strDevIP));
                 } else {
+                    //-1
+                    Log.e("123","m_dwChannelID2="+m_dwChannelID);
+                    //-1419295584   -1419289448
+                    Log.e("123","strDevIP2="+nameLpUserIDMap.get(strCloudDevName));
                     m_lpVoiceComHandle = NetDEVSDK.NETDEV_Android_StartInputVoiceSrv(nameLpUserIDMap.get(strCloudDevName), m_dwChannelID);
+
+                    Log.e("123","m_lpVoiceComHandle="+m_lpVoiceComHandle);
+
                 }
                 if (0 == m_lpVoiceComHandle) {
                     System.out.println("StartInputVoiceSrv failed.");
@@ -763,21 +802,23 @@ public class CMainMenu extends Activity {
                 }
 
                 //input voice
-                {
-                    AudioRecordManager.getInstance()
-                            .startRecording(new AudioRecordManager.OnAudioRecordListener() {
-
-                                @Override
-                                public void onVoiceRecord(byte[] data, int size) {
-                                    //send data
-                                    NETDEV_AUDIO_SAMPLE_PARAM_S stVoiceParam = new NETDEV_AUDIO_SAMPLE_PARAM_S();
-                                    stVoiceParam.dwChannels = 1;
-                                    stVoiceParam.dwSampleRate = 8000;
-                                    stVoiceParam.enSampleFormat = NETDEV_AUDIO_SAMPLE_PARAM_S.NETDEV_AUDIO_SAMPLE_FORMAT_E.NETDEV_AUDIO_SAMPLE_FMT_S16;
-                                    NetDEVSDK.NETDEV_InputVoiceData(m_lpVoiceComHandle, data, size, stVoiceParam);
-                                }
-                            });
-                }
+//                {
+//
+//                    Log.e("123","input voice=");
+//                    AudioRecordManager.getInstance()
+//                            .startRecording(new AudioRecordManager.OnAudioRecordListener() {
+//
+//                                @Override
+//                                public void onVoiceRecord(byte[] data, int size) {
+//                                    //send data
+//                                    NETDEV_AUDIO_SAMPLE_PARAM_S stVoiceParam = new NETDEV_AUDIO_SAMPLE_PARAM_S();
+//                                    stVoiceParam.dwChannels = 1;
+//                                    stVoiceParam.dwSampleRate = 8000;
+//                                    stVoiceParam.enSampleFormat = NETDEV_AUDIO_SAMPLE_PARAM_S.NETDEV_AUDIO_SAMPLE_FORMAT_E.NETDEV_AUDIO_SAMPLE_FMT_S16;
+//                                    NetDEVSDK.NETDEV_InputVoiceData(m_lpVoiceComHandle, data, size, stVoiceParam);
+//                                }
+//                            });
+//                }
             }
         });
 

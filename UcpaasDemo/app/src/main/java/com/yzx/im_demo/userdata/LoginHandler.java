@@ -2,7 +2,6 @@ package com.yzx.im_demo.userdata;
 
 import android.app.ProgressDialog;
 import android.content.Context;
-import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -12,8 +11,6 @@ import com.yzx.db.UserInfoDBManager;
 import com.yzx.db.domain.UserInfo;
 import com.yzx.im_demo.IMChatActivity;
 import com.yzx.im_demo.IMLoginV2Activity;
-import com.yzx.im_demo.IMMessageActivity;
-import com.yzx.im_demo.VideoConverseActivity;
 import com.yzx.mydefineview.MyToast;
 import com.yzx.tools.RestTools;
 import com.yzxtcp.UCSManager;
@@ -50,6 +47,7 @@ public class LoginHandler extends Handler implements ILoginListener {
 
                 break;
             case RestTools.LOGIN_STATUS_SUCCESS:
+                Log.e("men_jin","LoginHandler,接收handler消息,LOGIN_STATUS_SUCCESS");
                 CustomLog.v("登陆成功   finish activity");
                 closeProgressDialog();
                 stopLoginTimer();
@@ -73,14 +71,18 @@ public class LoginHandler extends Handler implements ILoginListener {
                 break;
 
             case RestTools.LOGIN_REST_TOKEN_OK:
-			showProgressDialog();
+//			showProgressDialog();
+
                 data = msg.getData();
                 token = data.getString("imtoken");
                 Log.e("123","token="+token);
+                Log.e("men_jin","LoginHandler,接收handler消息,LOGIN_REST_TOKEN_OK");
 //                CustomLog.d("save Token:" + token);
 //                CustomLog.e("LOGIN_REST_TOKEN_OK begin connect");
 			UCSManager.connect(token, this);
 //                UCSManager.connect("eyJBbGciOiJIUzI1NiIsIkFjY2lkIjoiMzc2MDE3YTZjZjkwMWUxMTg5MDlmMWFmMmFkMGViZTYiLCJBcHBpZCI6ImQ0MjU1MmY0NmJmZjQwOTU5OTNiODU5NWMwOTJiNjQwIiwiVXNlcmlkIjoid2NkMDAwMSJ9.TEMIUmNWgAxCx+AiO+EP4KNu0ybW+vS2dggQzJ0uXNY=", this);
+                Log.e("men_jin","LoginHandler,UCSManager.connect");
+                Log.e("men_jin","LoginHandler,发送handler消息,LOGIN_STATUS_INPROCESS");
                 sendEmptyMessage(RestTools.LOGIN_STATUS_INPROCESS);
                 break;
             case RestTools.LOGIN_REST_HAS_REGISTER:
@@ -107,12 +109,14 @@ public class LoginHandler extends Handler implements ILoginListener {
         if (mTimer == null) {
             mTimer = new Timer();
         }
+
         mTimer.schedule(new TimerTask() {
             @Override
             public void run() {
                 System.out.println("登录超时");
                 mProgressDialog.dismiss();
                 mTimer = null;
+                Log.e("men_jin","LoginHandler,发送handler消息,RestTools.LOGIN_STATUS_TIMEOUT");
                 sendEmptyMessage(RestTools.LOGIN_STATUS_TIMEOUT);
             }
         }, 40000);
@@ -134,6 +138,7 @@ public class LoginHandler extends Handler implements ILoginListener {
 
     private void sendFinishMsg() {
         for (Handler h : handlers) {
+            Log.e("men_jin","LoginHandler,发送handler消息,RestTools.LOGIN_REST_FINISH");
             h.sendEmptyMessage(RestTools.LOGIN_REST_FINISH);
         }
     }
@@ -143,6 +148,7 @@ public class LoginHandler extends Handler implements ILoginListener {
         if (null != mProgressDialog) {
             mProgressDialog.dismiss();
         }
+        Log.e("men_jin","LoginHandler,UCSManager.connect回调");
         Log.e("123",reason.getMsg()+"=="+reason.getReason());
 
         if (reason.getReason() == UcsErrorCode.NET_ERROR_CONNECTOK) {
@@ -150,15 +156,18 @@ public class LoginHandler extends Handler implements ILoginListener {
             //保存到数据库
             UserInfoDBManager.getInstance().insert(user, token);
             RestTools.queryGroupInfo(mContext, user.getAccount(), null);
+            Log.e("men_jin","LoginHandler,发送LOGIN_STATUS_SUCCESS");
             sendEmptyMessageDelayed(RestTools.LOGIN_STATUS_SUCCESS, 1000);
 //			Intent intent = new Intent(mContext, IMChatActivity.class);
 //			intent.putExtra("mLocalUser", user.getAccount());
 //			intent.putExtra("connectTcp", false);
 //			mContext.startActivity(intent);
             IMChatActivity.actionStart(mContext, false);
-
-
+            Log.e("men_jin","LoginHandler,跳转到主页面IMChatActivity");
+            //移出登录监听回调
+            UCSManager.removeLoginListener(this);
         } else {
+            Log.e("men_jin","LoginHandler,发送LOGIN_STATUS_FAIL");
             sendEmptyMessage(RestTools.LOGIN_STATUS_FAIL);
         }
     }

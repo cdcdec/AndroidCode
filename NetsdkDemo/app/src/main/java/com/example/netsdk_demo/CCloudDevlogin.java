@@ -55,7 +55,10 @@ public class CCloudDevlogin extends Activity {
         final NetDEVSDK oNetSDKDemo = new NetDEVSDK();
         oNetSDKDemo.NETDEV_Init();
 		NetDEVSDK.NETDEV_SetT2UPayLoad(800);
-		//登录
+        /**
+         * 登录
+         *
+         */
         Button oDevLoginBtn = (Button) findViewById(R.id.devlogin);
         final Intent oIntent = new Intent(this, CMainMenu.class);
         Button oGetDevListBtn = (Button) findViewById(R.id.get_dev_list);
@@ -184,8 +187,11 @@ public class CCloudDevlogin extends Activity {
                 stCloudDevInfo.szDeviceName = "Device0001";
                 stCloudDevInfo.dwT2UTimeout = 10;
 
+                //Device0001
                 Log.e("123","NetDEVSDK.strDevName="+stCloudDevInfo.szDeviceName);
+                //
                 Log.e("123","NetDEVSDK.strDevName="+stCloudDevInfo.szDevicePassword);
+                //10
                 Log.e("123","NetDEVSDK.strDevName="+stCloudDevInfo.dwT2UTimeout);
 
                 if (null == stCloudDevInfo.szDeviceName) {
@@ -206,28 +212,33 @@ public class CCloudDevlogin extends Activity {
                         Log.e("123", "NETDEV_LoginV2 start");
                         Log.e("123", "glpcloudID="+NetDEVSDK.glpcloudID);
                         NetDEVSDK.lpUserID = NetDEVSDK.NETDEV_LoginV2(NetDEVSDK.glpcloudID, stLoginInfo);
-                        Log.i("wbtest", "NETDEV_LoginV2 end");
+                        Log.e("123", "NETDEV_LoginV2 end");
                         if (0 == NetDEVSDK.lpUserID) {
+                            Log.e("123", "未进入==1===");
                             stLoginInfo.dwConnectMode = 3;
-                            Log.i("wbtest", "NETDEV_LoginV2 dwConnectMode = 3; start");
+                            Log.e("123", "NETDEV_LoginV2 dwConnectMode = 3; start");
                             NetDEVSDK.lpUserID = NetDEVSDK.NETDEV_LoginV2(NetDEVSDK.glpcloudID, stLoginInfo);
-                            Log.i("wbtest", "NETDEV_LoginV2 dwConnectMode = 3; end");
+                            Log.e("123", "NETDEV_LoginV2 dwConnectMode = 3; end");
                         }
                         if (0 != NetDEVSDK.lpUserID) {
                             new Thread(new Runnable() {
                                 @Override
                                 public void run() {
+                                    Log.e("123", "==227==="+NetDEVSDK.lpUserID);
                                     AlarmCallBack_PF pfAlarmCallBack = new AlarmCallBack_PF();
                                     NetDEVSDK.NETDEV_Android_SetAlarmCallBack(NetDEVSDK.lpUserID, pfAlarmCallBack, 0);
                                     ExceptionCallBack_PF pfExceptionCallBack = new ExceptionCallBack_PF();
                                     NetDEVSDK.NETDEV_Android_SetExceptionCallBack(pfExceptionCallBack, 0);
                                 }
                             }).start();
-                            Log.i("wbtest", "startActivity");
+                            Log.e("123", "startActivity");
                             if (!cloudDevNameList.contains(stCloudDevInfo.szDeviceName)){
                                 cloudLpUserIDList.add(NetDEVSDK.lpUserID);
+                                Log.e("123", "237"+"NetDEVSDK.lpUserID="+NetDEVSDK.lpUserID);
+                                Log.e("123", "237"+"NetDEVSDK.szDeviceName="+stCloudDevInfo.szDeviceName);
                                 cloudDevNameList.add(stCloudDevInfo.szDeviceName);
                             }
+                            Log.e("123", "240");
                             oIntent.putIntegerArrayListExtra("cloudLpUserID",cloudLpUserIDList);
 						    oIntent.putStringArrayListExtra("szDevName",cloudDevNameList);
 						    oIntent.putExtra("bLocalDevFlag",false);

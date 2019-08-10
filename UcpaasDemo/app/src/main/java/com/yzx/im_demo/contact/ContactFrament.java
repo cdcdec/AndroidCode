@@ -10,6 +10,7 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
+import android.util.Log;
 import androidx.fragment.app.Fragment;
 import android.util.TypedValue;
 import android.view.LayoutInflater;
@@ -129,6 +130,7 @@ public class ContactFrament extends Fragment {
 			public void onItemClick(AdapterView<?> parent, View view,
 					int position, long id) {
 				// 这里要利用adapter.getItem(position)来获取当前position所对应的对象
+				Log.e("men_jin","ContactFrament adapter 点击=进入,IMMessageActivity.class");
 				Intent intent = new Intent(getActivity(), IMMessageActivity.class);
 				ConversationInfo info = new ConversationInfo();
 				CustomLog.e("position == "+position);

@@ -3,6 +3,7 @@ package com.yzx.tools;
 import android.content.Context;
 import android.util.Log;
 import android.view.SurfaceView;
+import android.view.View;
 import android.view.WindowManager;
 import android.view.WindowManager.LayoutParams;
 

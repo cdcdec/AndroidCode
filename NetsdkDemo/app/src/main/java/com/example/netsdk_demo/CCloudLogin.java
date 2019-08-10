@@ -70,6 +70,7 @@ public class CCloudLogin extends Activity {
 					iNoAccountFlag = 1;
 				}
 				NetDEVSDK.glpcloudID = NetDEVSDK.NETDEV_LoginCloudEx(strCloudServerUrl, strCloudUserName, strCloudPassword, iNoAccountFlag);
+				//-1424956896  -1425467296
 				Log.e("123","NetDEVSDK.glpcloudID="+NetDEVSDK.glpcloudID);
 				if(0 != NetDEVSDK.glpcloudID)
 				{

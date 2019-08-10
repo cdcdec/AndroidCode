@@ -8,6 +8,7 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
+import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -105,6 +106,7 @@ public class IMRegisterV2Activity extends Activity {
 					startLoginTimer();
 					break;
 				case RestTools.LOGIN_REST_FINISH:
+					Log.e("men_jin","IMRegisterV2Activity,接收handler消息,RestTools.LOGIN_REST_FINISH");
 					System.out.println("reg LOGIN_REST_FINISH");
 					IMRegisterV2Activity.this.finish();
 					break;

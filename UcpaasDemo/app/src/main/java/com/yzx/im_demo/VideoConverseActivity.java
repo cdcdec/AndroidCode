@@ -108,7 +108,7 @@ public class VideoConverseActivity extends ConverseActivity implements OnClickLi
         public void dispatchMessage(Message msg) {
             switch (msg.what) {
                 case 0:
-                    CustomLog.e("Video status refresh begin....");
+                    CustomLog.i("Video status refresh begin....");
                     // 呼出电话，对方还未接听
                     if (!inCall && !incallAnswer) {
                         UCSCall.refreshCamera(UCSCameraType.LOCALCAMERA, UCSFrameType.ORIGINAL);
@@ -123,7 +123,7 @@ public class VideoConverseActivity extends ConverseActivity implements OnClickLi
                             UCSCall.refreshCamera(UCSCameraType.BACKGROUNDCAMERA, UCSFrameType.ORIGINAL);
                         }
                     }
-                    CustomLog.e("Video status refresh end....");
+                    CustomLog.i("Video status refresh end....");
                     break;
                 case 1:
                     if (!bConverseClose) {
@@ -190,7 +190,7 @@ public class VideoConverseActivity extends ConverseActivity implements OnClickLi
 
             if (intent.getAction().equals(UIDfineAction.ACTION_DIAL_STATE)) {
                 int state = intent.getIntExtra("state", 0);
-                CustomLog.e("VIDEO_CALL_STATE:" + state);
+                CustomLog.i("VIDEO_CALL_STATE:" + state);
                 if (UIDfineAction.dialState.keySet().contains(state)) {
                     if (state == 300226) {
                         ll_video_network_time.setVisibility(View.GONE);
@@ -305,8 +305,9 @@ public class VideoConverseActivity extends ConverseActivity implements OnClickLi
         } else {
             landscape = 1; // 横屏
         }
-
+        Log.e("men_jin","VideoConverseActivity.class");
         try {
+
             // 如果系统触摸音是关的就不用管，开的就把它给关掉，因为在个别手机上有可能会影响音质
             mAudioManager = ((AudioManager) getSystemService(Context.AUDIO_SERVICE));
             sound = Settings.System.getInt(getContentResolver(), Settings.System.SOUND_EFFECTS_ENABLED);
@@ -326,7 +327,7 @@ public class VideoConverseActivity extends ConverseActivity implements OnClickLi
         setContentView(R.layout.activity_video_converse_new);
         initview();
         initListener();
-        //initData();
+        initData();
         IntentFilter ift = new IntentFilter();
         ift.addAction(UIDfineAction.ACTION_DIAL_STATE);
         ift.addAction(UIDfineAction.ACTION_ANSWER);
@@ -485,6 +486,7 @@ public class VideoConverseActivity extends ConverseActivity implements OnClickLi
 
         //720P时本地预览的宽高设置成16比9
         if (getSharedPreferences("YZX_DEMO_DEFAULT", 0).getBoolean("YZX_720P", false)) {
+            Log.e("men_jin","720P   VideoConverseActivity.class");
             LayoutParams para = (LayoutParams) locallayout.getLayoutParams();
             para.height = para.width * 16 / 9;
             locallayout.setLayoutParams(para);
@@ -501,40 +503,42 @@ public class VideoConverseActivity extends ConverseActivity implements OnClickLi
     private void initData() {
         // 判断是否是来电信息，默认是去电，（来电信息是由ConnectionService中的onIncomingCall回调中发送广播，开启通话界面，inCall为true）
         if (getIntent().hasExtra("inCall")) {
-            Log.e("123","hasExtra="+"inCall");
             inCall = getIntent().getBooleanExtra("inCall", false);
+            Log.e("men_jin","inCall   VideoConverseActivity.class,"+inCall);
         }
         // 获得要拨打的号码，智能拨打和免费通话：phoneNumber代表ClientID，直拨和回拨代表ClientID绑定的手机号码
         if (getIntent().hasExtra("userId")) {
+            //进入
             calledUid = getIntent().getStringExtra("userId");
-            Log.e("123","hasExtra="+"userId"+calledUid);
+            Log.e("men_jin","userId   VideoConverseActivity.class,"+calledUid);
         }
         if (getIntent().hasExtra("call_phone")) {
+            //进入
             calledPhone = getIntent().getStringExtra("call_phone");
-            Log.e("123","hasExtra="+"call_phone"+calledPhone);
+            Log.e("men_jin","call_phone   VideoConverseActivity.class,"+calledPhone);
         }
         if (getIntent().hasExtra("userName")) {
+            //进入
             userName = getIntent().getStringExtra("userName");
-            Log.e("123","hasExtra="+"userName"+userName);
+            Log.e("men_jin","userName   VideoConverseActivity.class,"+userName);
         }
         if (getIntent().hasExtra("phoneNumber")) {
             phoneNumber = getIntent().getStringExtra("phoneNumber");
-            Log.e("123","hasExtra="+"phoneNumber"+phoneNumber);
+            Log.e("men_jin","phoneNumber   VideoConverseActivity.class,"+phoneNumber);
         }
 
         if (getIntent().hasExtra("call_phone")) {
             phoneNumber = getIntent().getStringExtra("call_phone");
-            Log.e("123","hasExtra="+"call_phone2"+phoneNumber);
             CustomLog.v("dialing phone :" + phoneNumber);
+            Log.e("men_jin","dialing call_phone   VideoConverseActivity.class,"+phoneNumber);
         } else if (getIntent().hasExtra("phoneNumber")) {
             phoneNumber = getIntent().getStringExtra("phoneNumber");
-            Log.e("123","hasExtra="+"phoneNumber2"+phoneNumber);
+            Log.e("men_jin","dialing phoneNumber   VideoConverseActivity.class,"+phoneNumber);
         }
 
         if (phoneNumber != null && phoneNumber.length() > 0) {
             // 先显示通讯录中的昵称
             userName = ContactTools.getConTitle(phoneNumber);
-            Log.e("123","userName="+"userName"+userName);
             // 在从IM会话中获取通话记录昵称
             if (TextUtils.isEmpty(userName)) {
                 @SuppressWarnings("unchecked")
@@ -543,7 +547,7 @@ public class VideoConverseActivity extends ConverseActivity implements OnClickLi
                 if (conversationLists != null && conversationLists.size() > 0) {
                     for (ConversationInfo conversationInfo : conversationLists) {
                         if (phoneNumber.equals(conversationInfo.getTargetId())) {
-                            CustomLog.e("conversation number ...");
+                            CustomLog.i("conversation number ...");
                             userName = conversationInfo.getConversationTitle();
                         }
                     }
@@ -569,6 +573,7 @@ public class VideoConverseActivity extends ConverseActivity implements OnClickLi
         if (phoneNumber != null && phoneNumber.length() > 0) {
             UCSCall.setSpeakerphone(VideoConverseActivity.this, false);
             if (getIntent().hasExtra("call_type")) {
+
                 sendBroadcast(new Intent(UIDfineAction.ACTION_DIAL).putExtra(UIDfineAction.CALL_UID, phoneNumber)
                         .putExtra("type", getIntent().getIntExtra("call_type", -1)));
             } else {

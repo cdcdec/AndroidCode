@@ -89,7 +89,7 @@ public class TelUserInfoActivity extends Activity implements OnClickListener {
 	protected void onResume() {
 		MainApplication.getInstance().setResumeActivity(this);
 		super.onResume();
-		CustomLog.e("telUserInfoActivity onResume() ...");
+		CustomLog.i("telUserInfoActivity onResume() ...");
 	}
 	
 	@Override

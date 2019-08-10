@@ -1,5 +1,6 @@
 package com.yzx.im_demo;
 
+import android.util.Log;
 import com.yzx.db.UserInfoDBManager;
 import com.yzx.db.domain.UserInfo;
 import android.app.Activity;
@@ -29,6 +30,7 @@ public class IMDemoActivity extends Activity {
 				@Override
 				public void run() {
 					IMDemoActivity.this.finish();
+					Log.e("men_jin","IMDemoActivity登录");
 					startActivity(new Intent(IMDemoActivity.this, IMLoginV2Activity.class));
 				}
 			}, 1000);

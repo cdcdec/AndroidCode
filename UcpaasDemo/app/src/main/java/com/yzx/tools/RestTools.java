@@ -280,6 +280,8 @@ public class RestTools {
         Bundle data = new Bundle();
         data.putString("imtoken", token);
         msg.setData(data);
+        Log.e("men_jin","RestTools,handler发送消息,LOGIN_REST_STARTGETTOKEN");
+        Log.e("men_jin","RestTools,handler发送消息,LOGIN_REST_TOKEN_OK");
         handler.sendMessage(msg);
     }
 

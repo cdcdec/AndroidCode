@@ -146,13 +146,13 @@ public class ConnectionService extends Service implements ConnectionListener,Cal
 
 	@Override
 	public int onStartCommand(Intent intent, int flags, int startId) {
-//		if(Build.VERSION.SDK_INT < 18) {
-//			startForeground(GRAY_SERVICE_ID, new Notification());	// API < 18 ，此方法能有效隐藏Notification上的图标
-//		} else {
-//			Intent innerIntent = new Intent(this, GrayInnerService.class);
-//            startService(innerIntent);
-//            startForeground(GRAY_SERVICE_ID, new Notification());
-//		}
+		if(Build.VERSION.SDK_INT < 18) {
+			startForeground(GRAY_SERVICE_ID, new Notification());	// API < 18 ，此方法能有效隐藏Notification上的图标
+		} else {
+			Intent innerIntent = new Intent(this, GrayInnerService.class);
+            startService(innerIntent);
+            startForeground(GRAY_SERVICE_ID, new Notification());
+		}
 		return super.onStartCommand(intent, flags, startId);
 	}
 
@@ -167,7 +167,7 @@ public class ConnectionService extends Service implements ConnectionListener,Cal
 				    //整合版本账号即手机号
 				    phone = uid;
 				}
-				CustomLog.e(DfineAction.TAG_TCP, "》》》》》》》》》》》  ... "+callType);
+				CustomLog.i(DfineAction.TAG_TCP, "》》》》》》》》》》》  ... "+callType);
 				final String recall_timer = getSharedPreferences("YZX_DEMO_DEFAULT", 0).getString("recall_timer", "60");
 				CustomLog.v("recall_timer=" + recall_timer);
 				boolean avPreviewImg = getSharedPreferences("YZX_DEMO_DEFAULT", 0).getBoolean("YZX_PREVIEW_IMG", false);
@@ -180,11 +180,9 @@ public class ConnectionService extends Service implements ConnectionListener,Cal
 					dial(CallType.DIRECT, phone, "", Integer.valueOf(recall_timer) * 1000);
 					break;
 				case 3: // 视频
-					CustomLog.e("br,3,:" + uid);
 					if(avPreviewImg) {
 						previewImgDial();
 					} else {
-						CustomLog.e("br2,3,:" + uid);
 						dial(CallType.VIDEO, uid, "", Integer.valueOf(recall_timer) * 1000);
 					}
 					break;
@@ -250,7 +248,6 @@ public class ConnectionService extends Service implements ConnectionListener,Cal
 				startRecallTimer(timeoutSec);
 				isRecall.set(true); // 设置进行重呼
 			}
-			CustomLog.e("service==calledNumner="+calledNumner);
 			UCSCall.dial(callType, calledNumner, "");
 		}
 	}
@@ -263,7 +260,7 @@ public class ConnectionService extends Service implements ConnectionListener,Cal
 	 * @return void    返回类型
 	 */
 	private void startRecallTimer(int timeoutSec) {
-		CustomLog.e("startRecallTimer ... ");
+		CustomLog.v("startRecallTimer ... ");
 		stopRecallTimer();
 		if(recallTimer == null) {
 			recallTimer = new Timer();
@@ -327,7 +324,7 @@ public class ConnectionService extends Service implements ConnectionListener,Cal
 
 	@Override
 	public void onDestroy() {
-		CustomLog.e(DfineAction.TAG_TCP,"onDestroy ... ");
+		CustomLog.i(DfineAction.TAG_TCP,"onDestroy ... ");
 		unregisterReceiver(br);
 		//断开云联接
 		UCSService.uninit();
@@ -338,9 +335,9 @@ public class ConnectionService extends Service implements ConnectionListener,Cal
 	//连接失败或断线回调
 	@Override
 	public void onConnectionFailed(UcsReason reason) {
-		CustomLog.e(DfineAction.TAG_TCP,"CONNECTION_FAILED:"+reason.getReason());
+		CustomLog.i(DfineAction.TAG_TCP,"CONNECTION_FAILED:"+reason.getReason());
 		if(reason.getMsg().length() > 0){
-			CustomLog.e(DfineAction.TAG_TCP,"CONNECTION_FAILED:"+reason.getMsg());
+			CustomLog.i(DfineAction.TAG_TCP,"CONNECTION_FAILED:"+reason.getMsg());
 		}
 		if(reason.getReason() == 300207) {	// 踢线
 			sendBroadcast(new Intent(UIDfineAction.ACTION_NET_ERROR_KICKOUT));
@@ -361,10 +358,10 @@ public class ConnectionService extends Service implements ConnectionListener,Cal
 	}
 
 	private int secondDuration = 0;//通话持续时间：秒
-	 private int minuteDuration = 0;//通话持续时间：分
-	 private int hourDuration = 0;//通话持续时间：时
-	 private Timer timer = null;
-	 /**
+	private int minuteDuration = 0;//通话持续时间：分
+	private int hourDuration = 0;//通话持续时间：时
+	private Timer timer = null;
+	/**
 	 * 通话走时
 	 * @author: xiaozhenhua
 	 * @data:2014-6-24 上午10:19:56
@@ -406,7 +403,7 @@ public class ConnectionService extends Service implements ConnectionListener,Cal
 					timer.append(0);
 				}
 				timer.append(secondDuration);
-//				CustomLog.e(DfineAction.TAG_TCP,"timer:"+timer.toString());
+//				CustomLog.i(DfineAction.TAG_TCP,"timer:"+timer.toString());
 				sendBroadcast(new Intent(UIDfineAction.ACTION_CALL_TIME).putExtra("callduration", hourDuration * 3600 + minuteDuration * 60 + secondDuration).putExtra("timer", timer.toString()));
 			}
 		}, 0, 1000);
@@ -414,7 +411,7 @@ public class ConnectionService extends Service implements ConnectionListener,Cal
 
 	public void stopCallTimer(){
 		if (timer != null){
-			CustomLog.e(DfineAction.TAG_TCP,"cancel() timer");
+			CustomLog.i(DfineAction.TAG_TCP,"cancel() timer");
 			timer.cancel();
 			timer=null;
 		}
@@ -424,7 +421,7 @@ public class ConnectionService extends Service implements ConnectionListener,Cal
 	//对方正在响铃回调
 	@Override
 	public void onAlerting(String arg0) {
-		CustomLog.e(DfineAction.TAG_TCP,"onAlerting CURRENT_ID:"+arg0);
+		CustomLog.i(DfineAction.TAG_TCP,"onAlerting CURRENT_ID:"+arg0);
 		stopRecallTimer();
 		sendBroadcast(new Intent(UIDfineAction.ACTION_DIAL_STATE).putExtra("state", UCSCall.CALL_VOIP_RINGING_180));
 	}
@@ -432,7 +429,7 @@ public class ConnectionService extends Service implements ConnectionListener,Cal
 	//对方接通回调
 	@Override
 	public void onAnswer(String callId) {
-		CustomLog.e(DfineAction.TAG_TCP,"onAnswer CURRENT_ID:"+callId);
+		CustomLog.i(DfineAction.TAG_TCP,"onAnswer CURRENT_ID:"+callId);
 		stopRecallTimer();
 		sendBroadcast(new Intent(UIDfineAction.ACTION_ANSWER).putExtra("callId", callId));
 		startCallTimer();
@@ -441,7 +438,7 @@ public class ConnectionService extends Service implements ConnectionListener,Cal
 	//拨打失败回调，请打印出错误码reason.getReason()，官网查询错误码含义
 	@Override
 	public void onDialFailed(String arg0, UcsReason reason) {
-		CustomLog.e("onDialFailed CURRENT_ID:"+arg0+"          SERVICE:"+reason.getReason()+"   MSG:"+reason.getMsg());
+		CustomLog.i("onDialFailed CURRENT_ID:"+arg0+"          SERVICE:"+reason.getReason()+"   MSG:"+reason.getMsg());
 		voipSwitch(reason);
 	}
 
@@ -501,7 +498,7 @@ public class ConnectionService extends Service implements ConnectionListener,Cal
 		default: // 第三方AS服务器返回的自定义错误码
 			stopRecallTimer();
 			if(reason.getReason() >= 10000 && reason.getReason() <= 20000){//透传错误码
-				CustomLog.e(DfineAction.TAG_TCP,"KC_REASON:"+reason.getReason());
+				CustomLog.i(DfineAction.TAG_TCP,"KC_REASON:"+reason.getReason());
 				sendBroadcast(new Intent(UIDfineAction.ACTION_DIAL_HANGUP));
 			}else if(reason.getReason() >= 300233 && reason.getReason() <= 300243){
 				sendBroadcast(new Intent(UIDfineAction.ACTION_DIAL_STATE).putExtra("state", reason.getReason()));
@@ -512,7 +509,7 @@ public class ConnectionService extends Service implements ConnectionListener,Cal
 
 	@Override
 	public void onHangUp(String callId, UcsReason reason) {
-		CustomLog.e("onHangUp CURRENT_ID:"+callId+"SERVICE:"+reason.getReason());
+		CustomLog.i("onHangUp CURRENT_ID:"+callId+"SERVICE:"+reason.getReason());
 		AudioConverseActivity.IncomingCallId = callId;
 		VideoConverseActivity.IncomingCallId = callId;
 		UCSCall.stopCallRinging(ConnectionService.this);
@@ -557,7 +554,7 @@ public class ConnectionService extends Service implements ConnectionListener,Cal
 	}
 
 	/**
-	 *
+	 * @param
 	 */
 	@Override
 	public void onNetWorkState(int reason, String message) {
@@ -611,7 +608,7 @@ public class ConnectionService extends Service implements ConnectionListener,Cal
 	 */
 	@Override
 	public void initPlayout(int sample_rate, int bytes_per_sample, int num_of_channels) {
-		CustomLog.e("initPlayout sample_rate = " + sample_rate +
+		CustomLog.i("initPlayout sample_rate = " + sample_rate +
 				" bytes_per_sample = " + bytes_per_sample +
 				" num_of_channels = " + num_of_channels);
 		try {
@@ -632,7 +629,7 @@ public class ConnectionService extends Service implements ConnectionListener,Cal
 	 */
 	@Override
 	public void initRecording(int sample_rate, int bytes_per_sample, int num_of_channels) {
-		CustomLog.e("initRecording sample_rate = " + sample_rate +
+		CustomLog.i("initRecording sample_rate = " + sample_rate +
 				" bytes_per_sample = " + bytes_per_sample +
 				" num_of_channels = " + num_of_channels);
 		testData = convertStream2byteArrry("cuiniao.pcm");
@@ -652,7 +649,7 @@ public class ConnectionService extends Service implements ConnectionListener,Cal
 	 */
 	@Override
 	public int readRecordingData(byte[] inData, int inSize) {
-//		CustomLog.e("readRecordingData inSize = " + inSize);
+//		CustomLog.i("readRecordingData inSize = " + inSize);
 		if ( dataLen > inSize )	{
 			if ( readIndex + inSize > dataLen ) {
 				readIndex = 0;
@@ -675,7 +672,7 @@ public class ConnectionService extends Service implements ConnectionListener,Cal
 	 */
 	@Override
 	public int writePlayoutData(byte[] outData, int outSize) {
-//		CustomLog.e("writePlayoutData outSize = " + outSize);
+//		CustomLog.i("writePlayoutData outSize = " + outSize);
 		if ( fosPlay != null ) {
 			// recording to files
 			try {

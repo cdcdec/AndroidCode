@@ -435,7 +435,8 @@ public class IMMessageActivity extends FragmentActivity implements
 	private void initdata(Bundle savedInstanceState, Intent intent) {
 		conversationinfo = (ConversationInfo) intent
 				.getSerializableExtra("conversation");
-		CustomLog.e("conversationinfo:" + conversationinfo.toString());
+		Log.e("men_jin","IMMessageActivity获取信息="+conversationinfo.toString());
+		CustomLog.i("conversationinfo:" + conversationinfo.toString());
 		MainApplication.getInstance().targetId = conversationinfo.getTargetId();
 		
 		if (savedInstanceState != null
@@ -991,6 +992,8 @@ public class IMMessageActivity extends FragmentActivity implements
 		im_ll_video.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
+
+				Log.e("men_jin","拨打视频电话 IMMessageActivity.class");
 				if (checkNetwork(IMMessageActivity.this, false) == false) {
 					return;
 				}
@@ -1005,6 +1008,7 @@ public class IMMessageActivity extends FragmentActivity implements
 							memberList.append(members[i] + ","); 
 						}
 					}
+					Log.e("men_jin","拨打视频电话,被叫号码 IMMessageActivity.class"+memberList.toString());
 					CustomLog.v("开启拨打视频同振。。。被叫号码：" + memberList.toString());
 					Intent intent = new Intent(IMMessageActivity.this,VideoConverseActivity.class);
 					intent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
@@ -1012,6 +1016,7 @@ public class IMMessageActivity extends FragmentActivity implements
 					intent.putExtra("call_type", 5);//视频同振
 					startActivity(intent);
 				} else { // 单聊
+					Log.e("men_jin","拨打视频电话 单聊 IMMessageActivity.class");
 					CustomLog.v("开启拨打视频电话。。。");
 					Intent intent = new Intent(IMMessageActivity.this, VideoConverseActivity.class); 
 					intent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
@@ -1023,9 +1028,9 @@ public class IMMessageActivity extends FragmentActivity implements
 					Log.e("123","userId="+conversationinfo.getTargetId());
 					Log.e("123","call_phone="+conversationinfo.getTargetId());
 
-					intent.putExtra("userName","smt0209");
-					intent.putExtra("userId", "smt0209");
-					intent.putExtra("call_phone", "smt0209");
+					intent.putExtra("userName","smt0169");
+					intent.putExtra("userId", "smt0169");
+					intent.putExtra("call_phone", "smt0169");
 					startActivity(intent);
 				}
 			}
@@ -1280,14 +1285,14 @@ public class IMMessageActivity extends FragmentActivity implements
 				}
 
 			}
-			CustomLog.e("RESULT_PATH:" + uri.toString());
+			CustomLog.i("RESULT_PATH:" + uri.toString());
 			String path = "";
 			if (requestCode == SELECT_PIC) {
 				path = getFilePathFromUri(uri);
 			} else {
 				path = ContentResolverUtils.getPath(this, uri);
 			}
-			CustomLog.e("android version is older then 4.4 : "
+			CustomLog.i("android version is older then 4.4 : "
 					+ (requestCode == SELECT_PIC)
 					+ "，select image imagePath = " + path);
 			try {
@@ -1300,9 +1305,9 @@ public class IMMessageActivity extends FragmentActivity implements
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
-			CustomLog.e("RESULT_PATH:" + path);
+			CustomLog.i("RESULT_PATH:" + path);
 			File file = new File(path);
-			CustomLog.e("RESULT_PATH_EXISTS:" + file.exists());
+			CustomLog.i("RESULT_PATH_EXISTS:" + file.exists());
 			if (file.exists()) {
 				ChatMessage msg = null;
 				switch (conversationinfo.getCategoryId()) {
@@ -1357,9 +1362,9 @@ public class IMMessageActivity extends FragmentActivity implements
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
-			CustomLog.e("RESULT_PATH:" + shot_path);
+			CustomLog.i("RESULT_PATH:" + shot_path);
 			File file = new File(shot_path);
-			CustomLog.e("RESULT_PATH_EXISTS:" + file.exists());
+			CustomLog.i("RESULT_PATH_EXISTS:" + file.exists());
 			if (file.exists()) {
 				ChatMessage msg = null;
 				switch (conversationinfo.getCategoryId()) {
@@ -1603,7 +1608,7 @@ public class IMMessageActivity extends FragmentActivity implements
 	 * @return
 	 */
 	public String getFilePathFromUri(Uri fileUrl) {
-		CustomLog.e("IMMessageActivity select image uri : " + fileUrl);
+		CustomLog.i("IMMessageActivity select image uri : " + fileUrl);
 		String fileName = "";
 		if (fileUrl != null) {
 			if (fileUrl.getScheme().toString().compareTo("content") == 0) {
