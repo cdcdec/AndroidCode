@@ -111,15 +111,19 @@ public class VideoConverseActivity extends ConverseActivity implements OnClickLi
                     CustomLog.i("Video status refresh begin....");
                     // 呼出电话，对方还未接听
                     if (!inCall && !incallAnswer) {
+                        Log.e("inCall","VideoConverseActivity.class,"+"呼出电话，对方还未接听=");
                         UCSCall.refreshCamera(UCSCameraType.LOCALCAMERA, UCSFrameType.ORIGINAL);
                     } else if (closeVideo) { // 本地摄像头已关闭
                         //UCSCall.switchVideoMode(UCSCameraType.REMOTECAMERA);
+                        Log.e("inCall","VideoConverseActivity.class,"+"本地摄像头已关闭=");
                         UCSCall.refreshCamera(UCSCameraType.REMOTECAMERA, UCSFrameType.ORIGINAL);
                     } else {
                         converse_call_video.setBackgroundResource(R.drawable.converse_video);
                         if (TextUtils.isEmpty((CharSequence) msg.obj)) {//本端是被叫，已接听
+                            Log.e("inCall","VideoConverseActivity.class,"+"本端是被叫，已接听=");
                             UCSCall.refreshCamera(UCSCameraType.ALL, UCSFrameType.ORIGINAL);
                         } else {//界面由后台回到前台
+                            Log.e("inCall","VideoConverseActivity.class,"+"界面由后台回到前台=");
                             UCSCall.refreshCamera(UCSCameraType.BACKGROUNDCAMERA, UCSFrameType.ORIGINAL);
                         }
                     }
@@ -127,6 +131,7 @@ public class VideoConverseActivity extends ConverseActivity implements OnClickLi
                     break;
                 case 1:
                     if (!bConverseClose) {
+                        Log.e("inCall","VideoConverseActivity.class,"+"Video status close=");
                         UCSCall.closeCamera(UCSCameraType.BACKGROUNDCAMERA);
                         CustomLog.v("Video status close ....");
                     }
@@ -176,6 +181,7 @@ public class VideoConverseActivity extends ConverseActivity implements OnClickLi
                     }
                     break;
                 case MSG_REFRESH_VIDEO_TIMER_TEXT:
+                    Log.e("inCall","VideoConverseActivity.class,"+"MSG_REFRESH_VIDEO_TIMER_TEXT=");
                     mHandler.removeMessages(MSG_REFRESH_VIDEO_TIMER_TEXT);
                     if (converse_time != null) {
                         converse_time.setText(timer);
@@ -187,10 +193,11 @@ public class VideoConverseActivity extends ConverseActivity implements OnClickLi
     private BroadcastReceiver br = new BroadcastReceiver() {
         @Override
         public void onReceive(Context context, Intent intent) {
-
+            Log.e("men_jin","VideoConverseActivity.class,"+intent.getAction());
             if (intent.getAction().equals(UIDfineAction.ACTION_DIAL_STATE)) {
                 int state = intent.getIntExtra("state", 0);
                 CustomLog.i("VIDEO_CALL_STATE:" + state);
+                Log.e("men_jin","VideoConverseActivity.class,"+"VIDEO_CALL_STATE1="+state);//300247  进入
                 if (UIDfineAction.dialState.keySet().contains(state)) {
                     if (state == 300226) {
                         ll_video_network_time.setVisibility(View.GONE);
@@ -201,28 +208,38 @@ public class VideoConverseActivity extends ConverseActivity implements OnClickLi
                 if (state == UCSCall.HUNGUP_REFUSAL || state == UCSCall.HUNGUP_MYSELF || state == UCSCall.HUNGUP_OTHER
                         || state == UCSCall.HUNGUP_MYSELF_REFUSAL || state == UCSCall.HUNGUP_RTP_TIMEOUT
                         || state == UCSCall.HUNGUP_OTHER_REASON || state == UCSCall.HUNGUP_GROUP) {
+                    Log.e("men_jin","VideoConverseActivity.class,"+"VIDEO_CALL_STATE2="+state);//300247
                     UCSCall.stopCallRinging(VideoConverseActivity.this);
                     mHandler.sendEmptyMessageDelayed(VIDIO_CONVERSE_CLOSE, 1000);
                 } else {
+                    Log.e("men_jin","VideoConverseActivity.class,"+"VIDEO_CALL_STATE3="+state);//300247  进入
                     if ((state >= 300210 && state <= 300260) && (state != 300221 && state != 300222 && state != 300247)
                             || state == UCSCall.HUNGUP_NOT_ANSWER) {
+                        Log.e("men_jin","VideoConverseActivity.class,"+"VIDEO_CALL_STATE4="+state);
                         mHandler.sendEmptyMessageDelayed(VIDIO_CONVERSE_CLOSE, 1000);
                     }
                 }
                 // 本方是主叫 对方正在响铃
                 if (!inCall && state == UCSCall.CALL_VOIP_RINGING_180) {
+                    Log.e("men_jin","VideoConverseActivity.class,"+"VIDEO_CALL_STATE5="+state);//300247  进入
                     UCSCall.refreshCamera(UCSCameraType.LOCALCAMERA, UCSFrameType.ORIGINAL);
                 }
                 if (state == UCSCall.NOT_NETWORK) {
                     converse_information.setText("当前处于无网络状态");
+                    Log.e("men_jin","VideoConverseActivity.class,"+"VIDEO_CALL_STATE6="+state);
                     UCSCall.stopRinging(VideoConverseActivity.this);
                     UCSCall.stopCallRinging(VideoConverseActivity.this);
                     mHandler.sendEmptyMessageDelayed(VIDIO_CONVERSE_CLOSE, 1000);
                 }
             } else if (intent.getAction().equals(UIDfineAction.ACTION_ANSWER)) {
                 if (callType == 5) { // 视频同振
+                    Log.e("men_jin","VideoConverseActivity.class,"+"VIDEO_CALL_STATE7=");
                     converse_client.setText("同振通话中");
                 }
+
+                //300247  进入
+                //  进入
+                Log.e("men_jin","VideoConverseActivity.class,"+"VIDEO_CALL_STATE8=");
                 VideoConverseActivity.this.setVolumeControlStream(AudioManager.STREAM_VOICE_CALL);
                 converse_information.setVisibility(View.GONE);
                 ll_video_network_time.setVisibility(View.VISIBLE);
@@ -240,19 +257,11 @@ public class VideoConverseActivity extends ConverseActivity implements OnClickLi
                 layout_video_function.setVisibility(View.VISIBLE);
                 video_call_answer.setVisibility(View.GONE);
                 open_headset = true;
-                if (!UCSCall.isCameraPreviewStatu(VideoConverseActivity.this)) {
-                    if (!inCall) {
+                if (!UCSCall.isCameraPreviewStatu(VideoConverseActivity.this)){
                         // 本方是主叫，对方已接听
                         UCSCall.switchVideoMode(UCSCameraType.ALL);
-                    } else {
-                        // 刷新摄像头发送和接收，重要，一定要加这个
-                        // mHandler.sendEmptyMessageDelayed(0, 1000);
-                        mHandler.sendEmptyMessage(0);
                     }
-                }
-                // sendBroadcast(new Intent(UIDfineAction.ACTION_START_TIME));
-
-                // 记录通话开始时间
+                // 记录通话开始时间  //  进入
                 SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy:MM:dd-HH:mm");
                 callStartTime = dateFormat.format(new Date());
 
@@ -264,6 +273,8 @@ public class VideoConverseActivity extends ConverseActivity implements OnClickLi
                 remotelayout.setClickable(true);
             } else if (intent.getAction().equals(UIDfineAction.ACTION_CALL_TIME)) {
                 timer = intent.getStringExtra("timer");
+                //  进入  视频过程中 会反复调用1
+                Log.e("men_jin","VideoConverseActivity.class,"+"VIDEO_CALL_STATE12=");
                 mHandler.sendEmptyMessage(MSG_REFRESH_VIDEO_TIMER_TEXT);
             } else if (intent.getAction().equals(UIDfineAction.ACTION_NETWORK_STATE)) {
                 int state = intent.getIntExtra("state", 0);
@@ -272,6 +283,8 @@ public class VideoConverseActivity extends ConverseActivity implements OnClickLi
                 msg.what = VIDEO_NETWORK_STATE;
                 msg.arg1 = state;
                 msg.obj = videoMsg;
+                //  进入  视频过程中 会反复调用1
+                Log.e("men_jin","VideoConverseActivity.class,"+"VIDEO_CALL_STATE13=");
                 mHandler.sendMessageDelayed(msg, 0);
                 // CustomLog.v("-----------------------"+state);
             } else if (intent.getAction().equals("android.intent.action.HEADSET_PLUG")) {
@@ -280,17 +293,20 @@ public class VideoConverseActivity extends ConverseActivity implements OnClickLi
                     CustomLog.e("Speaker false");
                     converse_call_speaker.setBackgroundResource(R.drawable.converse_speaker);
                     speakerPhoneState = UCSCall.isSpeakerphoneOn(VideoConverseActivity.this);
+                    Log.e("men_jin","VideoConverseActivity.class,"+"VIDEO_CALL_STATE14=");
                     UCSCall.setSpeakerphone(VideoConverseActivity.this, false);
                 } else if (intent.getIntExtra("state", 0) == 0 && open_headset) {
                     CustomLog.e("headset unplug");
                     if (speakerPhoneState) {
                         CustomLog.e("Speaker true");
                         converse_call_speaker.setBackgroundResource(R.drawable.converse_speaker_down);
+                        Log.e("men_jin","VideoConverseActivity.class,"+"VIDEO_CALL_STATE15=");
                         UCSCall.setSpeakerphone(VideoConverseActivity.this, true);
                     }
                 }
             } else if (intent.getAction().equals(UIDfineAction.ACTION_NET_ERROR_KICKOUT)) {
                 // 踢线广播
+                Log.e("men_jin","VideoConverseActivity.class,"+"VIDEO_CALL_STATE16=");
                 error_kickout = true;
             }
         }
@@ -325,8 +341,8 @@ public class VideoConverseActivity extends ConverseActivity implements OnClickLi
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON,
                 WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
         setContentView(R.layout.activity_video_converse_new);
-        initview();
-        initListener();
+        initview();//无sdk方法
+        initListener();//无sdk方法
         initData();
         IntentFilter ift = new IntentFilter();
         ift.addAction(UIDfineAction.ACTION_DIAL_STATE);
@@ -337,64 +353,22 @@ public class VideoConverseActivity extends ConverseActivity implements OnClickLi
         ift.addAction("android.intent.action.HEADSET_PLUG");
         registerReceiver(br, ift);
 
-        monitorRoation();
+        //monitorRoation();
         // 初始化视频
         UCSCall.initCameraConfig(VideoConverseActivity.this, remotelayout, locallayout);
-        // 将参数设置到SDK
-        // VideoDecParam decParam = new VideoDecParam();
-        // decParam.ucmaxFramerate = 12; // 帧率
-        // VideoEncParam encParam = new VideoEncParam();
-        // encParam.usWidth = 240; // 宽
-        // encParam.usHeight = 320; // 高
-        // encParam.usStartBitrate = 120; // 开始码率
-        // encParam.usMaxBitrate = 150; // 最大码率
-        // encParam.usMinBitrate = 90; // 最小码率
-        // encParam.ucmaxFramerate = 15; // 帧率
-        // UCSCall.setVideoAttr(decParam, encParam);
         ll_video_network_time.setVisibility(View.GONE);
-        if (useExternCapture > 0) {
-            CustomLog.v("useExternCapture ...");
-            UCSCall.setVideoExternCapture(VideoExternFormat.h264, true);
-            CustomLog.v("ExternCapture:" + UCSCall.getVideoExternCapture());
-            TUGo_extern_capture_init();
-        }
-        if (inCall) {// 来电
-            // 判断网络类型，2G时提示一下
-            int netstate = NetWorkTools.getCurrentNetWorkType(this);
-            if (netstate == NetWorkTools.NETWORK_EDGE)
-                Toast.makeText(this, "网络状态差", Toast.LENGTH_SHORT).show();
 
-            video_call_hangup.setVisibility(View.VISIBLE);
-            video_call_answer.setVisibility(View.GONE);
-            // mHandler.sendEmptyMessageDelayed(0, 1000);
-            converse_information.setText("视频电话来电");
-            UCSCall.setSpeakerphone(VideoConverseActivity.this, true);
-            //startRing(VideoConverseActivity.this);//来电页面已经播放来电铃声故此处去掉
-            CustomLog.v("IncomingCallId = " + IncomingCallId + ",callId = " + getIntent().getStringExtra("callId"));
-            if (getIntent().hasExtra("callId")) {
-                if (getIntent().getStringExtra("callId").equals(IncomingCallId)) {
-                    // sendBroadcast(new
-                    // Intent(UIDfineAction.ACTION_DIAL_STATE).putExtra("state",
-                    // UCSCall.HUNGUP_OTHER));
-                    converse_information.setVisibility(View.VISIBLE);
-                    converse_information.setText("对方挂断电话");
-                    UCSCall.stopRinging(VideoConverseActivity.this);
-                    mHandler.sendEmptyMessageDelayed(VIDIO_CONVERSE_CLOSE, 1000);
-                    return;
-                }
-            }
-        } else {
-            CameraWindow.show(VideoConverseActivity.this);
-            video_call_answer.setVisibility(View.GONE);
-            video_call_hangup.setVisibility(View.VISIBLE);
-            layout_video_function.setVisibility(View.INVISIBLE);
-            converse_call_switch.setVisibility(View.INVISIBLE);
-            dial();
-            converse_information.setText("正在呼叫");
-            // UCSCall.refreshCamera(UCSCameraType.ALL);
-            locallayout.setVisibility(View.VISIBLE);
-            remotelayout.setVisibility(View.VISIBLE);
-        }
+        CameraWindow.show(VideoConverseActivity.this);
+        video_call_answer.setVisibility(View.GONE);
+        video_call_hangup.setVisibility(View.VISIBLE);
+        layout_video_function.setVisibility(View.INVISIBLE);
+        converse_call_switch.setVisibility(View.INVISIBLE);
+        dial();
+        converse_information.setText("正在呼叫");
+        // UCSCall.refreshCamera(UCSCameraType.ALL);
+        locallayout.setVisibility(View.VISIBLE);
+        remotelayout.setVisibility(View.VISIBLE);
+
         // 默认一开始使用前摄像头 0：后摄像头,1:前摄像头
         if (UCSCall.getCameraNum() > 1) {
             UCSCall.switchCameraDevice(1, RotateType.DEFAULT);
@@ -408,9 +382,6 @@ public class VideoConverseActivity extends ConverseActivity implements OnClickLi
         // converse_call_switch.setClickable(false);
         remotelayout.setClickable(false);
 
-        if (inCall) {
-            video_call_answer.performClick();
-        }
         startOrientationEventListener();
     }
 
@@ -486,6 +457,7 @@ public class VideoConverseActivity extends ConverseActivity implements OnClickLi
 
         //720P时本地预览的宽高设置成16比9
         if (getSharedPreferences("YZX_DEMO_DEFAULT", 0).getBoolean("YZX_720P", false)) {
+            //未进入
             Log.e("men_jin","720P   VideoConverseActivity.class");
             LayoutParams para = (LayoutParams) locallayout.getLayoutParams();
             para.height = para.width * 16 / 9;
@@ -523,6 +495,7 @@ public class VideoConverseActivity extends ConverseActivity implements OnClickLi
             Log.e("men_jin","userName   VideoConverseActivity.class,"+userName);
         }
         if (getIntent().hasExtra("phoneNumber")) {
+
             phoneNumber = getIntent().getStringExtra("phoneNumber");
             Log.e("men_jin","phoneNumber   VideoConverseActivity.class,"+phoneNumber);
         }
@@ -530,6 +503,7 @@ public class VideoConverseActivity extends ConverseActivity implements OnClickLi
         if (getIntent().hasExtra("call_phone")) {
             phoneNumber = getIntent().getStringExtra("call_phone");
             CustomLog.v("dialing phone :" + phoneNumber);
+            //进入
             Log.e("men_jin","dialing call_phone   VideoConverseActivity.class,"+phoneNumber);
         } else if (getIntent().hasExtra("phoneNumber")) {
             phoneNumber = getIntent().getStringExtra("phoneNumber");
@@ -549,6 +523,8 @@ public class VideoConverseActivity extends ConverseActivity implements OnClickLi
                         if (phoneNumber.equals(conversationInfo.getTargetId())) {
                             CustomLog.i("conversation number ...");
                             userName = conversationInfo.getConversationTitle();
+
+                            Log.e("men_jin","phoneNumber, userName  VideoConverseActivity.class,"+phoneNumber+","+userName);
                         }
                     }
                 }
@@ -562,21 +538,26 @@ public class VideoConverseActivity extends ConverseActivity implements OnClickLi
 
         if (getIntent().hasExtra("call_type")) {
             callType = getIntent().getIntExtra("call_type", -1);
+            Log.e("men_jin","callType  VideoConverseActivity.class,"+callType);
             if (callType == 5) { // 视频同振
                 converse_client.setText("视频同振中");
                 phoneNumber = calledUid;
+                Log.e("men_jin","calledUid  VideoConverseActivity.class,"+calledUid);
             }
         }
     }
 
     private void dial() {
         if (phoneNumber != null && phoneNumber.length() > 0) {
+            Log.e("men_jin","dial phoneNumber=   VideoConverseActivity.class,"+phoneNumber);
             UCSCall.setSpeakerphone(VideoConverseActivity.this, false);
             if (getIntent().hasExtra("call_type")) {
-
+                Log.e("men_jin","call_type=   VideoConverseActivity.class,"+getIntent().hasExtra("call_type"));
                 sendBroadcast(new Intent(UIDfineAction.ACTION_DIAL).putExtra(UIDfineAction.CALL_UID, phoneNumber)
                         .putExtra("type", getIntent().getIntExtra("call_type", -1)));
             } else {
+                //进入
+                Log.e("men_jin","call_type2=   VideoConverseActivity.class,"+getIntent().hasExtra("call_type"));
                 sendBroadcast(new Intent(UIDfineAction.ACTION_DIAL).putExtra(UIDfineAction.CALL_UID, phoneNumber)
                         .putExtra("type", 3));
             }
@@ -598,12 +579,10 @@ public class VideoConverseActivity extends ConverseActivity implements OnClickLi
                 addCallRecord(1, inCall, userName, phoneNumber, calledPhone, 2, callStartTime, timer);
             }
         }
-
         if (sound == 1) { // 如果系统触摸提示音是开的，前面把它给关系，现在退出页面要把它还原
             Settings.System.putInt(getContentResolver(), Settings.System.SOUND_EFFECTS_ENABLED, 1);
             mAudioManager.loadSoundEffects();
         }
-
         // mHandler.sendEmptyMessageDelayed(1, 100);//
         // 挂断时不调用关闭摄像头操作,因为挂断时会默认把摄像头关闭
         UCSCall.stopRinging(VideoConverseActivity.this);

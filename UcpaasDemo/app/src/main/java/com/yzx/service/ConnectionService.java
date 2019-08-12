@@ -12,6 +12,7 @@ import android.os.Build;
 import android.os.IBinder;
 import android.text.TextUtils;
 
+import android.util.Log;
 import com.yzx.api.CallType;
 import com.yzx.api.UCSCall;
 import com.yzx.api.UCSCameraType;
@@ -113,8 +114,9 @@ public class ConnectionService extends Service implements ConnectionListener,Cal
         ift.addAction(UIDfineAction.ACTION_CALL_STOP_RECALL_TIMER);
         registerReceiver(br, ift);
 
+
         //for test 
-        UCSManager.setTransAckData("2016-06-24 13:44:42: TRACE_CALL_BACK:  summary:TraceLog   detail:CALL_LOG:CALLID:67894056190787oJnYa2016-06-24 13:44:42: TRACE_CALL_BACK:  summary:TraceLog   detail:CALL_LOG:CALLID:67894056190787oJnYa2016-06-24 13:44:42: TRACE_CALL_BACK:  summary:TraceLog   detail:CALL_LOG:CALLID:67894056190787oJnYa2016-06-24 13:44:42: TRACE_CALL_BACK:  summary:TraceLog   detail:CALL_LOG:CALLID:67894056190787oJnYa2016-06-24 13:44:42: TRACE_CALL_BACK:  summary:TraceLog   detail:CALL_LOG:CALLID:67894056190787oJnYa");
+      /* UCSManager.setTransAckData("2016-06-24 13:44:42: TRACE_CALL_BACK:  summary:TraceLog   detail:CALL_LOG:CALLID:67894056190787oJnYa2016-06-24 13:44:42: TRACE_CALL_BACK:  summary:TraceLog   detail:CALL_LOG:CALLID:67894056190787oJnYa2016-06-24 13:44:42: TRACE_CALL_BACK:  summary:TraceLog   detail:CALL_LOG:CALLID:67894056190787oJnYa2016-06-24 13:44:42: TRACE_CALL_BACK:  summary:TraceLog   detail:CALL_LOG:CALLID:67894056190787oJnYa2016-06-24 13:44:42: TRACE_CALL_BACK:  summary:TraceLog   detail:CALL_LOG:CALLID:67894056190787oJnYa");*/
 //       pushDaemon();
 	}
 	/**
@@ -163,6 +165,7 @@ public class ConnectionService extends Service implements ConnectionListener,Cal
 				callType = intent.getIntExtra("type", 1);
 				uid = intent.getStringExtra(UIDfineAction.CALL_UID);
 				String phone = intent.getStringExtra(UIDfineAction.CALL_PHONE);
+				Log.e("men_jin","call_type=   服务,"+phone);
 				if (phone == null || phone.length() == 0) {
 				    //整合版本账号即手机号
 				    phone = uid;
@@ -183,6 +186,7 @@ public class ConnectionService extends Service implements ConnectionListener,Cal
 					if(avPreviewImg) {
 						previewImgDial();
 					} else {
+						Log.e("men_jin","call_type=   服务,"+uid);
 						dial(CallType.VIDEO, uid, "", Integer.valueOf(recall_timer) * 1000);
 					}
 					break;
@@ -403,7 +407,6 @@ public class ConnectionService extends Service implements ConnectionListener,Cal
 					timer.append(0);
 				}
 				timer.append(secondDuration);
-//				CustomLog.i(DfineAction.TAG_TCP,"timer:"+timer.toString());
 				sendBroadcast(new Intent(UIDfineAction.ACTION_CALL_TIME).putExtra("callduration", hourDuration * 3600 + minuteDuration * 60 + secondDuration).putExtra("timer", timer.toString()));
 			}
 		}, 0, 1000);

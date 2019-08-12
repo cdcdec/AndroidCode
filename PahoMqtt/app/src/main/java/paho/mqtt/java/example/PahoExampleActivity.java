@@ -14,6 +14,7 @@
 package paho.mqtt.java.example;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -41,14 +42,30 @@ public class PahoExampleActivity extends AppCompatActivity {
 
     MqttAndroidClient mqttAndroidClient;
 
-    final String serverUri = "tcp://iot.eclipse.org:1883";
+    //final String serverUri = "tcp://iot.eclipse.org:1883";
+//    String clientId = "ExampleAndroidClient";
+//    final String subscriptionTopic = "exampleAndroidTopic";
+//    final String subscriptionTopic = "exampleAndroidTopic";
+//    final String publishTopic = "exampleAndroidPublishTopic";
 
+    final String serverUri = "tcp://120.78.189.239:1883";
     String clientId = "ExampleAndroidClient";
-    final String subscriptionTopic = "exampleAndroidTopic";
-    final String publishTopic = "exampleAndroidPublishTopic";
+    final String subscriptionTopic = "123";
+    final String publishTopic = "123";
     final String publishMessage = "Hello World!";
 
 
+    /*
+    {
+        	"data": {
+      		"msg": "SYS_OK",
+                "operate": "5",
+               		"code": "0"
+
+       	},
+       	"fromDevice": "6ZZGk5"
+        }
+        */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -75,10 +92,11 @@ public class PahoExampleActivity extends AppCompatActivity {
         clientId = clientId + System.currentTimeMillis();
 
         mqttAndroidClient = new MqttAndroidClient(getApplicationContext(), serverUri, clientId);
+
         mqttAndroidClient.setCallback(new MqttCallbackExtended() {
             @Override
             public void connectComplete(boolean reconnect, String serverURI) {
-
+                Log.e("123", "reconnect=" + reconnect + ",serverURI=" + serverURI);
                 if (reconnect) {
                     addToHistory("Reconnected to : " + serverURI);
                     // Because Clean Session is true, we need to re-subscribe
@@ -90,28 +108,30 @@ public class PahoExampleActivity extends AppCompatActivity {
 
             @Override
             public void connectionLost(Throwable cause) {
+                Log.e("123", "cause=" + cause.getLocalizedMessage());
                 addToHistory("The Connection was lost.");
             }
 
             @Override
             public void messageArrived(String topic, MqttMessage message) throws Exception {
-                addToHistory("Incoming message: " + new String(message.getPayload()));
+                String s = new String(message.getPayload());
+                addToHistory("Incoming message: " + s);
+
+                Log.e("123", "messageArrived");
+                Log.e("123", "messageArrived," + s);
             }
 
             @Override
             public void deliveryComplete(IMqttDeliveryToken token) {
-
+                Log.e("123", "deliveryComplete");
             }
         });
 
         MqttConnectOptions mqttConnectOptions = new MqttConnectOptions();
+        mqttConnectOptions.setUserName("shengcAdmin");
+        mqttConnectOptions.setPassword("shengc@123".toCharArray());
         mqttConnectOptions.setAutomaticReconnect(true);
         mqttConnectOptions.setCleanSession(false);
-
-
-
-
-
 
 
         try {
@@ -119,6 +139,7 @@ public class PahoExampleActivity extends AppCompatActivity {
             mqttAndroidClient.connect(mqttConnectOptions, null, new IMqttActionListener() {
                 @Override
                 public void onSuccess(IMqttToken asyncActionToken) {
+                    Log.e("123", "onSuccess");
                     DisconnectedBufferOptions disconnectedBufferOptions = new DisconnectedBufferOptions();
                     disconnectedBufferOptions.setBufferEnabled(true);
                     disconnectedBufferOptions.setBufferSize(100);
@@ -130,18 +151,19 @@ public class PahoExampleActivity extends AppCompatActivity {
 
                 @Override
                 public void onFailure(IMqttToken asyncActionToken, Throwable exception) {
+                    Log.e("123", "onFailure");
                     addToHistory("Failed to connect to: " + serverUri);
                 }
             });
 
 
-        } catch (MqttException ex){
+        } catch (MqttException ex) {
             ex.printStackTrace();
         }
 
     }
 
-    private void addToHistory(String mainText){
+    private void addToHistory(String mainText) {
         System.out.println("LOG: " + mainText);
         mAdapter.add(mainText);
         Snackbar.make(findViewById(android.R.id.content), mainText, Snackbar.LENGTH_LONG)
@@ -168,11 +190,12 @@ public class PahoExampleActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    public void subscribeToTopic(){
+    public void subscribeToTopic() {
         try {
             mqttAndroidClient.subscribe(subscriptionTopic, 0, null, new IMqttActionListener() {
                 @Override
                 public void onSuccess(IMqttToken asyncActionToken) {
+
                     addToHistory("Subscribed!");
                 }
 
@@ -188,23 +211,26 @@ public class PahoExampleActivity extends AppCompatActivity {
                 public void messageArrived(String topic, MqttMessage message) throws Exception {
                     // message Arrived!
                     System.out.println("Message: " + topic + " : " + new String(message.getPayload()));
+                    Log.e("123", "topic=" + topic);
+
+
                 }
             });
 
-        } catch (MqttException ex){
+        } catch (MqttException ex) {
             System.err.println("Exception whilst subscribing");
             ex.printStackTrace();
         }
     }
 
-    public void publishMessage(){
+    public void publishMessage() {
 
         try {
             MqttMessage message = new MqttMessage();
             message.setPayload(publishMessage.getBytes());
             mqttAndroidClient.publish(publishTopic, message);
             addToHistory("Message Published");
-            if(!mqttAndroidClient.isConnected()){
+            if (!mqttAndroidClient.isConnected()) {
                 addToHistory(mqttAndroidClient.getBufferedMessageCount() + " messages in buffer.");
             }
         } catch (MqttException e) {
