@@ -48,9 +48,9 @@ public class PahoExampleActivity extends AppCompatActivity {
 //    final String subscriptionTopic = "exampleAndroidTopic";
 //    final String publishTopic = "exampleAndroidPublishTopic";
 
-    final String serverUri = "tcp://120.78.189.239:1883";
+    final String serverUri = "tcp://112.125.27.35:1883";
     String clientId = "ExampleAndroidClient";
-    final String subscriptionTopic = "123";
+    final String subscriptionTopic = "smtAdmin/1564986191390695108/get";
     final String publishTopic = "123";
     final String publishMessage = "Hello World!";
 
@@ -195,13 +195,14 @@ public class PahoExampleActivity extends AppCompatActivity {
             mqttAndroidClient.subscribe(subscriptionTopic, 0, null, new IMqttActionListener() {
                 @Override
                 public void onSuccess(IMqttToken asyncActionToken) {
-
+                    Log.e("123", "subscribe onSuccess");
                     addToHistory("Subscribed!");
                 }
 
                 @Override
                 public void onFailure(IMqttToken asyncActionToken, Throwable exception) {
                     addToHistory("Failed to subscribe");
+                    Log.e("123", "subscribe onFailure");
                 }
             });
 

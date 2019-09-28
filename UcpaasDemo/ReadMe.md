@@ -25,6 +25,10 @@ sendEmptyMessage(RestTools.LOGIN_STATUS_TIMEOUT);
 
 ---》
 
+VideoConverseActivity
+
+555：拨打电话类型
+
 
 
 

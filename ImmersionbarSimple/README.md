@@ -13,3 +13,8 @@ implementation 'com.gyf.immersionbar:immersionbar-ktx:3.0.0-beta03'
 
 ```
 
+
+MainActivity：主页面
+
+PicAndColorActivity：图片状态栏 + 彩色导航栏
+

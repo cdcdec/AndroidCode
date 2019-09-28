@@ -16,6 +16,8 @@ import butterknife.BindView;
 import butterknife.OnClick;
 
 /**
+ *
+ * 图片状态栏 + 彩色导航栏
  * @author gyf
  * @date 2016/10/24
  */
