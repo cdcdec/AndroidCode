@@ -51,8 +51,12 @@ public class DimenTool {
         StringBuilder sw320 = new StringBuilder();
         StringBuilder sw360 = new StringBuilder();
         StringBuilder sw380 = new StringBuilder();
+        StringBuilder sw400 = new StringBuilder();
         StringBuilder sw410 = new StringBuilder();
+        StringBuilder sw420 = new StringBuilder();
+        StringBuilder sw440 = new StringBuilder();
         StringBuilder sw480 = new StringBuilder();
+        StringBuilder sw560 = new StringBuilder();
         StringBuilder sw600 = new StringBuilder();
         StringBuilder sw720 = new StringBuilder();
         StringBuilder sw760 = new StringBuilder();
@@ -82,20 +86,24 @@ public class DimenTool {
                     sw360.append(start).append(Math.round(num * 360 / width)).append(end).append("\n");
 
                     sw380.append(start).append(Math.round(num * 384 / width)).append(end).append("\n");
+                    sw400.append(start).append(Math.round(num * 400 / width)).append(end).append("\n");
                     sw410.append(start).append(Math.round(num * 410 / width)).append(end).append("\n");
+                    sw420.append(start).append(Math.round(num * 420 / width)).append(end).append("\n");
+                    sw440.append(start).append(Math.round(num * 440 / width)).append(end).append("\n");
 
                     sw480.append(start).append(Math.round(num * 480 / width)).append(end).append("\n");
+                    sw560.append(start).append(Math.round(num * 560 / width)).append(end).append("\n");
 
                     sw600.append(start).append(Math.round(num * 600 / width)).append(end).append("\n");
                     sw720.append(start).append(Math.round(num * 720 / width)).append(end).append("\n");
 
-                    sw760.append(start).append(Math.round(num * 768 / width)).append(end).append("\n");
+                    sw760.append(start).append(Math.round(num * 760 / width)).append(end).append("\n");
                     sw800.append(start).append(Math.round(num * 800 / width)).append(end).append("\n");
                     sw900.append(start).append(Math.round(num * 900 / width)).append(end).append("\n");
 
                     sw1080.append(start).append(Math.round(num * 1080 / width)).append(end).append("\n");
                     sw1200.append(start).append(Math.round(num * 1200 / width)).append(end).append("\n");
-                    sw1440.append(start).append((int) Math.round(num * 1440 / width)).append(end).append("\n");
+                    sw1440.append(start).append(Math.round(num * 1440 / width)).append(end).append("\n");
 
 
                 } else {
@@ -104,9 +112,12 @@ public class DimenTool {
                     sw320.append(tempString).append("\n");
                     sw360.append(tempString).append("\n");
                     sw380.append(tempString).append("\n");
+                    sw400.append(tempString).append("\n");
                     sw410.append(tempString).append("\n");
+                    sw420.append(tempString).append("\n");
+                    sw440.append(tempString).append("\n");
                     sw480.append(tempString).append("\n");
-                    sw600.append(tempString).append("\n");
+                    sw560.append(tempString).append("\n");
                     sw720.append(tempString).append("\n");
 
                     sw760.append(tempString).append("\n");
@@ -133,8 +144,12 @@ public class DimenTool {
             String sw320file = "./app/src/main/res/values-sw320dp/dimens.xml";
             String sw360file = "./app/src/main/res/values-sw360dp/dimens.xml";
             String sw380file = "./app/src/main/res/values-sw380dp/dimens.xml";
+            String sw400file = "./app/src/main/res/values-sw400dp/dimens.xml";
             String sw410file = "./app/src/main/res/values-sw410dp/dimens.xml";
+            String sw420file = "./app/src/main/res/values-sw420dp/dimens.xml";
+            String sw440file = "./app/src/main/res/values-sw440dp/dimens.xml";
             String sw480file = "./app/src/main/res/values-sw480dp/dimens.xml";
+            String sw560file = "./app/src/main/res/values-sw560dp/dimens.xml";
             String sw600file = "./app/src/main/res/values-sw600dp/dimens.xml";
             String sw720file = "./app/src/main/res/values-sw720dp/dimens.xml";
 
@@ -151,8 +166,12 @@ public class DimenTool {
             writeFile(sw320file, sw320.toString());
             writeFile(sw360file, sw360.toString());
             writeFile(sw380file, sw380.toString());
+            writeFile(sw400file, sw410.toString());
             writeFile(sw410file, sw410.toString());
+            writeFile(sw420file, sw410.toString());
+            writeFile(sw440file, sw410.toString());
             writeFile(sw480file, sw480.toString());
+            writeFile(sw560file, sw480.toString());
             writeFile(sw600file, sw600.toString());
             writeFile(sw720file, sw720.toString());
 
@@ -177,7 +196,7 @@ public class DimenTool {
     }
 
     private static void writeFile(String file, String text) throws IOException {
-        CreateFileUtil.createFile(file);
+        createFile(file);
         PrintWriter out = null;
         FileWriter fileWriter = null;
         try {
@@ -196,11 +215,47 @@ public class DimenTool {
         }
     }
 
+    public static boolean createFile(String destFileName) {
+        File file = new File(destFileName);
+        if (file.exists()) {
+            //System.out.println("创建单个文件" + destFileName + "失败，目标文件已存在！");
+            return false;
+        }
+        if (destFileName.endsWith(File.separator)) {
+            //System.out.println("创建单个文件" + destFileName + "失败，目标文件不能为目录！");
+            return false;
+        }
+        //判断目标文件所在的目录是否存在
+        if (!file.getParentFile().exists()) {
+            //如果目标文件所在的目录不存在，则创建父目录
+            //System.out.println("目标文件所在目录不存在，准备创建它！");
+            if (!file.getParentFile().mkdirs()) {
+             //   System.out.println("创建目标文件所在目录失败！");
+                return false;
+            }
+        }
+        //创建目标文件
+        try {
+            if (file.createNewFile()) {
+               // System.out.println("创建单个文件" + destFileName + "成功！");
+                return true;
+            } else {
+              //  System.out.println("创建单个文件" + destFileName + "失败！");
+                return false;
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+            //System.out.println("创建单个文件" + destFileName + "失败！" + e.getMessage());
+            return false;
+        }
+    }
+
+
     /**
      * 生成最基本的尺寸
      */
-    private static void genBaseDimensSize() {
-        System.out.println("<!--   ******************************Font******************************* -->");
+    private static void genBaseDimensSize() throws IOException {
+        /*System.out.println("<!--   ******************************Font******************************* -->");
         for (int i = 6; i <= 36; i++) {
             StringBuilder sb = new StringBuilder("<dimen name=\"font_size_");
             sb.append(i).append("\">").append(i).append("sp</dimen>");
@@ -216,11 +271,49 @@ public class DimenTool {
                 sb.append(i).append("\">").append(i).append("dp</dimen>");
             }
             System.out.println(sb.toString());
-        }
+        }*/
+
+        File file=new File("./app/src/main/res/values/dimens.xml");
+            if(!file.exists()){
+                file.createNewFile();
+            }
+            BufferedWriter out = new BufferedWriter(new FileWriter(file));
+            out.write("<?xml version=\"1.0\" encoding=\"utf-8\"?>");
+            out.write("<resources>");
+            out.write("\r\n");
+            Double scale=Double.parseDouble("350.000000")/Double.parseDouble("350.000000");
+
+            System.out.println(scale);
+            float ii=0f;
+            for(int i=1;i<=350;i++){
+                out.write("<dimen name=\"dp"+i+"\">");
+
+                //out.write(i*scale+"dp");
+                out.write(i+"dp");
+                out.write("</dimen>");
+                out.write("\r\n");
+            }
+
+            for(int j=1;j<=35;j++){
+                out.write("<dimen name=\"sp"+j+"\">");
+
+                out.write(j+"dp");
+                out.write("</dimen>");
+                out.write("\r\n");
+            }
+
+            out.write("</resources>");
+            out.close();
+            System.out.println("file create success");
+
     }
 
     public static void main(String[] args) {
-        genBaseDimensSize();
+        try {
+            genBaseDimensSize();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         gen();
     }
 }

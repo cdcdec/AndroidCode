@@ -28,8 +28,8 @@
                 app:layout_constraintGuide_percent="0.9" />
 
         <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="@dimen/dp62"
+                android:layout_width="@dimen/dp305"
+                android:layout_height="@dimen/dp37"
                 android:layout_marginTop="@dimen/dp10"
                 android:background="@drawable/lin1"
                 android:clickable="true"
@@ -43,7 +43,7 @@
                     android:layout_height="match_parent"
                     android:gravity="center"
                     android:text="ak"
-                    android:textSize="@dimen/sp10" />
+                    android:textSize="@dimen/sp12" />
         </LinearLayout>
 
 
