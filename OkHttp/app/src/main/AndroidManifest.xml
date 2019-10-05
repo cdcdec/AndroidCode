@@ -4,6 +4,7 @@
         package="com.cdc.okhttp">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
 
     <application
             android:name=".MyApplication"
@@ -14,7 +15,8 @@
             android:supportsRtl="true"
             android:theme="@style/AppTheme"
             tools:ignore="AllowBackup,GoogleAppIndexingWarning">
-        <activity android:name=".OkHttpActivity"></activity>
+        <activity android:name=".httputils.okhttp1.OKHttp1Activity"></activity>
+        <activity android:name=".httputils.okhttp2.OKHttp2Activity"></activity>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

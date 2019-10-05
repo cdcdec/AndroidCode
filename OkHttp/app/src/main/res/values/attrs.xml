@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<declare-styleable name="ShapeView">
+
+    <attr format="enum" name="shapeType">
+        <enum name="rectangle" value="0"/>
+        <enum name="oval" value="1"/>
+        <enum name="line" value="2"/>
+        <enum name="ring" value="3"/>
+    </attr>
+
+    <attr format="color" name="shapeSolidColor"/>
+
+    <attr format="color" name="shapeSelectorPressedColor"/>
+    <attr format="color" name="shapeSelectorDisableColor"/>
+    <attr format="color" name="shapeSelectorNormalColor"/>
+
+    <attr format="dimension" name="shapeCornersRadius"/>
+
+    <attr format="dimension" name="shapeCornersTopLeftRadius"/>
+    <attr format="dimension" name="shapeCornersTopRightRadius"/>
+    <attr format="dimension" name="shapeCornersBottomLeftRadius"/>
+    <attr format="dimension" name="shapeCornersBottomRightRadius"/>
+
+    <attr format="dimension" name="shapeStrokeWidth"/>
+    <attr format="dimension" name="shapeStrokeDashWidth"/>
+    <attr format="dimension" name="shapeStrokeDashGap"/>
+    <attr format="color" name="shapeStrokeColor"/>
+
+    <attr format="dimension" name="shapeSizeWidth"/>
+    <attr format="dimension" name="shapeSizeHeight"/>
+
+    <attr format="float" name="shapeGradientAngle"/>
+    <attr format="dimension" name="shapeGradientCenterX"/>
+    <attr format="dimension" name="shapeGradientCenterY"/>
+    <attr format="dimension" name="shapeGradientGradientRadius"/>
+    <attr format="color" name="shapeGradientStartColor"/>
+    <attr format="color" name="shapeGradientCenterColor"/>
+    <attr format="color" name="shapeGradientEndColor"/>
+    <attr format="boolean" name="shapeGradientUseLevel"/>
+
+    <attr format="boolean" name="shapeUseSelector"/>
+
+    <attr format="enum" name="shapeGradientType">
+        <enum name="linear" value="0"/>
+        <enum name="radial" value="1"/>
+        <enum name="sweep" value="2"/>
+    </attr>
+
+</declare-styleable>
+
+
+    <declare-styleable name="SuperButton">
+        <attr format="enum" name="sGravity">
+            <enum name="center" value="0"/>
+            <enum name="left" value="1"/>
+            <enum name="right" value="2"/>
+            <enum name="top" value="3"/>
+            <enum name="bottom" value="4"/>
+        </attr>
+
+        <attr format="enum" name="sShapeType">
+            <enum name="rectangle" value="0"/>
+            <enum name="oval" value="1"/>
+            <enum name="line" value="2"/>
+            <enum name="ring" value="3"/>
+        </attr>
+
+        <attr format="color" name="sSolidColor"/>
+
+        <attr format="color" name="sSelectorPressedColor"/>
+        <attr format="color" name="sSelectorDisableColor"/>
+        <attr format="color" name="sSelectorNormalColor"/>
+
+        <attr format="dimension" name="sCornersRadius"/>
+
+        <attr format="dimension" name="sCornersTopLeftRadius"/>
+        <attr format="dimension" name="sCornersTopRightRadius"/>
+        <attr format="dimension" name="sCornersBottomLeftRadius"/>
+        <attr format="dimension" name="sCornersBottomRightRadius"/>
+
+        <attr format="dimension" name="sStrokeWidth"/>
+        <attr format="dimension" name="sStrokeDashWidth"/>
+        <attr format="dimension" name="sStrokeDashGap"/>
+        <attr format="color" name="sStrokeColor"/>
+
+        <attr format="dimension" name="sSizeWidth"/>
+        <attr format="dimension" name="sSizeHeight"/>
+
+        <attr format="float" name="sGradientAngle"/>
+        <attr format="dimension" name="sGradientCenterX"/>
+        <attr format="dimension" name="sGradientCenterY"/>
+        <attr format="dimension" name="sGradientGradientRadius"/>
+        <attr format="color" name="sGradientStartColor"/>
+        <attr format="color" name="sGradientCenterColor"/>
+        <attr format="color" name="sGradientEndColor"/>
+        <attr format="boolean" name="sGradientUseLevel"/>
+
+        <attr format="boolean" name="sUseSelector"/>
+
+        <attr format="enum" name="sGradientType">
+            <enum name="linear" value="0"/>
+            <enum name="radial" value="1"/>
+            <enum name="sweep" value="2"/>
+        </attr>
+
+    </declare-styleable>
+
+
+</resources>

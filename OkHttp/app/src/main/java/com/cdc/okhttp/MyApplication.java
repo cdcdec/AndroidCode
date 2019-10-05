@@ -6,5 +6,9 @@ public class MyApplication extends Application{
         super.onCreate();
         MLog.init(this);
 
+        //崩溃日志保存
+        CrashHandler crashHandler = CrashHandler.getInstance();
+        crashHandler.init(getApplicationContext());
+
     }
 }

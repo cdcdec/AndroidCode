@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/dialog_long_message_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:background="#ffffff"
+        android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/vLine1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0" />
+
+    <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/vLine2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="1" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="H,1:1.2"
+            app:layout_constraintLeft_toRightOf="@id/vLine1"
+            app:layout_constraintRight_toLeftOf="@id/vLine2">
+
+        <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/hLine1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.05" />
+
+        <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/hLine2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.95" />
+
+        <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/vLine5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.05" />
+
+        <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/vLine6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.95" />
+
+
+
+
+        <com.shape.SuperButton
+                android:id="@+id/btnBottomOk"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintDimensionRatio="H,1:0.14"
+                app:layout_constraintLeft_toRightOf="@id/vLine5"
+                app:layout_constraintRight_toLeftOf="@id/vLine6"
+                app:layout_constraintBottom_toTopOf="@id/hLine2"
+                android:text="确定"
+                app:sCornersRadius="@dimen/dp5"
+                app:sUseSelector="true"
+                app:sSelectorNormalColor="@color/gray_btn"
+                app:sSelectorPressedColor="@color/gray"
+                />
+        <TextView
+                android:id="@+id/tvLongMessage"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:gravity="left"
+                android:text="加载中..."
+                android:scrollbars="vertical"
+                android:textSize="@dimen/sp15"
+                app:layout_constraintLeft_toRightOf="@id/vLine5"
+                app:layout_constraintRight_toLeftOf="@id/vLine6"
+                app:layout_constraintTop_toBottomOf="@id/hLine1"
+                app:layout_constraintBottom_toTopOf="@id/btnBottomOk"
+                android:layout_marginBottom="@dimen/dp10"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

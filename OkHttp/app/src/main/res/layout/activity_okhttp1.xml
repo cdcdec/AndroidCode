@@ -4,10 +4,8 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:fillViewport="true"
-        tools:context=".MainActivity"
-        >
+        tools:context=".httputils.okhttp1.OKHttp1Activity">
+
     <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -27,16 +25,15 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 app:layout_constraintGuide_percent="0.95" />
-
         <com.shape.SuperButton
-                android:id="@+id/btn1"
+                android:id="@+id/btnGet"
                 app:layout_constraintLeft_toRightOf="@id/vLine1"
                 app:layout_constraintRight_toLeftOf="@id/vLine2"
                 app:layout_constraintTop_toTopOf="parent"
                 android:layout_width="0dp"
                 android:layout_marginTop="@dimen/dp10"
                 android:layout_height="@dimen/dp37"
-                android:text="okhttp3加密传输"
+                android:text="@string/get"
                 app:sShapeType="rectangle"
                 app:sCornersRadius="@dimen/dp3"
                 app:sUseSelector="true"
@@ -44,19 +41,37 @@
                 app:sSelectorPressedColor="@color/gray"/>
 
         <com.shape.SuperButton
-                android:id="@+id/btn2"
+                android:id="@+id/btnPost"
                 app:layout_constraintLeft_toRightOf="@id/vLine1"
                 app:layout_constraintRight_toLeftOf="@id/vLine2"
-                app:layout_constraintTop_toBottomOf="@id/btn1"
+                app:layout_constraintTop_toBottomOf="@id/btnGet"
                 android:layout_width="0dp"
                 android:layout_marginTop="@dimen/dp10"
                 android:layout_height="@dimen/dp37"
-                android:text="okhttp3无加密传输"
+                android:text="@string/post"
+                app:sShapeType="rectangle"
+                app:sCornersRadius="@dimen/dp3"
+                app:sUseSelector="true"
+                app:sSelectorNormalColor="@color/gray_btn"
+                app:sSelectorPressedColor="@color/gray"/>
+
+        <com.shape.SuperButton
+                android:id="@+id/btnFile1"
+                app:layout_constraintLeft_toRightOf="@id/vLine1"
+                app:layout_constraintRight_toLeftOf="@id/vLine2"
+                app:layout_constraintTop_toBottomOf="@id/btnPost"
+                android:layout_width="0dp"
+                android:layout_marginTop="@dimen/dp10"
+                android:layout_height="@dimen/dp37"
+                android:text="@string/file1"
                 app:sShapeType="rectangle"
                 app:sCornersRadius="@dimen/dp3"
                 app:sUseSelector="true"
                 app:sSelectorNormalColor="@color/gray_btn"
                 app:sSelectorPressedColor="@color/gray"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
 
 </androidx.core.widget.NestedScrollView>

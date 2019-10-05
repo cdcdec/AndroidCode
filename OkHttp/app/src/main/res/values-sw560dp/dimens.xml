@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?><resources>
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
 <dimen name="dp1">1dp</dimen>
 <dimen name="dp2">3dp</dimen>
 <dimen name="dp3">4dp</dimen>

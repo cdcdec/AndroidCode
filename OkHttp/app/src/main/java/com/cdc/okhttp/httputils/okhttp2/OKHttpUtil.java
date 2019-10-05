@@ -2,8 +2,6 @@ package com.cdc.okhttp.httputils.okhttp2;
 
 import android.os.Handler;
 import android.os.Looper;
-
-import com.cdc.okhttp.MLog;
 import com.google.gson.Gson;
 
 import java.io.IOException;
